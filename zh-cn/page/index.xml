@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pages on Javen Blog</title>
+        <link>https://javenjin.github.io/blog/zh-cn/page/</link>
+        <description>Recent content in Pages on Javen Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Fri, 31 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>关于</title>
+        <link>https://javenjin.github.io/blog/zh-cn/%E5%85%B3%E4%BA%8E/</link>
+        <pubDate>Fri, 31 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/zh-cn/%E5%85%B3%E4%BA%8E/</guid>
+        <description>&lt;h1 id=&#34;javen-jin&#34;&gt;Javen Jin&lt;/h1&gt;
+&lt;h2 id=&#34;联系方式&#34;&gt;联系方式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/javenjin&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;mailto:wenjie.jin@hotmail.com&#34; &gt;Email&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;WeChat: &lt;strong&gt;KingWxi&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;个人信息&#34;&gt;个人信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;男  1998&lt;/li&gt;
+&lt;li&gt;计算机科学与技术 本科  西京学院（2017年9月～2021年7月）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;荣誉奖项其他证书&#34;&gt;荣誉奖项/其他证书&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;全国计算机等级考试二级合格证书C语言程序设计（2018年3月）&lt;/li&gt;
+&lt;li&gt;第十届全国大学生数学竞赛（非数学类）一等奖（2018年11月）&lt;/li&gt;
+&lt;li&gt;2017-2018学年度国家励志奖学金（2018年12月）&lt;/li&gt;
+&lt;li&gt;英语（CET-4）（2018年12月）&lt;/li&gt;
+&lt;li&gt;全国大学生数学建模竞赛本科组陕西赛区二等奖（2018年12月）&lt;/li&gt;
+&lt;li&gt;中华人民共和国机动车驾驶证C1（2019年1月）&lt;/li&gt;
+&lt;li&gt;第十届蓝桥杯全国软件和信息技术专业人才大赛陕西赛区C/C++程序设计大学B组一等奖（2019年3月）&lt;/li&gt;
+&lt;li&gt;第十届蓝桥杯全国软件和信息技术专业人才大赛全国总决赛C/C++程序设计大学B组优秀奖（2019年5月）&lt;/li&gt;
+&lt;li&gt;计算机技术与软件专业技术资格初级程序员技术资格（2019年11月）&lt;/li&gt;
+&lt;li&gt;2018-2019学年度国家奖学金（2019年12月）&lt;/li&gt;
+&lt;li&gt;2019-2020学年度国家励志奖学金（2020年12月）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;校园经历&#34;&gt;校园经历&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2017年9月～2018年9月，担任共青团至诚书院分团委实践部。举办过多次活动并取得不错的成绩。荣获“优秀委员”证书&lt;/li&gt;
+&lt;li&gt;2018年9月～2020年9月，担任西京学院“解忧杂货铺”社团社长一职。社团荣获2019年度优秀心理社团。&lt;/li&gt;
+&lt;li&gt;2018年7月，参加暑期三下乡活动。&lt;/li&gt;
+&lt;li&gt;2019年7月，第二次参加暑期三下乡活动，担任队长，队伍荣获金陵寺人民政府“优秀组织奖”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;技能清单&#34;&gt;技能清单&lt;/h2&gt;
+&lt;p&gt;以下均为我熟练使用的技能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;编程语言：C语言、C#语言、Java语言&lt;/li&gt;
+&lt;li&gt;后端框架：Entity Framework Core、.NET Core&lt;/li&gt;
+&lt;li&gt;前端开发：Node.js&lt;/li&gt;
+&lt;li&gt;前端框架：React、TypeScript、SaSS、Bootstrap、Ant Design&lt;/li&gt;
+&lt;li&gt;数据库相关：MySQL、SqlServer、Postgres、InfluxDB、TDengine、Snowflake、SQLite&lt;/li&gt;
+&lt;li&gt;版本管理、文档和自动化部署工具：Git、JIRA、Bitbucket、Confluence&lt;/li&gt;
+&lt;li&gt;操作系统：Windows Server、Windows 11、MacOS、 Ubuntu&lt;/li&gt;
+&lt;li&gt;工具相关：Visual Studio、Visual Studio Code、IntelliJ IDEA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以下均为我会使用的技能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;编程语言：Python语言、C++语言、Go语言&lt;/li&gt;
+&lt;li&gt;后端框架：Spring、Spring MVC、MyBatis&lt;/li&gt;
+&lt;li&gt;前端框架：Hugo&lt;/li&gt;
+&lt;li&gt;数据库相关：Oracle、DM、TimeScale、MonetDB、ClickHouse&lt;/li&gt;
+&lt;li&gt;云和开放平台：微信应用开发、阿里云、Azure云&lt;/li&gt;
+&lt;li&gt;工具相关：Eclipse、WebStorm、Jenkins&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;写在最后&#34;&gt;写在最后&lt;/h2&gt;
+&lt;p&gt;热爱工作，有较强的自学能力和团队合作沟通能力。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>归档</title>
+        <link>https://javenjin.github.io/blog/zh-cn/archives/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/zh-cn/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>链接</title>
+        <link>https://javenjin.github.io/blog/zh-cn/%E9%93%BE%E6%8E%A5/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/zh-cn/%E9%93%BE%E6%8E%A5/</guid>
+        <description>&lt;p&gt;这里有一些方便的链接。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>搜索</title>
+        <link>https://javenjin.github.io/blog/zh-cn/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/zh-cn/search/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

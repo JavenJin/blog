@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='在Windows上安装MySQL-5.7.17'>
+<title>Install MySQL-5.7.17 on Windows</title>
+
+<link rel='canonical' href='https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/'>
+
+<link rel="stylesheet" href="/blog/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Install MySQL-5.7.17 on Windows'>
+<meta property='og:description' content='在Windows上安装MySQL-5.7.17'>
+<meta property='og:url' content='https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/'>
+<meta property='og:site_name' content='Javen Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Database' /><meta property='article:published_time' content='2021-05-29T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-05-29T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Install MySQL-5.7.17 on Windows">
+<meta name="twitter:description" content="在Windows上安装MySQL-5.7.17">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/blog">
+                
+                    
+                    
+                    
+                        
+                        <img src="/blog/img/avatar_hubf7b15bf5e15ae8b6bb0ceda44d97e9a_739263_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/blog">Javen Blog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/javenjin'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://instagram.com/kingjie98'
+                        target="_blank"
+                        title="Ins"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16.65 7.2H16.66M8 20H16C18.2091 20 20 18.2091 20 16V8C20 5.79086 18.2091 4 16 4H8C5.79086 4 4 5.79086 4 8V16C4 18.2091 5.79086 20 8 20ZM15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12Z"/>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:wenjie.jin@hotmail.com'
+                        target="_blank"
+                        title="Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/blog/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://javenjin.github.io/blog/" selected>English</option>
+                        
+                            <option value="https://javenjin.github.io/blog/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#download-the-mysql-installation-package">Download the mysql installation package.</a></li>
+    <li><a href="#open-the-installation-package">Open the installation package</a></li>
+    <li><a href="#check-the-box-i-accept-the-license-terms-and-click-next">Check the box I accept the license terms and click Next</a></li>
+    <li><a href="#check-the-custom-box-and-click-next">Check the Custom box and click Next</a></li>
+    <li><a href="#select-the-installation-version-x64-for-64-bit-systems-and-x86-for-32-bit-systems">Select the installation version x64 for 64-bit systems and x86 for 32-bit systems</a></li>
+    <li><a href="#then-click-on-the-right-to-select-the-following-advanced-options-to-customize-the-path-i-installed-in-the-d-disk-root-directory-and-then-ok-and-then-next">Then click on the right to select the following Advanced Options, to customize the path, I installed in the D disk root directory, and then OK, and then Next</a></li>
+    <li><a href="#continue-to-click-execute-and-wait-for-the-installation">Continue to click Execute and wait for the installation</a></li>
+    <li><a href="#click-next-after-installation-continue-to-next">Click Next after installation, continue to Next</a></li>
+    <li><a href="#select-server-dedicated">Select Server Dedicated</a></li>
+    <li><a href="#set-the-port-number-generally-not-recommended-to-modify-the-default-3306-can-be-and-then-next">Set the port number, generally not recommended to modify, the default 3306 can be, and then Next</a></li>
+    <li><a href="#enter-the-mysql-password-and-then-next">Enter the mysql password, and then Next</a></li>
+    <li><a href="#set-the-server-name-which-generally-does-not-need-to-be-changed-either-and-then-next">Set the server name, which generally does not need to be changed either, and then Next</a></li>
+    <li><a href="#no-need-to-modify-directly-next">No need to modify directly Next</a></li>
+    <li><a href="#click-execute-to-start-the-installation">Click Execute to start the installation</a></li>
+    <li><a href="#click-finish">Click Finish</a></li>
+    <li><a href="#click-next">Click Next</a></li>
+    <li><a href="#click-finish-1">Click Finish</a></li>
+    <li><a href="#open-the-myini-file-in-the-installation-directory">Open the my.ini file in the installation directory</a></li>
+    <li><a href="#change-these-two-lines-to-innodb_flush_log_at_trx_commit0-and-innodb_buffer_pool_size2g">Change these two lines to innodb_flush_log_at_trx_commit=0 and innodb_buffer_pool_size=2G</a></li>
+    <li><a href="#save-the-changes-and-go-to-the-bin-folder-in-the-installation-directory">Save the changes and go to the bin folder in the installation directory</a></li>
+    <li><a href="#click-on-the-address-bar-above-and-type-cmd-then-enter-to-open-the-command-line-in-that-directory">Click on the address bar above and type cmd, then enter to open the command line in that directory</a></li>
+    <li><a href="#enter-the-command-mysql--uroot--p-then-enter-the-password-to-enter-the-mysql-database">Enter the command: &ldquo;mysql -uroot -p&rdquo;, then enter the password to enter the mysql database</a></li>
+    <li><a href="#enter-status-and-the-following-image-will-be-displayed-to-indicate-that-the-installation-is-complete">Enter &ldquo;status&rdquo; and the following image will be displayed to indicate that the installation is complete</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/blog/categories/database/" style="background-color: #2a9d8f; color: #fff;">
+                Database
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/blog/p/install-mysql-5.7.17-on-windows/">Install MySQL-5.7.17 on Windows</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            在Windows上安装MySQL-5.7.17
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 29, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+        <footer class="article-translations">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+            <div>
+                
+                    <a href="https://javenjin.github.io/blog/zh-cn/p/install-mysql-5.7.17-on-windows/" class="link">中文</a>
+                
+            </div>
+        </footer>
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="install-mysql-5717-on-windows">Install MySQL-5.7.17 on Windows</h1>
+<h2 id="download-the-mysql-installation-package">Download the mysql installation package.</h2>
+<p>Download the mysql installation package: <a class="link" href="https://download.csdn.net/download/weixin_42718701/19201693"  target="_blank" rel="noopener"
+    >mysql-5.7.17.msi</a>.</p>
+<p>Or go to the official website to download the installation package.</p>
+<h2 id="open-the-installation-package">Open the installation package</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-1.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="check-the-box-i-accept-the-license-terms-and-click-next">Check the box I accept the license terms and click Next</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-2.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="check-the-custom-box-and-click-next">Check the Custom box and click Next</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-3.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="select-the-installation-version-x64-for-64-bit-systems-and-x86-for-32-bit-systems">Select the installation version x64 for 64-bit systems and x86 for 32-bit systems</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-4.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="then-click-on-the-right-to-select-the-following-advanced-options-to-customize-the-path-i-installed-in-the-d-disk-root-directory-and-then-ok-and-then-next">Then click on the right to select the following Advanced Options, to customize the path, I installed in the D disk root directory, and then OK, and then Next</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-5.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="continue-to-click-execute-and-wait-for-the-installation">Continue to click Execute and wait for the installation</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-6.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="click-next-after-installation-continue-to-next">Click Next after installation, continue to Next</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-7.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="select-server-dedicated">Select Server Dedicated</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-8.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="set-the-port-number-generally-not-recommended-to-modify-the-default-3306-can-be-and-then-next">Set the port number, generally not recommended to modify, the default 3306 can be, and then Next</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-9.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="enter-the-mysql-password-and-then-next">Enter the mysql password, and then Next</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-10.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="set-the-server-name-which-generally-does-not-need-to-be-changed-either-and-then-next">Set the server name, which generally does not need to be changed either, and then Next</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-11.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="no-need-to-modify-directly-next">No need to modify directly Next</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-12.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="click-execute-to-start-the-installation">Click Execute to start the installation</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-13.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="click-finish">Click Finish</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-14.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="click-next">Click Next</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-15.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="click-finish-1">Click Finish</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-16.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="open-the-myini-file-in-the-installation-directory">Open the my.ini file in the installation directory</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-17.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="change-these-two-lines-to-innodb_flush_log_at_trx_commit0-and-innodb_buffer_pool_size2g">Change these two lines to innodb_flush_log_at_trx_commit=0 and innodb_buffer_pool_size=2G</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-18.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-19.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="save-the-changes-and-go-to-the-bin-folder-in-the-installation-directory">Save the changes and go to the bin folder in the installation directory</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-20.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="click-on-the-address-bar-above-and-type-cmd-then-enter-to-open-the-command-line-in-that-directory">Click on the address bar above and type cmd, then enter to open the command line in that directory</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-21.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="enter-the-command-mysql--uroot--p-then-enter-the-password-to-enter-the-mysql-database">Enter the command: &ldquo;mysql -uroot -p&rdquo;, then enter the password to enter the mysql database</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-22.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="enter-status-and-the-following-image-will-be-displayed-to-indicate-that-the-installation-is-complete">Enter &ldquo;status&rdquo; and the following image will be displayed to indicate that the installation is complete</h2>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-23.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/blog/tags/database/">Database</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/blog/p/monetdb-remote-access/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">MonetDB Remote Access</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/p/mysql-remote-access/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">MySQL Remote Access</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/p/postgresql-remote-access/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">PostgreSQL Remote Access</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/p/install-mysql-5.7-on-centos7/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Install MySQL-5.7 on CentOS7</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2023 Javen Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/blog/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

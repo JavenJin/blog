@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='简单工厂模式 和 工厂方法模式'>
+<title>Simple Factory Pattern and Factory Method Pattern</title>
+
+<link rel='canonical' href='https://javenjin.github.io/blog/p/simple-factory-pattern-and-factory-method-pattern/'>
+
+<link rel="stylesheet" href="/blog/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Simple Factory Pattern and Factory Method Pattern'>
+<meta property='og:description' content='简单工厂模式 和 工厂方法模式'>
+<meta property='og:url' content='https://javenjin.github.io/blog/p/simple-factory-pattern-and-factory-method-pattern/'>
+<meta property='og:site_name' content='Javen Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Design Pattern' /><meta property='article:tag' content='Java' /><meta property='article:published_time' content='2020-09-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-09-10T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Simple Factory Pattern and Factory Method Pattern">
+<meta name="twitter:description" content="简单工厂模式 和 工厂方法模式">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/blog">
+                
+                    
+                    
+                    
+                        
+                        <img src="/blog/img/avatar_hubf7b15bf5e15ae8b6bb0ceda44d97e9a_739263_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/blog">Javen Blog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/javenjin'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://instagram.com/kingjie98'
+                        target="_blank"
+                        title="Ins"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16.65 7.2H16.66M8 20H16C18.2091 20 20 18.2091 20 16V8C20 5.79086 18.2091 4 16 4H8C5.79086 4 4 5.79086 4 8V16C4 18.2091 5.79086 20 8 20ZM15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12Z"/>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:wenjie.jin@hotmail.com'
+                        target="_blank"
+                        title="Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/blog/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://javenjin.github.io/blog/" selected>English</option>
+                        
+                            <option value="https://javenjin.github.io/blog/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#simple-factory-pattern">Simple Factory Pattern</a>
+      <ol>
+        <li><a href="#simple-factory-pattern-concept">Simple Factory Pattern Concept</a></li>
+        <li><a href="#simple-factory-pattern-structure">Simple Factory Pattern Structure</a></li>
+        <li><a href="#simple-factory-pattern-implementation">Simple Factory Pattern Implementation</a></li>
+        <li><a href="#simple-factory-pattern-advantages-and-disadvantages-and-applicable-environment">Simple factory pattern advantages and disadvantages and applicable environment</a></li>
+      </ol>
+    </li>
+    <li><a href="#factory-method-pattern">Factory Method Pattern</a>
+      <ol>
+        <li><a href="#factory-method-pattern-concept">Factory method pattern concept</a></li>
+        <li><a href="#factory-method-pattern-structure">Factory Method Pattern Structure</a></li>
+        <li><a href="#factory-method-pattern-implementation">Factory method pattern implementation</a></li>
+        <li><a href="#factory-method-pattern-advantages-and-disadvantages-and-applicable-environment">Factory method pattern advantages and disadvantages and applicable environment</a></li>
+      </ol>
+    </li>
+    <li><a href="#difference-between-simple-factory-pattern-and-factory-method-pattern">Difference between &ldquo;Simple Factory Pattern&rdquo; and &ldquo;Factory Method Pattern</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/blog/categories/design-pattern/" style="background-color: #2a9d8f; color: #fff;">
+                Design Pattern
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/blog/p/simple-factory-pattern-and-factory-method-pattern/">Simple Factory Pattern and Factory Method Pattern</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            简单工厂模式 和 工厂方法模式
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Sep 10, 2020</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    10 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+        <footer class="article-translations">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+            <div>
+                
+                    <a href="https://javenjin.github.io/blog/zh-cn/p/simple-factory-pattern-and-factory-method-pattern/" class="link">中文</a>
+                
+            </div>
+        </footer>
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="simple-factory-pattern-and-factory-method-pattern">Simple Factory Pattern and Factory Method Pattern</h1>
+<h2 id="simple-factory-pattern">Simple Factory Pattern</h2>
+<h3 id="simple-factory-pattern-concept">Simple Factory Pattern Concept</h3>
+<p>    The Simple Factory Pattern is not one of GoF&rsquo;s 23 classic design patterns, but it is often used as a basis for learning other factory patterns.</p>
+<p>    <strong>Simple Factory Pattern:</strong> Define a factory class that can return instances of different classes depending on the parameters, and the instances that are created usually have a common parent class.</p>
+<h3 id="simple-factory-pattern-structure">Simple Factory Pattern Structure</h3>
+<p>    <strong>Simple Factory Pattern Structure:</strong> The structure of the Simple Factory Pattern is relatively simple, and its core is the design of the factory class.</p>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Design%20Pattern/Simple%20Factory%20Pattern%20and%20Factory%20Method%20Pattern/simple-factory-pattern-and-factory-method-pattern1.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Simple Factory Pattern Structure"
+	
+	
+></p>
+<p>    <strong>(1) Factory (factory role):</strong> The factory role is the factory class, which is the core of the simple factory pattern and is responsible for implementing the internal logic of creating all product instances; the factory class can be called directly by the outside world to create the required product objects; static factory methods are provided in the factory class factoryMethod(), which returns a type of abstract product type Product.</p>
+<p>    <strong>(2) Product (abstract product role):</strong> It is the parent of all objects created by the factory class, encapsulating the public methods of various product objects, its introduction will improve the flexibility of the system, making it possible to define only a generic factory method in the factory class, because all the concrete product objects created are its sub class objects.</p>
+<p>    <strong>(3) ConcreteProduct (Concrete Product Role):</strong> It is the creation goal of the Simple Factory pattern, and all created objects act as instances of some concrete class of this role. Each concrete product role inherits from the abstract product role and needs to implement the abstract methods declared in the abstract product.</p>
+<h3 id="simple-factory-pattern-implementation">Simple Factory Pattern Implementation</h3>
+<p>    A typical abstract product class code is as follows:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Product</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//Public business methods for all product classes
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">methhodSame</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">//Implementation of public methods
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">//Declaring abstract business methods
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">methodDiff</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>    The code for a typical specific product class is as follows:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ConcreteProduct</span> <span class="kd">extends</span> <span class="n">Product</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//Implementing business methods
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">methodDiff</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">//Business Method Implementation
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>    The code of a typical factory class is as follows:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Factory</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//Static Factory Methods
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kd">public</span> <span class="kd">static</span> <span class="n">Product</span> <span class="nf">getProduct</span><span class="o">(</span><span class="n">String</span> <span class="n">arg</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Product</span> <span class="n">product</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="o">(</span><span class="n">arg</span><span class="o">.</span><span class="na">equalsIgnoreCase</span><span class="o">(</span><span class="s">&#34;A&#34;</span><span class="o">))</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">product</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ConcreteProductA</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">//Initialize and set the product
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="o">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">arg</span><span class="o">.</span><span class="na">equalsIgnoreCase</span><span class="o">(</span><span class="s">&#34;B&#34;</span><span class="o">))</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">product</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ConcreteProductB</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">//Initialize and set the product
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="o">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">product</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">	<span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>    In the client code, the product object is obtained by calling the factory method of the factory class. The typical code is as follows:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Client</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Product</span> <span class="n">product</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">product</span> <span class="o">=</span> <span class="n">Factory</span><span class="o">.</span><span class="na">getProduct</span><span class="o">(</span><span class="s">&#34;A&#34;</span><span class="o">);</span><span class="c1">//Create product objects through factory classes
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">product</span><span class="o">.</span><span class="na">methodSame</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">		<span class="n">product</span><span class="o">.</span><span class="na">methodDiff</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">	<span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="simple-factory-pattern-advantages-and-disadvantages-and-applicable-environment">Simple factory pattern advantages and disadvantages and applicable environment</h3>
+<p>    <strong>Simple Factory Pattern Advantages</strong></p>
+<p>    (1) The factory class contains the necessary judgment logic to decide when to create an instance of which product class, the client can dispense with the responsibility of creating the product object directly, but only &ldquo;consume&rdquo; the product, the simple factory pattern achieves the separation of object creation and use. The simple factory pattern achieves the separation of object creation and use.</p>
+<p>    (2) The client does not need to know the class name of the specific product class created, only the parameters corresponding to the specific product class can be, for some complex class names, through the simple factory pattern can reduce the amount of user memory to a certain extent.</p>
+<p>    (3) By introducing configuration files, new concrete product classes can be replaced and added without modifying any client code, which improves the flexibility of the system to a certain extent.</p>
+<p>    <strong>Simple Factory Pattern Disadvantages</strong></p>
+<p>    (1) Because the factory class concentrates all the product creation logic, the responsibilities are too heavy and once it does not work properly, the whole system has to be affected.</p>
+<p>    (2) Using the simple factory pattern will inevitably increase the number of classes in the system (introducing new factory classes), increasing the degree of responsibility and understanding of the system.</p>
+<p>    (3) The system is difficult to extend, once you add a new product you have to modify the factory logic, which may cause the factory logic to be too complex when there are more product types, which is not conducive to system expansion and maintenance.</p>
+<p>    (4) The simple factory pattern, due to the use of static factory methods, causes the factory role to fail to form an inheritance-based hierarchy.</p>
+<p>    <strong>Simple Factory Pattern Applicable Environment</strong></p>
+<p>    (1) The factory class is responsible for creating fewer objects, due to the creation of fewer objects, due to the creation of fewer objects, does not cause the business logic in the factory methods to be too complex.</p>
+<p>    (2) The client only knows the parameters passed into the factory class and does not care about how the object is created.</p>
+<h2 id="factory-method-pattern">Factory Method Pattern</h2>
+<h3 id="factory-method-pattern-concept">Factory method pattern concept</h3>
+<p>    In the factory method pattern no longer provides a unified factory class to create all product objects, but rather provides different factories for different products, and the system provides a factory hierarchy that corresponds to the product hierarchy.</p>
+<p>    <strong>The Factory Method Pattern:</strong> Define an interface for creating objects, but let subclasses decide which class to instantiate. The factory method pattern lets the instantiation of a class be deferred to its subclasses.</p>
+<h3 id="factory-method-pattern-structure">Factory Method Pattern Structure</h3>
+<p>    <strong>Factory Method Pattern Structure:</strong> The Factory Method Pattern provides an abstract factory interface to declare abstract factory methods, and its subclasses to concretely implement the factory methods to create concrete product objects.</p>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Design%20Pattern/Simple%20Factory%20Pattern%20and%20Factory%20Method%20Pattern/simple-factory-pattern-and-factory-method-pattern2.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Factory Method Pattern Structure"
+	
+	
+></p>
+<p>    <strong>(1) Product (abstract product):</strong> It is the interface that defines the product, the supertype of the object created by the factory method pattern, which is the public parent class of the product object.</p>
+<p>    <strong>(2) ConcreteProduct (Concrete Product):</strong> It implements the abstract product interface, some type of concrete product created by a specialized concrete factory, one-to-one correspondence between the concrete factory and the concrete product.</p>
+<p>    <strong>(3) Factory (abstract factory):</strong> A factory method (Factory Method) is declared in the abstract factory class for returning a product. The abstract factory is the core of the factory method pattern, and all factory classes that create objects must implement the interface.</p>
+<p>    <strong>(4) ConcreteFactory (Concrete Factory):</strong> It is a subclass of the abstract factory class that implements the Factory Method declared in the abstract factory and can be called by the client to return an instance of the concrete product class.</p>
+<h3 id="factory-method-pattern-implementation">Factory method pattern implementation</h3>
+<p>    Compared with the simple factory pattern, the most important feature of the factory method pattern is the introduction of the abstract factory role, which can be an interface, an abstract class or a concrete class. Its typical code is as follows:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Factory</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">public</span> <span class="n">Product</span> <span class="nf">factoryMethod</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>    In the abstract factory declared factory methods but does not implement the factory methods, the creation of concrete product objects by its subclasses responsible for the client for the abstract factory programming, you can specify the concrete factory class at runtime, the concrete factory class implements the factory methods, different concrete factory can create different concrete products. Its typical code is as follows:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ConcreteFactory</span> <span class="kd">implements</span> <span class="n">Factory</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">public</span> <span class="n">Product</span> <span class="nf">factoryMethod</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="k">new</span> <span class="n">ConcreteProduct</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">	<span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>    In practice, the specific factory class can be responsible for the initialization of the product object and some resource and environment configuration work, such as connecting to the database and creating files, in addition to creating specific product objects when the factory method is implemented.</p>
+<p>    In the client code, the developer only needs to care about the factory class, and different concrete factories can create different products. A typical client-side code snippet is as follows:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="err">···</span>
+</span></span><span class="line"><span class="cl"><span class="n">Factory</span> <span class="n">factory</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">factory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ConcreteFactory</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">Product</span> <span class="n">product</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">product</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="na">factoryMethod</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="err">···</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>    You can store the class name of the concrete factory class ConcreteFactory through the configuration file, and then create the concrete factory object through the reflection mechanism, without modifying the source code when replacing the new concrete factory, and the system is more convenient to extend.</p>
+<h3 id="factory-method-pattern-advantages-and-disadvantages-and-applicable-environment">Factory method pattern advantages and disadvantages and applicable environment</h3>
+<p>    <strong>Advantages of the Factory Method Pattern</strong></p>
+<p>    (1) In the factory method pattern, the factory method is used to create the product that the customer needs, while also hiding from the customer which specific product class will be instantiated this detail, the user only needs to care about the factory corresponding to the desired product, without caring about the creation details, or even without knowing the class name of the specific product class.</p>
+<p>    (2) The polymorphic design based on the factory role and product role is the key to the factory method pattern. It enables the factory to determine autonomously what product object to create, and the details of how to create this object are completely encapsulated within the concrete factory. The factory method pattern is also known as the polymorphic factory pattern precisely because all concrete factory classes have the same abstract parent class.</p>
+<p>    (3) Another priority of using the factory method pattern is to add new products to the system without modifying the interface provided by the abstract factory and abstract product, without modifying the client, and without modifying other concrete factories and concrete products, but just add a concrete factory and concrete products, so that the scalability of the system also becomes The scalability of the system becomes very good, fully consistent with the principle of open and closed.</p>
+<p>    <strong>Drawbacks of the Factory Method Pattern</strong></p>
+<p>    (1) When adding new products, you need to write a new specific product class, and also provide the corresponding specific factory class, the number of classes in the system will increase in pairs, to a certain extent, increasing the complexity of the system, there are more classes to compile and run, which will bring some additional overhead to the system.</p>
+<p>    (2) As the scalability of the system is taken into account, the abstraction layer needs to be introduced, which is defined in the client code using the abstraction layer, increasing the abstraction and understanding difficulty of the system.</p>
+<p>    <strong>Factory Method Pattern Applicable Environment</strong></p>
+<p>    (1) The client does not know the class of the object it needs. In the factory method pattern, the client does not need to know the class name of the specific product class, it only needs to know the corresponding factory. The specific product object is created by the specific factory class, and the class name of the specific factory class can be stored in the configuration file or database.</p>
+<p>    (2) abstract factory class through its subclasses to specify the creation of that object. In the factory method pattern, for the abstract factory class only need to provide an interface to create the product, and by its subclasses to determine the specific object to be created, the use of object-oriented polymorphism and the principle of Richter substitution, in the program runtime child class objects will override the parent class objects, thus making the system more easily scalable.</p>
+<h2 id="difference-between-simple-factory-pattern-and-factory-method-pattern">Difference between &ldquo;Simple Factory Pattern&rdquo; and &ldquo;Factory Method Pattern</h2>
+<p>    (1) The simple factory pattern is difficult when you need to add new product classes, you need to change the original code, not in line with the open and closed principle; and the factory method pattern does not need to change the original code when you add new product classes, fully in line with the open and closed principle.</p>
+<p>    (2) The factory method pattern is more complex, more abstract, more system resource intensive, and more difficult to understand than the simple factory pattern.</p>
+<p>    (3) The simple factory pattern in the factory class concentrates all the product creation logic, once it does not work properly, the whole system will be affected; while the factory method pattern divides the responsibility to each factory class, reducing the responsibility of each class.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/blog/tags/design-pattern/">Design Pattern</a>
+        
+            <a href="/blog/tags/java/">Java</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2023 Javen Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/blog/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

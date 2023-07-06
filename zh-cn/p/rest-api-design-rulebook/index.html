@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='REST API Design Rulebook'>
+<title>REST API Design Rulebook</title>
+
+<link rel='canonical' href='https://javenjin.github.io/blog/zh-cn/p/rest-api-design-rulebook/'>
+
+<link rel="stylesheet" href="/blog/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='REST API Design Rulebook'>
+<meta property='og:description' content='REST API Design Rulebook'>
+<meta property='og:url' content='https://javenjin.github.io/blog/zh-cn/p/rest-api-design-rulebook/'>
+<meta property='og:site_name' content='Javen Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Tools' /><meta property='article:published_time' content='2022-06-21T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-06-21T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="REST API Design Rulebook">
+<meta name="twitter:description" content="REST API Design Rulebook">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/blog/zh-cn">
+                
+                    
+                    
+                    
+                        
+                        <img src="/blog/img/avatar_hubf7b15bf5e15ae8b6bb0ceda44d97e9a_739263_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/blog/zh-cn">Javen Blog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/javenjin'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://instagram.com/kingjie98'
+                        target="_blank"
+                        title="Ins"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16.65 7.2H16.66M8 20H16C18.2091 20 20 18.2091 20 16V8C20 5.79086 18.2091 4 16 4H8C5.79086 4 4 5.79086 4 8V16C4 18.2091 5.79086 20 8 20ZM15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12Z"/>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:wenjie.jin@hotmail.com'
+                        target="_blank"
+                        title="Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/blog/zh-cn/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://javenjin.github.io/blog/" >English</option>
+                        
+                            <option value="https://javenjin.github.io/blog/zh-cn/" selected>中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#uri-formatrfc-3986">URI Format(RFC 3986)</a></li>
+    <li><a href="#uri-rules">URI Rules</a></li>
+    <li><a href="#request-methodsrfc2616">Request Methods(RFC2616)</a></li>
+    <li><a href="#request-method-rules">Request Method Rules</a></li>
+    <li><a href="#response-status-codes">Response Status Codes</a></li>
+    <li><a href="#response-status--code-rules">Response Status  Code Rules</a></li>
+    <li><a href="#http-headers-rules">HTTP Headers Rules</a></li>
+    <li><a href="#media-types">Media Types</a></li>
+    <li><a href="#registered-media-types">Registered Media Types</a></li>
+    <li><a href="#media-types-rules">Media Types Rules</a></li>
+    <li><a href="#message-body-rules">Message Body Rules</a></li>
+    <li><a href="#hypermedia-representation-rules">Hypermedia Representation Rules</a></li>
+    <li><a href="#media-type-representation-rules">Media Type Representation Rules</a></li>
+    <li><a href="#error-representation-rules">Error Representation Rules</a></li>
+    <li><a href="#client-concerns-rules">Client Concerns Rules</a></li>
+    <li><a href="#final-thoughts-principles">Final Thoughts Principles</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/blog/zh-cn/categories/tools/" >
+                Tools
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/blog/zh-cn/p/rest-api-design-rulebook/">REST API Design Rulebook</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            REST API Design Rulebook
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jun 21, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 5 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+        <footer class="article-translations">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+            <div>
+                
+                    <a href="https://javenjin.github.io/blog/p/rest-api-design-rulebook/" class="link">English</a>
+                
+            </div>
+        </footer>
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="rest-api-design-rulebook">REST API Design Rulebook</h1>
+<h2 id="uri-formatrfc-3986">URI Format(RFC 3986)</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">URL = scheme &#34;://&#34; authority &#34;/&#34; path [ &#34;?&#34; query ] [ &#34;#&#34; fragment ]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="uri-rules">URI Rules</h2>
+<ol>
+<li>
+<p>必须使用正斜杠分隔符（/）来表示层次结构关系</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://api.canvas.restapi.org/shapes/polygons/quadrilaterals/squares
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>URI最后不应该有斜杠（/）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Incorrect:	http://api.canvas.restapi.org/shapes/
+</span></span><span class="line"><span class="cl">Correct:	http://api.canvas.restapi.org/shapes
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>应该使用连字符（-）来提高URI可读性</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://api.example.restapi.org/blogs/mark-masse/entries/this-is-my-first-post
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>URI中不应该使用下划线（_）</p>
+</li>
+<li>
+<p>在URI路径中，应该首选小写字母</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1: http://api.example.restapi.org/my-folder/my-doc	Correct
+</span></span><span class="line"><span class="cl">2: HTTP://API.EXAMPLE.RESTAPI.ORG/my-fplder/my-doc	Correct
+</span></span><span class="line"><span class="cl">3: httpL//api.example.restapi.org/My-Folder/my-doc	Incorrect
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>文件扩展名不应该包含在URI中</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Incorrect:	http://api.college.restapi.org/students/3248234/transcripts/2005/fall.json
+</span></span><span class="line"><span class="cl">Correct:	http://api.college.restapi.org/students/3248234/transcripts/2005/fall
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>对于API，应该使用一致的子域名，API的完整域名应该添加一个名为api的子域</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Incorrect:	http://soccer.restapi.org
+</span></span><span class="line"><span class="cl">Correct:	http://api.soccer.restapi.org
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>对于客户端开发人员，应该使用一致的子域名</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">httpL//developer.soccer.restapi.org
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>表示文档资源的URI应该用单数名词</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet/players/claudio
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>标识一个集合的URI应该用一个复数名词</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet/players
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>标识资源存储的URI应该用复数名词</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://api.music.restapi.org/artists/mikemassedotcom/playlists
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>动词或动词短语应用于控制器名称</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://api.college.restapi.org/students/morgan/register
+</span></span><span class="line"><span class="cl">http://api.example.restapi.org/lists/4324/dedupe
+</span></span><span class="line"><span class="cl">http://api.ognom.restapi.org/dbs/reindex
+</span></span><span class="line"><span class="cl">http://api.build.restapi.org/qa/nightly/runTestSuite
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>变量路径段可以用于基于标识的值进行替换</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">http://api.soccer.restapi.org/leagues/{leagueId}/teams/{teamsId}/players/{playerId}
+</span></span><span class="line"><span class="cl">http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet/players/21
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>CRUD函数名称不应该使用在URI中</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Incorrect:
+</span></span><span class="line"><span class="cl">	GET /deleteUser?id=1234
+</span></span><span class="line"><span class="cl">	GET /deleteUsers/1234
+</span></span><span class="line"><span class="cl">	DELETE /deleteUser/1234
+</span></span><span class="line"><span class="cl">	POST /users/1234/delete
+</span></span><span class="line"><span class="cl">Correct:
+</span></span><span class="line"><span class="cl">	DELETE /users/1234
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>一个URI的查询组件可以用于过滤集合或存储</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GET /users
+</span></span><span class="line"><span class="cl">GET /users?role=admin
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>URI的查询组件应该用于分页收集或存储结果</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GET /users?pageSize=25&amp;&amp;pageStartIndex=50
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h2 id="request-methodsrfc2616">Request Methods(RFC2616)</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Request-Line = Method SP Request-URI SP HTTP-Version CRLF
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>GET</strong> is to retrieve a representation of a resource&rsquo;s state.</p>
+<p><strong>HEAD</strong> is used to retrieve the metadata associated with the resource&rsquo;s state.</p>
+<p><strong>PUT</strong> should be used to add a new resource to a store or update a resource.</p>
+<p><strong>DELETE</strong> removes a resource from its parent.</p>
+<p><strong>POST</strong> should be used to create a new resource within a collection and execute controllers.</p>
+<h2 id="request-method-rules">Request Method Rules</h2>
+<ol>
+<li>
+<p>GET和POST不能用于其他请求方法</p>
+</li>
+<li>
+<p>必须使用GET来检索资源的表达形式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ curl -v http://api.example.restapi.org/greeting
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&gt; GET /greeting HTTP/1.1
+</span></span><span class="line"><span class="cl">&gt; User-Agent: curl/7.20.1
+</span></span><span class="line"><span class="cl">&gt; Host: api.example.restapi.org
+</span></span><span class="line"><span class="cl">&gt; Accept: *.*
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt; HTTP/1.1 <span class="m">200</span> OK
+</span></span><span class="line"><span class="cl">&lt; Date: Sat, <span class="m">20</span> Aug <span class="m">2011</span> 16:02:40 GMT
+</span></span><span class="line"><span class="cl">&lt; Server: Apache
+</span></span><span class="line"><span class="cl">&lt; Expires: Sat, <span class="m">20</span> Aug <span class="m">2011</span> 16:06:40 GMT
+</span></span><span class="line"><span class="cl">&lt; Cache-Control: max-age<span class="o">=</span>60, must-revalidate
+</span></span><span class="line"><span class="cl">&lt; ETag: text/html:hello world
+</span></span><span class="line"><span class="cl">&lt; Last-Modified: Sat, <span class="m">20</span> Aug <span class="m">2011</span> 16:02:17 GMT
+</span></span><span class="line"><span class="cl">&lt; Vary: Accept-Encoding
+</span></span><span class="line"><span class="cl">&lt; Content-Type: text/html
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;!doctype html&gt;&lt;head&gt;&lt;meta <span class="nv">charset</span><span class="o">=</span><span class="s2">&#34;utf-8&#34;</span>&gt;&lt;title&gt;Greeting&lt;/title&gt;&lt;/head&gt;
+</span></span><span class="line"><span class="cl">&lt;body&gt;&lt;div <span class="nv">id</span><span class="o">=</span><span class="s2">&#34;greeting&#34;</span>&gt;Hello World!&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>HEAD应用于检索响应报头</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nv">$curl</span> --head http://api.example.restapi.org/greeting
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">HTTP/1.1 <span class="m">200</span> OK
+</span></span><span class="line"><span class="cl">Date: Sat, <span class="m">20</span> Aug <span class="m">2011</span> 16:02:40 GMT
+</span></span><span class="line"><span class="cl">Server: Apache
+</span></span><span class="line"><span class="cl">Expires: Sat, <span class="m">20</span> Aug <span class="m">2011</span> 16:03:40 GMT
+</span></span><span class="line"><span class="cl">Cache-Control: max-age<span class="o">=</span>60, must-revalidate
+</span></span><span class="line"><span class="cl">ETag: text/html:hello world
+</span></span><span class="line"><span class="cl">Last-Modified: Sat, <span class="m">20</span> Aug <span class="m">2011</span> 16:02:17 GMT
+</span></span><span class="line"><span class="cl">Vary: Accept-Encoding
+</span></span><span class="line"><span class="cl">Context-Type: text/html
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>必须使用PUT来插入和更新所存储的资源</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">PUT /accounts/4ef2d5d0-cb7e-11e0-9572-0800200c9a66/buckets/objects/4321
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>必须使用PUT来更新可变的资源</p>
+</li>
+<li>
+<p>必须使用POST在一个集合中创建一个新的资源</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">POST /leagues/seattle/teams/trebuchet/players
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Note the request message may contain a representation that suggests the initial state of the player to be created.</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>必须使用POST来执行控制器</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">POST /alerts/245743/resend
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>必须使用DELETE来删除资源</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">DELETE /accounts/4ef2d5d0-cb7e-11e0-9572-080020c9a66/buckets/objects/4321
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>OPTIONS应该使用来检索描述资源可用交互的元数据</p>
+</li>
+</ol>
+<h2 id="response-status-codes">Response Status Codes</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1xx: Informational</td>
+<td>Communicates transfer protocol-level information.</td>
+</tr>
+<tr>
+<td>2xx: Success</td>
+<td>Indicates that the client&rsquo;s request was accepted successfully.</td>
+</tr>
+<tr>
+<td>3xx: Redirection</td>
+<td>Indicates that the client must take some additional action in order to complete their request.</td>
+</tr>
+<tr>
+<td>4xx: Client Error</td>
+<td>This category of error status codes points the finger at clients.</td>
+</tr>
+<tr>
+<td>5xx: Server Error</td>
+<td>The server takes responsibility for these error status codes</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="response-status--code-rules">Response Status  Code Rules</h2>
+<ol>
+<li>200 OK 表示非特定成功</li>
+<li>200 OK 不能用于通信相应主体中的错误</li>
+<li>201 Created 表示资源创建成功</li>
+<li>202 Accepted 必须用于指示已成功启动异步操作</li>
+<li>204 No Content 相应主体故意空时，使用204</li>
+<li>301 Moved Permanently 用来重新定位资源</li>
+<li>302 Found 不应该使用该规则</li>
+<li>303 See Other 应用于将客户端引用到不同的URI</li>
+<li>304 Not Modified 应用来保留带宽</li>
+<li>307 Temporary Redirect 告诉客户将请求重新提交到另一个URI</li>
+<li>400 Bad Request 表示非特定失败</li>
+<li>401 Unauthorized 当客户端的凭据出现问题，必须使用401</li>
+<li>403 Forbidden 用户访问资源超出权限，禁止访问</li>
+<li>404 Not Found 当URI无法映射到资源时，必须使用404</li>
+<li>405 Method Not Allowed 当HTTP方法不受支持时，必须使用405</li>
+<li>406 Not Acceptable 当无法提供请求的文件类型时，必须使用406</li>
+<li>409 Conflict 试图将资源置于不可能或不一致的状态时</li>
+<li>412 Precondition Failed 请求头中的先决条件不满足，返回412，并未执行请求</li>
+<li>415 Unsupported Media Type 当无法处理客户端请求的文件类型时，必须使用415</li>
+<li>500 Internal Server Error 用来指示API故障</li>
+</ol>
+<h2 id="http-headers-rules">HTTP Headers Rules</h2>
+<ol>
+<li>Content-Type 必须使用</li>
+<li>Content-Length 应该使用</li>
+<li>Last-Modified 应该在响应中使用</li>
+<li>ETag 应该在响应中使用</li>
+<li>存储必须支持有条件的PUT请求</li>
+<li>必须使用Location来指定新创建的资源的URI</li>
+<li>应该使用Cache-Control、Expires和Date请求头来鼓励缓存</li>
+<li>Cache-Control、Expires和Pragma响应头可以用来阻止缓存</li>
+<li>Caching should be encouraged</li>
+<li>Expiration caching缓存头应该与200（OK）响应一起使用</li>
+<li>Expiration caching缓存头可以选择与3xx和4xx响应一起使用</li>
+<li>不能使用自定义HTTP标头来更改HTTP方法的行为</li>
+</ol>
+<h2 id="media-types">Media Types</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">type &#34;/&#34; subtype *( &#34;;&#34; parameter )
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="registered-media-types">Registered Media Types</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Registered Media Types</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text/plain</td>
+<td>A plain text format with no specific content structure or markup.</td>
+</tr>
+<tr>
+<td>text/html</td>
+<td>Content that is formatted using the HyperText Markup Language (HTML).</td>
+</tr>
+<tr>
+<td>image/jpeg</td>
+<td>An image compression method that was standardized by the Joint Photographic Experts Group (JEPG).</td>
+</tr>
+<tr>
+<td>application/xml</td>
+<td>Content that is structured using the Extensible Markup Language (XML).</td>
+</tr>
+<tr>
+<td>application/atom+xml</td>
+<td>Content that uses the Atom Syndication Format (Atom), which is an XML-based format that structures data into lists known as feeds.</td>
+</tr>
+<tr>
+<td>application/javascript</td>
+<td>Source code written in the JavaScript programming language.</td>
+</tr>
+<tr>
+<td>application/json</td>
+<td>The JavaScript Object Notation (JSON) text-based format that is often used by programs to exchange structured data.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="media-types-rules">Media Types Rules</h2>
+<ol>
+<li>Application-specific media types should be used</li>
+<li>Media type negotiation should be supported when multiple representations are available</li>
+<li>Media type selection using a query parameter may be supported</li>
+</ol>
+<h2 id="message-body-rules">Message Body Rules</h2>
+<ol>
+<li>资源表示应该支持JSON</li>
+<li>JSON必须是格式良好的</li>
+<li>XML和其他格式可以选择用于资源表示</li>
+<li>Additional envelopes must not be created</li>
+</ol>
+<h2 id="hypermedia-representation-rules">Hypermedia Representation Rules</h2>
+<ol>
+<li>A consistent form should be used to represent links</li>
+<li>A consistent form should be used to represent link relations</li>
+<li>A consistent form should be used to advertise links</li>
+<li>A self link should be included in response message body representations</li>
+<li>Minimize the number of advertised “entry point” API URIs</li>
+<li>Links should be used to advertise a resource’s available actions in a state-sensitive manner</li>
+</ol>
+<h2 id="media-type-representation-rules">Media Type Representation Rules</h2>
+<ol>
+<li>A consistent form should be used to represent media type formats</li>
+<li>A consistent form should be used to represent media type schemas</li>
+</ol>
+<h2 id="error-representation-rules">Error Representation Rules</h2>
+<ol>
+<li>A consistent form should be used to represent errors</li>
+<li>A consistent form should be used to represent error responses</li>
+<li>Consistent error types should be used for common error conditions</li>
+</ol>
+<h2 id="client-concerns-rules">Client Concerns Rules</h2>
+<ol>
+<li>New URIs should be used to introduce new concepts</li>
+<li>Schemas should be used to manage representational form versions</li>
+<li>Entity tags should be used to manage representational state versions</li>
+<li>OAuth may be used to protect resources</li>
+<li>API management solutions may be used to protect resources</li>
+<li>The query component of a URI should be used to support partial responses</li>
+<li>The query component of a URI should be used to embed linked resources</li>
+<li>JSONP should be supported to provide multi-origin read access from JavaScript</li>
+</ol>
+<h2 id="final-thoughts-principles">Final Thoughts Principles</h2>
+<ol>
+<li>REST API designs differ more than necessary</li>
+<li>A REST API should be designed, not coded</li>
+<li>Programmers and their organizations benefit from consistency</li>
+<li>A REST API should be created using a GUI tool</li>
+</ol>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/blog/zh-cn/tags/tools/">Tools</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Install Ubuntu on Windows subsystem using WSL2 technology</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/windows-batch-scripts.bat/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Windows batch scripts(.bat)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/windows-11-allows-remote-desktop/remote-access/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Windows 11 allows remote desktop/remote access</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/install-centos7-on-vmware/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Install CentOS7 on VMware</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/install-tomcat8-on-windows/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Install Tomcat8 on Windows</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2023 Javen Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/blog/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

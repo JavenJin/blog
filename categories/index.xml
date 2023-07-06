@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on Javen Blog</title>
+        <link>https://javenjin.github.io/blog/categories/</link>
+        <description>Recent content in Categories on Javen Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 16 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Tools</title>
+        <link>https://javenjin.github.io/blog/categories/tools/</link>
+        <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/categories/tools/</guid>
+        <description>&lt;img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/categories/tools/tools.png" alt="Featured image of post Tools" /&gt;</description>
+        </item>
+        <item>
+        <title>Database</title>
+        <link>https://javenjin.github.io/blog/categories/database/</link>
+        <pubDate>Wed, 11 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/categories/database/</guid>
+        <description>&lt;img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/categories/database/database.png" alt="Featured image of post Database" /&gt;</description>
+        </item>
+        <item>
+        <title>Algorithm</title>
+        <link>https://javenjin.github.io/blog/categories/algorithm/</link>
+        <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/categories/algorithm/</guid>
+        <description>&lt;img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/categories/algorithm/algorithm.jpeg" alt="Featured image of post Algorithm" /&gt;</description>
+        </item>
+        <item>
+        <title>Java (Programming Language)</title>
+        <link>https://javenjin.github.io/blog/categories/java-programming-language/</link>
+        <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/categories/java-programming-language/</guid>
+        <description>&lt;img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/categories/java-programming-language/java.png" alt="Featured image of post Java (Programming Language)" /&gt;</description>
+        </item>
+        <item>
+        <title>Design Pattern</title>
+        <link>https://javenjin.github.io/blog/categories/design-pattern/</link>
+        <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/categories/design-pattern/</guid>
+        <description>&lt;img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/categories/design-pattern/design-pattern.png" alt="Featured image of post Design Pattern" /&gt;</description>
+        </item>
+        <item>
+        <title>Machine Learning</title>
+        <link>https://javenjin.github.io/blog/categories/machine-learning/</link>
+        <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/categories/machine-learning/</guid>
+        <description>&lt;img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/categories/machine-learning/machine-learning.png" alt="Featured image of post Machine Learning" /&gt;</description>
+        </item>
+        <item>
+        <title>C (Programming Language)</title>
+        <link>https://javenjin.github.io/blog/categories/c-programming-language/</link>
+        <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/categories/c-programming-language/</guid>
+        <description>&lt;img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/categories/c-programming-language/c.jpg" alt="Featured image of post C (Programming Language)" /&gt;</description>
+        </item>
+        <item>
+        <title>Front End</title>
+        <link>https://javenjin.github.io/blog/categories/front-end/</link>
+        <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/categories/front-end/</guid>
+        <description>&lt;img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/categories/front-end/front-end.png" alt="Featured image of post Front End" /&gt;</description>
+        </item>
+        <item>
+        <title>Computer Vision</title>
+        <link>https://javenjin.github.io/blog/categories/computer-vision/</link>
+        <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/categories/computer-vision/</guid>
+        <description>&lt;img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/categories/computer-vision/computer-vision.png" alt="Featured image of post Computer Vision" /&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

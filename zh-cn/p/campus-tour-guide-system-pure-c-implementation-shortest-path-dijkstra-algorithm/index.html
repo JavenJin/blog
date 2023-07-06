@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='校园导游系统（纯C语言实现）最短路径 - Dijkstra算法'>
+<title>Campus tour guide system (pure C implementation) Shortest path - Dijkstra algorithm</title>
+
+<link rel='canonical' href='https://javenjin.github.io/blog/zh-cn/p/campus-tour-guide-system-pure-c-implementation-shortest-path-dijkstra-algorithm/'>
+
+<link rel="stylesheet" href="/blog/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Campus tour guide system (pure C implementation) Shortest path - Dijkstra algorithm'>
+<meta property='og:description' content='校园导游系统（纯C语言实现）最短路径 - Dijkstra算法'>
+<meta property='og:url' content='https://javenjin.github.io/blog/zh-cn/p/campus-tour-guide-system-pure-c-implementation-shortest-path-dijkstra-algorithm/'>
+<meta property='og:site_name' content='Javen Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C (Programming Language)' /><meta property='article:tag' content='Dijkstra' /><meta property='article:published_time' content='2019-11-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2019-11-27T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Campus tour guide system (pure C implementation) Shortest path - Dijkstra algorithm">
+<meta name="twitter:description" content="校园导游系统（纯C语言实现）最短路径 - Dijkstra算法">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/blog/zh-cn">
+                
+                    
+                    
+                    
+                        
+                        <img src="/blog/img/avatar_hubf7b15bf5e15ae8b6bb0ceda44d97e9a_739263_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/blog/zh-cn">Javen Blog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/javenjin'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://instagram.com/kingjie98'
+                        target="_blank"
+                        title="Ins"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16.65 7.2H16.66M8 20H16C18.2091 20 20 18.2091 20 16V8C20 5.79086 18.2091 4 16 4H8C5.79086 4 4 5.79086 4 8V16C4 18.2091 5.79086 20 8 20ZM15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12Z"/>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:wenjie.jin@hotmail.com'
+                        target="_blank"
+                        title="Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/blog/zh-cn/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://javenjin.github.io/blog/" >English</option>
+                        
+                            <option value="https://javenjin.github.io/blog/zh-cn/" selected>中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#西京学院导游系统">西京学院导游系统</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/blog/zh-cn/categories/c-programming-language/" >
+                C (Programming Language)
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/blog/zh-cn/p/campus-tour-guide-system-pure-c-implementation-shortest-path-dijkstra-algorithm/">Campus tour guide system (pure C implementation) Shortest path - Dijkstra algorithm</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            校园导游系统（纯C语言实现）最短路径 - Dijkstra算法
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 27, 2019</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 6 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+        <footer class="article-translations">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+            <div>
+                
+                    <a href="https://javenjin.github.io/blog/p/campus-tour-guide-system-pure-c-implementation-shortest-path-dijkstra-algorithm/" class="link">English</a>
+                
+            </div>
+        </footer>
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h3 id="西京学院导游系统">西京学院导游系统</h3>
+<p>学习数据结构+C语言实现</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span><span class="lnt">248
+</span><span class="lnt">249
+</span><span class="lnt">250
+</span><span class="lnt">251
+</span><span class="lnt">252
+</span><span class="lnt">253
+</span><span class="lnt">254
+</span><span class="lnt">255
+</span><span class="lnt">256
+</span><span class="lnt">257
+</span><span class="lnt">258
+</span><span class="lnt">259
+</span><span class="lnt">260
+</span><span class="lnt">261
+</span><span class="lnt">262
+</span><span class="lnt">263
+</span><span class="lnt">264
+</span><span class="lnt">265
+</span><span class="lnt">266
+</span><span class="lnt">267
+</span><span class="lnt">268
+</span><span class="lnt">269
+</span><span class="lnt">270
+</span><span class="lnt">271
+</span><span class="lnt">272
+</span><span class="lnt">273
+</span><span class="lnt">274
+</span><span class="lnt">275
+</span><span class="lnt">276
+</span><span class="lnt">277
+</span><span class="lnt">278
+</span><span class="lnt">279
+</span><span class="lnt">280
+</span><span class="lnt">281
+</span><span class="lnt">282
+</span><span class="lnt">283
+</span><span class="lnt">284
+</span><span class="lnt">285
+</span><span class="lnt">286
+</span><span class="lnt">287
+</span><span class="lnt">288
+</span><span class="lnt">289
+</span><span class="lnt">290
+</span><span class="lnt">291
+</span><span class="lnt">292
+</span><span class="lnt">293
+</span><span class="lnt">294
+</span><span class="lnt">295
+</span><span class="lnt">296
+</span><span class="lnt">297
+</span><span class="lnt">298
+</span><span class="lnt">299
+</span><span class="lnt">300
+</span><span class="lnt">301
+</span><span class="lnt">302
+</span><span class="lnt">303
+</span><span class="lnt">304
+</span><span class="lnt">305
+</span><span class="lnt">306
+</span><span class="lnt">307
+</span><span class="lnt">308
+</span><span class="lnt">309
+</span><span class="lnt">310
+</span><span class="lnt">311
+</span><span class="lnt">312
+</span><span class="lnt">313
+</span><span class="lnt">314
+</span><span class="lnt">315
+</span><span class="lnt">316
+</span><span class="lnt">317
+</span><span class="lnt">318
+</span><span class="lnt">319
+</span><span class="lnt">320
+</span><span class="lnt">321
+</span><span class="lnt">322
+</span><span class="lnt">323
+</span><span class="lnt">324
+</span><span class="lnt">325
+</span><span class="lnt">326
+</span><span class="lnt">327
+</span><span class="lnt">328
+</span><span class="lnt">329
+</span><span class="lnt">330
+</span><span class="lnt">331
+</span><span class="lnt">332
+</span><span class="lnt">333
+</span><span class="lnt">334
+</span><span class="lnt">335
+</span><span class="lnt">336
+</span><span class="lnt">337
+</span><span class="lnt">338
+</span><span class="lnt">339
+</span><span class="lnt">340
+</span><span class="lnt">341
+</span><span class="lnt">342
+</span><span class="lnt">343
+</span><span class="lnt">344
+</span><span class="lnt">345
+</span><span class="lnt">346
+</span><span class="lnt">347
+</span><span class="lnt">348
+</span><span class="lnt">349
+</span><span class="lnt">350
+</span><span class="lnt">351
+</span><span class="lnt">352
+</span><span class="lnt">353
+</span><span class="lnt">354
+</span><span class="lnt">355
+</span><span class="lnt">356
+</span><span class="lnt">357
+</span><span class="lnt">358
+</span><span class="lnt">359
+</span><span class="lnt">360
+</span><span class="lnt">361
+</span><span class="lnt">362
+</span><span class="lnt">363
+</span><span class="lnt">364
+</span><span class="lnt">365
+</span><span class="lnt">366
+</span><span class="lnt">367
+</span><span class="lnt">368
+</span><span class="lnt">369
+</span><span class="lnt">370
+</span><span class="lnt">371
+</span><span class="lnt">372
+</span><span class="lnt">373
+</span><span class="lnt">374
+</span><span class="lnt">375
+</span><span class="lnt">376
+</span><span class="lnt">377
+</span><span class="lnt">378
+</span><span class="lnt">379
+</span><span class="lnt">380
+</span><span class="lnt">381
+</span><span class="lnt">382
+</span><span class="lnt">383
+</span><span class="lnt">384
+</span><span class="lnt">385
+</span><span class="lnt">386
+</span><span class="lnt">387
+</span><span class="lnt">388
+</span><span class="lnt">389
+</span><span class="lnt">390
+</span><span class="lnt">391
+</span><span class="lnt">392
+</span><span class="lnt">393
+</span><span class="lnt">394
+</span><span class="lnt">395
+</span><span class="lnt">396
+</span><span class="lnt">397
+</span><span class="lnt">398
+</span><span class="lnt">399
+</span><span class="lnt">400
+</span><span class="lnt">401
+</span><span class="lnt">402
+</span><span class="lnt">403
+</span><span class="lnt">404
+</span><span class="lnt">405
+</span><span class="lnt">406
+</span><span class="lnt">407
+</span><span class="lnt">408
+</span><span class="lnt">409
+</span><span class="lnt">410
+</span><span class="lnt">411
+</span><span class="lnt">412
+</span><span class="lnt">413
+</span><span class="lnt">414
+</span><span class="lnt">415
+</span><span class="lnt">416
+</span><span class="lnt">417
+</span><span class="lnt">418
+</span><span class="lnt">419
+</span><span class="lnt">420
+</span><span class="lnt">421
+</span><span class="lnt">422
+</span><span class="lnt">423
+</span><span class="lnt">424
+</span><span class="lnt">425
+</span><span class="lnt">426
+</span><span class="lnt">427
+</span><span class="lnt">428
+</span><span class="lnt">429
+</span><span class="lnt">430
+</span><span class="lnt">431
+</span><span class="lnt">432
+</span><span class="lnt">433
+</span><span class="lnt">434
+</span><span class="lnt">435
+</span><span class="lnt">436
+</span><span class="lnt">437
+</span><span class="lnt">438
+</span><span class="lnt">439
+</span><span class="lnt">440
+</span><span class="lnt">441
+</span><span class="lnt">442
+</span><span class="lnt">443
+</span><span class="lnt">444
+</span><span class="lnt">445
+</span><span class="lnt">446
+</span><span class="lnt">447
+</span><span class="lnt">448
+</span><span class="lnt">449
+</span><span class="lnt">450
+</span><span class="lnt">451
+</span><span class="lnt">452
+</span><span class="lnt">453
+</span><span class="lnt">454
+</span><span class="lnt">455
+</span><span class="lnt">456
+</span><span class="lnt">457
+</span><span class="lnt">458
+</span><span class="lnt">459
+</span><span class="lnt">460
+</span><span class="lnt">461
+</span><span class="lnt">462
+</span><span class="lnt">463
+</span><span class="lnt">464
+</span><span class="lnt">465
+</span><span class="lnt">466
+</span><span class="lnt">467
+</span><span class="lnt">468
+</span><span class="lnt">469
+</span><span class="lnt">470
+</span><span class="lnt">471
+</span><span class="lnt">472
+</span><span class="lnt">473
+</span><span class="lnt">474
+</span><span class="lnt">475
+</span><span class="lnt">476
+</span><span class="lnt">477
+</span><span class="lnt">478
+</span><span class="lnt">479
+</span><span class="lnt">480
+</span><span class="lnt">481
+</span><span class="lnt">482
+</span><span class="lnt">483
+</span><span class="lnt">484
+</span><span class="lnt">485
+</span><span class="lnt">486
+</span><span class="lnt">487
+</span><span class="lnt">488
+</span><span class="lnt">489
+</span><span class="lnt">490
+</span><span class="lnt">491
+</span><span class="lnt">492
+</span><span class="lnt">493
+</span><span class="lnt">494
+</span><span class="lnt">495
+</span><span class="lnt">496
+</span><span class="lnt">497
+</span><span class="lnt">498
+</span><span class="lnt">499
+</span><span class="lnt">500
+</span><span class="lnt">501
+</span><span class="lnt">502
+</span><span class="lnt">503
+</span><span class="lnt">504
+</span><span class="lnt">505
+</span><span class="lnt">506
+</span><span class="lnt">507
+</span><span class="lnt">508
+</span><span class="lnt">509
+</span><span class="lnt">510
+</span><span class="lnt">511
+</span><span class="lnt">512
+</span><span class="lnt">513
+</span><span class="lnt">514
+</span><span class="lnt">515
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;conio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;graphics.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl"><span class="cp">#define MaxViewNum 50      </span><span class="cm">/*景点个数最大50*/</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define MaxRoad 10000      </span><span class="cm">/*定义路径为无穷大*/</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">int</span> <span class="n">dist</span><span class="p">[</span><span class="n">MaxViewNum</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">int</span> <span class="n">path</span><span class="p">[</span><span class="n">MaxViewNum</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//定义三个结构体表示图中内容 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">typedef</span> <span class="k">struct</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">30</span><span class="p">];</span>          <span class="cm">/*景点名称*/</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="n">introduce</span><span class="p">[</span><span class="mi">200</span><span class="p">];</span>    <span class="cm">/*景点介绍*/</span>	
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span>  <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span>               <span class="cm">/*景点坐标*/</span> 
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="n">JDXX</span><span class="p">;</span>                      <span class="cm">/*景点信息*/</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">struct</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">JDXX</span> <span class="n">jd</span><span class="p">[</span><span class="n">MaxViewNum</span><span class="p">];</span>                 <span class="cm">/*存放顶点的一维数组，数组第零单元没有用上*/</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">length</span><span class="p">[</span><span class="n">MaxViewNum</span><span class="p">][</span><span class="n">MaxViewNum</span><span class="p">];</span>  <span class="cm">/*存放路径长度*/</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="n">MGraph</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">MGraph</span> <span class="n">M</span><span class="p">;</span>                               <span class="cm">/*全局变量,定义M为MGraph类型*/</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">N</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>                                <span class="cm">/*全局变量，目前景点个数*/</span> 
+</span></span><span class="line"><span class="cl"><span class="n">path</span> <span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">dist</span> <span class="n">d</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">init</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;北门&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">introduce</span><span class="p">,</span><span class="s">&#34;坐落于西京路，毗邻生活区，购物方便，交通便利&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;艺舫&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">introduce</span><span class="p">,</span><span class="s">&#34;坐落于桂湖上，通往艺术的天堂&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;花街&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">introduce</span><span class="p">,</span><span class="s">&#34;以s形花坛作为背景，一年四季花常开&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">4</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;科苑&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">4</span><span class="p">].</span><span class="n">introduce</span><span class="p">,</span><span class="s">&#34;为学生英语听力，计算机等课程提供场所&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">5</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;广场&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">5</span><span class="p">].</span><span class="n">introduce</span><span class="p">,</span><span class="s">&#34;包括博能国旗时代广场，为学生提供娱乐活动场地&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">6</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;教学楼&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">6</span><span class="p">].</span><span class="n">introduce</span><span class="p">,</span><span class="s">&#34;学生日常上课的地方，通往知识的殿堂&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">7</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;工程舫&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">7</span><span class="p">].</span><span class="n">introduce</span><span class="p">,</span><span class="s">&#34;为学生提供实验，实训，学习的场地&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;图书馆&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="n">introduce</span><span class="p">,</span><span class="s">&#34;具有浓厚的文化积淀，供同学安静读书学习的环境&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">9</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;公寓楼&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">9</span><span class="p">].</span><span class="n">introduce</span><span class="p">,</span><span class="s">&#34;11——18号公寓楼&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">10</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;大学生发展与服务中心&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">10</span><span class="p">].</span><span class="n">introduce</span><span class="p">,</span><span class="s">&#34;各书院办公地点，为学生提供一站式服务&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">11</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;璞玉餐厅&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">11</span><span class="p">].</span><span class="n">introduce</span><span class="p">,</span><span class="s">&#34;四层餐厅，为学生提供一日三餐&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">12</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;京华大礼堂&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">12</span><span class="p">].</span><span class="n">introduce</span><span class="p">,</span><span class="s">&#34;学校最大的礼堂&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">13</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;体育馆&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">13</span><span class="p">].</span><span class="n">introduce</span><span class="p">,</span><span class="s">&#34;为学生室内运动提供场所&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">14</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;科研楼&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">14</span><span class="p">].</span><span class="n">introduce</span><span class="p">,</span><span class="s">&#34;进行科学研究的场所&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">15</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;南操场&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">15</span><span class="p">].</span><span class="n">introduce</span><span class="p">,</span><span class="s">&#34;同学们傍晚刷运动软件&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">16</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;南湖&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">16</span><span class="p">].</span><span class="n">introduce</span><span class="p">,</span><span class="s">&#34;又名含笑湖，夜晚灯光非常美丽&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">17</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="s">&#34;南门&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">17</span><span class="p">].</span><span class="n">introduce</span><span class="p">,</span><span class="s">&#34;坐落于神禾二路，交通方便&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">MaxViewNum</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">MaxViewNum</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">MaxRoad</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">MaxViewNum</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">30</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">30</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="mi">30</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="mi">70</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="mi">30</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">6</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="o">=</span><span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">6</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span><span class="o">=</span><span class="mi">30</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">6</span><span class="p">]</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">6</span><span class="p">][</span><span class="mi">10</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">6</span><span class="p">]</span><span class="o">=</span><span class="mi">20</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">8</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span><span class="o">=</span><span class="mi">30</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">9</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span><span class="o">=</span><span class="mi">30</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">7</span><span class="p">][</span><span class="mi">10</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span><span class="o">=</span><span class="mi">30</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">8</span><span class="p">][</span><span class="mi">9</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">8</span><span class="p">]</span><span class="o">=</span><span class="mi">30</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">10</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">9</span><span class="p">]</span><span class="o">=</span><span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">9</span><span class="p">][</span><span class="mi">11</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">11</span><span class="p">][</span><span class="mi">9</span><span class="p">]</span><span class="o">=</span><span class="mi">30</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">11</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">11</span><span class="p">][</span><span class="mi">10</span><span class="p">]</span><span class="o">=</span><span class="mi">30</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">11</span><span class="p">][</span><span class="mi">12</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">12</span><span class="p">][</span><span class="mi">11</span><span class="p">]</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">11</span><span class="p">][</span><span class="mi">13</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">13</span><span class="p">][</span><span class="mi">11</span><span class="p">]</span><span class="o">=</span><span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">12</span><span class="p">][</span><span class="mi">13</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">13</span><span class="p">][</span><span class="mi">12</span><span class="p">]</span><span class="o">=</span><span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">12</span><span class="p">][</span><span class="mi">15</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">15</span><span class="p">][</span><span class="mi">12</span><span class="p">]</span><span class="o">=</span><span class="mi">30</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">12</span><span class="p">][</span><span class="mi">17</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">17</span><span class="p">][</span><span class="mi">12</span><span class="p">]</span><span class="o">=</span><span class="mi">150</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">13</span><span class="p">][</span><span class="mi">14</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">14</span><span class="p">][</span><span class="mi">13</span><span class="p">]</span><span class="o">=</span><span class="mi">70</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">13</span><span class="p">][</span><span class="mi">15</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">15</span><span class="p">][</span><span class="mi">13</span><span class="p">]</span><span class="o">=</span><span class="mi">30</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">13</span><span class="p">][</span><span class="mi">16</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">16</span><span class="p">][</span><span class="mi">13</span><span class="p">]</span><span class="o">=</span><span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">14</span><span class="p">][</span><span class="mi">16</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">16</span><span class="p">][</span><span class="mi">14</span><span class="p">]</span><span class="o">=</span><span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">15</span><span class="p">][</span><span class="mi">16</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">16</span><span class="p">][</span><span class="mi">15</span><span class="p">]</span><span class="o">=</span><span class="mi">20</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">16</span><span class="p">][</span><span class="mi">17</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="mi">17</span><span class="p">][</span><span class="mi">16</span><span class="p">]</span><span class="o">=</span><span class="mi">30</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">N</span><span class="o">=</span><span class="mi">17</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">x</span><span class="o">=</span><span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">y</span><span class="o">=</span><span class="mi">25</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">x</span><span class="o">=</span><span class="mi">150</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">y</span><span class="o">=</span><span class="mi">125</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">x</span><span class="o">=</span><span class="mi">250</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">y</span><span class="o">=</span><span class="mi">25</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">4</span><span class="p">].</span><span class="n">x</span><span class="o">=</span><span class="mi">150</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">4</span><span class="p">].</span><span class="n">y</span><span class="o">=</span><span class="mi">475</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">5</span><span class="p">].</span><span class="n">x</span><span class="o">=</span><span class="mi">350</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">5</span><span class="p">].</span><span class="n">y</span><span class="o">=</span><span class="mi">175</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">6</span><span class="p">].</span><span class="n">x</span><span class="o">=</span><span class="mi">475</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">6</span><span class="p">].</span><span class="n">y</span><span class="o">=</span><span class="mi">50</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">7</span><span class="p">].</span><span class="n">x</span><span class="o">=</span><span class="mi">475</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">7</span><span class="p">].</span><span class="n">y</span><span class="o">=</span><span class="mi">475</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="n">x</span><span class="o">=</span><span class="mi">575</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">8</span><span class="p">].</span><span class="n">y</span><span class="o">=</span><span class="mi">650</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">9</span><span class="p">].</span><span class="n">x</span><span class="o">=</span><span class="mi">675</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">9</span><span class="p">].</span><span class="n">y</span><span class="o">=</span><span class="mi">525</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">10</span><span class="p">].</span><span class="n">x</span><span class="o">=</span><span class="mi">575</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">10</span><span class="p">].</span><span class="n">y</span><span class="o">=</span><span class="mi">150</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">11</span><span class="p">].</span><span class="n">x</span><span class="o">=</span><span class="mi">750</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">11</span><span class="p">].</span><span class="n">y</span><span class="o">=</span><span class="mi">225</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">12</span><span class="p">].</span><span class="n">x</span><span class="o">=</span><span class="mi">575</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">12</span><span class="p">].</span><span class="n">y</span><span class="o">=</span><span class="mi">525</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">13</span><span class="p">].</span><span class="n">x</span><span class="o">=</span><span class="mi">575</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">13</span><span class="p">].</span><span class="n">y</span><span class="o">=</span><span class="mi">225</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">14</span><span class="p">].</span><span class="n">x</span><span class="o">=</span><span class="mi">1075</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">14</span><span class="p">].</span><span class="n">y</span><span class="o">=</span><span class="mi">25</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">15</span><span class="p">].</span><span class="n">x</span><span class="o">=</span><span class="mi">1000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">15</span><span class="p">].</span><span class="n">y</span><span class="o">=</span><span class="mi">375</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">16</span><span class="p">].</span><span class="n">x</span><span class="o">=</span><span class="mi">1100</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">16</span><span class="p">].</span><span class="n">y</span><span class="o">=</span><span class="mi">225</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">17</span><span class="p">].</span><span class="n">x</span><span class="o">=</span><span class="mi">1175</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="mi">17</span><span class="p">].</span><span class="n">y</span><span class="o">=</span><span class="mi">325</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">scsyjd</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;所有景点如下：</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">t</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="n">t</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;编号：%d</span><span class="se">\n</span><span class="s">   景点：%s</span><span class="se">\n</span><span class="s">   介绍：%s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">t</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">t</span><span class="p">].</span><span class="n">introduce</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">按任意键返回！&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">getch</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">zengj</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>  <span class="kt">char</span> <span class="n">s1</span><span class="p">[</span><span class="mi">30</span><span class="p">],</span><span class="n">s2</span><span class="p">[</span><span class="mi">200</span><span class="p">];</span>    <span class="c1">//景点名称；景点介绍 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="kt">int</span> <span class="n">t</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span>        <span class="c1">//t为与该景点共有几个景点相连；i为应第几个景点与之相连；
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                           <span class="c1">//q为与之相连的景点；p为这个景点和新景点的距离 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                           <span class="c1">//x为此景点位置的x值；y为此景点位置的y值 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="n">N</span><span class="o">++</span><span class="p">;</span>  
+</span></span><span class="line"><span class="cl">   <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入该景点的名称：&#34;</span><span class="p">);</span>                 
+</span></span><span class="line"><span class="cl">   <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">s1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入该景点的介绍：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">s2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入该景点的位置的x值：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">x</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">   <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入该景点的位置的y值：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">N</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="n">s1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">N</span><span class="p">].</span><span class="n">introduce</span><span class="p">,</span><span class="n">s2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">N</span><span class="p">].</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   <span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">N</span><span class="p">].</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入共有几个景点与此景点相通：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">t</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">t</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="p">{</span>  <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;第%d个景点与之相通；&#34;</span><span class="p">,</span><span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">q</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;他们之间的距离为：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">p</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">N</span><span class="p">][</span><span class="n">q</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">q</span><span class="p">][</span><span class="n">N</span><span class="p">]</span><span class="o">=</span><span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">按任意键返回！&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">getch</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">scjd</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入要删除的景点序号数&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">t</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">Q</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">p</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Q</span><span class="o">=</span><span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">t</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="n">t</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="p">;</span><span class="n">p</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="n">p</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">t</span><span class="p">][</span><span class="n">p</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">t</span><span class="p">][</span><span class="n">p</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">p</span><span class="p">][</span><span class="n">t</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">p</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">t</span><span class="p">];</span>		 
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="n">Q</span><span class="p">;</span><span class="n">Q</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span><span class="n">Q</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">Q</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">Q</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;删除成功O(∩_∩)O&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;删除失败←_←&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">N</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">按任意键返回！&#34;</span><span class="p">);</span>	
+</span></span><span class="line"><span class="cl"><span class="nf">getch</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">gxjd</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">char</span> <span class="n">s1</span><span class="p">[</span><span class="mi">30</span><span class="p">],</span><span class="n">s2</span><span class="p">[</span><span class="mi">200</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入要更新的景点编号：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">t</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">t</span><span class="o">&gt;</span><span class="n">N</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;此景点不存在，更新失败&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入景点名称：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">s1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入景点介绍：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">s2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">t</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="n">s1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">strcpy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">t</span><span class="p">].</span><span class="n">introduce</span><span class="p">,</span><span class="n">s2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;更新完成！&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">按任意键返回！&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">getch</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">zengjl</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请问要在那两个景点之间增加一条路</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入第一个景点编号：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入第二个景点编号：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入这条路的长度：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">c</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="n">N</span><span class="o">||</span><span class="n">b</span><span class="o">&gt;</span><span class="n">N</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;景点超出了已有景点范围，路径增加失败！&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">a</span><span class="p">][</span><span class="n">b</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">b</span><span class="p">][</span><span class="n">a</span><span class="p">]</span><span class="o">=</span><span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;路径增加成功！&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">	<span class="p">}</span> 
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">按任意键返回！&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">getch</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">scl</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请问要删除那两个景点之间的路</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入第一个景点编号：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入第二个景点编号：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="n">N</span><span class="o">||</span><span class="n">b</span><span class="o">&gt;</span><span class="n">N</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;景点超出了已有景点范围，路径删除失败！&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">a</span><span class="p">][</span><span class="n">b</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">b</span><span class="p">][</span><span class="n">a</span><span class="p">]</span><span class="o">=</span><span class="n">MaxRoad</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;路径删除成功！&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">	<span class="p">}</span> 
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">按任意键返回！&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">getch</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">gxl</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请问要更新那两个景点之间的路</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入第一个景点编号：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入第二个景点编号：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入更新后的长度：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">c</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="n">N</span><span class="o">||</span><span class="n">b</span><span class="o">&gt;</span><span class="n">N</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;这条路不存在，路径更新失败！&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">a</span><span class="p">][</span><span class="n">b</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">b</span><span class="p">][</span><span class="n">a</span><span class="p">]</span><span class="o">=</span><span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;路径更新成功！&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">	<span class="p">}</span> 
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">按任意键返回！&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">getch</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">cxjd</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请问您要查询的景点编号是：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="n">N</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;查询的景点不存在，查询失败！&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;编号：%d</span><span class="se">\n</span><span class="s">   景点：%s</span><span class="se">\n</span><span class="s">   介绍：%s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">a</span><span class="p">].</span><span class="n">name</span><span class="p">,</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">a</span><span class="p">].</span><span class="n">introduce</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">按任意键返回！&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">	<span class="nf">getch</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">dijkstra_syjd</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">v0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入查询的景点：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">v0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">boolean</span> <span class="n">final</span><span class="p">[</span><span class="n">MaxViewNum</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">min</span><span class="p">,</span><span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="n">v</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">v</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="n">v</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">final</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">=</span><span class="n">FALSE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">v0</span><span class="p">][</span><span class="n">v</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">&lt;</span><span class="n">MaxRoad</span><span class="o">&amp;&amp;</span><span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">p</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">=</span><span class="n">v0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="n">p</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">final</span><span class="p">[</span><span class="n">v0</span><span class="p">]</span><span class="o">=</span><span class="n">TRUE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">d</span><span class="p">[</span><span class="n">v0</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">min</span><span class="o">=</span><span class="n">MaxRoad</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">k</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="o">++</span><span class="n">k</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">final</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">&amp;&amp;</span><span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">&lt;</span><span class="n">min</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">v</span><span class="o">=</span><span class="n">k</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">min</span><span class="o">=</span><span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="n">min</span><span class="o">==</span><span class="n">MaxRoad</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">final</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">=</span><span class="n">TRUE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">k</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="o">++</span><span class="n">k</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">final</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">min</span><span class="o">+</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="o">&lt;</span><span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">=</span><span class="n">min</span><span class="o">+</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="n">k</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">			<span class="n">p</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">=</span><span class="n">v</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">printsyjd</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">st</span><span class="p">[</span><span class="n">MaxViewNum</span><span class="p">],</span><span class="n">i</span><span class="p">,</span><span class="n">pre</span><span class="p">,</span><span class="n">top</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">到达景点%2d的总距离是: %5d , 所经过路径:&#34;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">		<span class="n">st</span><span class="p">[</span><span class="o">++</span><span class="n">top</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">pre</span><span class="o">=</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="k">while</span><span class="p">(</span><span class="n">pre</span><span class="o">!=-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">st</span><span class="p">[</span><span class="o">++</span><span class="n">top</span><span class="p">]</span><span class="o">=</span><span class="n">pre</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">pre</span><span class="o">=</span><span class="n">p</span><span class="p">[</span><span class="n">pre</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="p">(</span><span class="n">top</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="n">st</span><span class="p">[</span><span class="n">top</span><span class="o">--</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">top</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;---&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">getch</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">dijkstra_ygjd</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">v0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入出发景点：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">v0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">boolean</span> <span class="n">final</span><span class="p">[</span><span class="n">MaxViewNum</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">min</span><span class="p">,</span><span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="n">v</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">v</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="n">v</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">final</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">=</span><span class="n">FALSE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">=</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">v0</span><span class="p">][</span><span class="n">v</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">&lt;</span><span class="n">MaxRoad</span><span class="o">&amp;&amp;</span><span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">p</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">=</span><span class="n">v0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="n">p</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">final</span><span class="p">[</span><span class="n">v0</span><span class="p">]</span><span class="o">=</span><span class="n">TRUE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">d</span><span class="p">[</span><span class="n">v0</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">min</span><span class="o">=</span><span class="n">MaxRoad</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">k</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="o">++</span><span class="n">k</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">final</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">&amp;&amp;</span><span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">&lt;</span><span class="n">min</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">v</span><span class="o">=</span><span class="n">k</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">min</span><span class="o">=</span><span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="n">min</span><span class="o">==</span><span class="n">MaxRoad</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">final</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">=</span><span class="n">TRUE</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">k</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="o">++</span><span class="n">k</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">final</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">min</span><span class="o">+</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="o">&lt;</span><span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">=</span><span class="n">min</span><span class="o">+</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="n">k</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">			<span class="n">p</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">=</span><span class="n">v</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">printygjd</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">请输入到达景点：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">st</span><span class="p">[</span><span class="n">MaxViewNum</span><span class="p">],</span><span class="n">i</span><span class="p">,</span><span class="n">pre</span><span class="p">,</span><span class="n">top</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="n">y</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">总距离是: %5d , 所经过路径:&#34;</span><span class="p">,</span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">		<span class="n">st</span><span class="p">[</span><span class="o">++</span><span class="n">top</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">pre</span><span class="o">=</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="k">while</span><span class="p">(</span><span class="n">pre</span><span class="o">!=-</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">st</span><span class="p">[</span><span class="o">++</span><span class="n">top</span><span class="p">]</span><span class="o">=</span><span class="n">pre</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">pre</span><span class="o">=</span><span class="n">p</span><span class="p">[</span><span class="n">pre</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="p">(</span><span class="n">top</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="n">st</span><span class="p">[</span><span class="n">top</span><span class="o">--</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">top</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;---&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">	<span class="n">top</span><span class="o">--</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">getch</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">scdt</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">strcpy</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="s">&#34;西京学院地图&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">initgraph</span><span class="p">(</span><span class="mi">1200</span><span class="p">,</span><span class="mi">800</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">setfillcolor</span><span class="p">(</span><span class="nf">RGB</span><span class="p">(</span><span class="mi">225</span><span class="p">,</span><span class="mi">236</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">fillcircle</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">x</span><span class="p">,</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">y</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">outtextxy</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">x</span><span class="p">,</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">y</span><span class="p">,</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">N</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span><span class="o">&amp;&amp;</span><span class="n">M</span><span class="p">.</span><span class="n">length</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">1000</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">				<span class="nf">line</span><span class="p">(</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">x</span><span class="p">,</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">y</span><span class="p">,</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">x</span><span class="p">,</span><span class="n">M</span><span class="p">.</span><span class="n">jd</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">outtextxy</span><span class="p">(</span><span class="mi">900</span><span class="p">,</span><span class="mi">650</span><span class="p">,</span><span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">getch</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">closegraph</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">init</span><span class="p">();</span> 
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;**********************************************************************</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;*         =.=                                          =.=           *</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;*    `                                                        `      *</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;*     `              主人，欢迎来到西京哟~  喵~              `       *</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;*      `              ^-^                  ^-^              `        *</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;*       `                       ^-^                        `         *</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;**********************************************************************</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">                    西京导游系统（输入0退出程序）：&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">                     1、输出所有景点及其介绍&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">                     2、查询某一个景点及其介绍&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">                     3、增加一个景点&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">                     4、删除一个景点&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">                     5、更新一个景点&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">                     6、增加一条路&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">                     7、删除一条路&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">                     8、更新一条路&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">                     9、查询某一景点到其他所有景点的最短路径&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">                    10、查询某两个景点之间的最短路径   &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">                    11、输出地图                       已有景点：%d个</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">N</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入选项：&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">		<span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">else</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">switch</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="k">case</span> <span class="mi">1</span><span class="o">:</span><span class="nf">scsyjd</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="k">case</span> <span class="mi">2</span><span class="o">:</span><span class="nf">cxjd</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="k">case</span> <span class="mi">3</span><span class="o">:</span><span class="nf">zengj</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="k">case</span> <span class="mi">4</span><span class="o">:</span><span class="nf">scjd</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="k">case</span> <span class="mi">5</span><span class="o">:</span><span class="nf">gxjd</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="k">case</span> <span class="mi">6</span><span class="o">:</span><span class="nf">zengjl</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="k">case</span> <span class="mi">7</span><span class="o">:</span><span class="nf">scl</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="k">case</span> <span class="mi">8</span><span class="o">:</span><span class="nf">gxl</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="k">case</span> <span class="mi">9</span><span class="o">:</span><span class="nf">dijkstra_syjd</span><span class="p">();</span><span class="nf">printsyjd</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="k">case</span> <span class="mi">10</span><span class="o">:</span><span class="nf">dijkstra_ygjd</span><span class="p">();</span><span class="nf">printygjd</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="k">case</span> <span class="mi">11</span><span class="o">:</span><span class="nf">scdt</span><span class="p">();</span><span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span> 
+</span></span><span class="line"><span class="cl">			<span class="nf">system</span><span class="p">(</span><span class="s">&#34;cls&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/blog/zh-cn/tags/c-programming-language/">C (Programming Language)</a>
+        
+            <a href="/blog/zh-cn/tags/dijkstra/">Dijkstra</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/q-1072-soda-bottles-c-language/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Q 1072 Soda bottles (C Language)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/q-1157-affinity-number-c-language/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Q 1157 Affinity number (C Language)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/q-1393-bell-god-racing-c-language/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Q 1393 Bell God Racing (C Language)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/q-1537-algorithm-improvement-vipraster-printing-problems-c-language/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Q 1537 [Algorithm Improvement VIP]Raster printing problems (C Language)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/q-1616-algorithm-improvement-vipinverted-number-c-language/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Q 1616 [Algorithm Improvement VIP]Inverted number (C Language)</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2023 Javen Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/blog/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

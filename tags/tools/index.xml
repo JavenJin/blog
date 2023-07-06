@@ -1,0 +1,1590 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tools on Javen Blog</title>
+        <link>https://javenjin.github.io/blog/tags/tools/</link>
+        <description>Recent content in Tools on Javen Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 16 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/tags/tools/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Install Ubuntu on Windows subsystem using WSL2 technology</title>
+        <link>https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/</link>
+        <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/</guid>
+        <description>&lt;h1 id=&#34;install-ubuntu-on-windows-subsystem-using-wsl2-technology&#34;&gt;Install Ubuntu on Windows subsystem using WSL2 technology&lt;/h1&gt;
+&lt;h2 id=&#34;install-wsl2&#34;&gt;Install WSL2&lt;/h2&gt;
+&lt;p&gt;Reference: &lt;a class=&#34;link&#34; href=&#34;https://docs.microsoft.com/en-us/windows/wsl/install-manual&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Manual installation steps for older versions of WSL&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;enabling-the-windows-subsystem-for-linux&#34;&gt;Enabling the Windows subsystem for Linux&lt;/h3&gt;
+&lt;p&gt;Open PowerShell as administrator (Start menu &amp;gt; PowerShell &amp;gt; right-click &amp;gt; Run as administrator) and enter the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;start-the-virtual-machine-function&#34;&gt;Start the virtual machine function&lt;/h3&gt;
+&lt;p&gt;Open PowerShell as administrator and run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;restart-the-computer&#34;&gt;Restart the computer&lt;/h3&gt;
+&lt;h3 id=&#34;download-the-linux-kernel-update-package-and-install-it&#34;&gt;Download the Linux kernel update package and install it&lt;/h3&gt;
+&lt;p&gt;Download address 1 (Microsoft official website download): &lt;a class=&#34;link&#34; href=&#34;https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Linux kernel update packages&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Download address 2 (csdn download): &lt;a class=&#34;link&#34; href=&#34;https://download.csdn.net/download/weixin_42718701/86540810&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Linux kernel update packages&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Run the downloaded update package. (Double click to run - you will be prompted to elevate privileges, select &amp;ldquo;Yes&amp;rdquo; to approve this installation.)&lt;/p&gt;
+&lt;h3 id=&#34;set-wsl2-as-the-default-version&#34;&gt;Set WSL2 as the default version&lt;/h3&gt;
+&lt;p&gt;Open PowerShell and run the following command to set WSL 2 as the default version when installing a new Linux distribution:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wsl --set-default-version &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;install-ubuntu-and-install-docker-and-docker-compose&#34;&gt;Install Ubuntu and install docker and docker-compose&lt;/h2&gt;
+&lt;p&gt;Install Ubuntu Reference: &lt;a class=&#34;link&#34; href=&#34;https://docs.microsoft.com/en-us/windows/wsl/install-manual&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.microsoft.com/en-us/windows/wsl/install-manual&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Install Docker Reference: &lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/docker/ubuntu-docker-install.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.runoob.com/docker/ubuntu-docker-install.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Install Docker-Compose Reference: &lt;a class=&#34;link&#34; href=&#34;https://linuxhostsupport.com/blog/how-to-install-and-configure-docker-compose-on-ubuntu-20-04/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://linuxhostsupport.com/blog/how-to-install-and-configure-docker-compose-on-ubuntu-20-04/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;open-the-microsoft-storehttpsakamswslstore-and-select-the-ubuntu-version-to-download&#34;&gt;Open the &lt;a class=&#34;link&#34; href=&#34;https://aka.ms/wslstore&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Microsoft Store&lt;/a&gt; and select the Ubuntu version to download&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;wait-for-the-automatic-installation-to-succeed&#34;&gt;Wait for the automatic installation to succeed&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;start-ubuntu-and-wait-for-it-to-install-automatically&#34;&gt;Start Ubuntu and wait for it to install automatically&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;after-setting-the-username-and-password-enter-the-ubuntu-system&#34;&gt;After setting the username and password, enter the Ubuntu system&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;install-docker&#34;&gt;Install Docker&lt;/h3&gt;
+&lt;p&gt;Use th daocloud one-click installation command:&lt;/p&gt;
+&lt;p&gt;The installation command is as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo curl -sSL https://get.daocloud.io/docker &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Wait for successful installation&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Start the docker service command&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo service docker start
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Check if the installation is successful command&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo docker ps -a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The installation of Ubuntu Docker is successful when the following is displayed&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-8.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;install-docker-compose&#34;&gt;Install docker-compose&lt;/h3&gt;
+&lt;p&gt;Update the apt-get command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-9.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Install the docker-compose command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install docker-compose
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-10.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Enter y in the middle to enter&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-11.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Installation complete!&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>REST API Design Rulebook</title>
+        <link>https://javenjin.github.io/blog/p/rest-api-design-rulebook/</link>
+        <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/p/rest-api-design-rulebook/</guid>
+        <description>&lt;h1 id=&#34;rest-api-design-rulebook&#34;&gt;REST API Design Rulebook&lt;/h1&gt;
+&lt;h2 id=&#34;uri-formatrfc-3986&#34;&gt;URI Format(RFC 3986)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;URL = scheme &amp;#34;://&amp;#34; authority &amp;#34;/&amp;#34; path [ &amp;#34;?&amp;#34; query ] [ &amp;#34;#&amp;#34; fragment ]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;uri-rules&#34;&gt;URI Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;A forward-slash separator (/) must be used to indicate hierarchical relationships&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.canvas.restapi.org/shapes/polygons/quadrilaterals/squares
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The URI should not have a slash (/) at the end&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Incorrect:	http://api.canvas.restapi.org/shapes/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Correct:	http://api.canvas.restapi.org/shapes
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hyphens (-) should be used to improve URI readability&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.example.restapi.org/blogs/mark-masse/entries/this-is-my-first-post
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Underscores (_) should not be used in URIs&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the URI path, lowercase letters should be preferred&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1: http://api.example.restapi.org/my-folder/my-doc	Correct
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2: HTTP://API.EXAMPLE.RESTAPI.ORG/my-fplder/my-doc	Correct
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3: httpL//api.example.restapi.org/My-Folder/my-doc	Incorrect
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The file extension should not be included in the URI&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Incorrect:	http://api.college.restapi.org/students/3248234/transcripts/2005/fall.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Correct:	http://api.college.restapi.org/students/3248234/transcripts/2005/fall
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For the API, a consistent subdomain should be used, and a subdomain named api should be added to the full domain of the API&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Incorrect:	http://soccer.restapi.org
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Correct:	http://api.soccer.restapi.org
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For client developers, a consistent subdomain should be used&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;httpL//developer.soccer.restapi.org
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;URIs that represent document resources should use singular nouns&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet/players/claudio
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The URI that identifies a collection should use a plural noun&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet/players
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The URI identifying the resource store should use a plural noun&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.music.restapi.org/artists/mikemassedotcom/playlists
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Verb or verb phrase applied to controller name&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.college.restapi.org/students/morgan/register
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.example.restapi.org/lists/4324/dedupe
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.ognom.restapi.org/dbs/reindex
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.build.restapi.org/qa/nightly/runTestSuite
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Variable path segments can be used for substitution based on the value of the identifier&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.soccer.restapi.org/leagues/{leagueId}/teams/{teamsId}/players/{playerId}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet/players/21
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CRUD function names should not be used in URIs&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Incorrect:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	GET /deleteUser?id=1234
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	GET /deleteUsers/1234
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	DELETE /deleteUser/1234
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	POST /users/1234/delete
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Correct:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	DELETE /users/1234
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A query component of a URI can be used to filter collections or store&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GET /users
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GET /users?role=admin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The query component of the URI should be used for paging to collect or store results&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GET /users?pageSize=25&amp;amp;&amp;amp;pageStartIndex=50
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;request-methodsrfc2616&#34;&gt;Request Methods(RFC2616)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Request-Line = Method SP Request-URI SP HTTP-Version CRLF
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;GET&lt;/strong&gt; is to retrieve a representation of a resource&amp;rsquo;s state.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;HEAD&lt;/strong&gt; is used to retrieve the metadata associated with the resource&amp;rsquo;s state.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PUT&lt;/strong&gt; should be used to add a new resource to a store or update a resource.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DELETE&lt;/strong&gt; removes a resource from its parent.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;POST&lt;/strong&gt; should be used to create a new resource within a collection and execute controllers.&lt;/p&gt;
+&lt;h2 id=&#34;request-method-rules&#34;&gt;Request Method Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;GET and POST cannot be used for other request methods&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Must use GET to retrieve the expression of the resource&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ curl -v http://api.example.restapi.org/greeting
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; GET /greeting HTTP/1.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; User-Agent: curl/7.20.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; Host: api.example.restapi.org
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; Accept: *.*
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt; HTTP/1.1 &lt;span class=&#34;m&#34;&gt;200&lt;/span&gt; OK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt; Date: Sat, &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; Aug &lt;span class=&#34;m&#34;&gt;2011&lt;/span&gt; 16:02:40 GMT
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt; Server: Apache
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt; Expires: Sat, &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; Aug &lt;span class=&#34;m&#34;&gt;2011&lt;/span&gt; 16:06:40 GMT
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt; Cache-Control: max-age&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;60, must-revalidate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt; ETag: text/html:hello world
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt; Last-Modified: Sat, &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; Aug &lt;span class=&#34;m&#34;&gt;2011&lt;/span&gt; 16:02:17 GMT
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt; Vary: Accept-Encoding
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt; Content-Type: text/html
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;!doctype html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta &lt;span class=&#34;nv&#34;&gt;charset&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;title&amp;gt;Greeting&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;body&amp;gt;&amp;lt;div &lt;span class=&#34;nv&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;greeting&amp;#34;&lt;/span&gt;&amp;gt;Hello World!&amp;lt;/div&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HEAD is applied to retrieve response headers&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$curl&lt;/span&gt; --head http://api.example.restapi.org/greeting
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;HTTP/1.1 &lt;span class=&#34;m&#34;&gt;200&lt;/span&gt; OK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Date: Sat, &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; Aug &lt;span class=&#34;m&#34;&gt;2011&lt;/span&gt; 16:02:40 GMT
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Server: Apache
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Expires: Sat, &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; Aug &lt;span class=&#34;m&#34;&gt;2011&lt;/span&gt; 16:03:40 GMT
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Cache-Control: max-age&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;60, must-revalidate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ETag: text/html:hello world
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Last-Modified: Sat, &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; Aug &lt;span class=&#34;m&#34;&gt;2011&lt;/span&gt; 16:02:17 GMT
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Vary: Accept-Encoding
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Context-Type: text/html
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PUT must be used to insert and update the stored resources&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PUT /accounts/4ef2d5d0-cb7e-11e0-9572-0800200c9a66/buckets/objects/4321
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PUT must be used to update variable resources&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Must use POST to create a new resource in a collection&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;POST /leagues/seattle/teams/trebuchet/players
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Note the request message may contain a representation that suggests the initial state of the player to be created.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;POST must be used to execute the controller&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;POST /alerts/245743/resend
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DELETE must be used to delete the resource&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DELETE /accounts/4ef2d5d0-cb7e-11e0-9572-080020c9a66/buckets/objects/4321
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;OPTIONS should be used to retrieve metadata describing the interactions available to the resource&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;response-status-codes&#34;&gt;Response Status Codes&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Category&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1xx: Informational&lt;/td&gt;
+&lt;td&gt;Communicates transfer protocol-level information.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2xx: Success&lt;/td&gt;
+&lt;td&gt;Indicates that the client&amp;rsquo;s request was accepted successfully.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3xx: Redirection&lt;/td&gt;
+&lt;td&gt;Indicates that the client must take some additional action in order to complete their request.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4xx: Client Error&lt;/td&gt;
+&lt;td&gt;This category of error status codes points the finger at clients.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5xx: Server Error&lt;/td&gt;
+&lt;td&gt;The server takes responsibility for these error status codes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;response-status--code-rules&#34;&gt;Response Status  Code Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;200 OK (indicates non-specific success)&lt;/li&gt;
+&lt;li&gt;200 OK (cannot be used to communicate errors in the corresponding body)&lt;/li&gt;
+&lt;li&gt;201 Created (indicates that the resource was created successfully)&lt;/li&gt;
+&lt;li&gt;202 Accepted (must be used to indicate that an asynchronous operation has been successfully started)&lt;/li&gt;
+&lt;li&gt;204 No Content (Use 204 if the corresponding body is intentionally empty)&lt;/li&gt;
+&lt;li&gt;301 Moved Permanently (used to relocate the resource)&lt;/li&gt;
+&lt;li&gt;302 Found (this rule should not be used)&lt;/li&gt;
+&lt;li&gt;303 See Other (applied to refer clients to a different URI)&lt;/li&gt;
+&lt;li&gt;304 Not Modified (applied to reserve bandwidth)&lt;/li&gt;
+&lt;li&gt;307 Temporary Redirect (tells the client to resubmit the request to another URI)&lt;/li&gt;
+&lt;li&gt;400 Bad Request (indicates a non-specific failure)&lt;/li&gt;
+&lt;li&gt;401 Unauthorized (must be used when there is a problem with the client&amp;rsquo;s credentials)&lt;/li&gt;
+&lt;li&gt;403 Forbidden (user access to the resource exceeds permissions, access is prohibited)&lt;/li&gt;
+&lt;li&gt;404 Not Found (404 must be used when the URI cannot be mapped to a resource)&lt;/li&gt;
+&lt;li&gt;405 Method Not Allowed (when HTTP methods are not supported, 405 must be used)&lt;/li&gt;
+&lt;li&gt;406 Not Acceptable (406 must be used when the requested file type cannot be provided)&lt;/li&gt;
+&lt;li&gt;409 Conflict (when attempting to place a resource in an impossible or inconsistent state)&lt;/li&gt;
+&lt;li&gt;412 Precondition Failed (precondition in request header not met, returned 412 and did not execute request)&lt;/li&gt;
+&lt;li&gt;415 Unsupported Media Type (415 must be used when the file type requested by the client cannot be handled)&lt;/li&gt;
+&lt;li&gt;500 Internal Server Error (used to indicate API failure)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;http-headers-rules&#34;&gt;HTTP Headers Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Content-Type must be used&lt;/li&gt;
+&lt;li&gt;Content-Length should be used&lt;/li&gt;
+&lt;li&gt;Last-Modified should be used in the response&lt;/li&gt;
+&lt;li&gt;ETag should be used in the response&lt;/li&gt;
+&lt;li&gt;Storage must support conditional PUT requests&lt;/li&gt;
+&lt;li&gt;Location must be used to specify the URI of the newly created resource&lt;/li&gt;
+&lt;li&gt;Cache-Control, Expires and Date request headers should be used to encourage caching&lt;/li&gt;
+&lt;li&gt;Cache-Control, Expires, and Pragma response headers can be used to block caching&lt;/li&gt;
+&lt;li&gt;Caching should be encouraged&lt;/li&gt;
+&lt;li&gt;Expiration caching cache headers should be used with the 200 (OK) response&lt;/li&gt;
+&lt;li&gt;Expiration caching cache headers can optionally be used with 3xx and 4xx responses&lt;/li&gt;
+&lt;li&gt;custom HTTP headers cannot be used to change the behavior of HTTP methods&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;media-types&#34;&gt;Media Types&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;type &amp;#34;/&amp;#34; subtype *( &amp;#34;;&amp;#34; parameter )
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;registered-media-types&#34;&gt;Registered Media Types&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Registered Media Types&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;text/plain&lt;/td&gt;
+&lt;td&gt;A plain text format with no specific content structure or markup.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;text/html&lt;/td&gt;
+&lt;td&gt;Content that is formatted using the HyperText Markup Language (HTML).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;image/jpeg&lt;/td&gt;
+&lt;td&gt;An image compression method that was standardized by the Joint Photographic Experts Group (JEPG).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;application/xml&lt;/td&gt;
+&lt;td&gt;Content that is structured using the Extensible Markup Language (XML).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;application/atom+xml&lt;/td&gt;
+&lt;td&gt;Content that uses the Atom Syndication Format (Atom), which is an XML-based format that structures data into lists known as feeds.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;application/javascript&lt;/td&gt;
+&lt;td&gt;Source code written in the JavaScript programming language.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;application/json&lt;/td&gt;
+&lt;td&gt;The JavaScript Object Notation (JSON) text-based format that is often used by programs to exchange structured data.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;media-types-rules&#34;&gt;Media Types Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Application-specific media types should be used&lt;/li&gt;
+&lt;li&gt;Media type negotiation should be supported when multiple representations are available&lt;/li&gt;
+&lt;li&gt;Media type selection using a query parameter may be supported&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;message-body-rules&#34;&gt;Message Body Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;the resource representation should support JSON&lt;/li&gt;
+&lt;li&gt;JSON must be well-formed&lt;/li&gt;
+&lt;li&gt;XML and other formats are optional for the resource representation&lt;/li&gt;
+&lt;li&gt;Additional envelopes must not be created&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;hypermedia-representation-rules&#34;&gt;Hypermedia Representation Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;A consistent form should be used to represent links&lt;/li&gt;
+&lt;li&gt;A consistent form should be used to represent link relations&lt;/li&gt;
+&lt;li&gt;A consistent form should be used to advertise links&lt;/li&gt;
+&lt;li&gt;A self link should be included in response message body representations&lt;/li&gt;
+&lt;li&gt;Minimize the number of advertised “entry point” API URIs&lt;/li&gt;
+&lt;li&gt;Links should be used to advertise a resource’s available actions in a state-sensitive manner&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;media-type-representation-rules&#34;&gt;Media Type Representation Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;A consistent form should be used to represent media type formats&lt;/li&gt;
+&lt;li&gt;A consistent form should be used to represent media type schemas&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;error-representation-rules&#34;&gt;Error Representation Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;A consistent form should be used to represent errors&lt;/li&gt;
+&lt;li&gt;A consistent form should be used to represent error responses&lt;/li&gt;
+&lt;li&gt;Consistent error types should be used for common error conditions&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;client-concerns-rules&#34;&gt;Client Concerns Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;New URIs should be used to introduce new concepts&lt;/li&gt;
+&lt;li&gt;Schemas should be used to manage representational form versions&lt;/li&gt;
+&lt;li&gt;Entity tags should be used to manage representational state versions&lt;/li&gt;
+&lt;li&gt;OAuth may be used to protect resources&lt;/li&gt;
+&lt;li&gt;API management solutions may be used to protect resources&lt;/li&gt;
+&lt;li&gt;The query component of a URI should be used to support partial responses&lt;/li&gt;
+&lt;li&gt;The query component of a URI should be used to embed linked resources&lt;/li&gt;
+&lt;li&gt;JSONP should be supported to provide multi-origin read access from JavaScript&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;final-thoughts-principles&#34;&gt;Final Thoughts Principles&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;REST API designs differ more than necessary&lt;/li&gt;
+&lt;li&gt;A REST API should be designed, not coded&lt;/li&gt;
+&lt;li&gt;Programmers and their organizations benefit from consistency&lt;/li&gt;
+&lt;li&gt;A REST API should be created using a GUI tool&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>Windows batch scripts(.bat)</title>
+        <link>https://javenjin.github.io/blog/p/windows-batch-scripts.bat/</link>
+        <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/p/windows-batch-scripts.bat/</guid>
+        <description>&lt;h1 id=&#34;windows-batch-scriptsbat&#34;&gt;Windows batch scripts(.bat)&lt;/h1&gt;
+&lt;h2 id=&#34;common-file-manipulation-dos-commands&#34;&gt;Common file manipulation DOS commands&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;dir (List file names)&lt;/li&gt;
+&lt;li&gt;cd (Change current directory)&lt;/li&gt;
+&lt;li&gt;ren (Change the file name)&lt;/li&gt;
+&lt;li&gt;copy (Copy a file)&lt;/li&gt;
+&lt;li&gt;del (Delete a file)&lt;/li&gt;
+&lt;li&gt;md (Create subdirectory)&lt;/li&gt;
+&lt;li&gt;rd (Deletes a directory)&lt;/li&gt;
+&lt;li&gt;deltree (Deletes a directory tree)&lt;/li&gt;
+&lt;li&gt;format (format the disk)&lt;/li&gt;
+&lt;li&gt;edit (Text editor)&lt;/li&gt;
+&lt;li&gt;type (Show file contents)&lt;/li&gt;
+&lt;li&gt;mem (View memory status)&lt;/li&gt;
+&lt;li&gt;help (Show help tips)&lt;/li&gt;
+&lt;li&gt;cls (clear screen)&lt;/li&gt;
+&lt;li&gt;move (Move files, change directory names)&lt;/li&gt;
+&lt;li&gt;more (split screen display)&lt;/li&gt;
+&lt;li&gt;xcopy (copies directories and files)&lt;/li&gt;
+&lt;li&gt;echo (Show input)&lt;/li&gt;
+&lt;li&gt;echo on (Turns on the command echo)&lt;/li&gt;
+&lt;li&gt;echo off (Turn off the command display)&lt;/li&gt;
+&lt;li&gt;@ (@ commands with @ are not displayed)&lt;/li&gt;
+&lt;li&gt;pause (suspends the program, press any key to continue)&lt;/li&gt;
+&lt;li&gt;&amp;gt; (Output the displayed content to somewhere)&lt;/li&gt;
+&lt;li&gt;&amp;gt;&amp;gt; (Append the display to somewhere)&lt;/li&gt;
+&lt;li&gt;&amp;gt;nul (command followed by &amp;gt;nul means output to empty device)&lt;/li&gt;
+&lt;li&gt;mode (Sets the window size: mode con cols=32 lines=8)&lt;/li&gt;
+&lt;li&gt;color (Set the background color: color 3a (background (dark indigo) and text (bright green)))&lt;/li&gt;
+&lt;li&gt;title (change the title name of the current command prompt)&lt;/li&gt;
+&lt;li&gt;rem (comment (belongs to the command will be displayed))&lt;/li&gt;
+&lt;li&gt;:: (comment (will not be shown))&lt;/li&gt;
+&lt;li&gt;prompt (change the current path to the root path and rename it)&lt;/li&gt;
+&lt;li&gt;goto (command followed by a label to jump)&lt;/li&gt;
+&lt;li&gt;: (Write the tag name after the command (not case sensitive), special tags :EOF or :eof do not need to be defined)&lt;/li&gt;
+&lt;li&gt;call (call batch or label)&lt;/li&gt;
+&lt;li&gt;start (starts the application)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;variables&#34;&gt;Variables&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Command&lt;/th&gt;
+&lt;th&gt;Explanation&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;set var=1&lt;/td&gt;
+&lt;td&gt;Define the variable var and copy 1 to a&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set var&lt;/td&gt;
+&lt;td&gt;View the value of the variable var&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set v&lt;/td&gt;
+&lt;td&gt;View the values of all variables starting with v&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set&lt;/td&gt;
+&lt;td&gt;View the values of all variables&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;%var%&lt;/td&gt;
+&lt;td&gt;Value (content) of var variable&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set /a var=48&lt;/td&gt;
+&lt;td&gt;Assign the number 48 to the variable var, a 32-bit integer value, occupying 4 bytes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set /p var&lt;/td&gt;
+&lt;td&gt;The user manually enters a value for var&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set /p var=Please enter some text&lt;/td&gt;
+&lt;td&gt;The user manually enters the value for var and displays the prompt text: &amp;ldquo;Please enter some text&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set var=Hello world!&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;echo %var:o=z%&lt;/td&gt;
+&lt;td&gt;Output Hello world! without changing the var value&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set var2=%var:ld=ms and bugs%&lt;/td&gt;
+&lt;td&gt;Assign Hello worms and bugs! to var2 without changing the var value&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;%var:~m%&lt;/td&gt;
+&lt;td&gt;A positive number m means that the variable var is taken from the left side after the mth character. A negative number m means that the variable var is taken from the right side after the -mth character and all characters to the right of it.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;%var:~m,n%&lt;/td&gt;
+&lt;td&gt;Starting from m, n characters are taken for positive numbers, and n characters are taken for negative numbers until -n characters are left&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set /a num=48&lt;/td&gt;
+&lt;td&gt;Assign the value 48 to the variable num&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set /a result=%num%+12&lt;/td&gt;
+&lt;td&gt;The result of adding the variables num and 12 is assigned to the variable result&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;echo %result%&lt;/td&gt;
+&lt;td&gt;Display the value of the variable result&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;setlocal EnableDelayedExpansion&lt;/td&gt;
+&lt;td&gt;Delayed variable expansion makes sense of !var!&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;passing-parameters&#34;&gt;Passing parameters&lt;/h2&gt;
+&lt;p&gt;Use % to receive arguments Pass arguments directly after call or start or when running a batch file in cmd&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bat&#34; data-lang=&#34;bat&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Receiving parameters:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; The 1st parameter you entered is &lt;span class=&#34;nv&#34;&gt;%1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; The 2nd parameter you entered is &lt;span class=&#34;nv&#34;&gt;%2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Transfer parameters:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;call&lt;/span&gt; Called.bat hello world!
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;start&lt;/span&gt; Called.bat hello world!
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./Called.bat hello world!
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;condition-if&#34;&gt;Condition IF&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Symbols&lt;/th&gt;
+&lt;th&gt;Meaning&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;EQU&lt;/td&gt;
+&lt;td&gt;equal&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NEQ&lt;/td&gt;
+&lt;td&gt;unequal&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LSS&lt;/td&gt;
+&lt;td&gt;less than&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LEQ&lt;/td&gt;
+&lt;td&gt;less than or equal to&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;GTR&lt;/td&gt;
+&lt;td&gt;Greater than&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;GEQ&lt;/td&gt;
+&lt;td&gt;greater than or equal to&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NOT&lt;/td&gt;
+&lt;td&gt;NOT&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;if exist	(Determine if a file exists)&lt;/li&gt;
+&lt;li&gt;if defined	(Determine if environment variables are defined)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;loop-for&#34;&gt;Loop FOR&lt;/h2&gt;
+&lt;p&gt;General format of for loop usage: for %i in (*.*) do @echo %i&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bat&#34; data-lang=&#34;bat&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;::::::Batch file name modification.bat:::::::&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; off
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;setlocal&lt;/span&gt; EnableDelayedExpansion
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;/a&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;num&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;%%&lt;/span&gt;i &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;D:\test\*.txt&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;ren&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;%%&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;i&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;!num!&lt;/span&gt;.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;/a&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;num&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;:::::::::::::::::::::::::::::::::::::::::::::&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The for loop uses the general format of a numeric loop: for /l %i in (5,3,16) do echo %i&lt;/p&gt;
+&lt;p&gt;The numeric variable i becomes, in order: 5, 8, 11, 14, starting from 5 and increasing by 3 until 16.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bat&#34; data-lang=&#34;bat&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;:::::::::Circle Square.bat::::::::::&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; off
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;setlocal&lt;/span&gt; EnableDelayedExpansion
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;var&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;○
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;/l&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;%%&lt;/span&gt;i &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;var&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%var%!var!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: At this point the variable var has become a row of 8 consecutive circles&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;/l&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;%%&lt;/span&gt;i &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; This is the first &lt;span class=&#34;se&#34;&gt;%%&lt;/span&gt;i copies&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; output-results-&lt;span class=&#34;se&#34;&gt;%%&lt;/span&gt;i.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;/l&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;%%&lt;/span&gt;j &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;%var%&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;output-results-&lt;span class=&#34;se&#34;&gt;%%&lt;/span&gt;i.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; The 8 X 8 ○ matrix has been drawn and saved in 8 text files
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;pause&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;:::::::::::::::::::::::::::::::s:::::&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;combination-commands&#34;&gt;Combination commands&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;amp;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bat&#34; data-lang=&#34;bat&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; Checking what executable files we have in WINDOWS... &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;dir&lt;/span&gt; C:\WINDOWS\*.exe &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; And we got lots of stuff here.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&amp;amp; acts as a link between multiple commands.&lt;/p&gt;
+&lt;p&gt;Regardless of the result of each of the three commands, the later one will always be executed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;amp;&amp;amp;&lt;/p&gt;
+&lt;p&gt;Similar to &amp;amp;, multiple commands are juxtaposed and executed in order.&lt;/p&gt;
+&lt;p&gt;If there is an error in the execution of one of the multiple commands, the subsequent commands will not be executed; if there has been no error, all the concurrent commands will be executed all the time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;||&lt;/p&gt;
+&lt;p&gt;|| has the opposite purpose of &amp;amp;&amp;amp;.&lt;/p&gt;
+&lt;p&gt;When the correct command is encountered, no further commands will be executed.&lt;/p&gt;
+&lt;p&gt;If no correct command is encountered, all commands will be executed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;pipeline-commands&#34;&gt;Pipeline commands&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;gt; and &amp;gt;&amp;gt;&lt;/p&gt;
+&lt;p&gt;Enter the redirect command. Redirects a command or the output of a program to a specific file.&lt;/p&gt;
+&lt;p&gt;&amp;gt; will erase the content of the original file and write it to the specified file, while &amp;gt;&amp;gt; will only append the content to the specified file.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;|&lt;/p&gt;
+&lt;p&gt;It can put the output of the command on its left into the command on its right as an argument.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The pipeline command also has &amp;lt;, &amp;lt;&amp;amp; and &amp;gt;&amp;amp;, which are not common and will not be discussed for now.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;learning-address&#34;&gt;Learning Address&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://docs.30c.org/dosbat/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Windows Batch Scripting Tutorial&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Windows 11 allows remote desktop/remote access</title>
+        <link>https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/</link>
+        <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/</guid>
+        <description>&lt;h1 id=&#34;windows-11-allows-remote-desktopremote-access&#34;&gt;Windows 11 allows remote desktop/remote access&lt;/h1&gt;
+&lt;h2 id=&#34;windows-11-allows-remote-desktop&#34;&gt;Windows 11 allows remote desktop&lt;/h2&gt;
+&lt;h3 id=&#34;open-settings&#34;&gt;Open Settings&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;search-remote-desktop&#34;&gt;Search Remote Desktop&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;open-remote-desktop&#34;&gt;Open Remote Desktop&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;windows-11-allows-remote-access&#34;&gt;Windows 11 allows remote access&lt;/h2&gt;
+&lt;h3 id=&#34;search-windows-defender-firewall&#34;&gt;Search Windows Defender Firewall&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;click-turn-windows-defender-firewall-on-or-off&#34;&gt;Click Turn Windows Defender Firewall on or off&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;select-turn-off-windows-defender-firewall-from-public-network-settings-not-recommended&#34;&gt;Select Turn off Windows Defender Firewall from Public network settings (not recommended)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;click-ok-below-to-save&#34;&gt;Click OK below to save&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-display-can-be-as-shown&#34;&gt;The display can be as shown&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-8.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Install Tomcat8 on Windows</title>
+        <link>https://javenjin.github.io/blog/p/install-tomcat8-on-windows/</link>
+        <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/p/install-tomcat8-on-windows/</guid>
+        <description>&lt;h1 id=&#34;install-tomcat8-on-windows&#34;&gt;Install Tomcat8 on Windows&lt;/h1&gt;
+&lt;h2 id=&#34;download-the-installation-package&#34;&gt;Download the installation package&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Visit Tomcat official website &lt;a class=&#34;link&#34; href=&#34;https://tomcat.apache.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://tomcat.apache.org/&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;**Select the download version in the Download column on the left, the version selected here is Tomcat8, click into **&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Choose the corresponding version to download according to your system version, here choose the Windows 64-bit operating system version, as shown in the picture click download&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;install-tomcat8-the-downloaded-zip-package-is-the-installation-free-version-you-can-use-it-directly-after-decompression&#34;&gt;Install Tomcat8 (the downloaded zip package is the installation-free version, you can use it directly after decompression)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Unzip the downloaded file&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Place the unpacked files on the D drive&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;configure-environment-variables&#34;&gt;Configure environment variables&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Right-click on properties on this computer and open settings&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Click on Advanced System Settings to open System Properties&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Click on environment variables to open environment variables&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-8.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Select path and click edit to enter the edit path variable page&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-9.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Click New, enter the directory of the bin folder under the installation directory of Tomcat8, click OK, OK, OK&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-10.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;run-the-command&#34;&gt;Run the command&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Go to the bin folder in the Tomcat8 installation directory&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-11.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Click on the address bar, type cmd and enter to open a command line window&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-12.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Type service.bat install in the command line window and enter&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-13.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The installation is successful if the picture is displayed&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;test-whether-it-is-successful&#34;&gt;Test whether it is successful&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Double-click to run the Tomcat8w.exe file in the bin folder to open the startup window&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-14.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Click Start to start Tomcat8&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-15.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Open the browser, enter 127.0.0.1:8080 to access the following screen is a successful installation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-16.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Google Chrome Web Browser Export Password and Import Password</title>
+        <link>https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/</link>
+        <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/</guid>
+        <description>&lt;h1 id=&#34;google-chrome-web-browser-export-password-and-import-password&#34;&gt;Google Chrome Web Browser Export Password and Import Password&lt;/h1&gt;
+&lt;p&gt;       Sometimes people encounter a new computer, or the company needs to adjust the computer, or that they need to import the account password stored in Google Chrome on other people&amp;rsquo;s computers, and find that you can export the password, but there is no option to import the password, it is very annoying, here to teach you how to export and import the account password of chrome Google Chrome.&lt;/p&gt;
+&lt;h2 id=&#34;export-account-password&#34;&gt;Export account password&lt;/h2&gt;
+&lt;h3 id=&#34;click-on-settings-in-the-upper-right-corner&#34;&gt;Click on Settings in the upper right corner&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;select-password&#34;&gt;Select password&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;click-on-the-right-for-more-actions&#34;&gt;Click on the right for more actions&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;just-click-on-export-password&#34;&gt;Just click on Export Password&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-exported-passwords-are-in-csv-format-which-can-be-viewed-in-excel-but-it-is-still-not-convenient-so-how-to-import-them&#34;&gt;The exported passwords are in csv format, which can be viewed in excel, but it is still not convenient, so how to import them?&lt;/h3&gt;
+&lt;h3 id=&#34;import-account-password&#34;&gt;Import account password&lt;/h3&gt;
+&lt;h3 id=&#34;open-google-chrome-and-type-chromeflagspassword-import-export-in-the-address-bar&#34;&gt;Open Google Chrome and type chrome://flags/#password-import-export in the address bar&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;then-search-in-the-search-field-above-password-import&#34;&gt;Then search in the search field above: password import&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;then-select-default-as-enabled-on-the-right-and-click-relaunch-below-to-refresh-the-browser&#34;&gt;Then select Default as Enabled on the right, and click Relaunch below to refresh the browser&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;finally-go-back-to-the-place-where-you-exported-your-password-and-you-will-see-the-option-to-import&#34;&gt;Finally, go back to the place where you exported your password and you will see the option to import&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password8.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;if-you-import-the-password-you-exported-from-another-computer-youll-see-that-both-computers-have-the-same-password-for-google-chrome&#34;&gt;If you import the password you exported from another computer, you&amp;rsquo;ll see that both computers have the same password for Google Chrome&lt;/h3&gt;
+</description>
+        </item>
+        <item>
+        <title>Switching eclipse after the menu bar messy problem</title>
+        <link>https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/</link>
+        <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/</guid>
+        <description>&lt;h1 id=&#34;switching-eclipse-after-the-menu-bar-messy-problem&#34;&gt;Switching eclipse after the menu bar messy problem&lt;/h1&gt;
+&lt;h2 id=&#34;question&#34;&gt;Question&lt;/h2&gt;
+&lt;p&gt;Today I switched the working directory of eclipse&lt;/p&gt;
+&lt;p&gt;After opening it, I found a messy menu bar problem&lt;/p&gt;
+&lt;p&gt;eclipse opens like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I found that the menu bar is all messed up&lt;/p&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Workaround: Open Window - Preferences - General - Appearance&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Modify the right Theme to Windows Classic&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Then tap Apply or Apply and Close and you&amp;rsquo;re done.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Drawing class diagrams in Eclipse using AmaterasUML plugin</title>
+        <link>https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/</link>
+        <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/</guid>
+        <description>&lt;h1 id=&#34;drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin&#34;&gt;Drawing class diagrams in Eclipse using AmaterasUML plugin&lt;/h1&gt;
+&lt;h2 id=&#34;install-the-gef-plugin&#34;&gt;Install the GEF plugin&lt;/h2&gt;
+&lt;h3 id=&#34;open-the-eclipse-website-httpswwweclipseorg&#34;&gt;Open the eclipse website &lt;a class=&#34;link&#34; href=&#34;https://www.eclipse.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.eclipse.org/&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Open the eclipse website&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;click-on-projects-and-search-for-gef&#34;&gt;Click on Projects and search for GEF&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Search GEF&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;click-download-on-the-right&#34;&gt;Click Download on the right&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Download&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;in-the-pop-up-window-copy-the-download-address&#34;&gt;In the pop-up window, copy the download address&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Copy download address&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The current address is: &lt;a class=&#34;link&#34; href=&#34;http://download.eclipse.org/tools/gef/updates/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://download.eclipse.org/tools/gef/updates/releases&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;open-eclipse-click-help-above-select-install-new-software-paste-the-copied-address-click-add-the-plugin-name-can-be-empty&#34;&gt;Open eclipse, click Help above, select install new software, paste the copied address, click Add, the plugin name can be empty&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Add new plugin&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;select-select-all-i-dont-know-which-one-i-need-its-not-big-to-install-all-of-them-then-keep-next-and-accept-on-it&#34;&gt;Select Select All (I don&amp;rsquo;t know which one I need, it&amp;rsquo;s not big to install all of them), then keep Next and accept on it&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Select Select All&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;install-the-amaterasuml-plugin&#34;&gt;Install the AmaterasUML plugin&lt;/h2&gt;
+&lt;h3 id=&#34;download-amaterasuml_134&#34;&gt;Download AmaterasUML_1.3.4&lt;/h3&gt;
+&lt;p&gt;Download address: &lt;a class=&#34;link&#34; href=&#34;https://download.csdn.net/download/weixin_42718701/12812743&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AmaterasUML_1.3.4&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can also go to the official website to download the latest version of AmaterasUML&lt;/p&gt;
+&lt;h3 id=&#34;after-downloading-unzip-the-package-there-are-3-jar-packages-copy-them-to-the-plugins-directory-of-the-eclipse-installation-directory-restart-eclipse&#34;&gt;After downloading, unzip the package, there are 3 jar packages, copy them to the plugins directory of the eclipse installation directory, restart eclipse&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;amaterasuml-can-be-seen-via-window-preference&#34;&gt;AmaterasUML can be seen via Window-Preference&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams8.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;simple-use-of-amaterasuml&#34;&gt;Simple use of AmaterasUML&lt;/h2&gt;
+&lt;h3 id=&#34;right-click-a-project-new-other-select-class-diagram-and-click-next&#34;&gt;Right-click a project, New-Other, select Class Diagram, and click Next&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams9.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;give-the-class-diagram-a-name-and-click-finish&#34;&gt;Give the class diagram a name and click Finish&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams10.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;then-drag-the-class-or-interface-into-the-interface-and-the-class-appears-magnificently&#34;&gt;Then drag the class or interface into the interface, and the class appears magnificently&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams11.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

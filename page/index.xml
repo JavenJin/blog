@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pages on Javen Blog</title>
+        <link>https://javenjin.github.io/blog/page/</link>
+        <description>Recent content in Pages on Javen Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <lastBuildDate>Fri, 31 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>About</title>
+        <link>https://javenjin.github.io/blog/about/</link>
+        <pubDate>Fri, 31 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/about/</guid>
+        <description>&lt;h1 id=&#34;javen-jin&#34;&gt;Javen Jin&lt;/h1&gt;
+&lt;h2 id=&#34;contact-information&#34;&gt;Contact information&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/javenjin&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;mailto:wenjie.jin@hotmail.com&#34; &gt;Email&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;WeChat: &lt;strong&gt;KingWxi&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;personal-information&#34;&gt;Personal Information&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Male  1998&lt;/li&gt;
+&lt;li&gt;Computer Science and Technology&lt;/li&gt;
+&lt;li&gt;Undergraduate&lt;/li&gt;
+&lt;li&gt;Xijing University (September 2017 to July 2021)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;honors--awards--certificates&#34;&gt;Honors / Awards / Certificates&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;National Computer Grade Examination Level 2 Certificate of Competence C Programming (March 2018)&lt;/li&gt;
+&lt;li&gt;First Prize in the 10th National University Mathematics Competition (Non-Mathematics) (November 2018)&lt;/li&gt;
+&lt;li&gt;National Inspirational Scholarship for the 2017-2018 Academic Year (December 2018)&lt;/li&gt;
+&lt;li&gt;English (CET-4) (December 2018)&lt;/li&gt;
+&lt;li&gt;Second Prize, Shaanxi Region, National Undergraduate Mathematical Modeling Competition, Undergraduate Division (December 2018)&lt;/li&gt;
+&lt;li&gt;People&amp;rsquo;s Republic of China motor vehicle driving license C1 (January 2019)&lt;/li&gt;
+&lt;li&gt;First Prize of C/C++ Programming University Group B of the 10th Blue Bridge Cup National Software and Information Technology Professionals Competition in Shaanxi (March 2019)&lt;/li&gt;
+&lt;li&gt;Excellence Award in C/C++ Programming University Group B of the 10th Blue Bridge Cup National Competition for Software and Information Technology Professionals (May 2019)&lt;/li&gt;
+&lt;li&gt;Computer Technology and Software Professional Technical Qualification Junior Programmer Technical Qualification (November 2019)&lt;/li&gt;
+&lt;li&gt;National Scholarships for the 2018-2019 Academic Year (December 2019)&lt;/li&gt;
+&lt;li&gt;National Inspirational Scholarship for Academic Year 2019-2020 (December 2020)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;campus-experience&#34;&gt;Campus Experience&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;From September 2017 to September 2018, served as the practice department of the branch committee of the Communist Youth League to Sincere College. She has held many activities and achieved good results. Awarded the certificate of &amp;ldquo;Outstanding Member&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;From September 2018 to September 2020, he served as the president of the club &amp;ldquo;The Worry Shop&amp;rdquo; of Xijing University. The club was awarded the 2019 Outstanding Psychological Club.&lt;/li&gt;
+&lt;li&gt;In July 2018, participated in the summer trips to the countryside.&lt;/li&gt;
+&lt;li&gt;In July 2019, the team was awarded the &amp;ldquo;Excellent Organization Award&amp;rdquo; by the People&amp;rsquo;s Government of Jinling Temple for the second time.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;list-of-skills&#34;&gt;List of skills&lt;/h2&gt;
+&lt;p&gt;The following are the skills that I am proficient in using&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Programming language: C language, C# language, Java language&lt;/li&gt;
+&lt;li&gt;Backend Framework: Entity Framework Core、.NET Core&lt;/li&gt;
+&lt;li&gt;Front-end development: Node.js&lt;/li&gt;
+&lt;li&gt;Front-end framework: React、TypeScript、SaSS、Bootstrap、Ant Design&lt;/li&gt;
+&lt;li&gt;Database: MySQL、SqlServer、Postgres、InfluxDB、TDengine、Snowflake、SQLite&lt;/li&gt;
+&lt;li&gt;Versioning, documentation and automated deployment tools: Git、JIRA、Bitbucket、Confluence&lt;/li&gt;
+&lt;li&gt;Operating system: Windows Server、Windows 11、MacOS、 Ubuntu&lt;/li&gt;
+&lt;li&gt;Tools: Visual Studio、Visual Studio Code、IntelliJ IDEA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following are the skills I will use&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Programming language：Python language, C++ language, Go language&lt;/li&gt;
+&lt;li&gt;Backend Framework: Spring、Spring MVC、MyBatis&lt;/li&gt;
+&lt;li&gt;Front-end framework：Hugo&lt;/li&gt;
+&lt;li&gt;Database：Oracle、DM、TimeScale、MonetDB、ClickHouse&lt;/li&gt;
+&lt;li&gt;Cloud and open platform: WeChat application development, Ali cloud, Azure cloud&lt;/li&gt;
+&lt;li&gt;Tools：Eclipse、WebStorm、Jenkins&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;write-at-the-end&#34;&gt;Write at the end&lt;/h2&gt;
+&lt;p&gt;Passionate about work, strong self-learning and teamwork communication skills.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Archives</title>
+        <link>https://javenjin.github.io/blog/archives/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Links</title>
+        <link>https://javenjin.github.io/blog/links/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/links/</guid>
+        <description>&lt;p&gt;Here are some handy links.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Search</title>
+        <link>https://javenjin.github.io/blog/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/search/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

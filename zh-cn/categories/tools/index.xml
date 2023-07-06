@@ -1,0 +1,1886 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tools on Javen Blog</title>
+        <link>https://javenjin.github.io/blog/zh-cn/categories/tools/</link>
+        <description>Recent content in Tools on Javen Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Fri, 16 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/categories/tools/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Install Ubuntu on Windows subsystem using WSL2 technology</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/</link>
+        <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/zh-cn/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/</guid>
+        <description>&lt;h1 id=&#34;使用wsl2技术在windows子系统上安装ubuntu&#34;&gt;使用WSL2技术在Windows子系统上安装Ubuntu&lt;/h1&gt;
+&lt;h2 id=&#34;安装wsl2&#34;&gt;安装WSL2&lt;/h2&gt;
+&lt;p&gt;参考资料：&lt;a class=&#34;link&#34; href=&#34;https://docs.microsoft.com/en-us/windows/wsl/install-manual&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Manual installation steps for older versions of WSL&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;为-linux-启用-windows-子系统&#34;&gt;为 Linux 启用 Windows 子系统&lt;/h3&gt;
+&lt;p&gt;以管理员身份打开 PowerShell （开始菜单 &amp;gt; PowerShell &amp;gt; 右键单击 &amp;gt; 以管理员身份运行）并输入以下命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;启动虚拟机功能&#34;&gt;启动虚拟机功能&lt;/h3&gt;
+&lt;p&gt;以管理员身份打开 PowerShell 并运行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;重启计算机&#34;&gt;重启计算机&lt;/h3&gt;
+&lt;h3 id=&#34;下载-linux-内核更新包并安装&#34;&gt;下载 Linux 内核更新包并安装&lt;/h3&gt;
+&lt;p&gt;下载地址1（Microsoft官网下载）：&lt;a class=&#34;link&#34; href=&#34;https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Linux 内核更新包&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载地址2（csdn下载）：&lt;a class=&#34;link&#34; href=&#34;https://download.csdn.net/download/weixin_42718701/86540810&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Linux 内核更新包&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;运行下载的更新包。（双击运行 - 系统将提示您提升权限，选择“是”以批准此安装。）&lt;/p&gt;
+&lt;h3 id=&#34;将-wsl2-设置为默认版本&#34;&gt;将 WSL2 设置为默认版本&lt;/h3&gt;
+&lt;p&gt;打开 PowerShell 并运行以下命令，将 WSL 2 设置为安装新 Linux 发行版时的默认版本：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wsl --set-default-version &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;安装ubuntu并安装docker及docker-compose&#34;&gt;安装Ubuntu并安装docker及docker-compose&lt;/h2&gt;
+&lt;p&gt;安装Ubuntu参考资料：&lt;a class=&#34;link&#34; href=&#34;https://docs.microsoft.com/en-us/windows/wsl/install-manual&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.microsoft.com/en-us/windows/wsl/install-manual&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;安装docker参考资料：&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/docker/ubuntu-docker-install.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.runoob.com/docker/ubuntu-docker-install.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;安装docker-compose参考资料：&lt;a class=&#34;link&#34; href=&#34;https://linuxhostsupport.com/blog/how-to-install-and-configure-docker-compose-on-ubuntu-20-04/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://linuxhostsupport.com/blog/how-to-install-and-configure-docker-compose-on-ubuntu-20-04/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;打开microsoft-storehttpsakamswslstore并选择ubuntu版本进行下载&#34;&gt;打开&lt;a class=&#34;link&#34; href=&#34;https://aka.ms/wslstore&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Microsoft Store&lt;/a&gt;并选择Ubuntu版本进行下载&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;等待自动安装成功&#34;&gt;等待自动安装成功&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;启动ubuntu等待自动安装&#34;&gt;启动Ubuntu，等待自动安装&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;设置用户名及密码后进入ubuntu系统中&#34;&gt;设置用户名及密码后进入Ubuntu系统中&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;ubuntu-docker安装&#34;&gt;Ubuntu Docker安装&lt;/h3&gt;
+&lt;p&gt;使用国内 daocloud 一键安装命令：&lt;/p&gt;
+&lt;p&gt;安装命令如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo curl -sSL https://get.daocloud.io/docker &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;等待安装成功&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;启动docker服务命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo service docker start
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;查看是否安装成功命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo docker ps -a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;显示如下即安装Ubuntu Docker成功&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-8.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;安装docker-compose&#34;&gt;安装docker-compose&lt;/h3&gt;
+&lt;p&gt;更新apt-get命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-9.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;安装docker-compose命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install docker-compose
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-10.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;中途输入y回车即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-11.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;安装完成！&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>REST API Design Rulebook</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/rest-api-design-rulebook/</link>
+        <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/zh-cn/p/rest-api-design-rulebook/</guid>
+        <description>&lt;h1 id=&#34;rest-api-design-rulebook&#34;&gt;REST API Design Rulebook&lt;/h1&gt;
+&lt;h2 id=&#34;uri-formatrfc-3986&#34;&gt;URI Format(RFC 3986)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;URL = scheme &amp;#34;://&amp;#34; authority &amp;#34;/&amp;#34; path [ &amp;#34;?&amp;#34; query ] [ &amp;#34;#&amp;#34; fragment ]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;uri-rules&#34;&gt;URI Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;必须使用正斜杠分隔符（/）来表示层次结构关系&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.canvas.restapi.org/shapes/polygons/quadrilaterals/squares
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;URI最后不应该有斜杠（/）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Incorrect:	http://api.canvas.restapi.org/shapes/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Correct:	http://api.canvas.restapi.org/shapes
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;应该使用连字符（-）来提高URI可读性&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.example.restapi.org/blogs/mark-masse/entries/this-is-my-first-post
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;URI中不应该使用下划线（_）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在URI路径中，应该首选小写字母&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1: http://api.example.restapi.org/my-folder/my-doc	Correct
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2: HTTP://API.EXAMPLE.RESTAPI.ORG/my-fplder/my-doc	Correct
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3: httpL//api.example.restapi.org/My-Folder/my-doc	Incorrect
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;文件扩展名不应该包含在URI中&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Incorrect:	http://api.college.restapi.org/students/3248234/transcripts/2005/fall.json
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Correct:	http://api.college.restapi.org/students/3248234/transcripts/2005/fall
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对于API，应该使用一致的子域名，API的完整域名应该添加一个名为api的子域&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Incorrect:	http://soccer.restapi.org
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Correct:	http://api.soccer.restapi.org
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对于客户端开发人员，应该使用一致的子域名&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;httpL//developer.soccer.restapi.org
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;表示文档资源的URI应该用单数名词&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet/players/claudio
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;标识一个集合的URI应该用一个复数名词&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet/players
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;标识资源存储的URI应该用复数名词&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.music.restapi.org/artists/mikemassedotcom/playlists
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;动词或动词短语应用于控制器名称&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.college.restapi.org/students/morgan/register
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.example.restapi.org/lists/4324/dedupe
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.ognom.restapi.org/dbs/reindex
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.build.restapi.org/qa/nightly/runTestSuite
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;变量路径段可以用于基于标识的值进行替换&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.soccer.restapi.org/leagues/{leagueId}/teams/{teamsId}/players/{playerId}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet/players/21
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CRUD函数名称不应该使用在URI中&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Incorrect:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	GET /deleteUser?id=1234
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	GET /deleteUsers/1234
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	DELETE /deleteUser/1234
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	POST /users/1234/delete
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Correct:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	DELETE /users/1234
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一个URI的查询组件可以用于过滤集合或存储&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GET /users
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GET /users?role=admin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;URI的查询组件应该用于分页收集或存储结果&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GET /users?pageSize=25&amp;amp;&amp;amp;pageStartIndex=50
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;request-methodsrfc2616&#34;&gt;Request Methods(RFC2616)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Request-Line = Method SP Request-URI SP HTTP-Version CRLF
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;GET&lt;/strong&gt; is to retrieve a representation of a resource&amp;rsquo;s state.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;HEAD&lt;/strong&gt; is used to retrieve the metadata associated with the resource&amp;rsquo;s state.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PUT&lt;/strong&gt; should be used to add a new resource to a store or update a resource.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DELETE&lt;/strong&gt; removes a resource from its parent.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;POST&lt;/strong&gt; should be used to create a new resource within a collection and execute controllers.&lt;/p&gt;
+&lt;h2 id=&#34;request-method-rules&#34;&gt;Request Method Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;GET和POST不能用于其他请求方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;必须使用GET来检索资源的表达形式&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ curl -v http://api.example.restapi.org/greeting
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; GET /greeting HTTP/1.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; User-Agent: curl/7.20.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; Host: api.example.restapi.org
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; Accept: *.*
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt; HTTP/1.1 &lt;span class=&#34;m&#34;&gt;200&lt;/span&gt; OK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt; Date: Sat, &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; Aug &lt;span class=&#34;m&#34;&gt;2011&lt;/span&gt; 16:02:40 GMT
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt; Server: Apache
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt; Expires: Sat, &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; Aug &lt;span class=&#34;m&#34;&gt;2011&lt;/span&gt; 16:06:40 GMT
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt; Cache-Control: max-age&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;60, must-revalidate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt; ETag: text/html:hello world
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt; Last-Modified: Sat, &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; Aug &lt;span class=&#34;m&#34;&gt;2011&lt;/span&gt; 16:02:17 GMT
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt; Vary: Accept-Encoding
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt; Content-Type: text/html
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;!doctype html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta &lt;span class=&#34;nv&#34;&gt;charset&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;title&amp;gt;Greeting&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;body&amp;gt;&amp;lt;div &lt;span class=&#34;nv&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;greeting&amp;#34;&lt;/span&gt;&amp;gt;Hello World!&amp;lt;/div&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HEAD应用于检索响应报头&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$curl&lt;/span&gt; --head http://api.example.restapi.org/greeting
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;HTTP/1.1 &lt;span class=&#34;m&#34;&gt;200&lt;/span&gt; OK
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Date: Sat, &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; Aug &lt;span class=&#34;m&#34;&gt;2011&lt;/span&gt; 16:02:40 GMT
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Server: Apache
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Expires: Sat, &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; Aug &lt;span class=&#34;m&#34;&gt;2011&lt;/span&gt; 16:03:40 GMT
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Cache-Control: max-age&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;60, must-revalidate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ETag: text/html:hello world
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Last-Modified: Sat, &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; Aug &lt;span class=&#34;m&#34;&gt;2011&lt;/span&gt; 16:02:17 GMT
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Vary: Accept-Encoding
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Context-Type: text/html
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;必须使用PUT来插入和更新所存储的资源&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PUT /accounts/4ef2d5d0-cb7e-11e0-9572-0800200c9a66/buckets/objects/4321
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;必须使用PUT来更新可变的资源&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;必须使用POST在一个集合中创建一个新的资源&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;POST /leagues/seattle/teams/trebuchet/players
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Note the request message may contain a representation that suggests the initial state of the player to be created.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;必须使用POST来执行控制器&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;POST /alerts/245743/resend
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;必须使用DELETE来删除资源&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DELETE /accounts/4ef2d5d0-cb7e-11e0-9572-080020c9a66/buckets/objects/4321
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;OPTIONS应该使用来检索描述资源可用交互的元数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;response-status-codes&#34;&gt;Response Status Codes&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Category&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1xx: Informational&lt;/td&gt;
+&lt;td&gt;Communicates transfer protocol-level information.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2xx: Success&lt;/td&gt;
+&lt;td&gt;Indicates that the client&amp;rsquo;s request was accepted successfully.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3xx: Redirection&lt;/td&gt;
+&lt;td&gt;Indicates that the client must take some additional action in order to complete their request.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4xx: Client Error&lt;/td&gt;
+&lt;td&gt;This category of error status codes points the finger at clients.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5xx: Server Error&lt;/td&gt;
+&lt;td&gt;The server takes responsibility for these error status codes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;response-status--code-rules&#34;&gt;Response Status  Code Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;200 OK 表示非特定成功&lt;/li&gt;
+&lt;li&gt;200 OK 不能用于通信相应主体中的错误&lt;/li&gt;
+&lt;li&gt;201 Created 表示资源创建成功&lt;/li&gt;
+&lt;li&gt;202 Accepted 必须用于指示已成功启动异步操作&lt;/li&gt;
+&lt;li&gt;204 No Content 相应主体故意空时，使用204&lt;/li&gt;
+&lt;li&gt;301 Moved Permanently 用来重新定位资源&lt;/li&gt;
+&lt;li&gt;302 Found 不应该使用该规则&lt;/li&gt;
+&lt;li&gt;303 See Other 应用于将客户端引用到不同的URI&lt;/li&gt;
+&lt;li&gt;304 Not Modified 应用来保留带宽&lt;/li&gt;
+&lt;li&gt;307 Temporary Redirect 告诉客户将请求重新提交到另一个URI&lt;/li&gt;
+&lt;li&gt;400 Bad Request 表示非特定失败&lt;/li&gt;
+&lt;li&gt;401 Unauthorized 当客户端的凭据出现问题，必须使用401&lt;/li&gt;
+&lt;li&gt;403 Forbidden 用户访问资源超出权限，禁止访问&lt;/li&gt;
+&lt;li&gt;404 Not Found 当URI无法映射到资源时，必须使用404&lt;/li&gt;
+&lt;li&gt;405 Method Not Allowed 当HTTP方法不受支持时，必须使用405&lt;/li&gt;
+&lt;li&gt;406 Not Acceptable 当无法提供请求的文件类型时，必须使用406&lt;/li&gt;
+&lt;li&gt;409 Conflict 试图将资源置于不可能或不一致的状态时&lt;/li&gt;
+&lt;li&gt;412 Precondition Failed 请求头中的先决条件不满足，返回412，并未执行请求&lt;/li&gt;
+&lt;li&gt;415 Unsupported Media Type 当无法处理客户端请求的文件类型时，必须使用415&lt;/li&gt;
+&lt;li&gt;500 Internal Server Error 用来指示API故障&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;http-headers-rules&#34;&gt;HTTP Headers Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Content-Type 必须使用&lt;/li&gt;
+&lt;li&gt;Content-Length 应该使用&lt;/li&gt;
+&lt;li&gt;Last-Modified 应该在响应中使用&lt;/li&gt;
+&lt;li&gt;ETag 应该在响应中使用&lt;/li&gt;
+&lt;li&gt;存储必须支持有条件的PUT请求&lt;/li&gt;
+&lt;li&gt;必须使用Location来指定新创建的资源的URI&lt;/li&gt;
+&lt;li&gt;应该使用Cache-Control、Expires和Date请求头来鼓励缓存&lt;/li&gt;
+&lt;li&gt;Cache-Control、Expires和Pragma响应头可以用来阻止缓存&lt;/li&gt;
+&lt;li&gt;Caching should be encouraged&lt;/li&gt;
+&lt;li&gt;Expiration caching缓存头应该与200（OK）响应一起使用&lt;/li&gt;
+&lt;li&gt;Expiration caching缓存头可以选择与3xx和4xx响应一起使用&lt;/li&gt;
+&lt;li&gt;不能使用自定义HTTP标头来更改HTTP方法的行为&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;media-types&#34;&gt;Media Types&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;type &amp;#34;/&amp;#34; subtype *( &amp;#34;;&amp;#34; parameter )
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;registered-media-types&#34;&gt;Registered Media Types&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Registered Media Types&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;text/plain&lt;/td&gt;
+&lt;td&gt;A plain text format with no specific content structure or markup.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;text/html&lt;/td&gt;
+&lt;td&gt;Content that is formatted using the HyperText Markup Language (HTML).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;image/jpeg&lt;/td&gt;
+&lt;td&gt;An image compression method that was standardized by the Joint Photographic Experts Group (JEPG).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;application/xml&lt;/td&gt;
+&lt;td&gt;Content that is structured using the Extensible Markup Language (XML).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;application/atom+xml&lt;/td&gt;
+&lt;td&gt;Content that uses the Atom Syndication Format (Atom), which is an XML-based format that structures data into lists known as feeds.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;application/javascript&lt;/td&gt;
+&lt;td&gt;Source code written in the JavaScript programming language.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;application/json&lt;/td&gt;
+&lt;td&gt;The JavaScript Object Notation (JSON) text-based format that is often used by programs to exchange structured data.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;media-types-rules&#34;&gt;Media Types Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Application-specific media types should be used&lt;/li&gt;
+&lt;li&gt;Media type negotiation should be supported when multiple representations are available&lt;/li&gt;
+&lt;li&gt;Media type selection using a query parameter may be supported&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;message-body-rules&#34;&gt;Message Body Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;资源表示应该支持JSON&lt;/li&gt;
+&lt;li&gt;JSON必须是格式良好的&lt;/li&gt;
+&lt;li&gt;XML和其他格式可以选择用于资源表示&lt;/li&gt;
+&lt;li&gt;Additional envelopes must not be created&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;hypermedia-representation-rules&#34;&gt;Hypermedia Representation Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;A consistent form should be used to represent links&lt;/li&gt;
+&lt;li&gt;A consistent form should be used to represent link relations&lt;/li&gt;
+&lt;li&gt;A consistent form should be used to advertise links&lt;/li&gt;
+&lt;li&gt;A self link should be included in response message body representations&lt;/li&gt;
+&lt;li&gt;Minimize the number of advertised “entry point” API URIs&lt;/li&gt;
+&lt;li&gt;Links should be used to advertise a resource’s available actions in a state-sensitive manner&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;media-type-representation-rules&#34;&gt;Media Type Representation Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;A consistent form should be used to represent media type formats&lt;/li&gt;
+&lt;li&gt;A consistent form should be used to represent media type schemas&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;error-representation-rules&#34;&gt;Error Representation Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;A consistent form should be used to represent errors&lt;/li&gt;
+&lt;li&gt;A consistent form should be used to represent error responses&lt;/li&gt;
+&lt;li&gt;Consistent error types should be used for common error conditions&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;client-concerns-rules&#34;&gt;Client Concerns Rules&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;New URIs should be used to introduce new concepts&lt;/li&gt;
+&lt;li&gt;Schemas should be used to manage representational form versions&lt;/li&gt;
+&lt;li&gt;Entity tags should be used to manage representational state versions&lt;/li&gt;
+&lt;li&gt;OAuth may be used to protect resources&lt;/li&gt;
+&lt;li&gt;API management solutions may be used to protect resources&lt;/li&gt;
+&lt;li&gt;The query component of a URI should be used to support partial responses&lt;/li&gt;
+&lt;li&gt;The query component of a URI should be used to embed linked resources&lt;/li&gt;
+&lt;li&gt;JSONP should be supported to provide multi-origin read access from JavaScript&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;final-thoughts-principles&#34;&gt;Final Thoughts Principles&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;REST API designs differ more than necessary&lt;/li&gt;
+&lt;li&gt;A REST API should be designed, not coded&lt;/li&gt;
+&lt;li&gt;Programmers and their organizations benefit from consistency&lt;/li&gt;
+&lt;li&gt;A REST API should be created using a GUI tool&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>Windows batch scripts(.bat)</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/windows-batch-scripts.bat/</link>
+        <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/zh-cn/p/windows-batch-scripts.bat/</guid>
+        <description>&lt;h1 id=&#34;windows批处理脚本bat&#34;&gt;Windows批处理脚本（.bat）&lt;/h1&gt;
+&lt;h2 id=&#34;常用文件操作dos命令&#34;&gt;常用文件操作DOS命令&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;dir	列文件名&lt;/li&gt;
+&lt;li&gt;cd	改变当前目录&lt;/li&gt;
+&lt;li&gt;ren	改变文件名&lt;/li&gt;
+&lt;li&gt;copy	拷贝文件&lt;/li&gt;
+&lt;li&gt;del	删除文件&lt;/li&gt;
+&lt;li&gt;md	建立子目录&lt;/li&gt;
+&lt;li&gt;rd	删除目录&lt;/li&gt;
+&lt;li&gt;deltree	删除目录树&lt;/li&gt;
+&lt;li&gt;format	格式化磁盘&lt;/li&gt;
+&lt;li&gt;edit	文本编辑&lt;/li&gt;
+&lt;li&gt;type	显示文件内容&lt;/li&gt;
+&lt;li&gt;mem	查看内存状况&lt;/li&gt;
+&lt;li&gt;help	显示帮助提示&lt;/li&gt;
+&lt;li&gt;cls	清屏&lt;/li&gt;
+&lt;li&gt;move	移动文件，改目录名&lt;/li&gt;
+&lt;li&gt;more	分屏显示&lt;/li&gt;
+&lt;li&gt;xcopy	拷贝目录和文件&lt;/li&gt;
+&lt;li&gt;echo	显示输入内容&lt;/li&gt;
+&lt;li&gt;echo on	打开命令回显&lt;/li&gt;
+&lt;li&gt;echo off	关闭命令回显&lt;/li&gt;
+&lt;li&gt;@	加上@的命令不会显示&lt;/li&gt;
+&lt;li&gt;pause	将程序挂起，按下任意键继续&lt;/li&gt;
+&lt;li&gt;&amp;gt;	将显示的内容输出到某处&lt;/li&gt;
+&lt;li&gt;&amp;gt;&amp;gt;	将显示内容追加到某处&lt;/li&gt;
+&lt;li&gt;&amp;gt;nul	命令后加上&amp;gt;nul表示输出到空设备&lt;/li&gt;
+&lt;li&gt;mode	设置窗口尺寸：mode con cols=32 lines=8&lt;/li&gt;
+&lt;li&gt;color	设置背景颜色：color 3a（背景(暗靛色)和文字(亮绿色)）&lt;/li&gt;
+&lt;li&gt;title	改变当前命令提示符的标题名称&lt;/li&gt;
+&lt;li&gt;rem	注释（属于命令会显示出来）&lt;/li&gt;
+&lt;li&gt;::	注释（不会显示出来）&lt;/li&gt;
+&lt;li&gt;prompt	修改当前路径为根路径并重命名&lt;/li&gt;
+&lt;li&gt;goto	命令跟上标签可以跳转&lt;/li&gt;
+&lt;li&gt;:	命令后面写标签名（不区分大小写），特殊标签:EOF或:eof不需要定义&lt;/li&gt;
+&lt;li&gt;call	调用批处理或者标签&lt;/li&gt;
+&lt;li&gt;start	启动应用程序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;变量&#34;&gt;变量&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;解释&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;set var=1&lt;/td&gt;
+&lt;td&gt;定义变量var并将1复制给a&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set var&lt;/td&gt;
+&lt;td&gt;查看变量var的值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set v&lt;/td&gt;
+&lt;td&gt;查看所有v开头的变量值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set&lt;/td&gt;
+&lt;td&gt;查看所有变量的值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;%var%&lt;/td&gt;
+&lt;td&gt;var变量的值（内容）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set /a var=48&lt;/td&gt;
+&lt;td&gt;将数字48赋给变量var，32位的整数型数值，占用4个字节&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set /p var&lt;/td&gt;
+&lt;td&gt;用户手动输入值给var&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set /p var=请输入一些文字&lt;/td&gt;
+&lt;td&gt;用户手动输入值给var，并显示提示文字：“请输入一些文字”&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set var=Hello world!&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;echo %var:o=z%&lt;/td&gt;
+&lt;td&gt;输出Hello world!不改变var值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set var2=%var:ld=ms and bugs%&lt;/td&gt;
+&lt;td&gt;将Hello worms and bugs!赋值给var2不改变var值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;%var:~m%&lt;/td&gt;
+&lt;td&gt;数字m为正数表示取变量var中从左侧第m个字符以后的内容 数字m为负数表示取变量var中从右侧数第-m个字符以及其右侧所有字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;%var:~m,n%&lt;/td&gt;
+&lt;td&gt;从m开始，n为正数取n个字符，n为负数取到剩-n个字符为止&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set /a num=48&lt;/td&gt;
+&lt;td&gt;将数值48赋值给变量num&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;set /a result=%num%+12&lt;/td&gt;
+&lt;td&gt;变量num与12相加的结果赋给变量result&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;echo %result%&lt;/td&gt;
+&lt;td&gt;显示变量result的值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;setlocal EnableDelayedExpansion&lt;/td&gt;
+&lt;td&gt;延迟变量扩充使!var!有意义&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;传递参数&#34;&gt;传递参数&lt;/h2&gt;
+&lt;p&gt;使用%接收参数 在call或者start或者在cmd中运行批处理文件时后面直接加上参数来传递参数&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bat&#34; data-lang=&#34;bat&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;接收参数：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; 您输入的第1条参数为 &lt;span class=&#34;nv&#34;&gt;%1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; 您输入的第2条参数为 &lt;span class=&#34;nv&#34;&gt;%2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;传递参数：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;call&lt;/span&gt; 被调用.bat hello world!
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;start&lt;/span&gt; 被调用.bat hello world!
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./被调用.bat hello world!
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;条件if&#34;&gt;条件IF&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;符号&lt;/th&gt;
+&lt;th&gt;意义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;EQU&lt;/td&gt;
+&lt;td&gt;相等&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NEQ&lt;/td&gt;
+&lt;td&gt;不相等&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LSS&lt;/td&gt;
+&lt;td&gt;小于&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LEQ&lt;/td&gt;
+&lt;td&gt;小于等于&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;GTR&lt;/td&gt;
+&lt;td&gt;大于&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;GEQ&lt;/td&gt;
+&lt;td&gt;大于等于&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NOT&lt;/td&gt;
+&lt;td&gt;非&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;if exist	判断文件是否存在&lt;/li&gt;
+&lt;li&gt;if defined	判断环境变量是否被定义&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;循环for&#34;&gt;循环FOR&lt;/h2&gt;
+&lt;p&gt;for循环的一般使用格式：for %i in (*.*) do @echo %i&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bat&#34; data-lang=&#34;bat&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;::::::批量修改文件名.bat:::::::&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; off
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;setlocal&lt;/span&gt; EnableDelayedExpansion
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;/a&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;num&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;%%&lt;/span&gt;i &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;D:\test\*.txt&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;ren&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;%%&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;i&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;!num!&lt;/span&gt;.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;/a&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;num&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;:::::::::::::::::::::::::::::::&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;for循环使用数字循环的一般格式：for /l %i in (5,3,16) do echo %i&lt;/p&gt;
+&lt;p&gt;数值型变量i依次成为：5、8、11、14。从5开始，每次增加3到16为止。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bat&#34; data-lang=&#34;bat&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;:::::::::圆圈方阵.bat::::::::::&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; off
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;setlocal&lt;/span&gt; EnableDelayedExpansion
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;var&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;○
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;/l&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;%%&lt;/span&gt;i &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;var&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%var%!var!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;: 此时变量 var 已经变成一行连续的8个圆圈了&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;/l&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;%%&lt;/span&gt;i &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; 这是第 &lt;span class=&#34;se&#34;&gt;%%&lt;/span&gt;i 份&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;输出结果&lt;span class=&#34;se&#34;&gt;%%&lt;/span&gt;i.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;/l&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;%%&lt;/span&gt;j &lt;span class=&#34;k&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;%var%&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;输出结果&lt;span class=&#34;se&#34;&gt;%%&lt;/span&gt;i.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; 8 X 8 的 ○ 矩阵已经画好，并保存到8份文本文件里了
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;pause&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;:::::::::::::::::::::::::::::::&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;组合命令&#34;&gt;组合命令&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;amp;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bat&#34; data-lang=&#34;bat&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; Checking what executable files we have in WINDOWS... &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;dir&lt;/span&gt; C:\WINDOWS\*.exe &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; And we got lots of stuff here.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&amp;amp;在多个命令之间起连接作用。&lt;/p&gt;
+&lt;p&gt;不论三者中每一条命令的结果如何，后面的一条命令总能被得到执行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;amp;&amp;amp;&lt;/p&gt;
+&lt;p&gt;和&amp;amp;类似，并列多条命令并将其按顺序执行。&lt;/p&gt;
+&lt;p&gt;如果多命令中的某一条命令执行出错，后面的命令将不会再被执行；如果一直没有出错，就会一直执行完所有并列命令。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;||&lt;/p&gt;
+&lt;p&gt;||的用途和&amp;amp;&amp;amp;恰好相反。&lt;/p&gt;
+&lt;p&gt;当遇到执行正确的命令后将不再执行后面的命令。&lt;/p&gt;
+&lt;p&gt;如果没有出现正确的命令则一直执行完所有命令。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;管道命令&#34;&gt;管道命令&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;gt;和&amp;gt;&amp;gt;&lt;/p&gt;
+&lt;p&gt;输入重定向命令。将一条命令或某个程序输出结果的重定向到特定文件中。&lt;/p&gt;
+&lt;p&gt;&amp;gt;会清除掉原文件中的内容后写入指定文件，而&amp;gt;&amp;gt;只会追加内容到指定文件中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;|&lt;/p&gt;
+&lt;p&gt;它可以将它左边命令的输出结果放到它右边的命令里作为参数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;管道命令还有&amp;lt;、&amp;lt;&amp;amp;和&amp;gt;&amp;amp;，它们并不常见，暂不讨论。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;学习地址&#34;&gt;学习地址&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://docs.30c.org/dosbat/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Windows 批处理脚本学习教程&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Windows 11 allows remote desktop/remote access</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/windows-11-allows-remote-desktop/remote-access/</link>
+        <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/zh-cn/p/windows-11-allows-remote-desktop/remote-access/</guid>
+        <description>&lt;h1 id=&#34;windows-11-允许远程桌面远程访问&#34;&gt;Windows 11 允许远程桌面/远程访问&lt;/h1&gt;
+&lt;h2 id=&#34;windows-11-允许远程桌面&#34;&gt;Windows 11 允许远程桌面&lt;/h2&gt;
+&lt;h3 id=&#34;打开设置&#34;&gt;打开设置&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;搜索remote-desktop&#34;&gt;搜索Remote Desktop&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;打开remote-desktop&#34;&gt;打开Remote Desktop&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;windows-11-允许远程访问&#34;&gt;Windows 11 允许远程访问&lt;/h2&gt;
+&lt;h3 id=&#34;搜索打开windows-defender-firewall&#34;&gt;搜索打开Windows Defender Firewall&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;点击turn-windows-defender-firewall-on-or-off&#34;&gt;点击Turn Windows Defender Firewall on or off&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;将public-network-settings-选择-turn-off-windows-defender-firewall-not-recommended&#34;&gt;将Public network settings 选择 Turn off Windows Defender Firewall (not recommended)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;点击下方ok保存&#34;&gt;点击下方OK保存&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;显示如图即可&#34;&gt;显示如图即可&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-8.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Install CentOS7 on VMware</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/install-centos7-on-vmware/</link>
+        <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/zh-cn/p/install-centos7-on-vmware/</guid>
+        <description>&lt;h1 id=&#34;在vmware上安装centos7&#34;&gt;在VMware上安装CentOS7&lt;/h1&gt;
+&lt;h2 id=&#34;安装前准备&#34;&gt;安装前准备&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;电脑上安装VMware Workstation 15.5 Pro&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;下载CentOS-7-x86_64-DVD-1611.iso镜像文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装centos-7&#34;&gt;安装CentOS 7&lt;/h2&gt;
+&lt;h3 id=&#34;打开vmware软件点击创建新的虚拟机打开新建虚拟机向导&#34;&gt;打开VMware软件，点击创建新的虚拟机，打开新建虚拟机向导&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;选择自定义高级点击下一步&#34;&gt;选择自定义（高级），点击下一步&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;选择workstation-15x点击下一步&#34;&gt;选择Workstation 15.x，点击下一步&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;选择稍后安装操作系统点击下一步&#34;&gt;选择稍后安装操作系统，点击下一步&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;客户机操作系统选择linux版本选择centos-7-64位点击下一步&#34;&gt;客户机操作系统选择Linux，版本选择CentOS 7 64位，点击下一步&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;修改虚拟机名称和虚拟机存储路径后点击下一步&#34;&gt;修改虚拟机名称，和虚拟机存储路径后点击下一步&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;虚拟机处理器数量和内核数量都选择2点击下一步&#34;&gt;虚拟机处理器数量和内核数量都选择2，点击下一步&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-8.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;选择虚拟机内存为1gb点击下一步&#34;&gt;选择虚拟机内存为1GB，点击下一步&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-9.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;选择使用网络地址转换nat后点击下一步&#34;&gt;选择使用网络地址转换（NAT）后点击下一步&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-10.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;选择lsi-logic点击下一步&#34;&gt;选择LSI Logic，点击下一步&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-11.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;硬盘类型选择scsi点击下一步&#34;&gt;硬盘类型选择SCSI，点击下一步&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-12.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;选择创建新虚拟硬盘点击下一步&#34;&gt;选择创建新虚拟硬盘，点击下一步&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-13.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;最大磁盘大侠设置为20g选择将虚拟磁盘拆分成多个文件点击下一步&#34;&gt;最大磁盘大侠设置为20G，选择将虚拟磁盘拆分成多个文件，点击下一步&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-14.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;设置磁盘文件名后点击下一步&#34;&gt;设置磁盘文件名后点击下一步&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-15.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;点击完成&#34;&gt;点击完成&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-16.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;点击编辑虚拟机设置&#34;&gt;点击编辑虚拟机设置&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-17.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;左侧选择cddvd选择使用iso映像文件点击浏览选择centos-7-x86_64-dvd-1611iso镜像文件点击确定&#34;&gt;左侧选择CD/DVD，选择使用ISO映像文件，点击浏览，选择CentOS-7-x86_64-DVD-1611.iso镜像文件，点击确定&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-18.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;点击开启此虚拟机等待虚拟机启动&#34;&gt;点击开启此虚拟机，等待虚拟机启动&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-19.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;使用键盘上下选择install-centos-linux-7回车&#34;&gt;使用键盘上下选择Install CentOS Linux 7回车&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-20.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;等待系统自检&#34;&gt;等待系统自检&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-21.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;选择中文点击继续&#34;&gt;选择中文，点击继续&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-22.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;点击软件选择&#34;&gt;点击软件选择&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-23.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;勾选需要的功能这里我只需要最小安装即可点击完成&#34;&gt;勾选需要的功能（这里我只需要最小安装即可），点击完成&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-24.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;点击安装位置&#34;&gt;点击安装位置&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-25.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;点击完成-1&#34;&gt;点击完成&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-26.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;点击开始安装&#34;&gt;点击开始安装&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-27.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;点击root密码&#34;&gt;点击ROOT密码&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-28.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;设置密码后点击完成&#34;&gt;设置密码后，点击完成&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-29.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;由于密码过于简单需二次确认密码再次点击完成&#34;&gt;由于密码过于简单，需二次确认密码，再次点击完成&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-30.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;等待系统安装完毕后点击重启即可使用&#34;&gt;等待系统安装完毕后点击重启即可使用&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-31.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Install Tomcat8 on Windows</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/install-tomcat8-on-windows/</link>
+        <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/zh-cn/p/install-tomcat8-on-windows/</guid>
+        <description>&lt;h1 id=&#34;在windows上安装tomcat8&#34;&gt;在Windows上安装Tomcat8&lt;/h1&gt;
+&lt;h2 id=&#34;下载安装包&#34;&gt;下载安装包&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;访问Tomcat官网 &lt;a class=&#34;link&#34; href=&#34;https://tomcat.apache.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://tomcat.apache.org/&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;在左侧Download栏选择下载版本，这里选择的是Tomcat8版本，点击进入&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;根据自己系统版本选择对应版本下载，这里选择的是Windows64位操作系统版本，如图点击下载&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装tomcat8下载的zip包为免安装版解压后可直接使用&#34;&gt;安装Tomcat8（下载的zip包为免安装版，解压后可直接使用）&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;将下载下来的文件解压&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;将解压的文件放在D盘&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;配置环境变量&#34;&gt;配置环境变量&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;在此电脑上右键点击属性，打开设置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;点击高级系统设置，打开系统属性&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;点击环境变量，打开环境变量&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-8.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;选中path，点击编辑，进入编辑path变量页面&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-9.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;点击新建，输入Tomcat8的安装目录下bin文件夹的目录，点击确定，确定，确定&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-10.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;运行命令&#34;&gt;运行命令&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;进入Tomcat8安装目录下bin文件夹中&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-11.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;点击地址栏，输入cmd，回车，打开命令行窗口&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-12.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;在命令行窗口中输入service.bat install后回车&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-13.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;显示如图即为安装成功&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;测试是否成功&#34;&gt;测试是否成功&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;双击运行bin文件夹下的Tomcat8w.exe文件，打开启动窗口&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-14.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;点击Start启动Tomcat8&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-15.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;打开浏览器，输入127.0.0.1:8080访问出现如下画面即为安装成功&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-16.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Google Chrome Web Browser Export Password and Import Password</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/google-chrome-web-browser-export-password-and-import-password/</link>
+        <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/zh-cn/p/google-chrome-web-browser-export-password-and-import-password/</guid>
+        <description>&lt;h1 id=&#34;谷歌chrome浏览器导出密码和导入密码&#34;&gt;谷歌Chrome浏览器导出密码和导入密码&lt;/h1&gt;
+&lt;p&gt;       有时候大家遇到换了新电脑，或者公司需要调整电脑，或者说需要导入别人电脑上谷歌浏览器存的账号密码，发现可以导出密码，但是没有导入密码的选项，就很烦，这里教大家如何导出导入chrome谷歌浏览器的账号密码。&lt;/p&gt;
+&lt;h2 id=&#34;导出账号密码&#34;&gt;导出账号密码&lt;/h2&gt;
+&lt;h3 id=&#34;点击右上角的设置&#34;&gt;点击右上角的设置&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;选择密码&#34;&gt;选择密码&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;点击右边的更多操作&#34;&gt;点击右边的更多操作&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;点击导出密码即可&#34;&gt;点击导出密码即可&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;导出的密码是csv格式可以用excel查看但仍不方便那么如何导入呢&#34;&gt;导出的密码是csv格式，可以用excel查看，但仍不方便，那么如何导入呢？&lt;/h3&gt;
+&lt;h2 id=&#34;导入账号密码&#34;&gt;导入账号密码&lt;/h2&gt;
+&lt;h3 id=&#34;打开谷歌浏览器在地址栏输入chromeflagspassword-import-export&#34;&gt;打开谷歌浏览器，在地址栏输入chrome://flags/#password-import-export&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;然后在上面的搜索栏搜索password-import&#34;&gt;然后在上面的搜索栏搜索：password import&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;然后选择右边的default为enabled并点击下方relaunch刷新浏览器&#34;&gt;然后选择右边的Default为Enabled，并点击下方Relaunch刷新浏览器&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;最后重新进入导出密码的地方就可以看到导入的选项啦&#34;&gt;最后重新进入导出密码的地方，就可以看到导入的选项啦&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password8.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;导入自己从别的电脑导出的密码就会发现两台电脑的谷歌浏览器所拥有的密码一样啦&#34;&gt;导入自己从别的电脑导出的密码，就会发现两台电脑的谷歌浏览器所拥有的密码一样啦&lt;/h3&gt;
+</description>
+        </item>
+        <item>
+        <title>Switching eclipse after the menu bar messy problem</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/switching-eclipse-after-the-menu-bar-messy-problem/</link>
+        <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/zh-cn/p/switching-eclipse-after-the-menu-bar-messy-problem/</guid>
+        <description>&lt;h1 id=&#34;切换eclipse后出现菜单栏乱码问题&#34;&gt;切换eclipse后出现菜单栏乱码问题&lt;/h1&gt;
+&lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;
+&lt;p&gt;今天切换了eclipse的工作目录&lt;/p&gt;
+&lt;p&gt;打开后发现出现了菜单栏乱码问题&lt;/p&gt;
+&lt;p&gt;eclipse打开是这样的：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;发现菜单栏都变成乱码了&lt;/p&gt;
+&lt;h2 id=&#34;解决办法&#34;&gt;解决办法&lt;/h2&gt;
+&lt;p&gt;解决办法：打开Window - Preferences - General - Appearance&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;修改右边的Theme为Windows Classic&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;然后点Apply或者Apply and Close就好了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Drawing class diagrams in Eclipse using AmaterasUML plugin</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/</link>
+        <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/zh-cn/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/</guid>
+        <description>&lt;h1 id=&#34;eclipse中安装和使用amaterasuml插件绘制类图&#34;&gt;eclipse中安装和使用AmaterasUML插件绘制类图&lt;/h1&gt;
+&lt;h2 id=&#34;安装gef插件&#34;&gt;安装GEF插件&lt;/h2&gt;
+&lt;h3 id=&#34;打开eclipse官网-httpswwweclipseorg&#34;&gt;打开eclipse官网 &lt;a class=&#34;link&#34; href=&#34;https://www.eclipse.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.eclipse.org/&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Open the eclipse website&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;点击projects搜索gef&#34;&gt;点击Projects，搜索GEF&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Search GEF&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;点击右边的download&#34;&gt;点击右边的Download&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Download&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;在弹出的窗口中复制下载地址&#34;&gt;在弹出的窗口中，复制下载地址&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Copy download address&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;现在的地址是：http://download.eclipse.org/tools/gef/updates/releases&lt;/p&gt;
+&lt;h3 id=&#34;打开eclipse点击上方help选择install-new-software粘贴复制的地址点击add插件名字可以为空&#34;&gt;打开eclipse，点击上方Help，选择install new software，粘贴复制的地址，点击Add，插件名字可以为空&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Add new plugin&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;选择select-all不知道需要那个全部安装也不大然后一直next和accept就好了&#34;&gt;选择Select All（不知道需要那个，全部安装也不大），然后一直Next和accept就好了&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Select Select All&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装amaterasuml插件&#34;&gt;安装AmaterasUML插件&lt;/h2&gt;
+&lt;h3 id=&#34;下载amaterasuml_134&#34;&gt;下载AmaterasUML_1.3.4&lt;/h3&gt;
+&lt;p&gt;下载地址：&lt;a class=&#34;link&#34; href=&#34;https://download.csdn.net/download/weixin_42718701/12812743&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AmaterasUML_1.3.4&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;也可以去官网下载最新版本的AmaterasUML&lt;/p&gt;
+&lt;h3 id=&#34;下载好了之后解压解压出来有3个jar包复制到eclipse安装目录的plugins目录下重启eclipse&#34;&gt;下载好了之后解压，解压出来有3个jar包，复制到eclipse安装目录的plugins目录下，重启eclipse&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;通过window-preference可以看到amaterasuml&#34;&gt;通过Window-Preference可以看到AmaterasUML&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams8.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;amaterasuml的简单使用&#34;&gt;AmaterasUML的简单使用&lt;/h2&gt;
+&lt;h3 id=&#34;右键单击一个工程new-other选择class-diagram然后点击next&#34;&gt;右键单击一个工程，New-Other，选择Class Diagram，然后点击Next&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams9.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;给类图取一个名字然后点击finish&#34;&gt;给类图取一个名字，然后点击Finish&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams10.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;然后拖动类或接口到界面中类就华丽的出现了&#34;&gt;然后拖动类或接口到界面中，类就华丽的出现了&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams11.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
