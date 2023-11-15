@@ -6,7 +6,165 @@
         <description>Recent content in Database on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Thu, 06 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/categories/database/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 15 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/categories/database/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Install PostgreSQL 16.1 on Windows</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/install-postgresql-16.1-on-windows/</link>
+        <pubDate>Wed, 15 Nov 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/zh-cn/p/install-postgresql-16.1-on-windows/</guid>
+        <description>&lt;h1 id=&#34;在windows上安装postgresql-161&#34;&gt;在Windows上安装PostgreSQL 16.1&lt;/h1&gt;
+&lt;h2 id=&#34;前往官网下载postgresql安装包&#34;&gt;前往官网下载PostgreSQL安装包&lt;/h2&gt;
+&lt;p&gt;下载PostgreSQL安装包。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.enterprisedb.com/downloads/postgres-postgresql-downloads&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.enterprisedb.com/downloads/postgres-postgresql-downloads&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;打开安装包&#34;&gt;打开安装包&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;点击next&#34;&gt;点击Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;修改安装目录然后点击next&#34;&gt;修改安装目录然后点击Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;保持默认选项点击next&#34;&gt;保持默认选项，点击Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;设置数据目录点击next&#34;&gt;设置数据目录，点击Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;设置密码点击next&#34;&gt;设置密码，点击Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;设置数据库端口号默认5432点击next&#34;&gt;设置数据库端口号（默认5432），点击Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-8.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;设置语言点击next&#34;&gt;设置语言，点击Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-9.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;后面一直点next即可&#34;&gt;后面一直点Next即可&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-10.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;等待安装完毕&#34;&gt;等待安装完毕&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-11.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;取消勾选stack-builder点击finish&#34;&gt;取消勾选Stack Builder，点击Finish&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-12.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;至此postgresql安装完毕&#34;&gt;至此，PostgreSQL安装完毕&lt;/h2&gt;
+&lt;h2 id=&#34;postgressql安装携带了pgadmin软件可以用来管理postgresql数据库打开pgadmin&#34;&gt;PostgresSQL安装携带了pgAdmin软件，可以用来管理PostgreSQL数据库，打开pgAdmin&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-13.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;点击左上角的server&#34;&gt;点击左上角的Server&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-14.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;输入设置的密码点击ok&#34;&gt;输入设置的密码，点击OK&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-15.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;如下界面即表示安装成功&#34;&gt;如下界面即表示安装成功&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-16.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;也可以使用第三方数据库连接器进行连接测试postgresql的用户名为postgres&#34;&gt;也可以使用第三方数据库连接器进行连接测试，PostgreSQL的用户名为postgres&lt;/h2&gt;
+</description>
+        </item>
+        <item>
         <title>Northwind Database</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/northwind-database/</link>
         <pubDate>Thu, 06 Jul 2023 00:00:00 +0000</pubDate>

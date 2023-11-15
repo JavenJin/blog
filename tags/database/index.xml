@@ -6,7 +6,165 @@
         <description>Recent content in Database on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Wed, 11 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/tags/database/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 15 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/tags/database/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Install PostgreSQL 16.1 on Windows</title>
+        <link>https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/</link>
+        <pubDate>Wed, 15 Nov 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/</guid>
+        <description>&lt;h1 id=&#34;install-postgresql-161-on-windows&#34;&gt;Install PostgreSQL 16.1 on Windows&lt;/h1&gt;
+&lt;h2 id=&#34;go-to-the-official-website-to-download-the-postgresql-installation-package&#34;&gt;Go to the official website to download the PostgreSQL installation package&lt;/h2&gt;
+&lt;p&gt;Download the PostgreSQL installation package.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.enterprisedb.com/downloads/postgres-postgresql-downloads&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.enterprisedb.com/downloads/postgres-postgresql-downloads&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;open-the-installation-package&#34;&gt;Open the installation package&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;click-next&#34;&gt;Click Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;modify-the-installation-directory-and-click-next&#34;&gt;Modify the installation directory and click Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;keep-the-default-options-and-click-next&#34;&gt;Keep the default options and click Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;set-the-data-directory-and-click-next&#34;&gt;Set the data directory and click Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;set-a-password-and-click-next&#34;&gt;Set a password and click Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;set-the-database-port-number-default-5432-click-next&#34;&gt;Set the database port number (default 5432), click Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-8.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;set-the-language-and-click-next&#34;&gt;Set the language and click Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-9.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;just-keep-clicking-next&#34;&gt;Just keep clicking Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-10.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;waiting-for-the-installation-to-finish&#34;&gt;Waiting for the installation to finish&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-11.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;uncheck-stack-builder-and-click-finish&#34;&gt;Uncheck Stack Builder and click Finish&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-12.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;at-this-point-the-postgresql-installation-is-complete&#34;&gt;At this point, the PostgreSQL installation is complete!&lt;/h2&gt;
+&lt;h2 id=&#34;the-postgressql-installation-carries-the-pgadmin-software-which-can-be-used-to-manage-postgresql-databases-open-the-pgadmin&#34;&gt;The PostgresSQL installation carries the pgAdmin software, which can be used to manage PostgreSQL databases, open the pgAdmin&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-13.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;click-on-server-in-the-upper-left-corner&#34;&gt;Click on Server in the upper left corner&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-14.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;enter-the-set-password-and-click-ok&#34;&gt;Enter the set password and click OK&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-15.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-following-screen-indicates-successful-installation&#34;&gt;The following screen indicates successful installation&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-16.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;it-is-also-possible-to-test-the-connection-using-a-third-party-database-connector-postgresql-with-the-username-postgres&#34;&gt;It is also possible to test the connection using a third-party database connector, PostgreSQL with the username postgres&lt;/h2&gt;
+</description>
+        </item>
+        <item>
         <title>MonetDB Remote Access</title>
         <link>https://javenjin.github.io/blog/p/monetdb-remote-access/</link>
         <pubDate>Wed, 11 May 2022 00:00:00 +0000</pubDate>

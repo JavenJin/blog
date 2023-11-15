@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://javenjin.github.io/blog/</loc>
-    <lastmod>2023-03-31T00:00:00+00:00</lastmod>
+    <lastmod>2023-11-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -13,6 +13,84 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://javenjin.github.io/blog/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/categories/</loc>
+    <lastmod>2023-11-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/categories/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/tags/database/</loc>
+    <lastmod>2023-11-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/tags/database/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/tags/database/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/categories/database/</loc>
+    <lastmod>2023-11-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/categories/database/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/categories/database/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/</loc>
+    <lastmod>2023-11-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/install-postgresql-16.1-on-windows/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/post/</loc>
+    <lastmod>2023-11-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/post/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/tags/</loc>
+    <lastmod>2023-11-15T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/tags/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/about/</loc>
@@ -41,19 +119,6 @@
                 href="https://javenjin.github.io/blog/page/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/categories/</loc>
-    <lastmod>2022-09-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/categories/"
-                />
-  </url><url>
     <loc>https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/</loc>
     <lastmod>2022-09-16T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -65,32 +130,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/post/</loc>
-    <lastmod>2022-09-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/post/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/tags/</loc>
-    <lastmod>2022-09-16T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/tags/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/tags/tools/</loc>
@@ -156,32 +195,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/tags/database/</loc>
-    <lastmod>2022-05-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/tags/database/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/tags/database/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/categories/database/</loc>
-    <lastmod>2022-05-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/categories/database/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/categories/database/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/monetdb-remote-access/</loc>
