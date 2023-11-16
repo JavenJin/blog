@@ -6,7 +6,46 @@
         <description>Recent content on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Wed, 15 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 16 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MySQL 8 Remote Access</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/mysql-8-remote-access/</link>
+        <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/zh-cn/p/mysql-8-remote-access/</guid>
+        <description>&lt;h1 id=&#34;mysql-8-远程访问&#34;&gt;MySQL 8 远程访问&lt;/h1&gt;
+&lt;h2 id=&#34;进入mysql安装目录下的bin目录如果配置过环境变量就直接到第二步&#34;&gt;进入MySQL安装目录下的bin目录（如果配置过环境变量就直接到第二步）&lt;/h2&gt;
+&lt;h2 id=&#34;在地址栏输入cmd打开命令行窗口如果配置过环境变量直接winr输入cmd回车即可&#34;&gt;在地址栏输入cmd打开命令行窗口（如果配置过环境变量直接Win+R输入cmd回车即可）&lt;/h2&gt;
+&lt;h2 id=&#34;输入命令并回车&#34;&gt;输入命令并回车&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mysql -uroot -p
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;输入命令并回车其中password是你msyql数据库的密码&#34;&gt;输入命令并回车，其中password是你msyql数据库的密码&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GRANT ALL PRIVILEGES ON *.* TO &amp;#39;root&amp;#39;@&amp;#39;%&amp;#39;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;输入命令并回车-1&#34;&gt;输入命令并回车&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;FLUSH PRIVILEGES;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;关闭窗口完成&#34;&gt;关闭窗口，完成&lt;/h2&gt;
+</description>
+        </item>
+        <item>
         <title>Install PostgreSQL 16.1 on Windows</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/install-postgresql-16.1-on-windows/</link>
         <pubDate>Wed, 15 Nov 2023 00:00:00 +0000</pubDate>
@@ -1896,14 +1935,14 @@
 </description>
         </item>
         <item>
-        <title>MySQL Remote Access</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/mysql-remote-access/</link>
+        <title>MySQL 5.7 Remote Access</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/mysql-5.7-remote-access/</link>
         <pubDate>Wed, 11 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://javenjin.github.io/blog/zh-cn/p/mysql-remote-access/</guid>
-        <description>&lt;h1 id=&#34;mysql远程访问&#34;&gt;MySQL远程访问&lt;/h1&gt;
+        <guid>https://javenjin.github.io/blog/zh-cn/p/mysql-5.7-remote-access/</guid>
+        <description>&lt;h1 id=&#34;mysql-57-远程访问&#34;&gt;MySQL 5.7 远程访问&lt;/h1&gt;
 &lt;h2 id=&#34;进入mysql安装目录下的bin目录如果配置过环境变量就直接到第二步&#34;&gt;进入MySQL安装目录下的bin目录（如果配置过环境变量就直接到第二步）&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%20Remote%20Access/mysql-remote-access-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-1.png&#34;
 	
 	
 	
@@ -1921,7 +1960,7 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mysql -uroot -p
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%20Remote%20Access/mysql-remote-access-2.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-2.png&#34;
 	
 	
 	
@@ -1938,7 +1977,7 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grant all privileges on *.* to &amp;#39;root&amp;#39;@&amp;#39;%&amp;#39; identified by &amp;#39;password&amp;#39;;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%20Remote%20Access/mysql-remote-access-3.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-3.png&#34;
 	
 	
 	
@@ -1955,7 +1994,7 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;flush privileges;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%20Remote%20Access/mysql-remote-access-4.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-4.png&#34;
 	
 	
 	
@@ -1964,7 +2003,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;关闭窗口完成&#34;&gt;关闭窗口，完成&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%20Remote%20Access/mysql-remote-access-5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-5.png&#34;
 	
 	
 	

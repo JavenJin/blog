@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
+<html lang="en" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='MySQL远程访问'>
-<title>MySQL Remote Access</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='MySQL 8 远程访问'>
+<title>MySQL 8 Remote Access</title>
 
-<link rel='canonical' href='https://javenjin.github.io/blog/zh-cn/p/mysql-remote-access/'>
+<link rel='canonical' href='https://javenjin.github.io/blog/p/mysql-8-remote-access/'>
 
-<link rel="stylesheet" href="/blog/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='MySQL Remote Access'>
-<meta property='og:description' content='MySQL远程访问'>
-<meta property='og:url' content='https://javenjin.github.io/blog/zh-cn/p/mysql-remote-access/'>
+<link rel="stylesheet" href="/blog/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='MySQL 8 Remote Access'>
+<meta property='og:description' content='MySQL 8 远程访问'>
+<meta property='og:url' content='https://javenjin.github.io/blog/p/mysql-8-remote-access/'>
 <meta property='og:site_name' content='Javen Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Database' /><meta property='article:published_time' content='2022-05-11T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-05-11T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="MySQL Remote Access">
-<meta name="twitter:description" content="MySQL远程访问">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Database' /><meta property='article:published_time' content='2023-11-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-11-16T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="MySQL 8 Remote Access">
+<meta name="twitter:description" content="MySQL 8 远程访问">
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
 
     </head>
@@ -42,7 +42,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -52,7 +52,7 @@
         
             
             <figure class="site-avatar">
-                <a href="/blog/zh-cn">
+                <a href="/blog">
                 
                     
                     
@@ -71,7 +71,7 @@
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/blog/zh-cn">Javen Blog</a></h1>
+            <h1 class="site-name"><a href="/blog">Javen Blog</a></h1>
             <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
         </div>
     </header><ol class="social-menu">
@@ -133,7 +133,7 @@
         
         
         <li >
-            <a href='/blog/zh-cn/' >
+            <a href='/blog/' >
                 
                 
                 
@@ -147,13 +147,13 @@
 
 
                 
-                <span>主页</span>
+                <span>Home</span>
             </a>
         </li>
         
         
         <li >
-            <a href='/blog/zh-cn/%E5%85%B3%E4%BA%8E/' >
+            <a href='/blog/about/' >
                 
                 
                 
@@ -166,13 +166,13 @@
 
 
                 
-                <span>关于</span>
+                <span>About</span>
             </a>
         </li>
         
         
         <li >
-            <a href='/blog/zh-cn/archives/' >
+            <a href='/blog/archives/' >
                 
                 
                 
@@ -186,13 +186,13 @@
 
 
                 
-                <span>归档</span>
+                <span>Archives</span>
             </a>
         </li>
         
         
         <li >
-            <a href='/blog/zh-cn/search/' >
+            <a href='/blog/search/' >
                 
                 
                 
@@ -205,13 +205,13 @@
 
 
                 
-                <span>搜索</span>
+                <span>Search</span>
             </a>
         </li>
         
         
         <li >
-            <a href='/blog/zh-cn/%E9%93%BE%E6%8E%A5/' >
+            <a href='/blog/links/' >
                 
                 
                 
@@ -224,7 +224,7 @@
 
 
                 
-                <span>链接</span>
+                <span>Links</span>
             </a>
         </li>
         
@@ -244,9 +244,9 @@
 
                     <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
                         
-                            <option value="https://javenjin.github.io/blog/" >English</option>
+                            <option value="https://javenjin.github.io/blog/" selected>English</option>
                         
-                            <option value="https://javenjin.github.io/blog/zh-cn/" selected>中文</option>
+                            <option value="https://javenjin.github.io/blog/zh-cn/" >中文</option>
                         
                     </select>
                 </li>
@@ -270,7 +270,7 @@
 
 
 
-                    <span>暗色模式</span>
+                    <span>Dark Mode</span>
                 </li>
             
         </div>
@@ -294,17 +294,17 @@
 
 
         </div>
-        <h2 class="widget-title section-title">目录</h2>
+        <h2 class="widget-title section-title">Table of contents</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#进入mysql安装目录下的bin目录如果配置过环境变量就直接到第二步">进入MySQL安装目录下的bin目录（如果配置过环境变量就直接到第二步）</a></li>
-    <li><a href="#在地址栏输入cmd打开命令行窗口如果配置过环境变量直接winr输入cmd回车即可">在地址栏输入cmd打开命令行窗口（如果配置过环境变量直接Win+R输入cmd回车即可）</a></li>
-    <li><a href="#输入命令并回车">输入命令并回车</a></li>
-    <li><a href="#输入命令并回车其中password是你msyql数据库的密码">输入命令并回车，其中password是你msyql数据库的密码</a></li>
-    <li><a href="#输入命令并回车-1">输入命令并回车</a></li>
-    <li><a href="#关闭窗口完成">关闭窗口，完成</a></li>
+    <li><a href="#go-to-the-bin-directory-in-the-mysql-installation-directory-if-you-have-configured-environment-variables-go-directly-to-step-2">Go to the bin directory in the MySQL installation directory (if you have configured environment variables go directly to step 2)</a></li>
+    <li><a href="#type-cmd-in-the-address-bar-to-open-a-command-line-window-if-you-have-configured-environment-variables-directly-win--r-type-cmd-enter-can-be">Type cmd in the address bar to open a command line window (if you have configured environment variables directly Win + R type cmd enter can be)</a></li>
+    <li><a href="#type-the-command-and-enter">Type the command and enter</a></li>
+    <li><a href="#type-the-command-and-enter-where-password-is-the-password-for-your-msyql-database">Type the command and enter, where password is the password for your msyql database</a></li>
+    <li><a href="#type-the-command-and-enter-1">Type the command and enter</a></li>
+    <li><a href="#close-the-window-and-finish">Close the window and finish</a></li>
   </ol>
 </nav>
         </div>
@@ -323,7 +323,7 @@
     
     <header class="article-category">
         
-            <a href="/blog/zh-cn/categories/database/" >
+            <a href="/blog/categories/database/" style="background-color: #2a9d8f; color: #fff;">
                 Database
             </a>
         
@@ -332,12 +332,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/blog/zh-cn/p/mysql-remote-access/">MySQL Remote Access</a>
+            <a href="/blog/p/mysql-8-remote-access/">MySQL 8 Remote Access</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            MySQL远程访问
+            MySQL 8 远程访问
         </h3>
         
     </div>
@@ -358,7 +358,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">May 11, 2022</time>
+                <time class="article-time--published">Nov 16, 2023</time>
             </div>
         
 
@@ -373,7 +373,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    1 minute read
                 </time>
             </div>
         
@@ -395,7 +395,7 @@
 
             <div>
                 
-                    <a href="https://javenjin.github.io/blog/p/mysql-remote-access/" class="link">English</a>
+                    <a href="https://javenjin.github.io/blog/zh-cn/p/mysql-8-remote-access/" class="link">中文</a>
                 
             </div>
         </footer>
@@ -407,18 +407,10 @@
     <section class="article-content">
     
     
-    <h1 id="mysql远程访问">MySQL远程访问</h1>
-<h2 id="进入mysql安装目录下的bin目录如果配置过环境变量就直接到第二步">进入MySQL安装目录下的bin目录（如果配置过环境变量就直接到第二步）</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%20Remote%20Access/mysql-remote-access-1.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="在地址栏输入cmd打开命令行窗口如果配置过环境变量直接winr输入cmd回车即可">在地址栏输入cmd打开命令行窗口（如果配置过环境变量直接Win+R输入cmd回车即可）</h2>
-<h2 id="输入命令并回车">输入命令并回车</h2>
+    <h1 id="mysql-8-remote-access">MySQL 8 Remote Access</h1>
+<h2 id="go-to-the-bin-directory-in-the-mysql-installation-directory-if-you-have-configured-environment-variables-go-directly-to-step-2">Go to the bin directory in the MySQL installation directory (if you have configured environment variables go directly to step 2)</h2>
+<h2 id="type-cmd-in-the-address-bar-to-open-a-command-line-window-if-you-have-configured-environment-variables-directly-win--r-type-cmd-enter-can-be">Type cmd in the address bar to open a command line window (if you have configured environment variables directly Win + R type cmd enter can be)</h2>
+<h2 id="type-the-command-and-enter">Type the command and enter</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -427,57 +419,25 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql -uroot -p
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%20Remote%20Access/mysql-remote-access-2.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="输入命令并回车其中password是你msyql数据库的密码">输入命令并回车，其中password是你msyql数据库的密码</h2>
+</div><h2 id="type-the-command-and-enter-where-password-is-the-password-for-your-msyql-database">Type the command and enter, where password is the password for your msyql database</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">grant all privileges on *.* to &#39;root&#39;@&#39;%&#39; identified by &#39;password&#39;;
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;@&#39;%&#39;;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%20Remote%20Access/mysql-remote-access-3.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="输入命令并回车-1">输入命令并回车</h2>
+</div><h2 id="type-the-command-and-enter-1">Type the command and enter</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">flush privileges;
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">FLUSH PRIVILEGES;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%20Remote%20Access/mysql-remote-access-4.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="关闭窗口完成">关闭窗口，完成</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%20Remote%20Access/mysql-remote-access-5.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
+</div><h2 id="close-the-window-and-finish">Close the window and finish</h2>
 
 </section>
 
@@ -486,7 +446,7 @@
     
     <section class="article-tags">
         
-            <a href="/blog/zh-cn/tags/database/">Database</a>
+            <a href="/blog/tags/database/">Database</a>
         
     </section>
 
@@ -514,13 +474,13 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
+    <h2 class="section-title">Related content</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
                 
 <article class="">
-    <a href="/blog/zh-cn/p/install-postgresql-16.1-on-windows/">
+    <a href="/blog/p/install-postgresql-16.1-on-windows/">
         
         
 
@@ -533,20 +493,7 @@
             
                 
 <article class="">
-    <a href="/blog/zh-cn/p/northwind-database/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Northwind Database</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/blog/zh-cn/p/monetdb-remote-access/">
+    <a href="/blog/p/monetdb-remote-access/">
         
         
 
@@ -559,7 +506,20 @@
             
                 
 <article class="">
-    <a href="/blog/zh-cn/p/postgresql-remote-access/">
+    <a href="/blog/p/mysql-5.7-remote-access/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">MySQL 5.7 Remote Access</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/p/postgresql-remote-access/">
         
         
 
@@ -572,7 +532,7 @@
             
                 
 <article class="">
-    <a href="/blog/zh-cn/p/install-mysql-5.7-on-centos7/">
+    <a href="/blog/p/install-mysql-5.7-on-centos7/">
         
         
 
@@ -603,7 +563,7 @@
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 
