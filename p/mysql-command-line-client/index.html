@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='MySQL 命令行客户端'>
+<title>MySQL Command-Line Client</title>
+
+<link rel='canonical' href='https://javenjin.github.io/blog/p/mysql-command-line-client/'>
+
+<link rel="stylesheet" href="/blog/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='MySQL Command-Line Client'>
+<meta property='og:description' content='MySQL 命令行客户端'>
+<meta property='og:url' content='https://javenjin.github.io/blog/p/mysql-command-line-client/'>
+<meta property='og:site_name' content='Javen Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Database' />
+<meta name="twitter:title" content="MySQL Command-Line Client">
+<meta name="twitter:description" content="MySQL 命令行客户端">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/blog">
+                
+                    
+                    
+                    
+                        
+                        <img src="/blog/img/avatar_hubf7b15bf5e15ae8b6bb0ceda44d97e9a_739263_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/blog">Javen Blog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/javenjin'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://instagram.com/kingjie98'
+                        target="_blank"
+                        title="Ins"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16.65 7.2H16.66M8 20H16C18.2091 20 20 18.2091 20 16V8C20 5.79086 18.2091 4 16 4H8C5.79086 4 4 5.79086 4 8V16C4 18.2091 5.79086 20 8 20ZM15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12Z"/>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:wenjie.jin@hotmail.com'
+                        target="_blank"
+                        title="Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/blog/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://javenjin.github.io/blog/" selected>English</option>
+                        
+                            <option value="https://javenjin.github.io/blog/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#mysql-client-options">mysql Client Options</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/blog/categories/database/" style="background-color: #2a9d8f; color: #fff;">
+                Database
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/blog/p/mysql-command-line-client/">MySQL Command-Line Client</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            MySQL 命令行客户端
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    6 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+        <footer class="article-translations">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+            <div>
+                
+                    <a href="https://javenjin.github.io/blog/zh-cn/p/mysql-command-line-client/" class="link">中文</a>
+                
+            </div>
+        </footer>
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="mysql-command-line-client">MySQL Command-Line Client</h1>
+<p><strong>mysql</strong> is a simple SQL shell with input line editing capabilities. It supports interactive and noninteractive use. When used interactively, query results are presented in an ASCII-table format. When used noninteractively (for example, as a filter), the result is presented in tab-separated format. The output format can be changed using command options.</p>
+<p>If you have problems due to insufficient memory for large result sets, use the <code>--quick</code> option. This forces <strong>mysql</strong> to retrieve results from the server a row at a time rather than retrieving the entire result set and buffering it in memory before displaying it. This is done by returning the result set using the <code>mysql_use_result()</code> C API function in the client/server library rather than <code>mysql_store_result()</code>.</p>
+<blockquote>
+<p><strong>Note:</strong> Alternatively, MySQL Shell offers access to the X DevAPI. For details, see <a class="link" href="https://dev.mysql.com/doc/mysql-shell/8.0/en/"  target="_blank" rel="noopener"
+    >MySQL Shell 8.0</a>.</p>
+</blockquote>
+<p>Using <strong>mysql</strong> is very easy. Invoke it from the prompt of your command interpreter as follows:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql db_name
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Or:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql --user=user_name --password db_name
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>In this case, you&rsquo;ll need to enter your password in response to the prompt that <strong>mysql</strong> displays:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Enter password: your_password
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Then type an SQL statement, end it with ;, \g, or \G and press Enter.</p>
+<p>Typing <strong>Control+C</strong> interrupts the current statement if there is one, or cancels any partial input line otherwise.</p>
+<p>You can execute SQL statements in a script file (batch file) like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql db_name &lt; script.sql &gt; output.tab
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>On Unix, the mysql client logs statements executed interactively to a history file. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html"  target="_blank" rel="noopener"
+    >mysql Client Logging</a>.</p>
+<h2 id="mysql-client-options">mysql Client Options</h2>
+<p><strong>mysql</strong> supports the following options, which can be specified on the command line or in the <code>[mysql]</code> and <code>[client]</code> groups of an option file. For information about option files used by MySQL programs, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/option-files.html"  target="_blank" rel="noopener"
+    >Using Option Files</a>.</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left">Option Name</th>
+<th>Description</th>
+<th>Introduced</th>
+<th>Deprecated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&ndash;auto-rehash</td>
+<td>Enable automatic rehashing</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;auto-vertical-output</td>
+<td>Enable automatic vertical result set display</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;batch</td>
+<td>Do not use history file</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;binary-as-hex</td>
+<td>Display binary values in hexadecimal notation</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;binary-mode</td>
+<td>Disable \r\n - to - \n translation and treatment of \0 as end-of-query</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;bind-address</td>
+<td>Use specified network interface to connect to MySQL Server</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;character-sets-dir</td>
+<td>Directory where character sets are installed</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;column-names</td>
+<td>Write column names in results</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;column-type-info</td>
+<td>Display result set metadata</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;comments</td>
+<td>Whether to retain or strip comments in statements sent to the server</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;compress</td>
+<td>Compress all information sent between client and server</td>
+<td></td>
+<td>8.0.18</td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;compression-algorithms</td>
+<td>Permitted compression algorithms for connections to server</td>
+<td>8.0.18</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;connect-expired-password</td>
+<td>Indicate to server that client can handle expired-password sandbox mode</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;connect-timeout</td>
+<td>Number of seconds before connection timeout</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;database</td>
+<td>The database to use</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;debug</td>
+<td>Write debugging log; supported only if MySQL was built with debugging support</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;debug-check</td>
+<td>Print debugging information when program exits</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;debug-info</td>
+<td>Print debugging information, memory, and CPU statistics when program exits</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;default-auth</td>
+<td>Authentication plugin to use</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;default-character-set</td>
+<td>Specify default character set</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;defaults-extra-file</td>
+<td>Read named option file in addition to usual option files</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;defaults-file</td>
+<td>Read only named option file</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;defaults-group-suffix</td>
+<td>Option group suffix value</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;delimiter</td>
+<td>Set the statement delimiter</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;dns-srv-name</td>
+<td>Use DNS SRV lookup for host information</td>
+<td>8.0.22</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;enable-cleartext-plugin</td>
+<td>Enable cleartext authentication plugin</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;execute</td>
+<td>Execute the statement and quit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;fido-register-factor</td>
+<td>Multifactor authentication factors for which registration must be done</td>
+<td>8.0.27</td>
+<td>8.0.35</td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;force</td>
+<td>Continue even if an SQL error occurs</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;get-server-public-key</td>
+<td>Request RSA public key from server</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;help</td>
+<td>Display help message and exit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;histignore</td>
+<td>Patterns specifying which statements to ignore for logging</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;host</td>
+<td>Host on which MySQL server is located</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;html</td>
+<td>Produce HTML output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;ignore-spaces</td>
+<td>Ignore spaces after function names</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;init-command</td>
+<td>SQL statement to execute after connecting</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;line-numbers</td>
+<td>Write line numbers for errors</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;load-data-local-dir</td>
+<td>Directory for files named in LOAD DATA LOCAL statements</td>
+<td>8.0.21</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;local-infile</td>
+<td>Enable or disable for LOCAL capability for LOAD DATA</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;login-path</td>
+<td>Read login path options from .mylogin.cnf</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;max-allowed-packet</td>
+<td>Maximum packet length to send to or receive from server</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;max-join-size</td>
+<td>The automatic limit for rows in a join when using &ndash;safe-updates</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;named-commands</td>
+<td>Enable named mysql commands</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;net-buffer-length</td>
+<td>Buffer size for TCP/IP and socket communication</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;network-namespace</td>
+<td>Specify network namespace</td>
+<td>8.0.22</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;no-auto-rehash</td>
+<td>Disable automatic rehashing</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;no-beep</td>
+<td>Do not beep when errors occur</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;no-defaults</td>
+<td>Read no option files</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;oci-config-file</td>
+<td>Defines an alternate location for the Oracle Cloud Infrastructure CLI configuration file.</td>
+<td>8.0.27</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;one-database</td>
+<td>Ignore statements except those for the default database named on the command line</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;pager</td>
+<td>Use the given command for paging query output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;password</td>
+<td>Password to use when connecting to server</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;password1</td>
+<td>First multifactor authentication password to use when connecting to server</td>
+<td>8.0.27</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;password2</td>
+<td>Second multifactor authentication password to use when connecting to server</td>
+<td>8.0.27</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;password3</td>
+<td>Third multifactor authentication password to use when connecting to server</td>
+<td>8.0.27</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;pipe</td>
+<td>Connect to server using named pipe (Windows only)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;plugin-authentication-kerberos-client-mode</td>
+<td>Permit GSSAPI pluggable authentication through the MIT Kerberos library on Windows</td>
+<td>8.0.32</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;plugin-dir</td>
+<td>Directory where plugins are installed</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;port</td>
+<td>TCP/IP port number for connection</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;print-defaults</td>
+<td>Print default options</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;prompt</td>
+<td>Set the prompt to the specified format</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;protocol</td>
+<td>Transport protocol to use</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;quick</td>
+<td>Do not cache each query result</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;raw</td>
+<td>Write column values without escape conversion</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;reconnect</td>
+<td>If the connection to the server is lost, automatically try to reconnect</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;safe-updates, &ndash;i-am-a-dummy</td>
+<td>Allow only UPDATE and DELETE statements that specify key values</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;select-limit</td>
+<td>The automatic limit for SELECT statements when using &ndash;safe-updates</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;server-public-key-path</td>
+<td>Path name to file containing RSA public key</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;shared-memory-base-name</td>
+<td>Shared-memory name for shared-memory connections (Windows only)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;show-warnings</td>
+<td>Show warnings after each statement if there are any</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;sigint-ignore</td>
+<td>Ignore SIGINT signals (typically the result of typing Control+C)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;silent</td>
+<td>Silent mode</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;skip-auto-rehash</td>
+<td>Disable automatic rehashing</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;skip-column-names</td>
+<td>Do not write column names in results</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;skip-line-numbers</td>
+<td>Skip line numbers for errors</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;skip-named-commands</td>
+<td>Disable named mysql commands</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;skip-pager</td>
+<td>Disable paging</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;skip-reconnect</td>
+<td>Disable reconnecting</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;socket</td>
+<td>Unix socket file or Windows named pipe to use</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;ssl-ca</td>
+<td>File that contains list of trusted SSL Certificate Authorities</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;ssl-capath</td>
+<td>Directory that contains trusted SSL Certificate Authority certificate files</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;ssl-cert</td>
+<td>File that contains X.509 certificate</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;ssl-cipher</td>
+<td>Permissible ciphers for connection encryption</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;ssl-crl</td>
+<td>File that contains certificate revocation lists</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;ssl-crlpath</td>
+<td>Directory that contains certificate revocation-list files</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;ssl-fips-mode</td>
+<td>Whether to enable FIPS mode on client side</td>
+<td></td>
+<td>8.0.34</td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;ssl-key</td>
+<td>File that contains X.509 key</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;ssl-mode</td>
+<td>Desired security state of connection to server</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;ssl-session-data</td>
+<td>File that contains SSL session data</td>
+<td>8.0.29</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;ssl-session-data-continue-on-failed-reuse</td>
+<td>Whether to establish connections if session reuse fails</td>
+<td>8.0.29</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;syslog</td>
+<td>Log interactive statements to syslog</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;table</td>
+<td>Display output in tabular format</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;tee</td>
+<td>Append a copy of output to named file</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;tls-ciphersuites</td>
+<td>Permissible TLSv1.3 ciphersuites for encrypted connections</td>
+<td>8.0.16</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;tls-version</td>
+<td>Permissible TLS protocols for encrypted connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;unbuffered</td>
+<td>Flush the buffer after each query</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;user</td>
+<td>MySQL user name to use when connecting to server</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;verbose</td>
+<td>Verbose mode</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;version</td>
+<td>Display version information and exit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;vertical</td>
+<td>Print query output rows vertically (one line per column value)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;wait</td>
+<td>If the connection cannot be established, wait and retry instead of aborting</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;xml</td>
+<td>Produce XML output</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">&ndash;zstd-compression-level</td>
+<td>Compression level for connections to server that use zstd compression</td>
+<td>8.0.18</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>&ndash;help, -?</li>
+</ul>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>&ndash;help</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>Display a help message and exit.</p>
+<ul>
+<li>&ndash;auto-rehash</li>
+</ul>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>&ndash;help</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Disabled by</strong></td>
+<td><strong>skip-auto-rehash</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Enable automatic rehashing. This option is on by default, which enables database, table, and column name completion. Use <code>--disable-auto-rehash</code> to disable rehashing. That causes <strong>mysql</strong> to start faster, but you must issue the rehash command or its \# shortcut if you want to use name completion.</p>
+<p>To complete a name, enter the first part and press Tab. If the name is unambiguous, <strong>mysql</strong> completes it. Otherwise, you can press Tab again to see the possible names that begin with what you have typed so far. Completion does not occur if there is no default database.</p>
+<blockquote>
+<p><strong>Note:</strong> This feature requires a MySQL client that is compiled with the readline library. Typically, the readline library is not available on Windows.</p>
+</blockquote>
+<p>// <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql.html"  target="_blank" rel="noopener"
+    >https://dev.mysql.com/doc/refman/8.0/en/mysql.html</a></p>
+<p>// <a class="link" href="https://cloud.tencent.com/developer/ask/sof/114604"  target="_blank" rel="noopener"
+    >https://cloud.tencent.com/developer/ask/sof/114604</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/blog/tags/database/">Database</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/blog/p/mysql-8-remote-access/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">MySQL 8 Remote Access</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/p/install-postgresql-16.1-on-windows/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Install PostgreSQL 16.1 on Windows</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/p/monetdb-remote-access/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">MonetDB Remote Access</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/p/mysql-5.7-remote-access/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">MySQL 5.7 Remote Access</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/p/postgresql-remote-access/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">PostgreSQL Remote Access</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2023 Javen Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/blog/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
