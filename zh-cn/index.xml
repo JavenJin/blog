@@ -6,7 +6,16 @@
         <description>Recent content on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Thu, 16 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 18 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MySQL Command-Line Client</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/mysql-command-line-client/</link>
+        <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/zh-cn/p/mysql-command-line-client/</guid>
+        <description>&lt;h1 id=&#34;mysql-命令行客户端&#34;&gt;MySQL 命令行客户端&lt;/h1&gt;
+</description>
+        </item>
+        <item>
         <title>MySQL 8 Remote Access</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/mysql-8-remote-access/</link>
         <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
@@ -19589,15 +19598,6 @@ n=0表示输入数据的结束，不做处理。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h4 id=&#34;通过c语言网httpswwwdotcppcom编译运行&#34;&gt;通过&lt;a class=&#34;link&#34; href=&#34;https://www.dotcpp.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;C语言网&lt;/a&gt;编译运行&lt;/h4&gt;
-</description>
-        </item>
-        <item>
-        <title>MySQL Command-Line Client</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/mysql-command-line-client/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://javenjin.github.io/blog/zh-cn/p/mysql-command-line-client/</guid>
-        <description>&lt;h1 id=&#34;mysql-命令行客户端&#34;&gt;MySQL 命令行客户端&lt;/h1&gt;
 </description>
         </item>
         <item>
