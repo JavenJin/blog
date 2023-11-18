@@ -156,14 +156,14 @@ On Unix, the mysql client logs statements executed interactively to a history fi
 |--xml|Produce XML output|||
 |--zstd-compression-level|Compression level for connections to server that use zstd compression|8.0.18||
 
-1. --help, -?
+### --help, -?
 
 |**Command-Line Format**|**--help**|
 |:--|--|
 
 Display a help message and exit.
 
-2. --auto-rehash
+### --auto-rehash
 
 |**Command-Line Format**|**--help**|
 |:--|--|
@@ -175,14 +175,14 @@ To complete a name, enter the first part and press Tab. If the name is unambiguo
 
 > **Note:** This feature requires a MySQL client that is compiled with the readline library. Typically, the readline library is not available on Windows.
 
-3. --auto-vertical-output
+### --auto-vertical-output
 
 |**Command-Line Format**|**--auto-vertical-output**|
 |:--|--|
 
 Cause result sets to be displayed vertically if they are too wide for the current window, and using normal tabular format otherwise. (This applies to statements terminated by ; or \G.)
 
-4. --batch, -B
+### --batch, -B
 
 |**Command-Line Format**|**--batch**|
 |:--|--|
@@ -191,7 +191,7 @@ Print results using tab as the column separator, with each row on a new line. Wi
 
 Batch mode results in nontabular output format and escaping of special characters. Escaping may be disabled by using raw mode; see the description for the `--raw` option.
 
-5. --binary-as-hex
+### --binary-as-hex
 
 |**Command-Line Format**|**--binary-as-hex**|
 |:--|--|
@@ -257,21 +257,21 @@ Binary data as: Hexadecimal
 
 To disable hexadecimal notation, use `--skip-binary-as-hex`
 
-6. --binary-model
+### --binary-model
 
 |**Command-Line Format**|**--binary-mode**|
 |:--|--|
 
 This option helps when processing **mysqlbinlog** output that may contain `BLOB` values. By default, **mysql** translates \r\n in statement strings to \n and interprets \0 as the statement terminator. `--binary-mode` disables both features. It also disables all **mysql** commands except *charset* and *delimiter* in noninteractive mode (for input piped to **mysql** or loaded using the source command).
 
-7. --bind-address=*ip_address*
+### --bind-address=*ip_address*
 
 |**Command-Line Format**|**--bind-address=ip_address**|
 |:--|--|
 
 On a computer having multiple network interfaces, use this option to select which interface to use for connecting to the MySQL server.
 
-8. --character-sets-dir=`dir_name`
+### --character-sets-dir=`dir_name`
 
 |**Command-Line Format**|**--character-sets-dir=dir_name**|
 |:--|--|
@@ -279,21 +279,21 @@ On a computer having multiple network interfaces, use this option to select whic
 
 The directory where character sets are installed. See []"Character Set Configuration"](https://dev.mysql.com/doc/refman/8.0/en/charset-configuration.html).
 
-9. --column-names
+### --column-names
 
 |**Command-Line Format**|**--column-names**|
 |:--|--|
 
 Write column names in results.
 
-10. --column-type-info
+### --column-type-info
 
 |**Command-Line Format**|**--column-type-info**|
 |:--|--|
 
 Display result set metadata. This information corresponds to the contents of C API *MYSQL_FIELD* data structures. See [C API Basic Data Structures](https://dev.mysql.com/doc/c-api/8.0/en/c-api-data-structures.html).
 
-11. --comments, -c
+### --comments, -c
 
 |**Command-Line Format**|**--comments**|
 |:--|--|
@@ -304,7 +304,7 @@ Whether to strip or preserve comments in statements sent to the server. The defa
 
 > **Note:** The **mysql** client always passes optimizer hints to the server, regardless of whether this option is given. Comment stripping is deprecated. Expect this feature and the options to control it to be removed in a future MySQL release.
 
-12. --compress, -C
+### --compress, -C
 
 |**Command-Line Format**|**--compress\[={OFF\|ON}\]**|
 |:--|--|
@@ -316,7 +316,7 @@ Compress all information sent between the client and the server if possible. See
 
 As of MySQL 8.0.18, this option is deprecated. Expect it to be removed in a future version of MySQL. See [Configuring Legacy Connection Compression](https://dev.mysql.com/doc/refman/8.0/en/connection-compression-control.html#connection-compression-legacy-configuration).
 
-13. --compression-algorithms=*value*
+### --compression-algorithms=*value*
 
 |**Command-Line Format**|**--compression-algorithms=value**|
 |:--|--|
@@ -331,14 +331,14 @@ For more information, see ["Connection Compression Control"](https://dev.mysql.c
 
 This option was added in MySQL 8.0.18.
 
-14. --connect-expired-password
+### --connect-expired-password
 
 |**Command-Line Format**|**--connect-expired-password**|
 |:--|--|
 
 Indicate to the server that the client can handle sandbox mode if the account used to connect has an expired password. This can be useful for noninteractive invocations of **mysql** because normally the server disconnects noninteractive clients that attempt to connect using an account with an expired password. (See ["Server Handling of Expired Passwords"](https://dev.mysql.com/doc/refman/8.0/en/expired-password-handling.html).)
 
-15. --connect-timeout=*value*
+### --connect-timeout=*value*
 
 |**Command-Line Format**|**--connect-timeout=value**|
 |:--|--|
@@ -347,7 +347,7 @@ Indicate to the server that the client can handle sandbox mode if the account us
 
 The number of seconds before connection timeout. (Default value is 0.)
 
-16. --database=*db_name*, -D *db_name*
+### --database=*db_name*, -D *db_name*
 
 |**Command-Line Format**|**--database=dbname**|
 |:--|--|
@@ -355,7 +355,7 @@ The number of seconds before connection timeout. (Default value is 0.)
 
 The database to use. This is useful primarily in an option file.
 
-17. --debug \[=*debug_options*\], -# \[*debug_options*\]
+### --debug \[=*debug_options*\], -# \[*debug_options*\]
 
 |**Command-Line Format**|**--debug\[=debug_options\]**|
 |:--|--|
@@ -366,7 +366,7 @@ Write a debugging log. A typical *debug_options* string is d:t:o,*file_name*. Th
 
 This option is available only if MySQL was built using `WITH_DEBUG`. MySQL release binaries provided by Oracle are not built using this option.
 
-18. --debug-check
+### --debug-check
 
 |**Command-Line Format**|**--debug-check**|
 |:--|--|
@@ -377,7 +377,7 @@ Print some debugging information when the program exits.
 
 This option is available only if MySQL was built using `WITH_DEBUG`. MySQL release binaries provided by Oracle are not built using this option.
 
-19. --debug-info, -T
+### --debug-info, -T
 
 |**Command-Line Format**|**--debug-info**|
 |:--|--|
@@ -388,7 +388,7 @@ Print debugging information and memory and CPU usage statistics when the program
 
 This option is available only if MySQL was built using `WITH_DEBUG`. MySQL release binaries provided by Oracle are not built using this option.
 
-20. --default-auth=*plugin*
+### --default-auth=*plugin*
 
 |**Command-Line Format**|**--default-auth=plugin**|
 |:--|--|
@@ -396,7 +396,7 @@ This option is available only if MySQL was built using `WITH_DEBUG`. MySQL relea
 
 A hint about which client-side authentication plugin to use. See ["Pluggable Authentication"](https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication.html).
 
-21. --default-character-set=*charset_name*
+### --default-character-set=*charset_name*
 
 |**Command-Line Format**|**--default-character-set=charset_name**|
 |:--|--|
@@ -408,7 +408,7 @@ This option can be useful if the operating system uses one character set and the
 
 For more information, see ["Connection Character Sets and Collations"](https://dev.mysql.com/doc/refman/8.0/en/charset-connection.html), and ["Character Set Configuration"](https://dev.mysql.com/doc/refman/8.0/en/charset-configuration.html).
 
-22. --defaults-extra-file=*file-name*
+### --defaults-extra-file=*file-name*
 
 |**Command-Line Format**|**--defaults-extra-file=file_name**|
 |:--|--|
@@ -418,7 +418,7 @@ Read this option file after the global option file but (on Unix) before the user
 
 For additional information about this and other option-file options, see ["Command-Line Options that Affect Option-File Handling"](https://dev.mysql.com/doc/refman/8.0/en/option-file-options.html).
 
-23. --defaults-file=*file_name*
+### --defaults-file=*file_name*
 
 |**Command-Line Format**|**--defaults-file=file_name**|
 |:--|--|
@@ -430,7 +430,7 @@ Exception: Even with `--defaults-file`, client programs read .mylogin.cnf.
 
 For additional information about this and other option-file options, see ["Command-Line Options that Affect Option-File Handling"](https://dev.mysql.com/doc/refman/8.0/en/option-file-options.html).
 
-24. --defaults-group-suffix=*str*
+### --defaults-group-suffix=*str*
 
 |**Command-Line Format**|**--defaults-group-suffix=str**|
 |:--|--|
@@ -440,7 +440,7 @@ Read not only the usual option groups, but also groups with the usual names and 
 
 For additional information about this and other option-file options, see ["Command-Line Options that Affect Option-File Handling"](https://dev.mysql.com/doc/refman/8.0/en/option-file-options.html).
 
-25. --delimiter=*str*
+### --delimiter=*str*
 
 |**Command-Line Format**|**--delimiter=str**|
 |:--|--|
@@ -449,11 +449,11 @@ For additional information about this and other option-file options, see ["Comma
 
 Set the statement delimiter. The default is the semicolon character (;).
 
-26. --disable-named-commands
+### --disable-named-commands
 
 Disable named commands. Use the \\* form only, or use named commands only at the beginning of a line ending with a semicolon (;). **mysql** starts with this option *enabled* by default. However, even with this option, long-format commands still work from the first line. See ["mysql Client Commands"](https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html).
 
-27. --dns-srv-name=*name*
+### --dns-srv-name=*name*
 
 |**Command-Line Format**|**--dns-srv-name=name**|
 |:--|--|
@@ -486,7 +486,7 @@ The `--dns-srv-name` option takes precedence over the `--host` option if both ar
 
 This option was added in MySQL 8.0.22.
 
-28. --enable-cleartext-plugin
+### --enable-cleartext-plugin
 
 |**Command-Line Format**|**--enable-cleartext-plugin**|
 |:--|--|
@@ -495,7 +495,7 @@ This option was added in MySQL 8.0.22.
 
 Enable the *mysql_clear_password* cleartext authentication plugin. (See ["Client-Side Cleartext Pluggable Authentication"](https://dev.mysql.com/doc/refman/8.0/en/cleartext-pluggable-authentication.html).)
 
-29. --execute=*statement*, -e *statement*
+### --execute=*statement*, -e *statement*
 
 |**Command-Line Format**|**--execute=statement**|
 |:--|--|
@@ -503,7 +503,7 @@ Enable the *mysql_clear_password* cleartext authentication plugin. (See ["Client
 
 Execute the statement and quit. The default output format is like that produced with `--batch`. See ["Using Options on the Command Line"](https://dev.mysql.com/doc/refman/8.0/en/command-line-options.html), for some examples. With this option, **mysql** does not use the history file.
 
-30. --fido-register-factor=*value*
+### --fido-register-factor=*value*
 
 |**Command-Line Format**|**--fido-register-factor=value**|
 |:--|--|
@@ -551,14 +551,14 @@ The `--fido-register-factor` option is only available for the **mysql** client a
 
 For related information, see ["Using FIDO Authentication"](https://dev.mysql.com/doc/refman/8.0/en/fido-pluggable-authentication.html#fido-pluggable-authentication-usage).
 
-31. force, -f
+### force, -f
 
 |**Command-Line Format**|**--force**|
 |:--|--|
 
 Continue even if an SQL error occurs.
 
-32. --get-server-public-key
+### --get-server-public-key
 
 |**Command-Line Format**|**--get-server-public-key**|
 |:--|--|
@@ -570,7 +570,7 @@ If `--server-public-key-path=file_name` is given and specifies a valid public ke
 
 For information about the *caching_sha2_password* plugin, see ["Caching SHA-2 Pluggable Authentication"](https://dev.mysql.com/doc/refman/8.0/en/caching-sha2-pluggable-authentication.html).
 
-33. --histignore
+### --histignore
 
 |**Command-Line Format**|**--histignore=pattern_list**|
 |:--|--|
@@ -578,7 +578,7 @@ For information about the *caching_sha2_password* plugin, see ["Caching SHA-2 Pl
 
 A list of one or more colon-separated patterns specifying statements to ignore for logging purposes. These patterns are added to the default pattern list ("\*IDENTIFIED\*:\*PASSWORD\*"). The value specified for this option affects logging of statements written to the history file, and to syslog if the `--syslog` option is given. For more information, see ["mysql Client Logging"](https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html).
 
-34. --host=*host_name*, -h *host_name*
+### --host=*host_name*, -h *host_name*
 
 |**Command-Line Format**|**--host=host_name**|
 |:--|--|
@@ -589,7 +589,7 @@ Connect to the MySQL server on the given host.
 
 The `--dns-srv-name` option takes precedence over the `--host` option if both are given. `--dns-srv-name` causes connection establishment to use the `mysql_real_connect_dns_srv()` C API function rather than `mysql_real_connect()`. However, if the connect command is subsequently used at runtime and specifies a host name argument, that host name takes precedence over any `--dns-srv-name` option given at **mysql** startup to specify a DNS SRV record.
 
-35. --html, -H
+### --html, -H
 
 |**Command-Line Format**|**--html**|
 |:--|--|
