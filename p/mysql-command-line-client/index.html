@@ -299,7 +299,45 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#mysql-client-options">mysql Client Options</a></li>
+    <li><a href="#mysql-client-options">mysql Client Options</a>
+      <ol>
+        <li><a href="#--help--">&ndash;help, -?</a></li>
+        <li><a href="#--auto-rehash">&ndash;auto-rehash</a></li>
+        <li><a href="#--auto-vertical-output">&ndash;auto-vertical-output</a></li>
+        <li><a href="#--batch--b">&ndash;batch, -B</a></li>
+        <li><a href="#--binary-as-hex">&ndash;binary-as-hex</a></li>
+        <li><a href="#--binary-model">&ndash;binary-model</a></li>
+        <li><a href="#--bind-addressip_address">&ndash;bind-address=<em>ip_address</em></a></li>
+        <li><a href="#--character-sets-dirdir_name">&ndash;character-sets-dir=<code>dir_name</code></a></li>
+        <li><a href="#--column-names">&ndash;column-names</a></li>
+        <li><a href="#--column-type-info">&ndash;column-type-info</a></li>
+        <li><a href="#--comments--c">&ndash;comments, -c</a></li>
+        <li><a href="#--compress--c">&ndash;compress, -C</a></li>
+        <li><a href="#--compression-algorithmsvalue">&ndash;compression-algorithms=<em>value</em></a></li>
+        <li><a href="#--connect-expired-password">&ndash;connect-expired-password</a></li>
+        <li><a href="#--connect-timeoutvalue">&ndash;connect-timeout=<em>value</em></a></li>
+        <li><a href="#--databasedb_name--d-db_name">&ndash;database=<em>db_name</em>, -D <em>db_name</em></a></li>
+        <li><a href="#--debug-debug_options---debug_options">&ndash;debug [=<em>debug_options</em>], -# [<em>debug_options</em>]</a></li>
+        <li><a href="#--debug-check">&ndash;debug-check</a></li>
+        <li><a href="#--debug-info--t">&ndash;debug-info, -T</a></li>
+        <li><a href="#--default-authplugin">&ndash;default-auth=<em>plugin</em></a></li>
+        <li><a href="#--default-character-setcharset_name">&ndash;default-character-set=<em>charset_name</em></a></li>
+        <li><a href="#--defaults-extra-filefile-name">&ndash;defaults-extra-file=<em>file-name</em></a></li>
+        <li><a href="#--defaults-filefile_name">&ndash;defaults-file=<em>file_name</em></a></li>
+        <li><a href="#--defaults-group-suffixstr">&ndash;defaults-group-suffix=<em>str</em></a></li>
+        <li><a href="#--delimiterstr">&ndash;delimiter=<em>str</em></a></li>
+        <li><a href="#--disable-named-commands">&ndash;disable-named-commands</a></li>
+        <li><a href="#--dns-srv-namename">&ndash;dns-srv-name=<em>name</em></a></li>
+        <li><a href="#--enable-cleartext-plugin">&ndash;enable-cleartext-plugin</a></li>
+        <li><a href="#--executestatement--e-statement">&ndash;execute=<em>statement</em>, -e <em>statement</em></a></li>
+        <li><a href="#--fido-register-factorvalue">&ndash;fido-register-factor=<em>value</em></a></li>
+        <li><a href="#force--f">force, -f</a></li>
+        <li><a href="#--get-server-public-key">&ndash;get-server-public-key</a></li>
+        <li><a href="#--histignore">&ndash;histignore</a></li>
+        <li><a href="#--hosthost_name--h-host_name">&ndash;host=<em>host_name</em>, -h <em>host_name</em></a></li>
+        <li><a href="#--html--h">&ndash;html, -H</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -1082,9 +1120,7 @@
 </tr>
 </tbody>
 </table></div>
-<ol>
-<li>&ndash;help, -?</li>
-</ol>
+<h3 id="--help--">&ndash;help, -?</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1094,9 +1130,7 @@
 </thead>
 </table></div>
 <p>Display a help message and exit.</p>
-<ol start="2">
-<li>&ndash;auto-rehash</li>
-</ol>
+<h3 id="--auto-rehash">&ndash;auto-rehash</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1116,9 +1150,7 @@
 <blockquote>
 <p><strong>Note:</strong> This feature requires a MySQL client that is compiled with the readline library. Typically, the readline library is not available on Windows.</p>
 </blockquote>
-<ol start="3">
-<li>&ndash;auto-vertical-output</li>
-</ol>
+<h3 id="--auto-vertical-output">&ndash;auto-vertical-output</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1128,9 +1160,7 @@
 </thead>
 </table></div>
 <p>Cause result sets to be displayed vertically if they are too wide for the current window, and using normal tabular format otherwise. (This applies to statements terminated by ; or \G.)</p>
-<ol start="4">
-<li>&ndash;batch, -B</li>
-</ol>
+<h3 id="--batch--b">&ndash;batch, -B</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1141,9 +1171,7 @@
 </table></div>
 <p>Print results using tab as the column separator, with each row on a new line. With this option, <strong>mysql</strong> does not use the history file.</p>
 <p>Batch mode results in nontabular output format and escaping of special characters. Escaping may be disabled by using raw mode; see the description for the <code>--raw</code> option.</p>
-<ol start="5">
-<li>&ndash;binary-as-hex</li>
-</ol>
+<h3 id="--binary-as-hex">&ndash;binary-as-hex</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1263,9 +1291,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>To disable hexadecimal notation, use <code>--skip-binary-as-hex</code></p>
-<ol start="6">
-<li>&ndash;binary-model</li>
-</ol>
+<h3 id="--binary-model">&ndash;binary-model</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1275,9 +1301,7 @@
 </thead>
 </table></div>
 <p>This option helps when processing <strong>mysqlbinlog</strong> output that may contain <code>BLOB</code> values. By default, <strong>mysql</strong> translates \r\n in statement strings to \n and interprets \0 as the statement terminator. <code>--binary-mode</code> disables both features. It also disables all <strong>mysql</strong> commands except <em>charset</em> and <em>delimiter</em> in noninteractive mode (for input piped to <strong>mysql</strong> or loaded using the source command).</p>
-<ol start="7">
-<li>&ndash;bind-address=<em>ip_address</em></li>
-</ol>
+<h3 id="--bind-addressip_address">&ndash;bind-address=<em>ip_address</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1287,9 +1311,7 @@
 </thead>
 </table></div>
 <p>On a computer having multiple network interfaces, use this option to select which interface to use for connecting to the MySQL server.</p>
-<ol start="8">
-<li>&ndash;character-sets-dir=<code>dir_name</code></li>
-</ol>
+<h3 id="--character-sets-dirdir_name">&ndash;character-sets-dir=<code>dir_name</code></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1306,9 +1328,7 @@
 </table></div>
 <p>The directory where character sets are installed. See []&ldquo;Character Set Configuration&rdquo;](<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/charset-configuration.html%29"  target="_blank" rel="noopener"
     >https://dev.mysql.com/doc/refman/8.0/en/charset-configuration.html)</a>.</p>
-<ol start="9">
-<li>&ndash;column-names</li>
-</ol>
+<h3 id="--column-names">&ndash;column-names</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1318,9 +1338,7 @@
 </thead>
 </table></div>
 <p>Write column names in results.</p>
-<ol start="10">
-<li>&ndash;column-type-info</li>
-</ol>
+<h3 id="--column-type-info">&ndash;column-type-info</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1331,9 +1349,7 @@
 </table></div>
 <p>Display result set metadata. This information corresponds to the contents of C API <em>MYSQL_FIELD</em> data structures. See <a class="link" href="https://dev.mysql.com/doc/c-api/8.0/en/c-api-data-structures.html"  target="_blank" rel="noopener"
     >C API Basic Data Structures</a>.</p>
-<ol start="11">
-<li>&ndash;comments, -c</li>
-</ol>
+<h3 id="--comments--c">&ndash;comments, -c</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1356,9 +1372,7 @@
 <blockquote>
 <p><strong>Note:</strong> The <strong>mysql</strong> client always passes optimizer hints to the server, regardless of whether this option is given. Comment stripping is deprecated. Expect this feature and the options to control it to be removed in a future MySQL release.</p>
 </blockquote>
-<ol start="12">
-<li>&ndash;compress, -C</li>
-</ol>
+<h3 id="--compress--c">&ndash;compress, -C</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1385,9 +1399,7 @@
     >&ldquo;Connection Compression Control&rdquo;</a>.</p>
 <p>As of MySQL 8.0.18, this option is deprecated. Expect it to be removed in a future version of MySQL. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/connection-compression-control.html#connection-compression-legacy-configuration"  target="_blank" rel="noopener"
     >Configuring Legacy Connection Compression</a>.</p>
-<ol start="13">
-<li>&ndash;compression-algorithms=<em>value</em></li>
-</ol>
+<h3 id="--compression-algorithmsvalue">&ndash;compression-algorithms=<em>value</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1418,9 +1430,7 @@
 <p>For more information, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/connection-compression-control.html"  target="_blank" rel="noopener"
     >&ldquo;Connection Compression Control&rdquo;</a>.</p>
 <p>This option was added in MySQL 8.0.18.</p>
-<ol start="14">
-<li>&ndash;connect-expired-password</li>
-</ol>
+<h3 id="--connect-expired-password">&ndash;connect-expired-password</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1431,9 +1441,7 @@
 </table></div>
 <p>Indicate to the server that the client can handle sandbox mode if the account used to connect has an expired password. This can be useful for noninteractive invocations of <strong>mysql</strong> because normally the server disconnects noninteractive clients that attempt to connect using an account with an expired password. (See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/expired-password-handling.html"  target="_blank" rel="noopener"
     >&ldquo;Server Handling of Expired Passwords&rdquo;</a>.)</p>
-<ol start="15">
-<li>&ndash;connect-timeout=<em>value</em></li>
-</ol>
+<h3 id="--connect-timeoutvalue">&ndash;connect-timeout=<em>value</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1453,9 +1461,7 @@
 </tbody>
 </table></div>
 <p>The number of seconds before connection timeout. (Default value is 0.)</p>
-<ol start="16">
-<li>&ndash;database=<em>db_name</em>, -D <em>db_name</em></li>
-</ol>
+<h3 id="--databasedb_name--d-db_name">&ndash;database=<em>db_name</em>, -D <em>db_name</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1471,9 +1477,7 @@
 </tbody>
 </table></div>
 <p>The database to use. This is useful primarily in an option file.</p>
-<ol start="17">
-<li>&ndash;debug [=<em>debug_options</em>], -# [<em>debug_options</em>]</li>
-</ol>
+<h3 id="--debug-debug_options---debug_options">&ndash;debug [=<em>debug_options</em>], -# [<em>debug_options</em>]</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1494,9 +1498,7 @@
 </table></div>
 <p>Write a debugging log. A typical <em>debug_options</em> string is d:t:o,<em>file_name</em>. The default is d:t:o,/tmp/mysql.trace.</p>
 <p>This option is available only if MySQL was built using <code>WITH_DEBUG</code>. MySQL release binaries provided by Oracle are not built using this option.</p>
-<ol start="18">
-<li>&ndash;debug-check</li>
-</ol>
+<h3 id="--debug-check">&ndash;debug-check</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1517,9 +1519,7 @@
 </table></div>
 <p>Print some debugging information when the program exits.</p>
 <p>This option is available only if MySQL was built using <code>WITH_DEBUG</code>. MySQL release binaries provided by Oracle are not built using this option.</p>
-<ol start="19">
-<li>&ndash;debug-info, -T</li>
-</ol>
+<h3 id="--debug-info--t">&ndash;debug-info, -T</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1540,9 +1540,7 @@
 </table></div>
 <p>Print debugging information and memory and CPU usage statistics when the program exits.</p>
 <p>This option is available only if MySQL was built using <code>WITH_DEBUG</code>. MySQL release binaries provided by Oracle are not built using this option.</p>
-<ol start="20">
-<li>&ndash;default-auth=<em>plugin</em></li>
-</ol>
+<h3 id="--default-authplugin">&ndash;default-auth=<em>plugin</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1559,9 +1557,7 @@
 </table></div>
 <p>A hint about which client-side authentication plugin to use. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication.html"  target="_blank" rel="noopener"
     >&ldquo;Pluggable Authentication&rdquo;</a>.</p>
-<ol start="21">
-<li>&ndash;default-character-set=<em>charset_name</em></li>
-</ol>
+<h3 id="--default-character-setcharset_name">&ndash;default-character-set=<em>charset_name</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1581,9 +1577,7 @@
 <p>For more information, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/charset-connection.html"  target="_blank" rel="noopener"
     >&ldquo;Connection Character Sets and Collations&rdquo;</a>, and <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/charset-configuration.html"  target="_blank" rel="noopener"
     >&ldquo;Character Set Configuration&rdquo;</a>.</p>
-<ol start="22">
-<li>&ndash;defaults-extra-file=<em>file-name</em></li>
-</ol>
+<h3 id="--defaults-extra-filefile-name">&ndash;defaults-extra-file=<em>file-name</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1601,9 +1595,7 @@
 <p>Read this option file after the global option file but (on Unix) before the user option file. If the file does not exist or is otherwise inaccessible, an error occurs. If <em>file_name</em> is not an absolute path name, it is interpreted relative to the current directory.</p>
 <p>For additional information about this and other option-file options, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/option-file-options.html"  target="_blank" rel="noopener"
     >&ldquo;Command-Line Options that Affect Option-File Handling&rdquo;</a>.</p>
-<ol start="23">
-<li>&ndash;defaults-file=<em>file_name</em></li>
-</ol>
+<h3 id="--defaults-filefile_name">&ndash;defaults-file=<em>file_name</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1622,9 +1614,7 @@
 <p>Exception: Even with <code>--defaults-file</code>, client programs read .mylogin.cnf.</p>
 <p>For additional information about this and other option-file options, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/option-file-options.html"  target="_blank" rel="noopener"
     >&ldquo;Command-Line Options that Affect Option-File Handling&rdquo;</a>.</p>
-<ol start="24">
-<li>&ndash;defaults-group-suffix=<em>str</em></li>
-</ol>
+<h3 id="--defaults-group-suffixstr">&ndash;defaults-group-suffix=<em>str</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1642,9 +1632,7 @@
 <p>Read not only the usual option groups, but also groups with the usual names and a suffix of str. For example, <strong>mysql</strong> normally reads the <code>[client]</code> and <code>[mysql]</code> groups. If this option is given as <code>--defaults-group-suffix=_other</code>, <strong>mysql</strong> also reads the [client_other] and <code>[mysql_other]</code> groups.</p>
 <p>For additional information about this and other option-file options, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/option-file-options.html"  target="_blank" rel="noopener"
     >&ldquo;Command-Line Options that Affect Option-File Handling&rdquo;</a>.</p>
-<ol start="25">
-<li>&ndash;delimiter=<em>str</em></li>
-</ol>
+<h3 id="--delimiterstr">&ndash;delimiter=<em>str</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1664,14 +1652,10 @@
 </tbody>
 </table></div>
 <p>Set the statement delimiter. The default is the semicolon character (;).</p>
-<ol start="26">
-<li>&ndash;disable-named-commands</li>
-</ol>
+<h3 id="--disable-named-commands">&ndash;disable-named-commands</h3>
 <p>Disable named commands. Use the \* form only, or use named commands only at the beginning of a line ending with a semicolon (;). <strong>mysql</strong> starts with this option <em>enabled</em> by default. However, even with this option, long-format commands still work from the first line. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html"  target="_blank" rel="noopener"
     >&ldquo;mysql Client Commands&rdquo;</a>.</p>
-<ol start="27">
-<li>&ndash;dns-srv-name=<em>name</em></li>
-</ol>
+<h3 id="--dns-srv-namename">&ndash;dns-srv-name=<em>name</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1722,9 +1706,7 @@
 <p>When invoked with <code>--dns-srv-name</code>, <strong>mysql</strong> attempts to establish TCP connections only.</p>
 <p>The <code>--dns-srv-name</code> option takes precedence over the <code>--host</code> option if both are given. <code>--dns-srv-name</code> causes connection establishment to use the <code>mysql_real_connect_dns_srv()</code> C API function rather than <code>mysql_real_connect()</code>. However, if the <em>connect</em> command is subsequently used at runtime and specifies a host name argument, that host name takes precedence over any <code>--dns-srv-name</code> option given at <strong>mysql</strong> startup to specify a DNS SRV record.</p>
 <p>This option was added in MySQL 8.0.22.</p>
-<ol start="28">
-<li>&ndash;enable-cleartext-plugin</li>
-</ol>
+<h3 id="--enable-cleartext-plugin">&ndash;enable-cleartext-plugin</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1745,9 +1727,7 @@
 </table></div>
 <p>Enable the <em>mysql_clear_password</em> cleartext authentication plugin. (See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/cleartext-pluggable-authentication.html"  target="_blank" rel="noopener"
     >&ldquo;Client-Side Cleartext Pluggable Authentication&rdquo;</a>.)</p>
-<ol start="29">
-<li>&ndash;execute=<em>statement</em>, -e <em>statement</em></li>
-</ol>
+<h3 id="--executestatement--e-statement">&ndash;execute=<em>statement</em>, -e <em>statement</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1764,9 +1744,7 @@
 </table></div>
 <p>Execute the statement and quit. The default output format is like that produced with <code>--batch</code>. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/command-line-options.html"  target="_blank" rel="noopener"
     >&ldquo;Using Options on the Command Line&rdquo;</a>, for some examples. With this option, <strong>mysql</strong> does not use the history file.</p>
-<ol start="30">
-<li>&ndash;fido-register-factor=<em>value</em></li>
-</ol>
+<h3 id="--fido-register-factorvalue">&ndash;fido-register-factor=<em>value</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1837,9 +1815,7 @@
 <p>The <code>--fido-register-factor</code> option is only available for the <strong>mysql</strong> client and MySQL Shell. Other MySQL client programs do not support it.</p>
 <p>For related information, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/fido-pluggable-authentication.html#fido-pluggable-authentication-usage"  target="_blank" rel="noopener"
     >&ldquo;Using FIDO Authentication&rdquo;</a>.</p>
-<ol start="31">
-<li>force, -f</li>
-</ol>
+<h3 id="force--f">force, -f</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1849,9 +1825,7 @@
 </thead>
 </table></div>
 <p>Continue even if an SQL error occurs.</p>
-<ol start="32">
-<li>&ndash;get-server-public-key</li>
-</ol>
+<h3 id="--get-server-public-key">&ndash;get-server-public-key</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1870,9 +1844,7 @@
 <p>If <code>--server-public-key-path=file_name</code> is given and specifies a valid public key file, it takes precedence over <code>--get-server-public-key</code>.</p>
 <p>For information about the <em>caching_sha2_password</em> plugin, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/caching-sha2-pluggable-authentication.html"  target="_blank" rel="noopener"
     >&ldquo;Caching SHA-2 Pluggable Authentication&rdquo;</a>.</p>
-<ol start="33">
-<li>&ndash;histignore</li>
-</ol>
+<h3 id="--histignore">&ndash;histignore</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1889,9 +1861,7 @@
 </table></div>
 <p>A list of one or more colon-separated patterns specifying statements to ignore for logging purposes. These patterns are added to the default pattern list (&quot;*IDENTIFIED*:*PASSWORD*&quot;). The value specified for this option affects logging of statements written to the history file, and to syslog if the <code>--syslog</code> option is given. For more information, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html"  target="_blank" rel="noopener"
     >&ldquo;mysql Client Logging&rdquo;</a>.</p>
-<ol start="34">
-<li>&ndash;host=<em>host_name</em>, -h <em>host_name</em></li>
-</ol>
+<h3 id="--hosthost_name--h-host_name">&ndash;host=<em>host_name</em>, -h <em>host_name</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1912,9 +1882,7 @@
 </table></div>
 <p>Connect to the MySQL server on the given host.</p>
 <p>The <code>--dns-srv-name</code> option takes precedence over the <code>--host</code> option if both are given. <code>--dns-srv-name</code> causes connection establishment to use the <code>mysql_real_connect_dns_srv()</code> C API function rather than <code>mysql_real_connect()</code>. However, if the connect command is subsequently used at runtime and specifies a host name argument, that host name takes precedence over any <code>--dns-srv-name</code> option given at <strong>mysql</strong> startup to specify a DNS SRV record.</p>
-<ol start="35">
-<li>&ndash;html, -H</li>
-</ol>
+<h3 id="--html--h">&ndash;html, -H</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
