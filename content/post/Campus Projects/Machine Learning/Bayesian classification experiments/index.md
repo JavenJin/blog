@@ -1,7 +1,7 @@
 ---
 title: Machine Learning - Bayesian classification experiments
 description: 机器学习 - 贝叶斯分类实验
-date: '2020-08-15'
+date: '2019-11-04'
 categories:
     - Machine Learning
 tags:

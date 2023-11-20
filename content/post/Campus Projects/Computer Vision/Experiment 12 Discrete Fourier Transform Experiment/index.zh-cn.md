@@ -1,7 +1,7 @@
 ---
 title: 计算机视觉 - 实验十二 离散傅里叶变换实验
 description: Computer Vision - Experiment 12 - Discrete Fourier Transform Experiment
-date: '2020-04-20'
+date: '2020-05-18'
 categories:
     - Computer Vision
 tags:

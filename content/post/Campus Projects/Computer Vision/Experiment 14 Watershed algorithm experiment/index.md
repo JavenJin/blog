@@ -1,7 +1,7 @@
 ---
 title: Computer Vision - Experiment 14 - Watershed algorithm experiment
 description: 计算机视觉 - 实验十四 分水岭算法实验
-date: '2020-04-20'
+date: '2020-06-01'
 categories:
     - Computer Vision
 tags:

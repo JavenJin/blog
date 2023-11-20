@@ -1,7 +1,7 @@
 ---
 title: Computer Vision - Experiment 10 - Create a rectangular boundary that encloses the outline
 description: 计算机视觉 - 实验十 创建包围轮廓的矩形边界
-date: '2020-04-20'
+date: '2020-05-04'
 categories:
     - Computer Vision
 tags:

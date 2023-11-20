@@ -1,7 +1,7 @@
 ---
 title: Computer Vision - Experiment 16 - Separate background experiments with Gaussian background modeling
 description: 计算机视觉 - 实验十六 用高斯背景建模分离背景实验
-date: '2020-04-20'
+date: '2020-06-12'
 categories:
     - Computer Vision
 tags:

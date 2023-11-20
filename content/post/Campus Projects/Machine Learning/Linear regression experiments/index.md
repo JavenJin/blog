@@ -1,7 +1,7 @@
 ---
 title: Machine Learning - Linear regression experiments
 description: 机器学习 - 线性回归实验
-date: '2020-08-15'
+date: '2019-10-21'
 categories:
     - Machine Learning
 tags:

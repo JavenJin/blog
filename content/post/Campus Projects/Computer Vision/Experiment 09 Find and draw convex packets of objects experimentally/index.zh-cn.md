@@ -1,7 +1,7 @@
 ---
 title: 计算机视觉 - 实验九 寻找和绘制物体的凸包实验
 description: Computer Vision - Experiment 9 - Find and draw convex packets of objects experimentally
-date: '2020-04-20'
+date: '2020-04-29'
 categories:
     - Computer Vision
 tags:

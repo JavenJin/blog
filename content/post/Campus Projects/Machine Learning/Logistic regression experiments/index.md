@@ -1,7 +1,7 @@
 ---
 title: Machine Learning - Logistic regression experiments
 description: 机器学习 - 逻辑回归实验
-date: '2020-08-15'
+date: '2020-10-28'
 categories:
     - Machine Learning
 tags:
