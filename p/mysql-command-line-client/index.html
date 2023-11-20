@@ -393,7 +393,13 @@
       </ol>
     </li>
     <li><a href="#mysql-client-commands">mysql Client Commands</a></li>
-    <li><a href="#mysql-client-loggint">mysql Client Loggint</a></li>
+    <li><a href="#mysql-client-logging">mysql Client Logging</a>
+      <ol>
+        <li><a href="#how-logging-occurs">How Logging Occurs</a></li>
+        <li><a href="#controlling-the-history-file">Controlling the History File</a></li>
+        <li><a href="#syslog-logging-characteristics">syslog Logging Characteristics</a></li>
+      </ol>
+    </li>
     <li><a href="#mysql-client-server-side-help">mysql Client Server-Side Help</a></li>
     <li><a href="#executing-sql-statements-from-a-text-file">Executing SQL Statements from a Text File</a></li>
     <li><a href="#mysql-client-tips">mysql Client Tips</a></li>
@@ -465,7 +471,7 @@
 
 
                 <time class="article-time--reading">
-                    45 minute read
+                    52 minute read
                 </time>
             </div>
         
@@ -3521,9 +3527,392 @@ See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-commands
 </div>
 </div></li>
 </ul>
-<h2 id="mysql-client-loggint">mysql Client Loggint</h2>
-<h2 id="mysql-client-server-side-help">mysql Client Server-Side Help</h2>
-<h2 id="executing-sql-statements-from-a-text-file">Executing SQL Statements from a Text File</h2>
+<h2 id="mysql-client-logging">mysql Client Logging</h2>
+<p>The <strong>mysql</strong> client can do these types of logging for statements executed interactively:</p>
+<ul>
+<li>
+<p>On Unix, <strong>mysql</strong> writes the statements to a history file. By default, this file is named <code>.mysql_history</code> in your home directory. To specify a different file, set the value of the <code>MYSQL_HISTFILE</code> environment variable.</p>
+</li>
+<li>
+<p>On all platforms, if the <code>--syslog</code> option is given, <strong>mysql</strong> writes the statements to the system logging facility. On Unix, this is <code>syslog;</code> on Windows, it is the Windows Event Log. The destination where logged messages appear is system dependent. On Linux, the destination is often the <em>/var/log/messages</em> file.</p>
+</li>
+</ul>
+<p>The following discussion describes characteristics that apply to all logging types and provides information specific to each logging type.</p>
+<ul>
+<li>
+<p>How Logging Occurs</p>
+</li>
+<li>
+<p>Controlling the History File</p>
+</li>
+<li>
+<p>syslog Logging Characteristics</p>
+</li>
+</ul>
+<h3 id="how-logging-occurs">How Logging Occurs</h3>
+<p>For each enabled logging destination, statement logging occurs as follows:</p>
+<ul>
+<li>
+<p>Statements are logged only when executed interactively. Statements are noninteractive, for example, when read from a file or a pipe. It is also possible to suppress statement logging by using the <code>--batch</code> or <code>--execute</code> option.</p>
+</li>
+<li>
+<p>Statements are ignored and not logged if they match any pattern in the &ldquo;ignore&rdquo; list. This list is described later.</p>
+</li>
+<li>
+<p><strong>mysql</strong> logs each nonignored, nonempty statement line individually.</p>
+</li>
+<li>
+<p>If a nonignored statement spans multiple lines (not including the terminating delimiter), <strong>mysql</strong> concatenates the lines to form the complete statement, maps newlines to spaces, and logs the result, plus a delimiter.</p>
+</li>
+</ul>
+<p>Consequently, an input statement that spans multiple lines can be logged twice. Consider this input:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">SELECT</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="o">-&gt;</span><span class="w"> </span><span class="s1">&#39;Today is&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">CURDATE</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>In this case, <strong>mysql</strong> logs the &ldquo;SELECT&rdquo;, &ldquo;&lsquo;Today is&rsquo;&rdquo;, &ldquo;,&rdquo;, &ldquo;CURDATE()&rdquo;, and &ldquo;;&rdquo; lines as it reads them. It also logs the complete statement, after mapping <code>SELECT\n'Today is'\n,\nCURDATE()</code> to <code>SELECT 'Today is' , CURDATE()</code>, plus a delimiter. Thus, these lines appear in logged output:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="s1">&#39;Today is&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">CURDATE</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;Today is&#39;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">CURDATE</span><span class="p">();</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>mysql</strong> ignores for logging purposes statements that match any pattern in the &ldquo;ignore&rdquo; list. By default, the pattern list is <code>&quot;*IDENTIFIED*:*PASSWORD*&quot;</code>, to ignore statements that refer to passwords. Pattern matching is not case-sensitive. Within patterns, two characters are special:</p>
+<ul>
+<li>
+<p><strong>?</strong> matches any single character.</p>
+</li>
+<li>
+<p><strong>*</strong> matches any sequence of zero or more characters.</p>
+</li>
+</ul>
+<p>To specify additional patterns, use the <code>--histignore</code> option or set the <code>MYSQL_HISTIGNORE</code> environment variable. (If both are specified, the option value takes precedence.) The value should be a list of one or more colon-separated patterns, which are appended to the default pattern list.</p>
+<p>Patterns specified on the command line might need to be quoted or escaped to prevent your command interpreter from treating them specially. For example, to suppress logging for <code>UPDATE</code> and <code>DELETE</code> statements in addition to statements that refer to passwords, invoke <strong>mysql</strong> like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql --histignore=&#34;*UPDATE*:*DELETE*&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="controlling-the-history-file">Controlling the History File</h3>
+<p>The <code>.mysql_history</code> file should be protected with a restrictive access mode because sensitive information might be written to it, such as the text of SQL statements that contain passwords. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/password-security-user.html"  target="_blank" rel="noopener"
+    >&ldquo;End-User Guidelines for Password Security&rdquo;</a>. Statements in the file are accessible from the <strong>mysql</strong> client when the <strong>up-arrow</strong> key is used to recall the history. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-tips.html#mysql-history"  target="_blank" rel="noopener"
+    >Disabling Interactive History</a>.</p>
+<p>If you do not want to maintain a history file, first remove <code>.mysql_history</code> if it exists. Then use either of the following techniques to prevent it from being created again:</p>
+<ul>
+<li>
+<p>Set the <code>MYSQL_HISTFILE</code> environment variable to <code>/dev/null</code>. To cause this setting to take effect each time you log in, put it in one of your shell&rsquo;s startup files.</p>
+</li>
+<li>
+<p>Create <code>.mysql_history</code> as a symbolic link to <code>/dev/null</code>; this need be done only once:</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ln -s /dev/null $HOME/.mysql_history
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="syslog-logging-characteristics">syslog Logging Characteristics</h3>
+<p>If the <code>--syslog</code> option is given, <strong>mysql</strong> writes interactive statements to the system logging facility. Message logging has the following characteristics.</p>
+<p>Logging occurs at the &ldquo;information&rdquo; level. This corresponds to the <code>LOG_INFO</code> priority for <code>syslog</code> on Unix/Linux <code>syslog</code> capability and to <code>EVENTLOG_INFORMATION_TYPE</code> for the Windows Event Log. Consult your system documentation for configuration of your logging capability.</p>
+<p>Message size is limited to 1024 bytes.</p>
+<p>Messages consist of the identifier <code>MysqlClient</code> followed by these values:</p>
+<ul>
+<li>
+<p><code>SYSTEM_USER</code></p>
+<p>The operating system user name (login name) or &ndash; if the user is unknown.</p>
+</li>
+<li>
+<p><code>MYSQL_USER</code></p>
+<p>The MySQL user name (specified with the <code>--user</code> option) or &ndash; if the user is unknown.</p>
+</li>
+<li>
+<p><code>CONNECTION_ID:</code></p>
+<p>The client connection identifier. This is the same as the <code>CONNECTION_ID()</code> function value within the session.</p>
+</li>
+<li>
+<p><code>DB_SERVER</code></p>
+<p>The server host or -- if the host is unknown.</p>
+</li>
+<li>
+<p><code>DB</code></p>
+<p>The default database or -- if no database has been selected.</p>
+</li>
+<li>
+<p><code>QUERY</code></p>
+<p>The text of the logged statement.</p>
+</li>
+</ul>
+<p>Here is a sample of output generated on Linux by using <code>--syslog</code>. This output is formatted for readability; each logged message actually takes a single line.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Mar  7 12:39:25 myhost MysqlClient[20824]:
+</span></span><span class="line"><span class="cl">  SYSTEM_USER:&#39;oscar&#39;, MYSQL_USER:&#39;my_oscar&#39;, CONNECTION_ID:23,
+</span></span><span class="line"><span class="cl">  DB_SERVER:&#39;127.0.0.1&#39;, DB:&#39;--&#39;, QUERY:&#39;USE test;&#39;
+</span></span><span class="line"><span class="cl">Mar  7 12:39:28 myhost MysqlClient[20824]:
+</span></span><span class="line"><span class="cl">  SYSTEM_USER:&#39;oscar&#39;, MYSQL_USER:&#39;my_oscar&#39;, CONNECTION_ID:23,
+</span></span><span class="line"><span class="cl">  DB_SERVER:&#39;127.0.0.1&#39;, DB:&#39;test&#39;, QUERY:&#39;SHOW TABLES;&#39;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="mysql-client-server-side-help">mysql Client Server-Side Help</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql&gt; help search_string
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If you provide an argument to the <code>help</code> command, <strong>mysql</strong> uses it as a search string to access server-side help from the contents of the MySQL Reference Manual. The proper operation of this command requires that the help tables in the <strong>mysql</strong> database be initialized with help topic information (see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/server-side-help-support.html"  target="_blank" rel="noopener"
+    >&ldquo;Server-Side Help Support&rdquo;</a>).</p>
+<p>If there is no match for the search string, the search fails:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql&gt; help me
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Nothing found
+</span></span><span class="line"><span class="cl">Please try to run &#39;help contents&#39; for a list of all accessible topics
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Use <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/help.html"  target="_blank" rel="noopener"
+    >help contents</a> to see a list of the help categories:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql&gt; help contents
+</span></span><span class="line"><span class="cl">You asked for help about help category: &#34;Contents&#34;
+</span></span><span class="line"><span class="cl">For more information, type &#39;help &lt;item&gt;&#39;, where &lt;item&gt; is one of the
+</span></span><span class="line"><span class="cl">following categories:
+</span></span><span class="line"><span class="cl">   Account Management
+</span></span><span class="line"><span class="cl">   Administration
+</span></span><span class="line"><span class="cl">   Data Definition
+</span></span><span class="line"><span class="cl">   Data Manipulation
+</span></span><span class="line"><span class="cl">   Data Types
+</span></span><span class="line"><span class="cl">   Functions
+</span></span><span class="line"><span class="cl">   Functions and Modifiers for Use with GROUP BY
+</span></span><span class="line"><span class="cl">   Geographic Features
+</span></span><span class="line"><span class="cl">   Language Structure
+</span></span><span class="line"><span class="cl">   Plugins
+</span></span><span class="line"><span class="cl">   Storage Engines
+</span></span><span class="line"><span class="cl">   Stored Routines
+</span></span><span class="line"><span class="cl">   Table Maintenance
+</span></span><span class="line"><span class="cl">   Transactions
+</span></span><span class="line"><span class="cl">   Triggers
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If the search string matches multiple items, <strong>mysql</strong> shows a list of matching topics:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql&gt; help logs
+</span></span><span class="line"><span class="cl">Many help items for your request exist.
+</span></span><span class="line"><span class="cl">To make a more specific request, please type &#39;help &lt;item&gt;&#39;,
+</span></span><span class="line"><span class="cl">where &lt;item&gt; is one of the following topics:
+</span></span><span class="line"><span class="cl">   SHOW
+</span></span><span class="line"><span class="cl">   SHOW BINARY LOGS
+</span></span><span class="line"><span class="cl">   SHOW ENGINE
+</span></span><span class="line"><span class="cl">   SHOW LOGS
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Use a topic as the search string to see the help entry for that topic:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql&gt; help show binary logs
+</span></span><span class="line"><span class="cl">Name: &#39;SHOW BINARY LOGS&#39;
+</span></span><span class="line"><span class="cl">Description:
+</span></span><span class="line"><span class="cl">Syntax:
+</span></span><span class="line"><span class="cl">SHOW BINARY LOGS
+</span></span><span class="line"><span class="cl">SHOW MASTER LOGS
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Lists the binary log files on the server. This statement is used as
+</span></span><span class="line"><span class="cl">part of the procedure described in [purge-binary-logs], that shows how
+</span></span><span class="line"><span class="cl">to determine which logs can be purged.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">SHOW</span><span class="w"> </span><span class="nb">BINARY</span><span class="w"> </span><span class="n">LOGS</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+</span><span class="c1">---------------+-----------+-----------+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">|</span><span class="w"> </span><span class="n">Log_name</span><span class="w">      </span><span class="o">|</span><span class="w"> </span><span class="n">File_size</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">Encrypted</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+</span><span class="c1">---------------+-----------+-----------+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">|</span><span class="w"> </span><span class="n">binlog</span><span class="p">.</span><span class="mi">000015</span><span class="w"> </span><span class="o">|</span><span class="w">    </span><span class="mi">724935</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Yes</span><span class="w">       </span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">|</span><span class="w"> </span><span class="n">binlog</span><span class="p">.</span><span class="mi">000016</span><span class="w"> </span><span class="o">|</span><span class="w">    </span><span class="mi">733481</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Yes</span><span class="w">       </span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+</span><span class="c1">---------------+-----------+-----------+
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>The search string can contain the wildcard characters <code>%</code> and <code>_</code>. These have the same meaning as for pattern-matching operations performed with the <code>LIKE</code> operator. For example, <code>HELP rep%</code> returns a list of topics that begin with <code>rep</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql&gt; HELP rep%
+</span></span><span class="line"><span class="cl">Many help items for your request exist.
+</span></span><span class="line"><span class="cl">To make a more specific request, please type &#39;help &lt;item&gt;&#39;,
+</span></span><span class="line"><span class="cl">where &lt;item&gt; is one of the following
+</span></span><span class="line"><span class="cl">topics:
+</span></span><span class="line"><span class="cl">   REPAIR TABLE
+</span></span><span class="line"><span class="cl">   REPEAT FUNCTION
+</span></span><span class="line"><span class="cl">   REPEAT LOOP
+</span></span><span class="line"><span class="cl">   REPLACE
+</span></span><span class="line"><span class="cl">   REPLACE FUNCTION
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="executing-sql-statements-from-a-text-file">Executing SQL Statements from a Text File</h2>
+<p>The <strong>mysql</strong> client typically is used interactively, like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql db_name
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>However, it is also possible to put your SQL statements in a file and then tell <strong>mysql</strong> to read its input from that file. To do so, create a text file <code>text_file</code> that contains the statements you wish to execute. Then invoke <strong>mysql</strong> as shown here:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql db_name &lt; text_file
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If you place a <code>USE db_name</code> statement as the first statement in the file, it is unnecessary to specify the database name on the command line:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql &lt; text_file
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If you are already running <strong>mysql</strong>, you can execute an SQL script file using the <code>source</code> command or <code>\.</code> command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">source</span><span class="w"> </span><span class="n">file_name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="err">\</span><span class="p">.</span><span class="w"> </span><span class="n">file_name</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>Sometimes you may want your script to display progress information to the user. For this you can insert statements like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;&lt;info_to_display&gt;&#39;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>The statement shown outputs <code>&lt;info_to_display&gt;</code>.</p>
+<p>You can also invoke <strong>mysql</strong> with the <code>--verbose</code> option, which causes each statement to be displayed before the result that it produces.</p>
+<p><strong>mysql</strong> ignores Unicode byte order mark (BOM) characters at the beginning of input files. Previously, it read them and sent them to the server, resulting in a syntax error. Presence of a BOM does not cause <strong>mysql</strong> to change its default character set. To do that, invoke <strong>mysql</strong> with an option such as <code>--default-character-set=utf8mb4</code>.</p>
+<p>For more information about batch mode, see Section <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/batch-mode.html"  target="_blank" rel="noopener"
+    >&ldquo;Using mysql in Batch Mode&rdquo;</a>.</p>
 <h2 id="mysql-client-tips">mysql Client Tips</h2>
 <p>// <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql.html"  target="_blank" rel="noopener"
     >https://dev.mysql.com/doc/refman/8.0/en/mysql.html</a></p>
