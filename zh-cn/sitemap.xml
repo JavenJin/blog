@@ -437,6 +437,71 @@
                 href="https://javenjin.github.io/blog/zh-cn/p/%E8%B4%AA%E5%90%83%E8%9B%87%E6%B8%B8%E6%88%8Fjava-gui/"
                 />
   </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/tags/machine-learning/</loc>
+    <lastmod>2020-11-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/tags/machine-learning/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/tags/machine-learning/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/categories/machine-learning/</loc>
+    <lastmod>2020-11-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/categories/machine-learning/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/categories/machine-learning/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/tags/python/</loc>
+    <lastmod>2020-11-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/tags/python/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9-k-means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2020-11-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/machine-learning-model-evaluation-and-selection-k-means-clustering-algorithm/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9-k-means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%E5%AE%9E%E9%AA%8C/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2020-10-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%AE%9E%E9%AA%8C/"
+                />
+  </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/tags/design-pattern/</loc>
     <lastmod>2020-09-10T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -513,97 +578,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/p/eclipse%E4%B8%AD%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8amaterasuml%E6%8F%92%E4%BB%B6%E7%BB%98%E5%88%B6%E7%B1%BB%E5%9B%BE/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/tags/machine-learning/</loc>
-    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/tags/machine-learning/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/tags/machine-learning/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/categories/machine-learning/</loc>
-    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/categories/machine-learning/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/categories/machine-learning/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/tags/python/</loc>
-    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/tags/python/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/tags/python/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%AE%9E%E9%AA%8C/</loc>
-    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%AE%9E%E9%AA%8C/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%AE%9E%E9%AA%8C/</loc>
-    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%AE%9E%E9%AA%8C/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9-k-means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%E5%AE%9E%E9%AA%8C/</loc>
-    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/machine-learning-model-evaluation-and-selection-k-means-clustering-algorithm/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9-k-means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%E5%AE%9E%E9%AA%8C/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%AE%9E%E9%AA%8C/</loc>
-    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%AE%9E%E9%AA%8C/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/tags/c-programming-language/</loc>
@@ -775,21 +749,8 @@
                 href="https://javenjin.github.io/blog/zh-cn/p/web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF%E8%AF%BE%E7%A8%8B%E5%A4%A7%E4%BD%9C%E4%B8%9A/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/%E5%89%8D%E7%AB%AF-%E4%B8%AA%E4%BA%BAresume%E7%BB%83%E4%B9%A0/</loc>
-    <lastmod>2020-04-23T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/front-end-personal-resume-exercise/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E5%89%8D%E7%AB%AF-%E4%B8%AA%E4%BA%BAresume%E7%BB%83%E4%B9%A0/"
-                />
-  </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/tags/computer-vision/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -802,7 +763,7 @@
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/categories/computer-vision/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -815,7 +776,7 @@
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/tags/opencv/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -825,6 +786,123 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/tags/opencv/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E5%85%AD-%E7%94%A8%E9%AB%98%E6%96%AF%E8%83%8C%E6%99%AF%E5%BB%BA%E6%A8%A1%E5%88%86%E7%A6%BB%E8%83%8C%E6%99%AF%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/computer-vision-experiment-16-separate-background-experiments-with-gaussian-background-modeling/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E5%85%AD-%E7%94%A8%E9%AB%98%E6%96%AF%E8%83%8C%E6%99%AF%E5%BB%BA%E6%A8%A1%E5%88%86%E7%A6%BB%E8%83%8C%E6%99%AF%E5%AE%9E%E9%AA%8C/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%94-%E5%AF%B9%E8%A7%86%E9%A2%91%E7%9A%84%E5%BF%AB%E9%80%9F%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2020-06-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%94-%E5%AF%B9%E8%A7%86%E9%A2%91%E7%9A%84%E5%BF%AB%E9%80%9F%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B%E5%AE%9E%E9%AA%8C/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E5%9B%9B-%E5%88%86%E6%B0%B4%E5%B2%AD%E7%AE%97%E6%B3%95%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/computer-vision-experiment-14-watershed-algorithm-experiment/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E5%9B%9B-%E5%88%86%E6%B0%B4%E5%B2%AD%E7%AE%97%E6%B3%95%E5%AE%9E%E9%AA%8C/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%89-%E8%BD%AE%E5%BB%93%E5%BD%A2%E7%8A%B6%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2020-05-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/computer-vision-experiment-13-contour-shape-analysis-experiment/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%89-%E8%BD%AE%E5%BB%93%E5%BD%A2%E7%8A%B6%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E7%A6%BB%E6%95%A3%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2020-05-18T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E7%A6%BB%E6%95%A3%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-lbp%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2020-05-13T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-lbp%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81-%E5%88%9B%E5%BB%BA%E5%8C%85%E5%9B%B4%E8%BD%AE%E5%BB%93%E7%9A%84%E7%9F%A9%E5%BD%A2%E8%BE%B9%E7%95%8C/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81-%E5%88%9B%E5%BB%BA%E5%8C%85%E5%9B%B4%E8%BD%AE%E5%BB%93%E7%9A%84%E7%9F%A9%E5%BD%A2%E8%BE%B9%E7%95%8C/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B9%9D-%E5%AF%BB%E6%89%BE%E5%92%8C%E7%BB%98%E5%88%B6%E7%89%A9%E4%BD%93%E7%9A%84%E5%87%B8%E5%8C%85%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2020-04-29T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B9%9D-%E5%AF%BB%E6%89%BE%E5%92%8C%E7%BB%98%E5%88%B6%E7%89%A9%E4%BD%93%E7%9A%84%E5%87%B8%E5%8C%85%E5%AE%9E%E9%AA%8C/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E5%89%8D%E7%AB%AF-%E4%B8%AA%E4%BA%BAresume%E7%BB%83%E4%B9%A0/</loc>
+    <lastmod>2020-04-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/front-end-personal-resume-exercise/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E5%89%8D%E7%AB%AF-%E4%B8%AA%E4%BA%BAresume%E7%BB%83%E4%B9%A0/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%85%AB-%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2%E5%AE%9E%E9%AA%8C/</loc>
@@ -840,47 +918,8 @@
                 href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%85%AB-%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2%E5%AE%9E%E9%AA%8C/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%BA%8C-%E5%9B%BE%E5%83%8F%E7%9A%84%E7%9B%B4%E6%96%B9%E5%9B%BE/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%BA%8C-%E5%9B%BE%E5%83%8F%E7%9A%84%E7%9B%B4%E6%96%B9%E5%9B%BE/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B9%9D-%E5%AF%BB%E6%89%BE%E5%92%8C%E7%BB%98%E5%88%B6%E7%89%A9%E4%BD%93%E7%9A%84%E5%87%B8%E5%8C%85%E5%AE%9E%E9%AA%8C/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B9%9D-%E5%AF%BB%E6%89%BE%E5%92%8C%E7%BB%98%E5%88%B6%E7%89%A9%E4%BD%93%E7%9A%84%E5%87%B8%E5%8C%85%E5%AE%9E%E9%AA%8C/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%85%AD-%E5%93%88%E5%A4%AB%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-6-haff-transform-experiment/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%85%AD-%E5%93%88%E5%A4%AB%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/"
-                />
-  </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%83-%E6%9F%A5%E6%89%BE%E5%B9%B6%E7%BB%98%E5%88%B6%E8%BD%AE%E5%BB%93%E5%AE%9E%E9%AA%8C/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -890,149 +929,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%83-%E6%9F%A5%E6%89%BE%E5%B9%B6%E7%BB%98%E5%88%B6%E8%BD%AE%E5%BB%93%E5%AE%9E%E9%AA%8C/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%89-%E5%9B%BE%E5%83%8F%E7%BA%BF%E6%80%A7%E6%BB%A4%E6%B3%A2%E5%AE%9E%E9%AA%8C/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%89-%E5%9B%BE%E5%83%8F%E7%BA%BF%E6%80%A7%E6%BB%A4%E6%B3%A2%E5%AE%9E%E9%AA%8C/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81-%E5%88%9B%E5%BB%BA%E5%8C%85%E5%9B%B4%E8%BD%AE%E5%BB%93%E7%9A%84%E7%9F%A9%E5%BD%A2%E8%BE%B9%E7%95%8C/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81-%E5%88%9B%E5%BB%BA%E5%8C%85%E5%9B%B4%E8%BD%AE%E5%BB%93%E7%9A%84%E7%9F%A9%E5%BD%A2%E8%BE%B9%E7%95%8C/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E7%A6%BB%E6%95%A3%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E7%A6%BB%E6%95%A3%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E5%85%AD-%E7%94%A8%E9%AB%98%E6%96%AF%E8%83%8C%E6%99%AF%E5%BB%BA%E6%A8%A1%E5%88%86%E7%A6%BB%E8%83%8C%E6%99%AF%E5%AE%9E%E9%AA%8C/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-16-separate-background-experiments-with-gaussian-background-modeling/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E5%85%AD-%E7%94%A8%E9%AB%98%E6%96%AF%E8%83%8C%E6%99%AF%E5%BB%BA%E6%A8%A1%E5%88%86%E7%A6%BB%E8%83%8C%E6%99%AF%E5%AE%9E%E9%AA%8C/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%89-%E8%BD%AE%E5%BB%93%E5%BD%A2%E7%8A%B6%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-13-contour-shape-analysis-experiment/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%89-%E8%BD%AE%E5%BB%93%E5%BD%A2%E7%8A%B6%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E5%9B%9B-%E5%88%86%E6%B0%B4%E5%B2%AD%E7%AE%97%E6%B3%95%E5%AE%9E%E9%AA%8C/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-14-watershed-algorithm-experiment/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E5%9B%9B-%E5%88%86%E6%B0%B4%E5%B2%AD%E7%AE%97%E6%B3%95%E5%AE%9E%E9%AA%8C/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%94-%E5%AF%B9%E8%A7%86%E9%A2%91%E7%9A%84%E5%BF%AB%E9%80%9F%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B%E5%AE%9E%E9%AA%8C/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%94-%E5%AF%B9%E8%A7%86%E9%A2%91%E7%9A%84%E5%BF%AB%E9%80%9F%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B%E5%AE%9E%E9%AA%8C/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-lbp%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-lbp%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%9B%9B-%E5%9B%BE%E5%83%8F%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%BB%A4%E6%B3%A2%E5%AE%9E%E9%AA%8C/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%9B%9B-%E5%9B%BE%E5%83%8F%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%BB%A4%E6%B3%A2%E5%AE%9E%E9%AA%8C/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%BA%94-%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%AE%9E%E9%AA%8C/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%BA%94-%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%AE%9E%E9%AA%8C/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%80-%E5%9B%BE%E5%83%8F%E7%9A%84%E8%BD%BD%E5%85%A5%E6%98%BE%E7%A4%BA%E4%B8%8E%E8%BE%93%E5%87%BA/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%80-%E5%9B%BE%E5%83%8F%E7%9A%84%E8%BD%BD%E5%85%A5%E6%98%BE%E7%A4%BA%E4%B8%8E%E8%BE%93%E5%87%BA/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1616-%E7%AE%97%E6%B3%95%E6%8F%90%E9%AB%98vip%E5%8F%8D%E7%BD%AE%E6%95%B0-c%E8%AF%AD%E8%A8%80/</loc>
@@ -1059,6 +955,32 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1815-2014%E5%B9%B4%E7%AC%AC%E4%BA%94%E5%B1%8A%E7%9C%9F%E9%A2%98%E6%8E%92%E5%88%97%E5%BA%8F%E6%95%B0-c%E8%AF%AD%E8%A8%80/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%85%AD-%E5%93%88%E5%A4%AB%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2020-04-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/computer-vision-experiment-6-haff-transform-experiment/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%85%AD-%E5%93%88%E5%A4%AB%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%BA%94-%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2020-03-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%BA%94-%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%AE%9E%E9%AA%8C/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1427-2014%E5%B9%B4%E7%AC%AC%E4%BA%94%E5%B1%8A%E7%9C%9F%E9%A2%98%E5%88%86%E7%B3%96%E6%9E%9C-c%E8%AF%AD%E8%A8%80/</loc>
@@ -1137,6 +1059,58 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1648-%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83vip%E6%B1%82%E5%85%88%E5%BA%8F%E6%8E%92%E5%88%97-c%E8%AF%AD%E8%A8%80/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%9B%9B-%E5%9B%BE%E5%83%8F%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%BB%A4%E6%B3%A2%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2020-03-18T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%9B%9B-%E5%9B%BE%E5%83%8F%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%BB%A4%E6%B3%A2%E5%AE%9E%E9%AA%8C/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%89-%E5%9B%BE%E5%83%8F%E7%BA%BF%E6%80%A7%E6%BB%A4%E6%B3%A2%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2020-03-16T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%89-%E5%9B%BE%E5%83%8F%E7%BA%BF%E6%80%A7%E6%BB%A4%E6%B3%A2%E5%AE%9E%E9%AA%8C/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%BA%8C-%E5%9B%BE%E5%83%8F%E7%9A%84%E7%9B%B4%E6%96%B9%E5%9B%BE/</loc>
+    <lastmod>2020-03-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%BA%8C-%E5%9B%BE%E5%83%8F%E7%9A%84%E7%9B%B4%E6%96%B9%E5%9B%BE/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%80-%E5%9B%BE%E5%83%8F%E7%9A%84%E8%BD%BD%E5%85%A5%E6%98%BE%E7%A4%BA%E4%B8%8E%E8%BE%93%E5%87%BA/</loc>
+    <lastmod>2020-03-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%80-%E5%9B%BE%E5%83%8F%E7%9A%84%E8%BD%BD%E5%85%A5%E6%98%BE%E7%A4%BA%E4%B8%8E%E8%BE%93%E5%87%BA/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1084-%E7%94%A8%E7%AD%9B%E6%B3%95%E6%B1%82%E4%B9%8Bn%E5%86%85%E7%9A%84%E7%B4%A0%E6%95%B0-c%E8%AF%AD%E8%A8%80/</loc>
@@ -1267,6 +1241,32 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/p/%E6%A0%A1%E5%9B%AD%E5%AF%BC%E6%B8%B8%E7%B3%BB%E7%BB%9F%E7%BA%AFc%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-dijkstra%E7%AE%97%E6%B3%95/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2019-11-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%AE%9E%E9%AA%8C/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2019-10-21T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%AE%9E%E9%AA%8C/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1456-%E5%8E%86%E5%B1%8A%E8%AF%95%E9%A2%98%E8%BF%9E%E5%8F%B7%E5%8C%BA%E9%97%B4%E6%95%B0-c%E8%AF%AD%E8%A8%80/</loc>
