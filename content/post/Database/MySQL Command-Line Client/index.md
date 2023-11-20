@@ -1522,11 +1522,262 @@ You can set the prompt in several ways:
     mysql>
     ```
 
-## mysql Client Loggint
+## mysql Client Logging
+
+The **mysql** client can do these types of logging for statements executed interactively:
+
+- On Unix, **mysql** writes the statements to a history file. By default, this file is named `.mysql_history` in your home directory. To specify a different file, set the value of the `MYSQL_HISTFILE` environment variable.
+
+- On all platforms, if the `--syslog` option is given, **mysql** writes the statements to the system logging facility. On Unix, this is `syslog;` on Windows, it is the Windows Event Log. The destination where logged messages appear is system dependent. On Linux, the destination is often the */var/log/messages* file.
+
+The following discussion describes characteristics that apply to all logging types and provides information specific to each logging type.
+
+- How Logging Occurs
+
+- Controlling the History File
+
+- syslog Logging Characteristics
+
+### How Logging Occurs
+
+For each enabled logging destination, statement logging occurs as follows:
+
+- Statements are logged only when executed interactively. Statements are noninteractive, for example, when read from a file or a pipe. It is also possible to suppress statement logging by using the `--batch` or `--execute` option.
+
+- Statements are ignored and not logged if they match any pattern in the "ignore" list. This list is described later.
+
+- **mysql** logs each nonignored, nonempty statement line individually.
+
+- If a nonignored statement spans multiple lines (not including the terminating delimiter), **mysql** concatenates the lines to form the complete statement, maps newlines to spaces, and logs the result, plus a delimiter.
+
+Consequently, an input statement that spans multiple lines can be logged twice. Consider this input:
+
+```sql
+mysql> SELECT
+    -> 'Today is'
+    -> ,
+    -> CURDATE()
+    -> ;
+```
+
+In this case, **mysql** logs the "SELECT", "'Today is'", ",", "CURDATE()", and ";" lines as it reads them. It also logs the complete statement, after mapping `SELECT\n'Today is'\n,\nCURDATE()` to `SELECT 'Today is' , CURDATE()`, plus a delimiter. Thus, these lines appear in logged output:
+
+```sql
+SELECT
+'Today is'
+,
+CURDATE()
+;
+SELECT 'Today is' , CURDATE();
+```
+
+**mysql** ignores for logging purposes statements that match any pattern in the "ignore" list. By default, the pattern list is `"*IDENTIFIED*:*PASSWORD*"`, to ignore statements that refer to passwords. Pattern matching is not case-sensitive. Within patterns, two characters are special:
+
+- **?** matches any single character.
+
+- **\*** matches any sequence of zero or more characters.
+
+To specify additional patterns, use the `--histignore` option or set the `MYSQL_HISTIGNORE` environment variable. (If both are specified, the option value takes precedence.) The value should be a list of one or more colon-separated patterns, which are appended to the default pattern list.
+
+Patterns specified on the command line might need to be quoted or escaped to prevent your command interpreter from treating them specially. For example, to suppress logging for `UPDATE` and `DELETE` statements in addition to statements that refer to passwords, invoke **mysql** like this:
+
+```terminal
+mysql --histignore="*UPDATE*:*DELETE*"
+```
+
+### Controlling the History File
+
+The `.mysql_history` file should be protected with a restrictive access mode because sensitive information might be written to it, such as the text of SQL statements that contain passwords. See ["End-User Guidelines for Password Security"](https://dev.mysql.com/doc/refman/8.0/en/password-security-user.html). Statements in the file are accessible from the **mysql** client when the **up-arrow** key is used to recall the history. See [Disabling Interactive History](https://dev.mysql.com/doc/refman/8.0/en/mysql-tips.html#mysql-history).
+
+If you do not want to maintain a history file, first remove `.mysql_history` if it exists. Then use either of the following techniques to prevent it from being created again:
+
+- Set the `MYSQL_HISTFILE` environment variable to `/dev/null`. To cause this setting to take effect each time you log in, put it in one of your shell's startup files.
+
+- Create `.mysql_history` as a symbolic link to `/dev/null`; this need be done only once:
+
+```terminal
+ln -s /dev/null $HOME/.mysql_history
+```
+
+### syslog Logging Characteristics
+
+If the `--syslog` option is given, **mysql** writes interactive statements to the system logging facility. Message logging has the following characteristics.
+
+Logging occurs at the "information" level. This corresponds to the `LOG_INFO` priority for `syslog` on Unix/Linux `syslog` capability and to `EVENTLOG_INFORMATION_TYPE` for the Windows Event Log. Consult your system documentation for configuration of your logging capability.
+
+Message size is limited to 1024 bytes.
+
+Messages consist of the identifier `MysqlClient` followed by these values:
+
+- `SYSTEM_USER`
+
+    The operating system user name (login name) or -- if the user is unknown.
+
+- `MYSQL_USER`
+
+    The MySQL user name (specified with the `--user` option) or -- if the user is unknown.
+
+- `CONNECTION_ID:`
+
+    The client connection identifier. This is the same as the `CONNECTION_ID()` function value within the session.
+
+- `DB_SERVER`
+
+    The server host or \-\- if the host is unknown.
+
+- `DB`
+
+    The default database or \-\- if no database has been selected.
+
+- `QUERY`
+
+    The text of the logged statement.
+
+Here is a sample of output generated on Linux by using `--syslog`. This output is formatted for readability; each logged message actually takes a single line.
+
+```
+Mar  7 12:39:25 myhost MysqlClient[20824]:
+  SYSTEM_USER:'oscar', MYSQL_USER:'my_oscar', CONNECTION_ID:23,
+  DB_SERVER:'127.0.0.1', DB:'--', QUERY:'USE test;'
+Mar  7 12:39:28 myhost MysqlClient[20824]:
+  SYSTEM_USER:'oscar', MYSQL_USER:'my_oscar', CONNECTION_ID:23,
+  DB_SERVER:'127.0.0.1', DB:'test', QUERY:'SHOW TABLES;'
+```
 
 ## mysql Client Server-Side Help
 
+```
+mysql> help search_string
+```
+
+If you provide an argument to the `help` command, **mysql** uses it as a search string to access server-side help from the contents of the MySQL Reference Manual. The proper operation of this command requires that the help tables in the **mysql** database be initialized with help topic information (see ["Server-Side Help Support"](https://dev.mysql.com/doc/refman/8.0/en/server-side-help-support.html)).
+
+If there is no match for the search string, the search fails:
+
+```
+mysql> help me
+
+Nothing found
+Please try to run 'help contents' for a list of all accessible topics
+```
+
+Use [help contents](https://dev.mysql.com/doc/refman/8.0/en/help.html) to see a list of the help categories:
+
+```
+mysql> help contents
+You asked for help about help category: "Contents"
+For more information, type 'help <item>', where <item> is one of the
+following categories:
+   Account Management
+   Administration
+   Data Definition
+   Data Manipulation
+   Data Types
+   Functions
+   Functions and Modifiers for Use with GROUP BY
+   Geographic Features
+   Language Structure
+   Plugins
+   Storage Engines
+   Stored Routines
+   Table Maintenance
+   Transactions
+   Triggers
+```
+
+If the search string matches multiple items, **mysql** shows a list of matching topics:
+
+```
+mysql> help logs
+Many help items for your request exist.
+To make a more specific request, please type 'help <item>',
+where <item> is one of the following topics:
+   SHOW
+   SHOW BINARY LOGS
+   SHOW ENGINE
+   SHOW LOGS
+```
+
+Use a topic as the search string to see the help entry for that topic:
+
+```
+mysql> help show binary logs
+Name: 'SHOW BINARY LOGS'
+Description:
+Syntax:
+SHOW BINARY LOGS
+SHOW MASTER LOGS
+
+Lists the binary log files on the server. This statement is used as
+part of the procedure described in [purge-binary-logs], that shows how
+to determine which logs can be purged.
+```
+
+```sql
+mysql> SHOW BINARY LOGS;
++---------------+-----------+-----------+
+| Log_name      | File_size | Encrypted |
++---------------+-----------+-----------+
+| binlog.000015 |    724935 | Yes       |
+| binlog.000016 |    733481 | Yes       |
++---------------+-----------+-----------+
+```
+
+The search string can contain the wildcard characters `%` and `_`. These have the same meaning as for pattern-matching operations performed with the `LIKE` operator. For example, `HELP rep%` returns a list of topics that begin with `rep`:
+
+```
+mysql> HELP rep%
+Many help items for your request exist.
+To make a more specific request, please type 'help <item>',
+where <item> is one of the following
+topics:
+   REPAIR TABLE
+   REPEAT FUNCTION
+   REPEAT LOOP
+   REPLACE
+   REPLACE FUNCTION
+```
+
 ## Executing SQL Statements from a Text File
+
+The **mysql** client typically is used interactively, like this:
+
+```terminal
+mysql db_name
+```
+
+However, it is also possible to put your SQL statements in a file and then tell **mysql** to read its input from that file. To do so, create a text file `text_file` that contains the statements you wish to execute. Then invoke **mysql** as shown here:
+
+```terminal
+mysql db_name < text_file
+```
+
+If you place a `USE db_name` statement as the first statement in the file, it is unnecessary to specify the database name on the command line:
+
+```terminal
+mysql < text_file
+```
+
+If you are already running **mysql**, you can execute an SQL script file using the `source` command or `\.` command:
+
+```sql
+mysql> source file_name
+mysql> \. file_name
+```
+
+Sometimes you may want your script to display progress information to the user. For this you can insert statements like this:
+
+```sql
+SELECT '<info_to_display>' AS ' ';
+```
+
+The statement shown outputs `<info_to_display>`.
+
+You can also invoke **mysql** with the `--verbose` option, which causes each statement to be displayed before the result that it produces.
+
+**mysql** ignores Unicode byte order mark (BOM) characters at the beginning of input files. Previously, it read them and sent them to the server, resulting in a syntax error. Presence of a BOM does not cause **mysql** to change its default character set. To do that, invoke **mysql** with an option such as `--default-character-set=utf8mb4`.
+
+For more information about batch mode, see Section ["Using mysql in Batch Mode"](https://dev.mysql.com/doc/refman/8.0/en/batch-mode.html).
 
 ## mysql Client Tips
 
