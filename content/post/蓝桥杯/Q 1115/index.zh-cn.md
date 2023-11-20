@@ -1,6 +1,6 @@
 ---
-title: Q 1115 DNA (C Language)
-description: 题目 1115 DNA (C语言)
+title: 题目 1115 DNA (C语言)
+description: Q 1115 DNA (C Language)
 date: '2020-02-04'
 categories:
     - C (Programming Language)

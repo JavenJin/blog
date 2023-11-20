@@ -1,6 +1,6 @@
 ---
-title: Windows 11 allows remote desktop/remote access
-description: Windows 11 允许远程桌面/远程访问
+title: Windows 11 允许远程桌面/远程访问
+description: Windows 11 allows remote desktop/remote access
 date: '2022-05-12'
 categories:
     - Tools

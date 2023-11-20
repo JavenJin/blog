@@ -1,6 +1,6 @@
 ---
-title: MonetDB Remote Access
-description: MonetDB远程访问
+title: MonetDB远程访问
+description: MonetDB Remote Access
 date: '2022-05-11'
 categories:
     - Database

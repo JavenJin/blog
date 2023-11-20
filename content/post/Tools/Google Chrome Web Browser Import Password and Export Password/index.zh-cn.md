@@ -1,6 +1,6 @@
 ---
-title: Google Chrome Web Browser Export Password and Import Password
-description: 谷歌Chrome浏览器导出密码和导入密码
+title: 谷歌Chrome浏览器导出密码和导入密码
+description: Google Chrome Web Browser Export Password and Import Password
 date: '2021-05-28'
 categories:
     - Tools

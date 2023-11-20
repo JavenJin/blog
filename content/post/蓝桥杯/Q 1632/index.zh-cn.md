@@ -1,6 +1,6 @@
 ---
-title: Q 1632 [Algorithm Improvement VIP]Number of pairs (C Language)
-description: 题目 1632 [算法提高VIP]数对 (C语言)
+title: 题目 1632 [算法提高VIP]数对 (C语言)
+description: Q 1632 [Algorithm Improvement VIP]Number of pairs (C Language)
 date: '2020-03-21'
 categories:
     - C (Programming Language)

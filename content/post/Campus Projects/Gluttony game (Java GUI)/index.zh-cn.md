@@ -1,6 +1,6 @@
 ---
-title: Gluttony Game (Java GUI)
-description: 贪吃蛇游戏（Java GUI）
+title: 贪吃蛇游戏（Java GUI）
+description: Gluttony Game (Java GUI)
 date: '2020-12-24'
 categories:
     - Java (Programming Language)

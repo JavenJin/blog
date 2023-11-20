@@ -1,6 +1,6 @@
 ---
-title: Computer Vision - Experiment 8 - Image segmentation experiment
-description: 计算机视觉 - 实验八 图像分割实验
+title: 计算机视觉 - 实验八 图像分割实验
+description: Computer Vision - Experiment 8 - Image segmentation experiment
 date: '2020-04-20'
 categories:
     - Computer Vision

@@ -1,6 +1,6 @@
 ---
-title: Front End - Personal Resume Exercise
-description: 前端 - 个人Resume练习
+title: 前端 - 个人Resume练习
+description: Front End - Personal Resume Exercise
 date: '2020-04-23'
 categories:
     - Front End

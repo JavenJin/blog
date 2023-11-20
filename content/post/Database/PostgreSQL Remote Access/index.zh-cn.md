@@ -1,6 +1,6 @@
 ---
-title: PostgreSQL Remote Access
-description: PostgreSQL远程访问
+title: PostgreSQL远程访问
+description: PostgreSQL Remote Access
 date: '2022-05-11'
 categories:
     - Database

@@ -1,6 +1,6 @@
 ---
-title: Install CentOS7 on VMware
-description: 在VMware上安装CentOS7
+title: 在VMware上安装CentOS7
+description: Install CentOS7 on VMware
 date: '2021-08-16'
 categories:
     - Tools

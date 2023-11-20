@@ -1,6 +1,6 @@
 ---
-title: Install MySQL-5.7 on CentOS7
-description: 在CentOS7上安装MySQL-5.7
+title: 在CentOS7上安装MySQL-5.7
+description: Install MySQL-5.7 on CentOS7
 date: '2021-08-11'
 categories:
     - Database

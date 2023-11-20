@@ -1,6 +1,6 @@
 ---
-title: Web front-end development technology course big assignment
-description: Web前端开发技术课程大作业
+title: Web前端开发技术课程大作业
+description: Web front-end development technology course big assignment
 date: '2020-07-27'
 categories:
     - Front End

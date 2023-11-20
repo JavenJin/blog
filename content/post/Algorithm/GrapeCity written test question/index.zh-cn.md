@@ -1,6 +1,6 @@
 ---
-title: GrapeCity written test question
-description: 葡萄城（GrapeCity）笔试题
+title: 葡萄城（GrapeCity）笔试题
+description: GrapeCity written test question
 date: '2021-09-04'
 categories:
     - Algorithm

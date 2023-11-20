@@ -1,6 +1,6 @@
 ---
-title: Install MySQL-5.7.17 on Windows
-description: 在Windows上安装MySQL-5.7.17
+title: 在Windows上安装MySQL-5.7.17
+description: Install MySQL-5.7.17 on Windows
 date: '2021-05-29'
 categories:
     - Database

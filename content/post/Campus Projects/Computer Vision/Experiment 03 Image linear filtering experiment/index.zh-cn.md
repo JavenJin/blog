@@ -1,6 +1,6 @@
 ---
-title: Computer Vision - Experiment 3 - Image linear filtering experiment
-description: 计算机视觉 - 实验三 图像线性滤波实验
+title: 计算机视觉 - 实验三 图像线性滤波实验
+description: Computer Vision - Experiment 3 - Image linear filtering experiment
 date: '2020-04-20'
 categories:
     - Computer Vision

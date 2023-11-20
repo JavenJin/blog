@@ -1,6 +1,6 @@
 ---
-title: Computer Vision - Experiment 5 - Edge detection experiment
-description: 计算机视觉 - 实验五 边缘检测实验
+title: 计算机视觉 - 实验五 边缘检测实验
+description: Computer Vision - Experiment 5 - Edge detection experiment
 date: '2020-04-20'
 categories:
     - Computer Vision

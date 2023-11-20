@@ -1,6 +1,6 @@
 ---
-title: Q 1084 Use the sieve method to find the prime numbers in N (C Language)
-description: 题目 1084 用筛法求之N内的素数 (C语言)
+title: 题目 1084 用筛法求之N内的素数 (C语言)
+description: Q 1084 Use the sieve method to find the prime numbers in N (C Language)
 date: '2020-02-14'
 categories:
     - C (Programming Language)

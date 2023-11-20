@@ -1,6 +1,6 @@
 ---
-title: Computer Vision - Experiment 1 - Image loading, display and output
-description: 计算机视觉 - 实验一 图像的载入、显示与输出
+title: 计算机视觉 - 实验一 图像的载入、显示与输出
+description: Computer Vision - Experiment 1 - Image loading, display and output
 date: '2020-04-20'
 categories:
     - Computer Vision

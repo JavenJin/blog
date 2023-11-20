@@ -1,6 +1,6 @@
 ---
-title: Machine Learning - Logistic regression experiments
-description: 机器学习 - 逻辑回归实验
+title: 机器学习 - 逻辑回归实验
+description: Machine Learning - Logistic regression experiments
 date: '2020-08-15'
 categories:
     - Machine Learning

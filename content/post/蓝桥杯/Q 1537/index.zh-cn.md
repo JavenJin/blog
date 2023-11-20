@@ -1,6 +1,6 @@
 ---
-title: Q 1537 [Algorithm Improvement VIP]Raster printing problems (C Language)
-description: 题目 1537 [算法提高VIP]栅格打印问题 (C语言)
+title: 题目 1537 [算法提高VIP]栅格打印问题 (C语言)
+description: Q 1537 [Algorithm Improvement VIP]Raster printing problems (C Language)
 date: '2020-07-28'
 categories:
     - C (Programming Language)

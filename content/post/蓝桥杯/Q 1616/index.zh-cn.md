@@ -1,6 +1,6 @@
 ---
-title: Q 1616 [Algorithm Improvement VIP]Inverted number (C Language)
-description: 题目 1616 [算法提高VIP]反置数 (C语言)
+title: 题目 1616 [算法提高VIP]反置数 (C语言)
+description: Q 1616 [Algorithm Improvement VIP]Inverted number (C Language)
 date: '2020-04-11'
 categories:
     - C (Programming Language)

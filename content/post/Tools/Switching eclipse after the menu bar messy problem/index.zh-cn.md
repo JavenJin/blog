@@ -1,6 +1,6 @@
 ---
-title: Switching eclipse after the menu bar messy problem
-description: 切换eclipse后出现菜单栏乱码问题
+title: 切换eclipse后出现菜单栏乱码问题
+description: Switching eclipse after the menu bar messy problem
 date: '2020-09-07'
 categories:
     - Tools

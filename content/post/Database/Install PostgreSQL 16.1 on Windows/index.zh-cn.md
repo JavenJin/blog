@@ -1,6 +1,6 @@
 ---
-title: Install PostgreSQL 16.1 on Windows
-description: 在Windows上安装PostgreSQL 16.1
+title: 在Windows上安装PostgreSQL 16.1
+description: Install PostgreSQL 16.1 on Windows
 date: '2023-11-15'
 categories:
     - Database

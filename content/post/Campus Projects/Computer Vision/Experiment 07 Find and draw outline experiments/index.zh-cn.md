@@ -1,6 +1,6 @@
 ---
-title: Computer Vision - Experiment 7 - Find and draw outline experiments
-description: 计算机视觉 - 实验七 查找并绘制轮廓实验
+title: 计算机视觉 - 实验七 查找并绘制轮廓实验
+description: Computer Vision - Experiment 7 - Find and draw outline experiments
 date: '2020-04-20'
 categories:
     - Computer Vision

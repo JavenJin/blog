@@ -1,6 +1,6 @@
 ---
-title: Student management system (pure C implementation)
-description: 学生管理系统（纯C语言实现）
+title: 学生管理系统（纯C语言实现）
+description: Student management system (pure C implementation)
 date: '2018-12-20'
 categories:
     - C (Programming Language)

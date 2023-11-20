@@ -1,6 +1,6 @@
 ---
-title: MySQL 8 Remote Access
-description: MySQL 8 远程访问
+title: MySQL 8 远程访问
+description: MySQL 8 Remote Access
 date: '2023-11-16'
 categories:
     - Database

@@ -1,6 +1,6 @@
 ---
-title: Computer Vision - Experiment 6 - Haff transform experiment
-description: 计算机视觉 - 实验六 哈夫变换实验
+title: 计算机视觉 - 实验六 哈夫变换实验
+description: Computer Vision - Experiment 6 - Haff transform experiment
 date: '2020-04-20'
 categories:
     - Computer Vision

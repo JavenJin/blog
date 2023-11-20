@@ -1,6 +1,6 @@
 ---
-title: Q 1110 2^k decimal numbers (C Language)
-description: 题目 1110 2^k进制数 (C语言)
+title: 题目 1110 2^k进制数 (C语言)
+description: Q 1110 2^k decimal numbers (C Language)
 date: '2020-02-04'
 categories:
     - C (Programming Language)

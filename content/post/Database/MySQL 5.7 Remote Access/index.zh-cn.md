@@ -1,6 +1,6 @@
 ---
-title: MySQL 5.7 Remote Access
-description: MySQL 5.7 远程访问
+title: MySQL 5.7 远程访问
+description: MySQL 5.7 Remote Access
 date: '2022-05-11'
 categories:
     - Database

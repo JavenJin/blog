@@ -1,6 +1,6 @@
 ---
-title: Q 1648 [Algorithm Training VIP]Order of precedence (C Language)
-description: 题目 1648 [算法训练VIP]求先序排列 (C语言)
+title: 题目 1648 [算法训练VIP]求先序排列 (C语言)
+description: Q 1648 [Algorithm Training VIP]Order of precedence (C Language)
 date: '2020-03-21'
 categories:
     - C (Programming Language)

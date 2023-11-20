@@ -1,6 +1,6 @@
 ---
-title: MySQL Command-Line Client
-description: MySQL 命令行客户端
+title: MySQL 命令行客户端
+description: MySQL Command-Line Client
 date: '2023-11-18'
 categories:
     - Database

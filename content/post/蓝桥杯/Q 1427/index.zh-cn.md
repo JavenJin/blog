@@ -1,6 +1,6 @@
 ---
-title: Q 1427 [2013 4th exam questions] The number that cannot be bought (C Language)
-description: 题目 1427 [2013年第四届真题]买不到的数目 (C语言)
+title: 题目 1427 [2013年第四届真题]买不到的数目 (C语言)
+description: Q 1427 [2013 4th exam questions] The number that cannot be bought (C Language)
 date: '2020-02-09'
 categories:
     - C (Programming Language)

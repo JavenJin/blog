@@ -1,6 +1,6 @@
 ---
-title: Windows batch scripts(.bat)
-description: Windows批处理脚本（.bat）
+title: Windows批处理脚本（.bat）
+description: Windows batch scripts(.bat)
 date: '2022-05-17'
 categories:
     - Tools

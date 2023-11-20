@@ -1,6 +1,6 @@
 ---
-title: Q 1616 [Algorithm Improvement VIP]Passing Game (C Language)
-description: 题目 1616 [算法提高VIP]传球游戏 (C语言)
+title: 题目 1616 [算法提高VIP]传球游戏 (C语言)
+description: Q 1616 [Algorithm Improvement VIP]Passing Game (C Language)
 date: '2020-03-21'
 categories:
     - C (Programming Language)

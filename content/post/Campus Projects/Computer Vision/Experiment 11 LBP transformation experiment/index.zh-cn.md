@@ -1,6 +1,6 @@
 ---
-title: Computer Vision - Experiment 11 - LBP transformation experiment
-description: 计算机视觉 - 实验十一 LBP变换实验
+title: 计算机视觉 - 实验十一 LBP变换实验
+description: Computer Vision - Experiment 11 - LBP transformation experiment
 date: '2020-04-20'
 categories:
     - Computer Vision

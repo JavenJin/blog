@@ -1,6 +1,6 @@
 ---
-title: Simple Factory Pattern and Factory Method Pattern
-description: 简单工厂模式 和 工厂方法模式
+title: 简单工厂模式 和 工厂方法模式
+description: Simple Factory Pattern and Factory Method Pattern
 date: '2020-09-10'
 categories:
     - Design Pattern

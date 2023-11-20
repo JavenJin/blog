@@ -1,6 +1,6 @@
 ---
-title: Campus tour guide system (pure C implementation) Shortest path - Dijkstra algorithm
-description: 校园导游系统（纯C语言实现）最短路径 - Dijkstra算法
+title: 校园导游系统（纯C语言实现）最短路径 - Dijkstra算法
+description: Campus tour guide system (pure C implementation) Shortest path - Dijkstra algorithm
 date: '2019-11-27'
 categories:
     - C (Programming Language)

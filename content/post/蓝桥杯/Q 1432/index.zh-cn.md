@@ -1,6 +1,6 @@
 ---
-title: Q 1432 [2013 4th exam questions]Cut the grid (C Language)
-description: 题目 1432 [2013年第四届真题]剪格子 (C语言)
+title: 题目 1432 [2013年第四届真题]剪格子 (C语言)
+description: Q 1432 [2013 4th exam questions]Cut the grid (C Language)
 date: '2020-02-11'
 categories:
     - C (Programming Language)

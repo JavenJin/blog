@@ -1,6 +1,6 @@
 ---
-title: Q 1004 [Recursive] The story of the cow (C Language)
-description: 题目 1004 [递归]母牛的故事 (C语言)
+title: 题目 1004 [递归]母牛的故事 (C语言)
+description: Q 1004 [Recursive] The story of the cow (C Language)
 date: '2018-11-02'
 categories:
     - C (Programming Language)
