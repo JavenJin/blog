@@ -22,17 +22,20 @@ disqusShortname: javen-blog
 
 # categories:
 #       C (Programming Language)        C语言
+#       C Sharp                         C Sharp
+#       Java                            Java
 #       Front End                       前端
 #       Machine Learning                机器学习
 #       Computer Vision                 计算机视觉
 #       Tools                           工具
 #       Design Pattern                  设计模式
-#       Java                            Java
 #       Database                        数据库
 #       Algorithm                       算法
 
 # tags:
 #       C (Programming Language)        C语言
+#       C Sharp                         C Sharp
+#       Java                            Java
 #       Dijkstra                        迪杰斯特拉算法
 #       蓝桥杯                           蓝桥杯
 #       Front End                       前端
@@ -45,7 +48,6 @@ disqusShortname: javen-blog
 #       OpenCV                          OpenCV
 #       Tools                           工具
 #       Design Pattern                  设计模式
-#       Java                            Java
 #       Database                        数据库
 #       Algorithm                       算法
 
