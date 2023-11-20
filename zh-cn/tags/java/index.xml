@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Thu, 10 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/tags/java/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Simple Factory Pattern and Factory Method Pattern</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/simple-factory-pattern-and-factory-method-pattern/</link>
+        <title>简单工厂模式 和 工厂方法模式</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F-%E5%92%8C-%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/</link>
         <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://javenjin.github.io/blog/zh-cn/p/simple-factory-pattern-and-factory-method-pattern/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F-%E5%92%8C-%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/</guid>
         <description>&lt;h1 id=&#34;简单工厂模式-和-工厂方法模式&#34;&gt;简单工厂模式 和 工厂方法模式&lt;/h1&gt;
 &lt;h2 id=&#34;简单工厂模式&#34;&gt;简单工厂模式&lt;/h2&gt;
 &lt;h3 id=&#34;简单工厂模式概念&#34;&gt;简单工厂模式概念&lt;/h3&gt;

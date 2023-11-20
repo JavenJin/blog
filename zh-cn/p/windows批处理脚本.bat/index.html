@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Windows batch scripts(.bat)'>
+<title>Windows批处理脚本（.bat）</title>
+
+<link rel='canonical' href='https://javenjin.github.io/blog/zh-cn/p/windows%E6%89%B9%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC.bat/'>
+
+<link rel="stylesheet" href="/blog/scss/style.min.84fddddb435e5cc2e5f82ceae9480ccaf4410b94e3d1c786e727ff9ffc42f753.css"><meta property='og:title' content='Windows批处理脚本（.bat）'>
+<meta property='og:description' content='Windows batch scripts(.bat)'>
+<meta property='og:url' content='https://javenjin.github.io/blog/zh-cn/p/windows%E6%89%B9%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC.bat/'>
+<meta property='og:site_name' content='Javen Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Tools' /><meta property='article:published_time' content='2022-05-17T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-05-17T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Windows批处理脚本（.bat）">
+<meta name="twitter:description" content="Windows batch scripts(.bat)">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/blog/zh-cn">
+                
+                    
+                    
+                    
+                        
+                        <img src="/blog/img/avatar_hubf7b15bf5e15ae8b6bb0ceda44d97e9a_739263_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/blog/zh-cn">Javen Blog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/javenjin'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://instagram.com/kingjie98'
+                        target="_blank"
+                        title="Ins"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16.65 7.2H16.66M8 20H16C18.2091 20 20 18.2091 20 16V8C20 5.79086 18.2091 4 16 4H8C5.79086 4 4 5.79086 4 8V16C4 18.2091 5.79086 20 8 20ZM15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12Z"/>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:wenjie.jin@hotmail.com'
+                        target="_blank"
+                        title="Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/blog/zh-cn/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://javenjin.github.io/blog/" >English</option>
+                        
+                            <option value="https://javenjin.github.io/blog/zh-cn/" selected>中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#常用文件操作dos命令">常用文件操作DOS命令</a></li>
+    <li><a href="#变量">变量</a></li>
+    <li><a href="#传递参数">传递参数</a></li>
+    <li><a href="#条件if">条件IF</a></li>
+    <li><a href="#循环for">循环FOR</a></li>
+    <li><a href="#组合命令">组合命令</a></li>
+    <li><a href="#管道命令">管道命令</a></li>
+    <li><a href="#学习地址">学习地址</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/blog/zh-cn/categories/tools/" >
+                Tools
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/blog/zh-cn/p/windows%E6%89%B9%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC.bat/">Windows批处理脚本（.bat）</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Windows batch scripts(.bat)
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 17, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 2 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+        <footer class="article-translations">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+            <div>
+                
+                    <a href="https://javenjin.github.io/blog/p/windows-batch-scripts.bat/" class="link">English</a>
+                
+            </div>
+        </footer>
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="windows批处理脚本bat">Windows批处理脚本（.bat）</h1>
+<h2 id="常用文件操作dos命令">常用文件操作DOS命令</h2>
+<ul>
+<li>dir	列文件名</li>
+<li>cd	改变当前目录</li>
+<li>ren	改变文件名</li>
+<li>copy	拷贝文件</li>
+<li>del	删除文件</li>
+<li>md	建立子目录</li>
+<li>rd	删除目录</li>
+<li>deltree	删除目录树</li>
+<li>format	格式化磁盘</li>
+<li>edit	文本编辑</li>
+<li>type	显示文件内容</li>
+<li>mem	查看内存状况</li>
+<li>help	显示帮助提示</li>
+<li>cls	清屏</li>
+<li>move	移动文件，改目录名</li>
+<li>more	分屏显示</li>
+<li>xcopy	拷贝目录和文件</li>
+<li>echo	显示输入内容</li>
+<li>echo on	打开命令回显</li>
+<li>echo off	关闭命令回显</li>
+<li>@	加上@的命令不会显示</li>
+<li>pause	将程序挂起，按下任意键继续</li>
+<li>&gt;	将显示的内容输出到某处</li>
+<li>&gt;&gt;	将显示内容追加到某处</li>
+<li>&gt;nul	命令后加上&gt;nul表示输出到空设备</li>
+<li>mode	设置窗口尺寸：mode con cols=32 lines=8</li>
+<li>color	设置背景颜色：color 3a（背景(暗靛色)和文字(亮绿色)）</li>
+<li>title	改变当前命令提示符的标题名称</li>
+<li>rem	注释（属于命令会显示出来）</li>
+<li>::	注释（不会显示出来）</li>
+<li>prompt	修改当前路径为根路径并重命名</li>
+<li>goto	命令跟上标签可以跳转</li>
+<li>:	命令后面写标签名（不区分大小写），特殊标签:EOF或:eof不需要定义</li>
+<li>call	调用批处理或者标签</li>
+<li>start	启动应用程序</li>
+</ul>
+<h2 id="变量">变量</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>set var=1</td>
+<td>定义变量var并将1复制给a</td>
+</tr>
+<tr>
+<td>set var</td>
+<td>查看变量var的值</td>
+</tr>
+<tr>
+<td>set v</td>
+<td>查看所有v开头的变量值</td>
+</tr>
+<tr>
+<td>set</td>
+<td>查看所有变量的值</td>
+</tr>
+<tr>
+<td>%var%</td>
+<td>var变量的值（内容）</td>
+</tr>
+<tr>
+<td>set /a var=48</td>
+<td>将数字48赋给变量var，32位的整数型数值，占用4个字节</td>
+</tr>
+<tr>
+<td>set /p var</td>
+<td>用户手动输入值给var</td>
+</tr>
+<tr>
+<td>set /p var=请输入一些文字</td>
+<td>用户手动输入值给var，并显示提示文字：“请输入一些文字”</td>
+</tr>
+<tr>
+<td>set var=Hello world!</td>
+<td></td>
+</tr>
+<tr>
+<td>echo %var:o=z%</td>
+<td>输出Hello world!不改变var值</td>
+</tr>
+<tr>
+<td>set var2=%var:ld=ms and bugs%</td>
+<td>将Hello worms and bugs!赋值给var2不改变var值</td>
+</tr>
+<tr>
+<td>%var:~m%</td>
+<td>数字m为正数表示取变量var中从左侧第m个字符以后的内容 数字m为负数表示取变量var中从右侧数第-m个字符以及其右侧所有字符</td>
+</tr>
+<tr>
+<td>%var:~m,n%</td>
+<td>从m开始，n为正数取n个字符，n为负数取到剩-n个字符为止</td>
+</tr>
+<tr>
+<td>set /a num=48</td>
+<td>将数值48赋值给变量num</td>
+</tr>
+<tr>
+<td>set /a result=%num%+12</td>
+<td>变量num与12相加的结果赋给变量result</td>
+</tr>
+<tr>
+<td>echo %result%</td>
+<td>显示变量result的值</td>
+</tr>
+<tr>
+<td>setlocal EnableDelayedExpansion</td>
+<td>延迟变量扩充使!var!有意义</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="传递参数">传递参数</h2>
+<p>使用%接收参数 在call或者start或者在cmd中运行批处理文件时后面直接加上参数来传递参数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bat" data-lang="bat"><span class="line"><span class="cl">接收参数：
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> 您输入的第1条参数为 <span class="nv">%1</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> 您输入的第2条参数为 <span class="nv">%2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">传递参数：
+</span></span><span class="line"><span class="cl"><span class="k">call</span> 被调用.bat hello world!
+</span></span><span class="line"><span class="cl"><span class="k">start</span> 被调用.bat hello world!
+</span></span><span class="line"><span class="cl">./被调用.bat hello world!
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="条件if">条件IF</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EQU</td>
+<td>相等</td>
+</tr>
+<tr>
+<td>NEQ</td>
+<td>不相等</td>
+</tr>
+<tr>
+<td>LSS</td>
+<td>小于</td>
+</tr>
+<tr>
+<td>LEQ</td>
+<td>小于等于</td>
+</tr>
+<tr>
+<td>GTR</td>
+<td>大于</td>
+</tr>
+<tr>
+<td>GEQ</td>
+<td>大于等于</td>
+</tr>
+<tr>
+<td>NOT</td>
+<td>非</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>if exist	判断文件是否存在</li>
+<li>if defined	判断环境变量是否被定义</li>
+</ul>
+<h2 id="循环for">循环FOR</h2>
+<p>for循环的一般使用格式：for %i in (*.*) do @echo %i</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bat" data-lang="bat"><span class="line"><span class="cl"><span class="p">:</span><span class="c1">::::::批量修改文件名.bat:::::::</span>
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">echo</span> off
+</span></span><span class="line"><span class="cl"><span class="k">setlocal</span> EnableDelayedExpansion
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="k">/a</span> <span class="nv">num</span><span class="o">=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="se">%%</span>i <span class="k">in</span> <span class="p">(</span>D:\test\*.txt<span class="p">)</span> <span class="k">do</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl"><span class="k">ren</span> <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">i&#34;</span> <span class="nv">!num!</span>.txt
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="k">/a</span> <span class="nv">num</span><span class="o">+=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">:::::::::::::::::::::::::::::::</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>for循环使用数字循环的一般格式：for /l %i in (5,3,16) do echo %i</p>
+<p>数值型变量i依次成为：5、8、11、14。从5开始，每次增加3到16为止。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bat" data-lang="bat"><span class="line"><span class="cl"><span class="p">:</span><span class="c1">:::::::::圆圈方阵.bat::::::::::</span>
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">echo</span> off
+</span></span><span class="line"><span class="cl"><span class="k">setlocal</span> EnableDelayedExpansion
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">var</span><span class="p">=</span>○
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="k">/l</span> <span class="se">%%</span>i <span class="k">in</span> <span class="p">(</span><span class="mi">1</span>,<span class="mi">1</span>,<span class="mi">7</span><span class="p">)</span> <span class="k">do</span> <span class="k">set</span> <span class="nv">var</span><span class="p">=</span><span class="nv">%var%!var!</span>
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: 此时变量 var 已经变成一行连续的8个圆圈了</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="k">/l</span> <span class="se">%%</span>i <span class="k">in</span> <span class="p">(</span><span class="mi">1</span>,<span class="mi">1</span>,<span class="mi">8</span><span class="p">)</span> <span class="k">do</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> 这是第 <span class="se">%%</span>i 份<span class="p">&gt;</span>输出结果<span class="se">%%</span>i.txt
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="k">/l</span> <span class="se">%%</span>j <span class="k">in</span> <span class="p">(</span><span class="mi">1</span>,<span class="mi">1</span>,<span class="mi">8</span><span class="p">)</span> <span class="k">do</span> <span class="k">echo</span> <span class="nv">%var%</span><span class="p">&gt;&gt;</span>输出结果<span class="se">%%</span>i.txt
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> 8 X 8 的 ○ 矩阵已经画好，并保存到8份文本文件里了
+</span></span><span class="line"><span class="cl"><span class="k">pause</span>
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">:::::::::::::::::::::::::::::::</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="组合命令">组合命令</h2>
+<ol>
+<li>
+<p>&amp;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bat" data-lang="bat"><span class="line"><span class="cl"><span class="k">echo</span> Checking what executable files we have in WINDOWS... <span class="p">&amp;</span> <span class="k">dir</span> C:\WINDOWS\*.exe <span class="p">&amp;</span> <span class="k">echo</span> And we got lots of stuff here.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>&amp;在多个命令之间起连接作用。</p>
+<p>不论三者中每一条命令的结果如何，后面的一条命令总能被得到执行。</p>
+</li>
+<li>
+<p>&amp;&amp;</p>
+<p>和&amp;类似，并列多条命令并将其按顺序执行。</p>
+<p>如果多命令中的某一条命令执行出错，后面的命令将不会再被执行；如果一直没有出错，就会一直执行完所有并列命令。</p>
+</li>
+<li>
+<p>||</p>
+<p>||的用途和&amp;&amp;恰好相反。</p>
+<p>当遇到执行正确的命令后将不再执行后面的命令。</p>
+<p>如果没有出现正确的命令则一直执行完所有命令。</p>
+</li>
+</ol>
+<h2 id="管道命令">管道命令</h2>
+<ol>
+<li>
+<p>&gt;和&gt;&gt;</p>
+<p>输入重定向命令。将一条命令或某个程序输出结果的重定向到特定文件中。</p>
+<p>&gt;会清除掉原文件中的内容后写入指定文件，而&gt;&gt;只会追加内容到指定文件中。</p>
+</li>
+<li>
+<p>|</p>
+<p>它可以将它左边命令的输出结果放到它右边的命令里作为参数。</p>
+</li>
+<li>
+<p>管道命令还有&lt;、&lt;&amp;和&gt;&amp;，它们并不常见，暂不讨论。</p>
+</li>
+</ol>
+<h2 id="学习地址">学习地址</h2>
+<p><a class="link" href="http://docs.30c.org/dosbat/index.html"  target="_blank" rel="noopener"
+    >Windows 批处理脚本学习教程</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/blog/zh-cn/tags/tools/">Tools</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/%E4%BD%BF%E7%94%A8wsl2%E6%8A%80%E6%9C%AF%E5%9C%A8windows%E5%AD%90%E7%B3%BB%E7%BB%9F%E4%B8%8A%E5%AE%89%E8%A3%85ubuntu/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">使用WSL2技术在Windows子系统上安装Ubuntu</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/rest-api-design-rulebook/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">REST API Design Rulebook</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/windows-11-%E5%85%81%E8%AE%B8%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Windows 11 允许远程桌面/远程访问</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/%E5%9C%A8vmware%E4%B8%8A%E5%AE%89%E8%A3%85centos7/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在VMware上安装CentOS7</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85tomcat8/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在Windows上安装Tomcat8</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2023 Javen Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/blog/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

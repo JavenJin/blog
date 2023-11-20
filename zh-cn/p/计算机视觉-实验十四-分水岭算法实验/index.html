@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Computer Vision - Experiment 14 - Watershed algorithm experiment'>
+<title>计算机视觉 - 实验十四 分水岭算法实验</title>
+
+<link rel='canonical' href='https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E5%9B%9B-%E5%88%86%E6%B0%B4%E5%B2%AD%E7%AE%97%E6%B3%95%E5%AE%9E%E9%AA%8C/'>
+
+<link rel="stylesheet" href="/blog/scss/style.min.84fddddb435e5cc2e5f82ceae9480ccaf4410b94e3d1c786e727ff9ffc42f753.css"><meta property='og:title' content='计算机视觉 - 实验十四 分水岭算法实验'>
+<meta property='og:description' content='Computer Vision - Experiment 14 - Watershed algorithm experiment'>
+<meta property='og:url' content='https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E5%9B%9B-%E5%88%86%E6%B0%B4%E5%B2%AD%E7%AE%97%E6%B3%95%E5%AE%9E%E9%AA%8C/'>
+<meta property='og:site_name' content='Javen Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Computer Vision' /><meta property='article:tag' content='OpenCV' /><meta property='article:published_time' content='2020-04-20T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-04-20T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="计算机视觉 - 实验十四 分水岭算法实验">
+<meta name="twitter:description" content="Computer Vision - Experiment 14 - Watershed algorithm experiment">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/blog/zh-cn">
+                
+                    
+                    
+                    
+                        
+                        <img src="/blog/img/avatar_hubf7b15bf5e15ae8b6bb0ceda44d97e9a_739263_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/blog/zh-cn">Javen Blog</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/javenjin'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://instagram.com/kingjie98'
+                        target="_blank"
+                        title="Ins"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16.65 7.2H16.66M8 20H16C18.2091 20 20 18.2091 20 16V8C20 5.79086 18.2091 4 16 4H8C5.79086 4 4 5.79086 4 8V16C4 18.2091 5.79086 20 8 20ZM15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12Z"/>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:wenjie.jin@hotmail.com'
+                        target="_blank"
+                        title="Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/blog/zh-cn/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://javenjin.github.io/blog/" >English</option>
+                        
+                            <option value="https://javenjin.github.io/blog/zh-cn/" selected>中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#计算机视觉---实验十四-分水岭算法实验">计算机视觉 - 实验十四 分水岭算法实验</a>
+      <ol>
+        <li><a href="#实验目的和要求">实验目的和要求</a></li>
+        <li><a href="#实验内容">实验内容</a></li>
+        <li><a href="#实验仪器设备">实验仪器、设备</a></li>
+        <li><a href="#实验原理">实验原理</a></li>
+        <li><a href="#实验步骤">实验步骤</a></li>
+        <li><a href="#实验注意事项">实验注意事项</a></li>
+        <li><a href="#实验结果">实验结果</a></li>
+        <li><a href="#实验总结">实验总结</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/blog/zh-cn/categories/computer-vision/" >
+                Computer Vision
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E5%9B%9B-%E5%88%86%E6%B0%B4%E5%B2%AD%E7%AE%97%E6%B3%95%E5%AE%9E%E9%AA%8C/">计算机视觉 - 实验十四 分水岭算法实验</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Computer Vision - Experiment 14 - Watershed algorithm experiment
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 20, 2020</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+        <footer class="article-translations">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+            <div>
+                
+                    <a href="https://javenjin.github.io/blog/p/computer-vision-experiment-14-watershed-algorithm-experiment/" class="link">English</a>
+                
+            </div>
+        </footer>
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="计算机视觉---实验十四-分水岭算法实验">计算机视觉 - 实验十四 分水岭算法实验</h2>
+<h3 id="实验目的和要求">实验目的和要求</h3>
+<p>  理解分水岭算法的基本原理；掌握实现分水岭算法的代码编写方法。</p>
+<h3 id="实验内容">实验内容</h3>
+<p>  （一）新建工程;</p>
+<p>  （二）在VS2015中配置OpenCV;</p>
+<p>  （三）载入原图并显示，初始化掩膜和灰度图；</p>
+<p>  （四）寻找轮廓；</p>
+<p>  （五）拷贝掩膜;</p>
+<p>  （六）循环绘制出轮廓；</p>
+<p>  （七）将分水岭图像遍历保存；</p>
+<p>  （八）混合灰度图和分水岭效果图并显示最终的窗口。</p>
+<h3 id="实验仪器设备">实验仪器、设备</h3>
+<p>  计算机一台，已安装 Windows7操作系统和Visual Studio2015。</p>
+<h3 id="实验原理">实验原理</h3>
+<p>  （一）在许多实际运用中，我们需要分割阁像，但无法从背景图像中获得有用信息。分水岭算法在这方面往往是非常有效的。此算法可以将图像中的边缘转化成“山脉”将均匀区域转化为“山谷”这样有助于分割目标。分水岭算法，是一种基于拓扑理论的数学形态学的分割方法，其基本思想是把图像看作是测地学上的拓扑地貌，图像中每一点像素的灰度值表示该点的海拔高度，每一个局部极小值及其影响区域称为集水盆，而集水盆的边界则形成分水岭。分水岭的概念和形成可以通过模拟浸入过程来说明：在每一个局部极小值表面，刺穿一个小孔，然后把整个模型慢慢浸入水中，随着浸入的加深，每一个局部极小值的影响域慢慢向外扩展，在两个集水盆汇合处构筑大坝，即形成分水岭。</p>
+<p>  （二）函数 watershed实现的分水岭算法是基于标记的分割算法中的一种。在把图像传给函数之前，我们需要大致勾画标记出图像中的期望进行分割的区域，它们被标记为正指数。所以，每一个区域都会被标记为像素值1、2、3等，表示成为一个或者多个连接组件。这些标记的值可以使用findContours函数和 drawContours函数由二进制的掩码检索出来。</p>
+<h3 id="实验步骤">实验步骤</h3>
+<p>  （一）创建Visual Studio 2015控制台程序；</p>
+<p>  （二）在Visual Studio 2015中配置OpenCV；</p>
+<p>  （三）调用imread函数载入原图并显示，初始化掩膜和灰度图；</p>
+<p>  （四）调用findContours函数寻找轮廓；</p>
+<p>  （五）拷贝掩膜;</p>
+<p>  （六）调用drawContours函数循环绘制出轮廓；</p>
+<p>  （七）调用watershed函数计算分水岭，使用双层循环，将分水岭图像遍历保存；</p>
+<p>  （八）混合灰度图和分水岭效果图并显示最终的窗口。</p>
+<h3 id="实验注意事项">实验注意事项</h3>
+<p>  （一）完成OpenCV安装之后，VS中配置OpenCV的方法；</p>
+<p>  （二）watershed函数的功能和使用方法；</p>
+<p>  （三）遍历保存分水岭图像的方法；</p>
+<p>  （四）混合灰度图和分水岭效果图的方法。</p>
+<h3 id="实验结果">实验结果</h3>
+<p>  （一）实验代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//---------------------------------【头文件、命名空间包含部分】----------------------------
+</span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：包含程序所使用的头文件和命名空间
+</span></span></span><span class="line"><span class="cl"><span class="c1">//------------------------------------------------------------------------------------------------
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#include</span> <span class="cpf">&#34;opencv2/imgproc/imgproc.hpp&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;opencv2/highgui/highgui.hpp&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//-----------------------------------【宏定义部分】-------------------------------------------- 
+</span></span></span><span class="line"><span class="cl"><span class="c1">//  描述：定义一些辅助宏 
+</span></span></span><span class="line"><span class="cl"><span class="c1">//------------------------------------------------------------------------------------------------ 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#define WINDOW_NAME1 &#34;【程序窗口1】&#34;        </span><span class="c1">//为窗口标题定义的宏 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#define WINDOW_NAME2 &#34;【分水岭算法效果图】&#34;        </span><span class="c1">//为窗口标题定义的宏
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">//-----------------------------------【全局函变量声明部分】--------------------------------------
+</span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：全局变量的声明
+</span></span></span><span class="line"><span class="cl"><span class="c1">//-----------------------------------------------------------------------------------------------
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Mat</span> <span class="n">g_maskImage</span><span class="p">,</span> <span class="n">g_srcImage</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">Point</span> <span class="nf">prevPt</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//-----------------------------------【全局函数声明部分】--------------------------------------
+</span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：全局函数的声明
+</span></span></span><span class="line"><span class="cl"><span class="c1">//-----------------------------------------------------------------------------------------------
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_Mouse</span><span class="p">(</span> <span class="kt">int</span> <span class="n">event</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//-----------------------------------【main( )函数】--------------------------------------------
+</span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：控制台应用程序的入口函数，我们的程序从这里开始执行
+</span></span></span><span class="line"><span class="cl"><span class="c1">//-----------------------------------------------------------------------------------------------
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>	
+</span></span><span class="line"><span class="cl">	<span class="c1">//【0】改变console字体颜色
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">system</span><span class="p">(</span><span class="s">&#34;color 6F&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">//【0】显示帮助文字
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">ShowHelpText</span><span class="p">(</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">//【1】载入原图并显示，初始化掩膜和灰度图
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">g_srcImage</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s">&#34;1.jpg&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span> <span class="n">WINDOW_NAME1</span><span class="p">,</span> <span class="n">g_srcImage</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">srcImage</span><span class="p">,</span><span class="n">grayImage</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">g_srcImage</span><span class="p">.</span><span class="n">copyTo</span><span class="p">(</span><span class="n">srcImage</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cvtColor</span><span class="p">(</span><span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_maskImage</span><span class="p">,</span> <span class="n">COLOR_BGR2GRAY</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cvtColor</span><span class="p">(</span><span class="n">g_maskImage</span><span class="p">,</span> <span class="n">grayImage</span><span class="p">,</span> <span class="n">COLOR_GRAY2BGR</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">g_maskImage</span> <span class="o">=</span> <span class="n">Scalar</span><span class="o">::</span><span class="n">all</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">//【2】设置鼠标回调函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">setMouseCallback</span><span class="p">(</span> <span class="n">WINDOW_NAME1</span><span class="p">,</span> <span class="n">on_Mouse</span><span class="p">,</span> <span class="mi">0</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">//【3】轮询按键，进行处理
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">//获取键值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">waitKey</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="c1">//若按键键值为ESC时，退出
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">if</span><span class="p">(</span> <span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="n">c</span> <span class="o">==</span> <span class="mi">27</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="c1">//按键键值为2时，恢复源图
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">if</span><span class="p">(</span> <span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;2&#39;</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">g_maskImage</span> <span class="o">=</span> <span class="n">Scalar</span><span class="o">::</span><span class="n">all</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="n">srcImage</span><span class="p">.</span><span class="n">copyTo</span><span class="p">(</span><span class="n">g_srcImage</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="n">imshow</span><span class="p">(</span> <span class="s">&#34;image&#34;</span><span class="p">,</span> <span class="n">g_srcImage</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="c1">//若检测到按键值为1或者空格，则进行处理
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">if</span><span class="p">(</span> <span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;1&#39;</span> <span class="o">||</span> <span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="n">c</span> <span class="o">==</span> <span class="sc">&#39; &#39;</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">//定义一些参数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">compCount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Point</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">contours</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">vector</span><span class="o">&lt;</span><span class="n">Vec4i</span><span class="o">&gt;</span> <span class="n">hierarchy</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="c1">//寻找轮廓
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">findContours</span><span class="p">(</span><span class="n">g_maskImage</span><span class="p">,</span> <span class="n">contours</span><span class="p">,</span> <span class="n">hierarchy</span><span class="p">,</span> <span class="n">RETR_CCOMP</span><span class="p">,</span> <span class="n">CHAIN_APPROX_SIMPLE</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="c1">//轮廓为空时的处理
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">if</span><span class="p">(</span> <span class="n">contours</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">				<span class="k">continue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="c1">//拷贝掩膜
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">Mat</span> <span class="n">maskImage</span><span class="p">(</span><span class="n">g_maskImage</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="n">CV_32S</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="n">maskImage</span> <span class="o">=</span> <span class="n">Scalar</span><span class="o">::</span><span class="n">all</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="c1">//循环绘制出轮廓
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">index</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">index</span> <span class="o">=</span> <span class="n">hierarchy</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">compCount</span><span class="o">++</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">				<span class="n">drawContours</span><span class="p">(</span><span class="n">maskImage</span><span class="p">,</span> <span class="n">contours</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">Scalar</span><span class="o">::</span><span class="n">all</span><span class="p">(</span><span class="n">compCount</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">hierarchy</span><span class="p">,</span> <span class="n">INT_MAX</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="c1">//compCount为零时的处理
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">if</span><span class="p">(</span> <span class="n">compCount</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">				<span class="k">continue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="c1">//生成随机颜色
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">vector</span><span class="o">&lt;</span><span class="n">Vec3b</span><span class="o">&gt;</span> <span class="n">colorTab</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="k">for</span><span class="p">(</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">compCount</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">theRNG</span><span class="p">().</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">				<span class="kt">int</span> <span class="n">g</span> <span class="o">=</span> <span class="n">theRNG</span><span class="p">().</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">				<span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="n">theRNG</span><span class="p">().</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">				<span class="n">colorTab</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">Vec3b</span><span class="p">((</span><span class="n">uchar</span><span class="p">)</span><span class="n">b</span><span class="p">,</span> <span class="p">(</span><span class="n">uchar</span><span class="p">)</span><span class="n">g</span><span class="p">,</span> <span class="p">(</span><span class="n">uchar</span><span class="p">)</span><span class="n">r</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="c1">//计算处理时间并输出到窗口中
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="kt">double</span> <span class="n">dTime</span> <span class="o">=</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">getTickCount</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">			<span class="n">watershed</span><span class="p">(</span> <span class="n">srcImage</span><span class="p">,</span> <span class="n">maskImage</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="n">dTime</span> <span class="o">=</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">getTickCount</span><span class="p">()</span> <span class="o">-</span> <span class="n">dTime</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">printf</span><span class="p">(</span> <span class="s">&#34;</span><span class="se">\t</span><span class="s">处理时间 = %gms</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">dTime</span><span class="o">*</span><span class="mf">1000.</span><span class="o">/</span><span class="n">getTickFrequency</span><span class="p">()</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">			<span class="c1">//双层循环，将分水岭图像遍历存入watershedImage中
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">Mat</span> <span class="n">watershedImage</span><span class="p">(</span><span class="n">maskImage</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="n">CV_8UC3</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="k">for</span><span class="p">(</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">maskImage</span><span class="p">.</span><span class="n">rows</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">				<span class="k">for</span><span class="p">(</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">maskImage</span><span class="p">.</span><span class="n">cols</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">				<span class="p">{</span>
+</span></span><span class="line"><span class="cl">					<span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">maskImage</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">					<span class="k">if</span><span class="p">(</span> <span class="n">index</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">						<span class="n">watershedImage</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="n">Vec3b</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="n">Vec3b</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">					<span class="k">else</span> <span class="k">if</span><span class="p">(</span> <span class="n">index</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">index</span> <span class="o">&gt;</span> <span class="n">compCount</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">						<span class="n">watershedImage</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="n">Vec3b</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="n">Vec3b</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">					<span class="k">else</span>
+</span></span><span class="line"><span class="cl">						<span class="n">watershedImage</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="n">Vec3b</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="n">colorTab</span><span class="p">[</span><span class="n">index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">				<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">				<span class="c1">//混合灰度图和分水岭效果图并显示最终的窗口
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="n">watershedImage</span> <span class="o">=</span> <span class="n">watershedImage</span><span class="o">*</span><span class="mf">0.5</span> <span class="o">+</span> <span class="n">grayImage</span><span class="o">*</span><span class="mf">0.5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">				<span class="n">imshow</span><span class="p">(</span> <span class="n">WINDOW_NAME2</span><span class="p">,</span> <span class="n">watershedImage</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//-----------------------------------【onMouse( )函数】---------------------------------------
+</span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：鼠标消息回调函数
+</span></span></span><span class="line"><span class="cl"><span class="c1">//-----------------------------------------------------------------------------------------------
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_Mouse</span><span class="p">(</span> <span class="kt">int</span> <span class="n">event</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//处理鼠标不在窗口中的情况
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">if</span><span class="p">(</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="n">g_srcImage</span><span class="p">.</span><span class="n">cols</span> <span class="o">||</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">y</span> <span class="o">&gt;=</span> <span class="n">g_srcImage</span><span class="p">.</span><span class="n">rows</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">//处理鼠标左键相关消息
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">if</span><span class="p">(</span> <span class="n">event</span> <span class="o">==</span> <span class="n">EVENT_LBUTTONUP</span> <span class="o">||</span> <span class="o">!</span><span class="p">(</span><span class="n">flags</span> <span class="o">&amp;</span> <span class="n">EVENT_FLAG_LBUTTON</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">prevPt</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span> <span class="k">if</span><span class="p">(</span> <span class="n">event</span> <span class="o">==</span> <span class="n">EVENT_LBUTTONDOWN</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">prevPt</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">//鼠标左键按下并移动，绘制出白色线条
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">else</span> <span class="k">if</span><span class="p">(</span> <span class="n">event</span> <span class="o">==</span> <span class="n">EVENT_MOUSEMOVE</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">flags</span> <span class="o">&amp;</span> <span class="n">EVENT_FLAG_LBUTTON</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Point</span> <span class="n">pt</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span> <span class="n">prevPt</span><span class="p">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="n">prevPt</span> <span class="o">=</span> <span class="n">pt</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">line</span><span class="p">(</span> <span class="n">g_maskImage</span><span class="p">,</span> <span class="n">prevPt</span><span class="p">,</span> <span class="n">pt</span><span class="p">,</span> <span class="n">Scalar</span><span class="o">::</span><span class="n">all</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="n">line</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">prevPt</span><span class="p">,</span> <span class="n">pt</span><span class="p">,</span> <span class="n">Scalar</span><span class="o">::</span><span class="n">all</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="n">prevPt</span> <span class="o">=</span> <span class="n">pt</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">imshow</span><span class="p">(</span><span class="n">WINDOW_NAME1</span><span class="p">,</span> <span class="n">g_srcImage</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//-----------------------------------【ShowHelpText( )函数】----------------------------------  
+</span></span></span><span class="line"><span class="cl"><span class="c1">//      描述：输出一些帮助信息  
+</span></span></span><span class="line"><span class="cl"><span class="c1">//----------------------------------------------------------------------------------------------  
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">()</span>  
+</span></span><span class="line"><span class="cl"><span class="p">{</span>  
+</span></span><span class="line"><span class="cl">	<span class="c1">//输出欢迎信息和OpenCV版本
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">非常感谢购买《OpenCV3编程入门》一书！</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">此为本书OpenCV3版的第77个配套示例程序</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">   当前使用的OpenCV版本为：&#34;</span> <span class="n">CV_VERSION</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n</span><span class="s">  ----------------------------------------------------------------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">//输出一些帮助信息  
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">printf</span><span class="p">(</span>  <span class="s">&#34;</span><span class="se">\n\n\n\t</span><span class="s">欢迎来到【分水岭算法】示例程序~</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">);</span>  
+</span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span>  <span class="s">&#34;</span><span class="se">\t</span><span class="s">请先用鼠标在图片窗口中标记出大致的区域，</span><span class="se">\n\n\t</span><span class="s">然后再按键【1】或者【SPACE】启动算法。&#34;</span>
+</span></span><span class="line"><span class="cl">		<span class="s">&#34;</span><span class="se">\n\n\t</span><span class="s">按键操作说明: </span><span class="se">\n\n</span><span class="s">&#34;</span>  
+</span></span><span class="line"><span class="cl">		<span class="s">&#34;</span><span class="se">\t\t</span><span class="s">键盘按键【1】或者【SPACE】- 运行的分水岭分割算法</span><span class="se">\n</span><span class="s">&#34;</span>  
+</span></span><span class="line"><span class="cl">		<span class="s">&#34;</span><span class="se">\t\t</span><span class="s">键盘按键【2】- 恢复原始图片</span><span class="se">\n</span><span class="s">&#34;</span>  
+</span></span><span class="line"><span class="cl">		<span class="s">&#34;</span><span class="se">\t\t</span><span class="s">键盘按键【ESC】- 退出程序</span><span class="se">\n\n\n</span><span class="s">&#34;</span><span class="p">);</span>  
+</span></span><span class="line"><span class="cl"><span class="p">}</span>  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>  （二）显示结果</p>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2014%20Watershed%20algorithm%20experiment/watershed-algorithm-experiment1.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Watershed algorithm experiment 1"
+	
+	
+></p>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2014%20Watershed%20algorithm%20experiment/watershed-algorithm-experiment2.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Watershed algorithm experiment 2"
+	
+	
+></p>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2014%20Watershed%20algorithm%20experiment/watershed-algorithm-experiment3.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Watershed algorithm experiment 3"
+	
+	
+></p>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2014%20Watershed%20algorithm%20experiment/watershed-algorithm-experiment4.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Watershed algorithm experiment 4"
+	
+	
+></p>
+<h3 id="实验总结">实验总结</h3>
+<p>  本次实验的主要内容是理解分水岭算法的基本原理；掌握实现分水岭算法的代码编写方法。新建工程，在VS2015中配置OpenCV，载入原图并显示，初始化掩膜和灰度图，寻找轮廓，拷贝掩膜，循环绘制出轮廓，将分水岭图像遍历保存，混合灰度图和分水岭效果图并显示最终的窗口。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/blog/zh-cn/tags/computer-vision/">Computer Vision</a>
+        
+            <a href="/blog/zh-cn/tags/opencv/">OpenCV</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%80-%E5%9B%BE%E5%83%8F%E7%9A%84%E8%BD%BD%E5%85%A5%E6%98%BE%E7%A4%BA%E4%B8%8E%E8%BE%93%E5%87%BA/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">计算机视觉 - 实验一 图像的载入、显示与输出</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%83-%E6%9F%A5%E6%89%BE%E5%B9%B6%E7%BB%98%E5%88%B6%E8%BD%AE%E5%BB%93%E5%AE%9E%E9%AA%8C/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">计算机视觉 - 实验七 查找并绘制轮廓实验</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%89-%E5%9B%BE%E5%83%8F%E7%BA%BF%E6%80%A7%E6%BB%A4%E6%B3%A2%E5%AE%9E%E9%AA%8C/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">计算机视觉 - 实验三 图像线性滤波实验</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B9%9D-%E5%AF%BB%E6%89%BE%E5%92%8C%E7%BB%98%E5%88%B6%E7%89%A9%E4%BD%93%E7%9A%84%E5%87%B8%E5%8C%85%E5%AE%9E%E9%AA%8C/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">计算机视觉 - 实验九 寻找和绘制物体的凸包实验</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%BA%8C-%E5%9B%BE%E5%83%8F%E7%9A%84%E7%9B%B4%E6%96%B9%E5%9B%BE/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">计算机视觉 - 实验二 图像的直方图</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2023 Javen Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/blog/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

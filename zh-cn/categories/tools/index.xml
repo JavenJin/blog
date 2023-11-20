@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Fri, 16 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/categories/tools/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Install Ubuntu on Windows subsystem using WSL2 technology</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/</link>
+        <title>使用WSL2技术在Windows子系统上安装Ubuntu</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/%E4%BD%BF%E7%94%A8wsl2%E6%8A%80%E6%9C%AF%E5%9C%A8windows%E5%AD%90%E7%B3%BB%E7%BB%9F%E4%B8%8A%E5%AE%89%E8%A3%85ubuntu/</link>
         <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://javenjin.github.io/blog/zh-cn/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/%E4%BD%BF%E7%94%A8wsl2%E6%8A%80%E6%9C%AF%E5%9C%A8windows%E5%AD%90%E7%B3%BB%E7%BB%9F%E4%B8%8A%E5%AE%89%E8%A3%85ubuntu/</guid>
         <description>&lt;h1 id=&#34;使用wsl2技术在windows子系统上安装ubuntu&#34;&gt;使用WSL2技术在Windows子系统上安装Ubuntu&lt;/h1&gt;
 &lt;h2 id=&#34;安装wsl2&#34;&gt;安装WSL2&lt;/h2&gt;
 &lt;p&gt;参考资料：&lt;a class=&#34;link&#34; href=&#34;https://docs.microsoft.com/en-us/windows/wsl/install-manual&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -749,11 +749,11 @@
 </description>
         </item>
         <item>
-        <title>Windows batch scripts(.bat)</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/windows-batch-scripts.bat/</link>
+        <title>Windows批处理脚本（.bat）</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/windows%E6%89%B9%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC.bat/</link>
         <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://javenjin.github.io/blog/zh-cn/p/windows-batch-scripts.bat/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/windows%E6%89%B9%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC.bat/</guid>
         <description>&lt;h1 id=&#34;windows批处理脚本bat&#34;&gt;Windows批处理脚本（.bat）&lt;/h1&gt;
 &lt;h2 id=&#34;常用文件操作dos命令&#34;&gt;常用文件操作DOS命令&lt;/h2&gt;
 &lt;ul&gt;
@@ -1053,11 +1053,11 @@
 </description>
         </item>
         <item>
-        <title>Windows 11 allows remote desktop/remote access</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/windows-11-allows-remote-desktop/remote-access/</link>
+        <title>Windows 11 允许远程桌面/远程访问</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/windows-11-%E5%85%81%E8%AE%B8%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/</link>
         <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://javenjin.github.io/blog/zh-cn/p/windows-11-allows-remote-desktop/remote-access/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/windows-11-%E5%85%81%E8%AE%B8%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/</guid>
         <description>&lt;h1 id=&#34;windows-11-允许远程桌面远程访问&#34;&gt;Windows 11 允许远程桌面/远程访问&lt;/h1&gt;
 &lt;h2 id=&#34;windows-11-允许远程桌面&#34;&gt;Windows 11 允许远程桌面&lt;/h2&gt;
 &lt;h3 id=&#34;打开设置&#34;&gt;打开设置&lt;/h3&gt;
@@ -1136,11 +1136,11 @@
 </description>
         </item>
         <item>
-        <title>Install CentOS7 on VMware</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/install-centos7-on-vmware/</link>
+        <title>在VMware上安装CentOS7</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8vmware%E4%B8%8A%E5%AE%89%E8%A3%85centos7/</link>
         <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://javenjin.github.io/blog/zh-cn/p/install-centos7-on-vmware/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8vmware%E4%B8%8A%E5%AE%89%E8%A3%85centos7/</guid>
         <description>&lt;h1 id=&#34;在vmware上安装centos7&#34;&gt;在VMware上安装CentOS7&lt;/h1&gt;
 &lt;h2 id=&#34;安装前准备&#34;&gt;安装前准备&lt;/h2&gt;
 &lt;ul&gt;
@@ -1433,11 +1433,11 @@
 </description>
         </item>
         <item>
-        <title>Install Tomcat8 on Windows</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/install-tomcat8-on-windows/</link>
+        <title>在Windows上安装Tomcat8</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85tomcat8/</link>
         <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://javenjin.github.io/blog/zh-cn/p/install-tomcat8-on-windows/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85tomcat8/</guid>
         <description>&lt;h1 id=&#34;在windows上安装tomcat8&#34;&gt;在Windows上安装Tomcat8&lt;/h1&gt;
 &lt;h2 id=&#34;下载安装包&#34;&gt;下载安装包&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;访问Tomcat官网 &lt;a class=&#34;link&#34; href=&#34;https://tomcat.apache.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1593,11 +1593,11 @@
 </description>
         </item>
         <item>
-        <title>Google Chrome Web Browser Export Password and Import Password</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/google-chrome-web-browser-export-password-and-import-password/</link>
+        <title>谷歌Chrome浏览器导出密码和导入密码</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/%E8%B0%B7%E6%AD%8Cchrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%BC%E5%87%BA%E5%AF%86%E7%A0%81%E5%92%8C%E5%AF%BC%E5%85%A5%E5%AF%86%E7%A0%81/</link>
         <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://javenjin.github.io/blog/zh-cn/p/google-chrome-web-browser-export-password-and-import-password/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%B0%B7%E6%AD%8Cchrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%BC%E5%87%BA%E5%AF%86%E7%A0%81%E5%92%8C%E5%AF%BC%E5%85%A5%E5%AF%86%E7%A0%81/</guid>
         <description>&lt;h1 id=&#34;谷歌chrome浏览器导出密码和导入密码&#34;&gt;谷歌Chrome浏览器导出密码和导入密码&lt;/h1&gt;
 &lt;p&gt;       有时候大家遇到换了新电脑，或者公司需要调整电脑，或者说需要导入别人电脑上谷歌浏览器存的账号密码，发现可以导出密码，但是没有导入密码的选项，就很烦，这里教大家如何导出导入chrome谷歌浏览器的账号密码。&lt;/p&gt;
 &lt;h2 id=&#34;导出账号密码&#34;&gt;导出账号密码&lt;/h2&gt;
@@ -1679,11 +1679,11 @@
 </description>
         </item>
         <item>
-        <title>Switching eclipse after the menu bar messy problem</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/switching-eclipse-after-the-menu-bar-messy-problem/</link>
+        <title>切换eclipse后出现菜单栏乱码问题</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/%E5%88%87%E6%8D%A2eclipse%E5%90%8E%E5%87%BA%E7%8E%B0%E8%8F%9C%E5%8D%95%E6%A0%8F%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</link>
         <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://javenjin.github.io/blog/zh-cn/p/switching-eclipse-after-the-menu-bar-messy-problem/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/%E5%88%87%E6%8D%A2eclipse%E5%90%8E%E5%87%BA%E7%8E%B0%E8%8F%9C%E5%8D%95%E6%A0%8F%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</guid>
         <description>&lt;h1 id=&#34;切换eclipse后出现菜单栏乱码问题&#34;&gt;切换eclipse后出现菜单栏乱码问题&lt;/h1&gt;
 &lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;
 &lt;p&gt;今天切换了eclipse的工作目录&lt;/p&gt;
@@ -1753,11 +1753,11 @@
 </description>
         </item>
         <item>
-        <title>Drawing class diagrams in Eclipse using AmaterasUML plugin</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/</link>
+        <title>eclipse中安装和使用AmaterasUML插件绘制类图</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/eclipse%E4%B8%AD%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8amaterasuml%E6%8F%92%E4%BB%B6%E7%BB%98%E5%88%B6%E7%B1%BB%E5%9B%BE/</link>
         <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://javenjin.github.io/blog/zh-cn/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/eclipse%E4%B8%AD%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8amaterasuml%E6%8F%92%E4%BB%B6%E7%BB%98%E5%88%B6%E7%B1%BB%E5%9B%BE/</guid>
         <description>&lt;h1 id=&#34;eclipse中安装和使用amaterasuml插件绘制类图&#34;&gt;eclipse中安装和使用AmaterasUML插件绘制类图&lt;/h1&gt;
 &lt;h2 id=&#34;安装gef插件&#34;&gt;安装GEF插件&lt;/h2&gt;
 &lt;h3 id=&#34;打开eclipse官网-httpswwweclipseorg&#34;&gt;打开eclipse官网 &lt;a class=&#34;link&#34; href=&#34;https://www.eclipse.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Thu, 24 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/categories/java-programming-language/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Gluttony Game (Java GUI)</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/gluttony-game-java-gui/</link>
+        <title>贪吃蛇游戏（Java GUI）</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/%E8%B4%AA%E5%90%83%E8%9B%87%E6%B8%B8%E6%88%8Fjava-gui/</link>
         <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://javenjin.github.io/blog/zh-cn/p/gluttony-game-java-gui/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%B4%AA%E5%90%83%E8%9B%87%E6%B8%B8%E6%88%8Fjava-gui/</guid>
         <description>&lt;h1 id=&#34;贪吃蛇游戏java-gui&#34;&gt;贪吃蛇游戏（Java GUI）&lt;/h1&gt;
 &lt;h2 id=&#34;gui简述&#34;&gt;GUI简述&lt;/h2&gt;
 &lt;h3 id=&#34;gui概述&#34;&gt;GUI概述&lt;/h3&gt;
