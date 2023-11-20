@@ -301,43 +301,102 @@
   <ol>
     <li><a href="#mysql-client-options">mysql Client Options</a>
       <ol>
-        <li><a href="#--help--">&ndash;help, -?</a></li>
-        <li><a href="#--auto-rehash">&ndash;auto-rehash</a></li>
-        <li><a href="#--auto-vertical-output">&ndash;auto-vertical-output</a></li>
-        <li><a href="#--batch--b">&ndash;batch, -B</a></li>
-        <li><a href="#--binary-as-hex">&ndash;binary-as-hex</a></li>
-        <li><a href="#--binary-model">&ndash;binary-model</a></li>
-        <li><a href="#--bind-addressip_address">&ndash;bind-address=<em>ip_address</em></a></li>
-        <li><a href="#--character-sets-dirdir_name">&ndash;character-sets-dir=<code>dir_name</code></a></li>
-        <li><a href="#--column-names">&ndash;column-names</a></li>
-        <li><a href="#--column-type-info">&ndash;column-type-info</a></li>
-        <li><a href="#--comments--c">&ndash;comments, -c</a></li>
-        <li><a href="#--compress--c">&ndash;compress, -C</a></li>
-        <li><a href="#--compression-algorithmsvalue">&ndash;compression-algorithms=<em>value</em></a></li>
-        <li><a href="#--connect-expired-password">&ndash;connect-expired-password</a></li>
-        <li><a href="#--connect-timeoutvalue">&ndash;connect-timeout=<em>value</em></a></li>
-        <li><a href="#--databasedb_name--d-db_name">&ndash;database=<em>db_name</em>, -D <em>db_name</em></a></li>
-        <li><a href="#--debug-debug_options---debug_options">&ndash;debug [=<em>debug_options</em>], -# [<em>debug_options</em>]</a></li>
-        <li><a href="#--debug-check">&ndash;debug-check</a></li>
-        <li><a href="#--debug-info--t">&ndash;debug-info, -T</a></li>
-        <li><a href="#--default-authplugin">&ndash;default-auth=<em>plugin</em></a></li>
-        <li><a href="#--default-character-setcharset_name">&ndash;default-character-set=<em>charset_name</em></a></li>
-        <li><a href="#--defaults-extra-filefile-name">&ndash;defaults-extra-file=<em>file-name</em></a></li>
-        <li><a href="#--defaults-filefile_name">&ndash;defaults-file=<em>file_name</em></a></li>
-        <li><a href="#--defaults-group-suffixstr">&ndash;defaults-group-suffix=<em>str</em></a></li>
-        <li><a href="#--delimiterstr">&ndash;delimiter=<em>str</em></a></li>
-        <li><a href="#--disable-named-commands">&ndash;disable-named-commands</a></li>
-        <li><a href="#--dns-srv-namename">&ndash;dns-srv-name=<em>name</em></a></li>
-        <li><a href="#--enable-cleartext-plugin">&ndash;enable-cleartext-plugin</a></li>
-        <li><a href="#--executestatement--e-statement">&ndash;execute=<em>statement</em>, -e <em>statement</em></a></li>
-        <li><a href="#--fido-register-factorvalue">&ndash;fido-register-factor=<em>value</em></a></li>
-        <li><a href="#force--f">force, -f</a></li>
-        <li><a href="#--get-server-public-key">&ndash;get-server-public-key</a></li>
-        <li><a href="#--histignore">&ndash;histignore</a></li>
-        <li><a href="#--hosthost_name--h-host_name">&ndash;host=<em>host_name</em>, -h <em>host_name</em></a></li>
-        <li><a href="#--html--h">&ndash;html, -H</a></li>
+        <li><a href="#--help--">--help, -?</a></li>
+        <li><a href="#--auto-rehash">--auto-rehash</a></li>
+        <li><a href="#--auto-vertical-output">--auto-vertical-output</a></li>
+        <li><a href="#--batch--b">--batch, -B</a></li>
+        <li><a href="#--binary-as-hex">--binary-as-hex</a></li>
+        <li><a href="#--binary-model">--binary-model</a></li>
+        <li><a href="#--bind-addressip_address">--bind-address=<em>ip_address</em></a></li>
+        <li><a href="#--character-sets-dirdir_name">--character-sets-dir=<code>dir_name</code></a></li>
+        <li><a href="#--column-names">--column-names</a></li>
+        <li><a href="#--column-type-info">--column-type-info</a></li>
+        <li><a href="#--comments--c">--comments, -c</a></li>
+        <li><a href="#--compress--c">--compress, -C</a></li>
+        <li><a href="#--compression-algorithmsvalue">--compression-algorithms=<em>value</em></a></li>
+        <li><a href="#--connect-expired-password">--connect-expired-password</a></li>
+        <li><a href="#--connect-timeoutvalue">--connect-timeout=<em>value</em></a></li>
+        <li><a href="#--databasedb_name--d-db_name">--database=<em>db_name</em>, -D <em>db_name</em></a></li>
+        <li><a href="#--debug-debug_options---debug_options">--debug [=<em>debug_options</em>], -# [<em>debug_options</em>]</a></li>
+        <li><a href="#--debug-check">--debug-check</a></li>
+        <li><a href="#--debug-info--t">--debug-info, -T</a></li>
+        <li><a href="#--default-authplugin">--default-auth=<em>plugin</em></a></li>
+        <li><a href="#--default-character-setcharset_name">--default-character-set=<em>charset_name</em></a></li>
+        <li><a href="#--defaults-extra-filefile-name">--defaults-extra-file=<em>file-name</em></a></li>
+        <li><a href="#--defaults-filefile_name">--defaults-file=<em>file_name</em></a></li>
+        <li><a href="#--defaults-group-suffixstr">--defaults-group-suffix=<em>str</em></a></li>
+        <li><a href="#--delimiterstr">--delimiter=<em>str</em></a></li>
+        <li><a href="#--disable-named-commands">--disable-named-commands</a></li>
+        <li><a href="#--dns-srv-namename">--dns-srv-name=<em>name</em></a></li>
+        <li><a href="#--enable-cleartext-plugin">--enable-cleartext-plugin</a></li>
+        <li><a href="#--executestatement--e-statement">--execute=<em>statement</em>, -e <em>statement</em></a></li>
+        <li><a href="#--fido-register-factorvalue">--fido-register-factor=<em>value</em></a></li>
+        <li><a href="#--force--f">--force, -f</a></li>
+        <li><a href="#--get-server-public-key">--get-server-public-key</a></li>
+        <li><a href="#--histignore">--histignore</a></li>
+        <li><a href="#--hosthost_name--h-host_name">--host=<em>host_name</em>, -h <em>host_name</em></a></li>
+        <li><a href="#--html--h">--html, -H</a></li>
+        <li><a href="#--ignore-spaces--i">--ignore-spaces, -i</a></li>
+        <li><a href="#--init-commandstr">--init-command=str</a></li>
+        <li><a href="#--line-numbers">--line-numbers</a></li>
+        <li><a href="#--load-data-local-dirdir_name">--load-data-local-dir=<em>dir_name</em></a></li>
+        <li><a href="#--local-infile01">--local-infile[={0|1}]</a></li>
+        <li><a href="#--login-pathname">--login-path=<em>name</em></a></li>
+        <li><a href="#--max-allowed-packetvalue">--max-allowed-packet=<em>value</em></a></li>
+        <li><a href="#--max-join-sizevalue">--max-join-size=<em>value</em></a></li>
+        <li><a href="#--named-commands--g">--named-commands, -G</a></li>
+        <li><a href="#--net-buffer-lengthvalue">--net-buffer-length=<em>value</em></a></li>
+        <li><a href="#--network-namespacename">--network-namespace=<em>name</em></a></li>
+        <li><a href="#--no-auto-rehash--a">--no-auto-rehash, -A</a></li>
+        <li><a href="#--no-beep--b">--no-beep, -b</a></li>
+        <li><a href="#--no-defaults">--no-defaults</a></li>
+        <li><a href="#--one-database--o">--one-database, -o</a></li>
+        <li><a href="#--pagercommand">--pager[=<em>command</em>]</a></li>
+        <li><a href="#--passwordpassword--p-password">--password[=<em>password</em>], -p [<em>password</em>]</a></li>
+        <li><a href="#--password1pass_val">--password1[=<em>pass_val</em>]</a></li>
+        <li><a href="#--password2pass_val">--password2[=<em>pass_val</em>]</a></li>
+        <li><a href="#--password3pass_val">--password3[=<em>pass_val</em>]</a></li>
+        <li><a href="#--pipe--w">--pipe, -W</a></li>
+        <li><a href="#--plugin-authentication-kerberos-client-modevalue">--plugin-authentication-kerberos-client-mode=<em>value</em></a></li>
+        <li><a href="#--plugin-dirdir_name">--plugin-dir=<em>dir_name</em></a></li>
+        <li><a href="#--portport_num--p-port_num">--port=<em>port_num</em>, -P <em>port_num</em></a></li>
+        <li><a href="#--print-defaults">--print-defaults</a></li>
+        <li><a href="#--protocoltcpsocketpipememory">--protocol={TCP|SOCKET|PIPE|MEMORY}</a></li>
+        <li><a href="#--quick--q">--quick, -q</a></li>
+        <li><a href="#--raw--r">--raw, -r</a></li>
+        <li><a href="#--reconnect">--reconnect</a></li>
+        <li><a href="#--asfe-updates---i-am-a-dummy--u">--asfe-updates, --i-am-a-dummy, -U</a></li>
+        <li><a href="#--select-limitvalue">--select-limit=<em>value</em></a></li>
+        <li><a href="#--server-public-key-pathfile_name">--server-public-key-path=<em>file_name</em></a></li>
+        <li><a href="#--shared-memory-base-namename">--shared-memory-base-name=<em>name</em></a></li>
+        <li><a href="#--show-warnings">--show-warnings</a></li>
+        <li><a href="#--sigint-ignore">--sigint-ignore</a></li>
+        <li><a href="#--silent--s">--silent, -s</a></li>
+        <li><a href="#--skip-column-names--n">--skip-column-names, -N</a></li>
+        <li><a href="#--skpi-line-numbers--l">--skpi-line-numbers, -L</a></li>
+        <li><a href="#--socketpath--s-path">--socket=<em>path</em>, -S <em>path</em></a></li>
+        <li><a href="#--ssl">--ssl*</a></li>
+        <li><a href="#--ssl-fips-modeoffonstrict">--ssl-fips-mode={OFF|ON|STRICT}</a></li>
+        <li><a href="#--syslog--j">--syslog, -j</a></li>
+        <li><a href="#--table--t">--table, -t</a></li>
+        <li><a href="#--tee-file_name">--tee-<em>file_name</em></a></li>
+        <li><a href="#--tls-ciphersuitesciphersuite_list">--tls-ciphersuites=<em>ciphersuite_list</em></a></li>
+        <li><a href="#--tls-versionprotocol_list">--tls-version=<em>protocol_list</em></a></li>
+        <li><a href="#--unbuffered--n">--unbuffered, -n</a></li>
+        <li><a href="#--useruser_name--u-user_name">--user=<em>user_name</em>, -u <em>user_name</em></a></li>
+        <li><a href="#--verbose--v">--verbose, -v</a></li>
+        <li><a href="#--version--v">--version, -V</a></li>
+        <li><a href="#--vertical--e">--vertical, -E</a></li>
+        <li><a href="#--wait--w">--wait, -w</a></li>
+        <li><a href="#--xml--x">--xml, -X</a></li>
+        <li><a href="#--zstd-compression-levellevel">--zstd-compression-level=<em>level</em></a></li>
       </ol>
     </li>
+    <li><a href="#mysql-client-commands">mysql Client Commands</a></li>
+    <li><a href="#mysql-client-loggint">mysql Client Loggint</a></li>
+    <li><a href="#mysql-client-server-side-help">mysql Client Server-Side Help</a></li>
+    <li><a href="#executing-sql-statements-from-a-text-file">Executing SQL Statements from a Text File</a></li>
+    <li><a href="#mysql-client-tips">mysql Client Tips</a></li>
   </ol>
 </nav>
         </div>
@@ -406,7 +465,7 @@
 
 
                 <time class="article-time--reading">
-                    17 minute read
+                    45 minute read
                 </time>
             </div>
         
@@ -501,641 +560,641 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">&ndash;auto-rehash</td>
+<td style="text-align:left">--auto-rehash</td>
 <td>Enable automatic rehashing</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;auto-vertical-output</td>
+<td style="text-align:left">--auto-vertical-output</td>
 <td>Enable automatic vertical result set display</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;batch</td>
+<td style="text-align:left">--batch</td>
 <td>Do not use history file</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;binary-as-hex</td>
+<td style="text-align:left">--binary-as-hex</td>
 <td>Display binary values in hexadecimal notation</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;binary-mode</td>
+<td style="text-align:left">--binary-mode</td>
 <td>Disable \r\n - to - \n translation and treatment of \0 as end-of-query</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;bind-address</td>
+<td style="text-align:left">--bind-address</td>
 <td>Use specified network interface to connect to MySQL Server</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;character-sets-dir</td>
+<td style="text-align:left">--character-sets-dir</td>
 <td>Directory where character sets are installed</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;column-names</td>
+<td style="text-align:left">--column-names</td>
 <td>Write column names in results</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;column-type-info</td>
+<td style="text-align:left">--column-type-info</td>
 <td>Display result set metadata</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;comments</td>
+<td style="text-align:left">--comments</td>
 <td>Whether to retain or strip comments in statements sent to the server</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;compress</td>
+<td style="text-align:left">--compress</td>
 <td>Compress all information sent between client and server</td>
 <td></td>
 <td>8.0.18</td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;compression-algorithms</td>
+<td style="text-align:left">--compression-algorithms</td>
 <td>Permitted compression algorithms for connections to server</td>
 <td>8.0.18</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;connect-expired-password</td>
+<td style="text-align:left">--connect-expired-password</td>
 <td>Indicate to server that client can handle expired-password sandbox mode</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;connect-timeout</td>
+<td style="text-align:left">--connect-timeout</td>
 <td>Number of seconds before connection timeout</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;database</td>
+<td style="text-align:left">--database</td>
 <td>The database to use</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;debug</td>
+<td style="text-align:left">--debug</td>
 <td>Write debugging log; supported only if MySQL was built with debugging support</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;debug-check</td>
+<td style="text-align:left">--debug-check</td>
 <td>Print debugging information when program exits</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;debug-info</td>
+<td style="text-align:left">--debug-info</td>
 <td>Print debugging information, memory, and CPU statistics when program exits</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;default-auth</td>
+<td style="text-align:left">--default-auth</td>
 <td>Authentication plugin to use</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;default-character-set</td>
+<td style="text-align:left">--default-character-set</td>
 <td>Specify default character set</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;defaults-extra-file</td>
+<td style="text-align:left">--defaults-extra-file</td>
 <td>Read named option file in addition to usual option files</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;defaults-file</td>
+<td style="text-align:left">--defaults-file</td>
 <td>Read only named option file</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;defaults-group-suffix</td>
+<td style="text-align:left">--defaults-group-suffix</td>
 <td>Option group suffix value</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;delimiter</td>
+<td style="text-align:left">--delimiter</td>
 <td>Set the statement delimiter</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;dns-srv-name</td>
+<td style="text-align:left">--dns-srv-name</td>
 <td>Use DNS SRV lookup for host information</td>
 <td>8.0.22</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;enable-cleartext-plugin</td>
+<td style="text-align:left">--enable-cleartext-plugin</td>
 <td>Enable cleartext authentication plugin</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;execute</td>
+<td style="text-align:left">--execute</td>
 <td>Execute the statement and quit</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;fido-register-factor</td>
+<td style="text-align:left">--fido-register-factor</td>
 <td>Multifactor authentication factors for which registration must be done</td>
 <td>8.0.27</td>
 <td>8.0.35</td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;force</td>
+<td style="text-align:left">--force</td>
 <td>Continue even if an SQL error occurs</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;get-server-public-key</td>
+<td style="text-align:left">--get-server-public-key</td>
 <td>Request RSA public key from server</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;help</td>
+<td style="text-align:left">--help</td>
 <td>Display help message and exit</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;histignore</td>
+<td style="text-align:left">--histignore</td>
 <td>Patterns specifying which statements to ignore for logging</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;host</td>
+<td style="text-align:left">--host</td>
 <td>Host on which MySQL server is located</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;html</td>
+<td style="text-align:left">--html</td>
 <td>Produce HTML output</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;ignore-spaces</td>
+<td style="text-align:left">--ignore-spaces</td>
 <td>Ignore spaces after function names</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;init-command</td>
+<td style="text-align:left">--init-command</td>
 <td>SQL statement to execute after connecting</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;line-numbers</td>
+<td style="text-align:left">--line-numbers</td>
 <td>Write line numbers for errors</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;load-data-local-dir</td>
+<td style="text-align:left">--load-data-local-dir</td>
 <td>Directory for files named in LOAD DATA LOCAL statements</td>
 <td>8.0.21</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;local-infile</td>
+<td style="text-align:left">--local-infile</td>
 <td>Enable or disable for LOCAL capability for LOAD DATA</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;login-path</td>
+<td style="text-align:left">--login-path</td>
 <td>Read login path options from .mylogin.cnf</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;max-allowed-packet</td>
+<td style="text-align:left">--max-allowed-packet</td>
 <td>Maximum packet length to send to or receive from server</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;max-join-size</td>
-<td>The automatic limit for rows in a join when using &ndash;safe-updates</td>
+<td style="text-align:left">--max-join-size</td>
+<td>The automatic limit for rows in a join when using --safe-updates</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;named-commands</td>
+<td style="text-align:left">--named-commands</td>
 <td>Enable named mysql commands</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;net-buffer-length</td>
+<td style="text-align:left">--net-buffer-length</td>
 <td>Buffer size for TCP/IP and socket communication</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;network-namespace</td>
+<td style="text-align:left">--network-namespace</td>
 <td>Specify network namespace</td>
 <td>8.0.22</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;no-auto-rehash</td>
+<td style="text-align:left">--no-auto-rehash</td>
 <td>Disable automatic rehashing</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;no-beep</td>
+<td style="text-align:left">--no-beep</td>
 <td>Do not beep when errors occur</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;no-defaults</td>
+<td style="text-align:left">--no-defaults</td>
 <td>Read no option files</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;oci-config-file</td>
+<td style="text-align:left">--oci-config-file</td>
 <td>Defines an alternate location for the Oracle Cloud Infrastructure CLI configuration file.</td>
 <td>8.0.27</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;one-database</td>
+<td style="text-align:left">--one-database</td>
 <td>Ignore statements except those for the default database named on the command line</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;pager</td>
+<td style="text-align:left">--pager</td>
 <td>Use the given command for paging query output</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;password</td>
+<td style="text-align:left">--password</td>
 <td>Password to use when connecting to server</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;password1</td>
+<td style="text-align:left">--password1</td>
 <td>First multifactor authentication password to use when connecting to server</td>
 <td>8.0.27</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;password2</td>
+<td style="text-align:left">--password2</td>
 <td>Second multifactor authentication password to use when connecting to server</td>
 <td>8.0.27</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;password3</td>
+<td style="text-align:left">--password3</td>
 <td>Third multifactor authentication password to use when connecting to server</td>
 <td>8.0.27</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;pipe</td>
+<td style="text-align:left">--pipe</td>
 <td>Connect to server using named pipe (Windows only)</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;plugin-authentication-kerberos-client-mode</td>
+<td style="text-align:left">--plugin-authentication-kerberos-client-mode</td>
 <td>Permit GSSAPI pluggable authentication through the MIT Kerberos library on Windows</td>
 <td>8.0.32</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;plugin-dir</td>
+<td style="text-align:left">--plugin-dir</td>
 <td>Directory where plugins are installed</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;port</td>
+<td style="text-align:left">--port</td>
 <td>TCP/IP port number for connection</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;print-defaults</td>
+<td style="text-align:left">--print-defaults</td>
 <td>Print default options</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;prompt</td>
+<td style="text-align:left">--prompt</td>
 <td>Set the prompt to the specified format</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;protocol</td>
+<td style="text-align:left">--protocol</td>
 <td>Transport protocol to use</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;quick</td>
+<td style="text-align:left">--quick</td>
 <td>Do not cache each query result</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;raw</td>
+<td style="text-align:left">--raw</td>
 <td>Write column values without escape conversion</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;reconnect</td>
+<td style="text-align:left">--reconnect</td>
 <td>If the connection to the server is lost, automatically try to reconnect</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;safe-updates, &ndash;i-am-a-dummy</td>
+<td style="text-align:left">--safe-updates, --i-am-a-dummy</td>
 <td>Allow only UPDATE and DELETE statements that specify key values</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;select-limit</td>
-<td>The automatic limit for SELECT statements when using &ndash;safe-updates</td>
+<td style="text-align:left">--select-limit</td>
+<td>The automatic limit for SELECT statements when using --safe-updates</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;server-public-key-path</td>
+<td style="text-align:left">--server-public-key-path</td>
 <td>Path name to file containing RSA public key</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;shared-memory-base-name</td>
+<td style="text-align:left">--shared-memory-base-name</td>
 <td>Shared-memory name for shared-memory connections (Windows only)</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;show-warnings</td>
+<td style="text-align:left">--show-warnings</td>
 <td>Show warnings after each statement if there are any</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;sigint-ignore</td>
+<td style="text-align:left">--sigint-ignore</td>
 <td>Ignore SIGINT signals (typically the result of typing Control+C)</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;silent</td>
+<td style="text-align:left">--silent</td>
 <td>Silent mode</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;skip-auto-rehash</td>
+<td style="text-align:left">--skip-auto-rehash</td>
 <td>Disable automatic rehashing</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;skip-column-names</td>
+<td style="text-align:left">--skip-column-names</td>
 <td>Do not write column names in results</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;skip-line-numbers</td>
+<td style="text-align:left">--skip-line-numbers</td>
 <td>Skip line numbers for errors</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;skip-named-commands</td>
+<td style="text-align:left">--skip-named-commands</td>
 <td>Disable named mysql commands</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;skip-pager</td>
+<td style="text-align:left">--skip-pager</td>
 <td>Disable paging</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;skip-reconnect</td>
+<td style="text-align:left">--skip-reconnect</td>
 <td>Disable reconnecting</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;socket</td>
+<td style="text-align:left">--socket</td>
 <td>Unix socket file or Windows named pipe to use</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;ssl-ca</td>
+<td style="text-align:left">--ssl-ca</td>
 <td>File that contains list of trusted SSL Certificate Authorities</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;ssl-capath</td>
+<td style="text-align:left">--ssl-capath</td>
 <td>Directory that contains trusted SSL Certificate Authority certificate files</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;ssl-cert</td>
+<td style="text-align:left">--ssl-cert</td>
 <td>File that contains X.509 certificate</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;ssl-cipher</td>
+<td style="text-align:left">--ssl-cipher</td>
 <td>Permissible ciphers for connection encryption</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;ssl-crl</td>
+<td style="text-align:left">--ssl-crl</td>
 <td>File that contains certificate revocation lists</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;ssl-crlpath</td>
+<td style="text-align:left">--ssl-crlpath</td>
 <td>Directory that contains certificate revocation-list files</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;ssl-fips-mode</td>
+<td style="text-align:left">--ssl-fips-mode</td>
 <td>Whether to enable FIPS mode on client side</td>
 <td></td>
 <td>8.0.34</td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;ssl-key</td>
+<td style="text-align:left">--ssl-key</td>
 <td>File that contains X.509 key</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;ssl-mode</td>
+<td style="text-align:left">--ssl-mode</td>
 <td>Desired security state of connection to server</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;ssl-session-data</td>
+<td style="text-align:left">--ssl-session-data</td>
 <td>File that contains SSL session data</td>
 <td>8.0.29</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;ssl-session-data-continue-on-failed-reuse</td>
+<td style="text-align:left">--ssl-session-data-continue-on-failed-reuse</td>
 <td>Whether to establish connections if session reuse fails</td>
 <td>8.0.29</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;syslog</td>
+<td style="text-align:left">--syslog</td>
 <td>Log interactive statements to syslog</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;table</td>
+<td style="text-align:left">--table</td>
 <td>Display output in tabular format</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;tee</td>
+<td style="text-align:left">--tee</td>
 <td>Append a copy of output to named file</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;tls-ciphersuites</td>
+<td style="text-align:left">--tls-ciphersuites</td>
 <td>Permissible TLSv1.3 ciphersuites for encrypted connections</td>
 <td>8.0.16</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;tls-version</td>
+<td style="text-align:left">--tls-version</td>
 <td>Permissible TLS protocols for encrypted connections</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;unbuffered</td>
+<td style="text-align:left">--unbuffered</td>
 <td>Flush the buffer after each query</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;user</td>
+<td style="text-align:left">--user</td>
 <td>MySQL user name to use when connecting to server</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;verbose</td>
+<td style="text-align:left">--verbose</td>
 <td>Verbose mode</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;version</td>
+<td style="text-align:left">--version</td>
 <td>Display version information and exit</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;vertical</td>
+<td style="text-align:left">--vertical</td>
 <td>Print query output rows vertically (one line per column value)</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;wait</td>
+<td style="text-align:left">--wait</td>
 <td>If the connection cannot be established, wait and retry instead of aborting</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;xml</td>
+<td style="text-align:left">--xml</td>
 <td>Produce XML output</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align:left">&ndash;zstd-compression-level</td>
+<td style="text-align:left">--zstd-compression-level</td>
 <td>Compression level for connections to server that use zstd compression</td>
 <td>8.0.18</td>
 <td></td>
 </tr>
 </tbody>
 </table></div>
-<h3 id="--help--">&ndash;help, -?</h3>
+<h3 id="--help--">--help, -?</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;help</strong></th>
+<th><strong>--help</strong></th>
 </tr>
 </thead>
 </table></div>
 <p>Display a help message and exit.</p>
-<h3 id="--auto-rehash">&ndash;auto-rehash</h3>
+<h3 id="--auto-rehash">--auto-rehash</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;help</strong></th>
+<th><strong>--auto-rehash</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1150,33 +1209,33 @@
 <blockquote>
 <p><strong>Note:</strong> This feature requires a MySQL client that is compiled with the readline library. Typically, the readline library is not available on Windows.</p>
 </blockquote>
-<h3 id="--auto-vertical-output">&ndash;auto-vertical-output</h3>
+<h3 id="--auto-vertical-output">--auto-vertical-output</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;auto-vertical-output</strong></th>
+<th><strong>--auto-vertical-output</strong></th>
 </tr>
 </thead>
 </table></div>
 <p>Cause result sets to be displayed vertically if they are too wide for the current window, and using normal tabular format otherwise. (This applies to statements terminated by ; or \G.)</p>
-<h3 id="--batch--b">&ndash;batch, -B</h3>
+<h3 id="--batch--b">--batch, -B</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;batch</strong></th>
+<th><strong>--batch</strong></th>
 </tr>
 </thead>
 </table></div>
 <p>Print results using tab as the column separator, with each row on a new line. With this option, <strong>mysql</strong> does not use the history file.</p>
 <p>Batch mode results in nontabular output format and escaping of special characters. Escaping may be disabled by using raw mode; see the description for the <code>--raw</code> option.</p>
-<h3 id="--binary-as-hex">&ndash;binary-as-hex</h3>
+<h3 id="--binary-as-hex">--binary-as-hex</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;binary-as-hex</strong></th>
+<th><strong>--binary-as-hex</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1197,7 +1256,7 @@
 <p>When this option is given, <strong>mysql</strong> displays binary data using hexadecimal notation (0x<em>value</em>). This occurs whether the overall output display format is tabular, vertical, HTML, or XML.</p>
 <p><code>--binary-as-hex</code> when enabled affects display of all binary strings, including those returned by functions such as <code>CHAR()</code> and <code>UNHEX()</code>. The following example demonstrates this using the ASCII code for <em>A</em> (65 decimal, 41 hexadecimal):</p>
 <ul>
-<li>&ndash;binary-as-hex disabled:</li>
+<li>--binary-as-hex disabled:</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1218,7 +1277,7 @@
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>&ndash;binary-as-bex enabled:</li>
+<li>--binary-as-bex enabled:</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1291,32 +1350,32 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>To disable hexadecimal notation, use <code>--skip-binary-as-hex</code></p>
-<h3 id="--binary-model">&ndash;binary-model</h3>
+<h3 id="--binary-model">--binary-model</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;binary-mode</strong></th>
+<th><strong>--binary-mode</strong></th>
 </tr>
 </thead>
 </table></div>
 <p>This option helps when processing <strong>mysqlbinlog</strong> output that may contain <code>BLOB</code> values. By default, <strong>mysql</strong> translates \r\n in statement strings to \n and interprets \0 as the statement terminator. <code>--binary-mode</code> disables both features. It also disables all <strong>mysql</strong> commands except <em>charset</em> and <em>delimiter</em> in noninteractive mode (for input piped to <strong>mysql</strong> or loaded using the source command).</p>
-<h3 id="--bind-addressip_address">&ndash;bind-address=<em>ip_address</em></h3>
+<h3 id="--bind-addressip_address">--bind-address=<em>ip_address</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;bind-address=ip_address</strong></th>
+<th><strong>--bind-address=ip_address</strong></th>
 </tr>
 </thead>
 </table></div>
 <p>On a computer having multiple network interfaces, use this option to select which interface to use for connecting to the MySQL server.</p>
-<h3 id="--character-sets-dirdir_name">&ndash;character-sets-dir=<code>dir_name</code></h3>
+<h3 id="--character-sets-dirdir_name">--character-sets-dir=<code>dir_name</code></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;character-sets-dir=dir_name</strong></th>
+<th><strong>--character-sets-dir=dir_name</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1328,33 +1387,33 @@
 </table></div>
 <p>The directory where character sets are installed. See []&ldquo;Character Set Configuration&rdquo;](<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/charset-configuration.html%29"  target="_blank" rel="noopener"
     >https://dev.mysql.com/doc/refman/8.0/en/charset-configuration.html)</a>.</p>
-<h3 id="--column-names">&ndash;column-names</h3>
+<h3 id="--column-names">--column-names</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;column-names</strong></th>
+<th><strong>--column-names</strong></th>
 </tr>
 </thead>
 </table></div>
 <p>Write column names in results.</p>
-<h3 id="--column-type-info">&ndash;column-type-info</h3>
+<h3 id="--column-type-info">--column-type-info</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;column-type-info</strong></th>
+<th><strong>--column-type-info</strong></th>
 </tr>
 </thead>
 </table></div>
 <p>Display result set metadata. This information corresponds to the contents of C API <em>MYSQL_FIELD</em> data structures. See <a class="link" href="https://dev.mysql.com/doc/c-api/8.0/en/c-api-data-structures.html"  target="_blank" rel="noopener"
     >C API Basic Data Structures</a>.</p>
-<h3 id="--comments--c">&ndash;comments, -c</h3>
+<h3 id="--comments--c">--comments, -c</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;comments</strong></th>
+<th><strong>--comments</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1372,12 +1431,12 @@
 <blockquote>
 <p><strong>Note:</strong> The <strong>mysql</strong> client always passes optimizer hints to the server, regardless of whether this option is given. Comment stripping is deprecated. Expect this feature and the options to control it to be removed in a future MySQL release.</p>
 </blockquote>
-<h3 id="--compress--c">&ndash;compress, -C</h3>
+<h3 id="--compress--c">--compress, -C</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;compress[={OFF|ON}]</strong></th>
+<th><strong>--compress[={OFF|ON}]</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1399,12 +1458,12 @@
     >&ldquo;Connection Compression Control&rdquo;</a>.</p>
 <p>As of MySQL 8.0.18, this option is deprecated. Expect it to be removed in a future version of MySQL. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/connection-compression-control.html#connection-compression-legacy-configuration"  target="_blank" rel="noopener"
     >Configuring Legacy Connection Compression</a>.</p>
-<h3 id="--compression-algorithmsvalue">&ndash;compression-algorithms=<em>value</em></h3>
+<h3 id="--compression-algorithmsvalue">--compression-algorithms=<em>value</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;compression-algorithms=value</strong></th>
+<th><strong>--compression-algorithms=value</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1430,23 +1489,23 @@
 <p>For more information, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/connection-compression-control.html"  target="_blank" rel="noopener"
     >&ldquo;Connection Compression Control&rdquo;</a>.</p>
 <p>This option was added in MySQL 8.0.18.</p>
-<h3 id="--connect-expired-password">&ndash;connect-expired-password</h3>
+<h3 id="--connect-expired-password">--connect-expired-password</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;connect-expired-password</strong></th>
+<th><strong>--connect-expired-password</strong></th>
 </tr>
 </thead>
 </table></div>
 <p>Indicate to the server that the client can handle sandbox mode if the account used to connect has an expired password. This can be useful for noninteractive invocations of <strong>mysql</strong> because normally the server disconnects noninteractive clients that attempt to connect using an account with an expired password. (See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/expired-password-handling.html"  target="_blank" rel="noopener"
     >&ldquo;Server Handling of Expired Passwords&rdquo;</a>.)</p>
-<h3 id="--connect-timeoutvalue">&ndash;connect-timeout=<em>value</em></h3>
+<h3 id="--connect-timeoutvalue">--connect-timeout=<em>value</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;connect-timeout=value</strong></th>
+<th><strong>--connect-timeout=value</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1461,12 +1520,12 @@
 </tbody>
 </table></div>
 <p>The number of seconds before connection timeout. (Default value is 0.)</p>
-<h3 id="--databasedb_name--d-db_name">&ndash;database=<em>db_name</em>, -D <em>db_name</em></h3>
+<h3 id="--databasedb_name--d-db_name">--database=<em>db_name</em>, -D <em>db_name</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;database=dbname</strong></th>
+<th><strong>--database=dbname</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1477,12 +1536,12 @@
 </tbody>
 </table></div>
 <p>The database to use. This is useful primarily in an option file.</p>
-<h3 id="--debug-debug_options---debug_options">&ndash;debug [=<em>debug_options</em>], -# [<em>debug_options</em>]</h3>
+<h3 id="--debug-debug_options---debug_options">--debug [=<em>debug_options</em>], -# [<em>debug_options</em>]</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;debug[=debug_options]</strong></th>
+<th><strong>--debug[=debug_options]</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1498,12 +1557,12 @@
 </table></div>
 <p>Write a debugging log. A typical <em>debug_options</em> string is d:t:o,<em>file_name</em>. The default is d:t:o,/tmp/mysql.trace.</p>
 <p>This option is available only if MySQL was built using <code>WITH_DEBUG</code>. MySQL release binaries provided by Oracle are not built using this option.</p>
-<h3 id="--debug-check">&ndash;debug-check</h3>
+<h3 id="--debug-check">--debug-check</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;debug-check</strong></th>
+<th><strong>--debug-check</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1519,12 +1578,12 @@
 </table></div>
 <p>Print some debugging information when the program exits.</p>
 <p>This option is available only if MySQL was built using <code>WITH_DEBUG</code>. MySQL release binaries provided by Oracle are not built using this option.</p>
-<h3 id="--debug-info--t">&ndash;debug-info, -T</h3>
+<h3 id="--debug-info--t">--debug-info, -T</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;debug-info</strong></th>
+<th><strong>--debug-info</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1540,12 +1599,12 @@
 </table></div>
 <p>Print debugging information and memory and CPU usage statistics when the program exits.</p>
 <p>This option is available only if MySQL was built using <code>WITH_DEBUG</code>. MySQL release binaries provided by Oracle are not built using this option.</p>
-<h3 id="--default-authplugin">&ndash;default-auth=<em>plugin</em></h3>
+<h3 id="--default-authplugin">--default-auth=<em>plugin</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;default-auth=plugin</strong></th>
+<th><strong>--default-auth=plugin</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1557,12 +1616,12 @@
 </table></div>
 <p>A hint about which client-side authentication plugin to use. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication.html"  target="_blank" rel="noopener"
     >&ldquo;Pluggable Authentication&rdquo;</a>.</p>
-<h3 id="--default-character-setcharset_name">&ndash;default-character-set=<em>charset_name</em></h3>
+<h3 id="--default-character-setcharset_name">--default-character-set=<em>charset_name</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;default-character-set=charset_name</strong></th>
+<th><strong>--default-character-set=charset_name</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1577,12 +1636,12 @@
 <p>For more information, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/charset-connection.html"  target="_blank" rel="noopener"
     >&ldquo;Connection Character Sets and Collations&rdquo;</a>, and <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/charset-configuration.html"  target="_blank" rel="noopener"
     >&ldquo;Character Set Configuration&rdquo;</a>.</p>
-<h3 id="--defaults-extra-filefile-name">&ndash;defaults-extra-file=<em>file-name</em></h3>
+<h3 id="--defaults-extra-filefile-name">--defaults-extra-file=<em>file-name</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;defaults-extra-file=file_name</strong></th>
+<th><strong>--defaults-extra-file=file_name</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1595,12 +1654,12 @@
 <p>Read this option file after the global option file but (on Unix) before the user option file. If the file does not exist or is otherwise inaccessible, an error occurs. If <em>file_name</em> is not an absolute path name, it is interpreted relative to the current directory.</p>
 <p>For additional information about this and other option-file options, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/option-file-options.html"  target="_blank" rel="noopener"
     >&ldquo;Command-Line Options that Affect Option-File Handling&rdquo;</a>.</p>
-<h3 id="--defaults-filefile_name">&ndash;defaults-file=<em>file_name</em></h3>
+<h3 id="--defaults-filefile_name">--defaults-file=<em>file_name</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;defaults-file=file_name</strong></th>
+<th><strong>--defaults-file=file_name</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1614,12 +1673,12 @@
 <p>Exception: Even with <code>--defaults-file</code>, client programs read .mylogin.cnf.</p>
 <p>For additional information about this and other option-file options, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/option-file-options.html"  target="_blank" rel="noopener"
     >&ldquo;Command-Line Options that Affect Option-File Handling&rdquo;</a>.</p>
-<h3 id="--defaults-group-suffixstr">&ndash;defaults-group-suffix=<em>str</em></h3>
+<h3 id="--defaults-group-suffixstr">--defaults-group-suffix=<em>str</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;defaults-group-suffix=str</strong></th>
+<th><strong>--defaults-group-suffix=str</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1632,12 +1691,12 @@
 <p>Read not only the usual option groups, but also groups with the usual names and a suffix of str. For example, <strong>mysql</strong> normally reads the <code>[client]</code> and <code>[mysql]</code> groups. If this option is given as <code>--defaults-group-suffix=_other</code>, <strong>mysql</strong> also reads the [client_other] and <code>[mysql_other]</code> groups.</p>
 <p>For additional information about this and other option-file options, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/option-file-options.html"  target="_blank" rel="noopener"
     >&ldquo;Command-Line Options that Affect Option-File Handling&rdquo;</a>.</p>
-<h3 id="--delimiterstr">&ndash;delimiter=<em>str</em></h3>
+<h3 id="--delimiterstr">--delimiter=<em>str</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;delimiter=str</strong></th>
+<th><strong>--delimiter=str</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1652,15 +1711,15 @@
 </tbody>
 </table></div>
 <p>Set the statement delimiter. The default is the semicolon character (;).</p>
-<h3 id="--disable-named-commands">&ndash;disable-named-commands</h3>
+<h3 id="--disable-named-commands">--disable-named-commands</h3>
 <p>Disable named commands. Use the \* form only, or use named commands only at the beginning of a line ending with a semicolon (;). <strong>mysql</strong> starts with this option <em>enabled</em> by default. However, even with this option, long-format commands still work from the first line. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html"  target="_blank" rel="noopener"
     >&ldquo;mysql Client Commands&rdquo;</a>.</p>
-<h3 id="--dns-srv-namename">&ndash;dns-srv-name=<em>name</em></h3>
+<h3 id="--dns-srv-namename">--dns-srv-name=<em>name</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;dns-srv-name=name</strong></th>
+<th><strong>--dns-srv-name=name</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1706,12 +1765,12 @@
 <p>When invoked with <code>--dns-srv-name</code>, <strong>mysql</strong> attempts to establish TCP connections only.</p>
 <p>The <code>--dns-srv-name</code> option takes precedence over the <code>--host</code> option if both are given. <code>--dns-srv-name</code> causes connection establishment to use the <code>mysql_real_connect_dns_srv()</code> C API function rather than <code>mysql_real_connect()</code>. However, if the <em>connect</em> command is subsequently used at runtime and specifies a host name argument, that host name takes precedence over any <code>--dns-srv-name</code> option given at <strong>mysql</strong> startup to specify a DNS SRV record.</p>
 <p>This option was added in MySQL 8.0.22.</p>
-<h3 id="--enable-cleartext-plugin">&ndash;enable-cleartext-plugin</h3>
+<h3 id="--enable-cleartext-plugin">--enable-cleartext-plugin</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;enable-cleartext-plugin</strong></th>
+<th><strong>--enable-cleartext-plugin</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1727,12 +1786,12 @@
 </table></div>
 <p>Enable the <em>mysql_clear_password</em> cleartext authentication plugin. (See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/cleartext-pluggable-authentication.html"  target="_blank" rel="noopener"
     >&ldquo;Client-Side Cleartext Pluggable Authentication&rdquo;</a>.)</p>
-<h3 id="--executestatement--e-statement">&ndash;execute=<em>statement</em>, -e <em>statement</em></h3>
+<h3 id="--executestatement--e-statement">--execute=<em>statement</em>, -e <em>statement</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;execute=statement</strong></th>
+<th><strong>--execute=statement</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1744,12 +1803,12 @@
 </table></div>
 <p>Execute the statement and quit. The default output format is like that produced with <code>--batch</code>. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/command-line-options.html"  target="_blank" rel="noopener"
     >&ldquo;Using Options on the Command Line&rdquo;</a>, for some examples. With this option, <strong>mysql</strong> does not use the history file.</p>
-<h3 id="--fido-register-factorvalue">&ndash;fido-register-factor=<em>value</em></h3>
+<h3 id="--fido-register-factorvalue">--fido-register-factor=<em>value</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;fido-register-factor=value</strong></th>
+<th><strong>--fido-register-factor=value</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1815,22 +1874,22 @@
 <p>The <code>--fido-register-factor</code> option is only available for the <strong>mysql</strong> client and MySQL Shell. Other MySQL client programs do not support it.</p>
 <p>For related information, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/fido-pluggable-authentication.html#fido-pluggable-authentication-usage"  target="_blank" rel="noopener"
     >&ldquo;Using FIDO Authentication&rdquo;</a>.</p>
-<h3 id="force--f">force, -f</h3>
+<h3 id="--force--f">--force, -f</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;force</strong></th>
+<th><strong>--force</strong></th>
 </tr>
 </thead>
 </table></div>
 <p>Continue even if an SQL error occurs.</p>
-<h3 id="--get-server-public-key">&ndash;get-server-public-key</h3>
+<h3 id="--get-server-public-key">--get-server-public-key</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;get-server-public-key</strong></th>
+<th><strong>--get-server-public-key</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1844,12 +1903,12 @@
 <p>If <code>--server-public-key-path=file_name</code> is given and specifies a valid public key file, it takes precedence over <code>--get-server-public-key</code>.</p>
 <p>For information about the <em>caching_sha2_password</em> plugin, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/caching-sha2-pluggable-authentication.html"  target="_blank" rel="noopener"
     >&ldquo;Caching SHA-2 Pluggable Authentication&rdquo;</a>.</p>
-<h3 id="--histignore">&ndash;histignore</h3>
+<h3 id="--histignore">--histignore</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;histignore=pattern_list</strong></th>
+<th><strong>--histignore=pattern_list</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1861,12 +1920,12 @@
 </table></div>
 <p>A list of one or more colon-separated patterns specifying statements to ignore for logging purposes. These patterns are added to the default pattern list (&quot;*IDENTIFIED*:*PASSWORD*&quot;). The value specified for this option affects logging of statements written to the history file, and to syslog if the <code>--syslog</code> option is given. For more information, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html"  target="_blank" rel="noopener"
     >&ldquo;mysql Client Logging&rdquo;</a>.</p>
-<h3 id="--hosthost_name--h-host_name">&ndash;host=<em>host_name</em>, -h <em>host_name</em></h3>
+<h3 id="--hosthost_name--h-host_name">--host=<em>host_name</em>, -h <em>host_name</em></h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;host=host_name</strong></th>
+<th><strong>--host=host_name</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -1882,16 +1941,1590 @@
 </table></div>
 <p>Connect to the MySQL server on the given host.</p>
 <p>The <code>--dns-srv-name</code> option takes precedence over the <code>--host</code> option if both are given. <code>--dns-srv-name</code> causes connection establishment to use the <code>mysql_real_connect_dns_srv()</code> C API function rather than <code>mysql_real_connect()</code>. However, if the connect command is subsequently used at runtime and specifies a host name argument, that host name takes precedence over any <code>--dns-srv-name</code> option given at <strong>mysql</strong> startup to specify a DNS SRV record.</p>
-<h3 id="--html--h">&ndash;html, -H</h3>
+<h3 id="--html--h">--html, -H</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:left"><strong>Command-Line Format</strong></th>
-<th><strong>&ndash;html</strong></th>
+<th><strong>--html</strong></th>
 </tr>
 </thead>
 </table></div>
 <p>Produce HTML output.</p>
+<h3 id="--ignore-spaces--i">--ignore-spaces, -i</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--ignore-spaces</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>Ignore spaces after function names. The effect of this is described in the discussion for the <code>IGNORE_SPACE</code> SQL mode (see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/sql-mode.html"  target="_blank" rel="noopener"
+    >&ldquo;Server SQL Modes&rdquo;</a>).</p>
+<h3 id="--init-commandstr">--init-command=str</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--init-command=str</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>SQL statement to execute after connecting to the server. If auto-reconnect is enabled, the statement is executed again after reconnection occurs.</p>
+<h3 id="--line-numbers">--line-numbers</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--line-numbers</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Disabled by</strong></td>
+<td><strong>skip-line-numbers</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Write line numbers for errors. Disable this with <code>--skip-line-numbers</code>.</p>
+<h3 id="--load-data-local-dirdir_name">--load-data-local-dir=<em>dir_name</em></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--load-data-local-dir=dir_name</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Introduced</strong></td>
+<td><strong>8.0.21</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>Directory name</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Default Value</strong></td>
+<td><strong>empty string</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>This option affects the client-side LOCAL capability for <code>LOAD DATA</code> operations. It specifies the directory in which files named in <code>LOAD DATA LOCAL</code> statements must be located. The effect of <code>--load-data-local-dir</code> depends on whether LOCAL data loading is enabled or disabled:</p>
+<ul>
+<li>
+<p>If LOCAL data loading is enabled, either by default in the MySQL client library or by specifying <code>--local-infile[=1]</code>, the <code>--load-data-local-dir</code> option is ignored.</p>
+</li>
+<li>
+<p>If LOCAL data loading is disabled, either by default in the MySQL client library or by specifying <code>--local-infile=0</code>, the <code>--load-data-local-dir</code> option applies.</p>
+</li>
+</ul>
+<p>When <code>--load-data-local-dir</code> applies, the option value designates the directory in which local data files must be located. Comparison of the directory path name and the path name of files to be loaded is case-sensitive regardless of the case sensitivity of the underlying file system. If the option value is the empty string, it names no directory, with the result that no files are permitted for local data loading.</p>
+<p>For example, to explicitly disable local data loading except for files located in the <em>/my/local/data</em> directory, invoke <strong>mysql</strong> like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">mysql</span> <span class="o">--</span><span class="n">local</span><span class="o">-</span><span class="n">infile</span><span class="o">=</span><span class="mi">0</span> <span class="o">--</span><span class="nb">load</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">local</span><span class="o">-</span><span class="n">dir</span><span class="o">=/</span><span class="n">my</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">data</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>When both <code>--local-infile</code> and <code>--load-data-local-dir</code> are given, the order in which they are given does not matter.</p>
+<p>Successful use of LOCAL load operations within <strong>mysql</strong> also requires that the server permits local loading; see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/load-data-local-security.html"  target="_blank" rel="noopener"
+    >&ldquo;Security Considerations for LOAD DATA LOCAL&rdquo;</a></p>
+<p>The <code>--load-data-local-dir</code> option was added in MySQL 8.0.21.</p>
+<h3 id="--local-infile01">--local-infile[={0|1}]</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--local-infile[={0|1}]</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>Boolean</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Default Value</strong></td>
+<td><strong>FALSE</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>By default, LOCAL capability for <code>LOAD DATA</code> is determined by the default compiled into the MySQL client library. To enable or disable LOCAL data loading explicitly, use the <code>--local-infile</code> option. When given with no value, the option enables LOCAL data loading. When given as <code>--local-infile=0</code> or <code>--local-infile=1</code>, the option disables or enables LOCAL data loading.</p>
+<p>If LOCAL capability is disabled, the <code>--load-data-local-dir</code> option can be used to permit restricted local loading of files located in a designated directory.</p>
+<p>Successful use of LOCAL load operations within <strong>mysql</strong> also requires that the server permits local loading; see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/load-data-local-security.html"  target="_blank" rel="noopener"
+    >&ldquo;Security Considerations for LOAD DATA LOCAL&rdquo;</a></p>
+<h3 id="--login-pathname">--login-path=<em>name</em></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--login-path=name</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>String</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Read options from the named login path in the <em>.mylogin.cnf</em> login path file. A &ldquo;login path&rdquo; is an option group containing options that specify which MySQL server to connect to and which account to authenticate as. To create or modify a login path file, use the <strong>mysql_config_editor</strong> utility. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-config-editor.html"  target="_blank" rel="noopener"
+    >&ldquo;mysql_config_editor — MySQL Configuration Utility&rdquo;</a>.</p>
+<p>For additional information about this and other option-file options, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/option-file-options.html"  target="_blank" rel="noopener"
+    >&ldquo;Command-Line Options that Affect Option-File Handling&rdquo;</a>.</p>
+<h3 id="--max-allowed-packetvalue">--max-allowed-packet=<em>value</em></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--max-allowed-packet=value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>Numeric</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Default Value</strong></td>
+<td><strong>16777216</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>The maximum size of the buffer for client/server communication. The default is 16MB, the maximum is 1GB.</p>
+<h3 id="--max-join-sizevalue">--max-join-size=<em>value</em></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--max-join-size=value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>Numeric</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Default Value</strong></td>
+<td><strong>1000000</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>The automatic limit for rows in a join when using <code>--safe-updates</code>. (Default value is 1,000,000.)</p>
+<h3 id="--named-commands--g">--named-commands, -G</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--named-commands</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Disabled by</strong></td>
+<td><strong>skip-named-commands</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Enable named <strong>mysql</strong> commands. Long-format commands are permitted, not just short-format commands. For example, <code>quit</code> and <code>\q</code> both are recognized. Use <code>--skip-named-commands</code> to disable named commands.
+See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html"  target="_blank" rel="noopener"
+    >&ldquo;mysql Client Commands&rdquo;</a>.</p>
+<h3 id="--net-buffer-lengthvalue">--net-buffer-length=<em>value</em></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--net-buffer-length=value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>Numeric</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Default Value</strong></td>
+<td><strong>16384</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>The buffer size for TCP/IP and socket communication. (Default value is 16KB.)</p>
+<h3 id="--network-namespacename">--network-namespace=<em>name</em></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--network-namespace=name</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Introduced</strong></td>
+<td><strong>8.0.22</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>String</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>The network namespace to use for TCP/IP connections. If omitted, the connection uses the default (global) namespace. For information about network namespaces, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/network-namespace-support.html"  target="_blank" rel="noopener"
+    >&ldquo;Network Namespace Support&rdquo;</a>.</p>
+<p>This option was added in MySQL 8.0.22. It is available only on platforms that implement network namespace support.</p>
+<h3 id="--no-auto-rehash--a">--no-auto-rehash, -A</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--no-auto-rehash</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Deprecated</strong></td>
+<td><strong>Yes</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>This has the same effect as <code>--skip-auto-rehash</code>. See the description for <code>--auto-rehash</code>.</p>
+<h3 id="--no-beep--b">--no-beep, -b</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--no-beep</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>Do not beep when errors occur.</p>
+<h3 id="--no-defaults">--no-defaults</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--no-defaults</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>Do not read any option files. If program startup fails due to reading unknown options from an option file, <code>--no-defaults</code> can be used to prevent them from being read.</p>
+<p>The exception is that the <em>.mylogin.cnf</em> file is read in all cases, if it exists. This permits passwords to be specified in a safer way than on the command line even when <code>--no-defaults</code> is used. To create <em>.mylogin.cnf</em>, use the <strong>mysql_config_editor</strong> utility. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-config-editor.html"  target="_blank" rel="noopener"
+    >&ldquo;mysql_config_editor — MySQL Configuration Utility&rdquo;</a>.</p>
+<p>For additional information about this and other option-file options, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/option-file-options.html"  target="_blank" rel="noopener"
+    >&ldquo;Command-Line Options that Affect Option-File Handling&rdquo;</a>.</p>
+<h3 id="--one-database--o">--one-database, -o</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--one-database</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>Ignore statements except those that occur while the default database is the one named on the command line. This option is rudimentary and should be used with care. Statement filtering is based only on <code>USE</code> statements.</p>
+<p>Initially, <strong>mysql</strong> executes statements in the input because specifying a database <em>db_name</em> on the command line is equivalent to inserting <code>USE db_name</code> at the beginning of the input. Then, for each <code>USE</code> statement encountered, <strong>mysql</strong> accepts or rejects following statements depending on whether the database named is the one on the command line. The content of the statements is immaterial.</p>
+<p>Suppose that <strong>mysql</strong> is invoked to process this set of statements:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">db2</span><span class="p">.</span><span class="n">t2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">USE</span><span class="w"> </span><span class="n">db2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">db1</span><span class="p">.</span><span class="n">t1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">db1</span><span class="p">.</span><span class="n">t1</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="nb">INT</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">USE</span><span class="w"> </span><span class="n">db1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">t1</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">db2</span><span class="p">.</span><span class="n">t1</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="nb">INT</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>If the command line is <strong>mysql --force --one-database db1</strong>, <strong>mysql</strong> handles the input as follows:</p>
+<ul>
+<li>
+<p>The <code>DELETE</code> statement is executed because the default database is db1, even though the statement names a table in a different database.</p>
+</li>
+<li>
+<p>The <code>DROP TABLE</code> and <code>CREATE TABLE</code> statements are not executed because the default database is not db1, even though the statements name a table in db1.</p>
+</li>
+<li>
+<p>The <code>INSERT</code> and <code>CREATE TABLE</code> statements are executed because the default database is db1, even though the <code>CREATE TABLE</code> statement names a table in a different database.</p>
+</li>
+</ul>
+<h3 id="--pagercommand">--pager[=<em>command</em>]</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--pager[=command]</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Disabled by</strong></td>
+<td><strong>skip-pager</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>String</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Use the given command for paging query output. If the command is omitted, the default pager is the value of your <em>PAGER</em> environment variable. Valid pagers are <strong>less</strong>, <strong>more</strong>, <strong>cat [&gt; filename]</strong>, and so forth. This option works only on Unix and only in interactive mode. To disable paging, use <code>--skip-pager</code>. Section <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html"  target="_blank" rel="noopener"
+    >&ldquo;mysql Client Commands&rdquo;</a>, discusses output paging further.</p>
+<h3 id="--passwordpassword--p-password">--password[=<em>password</em>], -p [<em>password</em>]</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--password[=password]</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>String</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>The password of the MySQL account used for connecting to the server. The password value is optional. If not given, <strong>mysql</strong> prompts for one. If given, there must be <em>no space</em> between <code>--password=</code> or <code>-p</code> and the password following it. If no password option is specified, the default is to send no password.</p>
+<p>Specifying a password on the command line should be considered insecure. To avoid giving the password on the command line, use an option file. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/password-security-user.html"  target="_blank" rel="noopener"
+    >&ldquo;End-User Guidelines for Password Security&rdquo;</a>.</p>
+<p>To explicitly specify that there is no password and that <strong>mysql</strong> should not prompt for one, use the <code>--skip-password</code> option.</p>
+<h3 id="--password1pass_val">--password1[=<em>pass_val</em>]</h3>
+<p>The password for multifactor authentication factor 1 of the MySQL account used for connecting to the server. The password value is optional. If not given, <strong>mysql</strong> prompts for one. If given, there must be no space between <code>--password1=</code> and the password following it. If no password option is specified, the default is to send no password.</p>
+<p>Specifying a password on the command line should be considered insecure. To avoid giving the password on the command line, use an option file. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/password-security-user.html"  target="_blank" rel="noopener"
+    >&ldquo;End-User Guidelines for Password Security&rdquo;</a>.</p>
+<p>To explicitly specify that there is no password and that <strong>mysql</strong> should not prompt for one, use the <code>--skip-password1</code> option.</p>
+<p><code>--password1</code> and <code>--password</code> are synonymous, as are <code>--skip-password1</code> and <code>--skip-password</code>.</p>
+<h3 id="--password2pass_val">--password2[=<em>pass_val</em>]</h3>
+<p>The password for multifactor authentication factor 2 of the MySQL account used for connecting to the server. The semantics of this option are similar to the semantics for <code>--password1</code>; see the description of that option for details.</p>
+<h3 id="--password3pass_val">--password3[=<em>pass_val</em>]</h3>
+<p>The password for multifactor authentication factor 3 of the MySQL account used for connecting to the server. The semantics of this option are similar to the semantics for <code>--password1</code>; see the description of that option for details.</p>
+<h3 id="--pipe--w">--pipe, -W</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--pipe</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>String</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>On Windows, connect to the server using a named pipe. This option applies only if the server was started with the <code>named_pipe</code> system variable enabled to support named-pipe connections. In addition, the user making the connection must be a member of the Windows group specified by the <code>named_pipe_full_access_group</code> system variable.</p>
+<h3 id="--plugin-authentication-kerberos-client-modevalue">--plugin-authentication-kerberos-client-mode=<em>value</em></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--plugin-authentication-kerberos-client-mode</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Introduced</strong></td>
+<td><strong>8.0.32</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>String</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Default Value</strong></td>
+<td><strong>SSPI</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Valid Values</strong></td>
+<td><strong>GSSAPI / SSPI</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>On Windows, the <em>authentication_kerberos_client</em> authentication plugin supports this plugin option. It provides two possible values that the client user can set at runtime: <em>SSPI</em> and <em>GSSAPI</em>.</p>
+<p>The default value for the client-side plugin option uses Security Support Provider Interface (SSPI), which is capable of acquiring credentials from the Windows in-memory cache. Alternatively, the client user can select a mode that supports Generic Security Service Application Program Interface (GSSAPI) through the MIT Kerberos library on Windows. GSSAPI is capable of acquiring cached credentials previously generated by using the <strong>kinit</strong> command.</p>
+<p>For more information, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/kerberos-pluggable-authentication.html#kerberos-usage-win-gssapi-client-commands"  target="_blank" rel="noopener"
+    >Commands for Windows Clients in GSSAPI Mode</a>.</p>
+<h3 id="--plugin-dirdir_name">--plugin-dir=<em>dir_name</em></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--plugin-dir=dir_name</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>Directory name</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>The directory in which to look for plugins. Specify this option if the <code>--default-auth</code> option is used to specify an authentication plugin but <strong>mysql</strong> does not find it. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/pluggable-authentication.html"  target="_blank" rel="noopener"
+    >&ldquo;Pluggable Authentication&rdquo;</a>.</p>
+<h3 id="--portport_num--p-port_num">--port=<em>port_num</em>, -P <em>port_num</em></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--port=port_num</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>Numeric</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Default Value</strong></td>
+<td><strong>3306</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>For TCP/IP connections, the port number to use.</p>
+<h3 id="--print-defaults">--print-defaults</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--print-defaults</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>Print the program name and all options that it gets from option files.</p>
+<p>For additional information about this and other option-file options, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/option-file-options.html"  target="_blank" rel="noopener"
+    >&ldquo;Command-Line Options that Affect Option-File Handling&rdquo;</a>.</p>
+<h3 id="--protocoltcpsocketpipememory">--protocol={TCP|SOCKET|PIPE|MEMORY}</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--protocol=type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>String</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Default Value</strong></td>
+<td><strong>[see text]</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Valid Values</strong></td>
+<td><strong>TCP / SOCKET / PIPE / MEMORY</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>The transport protocol to use for connecting to the server. It is useful when the other connection parameters normally result in use of a protocol other than the one you want. For details on the permissible values, see Section <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/transport-protocols.html"  target="_blank" rel="noopener"
+    >&ldquo;Connection Transport Protocols&rdquo;</a>.</p>
+<h3 id="--quick--q">--quick, -q</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--quick</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>Do not cache each query result, print each row as it is received. This may slow down the server if the output is suspended. With this option, <strong>mysql</strong> does not use the history file.</p>
+<h3 id="--raw--r">--raw, -r</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--raw</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>For tabular output, the “boxing” around columns enables one column value to be distinguished from another. For nontabular output (such as is produced in batch mode or when the <code>--batch</code> or <code>--silent</code> option is given), special characters are escaped in the output so they can be identified easily. Newline, tab, NUL, and backslash are written as \n, \t, \0, and \\. The <code>--raw</code> option disables this character escaping.</p>
+<p>The following example demonstrates tabular versus nontabular output and the use of raw mode to disable escaping:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="o">%</span><span class="w"> </span><span class="n">mysql</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">92</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+</span><span class="c1">----------+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">|</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">92</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+</span><span class="c1">----------+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">|</span><span class="w"> </span><span class="err">\</span><span class="w">        </span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+</span><span class="c1">----------+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">%</span><span class="w"> </span><span class="n">mysql</span><span class="w"> </span><span class="o">-</span><span class="n">s</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">92</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">92</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">\\</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">%</span><span class="w"> </span><span class="n">mysql</span><span class="w"> </span><span class="o">-</span><span class="n">s</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">92</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">92</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">\</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="--reconnect">--reconnect</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--reconnect</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Disabled by</strong></td>
+<td><strong>skip-reconnect</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>If the connection to the server is lost, automatically try to reconnect. A single reconnect attempt is made each time the connection is lost. To suppress reconnection behavior, use <code>--skip-reconnect</code>.</p>
+<h3 id="--asfe-updates---i-am-a-dummy--u">--asfe-updates, --i-am-a-dummy, -U</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--safe-updates / --i-am-a-dummy</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>Boolean</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Default Value</strong></td>
+<td><strong>FALSE</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>If this option is enabled, <code>UPDATE</code> and <code>DELETE</code> statements that do not use a key in the WHERE clause or a <code>LIMIT</code> clause produce an error. In addition, restrictions are placed on <code>SELECT</code> statements that produce (or are estimated to produce) very large result sets. If you have set this option in an option file, you can use <code>--skip-safe-updates</code> on the command line to override it. For more information about this option, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-tips.html#safe-updates"  target="_blank" rel="noopener"
+    >Using Safe-Updates Mode (&ndash;safe-updates)</a>.</p>
+<h3 id="--select-limitvalue">--select-limit=<em>value</em></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--select-limit=value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>Numeric</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Default Value</strong></td>
+<td><strong>1000</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>The automatic limit for <code>SELECT</code> statements when using <code>--safe-updates</code>. (Default value is 1,000.)</p>
+<h3 id="--server-public-key-pathfile_name">--server-public-key-path=<em>file_name</em></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--server-public-key-path=file_name</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>File name</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>The path name to a file in PEM format containing a client-side copy of the public key required by the server for RSA key pair-based password exchange. This option applies to clients that authenticate with the <em>sha256_password</em> or <em>caching_sha2_password</em> authentication plugin. This option is ignored for accounts that do not authenticate with one of those plugins. It is also ignored if RSA-based password exchange is not used, as is the case when the client connects to the server using a secure connection.</p>
+<p>If <code>--server-public-key-path=file_name</code> is given and specifies a valid public key file, it takes precedence over <code>--get-server-public-key</code>.</p>
+<p>For <em>sha256_password</em>, this option applies only if MySQL was built using OpenSSL.</p>
+<p>For information about the <em>sha256_password</em> and <em>caching_sha2_password</em> plugins, see Section <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/sha256-pluggable-authentication.html"  target="_blank" rel="noopener"
+    >&ldquo;SHA-256 Pluggable Authentication&rdquo;</a>, and <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/caching-sha2-pluggable-authentication.html"  target="_blank" rel="noopener"
+    >&ldquo;Caching SHA-2 Pluggable Authentication&rdquo;</a>.</p>
+<h3 id="--shared-memory-base-namename">--shared-memory-base-name=<em>name</em></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--shared-memory-base-name=name</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Platform Specific</strong></td>
+<td><strong>Windows</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>On Windows, the shared-memory name to use for connections made using shared memory to a local server. The default value is MYSQL. The shared-memory name is case-sensitive.</p>
+<p>This option applies only if the server was started with the <code>shared_memory</code> system variable enabled to support shared-memory connections.</p>
+<h3 id="--show-warnings">--show-warnings</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--show-warnings</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>Cause warnings to be shown after each statement if there are any. This option applies to interactive and batch mode.</p>
+<h3 id="--sigint-ignore">--sigint-ignore</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--sigint-ignore</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>Ignore SIGINT signals (typically the result of typing <strong>Control+C</strong>).</p>
+<p>Without this option, typing <strong>Control+C</strong> interrupts the current statement if there is one, or cancels any partial input line otherwise.</p>
+<h3 id="--silent--s">--silent, -s</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--silent</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>Silent mode. Produce less output. This option can be given multiple times to produce less and less output.</p>
+<p>This option results in nontabular output format and escaping of special characters. Escaping may be disabled by using raw mode; see the description for the <code>--raw</code> option.</p>
+<h3 id="--skip-column-names--n">--skip-column-names, -N</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--skip-column-names</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>Do not write column names in results.</p>
+<h3 id="--skpi-line-numbers--l">--skpi-line-numbers, -L</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--skpi-line-numbers</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>Do not write line numbers for errors. Useful when you want to compare result files that include error messages.</p>
+<h3 id="--socketpath--s-path">--socket=<em>path</em>, -S <em>path</em></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--socket={file_name|pipe_name}</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>String</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>For connections to <em>localhost</em>, the Unix socket file to use, or, on Windows, the name of the named pipe to use.</p>
+<p>On Windows, this option applies only if the server was started with the <code>named_pipe</code> system variable enabled to support named-pipe connections. In addition, the user making the connection must be a member of the Windows group specified by the <code>named_pipe_full_access_group</code> system variable.</p>
+<h3 id="--ssl">--ssl*</h3>
+<p>Options that begin with <code>--ssl</code> specify whether to connect to the server using encryption and indicate where to find SSL keys and certificates. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/connection-options.html#encrypted-connection-options"  target="_blank" rel="noopener"
+    >Command Options for Encrypted Connections</a>.</p>
+<h3 id="--ssl-fips-modeoffonstrict">--ssl-fips-mode={OFF|ON|STRICT}</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--ssl-fips-mode={OFF|ON|STRICT}</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Deprecated</strong></td>
+<td><strong>8.0.34</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>Enumeration</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Default Value</strong></td>
+<td><strong>OFF</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Valid Values</strong></td>
+<td><strong>OFF / ON / STRICT</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Controls whether to enable FIPS mode on the client side. The <code>--ssl-fips-mode</code> option differs from other <code>--ssl-xxx</code> options in that it is not used to establish encrypted connections, but rather to affect which cryptographic operations to permit. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/fips-mode.html"  target="_blank" rel="noopener"
+    >&ldquo;FIPS Support&rdquo;</a>.</p>
+<p>These <code>--ssl-fips-mode</code> values are permitted:</p>
+<ul>
+<li>
+<p>OFF: Disable FIPS mode.</p>
+</li>
+<li>
+<p>ON: Enable FIPS mode.</p>
+</li>
+<li>
+<p>STRICT: Enable “strict” FIPS mode.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> If the OpenSSL FIPS Object Module is not available, the only permitted value for <code>--ssl-fips-mode</code> is OFF. In this case, setting <code>--ssl-fips-mode</code> to <em>ON</em> or <em>STRICT</em> causes the client to produce a warning at startup and to operate in non-FIPS mode.</p>
+</blockquote>
+<p>As of MySQL 8.0.34, this option is deprecated. Expect it to be removed in a future version of MySQL.</p>
+<h3 id="--syslog--j">--syslog, -j</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--syslog</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>This option causes <strong>mysql</strong> to send interactive statements to the system logging facility. On Unix, this is <em>syslog</em>; on Windows, it is the Windows Event Log. The destination where logged messages appear is system dependent. On Linux, the destination is often the <em>/var/log/messages</em> file.</p>
+<p>Here is a sample of output generated on Linux by using <code>--syslog</code>. This output is formatted for readability; each logged message actually takes a single line.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Mar  7 12:39:25 myhost MysqlClient[20824]:
+</span></span><span class="line"><span class="cl">  SYSTEM_USER:&#39;oscar&#39;, MYSQL_USER:&#39;my_oscar&#39;, CONNECTION_ID:23,
+</span></span><span class="line"><span class="cl">  DB_SERVER:&#39;127.0.0.1&#39;, DB:&#39;--&#39;, QUERY:&#39;USE test;&#39;
+</span></span><span class="line"><span class="cl">Mar  7 12:39:28 myhost MysqlClient[20824]:
+</span></span><span class="line"><span class="cl">  SYSTEM_USER:&#39;oscar&#39;, MYSQL_USER:&#39;my_oscar&#39;, CONNECTION_ID:23,
+</span></span><span class="line"><span class="cl">  DB_SERVER:&#39;127.0.0.1&#39;, DB:&#39;test&#39;, QUERY:&#39;SHOW TABLES;&#39;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>For more information, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html"  target="_blank" rel="noopener"
+    >&ldquo;mysql Client Logging&rdquo;</a>.</p>
+<h3 id="--table--t">--table, -t</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--table</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>Display output in table format. This is the default for interactive use, but can be used to produce table output in batch mode.</p>
+<h3 id="--tee-file_name">--tee-<em>file_name</em></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--tee=file_name</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>File name</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Append a copy of output to the given file. This option works only in interactive mode. Section <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html"  target="_blank" rel="noopener"
+    >&ldquo;mysql Client Commands&rdquo;</a>, discusses tee files further.</p>
+<h3 id="--tls-ciphersuitesciphersuite_list">--tls-ciphersuites=<em>ciphersuite_list</em></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--tls-ciphersuites=ciphersuite_list</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Introduced</strong></td>
+<td><strong>8.0.16</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>String</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>The permissible ciphersuites for encrypted connections that use TLSv1.3. The value is a list of one or more colon-separated ciphersuite names. The ciphersuites that can be named for this option depend on the SSL library used to compile MySQL. For details, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/encrypted-connection-protocols-ciphers.html"  target="_blank" rel="noopener"
+    >&ldquo;Encrypted Connection TLS Protocols and Ciphers&rdquo;</a>.</p>
+<p>This option was added in MySQL 8.0.16.</p>
+<h3 id="--tls-versionprotocol_list">--tls-version=<em>protocol_list</em></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--tls-version=protocol_list</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>String</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Default Value(≥ 8.0.19)</strong></td>
+<td><strong>TLSv1,TLSv1.1,TLSv1.2,TLSv1.3 (OpenSSL 1.1.1 or higher) / TLSv1,TLSv1.1,TLSv1.2 (otherwise)</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Default Value(≤ 8.0.18)</strong></td>
+<td><strong>TLSv1,TLSv1.1,TLSv1.2</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>The permissible TLS protocols for encrypted connections. The value is a list of one or more comma-separated protocol names. The protocols that can be named for this option depend on the SSL library used to compile MySQL. For details, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/encrypted-connection-protocols-ciphers.html"  target="_blank" rel="noopener"
+    >&ldquo;Encrypted Connection TLS Protocols and Ciphers&rdquo;</a>.</p>
+<h3 id="--unbuffered--n">--unbuffered, -n</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--unbuffered</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>Flush the buffer after each query.</p>
+<h3 id="--useruser_name--u-user_name">--user=<em>user_name</em>, -u <em>user_name</em></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--user=user_name</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>String</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>The user name of the MySQL account to use for connecting to the server.</p>
+<h3 id="--verbose--v">--verbose, -v</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--verbose</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>Verbose mode. Produce more output about what the program does. This option can be given multiple times to produce more and more output. (For example, -v -v -v produces table output format even in batch mode.)</p>
+<h3 id="--version--v">--version, -V</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--version</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>Display version information and exit.</p>
+<h3 id="--vertical--e">--vertical, -E</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--vertical</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>Print query output rows vertically (one line per column value). Without this option, you can specify vertical output for individual statements by terminating them with \G.</p>
+<h3 id="--wait--w">--wait, -w</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--wait</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>If the connection cannot be established, wait and retry instead of aborting.</p>
+<h3 id="--xml--x">--xml, -X</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--xml</strong></th>
+</tr>
+</thead>
+</table></div>
+<p>Produce XML output.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#34;column_name&#34;</span><span class="nt">&gt;</span>NULL<span class="nt">&lt;/field&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The output when <code>--xml</code> is used with <strong>mysql</strong> matches that of <strong>mysqldump</strong> <code>--xml</code>. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html"  target="_blank" rel="noopener"
+    >&ldquo;mysqldump — A Database Backup Program&rdquo;</a>, for details.</p>
+<p>The XML output also uses an XML namespace, as shown here:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl">$&gt; mysql --xml -uroot -e &#34;SHOW VARIABLES LIKE &#39;version%&#39;&#34;
+</span></span><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34;?&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;resultset</span> <span class="na">statement=</span><span class="s">&#34;SHOW VARIABLES LIKE &#39;version%&#39;&#34;</span> <span class="na">xmlns:xsi=</span><span class="s">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;row&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#34;Variable_name&#34;</span><span class="nt">&gt;</span>version<span class="nt">&lt;/field&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#34;Value&#34;</span><span class="nt">&gt;</span>5.0.40-debug<span class="nt">&lt;/field&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/row&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;row&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#34;Variable_name&#34;</span><span class="nt">&gt;</span>version_comment<span class="nt">&lt;/field&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#34;Value&#34;</span><span class="nt">&gt;</span>Source distribution<span class="nt">&lt;/field&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/row&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;row&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#34;Variable_name&#34;</span><span class="nt">&gt;</span>version_compile_machine<span class="nt">&lt;/field&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#34;Value&#34;</span><span class="nt">&gt;</span>i686<span class="nt">&lt;/field&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/row&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;row&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#34;Variable_name&#34;</span><span class="nt">&gt;</span>version_compile_os<span class="nt">&lt;/field&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#34;Value&#34;</span><span class="nt">&gt;</span>suse-linux-gnu<span class="nt">&lt;/field&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/row&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/resultset&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="--zstd-compression-levellevel">--zstd-compression-level=<em>level</em></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Command-Line Format</strong></th>
+<th><strong>--zstd-compression-level=#</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Introduced</strong></td>
+<td><strong>8.0.18</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Type</strong></td>
+<td><strong>Integer</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>The compression level to use for connections to the server that use the zstd compression algorithm. The permitted levels are from 1 to 22, with larger values indicating increasing levels of compression. The default zstd compression level is 3. The compression level setting has no effect on connections that do not use zstd compression.</p>
+<p>For more information, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/connection-compression-control.html"  target="_blank" rel="noopener"
+    >&ldquo;Connection Compression Control&rdquo;</a>.</p>
+<p>This option was added in MySQL 8.0.18.</p>
+<h2 id="mysql-client-commands">mysql Client Commands</h2>
+<p><strong>mysql</strong> sends each SQL statement that you issue to the server to be executed. There is also a set of commands that <strong>mysql</strong> itself interprets. For a list of these commands, type <code>help</code> or <code>\h</code> at the <code>mysql&gt;</code> prompt:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql&gt; help
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">List of all MySQL commands:
+</span></span><span class="line"><span class="cl">Note that all text commands must be first on line and end with &#39;;&#39;
+</span></span><span class="line"><span class="cl">?         (\?) Synonym for `help&#39;.
+</span></span><span class="line"><span class="cl">clear     (\c) Clear the current input statement.
+</span></span><span class="line"><span class="cl">connect   (\r) Reconnect to the server. Optional arguments are db and host.
+</span></span><span class="line"><span class="cl">delimiter (\d) Set statement delimiter.
+</span></span><span class="line"><span class="cl">edit      (\e) Edit command with $EDITOR.
+</span></span><span class="line"><span class="cl">ego       (\G) Send command to mysql server, display result vertically.
+</span></span><span class="line"><span class="cl">exit      (\q) Exit mysql. Same as quit.
+</span></span><span class="line"><span class="cl">go        (\g) Send command to mysql server.
+</span></span><span class="line"><span class="cl">help      (\h) Display this help.
+</span></span><span class="line"><span class="cl">nopager   (\n) Disable pager, print to stdout.
+</span></span><span class="line"><span class="cl">notee     (\t) Don&#39;t write into outfile.
+</span></span><span class="line"><span class="cl">pager     (\P) Set PAGER [to_pager]. Print the query results via PAGER.
+</span></span><span class="line"><span class="cl">print     (\p) Print current command.
+</span></span><span class="line"><span class="cl">prompt    (\R) Change your mysql prompt.
+</span></span><span class="line"><span class="cl">quit      (\q) Quit mysql.
+</span></span><span class="line"><span class="cl">rehash    (\#) Rebuild completion hash.
+</span></span><span class="line"><span class="cl">source    (\.) Execute an SQL script file. Takes a file name as an argument.
+</span></span><span class="line"><span class="cl">status    (\s) Get status information from the server.
+</span></span><span class="line"><span class="cl">system    (\!) Execute a system shell command.
+</span></span><span class="line"><span class="cl">tee       (\T) Set outfile [to_outfile]. Append everything into given
+</span></span><span class="line"><span class="cl">               outfile.
+</span></span><span class="line"><span class="cl">use       (\u) Use another database. Takes database name as argument.
+</span></span><span class="line"><span class="cl">charset   (\C) Switch to another charset. Might be needed for processing
+</span></span><span class="line"><span class="cl">               binlog with multi-byte charsets.
+</span></span><span class="line"><span class="cl">warnings  (\W) Show warnings after every statement.
+</span></span><span class="line"><span class="cl">nowarning (\w) Don&#39;t show warnings after every statement.
+</span></span><span class="line"><span class="cl">resetconnection(\x) Clean session context.
+</span></span><span class="line"><span class="cl">query_attributes Sets string parameters (name1 value1 name2 value2 ...)
+</span></span><span class="line"><span class="cl">for the next query to pick up.
+</span></span><span class="line"><span class="cl">ssl_session_data_print Serializes the current SSL session data to stdout 
+</span></span><span class="line"><span class="cl">or file.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">For server side help, type &#39;help contents&#39;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If <strong>mysql</strong> is invoked with the <code>--binary-mode</code> option, all <strong>mysql</strong> commands are disabled except <em>charset</em> and <em>delimiter</em> in noninteractive mode (for input piped to <strong>mysql</strong> or loaded using the <em>source</em> command).</p>
+<p>Each command has both a long and short form. The long form is not case-sensitive; the short form is. The long form can be followed by an optional semicolon terminator, but the short form should not.</p>
+<p>The use of short-form commands within multiple-line /* &hellip; <em>/ comments is not supported. Short-form commands do work within single-line /</em>! &hellip; <em>/ version comments, as do /</em>+ &hellip; */ optimizer-hint comments, which are stored in object definitions. If there is a concern that optimizer-hint comments may be stored in object definitions so that dump files when reloaded with <em>mysql</em> would result in execution of such commands, either invoke <strong>mysql</strong> with the <code>--binary-mode</code> option or use a reload client other than <strong>mysql</strong>.</p>
+<ul>
+<li>
+<p>help [<em>arg</em>], \h [<em>arg</em>], \? [<em>arg</em>], ? [<em>arg</em>]</p>
+<p>Display a help message listing the available mysql commands.</p>
+<p>If you provide an argument to the <em>help</em> command, <strong>mysql</strong> uses it as a search string to access server-side help from the contents of the MySQL Reference Manual. For more information, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-server-side-help.html"  target="_blank" rel="noopener"
+    >&ldquo;mysql Client Server-Side Help&rdquo;</a>.</p>
+</li>
+<li>
+<p>charset <em>charset_name</em>, \C <em>charset_name</em></p>
+<p>Change the default character set and issue a <code>SET NAMES</code> statement. This enables the character set to remain synchronized on the client and server if <strong>mysql</strong> is run with auto-reconnect enabled (which is not recommended), because the specified character set is used for reconnects.</p>
+</li>
+<li>
+<p>clear, \c</p>
+<p>Clear the current input. Use this if you change your mind about executing the statement that you are entering.</p>
+</li>
+<li>
+<p>connect [<em>db_name</em> [<em>host_name</em>]], \r [<em>db_name</em> [<em>host_name</em>]]</p>
+<p>Reconnect to the server. The optional database name and host name arguments may be given to specify the default database or the host where the server is running. If omitted, the current values are used.</p>
+<p>If the connect command specifies a host name argument, that host takes precedence over any <code>--dns-srv-name</code> option given at <strong>mysql</strong> startup to specify a DNS SRV record.</p>
+</li>
+<li>
+<p>delimiter <em>str</em>, \d <em>str</em></p>
+<p>Change the string that <strong>mysql</strong> interprets as the separator between SQL statements. The default is the semicolon character (;).</p>
+<p>The delimiter string can be specified as an unquoted or quoted argument on the <em>delimiter</em> command line. Quoting can be done with either single quote (&rsquo;), double quote (&quot;), or backtick (`) characters. To include a quote within a quoted string, either quote the string with a different quote character or escape the quote with a backslash (\) character. Backslash should be avoided outside of quoted strings because it is the escape character for MySQL. For an unquoted argument, the delimiter is read up to the first space or end of line. For a quoted argument, the delimiter is read up to the matching quote on the line.</p>
+<p><strong>mysql</strong> interprets instances of the delimiter string as a statement delimiter anywhere it occurs, except within quoted strings. Be careful about defining a delimiter that might occur within other words. For example, if you define the delimiter as <code>X</code>, it is not possible to use the word <code>INDEX</code> in statements. <strong>mysql</strong> interprets this as INDE followed by the delimiter <code>X</code>.</p>
+<p>When the delimiter recognized by <strong>mysql</strong> is set to something other than the default of ;, instances of that character are sent to the server without interpretation. However, the server itself still interprets ; as a statement delimiter and processes statements accordingly. This behavior on the server side comes into play for multiple-statement execution (see <a class="link" href="https://dev.mysql.com/doc/c-api/8.0/en/c-api-multiple-queries.html"  target="_blank" rel="noopener"
+    >Multiple Statement Execution Support</a>), and for parsing the body of stored procedures and functions, triggers, and events (see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/stored-programs-defining.html"  target="_blank" rel="noopener"
+    >&ldquo;Defining Stored Programs&rdquo;</a>).</p>
+</li>
+<li>
+<p>edit, \e</p>
+<p>Edit the current input statement. <strong>mysql</strong> checks the values of the EDITOR and VISUAL environment variables to determine which editor to use. The default editor is <strong>vi</strong> if neither variable is set.</p>
+<p>The <em>edit</em> command works only in Unix.</p>
+</li>
+<li>
+<p>ego, \G</p>
+<p>Send the current statement to the server to be executed and display the result using vertical format.</p>
+</li>
+<li>
+<p>exit, \q</p>
+<p>Exit <strong>mysql</strong>.</p>
+</li>
+<li>
+<p>go, \g</p>
+<p>Send the current statement to the server to be executed.</p>
+</li>
+<li>
+<p>nopaper, \n</p>
+<p>Disable output paging. See the description for <em>pager</em>.</p>
+<p>The <em>nopaper</em> command works only in Unix.</p>
+</li>
+<li>
+<p>notee, \t</p>
+<p>Disable output copying to the tee file. See the description for <em>tee</em>.</p>
+</li>
+<li>
+<p>nowarning, \w</p>
+<p>Disable display of warnings after each statement.</p>
+</li>
+<li>
+<p>pager [<em>command</em>], \P [<em>command</em>]</p>
+<p>Enable output paging. By using the <code>--pager</code> option when you invoke <strong>mysql</strong>, it is possible to browse or search query results in interactive mode with Unix programs such as <strong>less</strong>, <strong>more</strong>, or any other similar program. If you specify no value for the option, <strong>mysql</strong> checks the value of the <code>PAGER</code> environment variable and sets the pager to that. Pager functionality works only in interactive mode.</p>
+<p>Output paging can be enabled interactively with the <em>pager</em> command and disabled with <em>nopager</em>. The command takes an optional argument; if given, the paging program is set to that. With no argument, the pager is set to the pager that was set on the command line, or <em>stdout</em> if no pager was specified.</p>
+<p>Output paging works only in Unix because it uses the <em>popen()</em> function, which does not exist on Windows. For Windows, the <em>tee</em> option can be used instead to save query output, although it is not as convenient as <em>pager</em> for browsing output in some situations.</p>
+</li>
+<li>
+<p>print, \p</p>
+<p>Print the current input statement without executing it.</p>
+</li>
+<li>
+<p>prompt [<em>str</em>], \R [<em>str</em>]</p>
+<p>Reconfigure the <strong>mysql</strong> prompt to the given string. The special character sequences that can be used in the prompt are described later in this section.</p>
+<p>If you specify the <code>prompt</code> command with no argument, <strong>mysql</strong> resets the prompt to the default of <code>mysql&gt;</code>.</p>
+</li>
+<li>
+<p>query_attributes <em>name</em> <em>value</em> [<em>name</em> <em>value</em> &hellip;]</p>
+<p>Define query attributes that apply to the next query sent to the server. For discussion of the purpose and use of query attributes, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/query-attributes.html"  target="_blank" rel="noopener"
+    >&ldquo;Query Attributes&rdquo;</a>.</p>
+<p>The <code>query_attributes</code> command follows these rules:</p>
+<ul>
+<li>
+<p>The format and quoting rules for attribute names and values are the same as for the <code>delimiter</code> command.</p>
+</li>
+<li>
+<p>The command permits up to 32 attribute name/value pairs. Names and values may be up to 1024 characters long. If a name is given without a value, an error occurs.</p>
+</li>
+<li>
+<p>If multiple <code>query_attributes</code> commands are issued prior to query execution, only the last command applies. After sending the query, <strong>mysql</strong> clears the attribute set.</p>
+</li>
+<li>
+<p>If multiple attributes are defined with the same name, attempts to retrieve the attribute value have an undefined result.</p>
+</li>
+<li>
+<p>An attribute defined with an empty name cannot be retrieved by name.</p>
+</li>
+<li>
+<p>If a reconnect occurs while <strong>mysql</strong> executes the query, <strong>mysql</strong> restores the attributes after reconnecting so the query can be executed again with the same attributes.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>quit, \q</p>
+<p>Exit <strong>mysql</strong>.</p>
+</li>
+<li>
+<p>rehash, \#</p>
+<p>Rebuild the completion hash that enables database, table, and column name completion while you are entering statements. (See the description for the <code>--auto-rehash</code> option.)</p>
+</li>
+<li>
+<p>resetconnection, \x</p>
+<p>Reset the connection to clear the session state. This includes clearing any current query attributes defined using the <code>query_attributes</code> command.</p>
+<p>Resetting a connection has effects similar to <code>mysql_change_user()</code> or an auto-reconnect except that the connection is not closed and reopened, and re-authentication is not done. See <a class="link" href="https://dev.mysql.com/doc/c-api/8.0/en/mysql-change-user.html"  target="_blank" rel="noopener"
+    >mysql_change_user()</a>, and <a class="link" href="https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html"  target="_blank" rel="noopener"
+    >Automatic Reconnection Control</a>.</p>
+<p>This example shows how <code>resetconnection</code> clears a value maintained in the session state:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">LAST_INSERT_ID</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+</span><span class="c1">-------------------+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">|</span><span class="w"> </span><span class="n">LAST_INSERT_ID</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+</span><span class="c1">-------------------+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">|</span><span class="w">                 </span><span class="mi">3</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+</span><span class="c1">-------------------+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">LAST_INSERT_ID</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+</span><span class="c1">------------------+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">|</span><span class="w"> </span><span class="n">LAST_INSERT_ID</span><span class="p">()</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+</span><span class="c1">------------------+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">|</span><span class="w">                </span><span class="mi">3</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+</span><span class="c1">------------------+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="n">resetconnection</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="n">LAST_INSERT_ID</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+</span><span class="c1">------------------+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">|</span><span class="w"> </span><span class="n">LAST_INSERT_ID</span><span class="p">()</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+</span><span class="c1">------------------+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">|</span><span class="w">                </span><span class="mi">0</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+</span><span class="c1">------------------+
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>source <em>file_name</em>, \. <em>file_name</em></p>
+<p>Read the named file and executes the statements contained therein. On Windows, specify path name separators as / or \\.</p>
+<p>Quote characters are taken as part of the file name itself. For best results, the name should not include space characters.</p>
+</li>
+<li>
+<p>ssl_session_data_print [<em>file_name</em>]</p>
+<p>Fetches, serializes, and optionally stores the session data of a successful connection. The optional file name and arguments may be given to specify the file to store serialized session data. If omitted, the session data is printed to <code>stdout</code>.</p>
+<p>If the MySQL session is configured for reuse, session data from the file is deserialized and supplied to the <em>connect</em> command to reconnect. When the session is reused successfully, the <em>status</em> command contains a row showing <em>SSL session reused: true</em> while the client remains reconnected to the server.</p>
+</li>
+<li>
+<p>status, \s</p>
+<p>Provide status information about the connection and the server you are using. If you are running with <code>--safe-updates</code> enabled, <em>status</em> also prints the values for the <strong>mysql</strong> variables that affect your queries.</p>
+</li>
+<li>
+<p>system <em>command</em>, \! <em>command</em></p>
+<p>Execute the given command using your default command interpreter.</p>
+<p>Prior to MySQL 8.0.19, the <em>system</em> command works only in Unix. As of 8.0.19, it also works on Windows.</p>
+</li>
+<li>
+<p>tee [<em>file_name</em>], \T [<em>file_name</em>]</p>
+<p>By using the <code>--tee</code> option when you invoke <strong>mysql</strong>, you can log statements and their output. All the data displayed on the screen is appended into a given file. This can be very useful for debugging purposes also. <strong>mysql</strong> flushes results to the file after each statement, just before it prints its next prompt. Tee functionality works only in interactive mode.</p>
+<p>You can enable this feature interactively with the <em>tee</em> command. Without a parameter, the previous file is used. The <em>tee</em> file can be disabled with the notee command. Executing <em>tee</em> again re-enables logging.</p>
+</li>
+<li>
+<p>use <em>db_name</em>, \u <em>db_name</em></p>
+<p>Use <em>db_name</em> as the default database.</p>
+</li>
+<li>
+<p>warnings, \W</p>
+<p>Enable display of warnings after each statement (if there are any).</p>
+</li>
+</ul>
+<p>Here are a few tips about the <em>pager</em> command:</p>
+<ul>
+<li>
+<p>You can use it to write to a file and the results go only to the file:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pager</span><span class="w"> </span><span class="n">cat</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">log</span><span class="p">.</span><span class="n">txt</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>You can also pass any options for the program that you want to use as your pager:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pager</span><span class="w"> </span><span class="k">less</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="n">S</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>In the preceding example, note the <code>-S</code> option. You may find it very useful for browsing wide query results. Sometimes a very wide result set is difficult to read on the screen. The <code>-S</code> option to <strong>less</strong> can make the result set much more readable because you can scroll it horizontally using the left-arrow and right-arrow keys. You can also use <code>-S</code> interactively within <strong>less</strong> to switch the horizontal-browse mode on and off. For more information, read the <strong>less</strong> manual page:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">man less
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>The <code>-F</code> and <code>-X</code> options may be used with <strong>less</strong> to cause it to exit if output fits on one screen, which is convenient when no scrolling is necessary:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pager</span><span class="w"> </span><span class="k">less</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="n">S</span><span class="w"> </span><span class="o">-</span><span class="n">F</span><span class="w"> </span><span class="o">-</span><span class="n">X</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>You can specity very complex pager commands for handling query output:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pager</span><span class="w"> </span><span class="n">cat</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">tee</span><span class="w"> </span><span class="o">/</span><span class="n">dr1</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">res</span><span class="p">.</span><span class="n">txt</span><span class="w"> </span><span class="err">\</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="o">|</span><span class="w"> </span><span class="n">tee</span><span class="w"> </span><span class="o">/</span><span class="n">dr2</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">res2</span><span class="p">.</span><span class="n">txt</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">less</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="n">S</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>In this example, the command would send query results to two files in two different directories on two different file systems mounted on <em>/dr1</em> and <em>/dr2</em>, yet still display the results onscreen using <strong>less</strong>.</p>
+</li>
+</ul>
+<p>You can also combine the <em>tee</em> and <em>pager</em> functions. Have a <em>tee</em> file enabled and <em>pager</em> set to <strong>less</strong>, and you are able to browse the results using the <strong>less</strong> program and still have everything appended into a file the same time. The difference between the Unix <em>tee</em> used with the <em>pager</em> command and the <strong>mysql</strong> built-in <em>tee</em> command is that the built-in <em>tee</em> works even if you do not have the Unix <strong>tee</strong> available. The built-in <em>tee</em> also logs everything that is printed on the screen, whereas the Unix <strong>tee</strong> used with <em>pager</em> does not log quite that much. Additionally, <em>tee</em> file logging can be turned on and off interactively from within <strong>mysql</strong>. This is useful when you want to log some queries to a file, but not others.</p>
+<p>The <code>prompt</code> command reconfigures the default <code>mysql&gt;</code> prompt. The string for defining the prompt can contain the following special sequences.</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Option</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">\C</td>
+<td>The current connection identifier</td>
+</tr>
+<tr>
+<td style="text-align:left">\c</td>
+<td>A counter that increments for each statement you issue</td>
+</tr>
+<tr>
+<td style="text-align:left">\D</td>
+<td>The full current date</td>
+</tr>
+<tr>
+<td style="text-align:left">\d</td>
+<td>The default database</td>
+</tr>
+<tr>
+<td style="text-align:left">\h</td>
+<td>The server host</td>
+</tr>
+<tr>
+<td style="text-align:left">\l</td>
+<td>The current delimiter</td>
+</tr>
+<tr>
+<td style="text-align:left">\m</td>
+<td>Minutes of the current time</td>
+</tr>
+<tr>
+<td style="text-align:left">\n</td>
+<td>A newline character</td>
+</tr>
+<tr>
+<td style="text-align:left">\O</td>
+<td>The current month in three-letter format (Jan, Feb, …)</td>
+</tr>
+<tr>
+<td style="text-align:left">\o</td>
+<td>The current month in numeric format</td>
+</tr>
+<tr>
+<td style="text-align:left">\P</td>
+<td>am/pm</td>
+</tr>
+<tr>
+<td style="text-align:left">\p</td>
+<td>The current TCP/IP port or socket file</td>
+</tr>
+<tr>
+<td style="text-align:left">\R</td>
+<td>The current time, in 24-hour military time (0–23)</td>
+</tr>
+<tr>
+<td style="text-align:left">\r</td>
+<td>The current time, standard 12-hour time (1–12)</td>
+</tr>
+<tr>
+<td style="text-align:left">\S</td>
+<td>Semicolon</td>
+</tr>
+<tr>
+<td style="text-align:left">\s</td>
+<td>Seconds of the current time</td>
+</tr>
+<tr>
+<td style="text-align:left">\T</td>
+<td>Print an asterisk (*) if the current session is inside a transaction block (from MySQL 8.0.28)</td>
+</tr>
+<tr>
+<td style="text-align:left">\t</td>
+<td>A tab character</td>
+</tr>
+<tr>
+<td style="text-align:left">\U</td>
+<td>Your full <em>user_name@host_name</em> account name</td>
+</tr>
+<tr>
+<td style="text-align:left">\u</td>
+<td>Your user name</td>
+</tr>
+<tr>
+<td style="text-align:left">\v</td>
+<td>The server version</td>
+</tr>
+<tr>
+<td style="text-align:left">\w</td>
+<td>The current day of the week in three-letter format (Mon, Tue, …)</td>
+</tr>
+<tr>
+<td style="text-align:left">\Y</td>
+<td>The current year, four digits</td>
+</tr>
+<tr>
+<td style="text-align:left">\y</td>
+<td>The current year, two digits</td>
+</tr>
+<tr>
+<td style="text-align:left">\_</td>
+<td>A space</td>
+</tr>
+<tr>
+<td style="text-align:left">\</td>
+<td>A space (a space follows the backslash)</td>
+</tr>
+<tr>
+<td style="text-align:left">\&rsquo;</td>
+<td>Single quote</td>
+</tr>
+<tr>
+<td style="text-align:left">\&quot;</td>
+<td>Double quote</td>
+</tr>
+<tr>
+<td style="text-align:left">\\</td>
+<td>A literal \ backslash character</td>
+</tr>
+<tr>
+<td style="text-align:left">\<strong>x</strong></td>
+<td><strong>x</strong>, for any &ldquo;<strong>x</strong>&rdquo; not listed above</td>
+</tr>
+</tbody>
+</table></div>
+<p>You can set the prompt in several ways:</p>
+<ul>
+<li>
+<p><em><strong>Use an environment variable.</strong></em> You can set the <code>MYSQL_PS1</code> environment variable to a prompt string. For example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">export</span> <span class="n">MYSQL_PS1</span><span class="o">=</span><span class="s2">&#34;(\u@\h) [\d]&gt; &#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><em><strong>Use a command-line option.</strong></em> You can set the <code>--prompt</code> option on the command line to <strong>mysql</strong>. For example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$&gt; mysql --prompt=&#34;(\u@\h) [\d]&gt; &#34;
+</span></span><span class="line"><span class="cl">(user@host) [database]&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><em><strong>Use an option file.</strong></em> You can set the <code>prompt</code> option in the <code>[mysql]</code> group of any MySQL option file, such as <em>/etc/my.cnf</em> or the <em>.my.cnf</em> file in your home directory. For example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[mysql]</span>
+</span></span><span class="line"><span class="cl"><span class="na">prompt</span><span class="o">=</span><span class="s">(\\u@\\h) [\\d]&gt;\\_</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>In this example, note that the backslashes are doubled. If you set the <code>prompt</code> using the prompt option in an option file, it is advisable to double the backslashes when using the special prompt options. There is some overlap in the set of permissible prompt options and the set of special escape sequences that are recognized in option files. (The rules for escape sequences in option files are listed in <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/option-files.html"  target="_blank" rel="noopener"
+    >&ldquo;Using Option Files&rdquo;</a>.) The overlap may cause you problems if you use single backslashes. For example, <code>\s</code> is interpreted as a space rather than as the current seconds value. The following example shows how to define a prompt within an option file to include the current time in <em><strong>hh:mm:ss&gt;</strong></em> format:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[mysql]</span>
+</span></span><span class="line"><span class="cl"><span class="na">prompt</span><span class="o">=</span><span class="s">&#34;\\r:\\m:\\s&gt; &#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><em><strong>Set the prompt interactively.</strong></em> You can change your prompt interactively by using the <code>prompt</code> (or <code>\R</code>) command. For example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="p">(</span><span class="err">\</span><span class="n">u</span><span class="o">@</span><span class="err">\</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">[</span><span class="err">\</span><span class="n">d</span><span class="p">]</span><span class="o">&gt;</span><span class="err">\</span><span class="n">_</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">PROMPT</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="s1">&#39;(\u@\h) [\d]&gt;\_&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">(</span><span class="k">user</span><span class="o">@</span><span class="k">host</span><span class="p">)</span><span class="w"> </span><span class="p">[</span><span class="k">database</span><span class="p">]</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">(</span><span class="k">user</span><span class="o">@</span><span class="k">host</span><span class="p">)</span><span class="w"> </span><span class="p">[</span><span class="k">database</span><span class="p">]</span><span class="o">&gt;</span><span class="w"> </span><span class="n">prompt</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Returning</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">PROMPT</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">mysql</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">mysql</span><span class="o">&gt;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="mysql-client-loggint">mysql Client Loggint</h2>
+<h2 id="mysql-client-server-side-help">mysql Client Server-Side Help</h2>
+<h2 id="executing-sql-statements-from-a-text-file">Executing SQL Statements from a Text File</h2>
+<h2 id="mysql-client-tips">mysql Client Tips</h2>
 <p>// <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql.html"  target="_blank" rel="noopener"
     >https://dev.mysql.com/doc/refman/8.0/en/mysql.html</a></p>
 <p>// <a class="link" href="https://cloud.tencent.com/developer/ask/sof/114604"  target="_blank" rel="noopener"
