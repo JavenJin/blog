@@ -10,7 +10,7 @@
 <meta property='og:description' content='MySQL 命令行客户端'>
 <meta property='og:url' content='https://javenjin.github.io/blog/p/mysql-command-line-client/'>
 <meta property='og:site_name' content='Javen Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Database' /><meta property='article:published_time' content='2023-11-18T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-11-18T00:00:00&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Database' /><meta property='article:published_time' content='2023-11-21T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-11-21T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="MySQL Command-Line Client">
 <meta name="twitter:description" content="MySQL 命令行客户端">
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
@@ -402,7 +402,17 @@
     </li>
     <li><a href="#mysql-client-server-side-help">mysql Client Server-Side Help</a></li>
     <li><a href="#executing-sql-statements-from-a-text-file">Executing SQL Statements from a Text File</a></li>
-    <li><a href="#mysql-client-tips">mysql Client Tips</a></li>
+    <li><a href="#mysql-client-tips">mysql Client Tips</a>
+      <ol>
+        <li><a href="#input-line-editing">Input-Line Editing</a></li>
+        <li><a href="#disabling-interactive-history">Disabling Interactive History</a></li>
+        <li><a href="#unicode-support-on-windows">Unicode Support on Windows</a></li>
+        <li><a href="#displaying-query-results-vertically">Displaying Query Results Vertically</a></li>
+        <li><a href="#using-safe-updates-mode---safe-updates">Using Safe-Updates Mode (&ndash;safe-updates)</a></li>
+        <li><a href="#disabling-mysql-auto-reconnect">Disabling mysql Auto-Reconnect</a></li>
+        <li><a href="#mysql-client-parser-versus-server-parser">mysql Client Parser Versus Server Parser</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -456,7 +466,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 18, 2023</time>
+                <time class="article-time--published">Nov 21, 2023</time>
             </div>
         
 
@@ -471,7 +481,7 @@
 
 
                 <time class="article-time--reading">
-                    52 minute read
+                    61 minute read
                 </time>
             </div>
         
@@ -1262,7 +1272,7 @@
 <p>When this option is given, <strong>mysql</strong> displays binary data using hexadecimal notation (0x<em>value</em>). This occurs whether the overall output display format is tabular, vertical, HTML, or XML.</p>
 <p><code>--binary-as-hex</code> when enabled affects display of all binary strings, including those returned by functions such as <code>CHAR()</code> and <code>UNHEX()</code>. The following example demonstrates this using the ASCII code for <em>A</em> (65 decimal, 41 hexadecimal):</p>
 <ul>
-<li>--binary-as-hex disabled:</li>
+<li><code>--binary-as-hex</code> disabled:</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1283,7 +1293,7 @@
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>--binary-as-bex enabled:</li>
+<li><code>--binary-as-hex</code> enabled:</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1391,8 +1401,8 @@
 </tr>
 </tbody>
 </table></div>
-<p>The directory where character sets are installed. See []&ldquo;Character Set Configuration&rdquo;](<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/charset-configuration.html%29"  target="_blank" rel="noopener"
-    >https://dev.mysql.com/doc/refman/8.0/en/charset-configuration.html)</a>.</p>
+<p>The directory where character sets are installed. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/charset-configuration.html"  target="_blank" rel="noopener"
+    >&ldquo;Character Set Configuration&rdquo;</a>.</p>
 <h3 id="--column-names">--column-names</h3>
 <div class="table-wrapper"><table>
 <thead>
@@ -1694,7 +1704,7 @@
 </tr>
 </tbody>
 </table></div>
-<p>Read not only the usual option groups, but also groups with the usual names and a suffix of str. For example, <strong>mysql</strong> normally reads the <code>[client]</code> and <code>[mysql]</code> groups. If this option is given as <code>--defaults-group-suffix=_other</code>, <strong>mysql</strong> also reads the [client_other] and <code>[mysql_other]</code> groups.</p>
+<p>Read not only the usual option groups, but also groups with the usual names and a suffix of str. For example, <strong>mysql</strong> normally reads the <code>[client]</code> and <code>[mysql]</code> groups. If this option is given as <code>--defaults-group-suffix=_other</code>, <strong>mysql</strong> also reads the <code>[client_other]</code> and <code>[mysql_other]</code> groups.</p>
 <p>For additional information about this and other option-file options, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/option-file-options.html"  target="_blank" rel="noopener"
     >&ldquo;Command-Line Options that Affect Option-File Handling&rdquo;</a>.</p>
 <h3 id="--delimiterstr">--delimiter=<em>str</em></h3>
@@ -2137,8 +2147,7 @@
 </tr>
 </tbody>
 </table></div>
-<p>Enable named <strong>mysql</strong> commands. Long-format commands are permitted, not just short-format commands. For example, <code>quit</code> and <code>\q</code> both are recognized. Use <code>--skip-named-commands</code> to disable named commands.
-See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html"  target="_blank" rel="noopener"
+<p>Enable named <strong>mysql</strong> commands. Long-format commands are permitted, not just short-format commands. For example, <code>quit</code> and <code>\q</code> both are recognized. Use <code>--skip-named-commands</code> to disable named commands. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html"  target="_blank" rel="noopener"
     >&ldquo;mysql Client Commands&rdquo;</a>.</p>
 <h3 id="--net-buffer-lengthvalue">--net-buffer-length=<em>value</em></h3>
 <div class="table-wrapper"><table>
@@ -2456,7 +2465,7 @@ See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-commands
 </tr>
 </thead>
 </table></div>
-<p>For tabular output, the “boxing” around columns enables one column value to be distinguished from another. For nontabular output (such as is produced in batch mode or when the <code>--batch</code> or <code>--silent</code> option is given), special characters are escaped in the output so they can be identified easily. Newline, tab, NUL, and backslash are written as \n, \t, \0, and \\. The <code>--raw</code> option disables this character escaping.</p>
+<p>For tabular output, the &ldquo;boxing&rdquo; around columns enables one column value to be distinguished from another. For nontabular output (such as is produced in batch mode or when the <code>--batch</code> or <code>--silent</code> option is given), special characters are escaped in the output so they can be identified easily. Newline, tab, NUL, and backslash are written as \n, \t, \0, and \\. The <code>--raw</code> option disables this character escaping.</p>
 <p>The following example demonstrates tabular versus nontabular output and the use of raw mode to disable escaping:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -3914,10 +3923,259 @@ See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-commands
 <p>For more information about batch mode, see Section <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/batch-mode.html"  target="_blank" rel="noopener"
     >&ldquo;Using mysql in Batch Mode&rdquo;</a>.</p>
 <h2 id="mysql-client-tips">mysql Client Tips</h2>
-<p>// <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql.html"  target="_blank" rel="noopener"
-    >https://dev.mysql.com/doc/refman/8.0/en/mysql.html</a></p>
-<p>// <a class="link" href="https://cloud.tencent.com/developer/ask/sof/114604"  target="_blank" rel="noopener"
-    >https://cloud.tencent.com/developer/ask/sof/114604</a></p>
+<p>This section provides information about techniques for more effective use of <strong>mysql</strong> and about <strong>mysql</strong> operational behavior.</p>
+<ul>
+<li>
+<p>Input-Line Editing</p>
+</li>
+<li>
+<p>Disabling Interactive History</p>
+</li>
+<li>
+<p>Unicode Support on Windows</p>
+</li>
+<li>
+<p>Displaying Query Results Vertically</p>
+</li>
+<li>
+<p>Using Safe-Updates Mode (&ndash;safe-updates)</p>
+</li>
+<li>
+<p>Disabling mysql Auto-Reconnect</p>
+</li>
+<li>
+<p>mysql Client Parser Versus Server Parser</p>
+</li>
+</ul>
+<h3 id="input-line-editing">Input-Line Editing</h3>
+<p><strong>mysql</strong> supports input-line editing, which enables you to modify the current input line in place or recall previous input lines. For example, the <code>left-arrow</code> and <code>right-arrow</code> keys move horizontally within the current input line, and the <code>up-arrow</code> and <code>down-arrow</code> keys move up and down through the set of previously entered lines. <code>Backspace</code> deletes the character before the cursor and typing new characters enters them at the cursor position. To enter the line, press <code>Enter</code>.</p>
+<p>On Windows, the editing key sequences are the same as supported for command editing in console windows. On Unix, the key sequences depend on the input library used to build <strong>mysql</strong> (for example, the <code>libedit</code> or <code>readline</code> library).</p>
+<p>Documentation for the <code>libedit</code> and <code>readline</code> libraries is available online. To change the set of key sequences permitted by a given input library, define key bindings in the library startup file. This is a file in your home directory: <code>.editrc</code> for <code>libedit</code> and <code>.inputrc</code> for <code>readline</code>.</p>
+<p>For example, in <code>libedit</code>, <code>Control+W</code> deletes everything before the current cursor position and <code>Control+U</code> deletes the entire line. In <code>readline</code>, <code>Control+W</code> deletes the word before the cursor and <code>Control+U</code> deletes everything before the current cursor position. If <strong>mysql</strong> was built using <code>libedit</code>, a user who prefers the <code>readline</code> behavior for these two keys can put the following lines in the <code>.editrc</code> file (creating the file if necessary):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">bind &#34;^W&#34; ed-delete-prev-word
+</span></span><span class="line"><span class="cl">bind &#34;^U&#34; vi-kill-line-prev
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>To see the current set of key bindings, temporarily put a line that says only bind at the end of <code>.editrc.</code> <strong>mysql</strong> shows the bindings when it starts.</p>
+<h3 id="disabling-interactive-history">Disabling Interactive History</h3>
+<p>The <code>up-arrow</code> key enables you to recall input lines from current and previous sessions. In cases where a console is shared, this behavior may be unsuitable. <strong>mysql</strong> supports disabling the interactive history partially or fully, depending on the host platform.</p>
+<p>On Windows, the history is stored in memory. <code>Alt+F7</code> deletes all input lines stored in memory for the current history buffer. It also deletes the list of sequential numbers in front of the input lines displayed with <code>F7</code> and recalled (by number) with <code>F9</code>. New input lines entered after you press <code>Alt+F7</code> repopulate the current history buffer. Clearing the buffer does not prevent logging to the Windows Event Viewer, if the <code>--syslog</code> option was used to start <strong>mysql</strong>. Closing the console window also clears the current history buffer.</p>
+<p>To disable interactive history on Unix, first delete the <code>.mysql_history</code> file, if it exists (previous entries are recalled otherwise). Then start <strong>mysql</strong> with the <code>--histignore=&quot;*&quot;</code> option to ignore all new input lines. To re-enable the recall (and logging) behavior, restart <strong>mysql</strong> without the option.</p>
+<p>If you prevent the <code>.mysql_history</code> file from being created (see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html#mysql-logging-history-file"  target="_blank" rel="noopener"
+    >Controlling the History File</a>) and use <code>--histignore=&quot;*&quot;</code> to start the <strong>mysql</strong> client, the interactive history recall facility is disabled fully. Alternatively, if you omit the <code>--histignore</code> option, you can recall the input lines entered during the current session.</p>
+<h3 id="unicode-support-on-windows">Unicode Support on Windows</h3>
+<p>Windows provides APIs based on UTF-16LE for reading from and writing to the console; the <strong>mysql</strong> client for Windows is able to use these APIs. The Windows installer creates an item in the MySQL menu named <code>MySQL command line client - Unicode</code>. This item invokes the <strong>mysql</strong> client with properties set to communicate through the console to the MySQL server using Unicode.</p>
+<p>To take advantage of this support manually, run <strong>mysql</strong> within a console that uses a compatible Unicode font and set the default character set to a Unicode character set that is supported for communication with the server:</p>
+<ol>
+<li>
+<p>Open a console window.</p>
+</li>
+<li>
+<p>Go to the console window properties, select the font tab, and choose Lucida Console or some other compatible Unicode font. This is necessary because console windows start by default using a DOS raster font that is inadequate for Unicode.</p>
+</li>
+<li>
+<p>Execute <strong>mysql.exe</strong> with the <code>--default-character-set=utf8mb4</code> (or <code>utf8mb3</code>) option. This option is necessary because <code>utf16le</code> is one of the character sets that cannot be used as the client character set. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/charset-connection.html#charset-connection-impermissible-client-charset"  target="_blank" rel="noopener"
+    >Impermissible Client Character Sets</a>.</p>
+</li>
+</ol>
+<p>With those changes, <strong>mysql</strong> uses the Windows APIs to communicate with the console using UTF-16LE, and communicate with the server using UTF-8. (The menu item mentioned previously sets the font and character set as just described.)</p>
+<p>To avoid those steps each time you run <strong>mysql</strong>, you can create a shortcut that invokes <strong>mysql.exe</strong>. The shortcut should set the console font to Lucida Console or some other compatible Unicode font, and pass the <code>--default-character-set=utf8mb4</code> (or <code>utf8mb3</code>) option to <strong>mysql.exe</strong>.</p>
+<p>Alternatively, create a shortcut that only sets the console font, and set the character set in the <code>[mysql]</code> group of your <code>my.ini</code> file:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="k">[mysql]</span>
+</span></span><span class="line"><span class="cl"><span class="na">default-character-set</span><span class="o">=</span><span class="s">utf8mb4   # or utf8mb3</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="displaying-query-results-vertically">Displaying Query Results Vertically</h3>
+<p>Some query results are much more readable when displayed vertically, instead of in the usual horizontal table format. Queries can be displayed vertically by terminating the query with \G instead of a semicolon. For example, longer text values that include newlines often are much easier to read with vertical output:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">mails</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">LENGTH</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="mi">1</span><span class="err">\</span><span class="k">G</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">***************************</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span><span class="w"> </span><span class="k">row</span><span class="w"> </span><span class="o">***************************</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">msg_nro</span><span class="p">:</span><span class="w"> </span><span class="mi">3068</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">     </span><span class="nb">date</span><span class="p">:</span><span class="w"> </span><span class="mi">2000</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">01</span><span class="w"> </span><span class="mi">23</span><span class="p">:</span><span class="mi">29</span><span class="p">:</span><span class="mi">50</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">time_zone</span><span class="p">:</span><span class="w"> </span><span class="o">+</span><span class="mi">0200</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">mail_from</span><span class="p">:</span><span class="w"> </span><span class="n">Jones</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">reply</span><span class="p">:</span><span class="w"> </span><span class="n">jones</span><span class="o">@</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">mail_to</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;John Smith&#34;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">smith</span><span class="o">@</span><span class="n">example</span><span class="p">.</span><span class="n">com</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="n">sbj</span><span class="p">:</span><span class="w"> </span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="n">txt</span><span class="p">:</span><span class="w"> </span><span class="o">&gt;&gt;&gt;&gt;&gt;</span><span class="w"> </span><span class="s2">&#34;John&#34;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">John</span><span class="w"> </span><span class="n">Smith</span><span class="w"> </span><span class="n">writes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">John</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Hi</span><span class="p">.</span><span class="w">  </span><span class="n">I</span><span class="w"> </span><span class="n">think</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">good</span><span class="w"> </span><span class="n">idea</span><span class="p">.</span><span class="w">  </span><span class="k">Is</span><span class="w"> </span><span class="n">anyone</span><span class="w"> </span><span class="n">familiar</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">John</span><span class="o">&gt;</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">Unicode</span><span class="o">?</span><span class="w"> </span><span class="n">Otherwise</span><span class="p">,</span><span class="w"> </span><span class="n">I</span><span class="s1">&#39;ll put this on my
+</span></span></span><span class="line"><span class="cl"><span class="s1">John&gt; TODO list and see what happens.
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">Yes, please do that.
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">Regards,
+</span></span></span><span class="line"><span class="cl"><span class="s1">Jones
+</span></span></span><span class="line"><span class="cl"><span class="s1">     file: inbox-jani-1
+</span></span></span><span class="line"><span class="cl"><span class="s1">     hash: 190402944
+</span></span></span><span class="line"><span class="cl"><span class="s1">1 row in set (0.09 sec)
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="using-safe-updates-mode---safe-updates">Using Safe-Updates Mode (&ndash;safe-updates)</h3>
+<p>For beginners, a useful startup option is <code>--safe-updates</code> (or <code>--i-am-a-dummy</code>, which has the same effect). Safe-updates mode is helpful for cases when you might have issued an <code>UPDATE</code> or <code>DELETE</code> statement but forgotten the <code>WHERE</code> clause indicating which rows to modify. Normally, such statements update or delete all rows in the table. With <code>--safe-updates</code>, you can modify rows only by specifying the key values that identify them, or a <code>LIMIT</code> clause, or both. This helps prevent accidents. Safe-updates mode also restricts <code>SELECT</code> statements that produce (or are estimated to produce) very large result sets.</p>
+<p>The <code>--safe-updates</code> option causes <strong>mysql</strong> to execute the following statement when it connects to the MySQL server, to set the session values of the <code>sql_safe_updates</code>, <code>sql_select_limit</code>, and <code>max_join_size</code> system variables:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SET</span><span class="w"> </span><span class="n">sql_safe_updates</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">sql_select_limit</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="n">max_join_size</span><span class="o">=</span><span class="mi">1000000</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>The <code>SET</code> statement affects statement processing as follows:</p>
+<ul>
+<li>
+<p>Enabling <code>sql_safe_updates</code> causes <code>UPDATE</code> and <code>DELETE</code> statements to produce an error if they do not specify a key constraint in the WHERE clause, or provide a <code>LIMIT</code> clause, or both. For example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">UPDATE</span><span class="w"> </span><span class="n">tbl_name</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">not_key_column</span><span class="o">=</span><span class="n">val</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">key_column</span><span class="o">=</span><span class="n">val</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">UPDATE</span><span class="w"> </span><span class="n">tbl_name</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">not_key_column</span><span class="o">=</span><span class="n">val</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Setting <code>sql_select_limit</code> to 1,000 causes the server to limit all <code>SELECT</code> result sets to 1,000 rows unless the statement includes a <code>LIMIT</code> clause.</p>
+</li>
+<li>
+<p>Setting <code>max_join_size</code> to 1,000,000 causes multiple-table <code>SELECT</code> statements to produce an error if the server estimates it must examine more than 1,000,000 row combinations.</p>
+</li>
+</ul>
+<p>To specify result set limits different from 1,000 and 1,000,000, you can override the defaults by using the <code>--select-limit</code> and <code>--max-join-size</code> options when you invoke <strong>mysql</strong>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql --safe-updates --select-limit=500 --max-join-size=10000
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>It is possible for <code>UPDATE</code> and <code>DELETE</code> statements to produce an error in safe-updates mode even with a key specified in the <code>WHERE</code> clause, if the optimizer decides not to use the index on the key column:</p>
+<ul>
+<li>
+<p>Range access on the index cannot be used if memory usage exceeds that permitted by the <code>range_optimizer_max_mem_size</code> system variable. The optimizer then falls back to a table scan. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/range-optimization.html#range-optimization-memory-use"  target="_blank" rel="noopener"
+    >Limiting Memory Use for Range Optimization</a>.</p>
+</li>
+<li>
+<p>If key comparisons require type conversion, the index may not be used (see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-indexes.html"  target="_blank" rel="noopener"
+    >&ldquo;How MySQL Uses Indexes&rdquo;</a>). Suppose that an indexed string column <code>c1</code> is compared to a numeric value using <code>WHERE c1 = 2222</code>. For such comparisons, the string value is converted to a number and the operands are compared numerically (see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/type-conversion.html"  target="_blank" rel="noopener"
+    >&ldquo;Type Conversion in Expression Evaluation&rdquo;</a>), preventing use of the index. If safe-updates mode is enabled, an error occurs.</p>
+</li>
+</ul>
+<p>As of MySQL 8.0.13, safe-updates mode also includes these behaviors:</p>
+<ul>
+<li>
+<p><code>EXPLAIN</code> with <code>UPDATE</code> and <code>DELETE</code> statements does not produce safe-updates errors. This enables use of <code>EXPLAIN</code> plus <code>SHOW WARNINGS</code> to see why an index is not used, which can be helpful in cases such as when a <code>range_optimizer_max_mem_size</code> violation or type conversion occurs and the optimizer does not use an index even though a key column was specified in the <code>WHERE</code> clause.</p>
+</li>
+<li>
+<p>When a safe-updates error occurs, the error message includes the first diagnostic that was produced, to provide information about the reason for failure. For example, the message may indicate that the <code>range_optimizer_max_mem_size</code> value was exceeded or type conversion occurred, either of which can preclude use of an index.</p>
+</li>
+<li>
+<p>For multiple-table deletes and updates, an error is produced with safe updates enabled only if any target table uses a table scan.</p>
+</li>
+</ul>
+<h3 id="disabling-mysql-auto-reconnect">Disabling mysql Auto-Reconnect</h3>
+<p>If the <strong>mysql</strong> client loses its connection to the server while sending a statement, it immediately and automatically tries to reconnect once to the server and send the statement again. However, even if <strong>mysql</strong> succeeds in reconnecting, your first connection has ended and all your previous session objects and settings are lost: temporary tables, the autocommit mode, and user-defined and session variables. Also, any current transaction rolls back. This behavior may be dangerous for you, as in the following example where the server was shut down and restarted between the first and second statements without you knowing it:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="o">@</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Query</span><span class="w"> </span><span class="n">OK</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">rows</span><span class="w"> </span><span class="n">affected</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="w"> </span><span class="n">sec</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="k">VALUES</span><span class="p">(</span><span class="o">@</span><span class="n">a</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">ERROR</span><span class="w"> </span><span class="mi">2006</span><span class="p">:</span><span class="w"> </span><span class="n">MySQL</span><span class="w"> </span><span class="n">server</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">gone</span><span class="w"> </span><span class="n">away</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">No</span><span class="w"> </span><span class="k">connection</span><span class="p">.</span><span class="w"> </span><span class="n">Trying</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">reconnect</span><span class="p">...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">Connection</span><span class="w"> </span><span class="n">id</span><span class="p">:</span><span class="w">    </span><span class="mi">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">Current</span><span class="w"> </span><span class="k">database</span><span class="p">:</span><span class="w"> </span><span class="n">test</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Query</span><span class="w"> </span><span class="n">OK</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">row</span><span class="w"> </span><span class="n">affected</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="mi">30</span><span class="w"> </span><span class="n">sec</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+</span><span class="c1">------+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">|</span><span class="w"> </span><span class="n">a</span><span class="w">    </span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+</span><span class="c1">------+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">|</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="o">|</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+</span><span class="c1">------+
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="mi">1</span><span class="w"> </span><span class="k">row</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="w"> </span><span class="n">sec</span><span class="p">)</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>The @a user variable has been lost with the connection, and after the reconnection it is undefined. If it is important to have <strong>mysql</strong> terminate with an error if the connection has been lost, you can start the <strong>mysql</strong> client with the <code>--skip-reconnect</code> option.</p>
+<p>For more information about auto-reconnect and its effect on state information when a reconnection occurs, see <a class="link" href="https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html"  target="_blank" rel="noopener"
+    >Automatic Reconnection Control</a>.</p>
+<h3 id="mysql-client-parser-versus-server-parser">mysql Client Parser Versus Server Parser</h3>
+<p>The <strong>mysql</strong> client uses a parser on the client side that is not a duplicate of the complete parser used by the <strong>mysqld</strong> server on the server side. This can lead to differences in treatment of certain constructs. Examples:</p>
+<ul>
+<li>
+<p>The server parser treats strings delimited by &quot; characters as identifiers rather than as plain strings if the <code>ANSI_QUOTES</code> SQL mode is enabled.</p>
+<p>The <strong>mysql</strong> client parser does not take the <code>ANSI_QUOTES</code> SQL mode into account. It treats strings delimited by &ldquo;, &lsquo;, and ` characters the same, regardless of whether <code>ANSI_QUOTES</code> is enabled.</p>
+</li>
+<li>
+<p>Within /*! &hellip; */ and /*+ &hellip; */ comments, the <strong>mysql</strong> client parser interprets short-form <strong>mysql</strong> commands. The server parser does not interpret them because these commands have no meaning on the server side.</p>
+<p>If it is desirable for <strong>mysql</strong> not to interpret short-form commands within comments, a partial workaround is to use the <code>--binary-mode</code> option, which causes all <strong>mysql</strong> commands to be disabled except <code>\C</code> and <code>\d</code> in noninteractive mode (for input piped to <strong>mysql</strong> or loaded using the <code>source</code> command).</p>
+</li>
+</ul>
 
 </section>
 

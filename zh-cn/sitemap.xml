@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://javenjin.github.io/blog/zh-cn/</loc>
-    <lastmod>2023-11-20T00:00:00+00:00</lastmod>
+    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -13,6 +13,84 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/categories/</loc>
+    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/categories/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/tags/database/</loc>
+    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/tags/database/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/tags/database/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/categories/database/</loc>
+    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/categories/database/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/categories/database/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/</loc>
+    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/mysql-command-line-client/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/post/</loc>
+    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/post/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/tags/</loc>
+    <lastmod>2023-11-21T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/tags/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/tags/c-sharp/</loc>
@@ -41,45 +119,6 @@
                 href="https://javenjin.github.io/blog/zh-cn/categories/c-sharp/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/categories/</loc>
-    <lastmod>2023-11-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/categories/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/post/</loc>
-    <lastmod>2023-11-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/post/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/tags/</loc>
-    <lastmod>2023-11-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/tags/"
-                />
-  </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AFc/</loc>
     <lastmod>2023-11-20T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -91,45 +130,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/p/%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AFc/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/tags/database/</loc>
-    <lastmod>2023-11-18T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/tags/database/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/tags/database/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/categories/database/</loc>
-    <lastmod>2023-11-18T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/categories/database/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/categories/database/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/</loc>
-    <lastmod>2023-11-18T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/p/mysql-command-line-client/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/mysql-8-%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/</loc>
