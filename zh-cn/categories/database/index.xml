@@ -6,10 +6,10 @@
         <description>Recent content in Database on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 21 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/categories/database/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 22 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/categories/database/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>MySQL 命令行客户端</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/</link>
-        <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
+        <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
         
         <guid>https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/</guid>
         <description>&lt;h1 id=&#34;mysql-命令行客户端&#34;&gt;MySQL 命令行客户端&lt;/h1&gt;
@@ -57,8 +57,8 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mysql db_name &amp;lt; script.sql &amp;gt; output.tab
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;在 Unix 上，mysql 客户端会将交互执行的语句记录到历史文件中。请参阅 &lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;mysql 客户端日志&lt;/a&gt;。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;在 Unix 上，mysql 客户端会将交互执行的语句记录到历史文件中。请参阅 &lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#mysql-%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%97%A5%E5%BF%97&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mysql Client Logging&lt;/a&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;mysql-客户端选项&#34;&gt;mysql 客户端选项&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;mysql&lt;/strong&gt; supports the following options, which can be specified on the command line or in the &lt;code&gt;[mysql]&lt;/code&gt; and &lt;code&gt;[client]&lt;/code&gt; groups of an option file. For information about option files used by MySQL programs, see &lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/option-files.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Using Option Files&lt;/a&gt;.&lt;/p&gt;
@@ -1228,7 +1228,7 @@
 &lt;/table&gt;
 &lt;p&gt;设置语句分隔符。默认为分号（;）。&lt;/p&gt;
 &lt;h3 id=&#34;--disable-named-commands&#34;&gt;--disable-named-commands&lt;/h3&gt;
-&lt;p&gt;禁用命名命令。只使用 \* 形式，或只在以分号（;）结尾的行首使用命名命令。默认情况下，&lt;strong&gt;mysql&lt;/strong&gt;启动时该选项已&lt;em&gt;enabled&lt;/em&gt;。不过，即使使用该选项，长格式命令仍可从第一行开始执行。参见&lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;禁用命名命令。只使用 \* 形式，或只在以分号（;）结尾的行首使用命名命令。默认情况下，&lt;strong&gt;mysql&lt;/strong&gt;启动时该选项已&lt;em&gt;enabled&lt;/em&gt;。不过，即使使用该选项，长格式命令仍可从第一行开始执行。参见&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#mysql-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%91%BD%E4%BB%A4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&amp;ldquo;mysql Client Commands&amp;rdquo;&lt;/a&gt;。&lt;/p&gt;
 &lt;h3 id=&#34;--dns-srv-namename&#34;&gt;--dns-srv-name=&lt;em&gt;name&lt;/em&gt;&lt;/h3&gt;
 &lt;table&gt;
@@ -1435,7 +1435,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;由一个或多个冒号分隔模式组成的列表，用于指定忽略日志记录的语句。这些模式会添加到默认模式列表（&amp;rdquo;*IDENTIFIED*:*PASSWORD*&amp;quot;）中。为该选项指定的值会影响写入历史文件的语句的日志记录，如果给定了 &lt;code&gt;--syslog&lt;/code&gt;选项，还会影响写入 syslog 的日志记录。更多信息，请参阅&lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;由一个或多个冒号分隔模式组成的列表，用于指定忽略日志记录的语句。这些模式会添加到默认模式列表（&amp;rdquo;*IDENTIFIED*:*PASSWORD*&amp;quot;）中。为该选项指定的值会影响写入历史文件的语句的日志记录，如果给定了 &lt;code&gt;--syslog&lt;/code&gt;选项，还会影响写入 syslog 的日志记录。更多信息，请参阅&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#mysql-%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%97%A5%E5%BF%97&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&amp;ldquo;mysql Client Logging&amp;rdquo;&lt;/a&gt;。&lt;/p&gt;
 &lt;h3 id=&#34;--hosthost_name--h-host_name&#34;&gt;--host=&lt;em&gt;host_name&lt;/em&gt;, -h &lt;em&gt;host_name&lt;/em&gt;&lt;/h3&gt;
 &lt;table&gt;
@@ -1650,9 +1650,9 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Enable named &lt;strong&gt;mysql&lt;/strong&gt; commands. Long-format commands are permitted, not just short-format commands. For example, &lt;code&gt;quit&lt;/code&gt; and &lt;code&gt;\q&lt;/code&gt; both are recognized. Use &lt;code&gt;--skip-named-commands&lt;/code&gt; to disable named commands. See &lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;Enable named &lt;strong&gt;mysql&lt;/strong&gt; commands. Long-format commands are permitted, not just short-format commands. For example, &lt;code&gt;quit&lt;/code&gt; and &lt;code&gt;\q&lt;/code&gt; both are recognized. Use &lt;code&gt;--skip-named-commands&lt;/code&gt; to disable named commands. See &lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#mysql-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%91%BD%E4%BB%A4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&amp;ldquo;mysql Client Commands&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;启用已命名的 &lt;strong&gt;mysql&lt;/strong&gt; 命令。允许使用长格式命令，而不仅仅是短格式命令。例如，&lt;code&gt;quit&lt;/code&gt;和&lt;code&gt;\q&lt;/code&gt;都能被识别。使用 &lt;code&gt;-skip-named-commands&lt;/code&gt;禁用命名命令。参见&lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;启用已命名的 &lt;strong&gt;mysql&lt;/strong&gt; 命令。允许使用长格式命令，而不仅仅是短格式命令。例如，&lt;code&gt;quit&lt;/code&gt;和&lt;code&gt;\q&lt;/code&gt;都能被识别。使用 &lt;code&gt;-skip-named-commands&lt;/code&gt;禁用命名命令。参见&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#mysql-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%91%BD%E4%BB%A4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&amp;ldquo;mysql Client Commands&amp;rdquo;&lt;/a&gt;。&lt;/p&gt;
 &lt;h3 id=&#34;--net-buffer-lengthvalue&#34;&gt;--net-buffer-length=&lt;em&gt;value&lt;/em&gt;&lt;/h3&gt;
 &lt;table&gt;
@@ -1799,7 +1799,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;使用给定命令对查询输出进行分页。如果省略该命令，默认分页器就是 &lt;em&gt;PAGER&lt;/em&gt; 环境变量的值。有效的分页器有&lt;strong&gt;less&lt;/strong&gt;、&lt;strong&gt;more&lt;/strong&gt;、&lt;strong&gt;cat [&amp;gt; filename]&lt;/strong&gt; 等。该选项仅在 Unix 和交互模式下有效。要禁用分页功能，请使用 &lt;code&gt;-skip-pager&lt;/code&gt;。请参阅&lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;使用给定命令对查询输出进行分页。如果省略该命令，默认分页器就是 &lt;em&gt;PAGER&lt;/em&gt; 环境变量的值。有效的分页器有&lt;strong&gt;less&lt;/strong&gt;、&lt;strong&gt;more&lt;/strong&gt;、&lt;strong&gt;cat [&amp;gt; filename]&lt;/strong&gt; 等。该选项仅在 Unix 和交互模式下有效。要禁用分页功能，请使用 &lt;code&gt;-skip-pager&lt;/code&gt;。请参阅&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#mysql-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%91%BD%E4%BB%A4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&amp;ldquo;mysql Client Commands&amp;rdquo;&lt;/a&gt;节将进一步讨论输出分页。&lt;/p&gt;
 &lt;h3 id=&#34;--passwordpassword--p-password&#34;&gt;--password[=&lt;em&gt;password&lt;/em&gt;], -p [&lt;em&gt;password&lt;/em&gt;]&lt;/h3&gt;
 &lt;table&gt;
@@ -2047,9 +2047,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;If this option is enabled, &lt;code&gt;UPDATE&lt;/code&gt; and &lt;code&gt;DELETE&lt;/code&gt; statements that do not use a key in the WHERE clause or a &lt;code&gt;LIMIT&lt;/code&gt; clause produce an error. In addition, restrictions are placed on &lt;code&gt;SELECT&lt;/code&gt; statements that produce (or are estimated to produce) very large result sets. If you have set this option in an option file, you can use &lt;code&gt;--skip-safe-updates&lt;/code&gt; on the command line to override it. For more information about this option, see &lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-tips.html#safe-updates&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Using Safe-Updates Mode (&amp;ndash;safe-updates)&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;如果启用了该选项，在 WHERE 子句中未使用键或 &lt;code&gt;LIMIT&lt;/code&gt; 子句的 &lt;code&gt;UPDATE&lt;/code&gt; 和 &lt;code&gt;DELETE&lt;/code&gt; 语句将产生错误。此外，对产生（或估计会产生）超大结果集的 &lt;code&gt;SELECT&lt;/code&gt; 语句也会进行限制。如果在选项文件中设置了该选项，可以在命令行中使用 &lt;code&gt;-skip-safe-updates&lt;/code&gt;来覆盖它。有关该选项的更多信息，请参阅&lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-tips.html#safe-updates&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;如果启用了该选项，在 WHERE 子句中未使用键或 &lt;code&gt;LIMIT&lt;/code&gt; 子句的 &lt;code&gt;UPDATE&lt;/code&gt; 和 &lt;code&gt;DELETE&lt;/code&gt; 语句将产生错误。此外，对产生（或估计会产生）超大结果集的 &lt;code&gt;SELECT&lt;/code&gt; 语句也会进行限制。如果在选项文件中设置了该选项，可以在命令行中使用 &lt;code&gt;-skip-safe-updates&lt;/code&gt;来覆盖它。有关该选项的更多信息，请参阅&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E4%BD%BF%E7%94%A8%E5%AE%89%E5%85%A8%E6%9B%B4%E6%96%B0%E6%A8%A1%E5%BC%8F---safe-updates&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Using Safe-Updates Mode (&amp;ndash;safe-updates)&lt;/a&gt;。&lt;/p&gt;
 &lt;h3 id=&#34;--select-limitvalue&#34;&gt;--select-limit=&lt;em&gt;value&lt;/em&gt;&lt;/h3&gt;
 &lt;table&gt;
@@ -2255,7 +2253,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  DB_SERVER:&amp;#39;127.0.0.1&amp;#39;, DB:&amp;#39;test&amp;#39;, QUERY:&amp;#39;SHOW TABLES;&amp;#39;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;更多信息，请参阅&lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/div&gt;&lt;p&gt;更多信息，请参阅&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#mysql-%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%97%A5%E5%BF%97&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&amp;ldquo;mysql Client Logging&amp;rdquo;&lt;/a&gt;。&lt;/p&gt;
 &lt;h3 id=&#34;--table--t&#34;&gt;--table, -t&lt;/h3&gt;
 &lt;table&gt;
@@ -2282,7 +2280,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;将输出副本附加到指定文件。该选项仅在交互模式下有效。请参阅&lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;将输出副本附加到指定文件。该选项仅在交互模式下有效。请参阅&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#mysql-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%91%BD%E4%BB%A4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&amp;ldquo;mysql Client Commands&amp;rdquo;&lt;/a&gt; ，将进一步讨论 tee 文件。&lt;/p&gt;
 &lt;h3 id=&#34;--tls-ciphersuitesciphersuite_list&#34;&gt;--tls-ciphersuites=&lt;em&gt;ciphersuite_list&lt;/em&gt;&lt;/h3&gt;
 &lt;table&gt;
@@ -2495,7 +2493,7 @@
 &lt;p&gt;更多信息，请参阅&lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/connection-compression-control.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&amp;ldquo;Connection Compression Control&amp;rdquo;&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;此选项在 MySQL 8.0.18 中添加。&lt;/p&gt;
-&lt;h2 id=&#34;mysql-client-commands&#34;&gt;mysql Client Commands&lt;/h2&gt;
+&lt;h2 id=&#34;mysql-客户端命令&#34;&gt;mysql 客户端命令&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;mysql&lt;/strong&gt; 会将你发出的每条 SQL 语句发送到服务器执行。此外，&lt;strong&gt;mysql&lt;/strong&gt;本身也会解释一组命令。要查看这些命令的列表，请在 &lt;code&gt;mysql&amp;gt;&lt;/code&gt; 提示符下键入 &lt;code&gt;help&lt;/code&gt; 或 &lt;code&gt;\h&lt;/code&gt;：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2584,7 +2582,7 @@
 &lt;li&gt;
 &lt;p&gt;help [&lt;em&gt;arg&lt;/em&gt;], \h [&lt;em&gt;arg&lt;/em&gt;], \? [&lt;em&gt;arg&lt;/em&gt;], ? [&lt;em&gt;arg&lt;/em&gt;]&lt;/p&gt;
 &lt;p&gt;显示帮助信息，列出可用的 mysql 命令。&lt;/p&gt;
-&lt;p&gt;如果为 &lt;em&gt;help&lt;/em&gt; 命令提供参数，&lt;strong&gt;mysql&lt;/strong&gt; 会将其用作搜索字符串，从《MySQL 参考手册》的内容中访问服务器端帮助。更多信息，请参阅&lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-server-side-help.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;如果为 &lt;em&gt;help&lt;/em&gt; 命令提供参数，&lt;strong&gt;mysql&lt;/strong&gt; 会将其用作搜索字符串，从《MySQL 参考手册》的内容中访问服务器端帮助。更多信息，请参阅&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#syslog-%E6%97%A5%E5%BF%97%E7%89%B9%E5%BE%81&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&amp;ldquo;mysql Client Server-Side Help&amp;rdquo;&lt;/a&gt;。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -3060,13 +3058,16 @@
 &lt;p&gt;以下讨论介绍了适用于所有记录类型的特征，并提供了每种记录类型的特定信息。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;如何记录日志&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E5%A6%82%E4%BD%95%E8%AE%B0%E5%BD%95%E6%97%A5%E5%BF%97&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;如何记录日志&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;控制历史文件&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E6%8E%A7%E5%88%B6%E5%8E%86%E5%8F%B2%E6%96%87%E4%BB%B6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;控制历史文件&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;syslog 日志特征&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#syslog-%E6%97%A5%E5%BF%97%E7%89%B9%E5%BE%81&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;syslog 日志特征&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;如何记录日志&#34;&gt;如何记录日志&lt;/h3&gt;
@@ -3142,7 +3143,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;控制历史文件&#34;&gt;控制历史文件&lt;/h3&gt;
 &lt;p&gt;应使用限制访问模式保护 &lt;code&gt;.mysql_history&lt;/code&gt; 文件，因为敏感信息（如包含密码的 SQL 语句文本）可能会被写入该文件。请参阅&lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/password-security-user.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;&amp;ldquo;End-User Guidelines for Password Security&amp;rdquo;&lt;/a&gt;。使用&lt;strong&gt;up-arrow&lt;/strong&gt;键调用历史记录时，可从&lt;strong&gt;mysql&lt;/strong&gt;客户端访问文件中的语句。请参阅 &lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-tips.html#mysql-history&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;End-User Guidelines for Password Security&amp;rdquo;&lt;/a&gt;。使用&lt;strong&gt;up-arrow&lt;/strong&gt;键调用历史记录时，可从&lt;strong&gt;mysql&lt;/strong&gt;客户端访问文件中的语句。请参阅 &lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E7%A6%81%E7%94%A8%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Disabling Interactive History&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;如果不想维护历史文件，首先删除存在的 &lt;code&gt;.mysql_history&lt;/code&gt;。然后使用以下任一技术防止再次创建该文件：&lt;/p&gt;
 &lt;ul&gt;
@@ -3437,25 +3438,32 @@
 &lt;p&gt;本节介绍更有效使用 &lt;strong&gt;mysql&lt;/strong&gt; 的技巧以及 &lt;strong&gt;mysql&lt;/strong&gt; 的操作行为。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;输入行编辑&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E8%BE%93%E5%85%A5%E8%A1%8C%E7%BC%96%E8%BE%91&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;输入行编辑&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;禁用交互式历史记录&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E7%A6%81%E7%94%A8%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;禁用交互式历史记录&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Windows 支持 Unicode&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#windows-%E6%94%AF%E6%8C%81-unicode&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Windows 支持 Unicode&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;垂直显示查询结果&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E5%9E%82%E7%9B%B4%E6%98%BE%E7%A4%BA%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;垂直显示查询结果&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;使用安全更新模式 (&amp;ndash;safe-updates)&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E4%BD%BF%E7%94%A8%E5%AE%89%E5%85%A8%E6%9B%B4%E6%96%B0%E6%A8%A1%E5%BC%8F---safe-updates&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用安全更新模式 (&amp;ndash;safe-updates)&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;禁用 mysql 自动重新连接功能&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E7%A6%81%E7%94%A8-mysql-%E8%87%AA%E5%8A%A8%E9%87%8D%E6%96%B0%E8%BF%9E%E6%8E%A5%E5%8A%9F%E8%83%BD&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;禁用 mysql 自动重新连接功能&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;mysql 客户端解析器与服务器解析器对比&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#mysql-%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%A3%E6%9E%90%E5%99%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A7%A3%E6%9E%90%E5%99%A8%E5%AF%B9%E6%AF%94&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mysql 客户端解析器与服务器解析器对比&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;输入行编辑&#34;&gt;输入行编辑&lt;/h3&gt;
@@ -3478,7 +3486,7 @@
 &lt;p&gt;&lt;code&gt;up-arrow&lt;/code&gt;可以调用当前和以前会话中的输入行。在共享控制台的情况下，这种行为可能不合适。根据主机平台的不同，&lt;strong&gt;mysql&lt;/strong&gt; 支持部分或完全禁用交互式历史记录。&lt;/p&gt;
 &lt;p&gt;在 Windows 中，历史记录存储在内存中。&lt;code&gt;Alt+F7&lt;/code&gt;会删除当前历史记录缓冲区内存中存储的所有输入行。它还会删除用 &lt;code&gt;F7&lt;/code&gt;显示并用 &lt;code&gt;F9&lt;/code&gt;调用（按编号）的输入行前面的顺序编号列表。按 &lt;code&gt;Alt+F7&lt;/code&gt; 键后输入的新输入行将重新填充当前历史记录缓冲区。如果在启动 &lt;strong&gt;mysql&lt;/strong&gt; 时使用了 &lt;code&gt;--syslog&lt;/code&gt; 选项，则清除缓冲区并不会阻止向 Windows 事件查看器记录日志。关闭控制台窗口也会清除当前的历史记录缓冲区。&lt;/p&gt;
 &lt;p&gt;要在 Unix 上禁用交互式历史记录，首先要删除 &lt;code&gt;.mysql_history&lt;/code&gt; 文件（如果存在）（否则会调用以前的条目）。然后使用 &lt;code&gt;--histignore=&amp;quot;*&amp;quot;&lt;/code&gt;选项启动&lt;strong&gt;mysql&lt;/strong&gt;，以忽略所有新输入行。要重新启用调用（和记录）行为，请在重启 &lt;strong&gt;mysql&lt;/strong&gt; 时不带该选项。&lt;/p&gt;
-&lt;p&gt;如果阻止创建&lt;code&gt;.mysql_history&lt;/code&gt;文件（请查阅&lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html#mysql-logging-history-file&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;如果阻止创建&lt;code&gt;.mysql_history&lt;/code&gt;文件（请查阅&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E6%8E%A7%E5%88%B6%E5%8E%86%E5%8F%B2%E6%96%87%E4%BB%B6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Controlling the History File&lt;/a&gt;），并使用&lt;code&gt;--histignore=&amp;quot;*&amp;quot;&lt;/code&gt;来启动&lt;strong&gt;mysql&lt;/strong&gt;客户端，交互式历史记录调用功能就会被完全禁用。另外，如果省略&lt;code&gt;--histignore&lt;/code&gt;选项，则可以调用当前会话中输入的行。&lt;/p&gt;
 &lt;h3 id=&#34;windows-支持-unicode&#34;&gt;Windows 支持 Unicode&lt;/h3&gt;
 &lt;p&gt;Windows 提供了基于 UTF-16LE 的 API，用于从控制台读取数据和向控制台写入数据；Windows 的 &lt;strong&gt;mysql&lt;/strong&gt; 客户端可以使用这些 API。Windows 安装程序会在 MySQL 菜单中创建一个名为 &amp;ldquo;MySQL command line client - Unicode&amp;rdquo; 的项目。此项目调用&lt;strong&gt;mysql&lt;/strong&gt;客户端，其属性设置为使用Unicode通过控制台与MySQL服务器通信。&lt;/p&gt;

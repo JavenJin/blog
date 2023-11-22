@@ -6,10 +6,10 @@
         <description>Recent content in Database on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Tue, 21 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/tags/database/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 22 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/tags/database/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>MySQL Command-Line Client</title>
         <link>https://javenjin.github.io/blog/p/mysql-command-line-client/</link>
-        <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
+        <pubDate>Wed, 22 Nov 2023 00:00:00 +0000</pubDate>
         
         <guid>https://javenjin.github.io/blog/p/mysql-command-line-client/</guid>
         <description>&lt;h1 id=&#34;mysql-command-line-client&#34;&gt;MySQL Command-Line Client&lt;/h1&gt;
@@ -57,7 +57,7 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mysql db_name &amp;lt; script.sql &amp;gt; output.tab
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;On Unix, the mysql client logs statements executed interactively to a history file. See &lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/div&gt;&lt;p&gt;On Unix, the mysql client logs statements executed interactively to a history file. See &lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#mysql-client-logging&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;mysql Client Logging&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;mysql-client-options&#34;&gt;mysql Client Options&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;mysql&lt;/strong&gt; supports the following options, which can be specified on the command line or in the &lt;code&gt;[mysql]&lt;/code&gt; and &lt;code&gt;[client]&lt;/code&gt; groups of an option file. For information about option files used by MySQL programs, see &lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/option-files.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1225,7 +1225,7 @@
 &lt;/table&gt;
 &lt;p&gt;Set the statement delimiter. The default is the semicolon character (;).&lt;/p&gt;
 &lt;h3 id=&#34;--disable-named-commands&#34;&gt;--disable-named-commands&lt;/h3&gt;
-&lt;p&gt;Disable named commands. Use the \* form only, or use named commands only at the beginning of a line ending with a semicolon (;). &lt;strong&gt;mysql&lt;/strong&gt; starts with this option &lt;em&gt;enabled&lt;/em&gt; by default. However, even with this option, long-format commands still work from the first line. See &lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;Disable named commands. Use the \* form only, or use named commands only at the beginning of a line ending with a semicolon (;). &lt;strong&gt;mysql&lt;/strong&gt; starts with this option &lt;em&gt;enabled&lt;/em&gt; by default. However, even with this option, long-format commands still work from the first line. See &lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#mysql-client-commands&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&amp;ldquo;mysql Client Commands&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;--dns-srv-namename&#34;&gt;--dns-srv-name=&lt;em&gt;name&lt;/em&gt;&lt;/h3&gt;
 &lt;table&gt;
@@ -1431,7 +1431,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;A list of one or more colon-separated patterns specifying statements to ignore for logging purposes. These patterns are added to the default pattern list (&amp;quot;*IDENTIFIED*:*PASSWORD*&amp;quot;). The value specified for this option affects logging of statements written to the history file, and to syslog if the &lt;code&gt;--syslog&lt;/code&gt; option is given. For more information, see &lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;A list of one or more colon-separated patterns specifying statements to ignore for logging purposes. These patterns are added to the default pattern list (&amp;quot;*IDENTIFIED*:*PASSWORD*&amp;quot;). The value specified for this option affects logging of statements written to the history file, and to syslog if the &lt;code&gt;--syslog&lt;/code&gt; option is given. For more information, see &lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#mysql-client-logging&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&amp;ldquo;mysql Client Logging&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;--hosthost_name--h-host_name&#34;&gt;--host=&lt;em&gt;host_name&lt;/em&gt;, -h &lt;em&gt;host_name&lt;/em&gt;&lt;/h3&gt;
 &lt;table&gt;
@@ -1644,7 +1644,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Enable named &lt;strong&gt;mysql&lt;/strong&gt; commands. Long-format commands are permitted, not just short-format commands. For example, &lt;code&gt;quit&lt;/code&gt; and &lt;code&gt;\q&lt;/code&gt; both are recognized. Use &lt;code&gt;--skip-named-commands&lt;/code&gt; to disable named commands. See &lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;Enable named &lt;strong&gt;mysql&lt;/strong&gt; commands. Long-format commands are permitted, not just short-format commands. For example, &lt;code&gt;quit&lt;/code&gt; and &lt;code&gt;\q&lt;/code&gt; both are recognized. Use &lt;code&gt;--skip-named-commands&lt;/code&gt; to disable named commands. See &lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#mysql-client-commands&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&amp;ldquo;mysql Client Commands&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;--net-buffer-lengthvalue&#34;&gt;--net-buffer-length=&lt;em&gt;value&lt;/em&gt;&lt;/h3&gt;
 &lt;table&gt;
@@ -1791,7 +1791,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Use the given command for paging query output. If the command is omitted, the default pager is the value of your &lt;em&gt;PAGER&lt;/em&gt; environment variable. Valid pagers are &lt;strong&gt;less&lt;/strong&gt;, &lt;strong&gt;more&lt;/strong&gt;, &lt;strong&gt;cat [&amp;gt; filename]&lt;/strong&gt;, and so forth. This option works only on Unix and only in interactive mode. To disable paging, use &lt;code&gt;--skip-pager&lt;/code&gt;. Section &lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;Use the given command for paging query output. If the command is omitted, the default pager is the value of your &lt;em&gt;PAGER&lt;/em&gt; environment variable. Valid pagers are &lt;strong&gt;less&lt;/strong&gt;, &lt;strong&gt;more&lt;/strong&gt;, &lt;strong&gt;cat [&amp;gt; filename]&lt;/strong&gt;, and so forth. This option works only on Unix and only in interactive mode. To disable paging, use &lt;code&gt;--skip-pager&lt;/code&gt;. Section &lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#mysql-client-commands&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&amp;ldquo;mysql Client Commands&amp;rdquo;&lt;/a&gt;, discusses output paging further.&lt;/p&gt;
 &lt;h3 id=&#34;--passwordpassword--p-password&#34;&gt;--password[=&lt;em&gt;password&lt;/em&gt;], -p [&lt;em&gt;password&lt;/em&gt;]&lt;/h3&gt;
 &lt;table&gt;
@@ -2039,7 +2039,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;If this option is enabled, &lt;code&gt;UPDATE&lt;/code&gt; and &lt;code&gt;DELETE&lt;/code&gt; statements that do not use a key in the WHERE clause or a &lt;code&gt;LIMIT&lt;/code&gt; clause produce an error. In addition, restrictions are placed on &lt;code&gt;SELECT&lt;/code&gt; statements that produce (or are estimated to produce) very large result sets. If you have set this option in an option file, you can use &lt;code&gt;--skip-safe-updates&lt;/code&gt; on the command line to override it. For more information about this option, see &lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-tips.html#safe-updates&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;If this option is enabled, &lt;code&gt;UPDATE&lt;/code&gt; and &lt;code&gt;DELETE&lt;/code&gt; statements that do not use a key in the WHERE clause or a &lt;code&gt;LIMIT&lt;/code&gt; clause produce an error. In addition, restrictions are placed on &lt;code&gt;SELECT&lt;/code&gt; statements that produce (or are estimated to produce) very large result sets. If you have set this option in an option file, you can use &lt;code&gt;--skip-safe-updates&lt;/code&gt; on the command line to override it. For more information about this option, see &lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#using-safe-updates-mode---safe-updates&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Using Safe-Updates Mode (&amp;ndash;safe-updates)&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;--select-limitvalue&#34;&gt;--select-limit=&lt;em&gt;value&lt;/em&gt;&lt;/h3&gt;
 &lt;table&gt;
@@ -2245,7 +2245,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  DB_SERVER:&amp;#39;127.0.0.1&amp;#39;, DB:&amp;#39;test&amp;#39;, QUERY:&amp;#39;SHOW TABLES;&amp;#39;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;For more information, see &lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/div&gt;&lt;p&gt;For more information, see &lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#mysql-client-logging&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&amp;ldquo;mysql Client Logging&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;--table--t&#34;&gt;--table, -t&lt;/h3&gt;
 &lt;table&gt;
@@ -2272,7 +2272,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Append a copy of output to the given file. This option works only in interactive mode. Section &lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;Append a copy of output to the given file. This option works only in interactive mode. Section &lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#mysql-client-commands&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&amp;ldquo;mysql Client Commands&amp;rdquo;&lt;/a&gt;, discusses tee files further.&lt;/p&gt;
 &lt;h3 id=&#34;--tls-ciphersuitesciphersuite_list&#34;&gt;--tls-ciphersuites=&lt;em&gt;ciphersuite_list&lt;/em&gt;&lt;/h3&gt;
 &lt;table&gt;
@@ -2574,7 +2574,7 @@
 &lt;li&gt;
 &lt;p&gt;help [&lt;em&gt;arg&lt;/em&gt;], \h [&lt;em&gt;arg&lt;/em&gt;], \? [&lt;em&gt;arg&lt;/em&gt;], ? [&lt;em&gt;arg&lt;/em&gt;]&lt;/p&gt;
 &lt;p&gt;Display a help message listing the available mysql commands.&lt;/p&gt;
-&lt;p&gt;If you provide an argument to the &lt;em&gt;help&lt;/em&gt; command, &lt;strong&gt;mysql&lt;/strong&gt; uses it as a search string to access server-side help from the contents of the MySQL Reference Manual. For more information, see &lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-server-side-help.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;If you provide an argument to the &lt;em&gt;help&lt;/em&gt; command, &lt;strong&gt;mysql&lt;/strong&gt; uses it as a search string to access server-side help from the contents of the MySQL Reference Manual. For more information, see &lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#mysql-client-server-side-help&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&amp;ldquo;mysql Client Server-Side Help&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -3046,13 +3046,16 @@
 &lt;p&gt;The following discussion describes characteristics that apply to all logging types and provides information specific to each logging type.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;How Logging Occurs&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#how-logging-occurs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;How Logging Occurs&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Controlling the History File&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#controlling-the-history-file&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Controlling the History File&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;syslog Logging Characteristics&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#syslog-logging-characteristics&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;syslog Logging Characteristics&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;how-logging-occurs&#34;&gt;How Logging Occurs&lt;/h3&gt;
@@ -3128,7 +3131,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;controlling-the-history-file&#34;&gt;Controlling the History File&lt;/h3&gt;
 &lt;p&gt;The &lt;code&gt;.mysql_history&lt;/code&gt; file should be protected with a restrictive access mode because sensitive information might be written to it, such as the text of SQL statements that contain passwords. See &lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/password-security-user.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;&amp;ldquo;End-User Guidelines for Password Security&amp;rdquo;&lt;/a&gt;. Statements in the file are accessible from the &lt;strong&gt;mysql&lt;/strong&gt; client when the &lt;strong&gt;up-arrow&lt;/strong&gt; key is used to recall the history. See &lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-tips.html#mysql-history&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;End-User Guidelines for Password Security&amp;rdquo;&lt;/a&gt;. Statements in the file are accessible from the &lt;strong&gt;mysql&lt;/strong&gt; client when the &lt;strong&gt;up-arrow&lt;/strong&gt; key is used to recall the history. See &lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#disabling-interactive-history&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Disabling Interactive History&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If you do not want to maintain a history file, first remove &lt;code&gt;.mysql_history&lt;/code&gt; if it exists. Then use either of the following techniques to prevent it from being created again:&lt;/p&gt;
 &lt;ul&gt;
@@ -3423,25 +3426,32 @@
 &lt;p&gt;This section provides information about techniques for more effective use of &lt;strong&gt;mysql&lt;/strong&gt; and about &lt;strong&gt;mysql&lt;/strong&gt; operational behavior.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Input-Line Editing&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#input-line-editing&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Input-Line Editing&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Disabling Interactive History&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#disabling-interactive-history&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Disabling Interactive History&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Unicode Support on Windows&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#unicode-support-on-windows&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Unicode Support on Windows&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Displaying Query Results Vertically&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#displaying-query-results-vertically&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Displaying Query Results Vertically&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Using Safe-Updates Mode (&amp;ndash;safe-updates)&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#using-safe-updates-mode---safe-updates&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Using Safe-Updates Mode (&amp;ndash;safe-updates)&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Disabling mysql Auto-Reconnect&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#disabling-mysql-auto-reconnect&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Disabling mysql Auto-Reconnect&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;mysql Client Parser Versus Server Parser&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#mysql-client-parser-versus-server-parser&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mysql Client Parser Versus Server Parser&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;input-line-editing&#34;&gt;Input-Line Editing&lt;/h3&gt;
@@ -3464,7 +3474,7 @@
 &lt;p&gt;The &lt;code&gt;up-arrow&lt;/code&gt; key enables you to recall input lines from current and previous sessions. In cases where a console is shared, this behavior may be unsuitable. &lt;strong&gt;mysql&lt;/strong&gt; supports disabling the interactive history partially or fully, depending on the host platform.&lt;/p&gt;
 &lt;p&gt;On Windows, the history is stored in memory. &lt;code&gt;Alt+F7&lt;/code&gt; deletes all input lines stored in memory for the current history buffer. It also deletes the list of sequential numbers in front of the input lines displayed with &lt;code&gt;F7&lt;/code&gt; and recalled (by number) with &lt;code&gt;F9&lt;/code&gt;. New input lines entered after you press &lt;code&gt;Alt+F7&lt;/code&gt; repopulate the current history buffer. Clearing the buffer does not prevent logging to the Windows Event Viewer, if the &lt;code&gt;--syslog&lt;/code&gt; option was used to start &lt;strong&gt;mysql&lt;/strong&gt;. Closing the console window also clears the current history buffer.&lt;/p&gt;
 &lt;p&gt;To disable interactive history on Unix, first delete the &lt;code&gt;.mysql_history&lt;/code&gt; file, if it exists (previous entries are recalled otherwise). Then start &lt;strong&gt;mysql&lt;/strong&gt; with the &lt;code&gt;--histignore=&amp;quot;*&amp;quot;&lt;/code&gt; option to ignore all new input lines. To re-enable the recall (and logging) behavior, restart &lt;strong&gt;mysql&lt;/strong&gt; without the option.&lt;/p&gt;
-&lt;p&gt;If you prevent the &lt;code&gt;.mysql_history&lt;/code&gt; file from being created (see &lt;a class=&#34;link&#34; href=&#34;https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html#mysql-logging-history-file&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;If you prevent the &lt;code&gt;.mysql_history&lt;/code&gt; file from being created (see &lt;a class=&#34;link&#34; href=&#34;https://javenjin.github.io/blog/p/mysql-command-line-client/#controlling-the-history-file&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Controlling the History File&lt;/a&gt;) and use &lt;code&gt;--histignore=&amp;quot;*&amp;quot;&lt;/code&gt; to start the &lt;strong&gt;mysql&lt;/strong&gt; client, the interactive history recall facility is disabled fully. Alternatively, if you omit the &lt;code&gt;--histignore&lt;/code&gt; option, you can recall the input lines entered during the current session.&lt;/p&gt;
 &lt;h3 id=&#34;unicode-support-on-windows&#34;&gt;Unicode Support on Windows&lt;/h3&gt;
 &lt;p&gt;Windows provides APIs based on UTF-16LE for reading from and writing to the console; the &lt;strong&gt;mysql&lt;/strong&gt; client for Windows is able to use these APIs. The Windows installer creates an item in the MySQL menu named &lt;code&gt;MySQL command line client - Unicode&lt;/code&gt;. This item invokes the &lt;strong&gt;mysql&lt;/strong&gt; client with properties set to communicate through the console to the MySQL server using Unicode.&lt;/p&gt;
