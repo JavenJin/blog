@@ -50,7 +50,7 @@ On Unix, the mysql client logs statements executed interactively to a history fi
 
 **mysql** supports the following options, which can be specified on the command line or in the `[mysql]` and `[client]` groups of an option file. For information about option files used by MySQL programs, see [Using Option Files](https://dev.mysql.com/doc/refman/8.0/en/option-files.html).
 
-|Option Name|Description|Introduced|Deprecated|
+|**Option Name**|**Description**|**Introduced**|**Deprecated**|
 |:--|--|--|--|
 |\-\-auto-rehash|Enable automatic rehashing|||
 |\-\-auto-vertical-output|Enable automatic vertical result set display|||
@@ -1024,7 +1024,7 @@ These `--ssl-fips-mode` values are permitted:
 
 - ON: Enable FIPS mode.
 
-- STRICT: Enable “strict” FIPS mode.
+- STRICT: Enable "strict" FIPS mode.
 
 > **Note:** If the OpenSSL FIPS Object Module is not available, the only permitted value for `--ssl-fips-mode` is OFF. In this case, setting `--ssl-fips-mode` to *ON* or *STRICT* causes the client to produce a warning at startup and to operate in non-FIPS mode.
 
@@ -1232,7 +1232,7 @@ If **mysql** is invoked with the `--binary-mode` option, all **mysql** commands 
 
 Each command has both a long and short form. The long form is not case-sensitive; the short form is. The long form can be followed by an optional semicolon terminator, but the short form should not.
 
-The use of short-form commands within multiple-line /* ... */ comments is not supported. Short-form commands do work within single-line /*! ... */ version comments, as do /*+ ... */ optimizer-hint comments, which are stored in object definitions. If there is a concern that optimizer-hint comments may be stored in object definitions so that dump files when reloaded with *mysql* would result in execution of such commands, either invoke **mysql** with the `--binary-mode` option or use a reload client other than **mysql**.
+The use of short-form commands within multiple-line /\* ... \*/ comments is not supported. Short-form commands do work within single-line /\*! ... \*/ version comments, as do /\*+ ... \*/ optimizer-hint comments, which are stored in object definitions. If there is a concern that optimizer-hint comments may be stored in object definitions so that dump files when reloaded with *mysql* would result in execution of such commands, either invoke **mysql** with the `--binary-mode` option or use a reload client other than **mysql**.
 
 - help \[*arg*\], \\h \[*arg*\], \\? \[*arg*\], ? \[*arg*\]
 
@@ -1610,11 +1610,11 @@ Messages consist of the identifier `MysqlClient` followed by these values:
 
 - `SYSTEM_USER`
 
-    The operating system user name (login name) or -- if the user is unknown.
+    The operating system user name (login name) or \-\- if the user is unknown.
 
 - `MYSQL_USER`
 
-    The MySQL user name (specified with the `--user` option) or -- if the user is unknown.
+    The MySQL user name (specified with the `--user` option) or \-\- if the user is unknown.
 
 - `CONNECTION_ID:`
 

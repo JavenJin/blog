@@ -52,7 +52,7 @@ mysql db_name < script.sql > output.tab
 
 **mysql**支持以下选项，这些选项可以在命令行或选项文件的`[mysql]`和`[client]`组中指定。有关 MySQL 程序使用的选项文件的信息，请参阅 [Using Option Files](https://dev.mysql.com/doc/refman/8.0/en/option-files.html)。
 
-|选项名称|说明|引入版本|废弃版本|
+|**选项名称**|**描述**|**引入版本**|**废弃版本**|
 |:--|--|--|--|
 |\-\-auto-rehash|启用自动重新哈希|||
 |\-\-auto-vertical-output|启用自动垂直结果集显示|||
@@ -1027,29 +1027,29 @@ PEM 格式文件的路径名，该文件包含服务器在基于 RSA 密钥对�
 |**Type**|**Enumeration**|
 |**Default Value**|**OFF**|
 |**Valid Values**|**OFF / ON / STRICT**|
-todo：
-Controls whether to enable FIPS mode on the client side. The `--ssl-fips-mode` option differs from other `--ssl-xxx` options in that it is not used to establish encrypted connections, but rather to affect which cryptographic operations to permit. See ["FIPS Support"](https://dev.mysql.com/doc/refman/8.0/en/fips-mode.html).
 
-These `--ssl-fips-mode` values are permitted:
+控制是否在客户端启用 FIPS 模式。`--ssl-fips-mode`选项与其他`--ssl-xxx`选项不同，它不是用来建立加密连接，而是影响允许哪些加密操作。请参阅["FIPS Support"](https://dev.mysql.com/doc/refman/8.0/en/fips-mode.html)。
 
-- OFF: Disable FIPS mode.
+允许使用这些`--ssl-fips-mode`值：
 
-- ON: Enable FIPS mode.
+- OFF: 禁用 FIPS 模式。
 
-- STRICT: Enable “strict” FIPS mode.
+- ON: 启用 FIPS 模式。
 
-> **Note:** If the OpenSSL FIPS Object Module is not available, the only permitted value for `--ssl-fips-mode` is OFF. In this case, setting `--ssl-fips-mode` to *ON* or *STRICT* causes the client to produce a warning at startup and to operate in non-FIPS mode.
+- STRICT: 启用 "strict" FIPS 模式。
 
-As of MySQL 8.0.34, this option is deprecated. Expect it to be removed in a future version of MySQL.
+> **注意：**如果 OpenSSL FIPS 对象模块不可用，`-ssl-fips-mode` 的唯一允许值是 OFF。在这种情况下，将 `-ssl-fips-mode` 设置为 *ON* 或 *STRICT* 会导致客户端在启动时发出警告，并以非 FIPS 模式运行。
+
+自 MySQL 8.0.34 起，该选项已被弃用。预计未来的 MySQL 版本将删除该选项。
 
 ### \-\-syslog, -j
 
 |**Command-Line Format**|**\-\-syslog**|
 |:--|--|
 
-This option causes **mysql** to send interactive statements to the system logging facility. On Unix, this is *syslog*; on Windows, it is the Windows Event Log. The destination where logged messages appear is system dependent. On Linux, the destination is often the */var/log/messages* file.
+该选项会使**mysql**向系统日志设备发送交互式语句。在 Unix 系统中，这是 *syslog*；在 Windows 系统中，这是 Windows 事件日志。记录信息的目的地取决于系统。在 Linux 系统中，目的地通常是 */var/log/messages* 文件。
 
-Here is a sample of output generated on Linux by using `--syslog`. This output is formatted for readability; each logged message actually takes a single line.
+下面是使用 `--syslog` 在 Linux 上生成的输出示例。为便于阅读，该输出已格式化；每条记录的信息实际上只占一行。
 
 ```
 Mar  7 12:39:25 myhost MysqlClient[20824]:
@@ -1060,14 +1060,14 @@ Mar  7 12:39:28 myhost MysqlClient[20824]:
   DB_SERVER:'127.0.0.1', DB:'test', QUERY:'SHOW TABLES;'
 ```
 
-For more information, see ["mysql Client Logging"](https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html).
+更多信息，请参阅["mysql Client Logging"](https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html)。
 
 ### \-\-table, -t
 
 |**Command-Line Format**|**\-\-table**|
 |:--|--|
 
-Display output in table format. This is the default for interactive use, but can be used to produce table output in batch mode.
+以表格格式显示输出。这是交互式使用的默认设置，但也可用于在批处理模式下生成表格输出。
 
 ### \-\-tee-*file_name*
 
@@ -1075,7 +1075,7 @@ Display output in table format. This is the default for interactive use, but can
 |:--|--|
 |**Type**|**File name**|
 
-Append a copy of output to the given file. This option works only in interactive mode. Section ["mysql Client Commands"](https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html), discusses tee files further.
+将输出副本附加到指定文件。该选项仅在交互模式下有效。请参阅["mysql Client Commands"](https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html) ，将进一步讨论 tee 文件。
 
 ### \-\-tls-ciphersuites=*ciphersuite_list*
 
@@ -1084,7 +1084,7 @@ Append a copy of output to the given file. This option works only in interactive
 |**Introduced**|**8.0.16**|
 |**Type**|**String**|
 
-The permissible ciphersuites for encrypted connections that use TLSv1.3. The value is a list of one or more colon-separated ciphersuite names. The ciphersuites that can be named for this option depend on the SSL library used to compile MySQL. For details, see ["Encrypted Connection TLS Protocols and Ciphers"](https://dev.mysql.com/doc/refman/8.0/en/encrypted-connection-protocols-ciphers.html).
+使用 TLSv1.3 的加密连接允许使用的密码套件。该值是一个或多个以冒号分隔的密码组名称列表。可为该选项命名的密码库取决于编译 MySQL 时使用的 SSL 库。详情请参阅["Encrypted Connection TLS Protocols and Ciphers"](https://dev.mysql.com/doc/refman/8.0/en/encrypted-connection-protocols-ciphers.html)。
 
 This option was added in MySQL 8.0.16.
 
@@ -1096,14 +1096,14 @@ This option was added in MySQL 8.0.16.
 |**Default Value(≥ 8.0.19)**|**TLSv1,TLSv1.1,TLSv1.2,TLSv1.3 (OpenSSL 1.1.1 or higher) / TLSv1,TLSv1.1,TLSv1.2 (otherwise)**|
 |**Default Value(≤ 8.0.18)**|**TLSv1,TLSv1.1,TLSv1.2**|
 
-The permissible TLS protocols for encrypted connections. The value is a list of one or more comma-separated protocol names. The protocols that can be named for this option depend on the SSL library used to compile MySQL. For details, see ["Encrypted Connection TLS Protocols and Ciphers"](https://dev.mysql.com/doc/refman/8.0/en/encrypted-connection-protocols-ciphers.html).
+允许用于加密连接的 TLS 协议。值是一个或多个以逗号分隔的协议名称列表。可以为该选项命名的协议取决于编译 MySQL 时使用的 SSL 库。详情请参阅["Encrypted Connection TLS Protocols and Ciphers"](https://dev.mysql.com/doc/refman/8.0/en/encrypted-connection-protocols-ciphers.html)。
 
 ### \-\-unbuffered, -n
 
 |**Command-Line Format**|**\-\-unbuffered**|
 |:--|--|
 
-Flush the buffer after each query.
+每次查询后清空缓冲区。
 
 ### \-\-user=*user_name*, -u *user_name*
 
@@ -1111,50 +1111,50 @@ Flush the buffer after each query.
 |:--|--|
 |**Type**|**String**|
 
-The user name of the MySQL account to use for connecting to the server.
+用于连接服务器的 MySQL 账户的用户名。
 
 ### \-\-verbose, -v
 
 |**Command-Line Format**|**\-\-verbose**|
 |:--|--|
 
-Verbose mode. Produce more output about what the program does. This option can be given multiple times to produce more and more output. (For example, -v -v -v produces table output format even in batch mode.)
+详细模式。输出更多有关程序运行的信息。该选项可以多次使用，以产生越来越多的输出。（例如，-v -v -v 即使在批处理模式下也能产生表格输出格式）。
 
 ### \-\-version, -V
 
 |**Command-Line Format**|**\-\-version**|
 |:--|--|
 
-Display version information and exit.
+显示版本信息并退出。
 
 ### \-\-vertical, -E
 
 |**Command-Line Format**|**\-\-vertical**|
 |:--|--|
 
-Print query output rows vertically (one line per column value). Without this option, you can specify vertical output for individual statements by terminating them with \G.
+垂直打印查询输出行（每列值一行）。如果不使用该选项，可以通过以 \G 结束单个语句来指定垂直输出。
 
 ### \-\-wait, -w
 
 |**Command-Line Format**|**\-\-wait**|
 |:--|--|
 
-If the connection cannot be established, wait and retry instead of aborting.
+如果无法建立连接，请等待并重试，而不是放弃。
 
 ### \-\-xml, -X
 
 |**Command-Line Format**|**\-\-xml**|
 |:--|--|
 
-Produce XML output.
+生成 XML 输出。
 
 ```xml
 <field name="column_name">NULL</field>
 ```
 
-The output when `--xml` is used with **mysql** matches that of **mysqldump** `--xml`. See ["mysqldump — A Database Backup Program"](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html), for details.
+当 `--xml` 与 **mysql** 一起使用时，输出结果与 **mysqldump** `--xml` 的输出结果一致。详见["mysqldump — A Database Backup Program"](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)。
 
-The XML output also uses an XML namespace, as shown here:
+XML 输出也使用 XML 命名空间，如图所示：
 
 ```xml
 $> mysql --xml -uroot -e "SHOW VARIABLES LIKE 'version%'"
@@ -1190,15 +1190,15 @@ $> mysql --xml -uroot -e "SHOW VARIABLES LIKE 'version%'"
 |**Introduced**|**8.0.18**|
 |**Type**|**Integer**|
 
-The compression level to use for connections to the server that use the zstd compression algorithm. The permitted levels are from 1 to 22, with larger values indicating increasing levels of compression. The default zstd compression level is 3. The compression level setting has no effect on connections that do not use zstd compression.
+使用 zstd 压缩算法的服务器连接所使用的压缩级别。允许的压缩级别从 1 到 22，数值越大，压缩级别越高。默认的 zstd 压缩级别为 3。 压缩级别设置对不使用 zstd 压缩的连接没有影响。
 
-For more information, see ["Connection Compression Control"](https://dev.mysql.com/doc/refman/8.0/en/connection-compression-control.html).
+更多信息，请参阅["Connection Compression Control"](https://dev.mysql.com/doc/refman/8.0/en/connection-compression-control.html)。
 
-This option was added in MySQL 8.0.18.
+此选项在 MySQL 8.0.18 中添加。
 
 ## mysql Client Commands
 
-**mysql** sends each SQL statement that you issue to the server to be executed. There is also a set of commands that **mysql** itself interprets. For a list of these commands, type `help` or `\h` at the `mysql>` prompt:
+**mysql** 会将你发出的每条 SQL 语句发送到服务器执行。此外，**mysql**本身也会解释一组命令。要查看这些命令的列表，请在 `mysql>` 提示符下键入 `help` 或 `\h`：
 
 ```
 mysql> help
@@ -1240,125 +1240,127 @@ or file.
 For server side help, type 'help contents'
 ```
 
-If **mysql** is invoked with the `--binary-mode` option, all **mysql** commands are disabled except *charset* and *delimiter* in noninteractive mode (for input piped to **mysql** or loaded using the *source* command).
+如果在调用**mysql**时使用了`--binary-mode`选项，那么在非交互模式下（对于通过管道输入到**mysql**或使用*source*命令加载的输入），除了*charset*和*delimiter*之外，所有**mysql**命令都会被禁用。
 
-Each command has both a long and short form. The long form is not case-sensitive; the short form is. The long form can be followed by an optional semicolon terminator, but the short form should not.
+每条命令都有长、短两种形式。长命令不区分大小写，短命令区分大小写。长命令后可以加上分号结束符，但短命令则不可以。
 
-The use of short-form commands within multiple-line /* ... */ comments is not supported. Short-form commands do work within single-line /*! ... */ version comments, as do /*+ ... */ optimizer-hint comments, which are stored in object definitions. If there is a concern that optimizer-hint comments may be stored in object definitions so that dump files when reloaded with *mysql* would result in execution of such commands, either invoke **mysql** with the `--binary-mode` option or use a reload client other than **mysql**.
+不支持在多行 /\* ... \*/ 注释中使用短格式命令。短格式命令可以在单行 /\*! ... \*/ 版本注释中使用，存储在对象定义中的 /\*+ ... \*/ 优化器提示注释也是如此。如果担心优化器提示注释可能存储在对象定义中，从而导致在使用 *mysql* 重载转储文件时执行此类命令，则应使用 `--binary-mode` 选项调用 **mysql**，或使用 **mysql**以外的重载客户端。
 
 - help \[*arg*\], \\h \[*arg*\], \\? \[*arg*\], ? \[*arg*\]
 
-    Display a help message listing the available mysql commands.
+    显示帮助信息，列出可用的 mysql 命令。
     
-    If you provide an argument to the *help* command, **mysql** uses it as a search string to access server-side help from the contents of the MySQL Reference Manual. For more information, see ["mysql Client Server-Side Help"](https://dev.mysql.com/doc/refman/8.0/en/mysql-server-side-help.html).
+    如果为 *help* 命令提供参数，**mysql** 会将其用作搜索字符串，从《MySQL 参考手册》的内容中访问服务器端帮助。更多信息，请参阅["mysql Client Server-Side Help"](https://dev.mysql.com/doc/refman/8.0/en/mysql-server-side-help.html)。
 
 - charset *charset_name*, \\C *charset_name*
 
-    Change the default character set and issue a `SET NAMES` statement. This enables the character set to remain synchronized on the client and server if **mysql** is run with auto-reconnect enabled (which is not recommended), because the specified character set is used for reconnects.
+    更改默认字符集并发布一条 `SET NAMES` 语句。这样，如果 **mysql** 运行时启用了自动重新连接（不建议这样做），客户端和服务器上的字符集就能保持同步，因为重新连接时会使用指定的字符集。
 
 - clear, \\c
 
-    Clear the current input. Use this if you change your mind about executing the statement that you are entering.
+    清除当前输入。如果改变主意不执行正在输入的语句，请使用此功能。
 
 - connect \[*db_name* \[*host_name*\]\], \\r \[*db_name* \[*host_name*\]\]
 
-    Reconnect to the server. The optional database name and host name arguments may be given to specify the default database or the host where the server is running. If omitted, the current values are used.
+    重新连接服务器。可选的数据库名称和主机名称参数可用于指定默认数据库或运行服务器的主机。如果省略，则使用当前值。
 
-    If the connect command specifies a host name argument, that host takes precedence over any `--dns-srv-name` option given at **mysql** startup to specify a DNS SRV record.
+    如果 connect 命令指定了主机名参数，则该主机优先于在 **mysql** 启动时指定 DNS SRV 记录的任何 `--dns-srv-name` 选项。
 
 - delimiter *str*, \\d *str*
 
-    Change the string that **mysql** interprets as the separator between SQL statements. The default is the semicolon character (;).
+    更改**mysql**解释为 SQL 语句之间分隔符的字符串。默认为分号（;）。
 
-    The delimiter string can be specified as an unquoted or quoted argument on the *delimiter* command line. Quoting can be done with either single quote ('), double quote ("), or backtick (`) characters. To include a quote within a quoted string, either quote the string with a different quote character or escape the quote with a backslash (\\) character. Backslash should be avoided outside of quoted strings because it is the escape character for MySQL. For an unquoted argument, the delimiter is read up to the first space or end of line. For a quoted argument, the delimiter is read up to the matching quote on the line.
+    分隔符字符串可以在 *delimiter* 命令行中指定为无引号或有引号参数。引号可以使用单引号（'）、双引号（"）或回车键（`）字符。要在引号字符串中包含引号，可以使用不同的引号字符或反斜杠（\\）字符转义引号。在引号字符串之外应避免使用反斜杠，因为它是 MySQL 的转义字符。对于未加引号的参数，分隔符一直读到第一个空格或行尾。对于带引号的参数，分隔符读到行中匹配的引号为止。
 
-    **mysql** interprets instances of the delimiter string as a statement delimiter anywhere it occurs, except within quoted strings. Be careful about defining a delimiter that might occur within other words. For example, if you define the delimiter as `X`, it is not possible to use the word `INDEX` in statements. **mysql** interprets this as INDE followed by the delimiter `X`.
+    除了在带引号的字符串中，**mysql** 会将任何分隔符字符串实例解释为语句分隔符。在定义可能出现在其他单词中的分隔符时要小心。例如，如果将分隔符定义为 `X`，就不能在语句中使用 `INDEX` 这个词。**mysql** 会将其解释为 INDE，后跟分隔符 `X`。
 
-    When the delimiter recognized by **mysql** is set to something other than the default of ;, instances of that character are sent to the server without interpretation. However, the server itself still interprets ; as a statement delimiter and processes statements accordingly. This behavior on the server side comes into play for multiple-statement execution (see [Multiple Statement Execution Support](https://dev.mysql.com/doc/c-api/8.0/en/c-api-multiple-queries.html)), and for parsing the body of stored procedures and functions, triggers, and events (see ["Defining Stored Programs"](https://dev.mysql.com/doc/refman/8.0/en/stored-programs-defining.html)).
+    当**mysql**识别的分隔符设置为默认的;以外的字符时，该字符的实例无需解释即可发送到服务器。不过，服务器本身仍会将;解释为语句分隔符，并据此处理语句。服务器端的这种行为适用于多语句执行（参见[Multiple Statement Execution Support](https://dev.mysql.com/doc/c-api/8.0/en/c-api-multiple-queries.html)），以及解析存储过程和函数、触发器和事件的正文（参见["Defining Stored Programs"](https://dev.mysql.com/doc/refman/8.0/en/stored-programs-defining.html)）。
 
 - edit, \\e
 
-    Edit the current input statement. **mysql** checks the values of the EDITOR and VISUAL environment variables to determine which editor to use. The default editor is **vi** if neither variable is set.
+    编辑当前输入语句。**mysql** 会检查 EDITOR 和 VISUAL 环境变量的值，以确定使用哪个编辑器。如果两个变量都未设置，则默认编辑器为 **vi**。
 
-    The *edit* command works only in Unix.
+    *edit* 命令只在 Unix 下运行。
 
 - ego, \\G
 
-    Send the current statement to the server to be executed and display the result using vertical format.
+    将当前语句发送到服务器执行，并使用垂直格式显示结果。
 
 - exit, \\q
 
-    Exit **mysql**.
+    退出 **mysql**。
 
 - go, \\g
 
-    Send the current statement to the server to be executed.
+    将当前语句发送到服务器执行。
 
 - nopaper, \\n
 
-    Disable output paging. See the description for *pager*.
+    禁用输出分页。请参阅 *pager* 的说明。
 
-    The *nopaper* command works only in Unix.
+    *nopaper*命令仅在Unix系统中有效。
 
 - notee, \\t
 
-    Disable output copying to the tee file. See the description for *tee*.
+    禁用向 tee 文件复制输出。请参阅 *tee* 的说明。
 
 - nowarning, \\w
 
-    Disable display of warnings after each statement.
+    禁止在每个语句后显示警告。
 
 - pager \[*command*\], \\P \[*command*\]
 
-    Enable output paging. By using the `--pager` option when you invoke **mysql**, it is possible to browse or search query results in interactive mode with Unix programs such as **less**, **more**, or any other similar program. If you specify no value for the option, **mysql** checks the value of the `PAGER` environment variable and sets the pager to that. Pager functionality works only in interactive mode.
+    启用输出分页。通过在调用 **mysql** 时使用 `--pager` 选项，可以使用 Unix 程序（如 **less**、**more** 或其他类似程序）在交互模式下浏览或搜索查询结果。如果不指定该选项的值，**mysql** 会检查 `PAGER` 环境变量的值，并将寻呼器设置为该值。寻呼器功能仅在交互模式下工作。
 
-    Output paging can be enabled interactively with the *pager* command and disabled with *nopager*. The command takes an optional argument; if given, the paging program is set to that. With no argument, the pager is set to the pager that was set on the command line, or *stdout* if no pager was specified.
+    输出分页可以通过 *pager* 命令交互式启用，也可以通过 *nopager* 命令禁用。该命令包含一个可选参数；如果给出该参数，则分页程序将被设置为该参数。如果没有参数，分页程序将设置为命令行设置的分页程序，如果没有指定分页程序，则设置为 *stdout*。
 
-    Output paging works only in Unix because it uses the *popen()* function, which does not exist on Windows. For Windows, the *tee* option can be used instead to save query output, although it is not as convenient as *pager* for browsing output in some situations.
+    输出分页功能仅适用于 Unix 系统，因为它使用了 *popen()* 函数，而 Windows 系统中不存在该函数。在 Windows 中，可以使用 *tee* 选项来保存查询输出，但在某些情况下，它不如 *pager* 方便浏览输出。
 
 - print, \\p
 
-    Print the current input statement without executing it.
+    打印当前输入语句，但不执行该语句。
 
 - prompt \[*str*\], \\R \[*str*\]
 
-    Reconfigure the **mysql** prompt to the given string. The special character sequences that can be used in the prompt are described later in this section.
+    将 **mysql** 提示符重新配置为给定字符串。提示符中可使用的特殊字符序列将在本节后面介绍。
 
-    If you specify the `prompt` command with no argument, **mysql** resets the prompt to the default of `mysql>`.
+    如果指定不带参数的 `prompt` 命令，**mysql** 会将提示重置为默认的 `mysql>`。
 
 - query_attributes *name* *value* \[*name* *value* ...\]
 
-    Define query attributes that apply to the next query sent to the server. For discussion of the purpose and use of query attributes, see ["Query Attributes"](https://dev.mysql.com/doc/refman/8.0/en/query-attributes.html).
+    定义适用于下一次发送到服务器的查询的查询属性。有关查询属性的目的和用途，请参阅["Query Attributes"](https://dev.mysql.com/doc/refman/8.0/en/query-attributes.html)。
 
-    The `query_attributes` command follows these rules:
+    `query_attributes` 命令遵循这些规则：
 
-    - The format and quoting rules for attribute names and values are the same as for the `delimiter` command.
+    - 属性名和值的格式和引号规则与 `delimiter` 命令相同。
 
-    - The command permits up to 32 attribute name/value pairs. Names and values may be up to 1024 characters long. If a name is given without a value, an error occurs.
+    - 该命令最多允许 32 个属性名/值对。名称和值的长度最多为 1024 个字符。如果给出的名称没有值，则会出错。
 
-    - If multiple `query_attributes` commands are issued prior to query execution, only the last command applies. After sending the query, **mysql** clears the attribute set.
+    - 如果在执行查询之前发布了多条`query_attributes`命令，则只有最后一条命令适用。发送查询后，**mysql** 会清除属性集。
 
-    - If multiple attributes are defined with the same name, attempts to retrieve the attribute value have an undefined result.
+    - 如果用相同的名称定义了多个属性，尝试检索属性值的结果将是未定义的。
 
-    - An attribute defined with an empty name cannot be retrieved by name.
+    - 用空名称定义的属性无法通过名称检索。
 
-    - If a reconnect occurs while **mysql** executes the query, **mysql** restores the attributes after reconnecting so the query can be executed again with the same attributes.
+    - 如果在**mysql**执行查询时发生重新连接，**mysql**会在重新连接后恢复属性，这样就可以用相同的属性再次执行查询。
 
 - quit, \\q
 
-    Exit **mysql**.
+    退出 **mysql**。
 
 - rehash, \\#
 
     Rebuild the completion hash that enables database, table, and column name completion while you are entering statements. (See the description for the `--auto-rehash` option.)
 
+    重建完成哈希值，以便在输入语句时启用数据库、表和列名完成。（请参阅`--auto-rehash`选项的说明）。
+
 - resetconnection, \\x
 
-    Reset the connection to clear the session state. This includes clearing any current query attributes defined using the `query_attributes` command.
+    重置连接以清除会话状态。这包括清除使用 `query_attributes` 命令定义的任何当前查询属性。
 
-    Resetting a connection has effects similar to `mysql_change_user()` or an auto-reconnect except that the connection is not closed and reopened, and re-authentication is not done. See [mysql_change_user()](https://dev.mysql.com/doc/c-api/8.0/en/mysql-change-user.html), and [Automatic Reconnection Control](https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html).
+    重置连接的效果与 `mysql_change_user()` 或自动重新连接类似，但连接不会关闭和重新打开，也不会重新进行身份验证。请参阅 [mysql_change_user()](https://dev.mysql.com/doc/c-api/8.0/en/mysql-change-user.html) 和 [Automatic Reconnection Control](https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html)。
 
-    This example shows how `resetconnection` clears a value maintained in the session state:
+    本例展示了 `resetconnection` 如何清除会话状态中的一个值：
 
     ```sql
     mysql> SELECT LAST_INSERT_ID(3);
@@ -1387,43 +1389,43 @@ The use of short-form commands within multiple-line /* ... */ comments is not su
 
 - source *file_name*, \\. *file_name*
 
-    Read the named file and executes the statements contained therein. On Windows, specify path name separators as / or \\\\.
+    读取指定文件并执行其中包含的语句。在 Windows 系统中，指定路径名分隔符为 / 或 \\\\。
 
-    Quote characters are taken as part of the file name itself. For best results, the name should not include space characters.
+    引号字符作为文件名本身的一部分。为达到最佳效果，文件名不应包含空格字符。
 
 - ssl_session_data_print \[*file_name*\]
 
-    Fetches, serializes, and optionally stores the session data of a successful connection. The optional file name and arguments may be given to specify the file to store serialized session data. If omitted, the session data is printed to `stdout`.
+    获取、序列化并存储成功连接的会话数据。可选的文件名和参数可用于指定存储序列化会话数据的文件。如果省略，会话数据将打印到 `stdout`。
 
-    If the MySQL session is configured for reuse, session data from the file is deserialized and supplied to the *connect* command to reconnect. When the session is reused successfully, the *status* command contains a row showing *SSL session reused: true* while the client remains reconnected to the server.
+    如果 MySQL 会话配置为重复使用，文件中的会话数据将被反序列化，并提供给 *connect* 命令以重新连接。会话重用成功后，*status* 命令将包含一行显示 *SSL session reused: true* 的内容，同时客户端将保持与服务器的重新连接。
 
 - status, \\s
 
-    Provide status information about the connection and the server you are using. If you are running with `--safe-updates` enabled, *status* also prints the values for the **mysql** variables that affect your queries.
+    提供连接和服务器的状态信息。如果启用了 `--safe-updates` 功能，*status* 还会打印影响查询的 **mysql** 变量的值。
 
 - system *command*, \\! *command*
 
-    Execute the given command using your default command interpreter.
+    使用默认命令解释器执行给定命令。
 
-    Prior to MySQL 8.0.19, the *system* command works only in Unix. As of 8.0.19, it also works on Windows.
+    在 MySQL 8.0.19 之前，*system* 命令只能在 Unix 下运行。从 8.0.19 开始，它也能在 Windows 上运行。
 
 - tee \[*file_name*\], \\T \[*file_name*\]
 
-    By using the `--tee` option when you invoke **mysql**, you can log statements and their output. All the data displayed on the screen is appended into a given file. This can be very useful for debugging purposes also. **mysql** flushes results to the file after each statement, just before it prints its next prompt. Tee functionality works only in interactive mode.
+    在调用 **mysql** 时使用 `--tee` 选项，可以记录语句及其输出。屏幕上显示的所有数据都会追加到指定文件中。这对调试也非常有用。每条语句结束后，**mysql** 会在打印下一条提示语之前将结果刷新到文件中。此功能仅在交互模式下有效。
 
-    You can enable this feature interactively with the *tee* command. Without a parameter, the previous file is used. The *tee* file can be disabled with the notee command. Executing *tee* again re-enables logging.
+    您可以使用 *tee* 命令交互式地启用这一功能。如果没有参数，则使用前一个文件。可以使用 notee 命令禁用 *tee* 文件。再次执行 *tee* 可重新启用日志记录功能。
 
 - use *db_name*, \\u *db_name*
 
-    Use *db_name* as the default database.
+    使用 *db_name* 作为默认数据库。
 
 - warnings, \\W
 
-    Enable display of warnings after each statement (if there are any).
+    启用在每条语句后显示警告（如果有的话）。
 
-Here are a few tips about the *pager* command:
+下面是一些关于 *pager* 命令的提示：
 
-- You can use it to write to a file and the results go only to the file:
+- 您可以用它来写入文件，而且结果只写入文件：
 
     ```sql
     mysql> pager cat > /tmp/log.txt
@@ -1435,94 +1437,95 @@ Here are a few tips about the *pager* command:
     mysql> pager less -n -i -S
     ```
 
-- In the preceding example, note the `-S` option. You may find it very useful for browsing wide query results. Sometimes a very wide result set is difficult to read on the screen. The `-S` option to **less** can make the result set much more readable because you can scroll it horizontally using the left-arrow and right-arrow keys. You can also use `-S` interactively within **less** to switch the horizontal-browse mode on and off. For more information, read the **less** manual page:
+- 在前面的示例中，请注意`-S`选项。您可能会发现它在浏览宽查询结果时非常有用。有时，很宽的结果集很难在屏幕上阅读。使用**less**的`-S`选项可以使结果集更易于阅读，因为你可以使用左箭头键和右箭头键水平滚动结果集。您还可以在**less**中交互式地使用`-S`来开关水平浏览模式。更多信息，请阅读**less**手册页面：
 
     ```terminal
     man less
     ```
 
-- The `-F` and `-X` options may be used with **less** to cause it to exit if output fits on one screen, which is convenient when no scrolling is necessary:
+- `-F`和`-X`选项可与**less**一起使用，使其在输出适合一个屏幕时退出，这在无需滚动时非常方便：
 
     ```sql
     mysql> pager less -n -i -S -F -X
     ```
 
 - You can specity very complex pager commands for handling query output:
+- 您可以指定非常复杂的pager commands来处理查询输出：
 
     ```sql
     mysql> pager cat | tee /dr1/tmp/res.txt \
             | tee /dr2/tmp/res2.txt | less -n -i -S
     ```
 
-    In this example, the command would send query results to two files in two different directories on two different file systems mounted on */dr1* and */dr2*, yet still display the results onscreen using **less**.
+    在本例中，该命令将把查询结果发送到挂载在 */dr1* 和 */dr2* 上的两个不同文件系统的两个不同目录中的两个文件，但仍使用 **less** 在屏幕上显示结果。
 
-You can also combine the *tee* and *pager* functions. Have a *tee* file enabled and *pager* set to **less**, and you are able to browse the results using the **less** program and still have everything appended into a file the same time. The difference between the Unix *tee* used with the *pager* command and the **mysql** built-in *tee* command is that the built-in *tee* works even if you do not have the Unix **tee** available. The built-in *tee* also logs everything that is printed on the screen, whereas the Unix **tee** used with *pager* does not log quite that much. Additionally, *tee* file logging can be turned on and off interactively from within **mysql**. This is useful when you want to log some queries to a file, but not others.
+您还可以将*tee*和*pager*功能结合起来。启用*tee*文件并将*pager*设置为**less**，就可以使用**less**程序浏览结果，并同时将所有内容添加到文件中。与*pager*命令一起使用的Unix*tee*和**mysql**内置*tee*命令的区别在于，即使没有Unix**tee**，内置*tee*也能工作。内置 *tee* 还会记录屏幕上打印的所有内容，而与 *pager* 一起使用的 Unix **tee** 则不会记录这么多内容。此外，*tee*文件日志记录可以在**mysql**中以交互方式打开或关闭。当你想将某些查询记录到文件中，而不是其他查询时，这一点非常有用。
 
-The `prompt` command reconfigures the default `mysql>` prompt. The string for defining the prompt can contain the following special sequences.
+`prompt`命令用于重新配置默认的`mysql>`提示符。用于定义提示符的字符串可以包含以下特殊序列。
 
-|**Option**|**Description**|
+|**选项**|**描述**|
 |:--|--|
-|\\C|The current connection identifier|
-|\\c|A counter that increments for each statement you issue|
-|\\D|The full current date|
-|\\d|The default database|
-|\\h|The server host|
-|\\l|The current delimiter|
-|\\m|Minutes of the current time|
-|\\n|A newline character|
-|\\O|The current month in three-letter format (Jan, Feb, …)|
-|\\o|The current month in numeric format|
+|\\C|当前连接的标识符|
+|\\c|一个计数器，您每发出一条语句，计数器就递增一次|
+|\\D|完整的当前日期|
+|\\d|默认数据库|
+|\\h|服务器主机|
+|\\l|当前分隔符|
+|\\m|当前时间的分钟数|
+|\\n|换行符|
+|\\O|以三个字母格式表示的当前月份（Jan, Feb, …）|
+|\\o|数字格式的当前月份|
 |\\P|am/pm|
-|\\p|The current TCP/IP port or socket file|
-|\\R|The current time, in 24-hour military time (0–23)|
-|\\r|The current time, standard 12-hour time (1–12)|
-|\\S|Semicolon|
-|\\s|Seconds of the current time|
-|\\T|Print an asterisk (*) if the current session is inside a transaction block (from MySQL 8.0.28)|
-|\\t|A tab character|
-|\\U|Your full *user_name@host_name* account name|
-|\\u|Your user name|
-|\\v|The server version|
-|\\w|The current day of the week in three-letter format (Mon, Tue, …)|
-|\\Y|The current year, four digits|
-|\\y|The current year, two digits|
-|\\_|A space|
-|\\ |A space (a space follows the backslash)|
-|\\'|Single quote|
-|\\"|Double quote|
-|\\\\ |A literal \\ backslash character|
-|\\**x**|**x**, for any "**x**" not listed above|
+|\\p|当前 TCP/IP 端口或套接字文件|
+|\\R|当前时间，24 小时军用时间（0-23）。|
+|\\r|当前时间，标准 12 小时制时间 (1-12)|
+|\\S|分号|
+|\\s|当前时间的秒数|
+|\\T|如果当前会话位于事务块内，则打印星号 (*)（来自 MySQL 8.0.28）|
+|\\t|制表符|
+|\\U|您的 *user_name@host_name* 完整账户名|
+|\\u|您的用户名|
+|\\v|服务器版本|
+|\\w|用三个字母表示的当前星期（Mon, Tue, …）|
+|\\Y|当前年，四位数|
+|\\y|当前年，两位数|
+|\\_|空格|
+|\\ |空格（反斜杠后的空格）|
+|\\'|单引号|
+|\\"|双引号|
+|\\\\ |一个字面的反斜杠字符|
+|\\**x**|**x**，针对上面未列出的任何 "**x**"|
 
-You can set the prompt in several ways:
+您可以通过多种方式设置提示：
 
-- ***Use an environment variable.*** You can set the `MYSQL_PS1` environment variable to a prompt string. For example:
+- ***Use an environment variable***。可以将 `MYSQL_PS1` 环境变量设置为提示字符串。例如：
 
     ```terminal
     export MYSQL_PS1="(\u@\h) [\d]> "
     ```
 
-- ***Use a command-line option.*** You can set the `--prompt` option on the command line to **mysql**. For example:
+- ***Use a command-line option***。你可以将命令行上的`--prompt`选项设置为 "**mysql**"。例如：
 
     ```terminal
     $> mysql --prompt="(\u@\h) [\d]> "
     (user@host) [database]>
     ```
 
-- ***Use an option file.*** You can set the `prompt` option in the `[mysql]` group of any MySQL option file, such as */etc/my.cnf* or the *.my.cnf* file in your home directory. For example:
+- ***Use an option file***。你可以在任何 MySQL 选项文件的`[mysql]`组中设置`prompt`选项，例如*/etc/my.cnf*或你主目录中的*.my.cnf*文件。例如：
 
     ```ini
     [mysql]
     prompt=(\\u@\\h) [\\d]>\\_
     ```
 
-    In this example, note that the backslashes are doubled. If you set the `prompt` using the prompt option in an option file, it is advisable to double the backslashes when using the special prompt options. There is some overlap in the set of permissible prompt options and the set of special escape sequences that are recognized in option files. (The rules for escape sequences in option files are listed in ["Using Option Files"](https://dev.mysql.com/doc/refman/8.0/en/option-files.html).) The overlap may cause you problems if you use single backslashes. For example, `\s` is interpreted as a space rather than as the current seconds value. The following example shows how to define a prompt within an option file to include the current time in ***hh:mm:ss>*** format:
+    在本例中，请注意反斜线是加倍的。如果使用选项文件中的提示选项设置`prompt`，建议在使用特殊提示选项时将反斜线加倍。允许使用的提示选项集与选项文件中可识别的特殊转义序列集有一些重叠。（选项文件中的转义序列规则见["Using Option Files"](https://dev.mysql.com/doc/refman/8.0/en/option-files.html)）。如果使用单反斜线，重叠可能会造成问题。例如，`\s` 会被解释为空格，而不是当前的秒值。下面的示例展示了如何在选项文件中定义提示符，以 ***hh:mm:ss>*** 格式包含当前时间：
 
     ```ini
     [mysql]
     prompt="\\r:\\m:\\s> "
     ```
 
-- ***Set the prompt interactively.*** You can change your prompt interactively by using the `prompt` (or `\R`) command. For example:
+- ***Set the prompt interactively***。可以使用 `prompt`（或 `\R`）命令交互式更改提示符。例如
 
     ```sql
     mysql> prompt (\u@\h) [\d]>\_
@@ -1533,35 +1536,35 @@ You can set the prompt in several ways:
     mysql>
     ```
 
-## mysql Client Logging
+## mysql 客户端日志
 
-The **mysql** client can do these types of logging for statements executed interactively:
+**mysql** 客户端可以为交互式执行的语句记录这些类型的日志：
 
-- On Unix, **mysql** writes the statements to a history file. By default, this file is named `.mysql_history` in your home directory. To specify a different file, set the value of the `MYSQL_HISTFILE` environment variable.
+- 在 Unix 上，**mysql** 会将语句写入历史文件。默认情况下，该文件名为`.mysql_history`，位于你的主目录中。要指定不同的文件，请设置 `MYSQL_HISTFILE`环境变量的值。
 
-- On all platforms, if the `--syslog` option is given, **mysql** writes the statements to the system logging facility. On Unix, this is `syslog;` on Windows, it is the Windows Event Log. The destination where logged messages appear is system dependent. On Linux, the destination is often the */var/log/messages* file.
+- 在所有平台上，如果给出 `--syslog` 选项，**mysql** 会将语句写入系统日志设施。在 Unix 上，这是 `syslog;` 在 Windows 上，这是 Windows 事件日志。记录信息的目的地取决于系统。在 Linux 上，目的地通常是 */var/log/messages* 文件。
 
-The following discussion describes characteristics that apply to all logging types and provides information specific to each logging type.
+以下讨论介绍了适用于所有记录类型的特征，并提供了每种记录类型的特定信息。
 
-- How Logging Occurs
+- 如何记录日志
 
-- Controlling the History File
+- 控制历史文件
 
-- syslog Logging Characteristics
+- syslog 日志特征
 
-### How Logging Occurs
+### 如何记录日志
 
-For each enabled logging destination, statement logging occurs as follows:
+对于每个已启用的日志记录目标，语句记录发生的情况如下：
 
-- Statements are logged only when executed interactively. Statements are noninteractive, for example, when read from a file or a pipe. It is also possible to suppress statement logging by using the `--batch` or `--execute` option.
+- 语句只有在交互执行时才会被记录。例如，从文件或管道读取语句时，语句是非交互式的。也可以使用 `--batch` 或 `--execute` 选项来抑制语句记录。
 
-- Statements are ignored and not logged if they match any pattern in the "ignore" list. This list is described later.
+- 如果语句与 "ignore" 列表中的任何模式匹配，就会被忽略，也不会被记录。稍后将对该列表进行说明。
 
-- **mysql** logs each nonignored, nonempty statement line individually.
+- **mysql** 会单独记录每一行未忽略、非空的语句。
 
-- If a nonignored statement spans multiple lines (not including the terminating delimiter), **mysql** concatenates the lines to form the complete statement, maps newlines to spaces, and logs the result, plus a delimiter.
+- 如果一条未忽略的语句跨越多行（不包括终止分隔符），**mysql** 会将这些行连接起来形成完整的语句，将换行符映射为空格，并记录结果和分隔符。
 
-Consequently, an input statement that spans multiple lines can be logged twice. Consider this input:
+因此，跨越多行的输入语句可能会被记录两次。请看下面的输入
 
 ```sql
 mysql> SELECT
@@ -1571,7 +1574,7 @@ mysql> SELECT
     -> ;
 ```
 
-In this case, **mysql** logs the "SELECT", "'Today is'", ",", "CURDATE()", and ";" lines as it reads them. It also logs the complete statement, after mapping `SELECT\n'Today is'\n,\nCURDATE()` to `SELECT 'Today is' , CURDATE()`, plus a delimiter. Thus, these lines appear in logged output:
+在这种情况下，**mysql** 会在读取时记录 "SELECT"、"'Today is'"、","、"CURDATE() "和";"行。在将 `SELECT\n'Today is'\n,\nCURDATE()` 映射为 `SELECT 'Today is' , CURDATE()` 后，它还会记录完整的语句，并加上分隔符。因此，这些行将出现在日志输出中：
 
 ```sql
 SELECT
@@ -1582,69 +1585,69 @@ CURDATE()
 SELECT 'Today is' , CURDATE();
 ```
 
-**mysql** ignores for logging purposes statements that match any pattern in the "ignore" list. By default, the pattern list is `"*IDENTIFIED*:*PASSWORD*"`, to ignore statements that refer to passwords. Pattern matching is not case-sensitive. Within patterns, two characters are special:
+为了记录日志，**mysql** 会忽略与 "ignore" 列表中任何模式匹配的语句。默认情况下，模式列表为 `"*IDENTIFIED*:*PASSWORD*"`，以忽略涉及密码的语句。模式匹配不区分大小写。在模式中，有两个字符是特殊字符：
 
-- **?** matches any single character.
+- **?** 匹配任何单个字符。
 
-- **\*** matches any sequence of zero or more characters.
+- **\*** 匹配任何由 0 个或多个字符组成的序列。
 
-To specify additional patterns, use the `--histignore` option or set the `MYSQL_HISTIGNORE` environment variable. (If both are specified, the option value takes precedence.) The value should be a list of one or more colon-separated patterns, which are appended to the default pattern list.
+要指定其他模式，请使用 `--histignore` 选项或设置 `MYSQL_HISTIGNORE` 环境变量。（如果同时指定了这两个选项，则以选项值为准。）值应该是一个或多个以冒号分隔的模式列表，这些模式会被追加到默认模式列表中。
 
-Patterns specified on the command line might need to be quoted or escaped to prevent your command interpreter from treating them specially. For example, to suppress logging for `UPDATE` and `DELETE` statements in addition to statements that refer to passwords, invoke **mysql** like this:
+命令行中指定的模式可能需要加引号或转义，以防止命令解释器对其进行特殊处理。例如，要禁止记录 `UPDATE` 和 `DELETE` 语句以及引用密码的语句，可以这样调用 **mysql**：
 
 ```terminal
 mysql --histignore="*UPDATE*:*DELETE*"
 ```
 
-### Controlling the History File
+### 控制历史文件
 
-The `.mysql_history` file should be protected with a restrictive access mode because sensitive information might be written to it, such as the text of SQL statements that contain passwords. See ["End-User Guidelines for Password Security"](https://dev.mysql.com/doc/refman/8.0/en/password-security-user.html). Statements in the file are accessible from the **mysql** client when the **up-arrow** key is used to recall the history. See [Disabling Interactive History](https://dev.mysql.com/doc/refman/8.0/en/mysql-tips.html#mysql-history).
+应使用限制访问模式保护 `.mysql_history` 文件，因为敏感信息（如包含密码的 SQL 语句文本）可能会被写入该文件。请参阅["End-User Guidelines for Password Security"](https://dev.mysql.com/doc/refman/8.0/en/password-security-user.html)。使用**up-arrow**键调用历史记录时，可从**mysql**客户端访问文件中的语句。请参阅 [Disabling Interactive History](https://dev.mysql.com/doc/refman/8.0/en/mysql-tips.html#mysql-history)。
 
-If you do not want to maintain a history file, first remove `.mysql_history` if it exists. Then use either of the following techniques to prevent it from being created again:
+如果不想维护历史文件，首先删除存在的 `.mysql_history`。然后使用以下任一技术防止再次创建该文件：
 
-- Set the `MYSQL_HISTFILE` environment variable to `/dev/null`. To cause this setting to take effect each time you log in, put it in one of your shell's startup files.
+- 将 `MYSQL_HISTFILE` 环境变量设置为 `/dev/null`。要使该设置在每次登录时生效，请将其放在 shell 的某个启动文件中。
 
-- Create `.mysql_history` as a symbolic link to `/dev/null`; this need be done only once:
+- 将 `.mysql_history` 创建为指向 `/dev/null`的符号链接；只需创建一次：
 
 ```terminal
 ln -s /dev/null $HOME/.mysql_history
 ```
 
-### syslog Logging Characteristics
+### syslog 日志特征
 
-If the `--syslog` option is given, **mysql** writes interactive statements to the system logging facility. Message logging has the following characteristics.
+如果给定了 `--syslog` 选项，**mysql** 会将交互式语句写入系统日志设施。消息日志具有以下特点。
 
-Logging occurs at the "information" level. This corresponds to the `LOG_INFO` priority for `syslog` on Unix/Linux `syslog` capability and to `EVENTLOG_INFORMATION_TYPE` for the Windows Event Log. Consult your system documentation for configuration of your logging capability.
+日志记录发生在 "information" 级别。这相当于 Unix/Linux `syslog` 功能中 `syslog` 的 `LOG_INFO` 优先级，以及 Windows 事件日志的 `EVENTLOG_INFORMATION_TYPE` 优先级。有关日志功能的配置，请查阅系统文档。
 
-Message size is limited to 1024 bytes.
+信息大小限制为 1024 字节。
 
-Messages consist of the identifier `MysqlClient` followed by these values:
+信息由标识符 `MysqlClient` 和这些值组成：
 
 - `SYSTEM_USER`
 
-    The operating system user name (login name) or -- if the user is unknown.
+    操作系统用户名（登录名），如果用户未知，则使用 \-\- 表示。
 
 - `MYSQL_USER`
 
-    The MySQL user name (specified with the `--user` option) or -- if the user is unknown.
+    MySQL 用户名（使用 `--user` 选项指定），如果用户未知，则使用 \-\-。
 
 - `CONNECTION_ID:`
 
-    The client connection identifier. This is the same as the `CONNECTION_ID()` function value within the session.
+    客户端连接标识符。它与会话中的 `CONNECTION_ID()` 函数值相同。
 
 - `DB_SERVER`
 
-    The server host or \-\- if the host is unknown.
+    服务器主机，如果主机未知，则为\-\-。
 
 - `DB`
 
-    The default database or \-\- if no database has been selected.
+    默认数据库，如果没有选择数据库，则使用 \-\-。
 
 - `QUERY`
 
-    The text of the logged statement.
+    记录的声明文本。
 
-Here is a sample of output generated on Linux by using `--syslog`. This output is formatted for readability; each logged message actually takes a single line.
+下面是使用 `--syslog` 在 Linux 上生成的输出示例。为便于阅读，该输出已格式化；每条记录的信息实际上只占一行。
 
 ```
 Mar  7 12:39:25 myhost MysqlClient[20824]:
@@ -1655,15 +1658,15 @@ Mar  7 12:39:28 myhost MysqlClient[20824]:
   DB_SERVER:'127.0.0.1', DB:'test', QUERY:'SHOW TABLES;'
 ```
 
-## mysql Client Server-Side Help
+## mysql 客户端服务器端帮助
 
 ```
 mysql> help search_string
 ```
 
-If you provide an argument to the `help` command, **mysql** uses it as a search string to access server-side help from the contents of the MySQL Reference Manual. The proper operation of this command requires that the help tables in the **mysql** database be initialized with help topic information (see ["Server-Side Help Support"](https://dev.mysql.com/doc/refman/8.0/en/server-side-help-support.html)).
+如果为 `help` 命令提供一个参数，**mysql**会将其作为搜索字符串，从《MySQL参考手册》的内容中访问服务器端帮助。该命令的正确操作要求**mysql**数据库中的帮助表用帮助主题信息初始化（参见["Server-Side Help Support"](https://dev.mysql.com/doc/refman/8.0/en/server-side-help-support.html)）。
 
-If there is no match for the search string, the search fails:
+如果搜索字符串没有匹配项，则搜索失败：
 
 ```
 mysql> help me
@@ -1672,7 +1675,7 @@ Nothing found
 Please try to run 'help contents' for a list of all accessible topics
 ```
 
-Use [help contents](https://dev.mysql.com/doc/refman/8.0/en/help.html) to see a list of the help categories:
+使用 [help contents](https://dev.mysql.com/doc/refman/8.0/en/help.html) 查看帮助类别列表：
 
 ```
 mysql> help contents
@@ -1696,7 +1699,7 @@ following categories:
    Triggers
 ```
 
-If the search string matches multiple items, **mysql** shows a list of matching topics:
+如果搜索字符串匹配多个项目，**mysql** 会显示匹配主题的列表：
 
 ```
 mysql> help logs
@@ -1709,7 +1712,7 @@ where <item> is one of the following topics:
    SHOW LOGS
 ```
 
-Use a topic as the search string to see the help entry for that topic:
+使用主题作为搜索字符串，可查看该主题的帮助条目：
 
 ```
 mysql> help show binary logs
@@ -1734,7 +1737,7 @@ mysql> SHOW BINARY LOGS;
 +---------------+-----------+-----------+
 ```
 
-The search string can contain the wildcard characters `%` and `_`. These have the same meaning as for pattern-matching operations performed with the `LIKE` operator. For example, `HELP rep%` returns a list of topics that begin with `rep`:
+搜索字符串可以包含通配符 `%` 和 `_`。这些字符的含义与使用 `LIKE` 操作符执行的模式匹配操作相同。例如，`HELP rep%` 返回以`rep`开头的主题列表：
 
 ```
 mysql> HELP rep%
@@ -1749,118 +1752,118 @@ topics:
    REPLACE FUNCTION
 ```
 
-## Executing SQL Statements from a Text File
+## 从文本文件执行 SQL 语句
 
-The **mysql** client typically is used interactively, like this:
+**mysql** 客户端通常是交互式使用的，就像这样：
 
 ```terminal
 mysql db_name
 ```
 
-However, it is also possible to put your SQL statements in a file and then tell **mysql** to read its input from that file. To do so, create a text file `text_file` that contains the statements you wish to execute. Then invoke **mysql** as shown here:
+不过，也可以将 SQL 语句放在一个文件中，然后告诉 **mysql** 从该文件读取输入。为此，请创建一个文本文件 `text_file`，其中包含要执行的语句。然后调用 **mysql**，如下所示：
 
 ```terminal
 mysql db_name < text_file
 ```
 
-If you place a `USE db_name` statement as the first statement in the file, it is unnecessary to specify the database name on the command line:
+如果将 `USE db_name` 语句作为文件中的第一条语句，则无需在命令行中指定数据库名称：
 
 ```terminal
 mysql < text_file
 ```
 
-If you are already running **mysql**, you can execute an SQL script file using the `source` command or `\.` command:
+如果已在运行 **mysql**，则可以使用 `source` 命令或 `\.` 命令执行 SQL 脚本文件：
 
 ```sql
 mysql> source file_name
 mysql> \. file_name
 ```
 
-Sometimes you may want your script to display progress information to the user. For this you can insert statements like this:
+有时，您可能希望脚本向用户显示进度信息。为此，您可以插入如下语句
 
 ```sql
 SELECT '<info_to_display>' AS ' ';
 ```
 
-The statement shown outputs `<info_to_display>`.
+所示语句输出`<info_to_display>`。
 
-You can also invoke **mysql** with the `--verbose` option, which causes each statement to be displayed before the result that it produces.
+你也可以在调用 **mysql** 时使用 `--verbose` 选项，这将导致在显示每条语句产生的结果之前显示其结果。
 
-**mysql** ignores Unicode byte order mark (BOM) characters at the beginning of input files. Previously, it read them and sent them to the server, resulting in a syntax error. Presence of a BOM does not cause **mysql** to change its default character set. To do that, invoke **mysql** with an option such as `--default-character-set=utf8mb4`.
+**mysql** 忽略输入文件开头的 Unicode 字节序号 (BOM) 字符。以前，它会读取这些字符并将其发送到服务器，从而导致语法错误。BOM 字符的存在不会导致 **mysql** 更改默认字符集。要做到这一点，请在调用 **mysql** 时加入一个选项，如 `--default-character-set=utf8mb4`。
 
-For more information about batch mode, see Section ["Using mysql in Batch Mode"](https://dev.mysql.com/doc/refman/8.0/en/batch-mode.html).
+有关批处理模式的更多信息，请参阅章节["Using mysql in Batch Mode"](https://dev.mysql.com/doc/refman/8.0/en/batch-mode.html)。
 
-## mysql Client Tips
+## mysql 客户端提示
 
-This section provides information about techniques for more effective use of **mysql** and about **mysql** operational behavior.
+本节介绍更有效使用 **mysql** 的技巧以及 **mysql** 的操作行为。
 
-- Input-Line Editing
+- 输入行编辑
 
-- Disabling Interactive History
+- 禁用交互式历史记录
 
-- Unicode Support on Windows
+- Windows 支持 Unicode
 
-- Displaying Query Results Vertically
+- 垂直显示查询结果
 
-- Using Safe-Updates Mode (--safe-updates)
+- 使用安全更新模式 (--safe-updates)
 
-- Disabling mysql Auto-Reconnect
+- 禁用 mysql 自动重新连接功能
 
-- mysql Client Parser Versus Server Parser
+- mysql 客户端解析器与服务器解析器对比
 
-### Input-Line Editing
+### 输入行编辑
 
-**mysql** supports input-line editing, which enables you to modify the current input line in place or recall previous input lines. For example, the `left-arrow` and `right-arrow` keys move horizontally within the current input line, and the `up-arrow` and `down-arrow` keys move up and down through the set of previously entered lines. `Backspace` deletes the character before the cursor and typing new characters enters them at the cursor position. To enter the line, press `Enter`.
+**mysql**支持输入行编辑，这使你可以就地修改当前输入行或调用以前的输入行。例如，`left-arrow` 和 `right-arrow` 键可在当前输入行内水平移动，`up-arrow` 和 `down-arrow` 键可在以前输入的行中上下移动。`Backspace` 删除光标前的字符，输入新字符时则在光标位置输入。要输入一行，按 `Enter`。
 
-On Windows, the editing key sequences are the same as supported for command editing in console windows. On Unix, the key sequences depend on the input library used to build **mysql** (for example, the `libedit` or `readline` library).
+在 Windows 上，编辑键序与控制台窗口中的命令编辑所支持的键序相同。在 Unix 上，键序取决于用于构建 **mysql** 的输入库（例如，`libedit` 或 `readline` 库）。
 
-Documentation for the `libedit` and `readline` libraries is available online. To change the set of key sequences permitted by a given input library, define key bindings in the library startup file. This is a file in your home directory: `.editrc` for `libedit` and `.inputrc` for `readline`.
+`libedit` 或 `readline` 库的文档可在线获取。要更改特定输入库允许的键序列集，请在库启动文件中定义键绑定。这是一个位于你的主目录下的文件：`libedit` 为 `.editrc`，`readline` 为 `.inputrc`。
 
-For example, in `libedit`, `Control+W` deletes everything before the current cursor position and `Control+U` deletes the entire line. In `readline`, `Control+W` deletes the word before the cursor and `Control+U` deletes everything before the current cursor position. If **mysql** was built using `libedit`, a user who prefers the `readline` behavior for these two keys can put the following lines in the `.editrc` file (creating the file if necessary):
+例如，在 `libedit` 中，`Control+W` 删除当前光标位置前的所有内容，`Control+U` 删除整行。在 `readline` 中，`Control+W` 删除光标前的单词，`Control+U` 删除当前光标位置前的所有内容。如果**mysql**是使用`libedit`创建的，那么如果用户喜欢这两个键的`readline`行为，可以在`.editrc`文件中加入以下几行（必要时创建文件）：
 
 ```terminal
 bind "^W" ed-delete-prev-word
 bind "^U" vi-kill-line-prev
 ```
 
-To see the current set of key bindings, temporarily put a line that says only bind at the end of `.editrc.` **mysql** shows the bindings when it starts.
+要查看当前的按键绑定集，可暂时在 `.editrc.` **mysql**启动时显示绑定。
 
-### Disabling Interactive History
+### 禁用交互式历史记录
 
-The `up-arrow` key enables you to recall input lines from current and previous sessions. In cases where a console is shared, this behavior may be unsuitable. **mysql** supports disabling the interactive history partially or fully, depending on the host platform.
+`up-arrow`可以调用当前和以前会话中的输入行。在共享控制台的情况下，这种行为可能不合适。根据主机平台的不同，**mysql** 支持部分或完全禁用交互式历史记录。
 
-On Windows, the history is stored in memory. `Alt+F7` deletes all input lines stored in memory for the current history buffer. It also deletes the list of sequential numbers in front of the input lines displayed with `F7` and recalled (by number) with `F9`. New input lines entered after you press `Alt+F7` repopulate the current history buffer. Clearing the buffer does not prevent logging to the Windows Event Viewer, if the `--syslog` option was used to start **mysql**. Closing the console window also clears the current history buffer.
+在 Windows 中，历史记录存储在内存中。`Alt+F7`会删除当前历史记录缓冲区内存中存储的所有输入行。它还会删除用 `F7`显示并用 `F9`调用（按编号）的输入行前面的顺序编号列表。按 `Alt+F7` 键后输入的新输入行将重新填充当前历史记录缓冲区。如果在启动 **mysql** 时使用了 `--syslog` 选项，则清除缓冲区并不会阻止向 Windows 事件查看器记录日志。关闭控制台窗口也会清除当前的历史记录缓冲区。
 
-To disable interactive history on Unix, first delete the `.mysql_history` file, if it exists (previous entries are recalled otherwise). Then start **mysql** with the `--histignore="*"` option to ignore all new input lines. To re-enable the recall (and logging) behavior, restart **mysql** without the option.
+要在 Unix 上禁用交互式历史记录，首先要删除 `.mysql_history` 文件（如果存在）（否则会调用以前的条目）。然后使用 `--histignore="*"`选项启动**mysql**，以忽略所有新输入行。要重新启用调用（和记录）行为，请在重启 **mysql** 时不带该选项。
 
-If you prevent the `.mysql_history` file from being created (see [Controlling the History File](https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html#mysql-logging-history-file)) and use `--histignore="*"` to start the **mysql** client, the interactive history recall facility is disabled fully. Alternatively, if you omit the `--histignore` option, you can recall the input lines entered during the current session.
+如果阻止创建`.mysql_history`文件（请查阅[Controlling the History File](https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html#mysql-logging-history-file)），并使用`--histignore="*"`来启动**mysql**客户端，交互式历史记录调用功能就会被完全禁用。另外，如果省略`--histignore`选项，则可以调用当前会话中输入的行。
 
-### Unicode Support on Windows
+### Windows 支持 Unicode
 
-Windows provides APIs based on UTF-16LE for reading from and writing to the console; the **mysql** client for Windows is able to use these APIs. The Windows installer creates an item in the MySQL menu named `MySQL command line client - Unicode`. This item invokes the **mysql** client with properties set to communicate through the console to the MySQL server using Unicode.
+Windows 提供了基于 UTF-16LE 的 API，用于从控制台读取数据和向控制台写入数据；Windows 的 **mysql** 客户端可以使用这些 API。Windows 安装程序会在 MySQL 菜单中创建一个名为 "MySQL command line client - Unicode" 的项目。此项目调用**mysql**客户端，其属性设置为使用Unicode通过控制台与MySQL服务器通信。
 
-To take advantage of this support manually, run **mysql** within a console that uses a compatible Unicode font and set the default character set to a Unicode character set that is supported for communication with the server:
+要手动利用这一支持，请在使用兼容 Unicode 字体的控制台中运行 **mysql**，并将默认字符集设置为与服务器通信时支持的 Unicode 字符集：
 
-1. Open a console window.
+1. 打开控制台窗口。
 
-2. Go to the console window properties, select the font tab, and choose Lucida Console or some other compatible Unicode font. This is necessary because console windows start by default using a DOS raster font that is inadequate for Unicode.
+2. 进入控制台窗口属性，选择字体选项卡，选择 Lucida Console 或其他兼容的 Unicode 字体。这是必要的，因为控制台窗口启动时默认使用的 DOS 栅格字体不适合 Unicode。
 
-3. Execute **mysql.exe** with the `--default-character-set=utf8mb4` (or `utf8mb3`) option. This option is necessary because `utf16le` is one of the character sets that cannot be used as the client character set. See [Impermissible Client Character Sets](https://dev.mysql.com/doc/refman/8.0/en/charset-connection.html#charset-connection-impermissible-client-charset).
+3. 执行 **mysql.exe**，并设置 `--default-character-set=utf8mb4` （或 `utf8mb3`）选项。该选项是必要的，因为 `utf16le` 是不能用作客户端字符集的字符集之一。请参阅 [Impermissible Client Character Sets](https://dev.mysql.com/doc/refman/8.0/en/charset-connection.html#charset-connection-impermissible-client-charset)。
 
-With those changes, **mysql** uses the Windows APIs to communicate with the console using UTF-16LE, and communicate with the server using UTF-8. (The menu item mentioned previously sets the font and character set as just described.)
+作出这些更改后，**mysql** 将使用 Windows API，使用 UTF-16LE 与控制台通信，并使用 UTF-8 与服务器通信。（前面提到的菜单项可以设置字体和字符集）。
 
-To avoid those steps each time you run **mysql**, you can create a shortcut that invokes **mysql.exe**. The shortcut should set the console font to Lucida Console or some other compatible Unicode font, and pass the `--default-character-set=utf8mb4` (or `utf8mb3`) option to **mysql.exe**.
+为了避免每次运行**mysql**时都要进行这些步骤，可以创建一个调用**mysql.exe**的快捷方式。快捷方式应将控制台字体设置为 Lucida Console 或其他兼容的 Unicode 字体，并将 `--default-character-set=utf8mb4`（或 `utf8mb3`）选项传递给 **mysql.exe**。
 
-Alternatively, create a shortcut that only sets the console font, and set the character set in the `[mysql]` group of your `my.ini` file:
+或者，创建一个只设置控制台字体的快捷方式，并在`my.ini`文件的`[mysql]`组中设置字符集：
 
 ```ini
 [mysql]
 default-character-set=utf8mb4   # or utf8mb3
 ```
 
-### Displaying Query Results Vertically
+### 垂直显示查询结果
 
-Some query results are much more readable when displayed vertically, instead of in the usual horizontal table format. Queries can be displayed vertically by terminating the query with \\G instead of a semicolon. For example, longer text values that include newlines often are much easier to read with vertical output:
+有些查询结果如果以垂直方式显示，而不是通常的水平表格格式，会更易读。可以用 \\G 代替分号来结束查询，从而垂直显示查询结果。例如，包含换行符的较长文本值通常在垂直输出时更容易阅读：
 
 ```sql
 mysql> SELECT * FROM mails WHERE LENGTH(txt) < 300 LIMIT 300,1\G
@@ -1887,19 +1890,19 @@ Jones
 1 row in set (0.09 sec)
 ```
 
-### Using Safe-Updates Mode (--safe-updates)
+### 使用安全更新模式 (--safe-updates)
 
-For beginners, a useful startup option is `--safe-updates` (or `--i-am-a-dummy`, which has the same effect). Safe-updates mode is helpful for cases when you might have issued an `UPDATE` or `DELETE` statement but forgotten the `WHERE` clause indicating which rows to modify. Normally, such statements update or delete all rows in the table. With `--safe-updates`, you can modify rows only by specifying the key values that identify them, or a `LIMIT` clause, or both. This helps prevent accidents. Safe-updates mode also restricts `SELECT` statements that produce (or are estimated to produce) very large result sets.
+对于初学者来说，一个有用的启动选项是 `-safe-updates`（或 `--i-am-a-dummy`，效果相同）。安全更新模式对以下情况很有帮助：你可能已经发出了一条 `UPDATE` 或 `DELETE` 语句，但却忘记了指示要修改哪些行的 `WHERE` 子句。通常，此类语句会更新或删除表中的所有行。有了 `-safe-updates`，你就只能通过指定标识行的键值或 `LIMIT` 子句或两者来修改行。这有助于防止意外发生。安全更新模式还限制会产生（或估计会产生）非常大结果集的 `SELECT` 语句。
 
-The `--safe-updates` option causes **mysql** to execute the following statement when it connects to the MySQL server, to set the session values of the `sql_safe_updates`, `sql_select_limit`, and `max_join_size` system variables:
+`--safe-updates`选项会导致**mysql**在连接到MySQL服务器时执行以下语句，以设置`sql_safe_updates`、`sql_select_limit`和`max_join_size`系统变量的会话值：
 
 ```sql
 SET sql_safe_updates=1, sql_select_limit=1000, max_join_size=1000000;
 ```
 
-The `SET` statement affects statement processing as follows:
+`SET`语句对语句处理的影响如下：
 
-- Enabling `sql_safe_updates` causes `UPDATE` and `DELETE` statements to produce an error if they do not specify a key constraint in the WHERE clause, or provide a `LIMIT` clause, or both. For example:
+- 启用 `sql_safe_updates` 后，如果 `UPDATE` 和 `DELETE` 语句没有在 WHERE 子句中指定键约束，或没有提供 `LIMIT` 子句，或两者都没有，就会产生错误。例如：
 
     ```sql
     UPDATE tbl_name SET not_key_column=val WHERE key_column=val;
@@ -1907,33 +1910,34 @@ The `SET` statement affects statement processing as follows:
     UPDATE tbl_name SET not_key_column=val LIMIT 1;
     ```
 
-- Setting `sql_select_limit` to 1,000 causes the server to limit all `SELECT` result sets to 1,000 rows unless the statement includes a `LIMIT` clause.
+- 将 `sql_select_limit` 设置为 1,000 会导致服务器将所有 `SELECT` 结果集限制为 1,000 行，除非语句包含一个 `LIMIT` 子句。
 
-- Setting `max_join_size` to 1,000,000 causes multiple-table `SELECT` statements to produce an error if the server estimates it must examine more than 1,000,000 row combinations.
+- 将 `max_join_size` 设置为 1,000,000 会导致多表 `SELECT` 语句在服务器估计必须检查超过 1,000,000 行组合时产生错误。
 
-To specify result set limits different from 1,000 and 1,000,000, you can override the defaults by using the `--select-limit` and `--max-join-size` options when you invoke **mysql**:
+要指定不同于 1,000 和 1,000,000 的结果集限制，可以在调用 **mysql** 时使用 `--select-limit` 和 `-ax-join-size` 选项来覆盖默认值：
 
 ```terminal
 mysql --safe-updates --select-limit=500 --max-join-size=10000
 ```
 
-It is possible for `UPDATE` and `DELETE` statements to produce an error in safe-updates mode even with a key specified in the `WHERE` clause, if the optimizer decides not to use the index on the key column:
+如果优化器决定不使用键列上的索引，那么即使在 `WHERE` 子句中指定了键，`UPDATE` 和 `DELETE` 语句也有可能在安全更新模式下产生错误：
 
-- Range access on the index cannot be used if memory usage exceeds that permitted by the `range_optimizer_max_mem_size` system variable. The optimizer then falls back to a table scan. See [Limiting Memory Use for Range Optimization](https://dev.mysql.com/doc/refman/8.0/en/range-optimization.html#range-optimization-memory-use).
+- 如果内存使用量超过 `range_optimizer_max_mem_size` 系统变量允许的范围，则无法使用索引上的范围访问。这时，优化器会退回到表扫描。请参阅 [Limiting Memory Use for Range Optimization](https://dev.mysql.com/doc/refman/8.0/en/range-optimization.html#range-optimization-memory-use)。
 
-- If key comparisons require type conversion, the index may not be used (see ["How MySQL Uses Indexes"](https://dev.mysql.com/doc/refman/8.0/en/mysql-indexes.html)). Suppose that an indexed string column `c1` is compared to a numeric value using `WHERE c1 = 2222`. For such comparisons, the string value is converted to a number and the operands are compared numerically (see ["Type Conversion in Expression Evaluation"](https://dev.mysql.com/doc/refman/8.0/en/type-conversion.html)), preventing use of the index. If safe-updates mode is enabled, an error occurs.
+- 如果键比较需要类型转换，则可能无法使用索引（请参阅["How MySQL Uses Indexes"](https://dev.mysql.com/doc/refman/8.0/en/mysql-indexes.html)）。假设使用 `WHERE c1 = 2222` 将索引字符串列 `c1` 与数值进行比较。对于此类比较，字符串值将转换为数字，操作数将以数字形式进行比较（请参阅["Type Conversion in Expression Evaluation"](https://dev.mysql.com/doc/refman/8.0/en/type-conversion.html)），从而无法使用索引。如果启用了安全更新模式，则会出现错误。
 
-As of MySQL 8.0.13, safe-updates mode also includes these behaviors:
+从 MySQL 8.0.13 起，安全更新模式也包含这些行为：
 
-- `EXPLAIN` with `UPDATE` and `DELETE` statements does not produce safe-updates errors. This enables use of `EXPLAIN` plus `SHOW WARNINGS` to see why an index is not used, which can be helpful in cases such as when a `range_optimizer_max_mem_size` violation or type conversion occurs and the optimizer does not use an index even though a key column was specified in the `WHERE` clause.
+- 带有 `UPDATE` 和 `DELETE` 语句的 `EXPLAIN` 不会产生安全更新错误。这样就可以使用 `EXPLAIN` 加上 `SHOW WARNINGS` 来查看不使用索引的原因，这在某些情况下很有帮助，例如当发生 `range_optimizer_max_mem_size` 违规或类型转换时，即使在 `WHERE` 子句中指定了键列，优化器也不会使用索引。
 
-- When a safe-updates error occurs, the error message includes the first diagnostic that was produced, to provide information about the reason for failure. For example, the message may indicate that the `range_optimizer_max_mem_size` value was exceeded or type conversion occurred, either of which can preclude use of an index.
+- 当发生安全更新错误时，错误消息会包含产生的第一个诊断，以提供有关失败原因的信息。例如，消息可能显示超出了 `range_optimizer_max_mem_size` 值或发生了类型转换，这两种情况都可能导致无法使用索引。
 
-- For multiple-table deletes and updates, an error is produced with safe updates enabled only if any target table uses a table scan.
+- 对于多表删除和更新，只有当任何目标表使用表扫描时，才会在启用安全更新后产生错误。
 
-### Disabling mysql Auto-Reconnect
+### 禁用 mysql 自动重新连接功能
 
-If the **mysql** client loses its connection to the server while sending a statement, it immediately and automatically tries to reconnect once to the server and send the statement again. However, even if **mysql** succeeds in reconnecting, your first connection has ended and all your previous session objects and settings are lost: temporary tables, the autocommit mode, and user-defined and session variables. Also, any current transaction rolls back. This behavior may be dangerous for you, as in the following example where the server was shut down and restarted between the first and second statements without you knowing it:
+
+如果**mysql**客户端在发送语句时与服务器失去连接，它会立即自动尝试重新连接服务器并再次发送语句。不过，即使**mysql**重新连接成功，第一次连接也已结束，所有以前的会话对象和设置都会丢失：临时表、自动提交模式、用户定义变量和会话变量。此外，任何当前事务都会回滚。这种行为可能会给您带来危险，例如在下面的示例中，服务器在您不知道的情况下在第一条和第二条语句之间被关闭并重新启动：
 
 ```sql
 mysql> SET @a=1;
@@ -1956,18 +1960,18 @@ mysql> SELECT * FROM t;
 1 row in set (0.05 sec)
 ```
 
-The @a user variable has been lost with the connection, and after the reconnection it is undefined. If it is important to have **mysql** terminate with an error if the connection has been lost, you can start the **mysql** client with the `--skip-reconnect` option.
+@a 用户变量随连接丢失，重新连接后未定义。如果需要在连接丢失时让**mysql**以错误方式终止，可以使用`--skip-reconnect`选项启动**mysql**客户端。
 
-For more information about auto-reconnect and its effect on state information when a reconnection occurs, see [Automatic Reconnection Control](https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html).
+有关自动重新连接及其在发生重新连接时对状态信息影响的更多信息，请参阅 [Automatic Reconnection Control](https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html)。
 
-### mysql Client Parser Versus Server Parser
+### mysql 客户端解析器与服务器解析器对比
 
-The **mysql** client uses a parser on the client side that is not a duplicate of the complete parser used by the **mysqld** server on the server side. This can lead to differences in treatment of certain constructs. Examples:
+**mysql**客户端在客户端使用的解析器与**mysqld**服务器在服务器端使用的完整解析器并不相同。这可能会导致某些构造的处理方式不同。例如：
 
-- The server parser treats strings delimited by " characters as identifiers rather than as plain strings if the `ANSI_QUOTES` SQL mode is enabled.
+- 如果启用了 `ANSI_QUOTES` SQL 模式，服务器解析器会将以"字符分隔的字符串视为标识符，而不是纯字符串。
 
-    The **mysql** client parser does not take the `ANSI_QUOTES` SQL mode into account. It treats strings delimited by ", ', and \` characters the same, regardless of whether `ANSI_QUOTES` is enabled.
+    **mysql** 客户端解析器不考虑 `ANSI_QUOTES` SQL 模式。无论是否启用了 `ANSI_QUOTES`，它对以"、'和\`字符分隔的字符串的处理方式都是一样的。
 
-- Within \/\*\! ... \*\/ and \/\*\+ ... \*\/ comments, the **mysql** client parser interprets short-form **mysql** commands. The server parser does not interpret them because these commands have no meaning on the server side.
+- Within \/\*\! ... \*\/ 和 \/\*\+ ... \*\/注释中，**mysql**客户端解析器解释简短的**mysql**命令。服务器解析器不会解释它们，因为这些命令在服务器端没有任何意义。
 
-    If it is desirable for **mysql** not to interpret short-form commands within comments, a partial workaround is to use the `--binary-mode` option, which causes all **mysql** commands to be disabled except `\C` and `\d` in noninteractive mode (for input piped to **mysql** or loaded using the `source` command).
+    如果希望**mysql**不解释注释中的短格式命令，部分变通方法是使用 `--binary-mode` 选项，该选项会导致所有**mysql**命令被禁用，但非交互模式下的 `\C` 和 `\d` 除外（对于通过管道输入到**mysql**或使用 `source` 命令加载的输入）。
