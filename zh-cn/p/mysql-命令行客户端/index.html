@@ -393,24 +393,24 @@
       </ol>
     </li>
     <li><a href="#mysql-client-commands">mysql Client Commands</a></li>
-    <li><a href="#mysql-client-logging">mysql Client Logging</a>
+    <li><a href="#mysql-客户端日志">mysql 客户端日志</a>
       <ol>
-        <li><a href="#how-logging-occurs">How Logging Occurs</a></li>
-        <li><a href="#controlling-the-history-file">Controlling the History File</a></li>
-        <li><a href="#syslog-logging-characteristics">syslog Logging Characteristics</a></li>
+        <li><a href="#如何记录日志">如何记录日志</a></li>
+        <li><a href="#控制历史文件">控制历史文件</a></li>
+        <li><a href="#syslog-日志特征">syslog 日志特征</a></li>
       </ol>
     </li>
-    <li><a href="#mysql-client-server-side-help">mysql Client Server-Side Help</a></li>
-    <li><a href="#executing-sql-statements-from-a-text-file">Executing SQL Statements from a Text File</a></li>
-    <li><a href="#mysql-client-tips">mysql Client Tips</a>
+    <li><a href="#mysql-客户端服务器端帮助">mysql 客户端服务器端帮助</a></li>
+    <li><a href="#从文本文件执行-sql-语句">从文本文件执行 SQL 语句</a></li>
+    <li><a href="#mysql-客户端提示">mysql 客户端提示</a>
       <ol>
-        <li><a href="#input-line-editing">Input-Line Editing</a></li>
-        <li><a href="#disabling-interactive-history">Disabling Interactive History</a></li>
-        <li><a href="#unicode-support-on-windows">Unicode Support on Windows</a></li>
-        <li><a href="#displaying-query-results-vertically">Displaying Query Results Vertically</a></li>
-        <li><a href="#using-safe-updates-mode---safe-updates">Using Safe-Updates Mode (&ndash;safe-updates)</a></li>
-        <li><a href="#disabling-mysql-auto-reconnect">Disabling mysql Auto-Reconnect</a></li>
-        <li><a href="#mysql-client-parser-versus-server-parser">mysql Client Parser Versus Server Parser</a></li>
+        <li><a href="#输入行编辑">输入行编辑</a></li>
+        <li><a href="#禁用交互式历史记录">禁用交互式历史记录</a></li>
+        <li><a href="#windows-支持-unicode">Windows 支持 Unicode</a></li>
+        <li><a href="#垂直显示查询结果">垂直显示查询结果</a></li>
+        <li><a href="#使用安全更新模式---safe-updates">使用安全更新模式 (&ndash;safe-updates)</a></li>
+        <li><a href="#禁用-mysql-自动重新连接功能">禁用 mysql 自动重新连接功能</a></li>
+        <li><a href="#mysql-客户端解析器与服务器解析器对比">mysql 客户端解析器与服务器解析器对比</a></li>
       </ol>
     </li>
   </ol>
@@ -481,7 +481,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 44 分钟
+                    阅读时长: 22 分钟
                 </time>
             </div>
         
@@ -570,10 +570,10 @@
 <div class="table-wrapper"><table>
 <thead>
 <tr>
-<th style="text-align:left">选项名称</th>
-<th>说明</th>
-<th>引入版本</th>
-<th>废弃版本</th>
+<th style="text-align:left"><strong>选项名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>引入版本</strong></th>
+<th><strong>废弃版本</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -2709,33 +2709,26 @@
 <td style="text-align:left"><strong>Valid Values</strong></td>
 <td><strong>OFF / ON / STRICT</strong></td>
 </tr>
-<tr>
-<td style="text-align:left">todo：</td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left">Controls whether to enable FIPS mode on the client side. The <code>--ssl-fips-mode</code> option differs from other <code>--ssl-xxx</code> options in that it is not used to establish encrypted connections, but rather to affect which cryptographic operations to permit. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/fips-mode.html"  target="_blank" rel="noopener"
-    >&ldquo;FIPS Support&rdquo;</a>.</td>
-<td></td>
-</tr>
 </tbody>
 </table></div>
-<p>These <code>--ssl-fips-mode</code> values are permitted:</p>
+<p>控制是否在客户端启用 FIPS 模式。<code>--ssl-fips-mode</code>选项与其他<code>--ssl-xxx</code>选项不同，它不是用来建立加密连接，而是影响允许哪些加密操作。请参阅<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/fips-mode.html"  target="_blank" rel="noopener"
+    >&ldquo;FIPS Support&rdquo;</a>。</p>
+<p>允许使用这些<code>--ssl-fips-mode</code>值：</p>
 <ul>
 <li>
-<p>OFF: Disable FIPS mode.</p>
+<p>OFF: 禁用 FIPS 模式。</p>
 </li>
 <li>
-<p>ON: Enable FIPS mode.</p>
+<p>ON: 启用 FIPS 模式。</p>
 </li>
 <li>
-<p>STRICT: Enable “strict” FIPS mode.</p>
+<p>STRICT: 启用 &ldquo;strict&rdquo; FIPS 模式。</p>
 </li>
 </ul>
 <blockquote>
-<p><strong>Note:</strong> If the OpenSSL FIPS Object Module is not available, the only permitted value for <code>--ssl-fips-mode</code> is OFF. In this case, setting <code>--ssl-fips-mode</code> to <em>ON</em> or <em>STRICT</em> causes the client to produce a warning at startup and to operate in non-FIPS mode.</p>
+<p>**注意：**如果 OpenSSL FIPS 对象模块不可用，<code>-ssl-fips-mode</code> 的唯一允许值是 OFF。在这种情况下，将 <code>-ssl-fips-mode</code> 设置为 <em>ON</em> 或 <em>STRICT</em> 会导致客户端在启动时发出警告，并以非 FIPS 模式运行。</p>
 </blockquote>
-<p>As of MySQL 8.0.34, this option is deprecated. Expect it to be removed in a future version of MySQL.</p>
+<p>自 MySQL 8.0.34 起，该选项已被弃用。预计未来的 MySQL 版本将删除该选项。</p>
 <h3 id="--syslog--j">--syslog, -j</h3>
 <div class="table-wrapper"><table>
 <thead>
@@ -2745,8 +2738,8 @@
 </tr>
 </thead>
 </table></div>
-<p>This option causes <strong>mysql</strong> to send interactive statements to the system logging facility. On Unix, this is <em>syslog</em>; on Windows, it is the Windows Event Log. The destination where logged messages appear is system dependent. On Linux, the destination is often the <em>/var/log/messages</em> file.</p>
-<p>Here is a sample of output generated on Linux by using <code>--syslog</code>. This output is formatted for readability; each logged message actually takes a single line.</p>
+<p>该选项会使<strong>mysql</strong>向系统日志设备发送交互式语句。在 Unix 系统中，这是 <em>syslog</em>；在 Windows 系统中，这是 Windows 事件日志。记录信息的目的地取决于系统。在 Linux 系统中，目的地通常是 <em>/var/log/messages</em> 文件。</p>
+<p>下面是使用 <code>--syslog</code> 在 Linux 上生成的输出示例。为便于阅读，该输出已格式化；每条记录的信息实际上只占一行。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -2765,8 +2758,8 @@
 </span></span><span class="line"><span class="cl">  DB_SERVER:&#39;127.0.0.1&#39;, DB:&#39;test&#39;, QUERY:&#39;SHOW TABLES;&#39;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>For more information, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html"  target="_blank" rel="noopener"
-    >&ldquo;mysql Client Logging&rdquo;</a>.</p>
+</div><p>更多信息，请参阅<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html"  target="_blank" rel="noopener"
+    >&ldquo;mysql Client Logging&rdquo;</a>。</p>
 <h3 id="--table--t">--table, -t</h3>
 <div class="table-wrapper"><table>
 <thead>
@@ -2776,7 +2769,7 @@
 </tr>
 </thead>
 </table></div>
-<p>Display output in table format. This is the default for interactive use, but can be used to produce table output in batch mode.</p>
+<p>以表格格式显示输出。这是交互式使用的默认设置，但也可用于在批处理模式下生成表格输出。</p>
 <h3 id="--tee-file_name">--tee-<em>file_name</em></h3>
 <div class="table-wrapper"><table>
 <thead>
@@ -2792,8 +2785,8 @@
 </tr>
 </tbody>
 </table></div>
-<p>Append a copy of output to the given file. This option works only in interactive mode. Section <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html"  target="_blank" rel="noopener"
-    >&ldquo;mysql Client Commands&rdquo;</a>, discusses tee files further.</p>
+<p>将输出副本附加到指定文件。该选项仅在交互模式下有效。请参阅<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html"  target="_blank" rel="noopener"
+    >&ldquo;mysql Client Commands&rdquo;</a> ，将进一步讨论 tee 文件。</p>
 <h3 id="--tls-ciphersuitesciphersuite_list">--tls-ciphersuites=<em>ciphersuite_list</em></h3>
 <div class="table-wrapper"><table>
 <thead>
@@ -2813,8 +2806,8 @@
 </tr>
 </tbody>
 </table></div>
-<p>The permissible ciphersuites for encrypted connections that use TLSv1.3. The value is a list of one or more colon-separated ciphersuite names. The ciphersuites that can be named for this option depend on the SSL library used to compile MySQL. For details, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/encrypted-connection-protocols-ciphers.html"  target="_blank" rel="noopener"
-    >&ldquo;Encrypted Connection TLS Protocols and Ciphers&rdquo;</a>.</p>
+<p>使用 TLSv1.3 的加密连接允许使用的密码套件。该值是一个或多个以冒号分隔的密码组名称列表。可为该选项命名的密码库取决于编译 MySQL 时使用的 SSL 库。详情请参阅<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/encrypted-connection-protocols-ciphers.html"  target="_blank" rel="noopener"
+    >&ldquo;Encrypted Connection TLS Protocols and Ciphers&rdquo;</a>。</p>
 <p>This option was added in MySQL 8.0.16.</p>
 <h3 id="--tls-versionprotocol_list">--tls-version=<em>protocol_list</em></h3>
 <div class="table-wrapper"><table>
@@ -2839,8 +2832,8 @@
 </tr>
 </tbody>
 </table></div>
-<p>The permissible TLS protocols for encrypted connections. The value is a list of one or more comma-separated protocol names. The protocols that can be named for this option depend on the SSL library used to compile MySQL. For details, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/encrypted-connection-protocols-ciphers.html"  target="_blank" rel="noopener"
-    >&ldquo;Encrypted Connection TLS Protocols and Ciphers&rdquo;</a>.</p>
+<p>允许用于加密连接的 TLS 协议。值是一个或多个以逗号分隔的协议名称列表。可以为该选项命名的协议取决于编译 MySQL 时使用的 SSL 库。详情请参阅<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/encrypted-connection-protocols-ciphers.html"  target="_blank" rel="noopener"
+    >&ldquo;Encrypted Connection TLS Protocols and Ciphers&rdquo;</a>。</p>
 <h3 id="--unbuffered--n">--unbuffered, -n</h3>
 <div class="table-wrapper"><table>
 <thead>
@@ -2850,7 +2843,7 @@
 </tr>
 </thead>
 </table></div>
-<p>Flush the buffer after each query.</p>
+<p>每次查询后清空缓冲区。</p>
 <h3 id="--useruser_name--u-user_name">--user=<em>user_name</em>, -u <em>user_name</em></h3>
 <div class="table-wrapper"><table>
 <thead>
@@ -2866,7 +2859,7 @@
 </tr>
 </tbody>
 </table></div>
-<p>The user name of the MySQL account to use for connecting to the server.</p>
+<p>用于连接服务器的 MySQL 账户的用户名。</p>
 <h3 id="--verbose--v">--verbose, -v</h3>
 <div class="table-wrapper"><table>
 <thead>
@@ -2876,7 +2869,7 @@
 </tr>
 </thead>
 </table></div>
-<p>Verbose mode. Produce more output about what the program does. This option can be given multiple times to produce more and more output. (For example, -v -v -v produces table output format even in batch mode.)</p>
+<p>详细模式。输出更多有关程序运行的信息。该选项可以多次使用，以产生越来越多的输出。（例如，-v -v -v 即使在批处理模式下也能产生表格输出格式）。</p>
 <h3 id="--version--v">--version, -V</h3>
 <div class="table-wrapper"><table>
 <thead>
@@ -2886,7 +2879,7 @@
 </tr>
 </thead>
 </table></div>
-<p>Display version information and exit.</p>
+<p>显示版本信息并退出。</p>
 <h3 id="--vertical--e">--vertical, -E</h3>
 <div class="table-wrapper"><table>
 <thead>
@@ -2896,7 +2889,7 @@
 </tr>
 </thead>
 </table></div>
-<p>Print query output rows vertically (one line per column value). Without this option, you can specify vertical output for individual statements by terminating them with \G.</p>
+<p>垂直打印查询输出行（每列值一行）。如果不使用该选项，可以通过以 \G 结束单个语句来指定垂直输出。</p>
 <h3 id="--wait--w">--wait, -w</h3>
 <div class="table-wrapper"><table>
 <thead>
@@ -2906,7 +2899,7 @@
 </tr>
 </thead>
 </table></div>
-<p>If the connection cannot be established, wait and retry instead of aborting.</p>
+<p>如果无法建立连接，请等待并重试，而不是放弃。</p>
 <h3 id="--xml--x">--xml, -X</h3>
 <div class="table-wrapper"><table>
 <thead>
@@ -2916,7 +2909,7 @@
 </tr>
 </thead>
 </table></div>
-<p>Produce XML output.</p>
+<p>生成 XML 输出。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -2925,9 +2918,9 @@
 <pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#34;column_name&#34;</span><span class="nt">&gt;</span>NULL<span class="nt">&lt;/field&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>The output when <code>--xml</code> is used with <strong>mysql</strong> matches that of <strong>mysqldump</strong> <code>--xml</code>. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html"  target="_blank" rel="noopener"
-    >&ldquo;mysqldump — A Database Backup Program&rdquo;</a>, for details.</p>
-<p>The XML output also uses an XML namespace, as shown here:</p>
+</div><p>当 <code>--xml</code> 与 <strong>mysql</strong> 一起使用时，输出结果与 <strong>mysqldump</strong> <code>--xml</code> 的输出结果一致。详见<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html"  target="_blank" rel="noopener"
+    >&ldquo;mysqldump — A Database Backup Program&rdquo;</a>。</p>
+<p>XML 输出也使用 XML 命名空间，如图所示：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -3001,12 +2994,12 @@
 </tr>
 </tbody>
 </table></div>
-<p>The compression level to use for connections to the server that use the zstd compression algorithm. The permitted levels are from 1 to 22, with larger values indicating increasing levels of compression. The default zstd compression level is 3. The compression level setting has no effect on connections that do not use zstd compression.</p>
-<p>For more information, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/connection-compression-control.html"  target="_blank" rel="noopener"
-    >&ldquo;Connection Compression Control&rdquo;</a>.</p>
-<p>This option was added in MySQL 8.0.18.</p>
+<p>使用 zstd 压缩算法的服务器连接所使用的压缩级别。允许的压缩级别从 1 到 22，数值越大，压缩级别越高。默认的 zstd 压缩级别为 3。 压缩级别设置对不使用 zstd 压缩的连接没有影响。</p>
+<p>更多信息，请参阅<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/connection-compression-control.html"  target="_blank" rel="noopener"
+    >&ldquo;Connection Compression Control&rdquo;</a>。</p>
+<p>此选项在 MySQL 8.0.18 中添加。</p>
 <h2 id="mysql-client-commands">mysql Client Commands</h2>
-<p><strong>mysql</strong> sends each SQL statement that you issue to the server to be executed. There is also a set of commands that <strong>mysql</strong> itself interprets. For a list of these commands, type <code>help</code> or <code>\h</code> at the <code>mysql&gt;</code> prompt:</p>
+<p><strong>mysql</strong> 会将你发出的每条 SQL 语句发送到服务器执行。此外，<strong>mysql</strong>本身也会解释一组命令。要查看这些命令的列表，请在 <code>mysql&gt;</code> 提示符下键入 <code>help</code> 或 <code>\h</code>：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -3087,124 +3080,125 @@
 </span></span><span class="line"><span class="cl">For server side help, type &#39;help contents&#39;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>If <strong>mysql</strong> is invoked with the <code>--binary-mode</code> option, all <strong>mysql</strong> commands are disabled except <em>charset</em> and <em>delimiter</em> in noninteractive mode (for input piped to <strong>mysql</strong> or loaded using the <em>source</em> command).</p>
-<p>Each command has both a long and short form. The long form is not case-sensitive; the short form is. The long form can be followed by an optional semicolon terminator, but the short form should not.</p>
-<p>The use of short-form commands within multiple-line /* &hellip; <em>/ comments is not supported. Short-form commands do work within single-line /</em>! &hellip; <em>/ version comments, as do /</em>+ &hellip; */ optimizer-hint comments, which are stored in object definitions. If there is a concern that optimizer-hint comments may be stored in object definitions so that dump files when reloaded with <em>mysql</em> would result in execution of such commands, either invoke <strong>mysql</strong> with the <code>--binary-mode</code> option or use a reload client other than <strong>mysql</strong>.</p>
+</div><p>如果在调用<strong>mysql</strong>时使用了<code>--binary-mode</code>选项，那么在非交互模式下（对于通过管道输入到<strong>mysql</strong>或使用<em>source</em>命令加载的输入），除了<em>charset</em>和<em>delimiter</em>之外，所有<strong>mysql</strong>命令都会被禁用。</p>
+<p>每条命令都有长、短两种形式。长命令不区分大小写，短命令区分大小写。长命令后可以加上分号结束符，但短命令则不可以。</p>
+<p>不支持在多行 /* &hellip; */ 注释中使用短格式命令。短格式命令可以在单行 /*! &hellip; */ 版本注释中使用，存储在对象定义中的 /*+ &hellip; */ 优化器提示注释也是如此。如果担心优化器提示注释可能存储在对象定义中，从而导致在使用 <em>mysql</em> 重载转储文件时执行此类命令，则应使用 <code>--binary-mode</code> 选项调用 <strong>mysql</strong>，或使用 <strong>mysql</strong>以外的重载客户端。</p>
 <ul>
 <li>
 <p>help [<em>arg</em>], \h [<em>arg</em>], \? [<em>arg</em>], ? [<em>arg</em>]</p>
-<p>Display a help message listing the available mysql commands.</p>
-<p>If you provide an argument to the <em>help</em> command, <strong>mysql</strong> uses it as a search string to access server-side help from the contents of the MySQL Reference Manual. For more information, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-server-side-help.html"  target="_blank" rel="noopener"
-    >&ldquo;mysql Client Server-Side Help&rdquo;</a>.</p>
+<p>显示帮助信息，列出可用的 mysql 命令。</p>
+<p>如果为 <em>help</em> 命令提供参数，<strong>mysql</strong> 会将其用作搜索字符串，从《MySQL 参考手册》的内容中访问服务器端帮助。更多信息，请参阅<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-server-side-help.html"  target="_blank" rel="noopener"
+    >&ldquo;mysql Client Server-Side Help&rdquo;</a>。</p>
 </li>
 <li>
 <p>charset <em>charset_name</em>, \C <em>charset_name</em></p>
-<p>Change the default character set and issue a <code>SET NAMES</code> statement. This enables the character set to remain synchronized on the client and server if <strong>mysql</strong> is run with auto-reconnect enabled (which is not recommended), because the specified character set is used for reconnects.</p>
+<p>更改默认字符集并发布一条 <code>SET NAMES</code> 语句。这样，如果 <strong>mysql</strong> 运行时启用了自动重新连接（不建议这样做），客户端和服务器上的字符集就能保持同步，因为重新连接时会使用指定的字符集。</p>
 </li>
 <li>
 <p>clear, \c</p>
-<p>Clear the current input. Use this if you change your mind about executing the statement that you are entering.</p>
+<p>清除当前输入。如果改变主意不执行正在输入的语句，请使用此功能。</p>
 </li>
 <li>
 <p>connect [<em>db_name</em> [<em>host_name</em>]], \r [<em>db_name</em> [<em>host_name</em>]]</p>
-<p>Reconnect to the server. The optional database name and host name arguments may be given to specify the default database or the host where the server is running. If omitted, the current values are used.</p>
-<p>If the connect command specifies a host name argument, that host takes precedence over any <code>--dns-srv-name</code> option given at <strong>mysql</strong> startup to specify a DNS SRV record.</p>
+<p>重新连接服务器。可选的数据库名称和主机名称参数可用于指定默认数据库或运行服务器的主机。如果省略，则使用当前值。</p>
+<p>如果 connect 命令指定了主机名参数，则该主机优先于在 <strong>mysql</strong> 启动时指定 DNS SRV 记录的任何 <code>--dns-srv-name</code> 选项。</p>
 </li>
 <li>
 <p>delimiter <em>str</em>, \d <em>str</em></p>
-<p>Change the string that <strong>mysql</strong> interprets as the separator between SQL statements. The default is the semicolon character (;).</p>
-<p>The delimiter string can be specified as an unquoted or quoted argument on the <em>delimiter</em> command line. Quoting can be done with either single quote (&rsquo;), double quote (&rdquo;), or backtick (`) characters. To include a quote within a quoted string, either quote the string with a different quote character or escape the quote with a backslash (\) character. Backslash should be avoided outside of quoted strings because it is the escape character for MySQL. For an unquoted argument, the delimiter is read up to the first space or end of line. For a quoted argument, the delimiter is read up to the matching quote on the line.</p>
-<p><strong>mysql</strong> interprets instances of the delimiter string as a statement delimiter anywhere it occurs, except within quoted strings. Be careful about defining a delimiter that might occur within other words. For example, if you define the delimiter as <code>X</code>, it is not possible to use the word <code>INDEX</code> in statements. <strong>mysql</strong> interprets this as INDE followed by the delimiter <code>X</code>.</p>
-<p>When the delimiter recognized by <strong>mysql</strong> is set to something other than the default of ;, instances of that character are sent to the server without interpretation. However, the server itself still interprets ; as a statement delimiter and processes statements accordingly. This behavior on the server side comes into play for multiple-statement execution (see <a class="link" href="https://dev.mysql.com/doc/c-api/8.0/en/c-api-multiple-queries.html"  target="_blank" rel="noopener"
-    >Multiple Statement Execution Support</a>), and for parsing the body of stored procedures and functions, triggers, and events (see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/stored-programs-defining.html"  target="_blank" rel="noopener"
-    >&ldquo;Defining Stored Programs&rdquo;</a>).</p>
+<p>更改<strong>mysql</strong>解释为 SQL 语句之间分隔符的字符串。默认为分号（;）。</p>
+<p>分隔符字符串可以在 <em>delimiter</em> 命令行中指定为无引号或有引号参数。引号可以使用单引号（&rsquo;）、双引号（&quot;）或回车键（`）字符。要在引号字符串中包含引号，可以使用不同的引号字符或反斜杠（\）字符转义引号。在引号字符串之外应避免使用反斜杠，因为它是 MySQL 的转义字符。对于未加引号的参数，分隔符一直读到第一个空格或行尾。对于带引号的参数，分隔符读到行中匹配的引号为止。</p>
+<p>除了在带引号的字符串中，<strong>mysql</strong> 会将任何分隔符字符串实例解释为语句分隔符。在定义可能出现在其他单词中的分隔符时要小心。例如，如果将分隔符定义为 <code>X</code>，就不能在语句中使用 <code>INDEX</code> 这个词。<strong>mysql</strong> 会将其解释为 INDE，后跟分隔符 <code>X</code>。</p>
+<p>当<strong>mysql</strong>识别的分隔符设置为默认的;以外的字符时，该字符的实例无需解释即可发送到服务器。不过，服务器本身仍会将;解释为语句分隔符，并据此处理语句。服务器端的这种行为适用于多语句执行（参见<a class="link" href="https://dev.mysql.com/doc/c-api/8.0/en/c-api-multiple-queries.html"  target="_blank" rel="noopener"
+    >Multiple Statement Execution Support</a>），以及解析存储过程和函数、触发器和事件的正文（参见<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/stored-programs-defining.html"  target="_blank" rel="noopener"
+    >&ldquo;Defining Stored Programs&rdquo;</a>）。</p>
 </li>
 <li>
 <p>edit, \e</p>
-<p>Edit the current input statement. <strong>mysql</strong> checks the values of the EDITOR and VISUAL environment variables to determine which editor to use. The default editor is <strong>vi</strong> if neither variable is set.</p>
-<p>The <em>edit</em> command works only in Unix.</p>
+<p>编辑当前输入语句。<strong>mysql</strong> 会检查 EDITOR 和 VISUAL 环境变量的值，以确定使用哪个编辑器。如果两个变量都未设置，则默认编辑器为 <strong>vi</strong>。</p>
+<p><em>edit</em> 命令只在 Unix 下运行。</p>
 </li>
 <li>
 <p>ego, \G</p>
-<p>Send the current statement to the server to be executed and display the result using vertical format.</p>
+<p>将当前语句发送到服务器执行，并使用垂直格式显示结果。</p>
 </li>
 <li>
 <p>exit, \q</p>
-<p>Exit <strong>mysql</strong>.</p>
+<p>退出 <strong>mysql</strong>。</p>
 </li>
 <li>
 <p>go, \g</p>
-<p>Send the current statement to the server to be executed.</p>
+<p>将当前语句发送到服务器执行。</p>
 </li>
 <li>
 <p>nopaper, \n</p>
-<p>Disable output paging. See the description for <em>pager</em>.</p>
-<p>The <em>nopaper</em> command works only in Unix.</p>
+<p>禁用输出分页。请参阅 <em>pager</em> 的说明。</p>
+<p><em>nopaper</em>命令仅在Unix系统中有效。</p>
 </li>
 <li>
 <p>notee, \t</p>
-<p>Disable output copying to the tee file. See the description for <em>tee</em>.</p>
+<p>禁用向 tee 文件复制输出。请参阅 <em>tee</em> 的说明。</p>
 </li>
 <li>
 <p>nowarning, \w</p>
-<p>Disable display of warnings after each statement.</p>
+<p>禁止在每个语句后显示警告。</p>
 </li>
 <li>
 <p>pager [<em>command</em>], \P [<em>command</em>]</p>
-<p>Enable output paging. By using the <code>--pager</code> option when you invoke <strong>mysql</strong>, it is possible to browse or search query results in interactive mode with Unix programs such as <strong>less</strong>, <strong>more</strong>, or any other similar program. If you specify no value for the option, <strong>mysql</strong> checks the value of the <code>PAGER</code> environment variable and sets the pager to that. Pager functionality works only in interactive mode.</p>
-<p>Output paging can be enabled interactively with the <em>pager</em> command and disabled with <em>nopager</em>. The command takes an optional argument; if given, the paging program is set to that. With no argument, the pager is set to the pager that was set on the command line, or <em>stdout</em> if no pager was specified.</p>
-<p>Output paging works only in Unix because it uses the <em>popen()</em> function, which does not exist on Windows. For Windows, the <em>tee</em> option can be used instead to save query output, although it is not as convenient as <em>pager</em> for browsing output in some situations.</p>
+<p>启用输出分页。通过在调用 <strong>mysql</strong> 时使用 <code>--pager</code> 选项，可以使用 Unix 程序（如 <strong>less</strong>、<strong>more</strong> 或其他类似程序）在交互模式下浏览或搜索查询结果。如果不指定该选项的值，<strong>mysql</strong> 会检查 <code>PAGER</code> 环境变量的值，并将寻呼器设置为该值。寻呼器功能仅在交互模式下工作。</p>
+<p>输出分页可以通过 <em>pager</em> 命令交互式启用，也可以通过 <em>nopager</em> 命令禁用。该命令包含一个可选参数；如果给出该参数，则分页程序将被设置为该参数。如果没有参数，分页程序将设置为命令行设置的分页程序，如果没有指定分页程序，则设置为 <em>stdout</em>。</p>
+<p>输出分页功能仅适用于 Unix 系统，因为它使用了 <em>popen()</em> 函数，而 Windows 系统中不存在该函数。在 Windows 中，可以使用 <em>tee</em> 选项来保存查询输出，但在某些情况下，它不如 <em>pager</em> 方便浏览输出。</p>
 </li>
 <li>
 <p>print, \p</p>
-<p>Print the current input statement without executing it.</p>
+<p>打印当前输入语句，但不执行该语句。</p>
 </li>
 <li>
 <p>prompt [<em>str</em>], \R [<em>str</em>]</p>
-<p>Reconfigure the <strong>mysql</strong> prompt to the given string. The special character sequences that can be used in the prompt are described later in this section.</p>
-<p>If you specify the <code>prompt</code> command with no argument, <strong>mysql</strong> resets the prompt to the default of <code>mysql&gt;</code>.</p>
+<p>将 <strong>mysql</strong> 提示符重新配置为给定字符串。提示符中可使用的特殊字符序列将在本节后面介绍。</p>
+<p>如果指定不带参数的 <code>prompt</code> 命令，<strong>mysql</strong> 会将提示重置为默认的 <code>mysql&gt;</code>。</p>
 </li>
 <li>
 <p>query_attributes <em>name</em> <em>value</em> [<em>name</em> <em>value</em> &hellip;]</p>
-<p>Define query attributes that apply to the next query sent to the server. For discussion of the purpose and use of query attributes, see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/query-attributes.html"  target="_blank" rel="noopener"
-    >&ldquo;Query Attributes&rdquo;</a>.</p>
-<p>The <code>query_attributes</code> command follows these rules:</p>
+<p>定义适用于下一次发送到服务器的查询的查询属性。有关查询属性的目的和用途，请参阅<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/query-attributes.html"  target="_blank" rel="noopener"
+    >&ldquo;Query Attributes&rdquo;</a>。</p>
+<p><code>query_attributes</code> 命令遵循这些规则：</p>
 <ul>
 <li>
-<p>The format and quoting rules for attribute names and values are the same as for the <code>delimiter</code> command.</p>
+<p>属性名和值的格式和引号规则与 <code>delimiter</code> 命令相同。</p>
 </li>
 <li>
-<p>The command permits up to 32 attribute name/value pairs. Names and values may be up to 1024 characters long. If a name is given without a value, an error occurs.</p>
+<p>该命令最多允许 32 个属性名/值对。名称和值的长度最多为 1024 个字符。如果给出的名称没有值，则会出错。</p>
 </li>
 <li>
-<p>If multiple <code>query_attributes</code> commands are issued prior to query execution, only the last command applies. After sending the query, <strong>mysql</strong> clears the attribute set.</p>
+<p>如果在执行查询之前发布了多条<code>query_attributes</code>命令，则只有最后一条命令适用。发送查询后，<strong>mysql</strong> 会清除属性集。</p>
 </li>
 <li>
-<p>If multiple attributes are defined with the same name, attempts to retrieve the attribute value have an undefined result.</p>
+<p>如果用相同的名称定义了多个属性，尝试检索属性值的结果将是未定义的。</p>
 </li>
 <li>
-<p>An attribute defined with an empty name cannot be retrieved by name.</p>
+<p>用空名称定义的属性无法通过名称检索。</p>
 </li>
 <li>
-<p>If a reconnect occurs while <strong>mysql</strong> executes the query, <strong>mysql</strong> restores the attributes after reconnecting so the query can be executed again with the same attributes.</p>
+<p>如果在<strong>mysql</strong>执行查询时发生重新连接，<strong>mysql</strong>会在重新连接后恢复属性，这样就可以用相同的属性再次执行查询。</p>
 </li>
 </ul>
 </li>
 <li>
 <p>quit, \q</p>
-<p>Exit <strong>mysql</strong>.</p>
+<p>退出 <strong>mysql</strong>。</p>
 </li>
 <li>
 <p>rehash, \#</p>
 <p>Rebuild the completion hash that enables database, table, and column name completion while you are entering statements. (See the description for the <code>--auto-rehash</code> option.)</p>
+<p>重建完成哈希值，以便在输入语句时启用数据库、表和列名完成。（请参阅<code>--auto-rehash</code>选项的说明）。</p>
 </li>
 <li>
 <p>resetconnection, \x</p>
-<p>Reset the connection to clear the session state. This includes clearing any current query attributes defined using the <code>query_attributes</code> command.</p>
-<p>Resetting a connection has effects similar to <code>mysql_change_user()</code> or an auto-reconnect except that the connection is not closed and reopened, and re-authentication is not done. See <a class="link" href="https://dev.mysql.com/doc/c-api/8.0/en/mysql-change-user.html"  target="_blank" rel="noopener"
-    >mysql_change_user()</a>, and <a class="link" href="https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html"  target="_blank" rel="noopener"
-    >Automatic Reconnection Control</a>.</p>
-<p>This example shows how <code>resetconnection</code> clears a value maintained in the session state:</p>
+<p>重置连接以清除会话状态。这包括清除使用 <code>query_attributes</code> 命令定义的任何当前查询属性。</p>
+<p>重置连接的效果与 <code>mysql_change_user()</code> 或自动重新连接类似，但连接不会关闭和重新打开，也不会重新进行身份验证。请参阅 <a class="link" href="https://dev.mysql.com/doc/c-api/8.0/en/mysql-change-user.html"  target="_blank" rel="noopener"
+    >mysql_change_user()</a> 和 <a class="link" href="https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html"  target="_blank" rel="noopener"
+    >Automatic Reconnection Control</a>。</p>
+<p>本例展示了 <code>resetconnection</code> 如何清除会话状态中的一个值：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -3258,41 +3252,41 @@
 </div></li>
 <li>
 <p>source <em>file_name</em>, \. <em>file_name</em></p>
-<p>Read the named file and executes the statements contained therein. On Windows, specify path name separators as / or \\.</p>
-<p>Quote characters are taken as part of the file name itself. For best results, the name should not include space characters.</p>
+<p>读取指定文件并执行其中包含的语句。在 Windows 系统中，指定路径名分隔符为 / 或 \\。</p>
+<p>引号字符作为文件名本身的一部分。为达到最佳效果，文件名不应包含空格字符。</p>
 </li>
 <li>
 <p>ssl_session_data_print [<em>file_name</em>]</p>
-<p>Fetches, serializes, and optionally stores the session data of a successful connection. The optional file name and arguments may be given to specify the file to store serialized session data. If omitted, the session data is printed to <code>stdout</code>.</p>
-<p>If the MySQL session is configured for reuse, session data from the file is deserialized and supplied to the <em>connect</em> command to reconnect. When the session is reused successfully, the <em>status</em> command contains a row showing <em>SSL session reused: true</em> while the client remains reconnected to the server.</p>
+<p>获取、序列化并存储成功连接的会话数据。可选的文件名和参数可用于指定存储序列化会话数据的文件。如果省略，会话数据将打印到 <code>stdout</code>。</p>
+<p>如果 MySQL 会话配置为重复使用，文件中的会话数据将被反序列化，并提供给 <em>connect</em> 命令以重新连接。会话重用成功后，<em>status</em> 命令将包含一行显示 <em>SSL session reused: true</em> 的内容，同时客户端将保持与服务器的重新连接。</p>
 </li>
 <li>
 <p>status, \s</p>
-<p>Provide status information about the connection and the server you are using. If you are running with <code>--safe-updates</code> enabled, <em>status</em> also prints the values for the <strong>mysql</strong> variables that affect your queries.</p>
+<p>提供连接和服务器的状态信息。如果启用了 <code>--safe-updates</code> 功能，<em>status</em> 还会打印影响查询的 <strong>mysql</strong> 变量的值。</p>
 </li>
 <li>
 <p>system <em>command</em>, \! <em>command</em></p>
-<p>Execute the given command using your default command interpreter.</p>
-<p>Prior to MySQL 8.0.19, the <em>system</em> command works only in Unix. As of 8.0.19, it also works on Windows.</p>
+<p>使用默认命令解释器执行给定命令。</p>
+<p>在 MySQL 8.0.19 之前，<em>system</em> 命令只能在 Unix 下运行。从 8.0.19 开始，它也能在 Windows 上运行。</p>
 </li>
 <li>
 <p>tee [<em>file_name</em>], \T [<em>file_name</em>]</p>
-<p>By using the <code>--tee</code> option when you invoke <strong>mysql</strong>, you can log statements and their output. All the data displayed on the screen is appended into a given file. This can be very useful for debugging purposes also. <strong>mysql</strong> flushes results to the file after each statement, just before it prints its next prompt. Tee functionality works only in interactive mode.</p>
-<p>You can enable this feature interactively with the <em>tee</em> command. Without a parameter, the previous file is used. The <em>tee</em> file can be disabled with the notee command. Executing <em>tee</em> again re-enables logging.</p>
+<p>在调用 <strong>mysql</strong> 时使用 <code>--tee</code> 选项，可以记录语句及其输出。屏幕上显示的所有数据都会追加到指定文件中。这对调试也非常有用。每条语句结束后，<strong>mysql</strong> 会在打印下一条提示语之前将结果刷新到文件中。此功能仅在交互模式下有效。</p>
+<p>您可以使用 <em>tee</em> 命令交互式地启用这一功能。如果没有参数，则使用前一个文件。可以使用 notee 命令禁用 <em>tee</em> 文件。再次执行 <em>tee</em> 可重新启用日志记录功能。</p>
 </li>
 <li>
 <p>use <em>db_name</em>, \u <em>db_name</em></p>
-<p>Use <em>db_name</em> as the default database.</p>
+<p>使用 <em>db_name</em> 作为默认数据库。</p>
 </li>
 <li>
 <p>warnings, \W</p>
-<p>Enable display of warnings after each statement (if there are any).</p>
+<p>启用在每条语句后显示警告（如果有的话）。</p>
 </li>
 </ul>
-<p>Here are a few tips about the <em>pager</em> command:</p>
+<p>下面是一些关于 <em>pager</em> 命令的提示：</p>
 <ul>
 <li>
-<p>You can use it to write to a file and the results go only to the file:</p>
+<p>您可以用它来写入文件，而且结果只写入文件：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3312,7 +3306,7 @@
 </div>
 </div></li>
 <li>
-<p>In the preceding example, note the <code>-S</code> option. You may find it very useful for browsing wide query results. Sometimes a very wide result set is difficult to read on the screen. The <code>-S</code> option to <strong>less</strong> can make the result set much more readable because you can scroll it horizontally using the left-arrow and right-arrow keys. You can also use <code>-S</code> interactively within <strong>less</strong> to switch the horizontal-browse mode on and off. For more information, read the <strong>less</strong> manual page:</p>
+<p>在前面的示例中，请注意<code>-S</code>选项。您可能会发现它在浏览宽查询结果时非常有用。有时，很宽的结果集很难在屏幕上阅读。使用<strong>less</strong>的<code>-S</code>选项可以使结果集更易于阅读，因为你可以使用左箭头键和右箭头键水平滚动结果集。您还可以在<strong>less</strong>中交互式地使用<code>-S</code>来开关水平浏览模式。更多信息，请阅读<strong>less</strong>手册页面：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3323,7 +3317,7 @@
 </div>
 </div></li>
 <li>
-<p>The <code>-F</code> and <code>-X</code> options may be used with <strong>less</strong> to cause it to exit if output fits on one screen, which is convenient when no scrolling is necessary:</p>
+<p><code>-F</code>和<code>-X</code>选项可与<strong>less</strong>一起使用，使其在输出适合一个屏幕时退出，这在无需滚动时非常方便：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3335,6 +3329,9 @@
 </div></li>
 <li>
 <p>You can specity very complex pager commands for handling query output:</p>
+</li>
+<li>
+<p>您可以指定非常复杂的pager commands来处理查询输出：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3345,58 +3342,58 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="o">|</span><span class="w"> </span><span class="n">tee</span><span class="w"> </span><span class="o">/</span><span class="n">dr2</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">res2</span><span class="p">.</span><span class="n">txt</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">less</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="n">S</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p>In this example, the command would send query results to two files in two different directories on two different file systems mounted on <em>/dr1</em> and <em>/dr2</em>, yet still display the results onscreen using <strong>less</strong>.</p>
+</div><p>在本例中，该命令将把查询结果发送到挂载在 <em>/dr1</em> 和 <em>/dr2</em> 上的两个不同文件系统的两个不同目录中的两个文件，但仍使用 <strong>less</strong> 在屏幕上显示结果。</p>
 </li>
 </ul>
-<p>You can also combine the <em>tee</em> and <em>pager</em> functions. Have a <em>tee</em> file enabled and <em>pager</em> set to <strong>less</strong>, and you are able to browse the results using the <strong>less</strong> program and still have everything appended into a file the same time. The difference between the Unix <em>tee</em> used with the <em>pager</em> command and the <strong>mysql</strong> built-in <em>tee</em> command is that the built-in <em>tee</em> works even if you do not have the Unix <strong>tee</strong> available. The built-in <em>tee</em> also logs everything that is printed on the screen, whereas the Unix <strong>tee</strong> used with <em>pager</em> does not log quite that much. Additionally, <em>tee</em> file logging can be turned on and off interactively from within <strong>mysql</strong>. This is useful when you want to log some queries to a file, but not others.</p>
-<p>The <code>prompt</code> command reconfigures the default <code>mysql&gt;</code> prompt. The string for defining the prompt can contain the following special sequences.</p>
+<p>您还可以将<em>tee</em>和<em>pager</em>功能结合起来。启用<em>tee</em>文件并将<em>pager</em>设置为<strong>less</strong>，就可以使用<strong>less</strong>程序浏览结果，并同时将所有内容添加到文件中。与<em>pager</em>命令一起使用的Unix<em>tee</em>和<strong>mysql</strong>内置<em>tee</em>命令的区别在于，即使没有Unix<strong>tee</strong>，内置<em>tee</em>也能工作。内置 <em>tee</em> 还会记录屏幕上打印的所有内容，而与 <em>pager</em> 一起使用的 Unix <strong>tee</strong> 则不会记录这么多内容。此外，<em>tee</em>文件日志记录可以在<strong>mysql</strong>中以交互方式打开或关闭。当你想将某些查询记录到文件中，而不是其他查询时，这一点非常有用。</p>
+<p><code>prompt</code>命令用于重新配置默认的<code>mysql&gt;</code>提示符。用于定义提示符的字符串可以包含以下特殊序列。</p>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
-<th style="text-align:left"><strong>Option</strong></th>
-<th><strong>Description</strong></th>
+<th style="text-align:left"><strong>选项</strong></th>
+<th><strong>描述</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left">\C</td>
-<td>The current connection identifier</td>
+<td>当前连接的标识符</td>
 </tr>
 <tr>
 <td style="text-align:left">\c</td>
-<td>A counter that increments for each statement you issue</td>
+<td>一个计数器，您每发出一条语句，计数器就递增一次</td>
 </tr>
 <tr>
 <td style="text-align:left">\D</td>
-<td>The full current date</td>
+<td>完整的当前日期</td>
 </tr>
 <tr>
 <td style="text-align:left">\d</td>
-<td>The default database</td>
+<td>默认数据库</td>
 </tr>
 <tr>
 <td style="text-align:left">\h</td>
-<td>The server host</td>
+<td>服务器主机</td>
 </tr>
 <tr>
 <td style="text-align:left">\l</td>
-<td>The current delimiter</td>
+<td>当前分隔符</td>
 </tr>
 <tr>
 <td style="text-align:left">\m</td>
-<td>Minutes of the current time</td>
+<td>当前时间的分钟数</td>
 </tr>
 <tr>
 <td style="text-align:left">\n</td>
-<td>A newline character</td>
+<td>换行符</td>
 </tr>
 <tr>
 <td style="text-align:left">\O</td>
-<td>The current month in three-letter format (Jan, Feb, …)</td>
+<td>以三个字母格式表示的当前月份（Jan, Feb, …）</td>
 </tr>
 <tr>
 <td style="text-align:left">\o</td>
-<td>The current month in numeric format</td>
+<td>数字格式的当前月份</td>
 </tr>
 <tr>
 <td style="text-align:left">\P</td>
@@ -3404,86 +3401,86 @@
 </tr>
 <tr>
 <td style="text-align:left">\p</td>
-<td>The current TCP/IP port or socket file</td>
+<td>当前 TCP/IP 端口或套接字文件</td>
 </tr>
 <tr>
 <td style="text-align:left">\R</td>
-<td>The current time, in 24-hour military time (0–23)</td>
+<td>当前时间，24 小时军用时间（0-23）。</td>
 </tr>
 <tr>
 <td style="text-align:left">\r</td>
-<td>The current time, standard 12-hour time (1–12)</td>
+<td>当前时间，标准 12 小时制时间 (1-12)</td>
 </tr>
 <tr>
 <td style="text-align:left">\S</td>
-<td>Semicolon</td>
+<td>分号</td>
 </tr>
 <tr>
 <td style="text-align:left">\s</td>
-<td>Seconds of the current time</td>
+<td>当前时间的秒数</td>
 </tr>
 <tr>
 <td style="text-align:left">\T</td>
-<td>Print an asterisk (*) if the current session is inside a transaction block (from MySQL 8.0.28)</td>
+<td>如果当前会话位于事务块内，则打印星号 (*)（来自 MySQL 8.0.28）</td>
 </tr>
 <tr>
 <td style="text-align:left">\t</td>
-<td>A tab character</td>
+<td>制表符</td>
 </tr>
 <tr>
 <td style="text-align:left">\U</td>
-<td>Your full <em>user_name@host_name</em> account name</td>
+<td>您的 <em>user_name@host_name</em> 完整账户名</td>
 </tr>
 <tr>
 <td style="text-align:left">\u</td>
-<td>Your user name</td>
+<td>您的用户名</td>
 </tr>
 <tr>
 <td style="text-align:left">\v</td>
-<td>The server version</td>
+<td>服务器版本</td>
 </tr>
 <tr>
 <td style="text-align:left">\w</td>
-<td>The current day of the week in three-letter format (Mon, Tue, …)</td>
+<td>用三个字母表示的当前星期（Mon, Tue, …）</td>
 </tr>
 <tr>
 <td style="text-align:left">\Y</td>
-<td>The current year, four digits</td>
+<td>当前年，四位数</td>
 </tr>
 <tr>
 <td style="text-align:left">\y</td>
-<td>The current year, two digits</td>
+<td>当前年，两位数</td>
 </tr>
 <tr>
 <td style="text-align:left">\_</td>
-<td>A space</td>
+<td>空格</td>
 </tr>
 <tr>
 <td style="text-align:left">\</td>
-<td>A space (a space follows the backslash)</td>
+<td>空格（反斜杠后的空格）</td>
 </tr>
 <tr>
 <td style="text-align:left">\'</td>
-<td>Single quote</td>
+<td>单引号</td>
 </tr>
 <tr>
-<td style="text-align:left">\&quot;</td>
-<td>Double quote</td>
+<td style="text-align:left">\&rdquo;</td>
+<td>双引号</td>
 </tr>
 <tr>
 <td style="text-align:left">\\</td>
-<td>A literal \ backslash character</td>
+<td>一个字面的反斜杠字符</td>
 </tr>
 <tr>
 <td style="text-align:left">\<strong>x</strong></td>
-<td><strong>x</strong>, for any &ldquo;<strong>x</strong>&rdquo; not listed above</td>
+<td><strong>x</strong>，针对上面未列出的任何 &ldquo;<strong>x</strong>&rdquo;</td>
 </tr>
 </tbody>
 </table></div>
-<p>You can set the prompt in several ways:</p>
+<p>您可以通过多种方式设置提示：</p>
 <ul>
 <li>
-<p><em><strong>Use an environment variable.</strong></em> You can set the <code>MYSQL_PS1</code> environment variable to a prompt string. For example:</p>
+<p><em><strong>Use an environment variable</strong></em>。可以将 <code>MYSQL_PS1</code> 环境变量设置为提示字符串。例如：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3494,7 +3491,7 @@
 </div>
 </div></li>
 <li>
-<p><em><strong>Use a command-line option.</strong></em> You can set the <code>--prompt</code> option on the command line to <strong>mysql</strong>. For example:</p>
+<p><em><strong>Use a command-line option</strong></em>。你可以将命令行上的<code>--prompt</code>选项设置为 &ldquo;<strong>mysql</strong>&quot;。例如：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3507,7 +3504,7 @@
 </div>
 </div></li>
 <li>
-<p><em><strong>Use an option file.</strong></em> You can set the <code>prompt</code> option in the <code>[mysql]</code> group of any MySQL option file, such as <em>/etc/my.cnf</em> or the <em>.my.cnf</em> file in your home directory. For example:</p>
+<p><em><strong>Use an option file</strong></em>。你可以在任何 MySQL 选项文件的<code>[mysql]</code>组中设置<code>prompt</code>选项，例如*/etc/my.cnf<em>或你主目录中的</em>.my.cnf*文件。例如：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3518,8 +3515,8 @@
 </span></span><span class="line"><span class="cl"><span class="na">prompt</span><span class="o">=</span><span class="s">(\\u@\\h) [\\d]&gt;\\_</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>In this example, note that the backslashes are doubled. If you set the <code>prompt</code> using the prompt option in an option file, it is advisable to double the backslashes when using the special prompt options. There is some overlap in the set of permissible prompt options and the set of special escape sequences that are recognized in option files. (The rules for escape sequences in option files are listed in <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/option-files.html"  target="_blank" rel="noopener"
-    >&ldquo;Using Option Files&rdquo;</a>.) The overlap may cause you problems if you use single backslashes. For example, <code>\s</code> is interpreted as a space rather than as the current seconds value. The following example shows how to define a prompt within an option file to include the current time in <em><strong>hh:mm:ss&gt;</strong></em> format:</p>
+</div><p>在本例中，请注意反斜线是加倍的。如果使用选项文件中的提示选项设置<code>prompt</code>，建议在使用特殊提示选项时将反斜线加倍。允许使用的提示选项集与选项文件中可识别的特殊转义序列集有一些重叠。（选项文件中的转义序列规则见<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/option-files.html"  target="_blank" rel="noopener"
+    >&ldquo;Using Option Files&rdquo;</a>）。如果使用单反斜线，重叠可能会造成问题。例如，<code>\s</code> 会被解释为空格，而不是当前的秒值。下面的示例展示了如何在选项文件中定义提示符，以 <em><strong>hh:mm:ss&gt;</strong></em> 格式包含当前时间：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3532,7 +3529,7 @@
 </div>
 </div></li>
 <li>
-<p><em><strong>Set the prompt interactively.</strong></em> You can change your prompt interactively by using the <code>prompt</code> (or <code>\R</code>) command. For example:</p>
+<p><em><strong>Set the prompt interactively</strong></em>。可以使用 <code>prompt</code>（或 <code>\R</code>）命令交互式更改提示符。例如</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3553,45 +3550,45 @@
 </div>
 </div></li>
 </ul>
-<h2 id="mysql-client-logging">mysql Client Logging</h2>
-<p>The <strong>mysql</strong> client can do these types of logging for statements executed interactively:</p>
+<h2 id="mysql-客户端日志">mysql 客户端日志</h2>
+<p><strong>mysql</strong> 客户端可以为交互式执行的语句记录这些类型的日志：</p>
 <ul>
 <li>
-<p>On Unix, <strong>mysql</strong> writes the statements to a history file. By default, this file is named <code>.mysql_history</code> in your home directory. To specify a different file, set the value of the <code>MYSQL_HISTFILE</code> environment variable.</p>
+<p>在 Unix 上，<strong>mysql</strong> 会将语句写入历史文件。默认情况下，该文件名为<code>.mysql_history</code>，位于你的主目录中。要指定不同的文件，请设置 <code>MYSQL_HISTFILE</code>环境变量的值。</p>
 </li>
 <li>
-<p>On all platforms, if the <code>--syslog</code> option is given, <strong>mysql</strong> writes the statements to the system logging facility. On Unix, this is <code>syslog;</code> on Windows, it is the Windows Event Log. The destination where logged messages appear is system dependent. On Linux, the destination is often the <em>/var/log/messages</em> file.</p>
+<p>在所有平台上，如果给出 <code>--syslog</code> 选项，<strong>mysql</strong> 会将语句写入系统日志设施。在 Unix 上，这是 <code>syslog;</code> 在 Windows 上，这是 Windows 事件日志。记录信息的目的地取决于系统。在 Linux 上，目的地通常是 <em>/var/log/messages</em> 文件。</p>
 </li>
 </ul>
-<p>The following discussion describes characteristics that apply to all logging types and provides information specific to each logging type.</p>
+<p>以下讨论介绍了适用于所有记录类型的特征，并提供了每种记录类型的特定信息。</p>
 <ul>
 <li>
-<p>How Logging Occurs</p>
+<p>如何记录日志</p>
 </li>
 <li>
-<p>Controlling the History File</p>
+<p>控制历史文件</p>
 </li>
 <li>
-<p>syslog Logging Characteristics</p>
+<p>syslog 日志特征</p>
 </li>
 </ul>
-<h3 id="how-logging-occurs">How Logging Occurs</h3>
-<p>For each enabled logging destination, statement logging occurs as follows:</p>
+<h3 id="如何记录日志">如何记录日志</h3>
+<p>对于每个已启用的日志记录目标，语句记录发生的情况如下：</p>
 <ul>
 <li>
-<p>Statements are logged only when executed interactively. Statements are noninteractive, for example, when read from a file or a pipe. It is also possible to suppress statement logging by using the <code>--batch</code> or <code>--execute</code> option.</p>
+<p>语句只有在交互执行时才会被记录。例如，从文件或管道读取语句时，语句是非交互式的。也可以使用 <code>--batch</code> 或 <code>--execute</code> 选项来抑制语句记录。</p>
 </li>
 <li>
-<p>Statements are ignored and not logged if they match any pattern in the &ldquo;ignore&rdquo; list. This list is described later.</p>
+<p>如果语句与 &ldquo;ignore&rdquo; 列表中的任何模式匹配，就会被忽略，也不会被记录。稍后将对该列表进行说明。</p>
 </li>
 <li>
-<p><strong>mysql</strong> logs each nonignored, nonempty statement line individually.</p>
+<p><strong>mysql</strong> 会单独记录每一行未忽略、非空的语句。</p>
 </li>
 <li>
-<p>If a nonignored statement spans multiple lines (not including the terminating delimiter), <strong>mysql</strong> concatenates the lines to form the complete statement, maps newlines to spaces, and logs the result, plus a delimiter.</p>
+<p>如果一条未忽略的语句跨越多行（不包括终止分隔符），<strong>mysql</strong> 会将这些行连接起来形成完整的语句，将换行符映射为空格，并记录结果和分隔符。</p>
 </li>
 </ul>
-<p>Consequently, an input statement that spans multiple lines can be logged twice. Consider this input:</p>
+<p>因此，跨越多行的输入语句可能会被记录两次。请看下面的输入</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3608,7 +3605,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p>In this case, <strong>mysql</strong> logs the &ldquo;SELECT&rdquo;, &ldquo;&lsquo;Today is&rsquo;&rdquo;, &ldquo;,&rdquo;, &ldquo;CURDATE()&rdquo;, and &ldquo;;&rdquo; lines as it reads them. It also logs the complete statement, after mapping <code>SELECT\n'Today is'\n,\nCURDATE()</code> to <code>SELECT 'Today is' , CURDATE()</code>, plus a delimiter. Thus, these lines appear in logged output:</p>
+</div><p>在这种情况下，<strong>mysql</strong> 会在读取时记录 &ldquo;SELECT&rdquo;、&quot;&lsquo;Today is&rsquo;&quot;、&rdquo;,&quot;、&ldquo;CURDATE() &ldquo;和&rdquo;;&ldquo;行。在将 <code>SELECT\n'Today is'\n,\nCURDATE()</code> 映射为 <code>SELECT 'Today is' , CURDATE()</code> 后，它还会记录完整的语句，并加上分隔符。因此，这些行将出现在日志输出中：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3627,17 +3624,17 @@
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;Today is&#39;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">CURDATE</span><span class="p">();</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>mysql</strong> ignores for logging purposes statements that match any pattern in the &ldquo;ignore&rdquo; list. By default, the pattern list is <code>&quot;*IDENTIFIED*:*PASSWORD*&quot;</code>, to ignore statements that refer to passwords. Pattern matching is not case-sensitive. Within patterns, two characters are special:</p>
+</div><p>为了记录日志，<strong>mysql</strong> 会忽略与 &ldquo;ignore&rdquo; 列表中任何模式匹配的语句。默认情况下，模式列表为 <code>&quot;*IDENTIFIED*:*PASSWORD*&quot;</code>，以忽略涉及密码的语句。模式匹配不区分大小写。在模式中，有两个字符是特殊字符：</p>
 <ul>
 <li>
-<p><strong>?</strong> matches any single character.</p>
+<p><strong>?</strong> 匹配任何单个字符。</p>
 </li>
 <li>
-<p><strong>*</strong> matches any sequence of zero or more characters.</p>
+<p><strong>*</strong> 匹配任何由 0 个或多个字符组成的序列。</p>
 </li>
 </ul>
-<p>To specify additional patterns, use the <code>--histignore</code> option or set the <code>MYSQL_HISTIGNORE</code> environment variable. (If both are specified, the option value takes precedence.) The value should be a list of one or more colon-separated patterns, which are appended to the default pattern list.</p>
-<p>Patterns specified on the command line might need to be quoted or escaped to prevent your command interpreter from treating them specially. For example, to suppress logging for <code>UPDATE</code> and <code>DELETE</code> statements in addition to statements that refer to passwords, invoke <strong>mysql</strong> like this:</p>
+<p>要指定其他模式，请使用 <code>--histignore</code> 选项或设置 <code>MYSQL_HISTIGNORE</code> 环境变量。（如果同时指定了这两个选项，则以选项值为准。）值应该是一个或多个以冒号分隔的模式列表，这些模式会被追加到默认模式列表中。</p>
+<p>命令行中指定的模式可能需要加引号或转义，以防止命令解释器对其进行特殊处理。例如，要禁止记录 <code>UPDATE</code> 和 <code>DELETE</code> 语句以及引用密码的语句，可以这样调用 <strong>mysql</strong>：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3646,17 +3643,17 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql --histignore=&#34;*UPDATE*:*DELETE*&#34;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="controlling-the-history-file">Controlling the History File</h3>
-<p>The <code>.mysql_history</code> file should be protected with a restrictive access mode because sensitive information might be written to it, such as the text of SQL statements that contain passwords. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/password-security-user.html"  target="_blank" rel="noopener"
-    >&ldquo;End-User Guidelines for Password Security&rdquo;</a>. Statements in the file are accessible from the <strong>mysql</strong> client when the <strong>up-arrow</strong> key is used to recall the history. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-tips.html#mysql-history"  target="_blank" rel="noopener"
-    >Disabling Interactive History</a>.</p>
-<p>If you do not want to maintain a history file, first remove <code>.mysql_history</code> if it exists. Then use either of the following techniques to prevent it from being created again:</p>
+</div><h3 id="控制历史文件">控制历史文件</h3>
+<p>应使用限制访问模式保护 <code>.mysql_history</code> 文件，因为敏感信息（如包含密码的 SQL 语句文本）可能会被写入该文件。请参阅<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/password-security-user.html"  target="_blank" rel="noopener"
+    >&ldquo;End-User Guidelines for Password Security&rdquo;</a>。使用<strong>up-arrow</strong>键调用历史记录时，可从<strong>mysql</strong>客户端访问文件中的语句。请参阅 <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-tips.html#mysql-history"  target="_blank" rel="noopener"
+    >Disabling Interactive History</a>。</p>
+<p>如果不想维护历史文件，首先删除存在的 <code>.mysql_history</code>。然后使用以下任一技术防止再次创建该文件：</p>
 <ul>
 <li>
-<p>Set the <code>MYSQL_HISTFILE</code> environment variable to <code>/dev/null</code>. To cause this setting to take effect each time you log in, put it in one of your shell&rsquo;s startup files.</p>
+<p>将 <code>MYSQL_HISTFILE</code> 环境变量设置为 <code>/dev/null</code>。要使该设置在每次登录时生效，请将其放在 shell 的某个启动文件中。</p>
 </li>
 <li>
-<p>Create <code>.mysql_history</code> as a symbolic link to <code>/dev/null</code>; this need be done only once:</p>
+<p>将 <code>.mysql_history</code> 创建为指向 <code>/dev/null</code>的符号链接；只需创建一次：</p>
 </li>
 </ul>
 <div class="highlight"><div class="chroma">
@@ -3667,38 +3664,38 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ln -s /dev/null $HOME/.mysql_history
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="syslog-logging-characteristics">syslog Logging Characteristics</h3>
-<p>If the <code>--syslog</code> option is given, <strong>mysql</strong> writes interactive statements to the system logging facility. Message logging has the following characteristics.</p>
-<p>Logging occurs at the &ldquo;information&rdquo; level. This corresponds to the <code>LOG_INFO</code> priority for <code>syslog</code> on Unix/Linux <code>syslog</code> capability and to <code>EVENTLOG_INFORMATION_TYPE</code> for the Windows Event Log. Consult your system documentation for configuration of your logging capability.</p>
-<p>Message size is limited to 1024 bytes.</p>
-<p>Messages consist of the identifier <code>MysqlClient</code> followed by these values:</p>
+</div><h3 id="syslog-日志特征">syslog 日志特征</h3>
+<p>如果给定了 <code>--syslog</code> 选项，<strong>mysql</strong> 会将交互式语句写入系统日志设施。消息日志具有以下特点。</p>
+<p>日志记录发生在 &ldquo;information&rdquo; 级别。这相当于 Unix/Linux <code>syslog</code> 功能中 <code>syslog</code> 的 <code>LOG_INFO</code> 优先级，以及 Windows 事件日志的 <code>EVENTLOG_INFORMATION_TYPE</code> 优先级。有关日志功能的配置，请查阅系统文档。</p>
+<p>信息大小限制为 1024 字节。</p>
+<p>信息由标识符 <code>MysqlClient</code> 和这些值组成：</p>
 <ul>
 <li>
 <p><code>SYSTEM_USER</code></p>
-<p>The operating system user name (login name) or &ndash; if the user is unknown.</p>
+<p>操作系统用户名（登录名），如果用户未知，则使用 -- 表示。</p>
 </li>
 <li>
 <p><code>MYSQL_USER</code></p>
-<p>The MySQL user name (specified with the <code>--user</code> option) or &ndash; if the user is unknown.</p>
+<p>MySQL 用户名（使用 <code>--user</code> 选项指定），如果用户未知，则使用 --。</p>
 </li>
 <li>
 <p><code>CONNECTION_ID:</code></p>
-<p>The client connection identifier. This is the same as the <code>CONNECTION_ID()</code> function value within the session.</p>
+<p>客户端连接标识符。它与会话中的 <code>CONNECTION_ID()</code> 函数值相同。</p>
 </li>
 <li>
 <p><code>DB_SERVER</code></p>
-<p>The server host or -- if the host is unknown.</p>
+<p>服务器主机，如果主机未知，则为--。</p>
 </li>
 <li>
 <p><code>DB</code></p>
-<p>The default database or -- if no database has been selected.</p>
+<p>默认数据库，如果没有选择数据库，则使用 --。</p>
 </li>
 <li>
 <p><code>QUERY</code></p>
-<p>The text of the logged statement.</p>
+<p>记录的声明文本。</p>
 </li>
 </ul>
-<p>Here is a sample of output generated on Linux by using <code>--syslog</code>. This output is formatted for readability; each logged message actually takes a single line.</p>
+<p>下面是使用 <code>--syslog</code> 在 Linux 上生成的输出示例。为便于阅读，该输出已格式化；每条记录的信息实际上只占一行。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3717,7 +3714,7 @@
 </span></span><span class="line"><span class="cl">  DB_SERVER:&#39;127.0.0.1&#39;, DB:&#39;test&#39;, QUERY:&#39;SHOW TABLES;&#39;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="mysql-client-server-side-help">mysql Client Server-Side Help</h2>
+</div><h2 id="mysql-客户端服务器端帮助">mysql 客户端服务器端帮助</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3726,9 +3723,9 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql&gt; help search_string
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>If you provide an argument to the <code>help</code> command, <strong>mysql</strong> uses it as a search string to access server-side help from the contents of the MySQL Reference Manual. The proper operation of this command requires that the help tables in the <strong>mysql</strong> database be initialized with help topic information (see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/server-side-help-support.html"  target="_blank" rel="noopener"
-    >&ldquo;Server-Side Help Support&rdquo;</a>).</p>
-<p>If there is no match for the search string, the search fails:</p>
+</div><p>如果为 <code>help</code> 命令提供一个参数，<strong>mysql</strong>会将其作为搜索字符串，从《MySQL参考手册》的内容中访问服务器端帮助。该命令的正确操作要求<strong>mysql</strong>数据库中的帮助表用帮助主题信息初始化（参见<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/server-side-help-support.html"  target="_blank" rel="noopener"
+    >&ldquo;Server-Side Help Support&rdquo;</a>）。</p>
+<p>如果搜索字符串没有匹配项，则搜索失败：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3743,8 +3740,8 @@
 </span></span><span class="line"><span class="cl">Please try to run &#39;help contents&#39; for a list of all accessible topics
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Use <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/help.html"  target="_blank" rel="noopener"
-    >help contents</a> to see a list of the help categories:</p>
+</div><p>使用 <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/help.html"  target="_blank" rel="noopener"
+    >help contents</a> 查看帮助类别列表：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -3789,7 +3786,7 @@
 </span></span><span class="line"><span class="cl">   Triggers
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>If the search string matches multiple items, <strong>mysql</strong> shows a list of matching topics:</p>
+</div><p>如果搜索字符串匹配多个项目，<strong>mysql</strong> 会显示匹配主题的列表：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3812,7 +3809,7 @@
 </span></span><span class="line"><span class="cl">   SHOW LOGS
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Use a topic as the search string to see the help entry for that topic:</p>
+</div><p>使用主题作为搜索字符串，可查看该主题的帮助条目：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -3859,7 +3856,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">+</span><span class="c1">---------------+-----------+-----------+
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p>The search string can contain the wildcard characters <code>%</code> and <code>_</code>. These have the same meaning as for pattern-matching operations performed with the <code>LIKE</code> operator. For example, <code>HELP rep%</code> returns a list of topics that begin with <code>rep</code>:</p>
+</div><p>搜索字符串可以包含通配符 <code>%</code> 和 <code>_</code>。这些字符的含义与使用 <code>LIKE</code> 操作符执行的模式匹配操作相同。例如，<code>HELP rep%</code> 返回以<code>rep</code>开头的主题列表：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -3886,8 +3883,8 @@
 </span></span><span class="line"><span class="cl">   REPLACE FUNCTION
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="executing-sql-statements-from-a-text-file">Executing SQL Statements from a Text File</h2>
-<p>The <strong>mysql</strong> client typically is used interactively, like this:</p>
+</div><h2 id="从文本文件执行-sql-语句">从文本文件执行 SQL 语句</h2>
+<p><strong>mysql</strong> 客户端通常是交互式使用的，就像这样：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3896,7 +3893,7 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql db_name
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>However, it is also possible to put your SQL statements in a file and then tell <strong>mysql</strong> to read its input from that file. To do so, create a text file <code>text_file</code> that contains the statements you wish to execute. Then invoke <strong>mysql</strong> as shown here:</p>
+</div><p>不过，也可以将 SQL 语句放在一个文件中，然后告诉 <strong>mysql</strong> 从该文件读取输入。为此，请创建一个文本文件 <code>text_file</code>，其中包含要执行的语句。然后调用 <strong>mysql</strong>，如下所示：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3905,7 +3902,7 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql db_name &lt; text_file
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>If you place a <code>USE db_name</code> statement as the first statement in the file, it is unnecessary to specify the database name on the command line:</p>
+</div><p>如果将 <code>USE db_name</code> 语句作为文件中的第一条语句，则无需在命令行中指定数据库名称：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3914,7 +3911,7 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql &lt; text_file
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>If you are already running <strong>mysql</strong>, you can execute an SQL script file using the <code>source</code> command or <code>\.</code> command:</p>
+</div><p>如果已在运行 <strong>mysql</strong>，则可以使用 <code>source</code> 命令或 <code>\.</code> 命令执行 SQL 脚本文件：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3925,7 +3922,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="err">\</span><span class="p">.</span><span class="w"> </span><span class="n">file_name</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p>Sometimes you may want your script to display progress information to the user. For this you can insert statements like this:</p>
+</div><p>有时，您可能希望脚本向用户显示进度信息。为此，您可以插入如下语句</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3934,41 +3931,41 @@
 <pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="s1">&#39;&lt;info_to_display&gt;&#39;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p>The statement shown outputs <code>&lt;info_to_display&gt;</code>.</p>
-<p>You can also invoke <strong>mysql</strong> with the <code>--verbose</code> option, which causes each statement to be displayed before the result that it produces.</p>
-<p><strong>mysql</strong> ignores Unicode byte order mark (BOM) characters at the beginning of input files. Previously, it read them and sent them to the server, resulting in a syntax error. Presence of a BOM does not cause <strong>mysql</strong> to change its default character set. To do that, invoke <strong>mysql</strong> with an option such as <code>--default-character-set=utf8mb4</code>.</p>
-<p>For more information about batch mode, see Section <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/batch-mode.html"  target="_blank" rel="noopener"
-    >&ldquo;Using mysql in Batch Mode&rdquo;</a>.</p>
-<h2 id="mysql-client-tips">mysql Client Tips</h2>
-<p>This section provides information about techniques for more effective use of <strong>mysql</strong> and about <strong>mysql</strong> operational behavior.</p>
+</div><p>所示语句输出<code>&lt;info_to_display&gt;</code>。</p>
+<p>你也可以在调用 <strong>mysql</strong> 时使用 <code>--verbose</code> 选项，这将导致在显示每条语句产生的结果之前显示其结果。</p>
+<p><strong>mysql</strong> 忽略输入文件开头的 Unicode 字节序号 (BOM) 字符。以前，它会读取这些字符并将其发送到服务器，从而导致语法错误。BOM 字符的存在不会导致 <strong>mysql</strong> 更改默认字符集。要做到这一点，请在调用 <strong>mysql</strong> 时加入一个选项，如 <code>--default-character-set=utf8mb4</code>。</p>
+<p>有关批处理模式的更多信息，请参阅章节<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/batch-mode.html"  target="_blank" rel="noopener"
+    >&ldquo;Using mysql in Batch Mode&rdquo;</a>。</p>
+<h2 id="mysql-客户端提示">mysql 客户端提示</h2>
+<p>本节介绍更有效使用 <strong>mysql</strong> 的技巧以及 <strong>mysql</strong> 的操作行为。</p>
 <ul>
 <li>
-<p>Input-Line Editing</p>
+<p>输入行编辑</p>
 </li>
 <li>
-<p>Disabling Interactive History</p>
+<p>禁用交互式历史记录</p>
 </li>
 <li>
-<p>Unicode Support on Windows</p>
+<p>Windows 支持 Unicode</p>
 </li>
 <li>
-<p>Displaying Query Results Vertically</p>
+<p>垂直显示查询结果</p>
 </li>
 <li>
-<p>Using Safe-Updates Mode (&ndash;safe-updates)</p>
+<p>使用安全更新模式 (&ndash;safe-updates)</p>
 </li>
 <li>
-<p>Disabling mysql Auto-Reconnect</p>
+<p>禁用 mysql 自动重新连接功能</p>
 </li>
 <li>
-<p>mysql Client Parser Versus Server Parser</p>
+<p>mysql 客户端解析器与服务器解析器对比</p>
 </li>
 </ul>
-<h3 id="input-line-editing">Input-Line Editing</h3>
-<p><strong>mysql</strong> supports input-line editing, which enables you to modify the current input line in place or recall previous input lines. For example, the <code>left-arrow</code> and <code>right-arrow</code> keys move horizontally within the current input line, and the <code>up-arrow</code> and <code>down-arrow</code> keys move up and down through the set of previously entered lines. <code>Backspace</code> deletes the character before the cursor and typing new characters enters them at the cursor position. To enter the line, press <code>Enter</code>.</p>
-<p>On Windows, the editing key sequences are the same as supported for command editing in console windows. On Unix, the key sequences depend on the input library used to build <strong>mysql</strong> (for example, the <code>libedit</code> or <code>readline</code> library).</p>
-<p>Documentation for the <code>libedit</code> and <code>readline</code> libraries is available online. To change the set of key sequences permitted by a given input library, define key bindings in the library startup file. This is a file in your home directory: <code>.editrc</code> for <code>libedit</code> and <code>.inputrc</code> for <code>readline</code>.</p>
-<p>For example, in <code>libedit</code>, <code>Control+W</code> deletes everything before the current cursor position and <code>Control+U</code> deletes the entire line. In <code>readline</code>, <code>Control+W</code> deletes the word before the cursor and <code>Control+U</code> deletes everything before the current cursor position. If <strong>mysql</strong> was built using <code>libedit</code>, a user who prefers the <code>readline</code> behavior for these two keys can put the following lines in the <code>.editrc</code> file (creating the file if necessary):</p>
+<h3 id="输入行编辑">输入行编辑</h3>
+<p><strong>mysql</strong>支持输入行编辑，这使你可以就地修改当前输入行或调用以前的输入行。例如，<code>left-arrow</code> 和 <code>right-arrow</code> 键可在当前输入行内水平移动，<code>up-arrow</code> 和 <code>down-arrow</code> 键可在以前输入的行中上下移动。<code>Backspace</code> 删除光标前的字符，输入新字符时则在光标位置输入。要输入一行，按 <code>Enter</code>。</p>
+<p>在 Windows 上，编辑键序与控制台窗口中的命令编辑所支持的键序相同。在 Unix 上，键序取决于用于构建 <strong>mysql</strong> 的输入库（例如，<code>libedit</code> 或 <code>readline</code> 库）。</p>
+<p><code>libedit</code> 或 <code>readline</code> 库的文档可在线获取。要更改特定输入库允许的键序列集，请在库启动文件中定义键绑定。这是一个位于你的主目录下的文件：<code>libedit</code> 为 <code>.editrc</code>，<code>readline</code> 为 <code>.inputrc</code>。</p>
+<p>例如，在 <code>libedit</code> 中，<code>Control+W</code> 删除当前光标位置前的所有内容，<code>Control+U</code> 删除整行。在 <code>readline</code> 中，<code>Control+W</code> 删除光标前的单词，<code>Control+U</code> 删除当前光标位置前的所有内容。如果<strong>mysql</strong>是使用<code>libedit</code>创建的，那么如果用户喜欢这两个键的<code>readline</code>行为，可以在<code>.editrc</code>文件中加入以下几行（必要时创建文件）：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3979,31 +3976,31 @@
 </span></span><span class="line"><span class="cl">bind &#34;^U&#34; vi-kill-line-prev
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>To see the current set of key bindings, temporarily put a line that says only bind at the end of <code>.editrc.</code> <strong>mysql</strong> shows the bindings when it starts.</p>
-<h3 id="disabling-interactive-history">Disabling Interactive History</h3>
-<p>The <code>up-arrow</code> key enables you to recall input lines from current and previous sessions. In cases where a console is shared, this behavior may be unsuitable. <strong>mysql</strong> supports disabling the interactive history partially or fully, depending on the host platform.</p>
-<p>On Windows, the history is stored in memory. <code>Alt+F7</code> deletes all input lines stored in memory for the current history buffer. It also deletes the list of sequential numbers in front of the input lines displayed with <code>F7</code> and recalled (by number) with <code>F9</code>. New input lines entered after you press <code>Alt+F7</code> repopulate the current history buffer. Clearing the buffer does not prevent logging to the Windows Event Viewer, if the <code>--syslog</code> option was used to start <strong>mysql</strong>. Closing the console window also clears the current history buffer.</p>
-<p>To disable interactive history on Unix, first delete the <code>.mysql_history</code> file, if it exists (previous entries are recalled otherwise). Then start <strong>mysql</strong> with the <code>--histignore=&quot;*&quot;</code> option to ignore all new input lines. To re-enable the recall (and logging) behavior, restart <strong>mysql</strong> without the option.</p>
-<p>If you prevent the <code>.mysql_history</code> file from being created (see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html#mysql-logging-history-file"  target="_blank" rel="noopener"
-    >Controlling the History File</a>) and use <code>--histignore=&quot;*&quot;</code> to start the <strong>mysql</strong> client, the interactive history recall facility is disabled fully. Alternatively, if you omit the <code>--histignore</code> option, you can recall the input lines entered during the current session.</p>
-<h3 id="unicode-support-on-windows">Unicode Support on Windows</h3>
-<p>Windows provides APIs based on UTF-16LE for reading from and writing to the console; the <strong>mysql</strong> client for Windows is able to use these APIs. The Windows installer creates an item in the MySQL menu named <code>MySQL command line client - Unicode</code>. This item invokes the <strong>mysql</strong> client with properties set to communicate through the console to the MySQL server using Unicode.</p>
-<p>To take advantage of this support manually, run <strong>mysql</strong> within a console that uses a compatible Unicode font and set the default character set to a Unicode character set that is supported for communication with the server:</p>
+</div><p>要查看当前的按键绑定集，可暂时在 <code>.editrc.</code> <strong>mysql</strong>启动时显示绑定。</p>
+<h3 id="禁用交互式历史记录">禁用交互式历史记录</h3>
+<p><code>up-arrow</code>可以调用当前和以前会话中的输入行。在共享控制台的情况下，这种行为可能不合适。根据主机平台的不同，<strong>mysql</strong> 支持部分或完全禁用交互式历史记录。</p>
+<p>在 Windows 中，历史记录存储在内存中。<code>Alt+F7</code>会删除当前历史记录缓冲区内存中存储的所有输入行。它还会删除用 <code>F7</code>显示并用 <code>F9</code>调用（按编号）的输入行前面的顺序编号列表。按 <code>Alt+F7</code> 键后输入的新输入行将重新填充当前历史记录缓冲区。如果在启动 <strong>mysql</strong> 时使用了 <code>--syslog</code> 选项，则清除缓冲区并不会阻止向 Windows 事件查看器记录日志。关闭控制台窗口也会清除当前的历史记录缓冲区。</p>
+<p>要在 Unix 上禁用交互式历史记录，首先要删除 <code>.mysql_history</code> 文件（如果存在）（否则会调用以前的条目）。然后使用 <code>--histignore=&quot;*&quot;</code>选项启动<strong>mysql</strong>，以忽略所有新输入行。要重新启用调用（和记录）行为，请在重启 <strong>mysql</strong> 时不带该选项。</p>
+<p>如果阻止创建<code>.mysql_history</code>文件（请查阅<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html#mysql-logging-history-file"  target="_blank" rel="noopener"
+    >Controlling the History File</a>），并使用<code>--histignore=&quot;*&quot;</code>来启动<strong>mysql</strong>客户端，交互式历史记录调用功能就会被完全禁用。另外，如果省略<code>--histignore</code>选项，则可以调用当前会话中输入的行。</p>
+<h3 id="windows-支持-unicode">Windows 支持 Unicode</h3>
+<p>Windows 提供了基于 UTF-16LE 的 API，用于从控制台读取数据和向控制台写入数据；Windows 的 <strong>mysql</strong> 客户端可以使用这些 API。Windows 安装程序会在 MySQL 菜单中创建一个名为 &ldquo;MySQL command line client - Unicode&rdquo; 的项目。此项目调用<strong>mysql</strong>客户端，其属性设置为使用Unicode通过控制台与MySQL服务器通信。</p>
+<p>要手动利用这一支持，请在使用兼容 Unicode 字体的控制台中运行 <strong>mysql</strong>，并将默认字符集设置为与服务器通信时支持的 Unicode 字符集：</p>
 <ol>
 <li>
-<p>Open a console window.</p>
+<p>打开控制台窗口。</p>
 </li>
 <li>
-<p>Go to the console window properties, select the font tab, and choose Lucida Console or some other compatible Unicode font. This is necessary because console windows start by default using a DOS raster font that is inadequate for Unicode.</p>
+<p>进入控制台窗口属性，选择字体选项卡，选择 Lucida Console 或其他兼容的 Unicode 字体。这是必要的，因为控制台窗口启动时默认使用的 DOS 栅格字体不适合 Unicode。</p>
 </li>
 <li>
-<p>Execute <strong>mysql.exe</strong> with the <code>--default-character-set=utf8mb4</code> (or <code>utf8mb3</code>) option. This option is necessary because <code>utf16le</code> is one of the character sets that cannot be used as the client character set. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/charset-connection.html#charset-connection-impermissible-client-charset"  target="_blank" rel="noopener"
-    >Impermissible Client Character Sets</a>.</p>
+<p>执行 <strong>mysql.exe</strong>，并设置 <code>--default-character-set=utf8mb4</code> （或 <code>utf8mb3</code>）选项。该选项是必要的，因为 <code>utf16le</code> 是不能用作客户端字符集的字符集之一。请参阅 <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/charset-connection.html#charset-connection-impermissible-client-charset"  target="_blank" rel="noopener"
+    >Impermissible Client Character Sets</a>。</p>
 </li>
 </ol>
-<p>With those changes, <strong>mysql</strong> uses the Windows APIs to communicate with the console using UTF-16LE, and communicate with the server using UTF-8. (The menu item mentioned previously sets the font and character set as just described.)</p>
-<p>To avoid those steps each time you run <strong>mysql</strong>, you can create a shortcut that invokes <strong>mysql.exe</strong>. The shortcut should set the console font to Lucida Console or some other compatible Unicode font, and pass the <code>--default-character-set=utf8mb4</code> (or <code>utf8mb3</code>) option to <strong>mysql.exe</strong>.</p>
-<p>Alternatively, create a shortcut that only sets the console font, and set the character set in the <code>[mysql]</code> group of your <code>my.ini</code> file:</p>
+<p>作出这些更改后，<strong>mysql</strong> 将使用 Windows API，使用 UTF-16LE 与控制台通信，并使用 UTF-8 与服务器通信。（前面提到的菜单项可以设置字体和字符集）。</p>
+<p>为了避免每次运行<strong>mysql</strong>时都要进行这些步骤，可以创建一个调用<strong>mysql.exe</strong>的快捷方式。快捷方式应将控制台字体设置为 Lucida Console 或其他兼容的 Unicode 字体，并将 <code>--default-character-set=utf8mb4</code>（或 <code>utf8mb3</code>）选项传递给 <strong>mysql.exe</strong>。</p>
+<p>或者，创建一个只设置控制台字体的快捷方式，并在<code>my.ini</code>文件的<code>[mysql]</code>组中设置字符集：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -4014,8 +4011,8 @@
 </span></span><span class="line"><span class="cl"><span class="na">default-character-set</span><span class="o">=</span><span class="s">utf8mb4   # or utf8mb3</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="displaying-query-results-vertically">Displaying Query Results Vertically</h3>
-<p>Some query results are much more readable when displayed vertically, instead of in the usual horizontal table format. Queries can be displayed vertically by terminating the query with \G instead of a semicolon. For example, longer text values that include newlines often are much easier to read with vertical output:</p>
+</div><h3 id="垂直显示查询结果">垂直显示查询结果</h3>
+<p>有些查询结果如果以垂直方式显示，而不是通常的水平表格格式，会更易读。可以用 \G 代替分号来结束查询，从而垂直显示查询结果。例如，包含换行符的较长文本值通常在垂直输出时更容易阅读：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -4066,9 +4063,9 @@
 </span></span></span><span class="line"><span class="cl"><span class="s1">1 row in set (0.09 sec)
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="using-safe-updates-mode---safe-updates">Using Safe-Updates Mode (&ndash;safe-updates)</h3>
-<p>For beginners, a useful startup option is <code>--safe-updates</code> (or <code>--i-am-a-dummy</code>, which has the same effect). Safe-updates mode is helpful for cases when you might have issued an <code>UPDATE</code> or <code>DELETE</code> statement but forgotten the <code>WHERE</code> clause indicating which rows to modify. Normally, such statements update or delete all rows in the table. With <code>--safe-updates</code>, you can modify rows only by specifying the key values that identify them, or a <code>LIMIT</code> clause, or both. This helps prevent accidents. Safe-updates mode also restricts <code>SELECT</code> statements that produce (or are estimated to produce) very large result sets.</p>
-<p>The <code>--safe-updates</code> option causes <strong>mysql</strong> to execute the following statement when it connects to the MySQL server, to set the session values of the <code>sql_safe_updates</code>, <code>sql_select_limit</code>, and <code>max_join_size</code> system variables:</p>
+</div><h3 id="使用安全更新模式---safe-updates">使用安全更新模式 (&ndash;safe-updates)</h3>
+<p>对于初学者来说，一个有用的启动选项是 <code>-safe-updates</code>（或 <code>--i-am-a-dummy</code>，效果相同）。安全更新模式对以下情况很有帮助：你可能已经发出了一条 <code>UPDATE</code> 或 <code>DELETE</code> 语句，但却忘记了指示要修改哪些行的 <code>WHERE</code> 子句。通常，此类语句会更新或删除表中的所有行。有了 <code>-safe-updates</code>，你就只能通过指定标识行的键值或 <code>LIMIT</code> 子句或两者来修改行。这有助于防止意外发生。安全更新模式还限制会产生（或估计会产生）非常大结果集的 <code>SELECT</code> 语句。</p>
+<p><code>--safe-updates</code>选项会导致<strong>mysql</strong>在连接到MySQL服务器时执行以下语句，以设置<code>sql_safe_updates</code>、<code>sql_select_limit</code>和<code>max_join_size</code>系统变量的会话值：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -4077,10 +4074,10 @@
 <pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SET</span><span class="w"> </span><span class="n">sql_safe_updates</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">sql_select_limit</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="n">max_join_size</span><span class="o">=</span><span class="mi">1000000</span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p>The <code>SET</code> statement affects statement processing as follows:</p>
+</div><p><code>SET</code>语句对语句处理的影响如下：</p>
 <ul>
 <li>
-<p>Enabling <code>sql_safe_updates</code> causes <code>UPDATE</code> and <code>DELETE</code> statements to produce an error if they do not specify a key constraint in the WHERE clause, or provide a <code>LIMIT</code> clause, or both. For example:</p>
+<p>启用 <code>sql_safe_updates</code> 后，如果 <code>UPDATE</code> 和 <code>DELETE</code> 语句没有在 WHERE 子句中指定键约束，或没有提供 <code>LIMIT</code> 子句，或两者都没有，就会产生错误。例如：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -4095,13 +4092,13 @@
 </div>
 </div></li>
 <li>
-<p>Setting <code>sql_select_limit</code> to 1,000 causes the server to limit all <code>SELECT</code> result sets to 1,000 rows unless the statement includes a <code>LIMIT</code> clause.</p>
+<p>将 <code>sql_select_limit</code> 设置为 1,000 会导致服务器将所有 <code>SELECT</code> 结果集限制为 1,000 行，除非语句包含一个 <code>LIMIT</code> 子句。</p>
 </li>
 <li>
-<p>Setting <code>max_join_size</code> to 1,000,000 causes multiple-table <code>SELECT</code> statements to produce an error if the server estimates it must examine more than 1,000,000 row combinations.</p>
+<p>将 <code>max_join_size</code> 设置为 1,000,000 会导致多表 <code>SELECT</code> 语句在服务器估计必须检查超过 1,000,000 行组合时产生错误。</p>
 </li>
 </ul>
-<p>To specify result set limits different from 1,000 and 1,000,000, you can override the defaults by using the <code>--select-limit</code> and <code>--max-join-size</code> options when you invoke <strong>mysql</strong>:</p>
+<p>要指定不同于 1,000 和 1,000,000 的结果集限制，可以在调用 <strong>mysql</strong> 时使用 <code>--select-limit</code> 和 <code>-ax-join-size</code> 选项来覆盖默认值：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -4110,32 +4107,32 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mysql --safe-updates --select-limit=500 --max-join-size=10000
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>It is possible for <code>UPDATE</code> and <code>DELETE</code> statements to produce an error in safe-updates mode even with a key specified in the <code>WHERE</code> clause, if the optimizer decides not to use the index on the key column:</p>
+</div><p>如果优化器决定不使用键列上的索引，那么即使在 <code>WHERE</code> 子句中指定了键，<code>UPDATE</code> 和 <code>DELETE</code> 语句也有可能在安全更新模式下产生错误：</p>
 <ul>
 <li>
-<p>Range access on the index cannot be used if memory usage exceeds that permitted by the <code>range_optimizer_max_mem_size</code> system variable. The optimizer then falls back to a table scan. See <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/range-optimization.html#range-optimization-memory-use"  target="_blank" rel="noopener"
-    >Limiting Memory Use for Range Optimization</a>.</p>
+<p>如果内存使用量超过 <code>range_optimizer_max_mem_size</code> 系统变量允许的范围，则无法使用索引上的范围访问。这时，优化器会退回到表扫描。请参阅 <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/range-optimization.html#range-optimization-memory-use"  target="_blank" rel="noopener"
+    >Limiting Memory Use for Range Optimization</a>。</p>
 </li>
 <li>
-<p>If key comparisons require type conversion, the index may not be used (see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-indexes.html"  target="_blank" rel="noopener"
-    >&ldquo;How MySQL Uses Indexes&rdquo;</a>). Suppose that an indexed string column <code>c1</code> is compared to a numeric value using <code>WHERE c1 = 2222</code>. For such comparisons, the string value is converted to a number and the operands are compared numerically (see <a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/type-conversion.html"  target="_blank" rel="noopener"
-    >&ldquo;Type Conversion in Expression Evaluation&rdquo;</a>), preventing use of the index. If safe-updates mode is enabled, an error occurs.</p>
+<p>如果键比较需要类型转换，则可能无法使用索引（请参阅<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/mysql-indexes.html"  target="_blank" rel="noopener"
+    >&ldquo;How MySQL Uses Indexes&rdquo;</a>）。假设使用 <code>WHERE c1 = 2222</code> 将索引字符串列 <code>c1</code> 与数值进行比较。对于此类比较，字符串值将转换为数字，操作数将以数字形式进行比较（请参阅<a class="link" href="https://dev.mysql.com/doc/refman/8.0/en/type-conversion.html"  target="_blank" rel="noopener"
+    >&ldquo;Type Conversion in Expression Evaluation&rdquo;</a>），从而无法使用索引。如果启用了安全更新模式，则会出现错误。</p>
 </li>
 </ul>
-<p>As of MySQL 8.0.13, safe-updates mode also includes these behaviors:</p>
+<p>从 MySQL 8.0.13 起，安全更新模式也包含这些行为：</p>
 <ul>
 <li>
-<p><code>EXPLAIN</code> with <code>UPDATE</code> and <code>DELETE</code> statements does not produce safe-updates errors. This enables use of <code>EXPLAIN</code> plus <code>SHOW WARNINGS</code> to see why an index is not used, which can be helpful in cases such as when a <code>range_optimizer_max_mem_size</code> violation or type conversion occurs and the optimizer does not use an index even though a key column was specified in the <code>WHERE</code> clause.</p>
+<p>带有 <code>UPDATE</code> 和 <code>DELETE</code> 语句的 <code>EXPLAIN</code> 不会产生安全更新错误。这样就可以使用 <code>EXPLAIN</code> 加上 <code>SHOW WARNINGS</code> 来查看不使用索引的原因，这在某些情况下很有帮助，例如当发生 <code>range_optimizer_max_mem_size</code> 违规或类型转换时，即使在 <code>WHERE</code> 子句中指定了键列，优化器也不会使用索引。</p>
 </li>
 <li>
-<p>When a safe-updates error occurs, the error message includes the first diagnostic that was produced, to provide information about the reason for failure. For example, the message may indicate that the <code>range_optimizer_max_mem_size</code> value was exceeded or type conversion occurred, either of which can preclude use of an index.</p>
+<p>当发生安全更新错误时，错误消息会包含产生的第一个诊断，以提供有关失败原因的信息。例如，消息可能显示超出了 <code>range_optimizer_max_mem_size</code> 值或发生了类型转换，这两种情况都可能导致无法使用索引。</p>
 </li>
 <li>
-<p>For multiple-table deletes and updates, an error is produced with safe updates enabled only if any target table uses a table scan.</p>
+<p>对于多表删除和更新，只有当任何目标表使用表扫描时，才会在启用安全更新后产生错误。</p>
 </li>
 </ul>
-<h3 id="disabling-mysql-auto-reconnect">Disabling mysql Auto-Reconnect</h3>
-<p>If the <strong>mysql</strong> client loses its connection to the server while sending a statement, it immediately and automatically tries to reconnect once to the server and send the statement again. However, even if <strong>mysql</strong> succeeds in reconnecting, your first connection has ended and all your previous session objects and settings are lost: temporary tables, the autocommit mode, and user-defined and session variables. Also, any current transaction rolls back. This behavior may be dangerous for you, as in the following example where the server was shut down and restarted between the first and second statements without you knowing it:</p>
+<h3 id="禁用-mysql-自动重新连接功能">禁用 mysql 自动重新连接功能</h3>
+<p>如果<strong>mysql</strong>客户端在发送语句时与服务器失去连接，它会立即自动尝试重新连接服务器并再次发送语句。不过，即使<strong>mysql</strong>重新连接成功，第一次连接也已结束，所有以前的会话对象和设置都会丢失：临时表、自动提交模式、用户定义变量和会话变量。此外，任何当前事务都会回滚。这种行为可能会给您带来危险，例如在下面的示例中，服务器在您不知道的情况下在第一条和第二条语句之间被关闭并重新启动：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -4178,19 +4175,19 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="mi">1</span><span class="w"> </span><span class="k">row</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="w"> </span><span class="n">sec</span><span class="p">)</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p>The @a user variable has been lost with the connection, and after the reconnection it is undefined. If it is important to have <strong>mysql</strong> terminate with an error if the connection has been lost, you can start the <strong>mysql</strong> client with the <code>--skip-reconnect</code> option.</p>
-<p>For more information about auto-reconnect and its effect on state information when a reconnection occurs, see <a class="link" href="https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html"  target="_blank" rel="noopener"
-    >Automatic Reconnection Control</a>.</p>
-<h3 id="mysql-client-parser-versus-server-parser">mysql Client Parser Versus Server Parser</h3>
-<p>The <strong>mysql</strong> client uses a parser on the client side that is not a duplicate of the complete parser used by the <strong>mysqld</strong> server on the server side. This can lead to differences in treatment of certain constructs. Examples:</p>
+</div><p>@a 用户变量随连接丢失，重新连接后未定义。如果需要在连接丢失时让<strong>mysql</strong>以错误方式终止，可以使用<code>--skip-reconnect</code>选项启动<strong>mysql</strong>客户端。</p>
+<p>有关自动重新连接及其在发生重新连接时对状态信息影响的更多信息，请参阅 <a class="link" href="https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html"  target="_blank" rel="noopener"
+    >Automatic Reconnection Control</a>。</p>
+<h3 id="mysql-客户端解析器与服务器解析器对比">mysql 客户端解析器与服务器解析器对比</h3>
+<p><strong>mysql</strong>客户端在客户端使用的解析器与<strong>mysqld</strong>服务器在服务器端使用的完整解析器并不相同。这可能会导致某些构造的处理方式不同。例如：</p>
 <ul>
 <li>
-<p>The server parser treats strings delimited by &quot; characters as identifiers rather than as plain strings if the <code>ANSI_QUOTES</code> SQL mode is enabled.</p>
-<p>The <strong>mysql</strong> client parser does not take the <code>ANSI_QUOTES</code> SQL mode into account. It treats strings delimited by &ldquo;, &lsquo;, and ` characters the same, regardless of whether <code>ANSI_QUOTES</code> is enabled.</p>
+<p>如果启用了 <code>ANSI_QUOTES</code> SQL 模式，服务器解析器会将以&quot;字符分隔的字符串视为标识符，而不是纯字符串。</p>
+<p><strong>mysql</strong> 客户端解析器不考虑 <code>ANSI_QUOTES</code> SQL 模式。无论是否启用了 <code>ANSI_QUOTES</code>，它对以&rdquo;、&lsquo;和`字符分隔的字符串的处理方式都是一样的。</p>
 </li>
 <li>
-<p>Within /*! &hellip; */ and /*+ &hellip; */ comments, the <strong>mysql</strong> client parser interprets short-form <strong>mysql</strong> commands. The server parser does not interpret them because these commands have no meaning on the server side.</p>
-<p>If it is desirable for <strong>mysql</strong> not to interpret short-form commands within comments, a partial workaround is to use the <code>--binary-mode</code> option, which causes all <strong>mysql</strong> commands to be disabled except <code>\C</code> and <code>\d</code> in noninteractive mode (for input piped to <strong>mysql</strong> or loaded using the <code>source</code> command).</p>
+<p>Within /*! &hellip; */ 和 /*+ &hellip; */注释中，<strong>mysql</strong>客户端解析器解释简短的<strong>mysql</strong>命令。服务器解析器不会解释它们，因为这些命令在服务器端没有任何意义。</p>
+<p>如果希望<strong>mysql</strong>不解释注释中的短格式命令，部分变通方法是使用 <code>--binary-mode</code> 选项，该选项会导致所有<strong>mysql</strong>命令被禁用，但非交互模式下的 <code>\C</code> 和 <code>\d</code> 除外（对于通过管道输入到<strong>mysql</strong>或使用 <code>source</code> 命令加载的输入）。</p>
 </li>
 </ul>
 

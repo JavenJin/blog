@@ -568,10 +568,10 @@
 <div class="table-wrapper"><table>
 <thead>
 <tr>
-<th style="text-align:left">Option Name</th>
-<th>Description</th>
-<th>Introduced</th>
-<th>Deprecated</th>
+<th style="text-align:left"><strong>Option Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Introduced</strong></th>
+<th><strong>Deprecated</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -2712,7 +2712,7 @@
 <p>ON: Enable FIPS mode.</p>
 </li>
 <li>
-<p>STRICT: Enable “strict” FIPS mode.</p>
+<p>STRICT: Enable &ldquo;strict&rdquo; FIPS mode.</p>
 </li>
 </ul>
 <blockquote>
@@ -3072,7 +3072,7 @@
 </div>
 </div><p>If <strong>mysql</strong> is invoked with the <code>--binary-mode</code> option, all <strong>mysql</strong> commands are disabled except <em>charset</em> and <em>delimiter</em> in noninteractive mode (for input piped to <strong>mysql</strong> or loaded using the <em>source</em> command).</p>
 <p>Each command has both a long and short form. The long form is not case-sensitive; the short form is. The long form can be followed by an optional semicolon terminator, but the short form should not.</p>
-<p>The use of short-form commands within multiple-line /* &hellip; <em>/ comments is not supported. Short-form commands do work within single-line /</em>! &hellip; <em>/ version comments, as do /</em>+ &hellip; */ optimizer-hint comments, which are stored in object definitions. If there is a concern that optimizer-hint comments may be stored in object definitions so that dump files when reloaded with <em>mysql</em> would result in execution of such commands, either invoke <strong>mysql</strong> with the <code>--binary-mode</code> option or use a reload client other than <strong>mysql</strong>.</p>
+<p>The use of short-form commands within multiple-line /* &hellip; */ comments is not supported. Short-form commands do work within single-line /*! &hellip; */ version comments, as do /*+ &hellip; */ optimizer-hint comments, which are stored in object definitions. If there is a concern that optimizer-hint comments may be stored in object definitions so that dump files when reloaded with <em>mysql</em> would result in execution of such commands, either invoke <strong>mysql</strong> with the <code>--binary-mode</code> option or use a reload client other than <strong>mysql</strong>.</p>
 <ul>
 <li>
 <p>help [<em>arg</em>], \h [<em>arg</em>], \? [<em>arg</em>], ? [<em>arg</em>]</p>
@@ -3658,11 +3658,11 @@
 <ul>
 <li>
 <p><code>SYSTEM_USER</code></p>
-<p>The operating system user name (login name) or &ndash; if the user is unknown.</p>
+<p>The operating system user name (login name) or -- if the user is unknown.</p>
 </li>
 <li>
 <p><code>MYSQL_USER</code></p>
-<p>The MySQL user name (specified with the <code>--user</code> option) or &ndash; if the user is unknown.</p>
+<p>The MySQL user name (specified with the <code>--user</code> option) or -- if the user is unknown.</p>
 </li>
 <li>
 <p><code>CONNECTION_ID:</code></p>

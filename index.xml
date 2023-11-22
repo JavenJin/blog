@@ -65,10 +65,10 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;Option Name&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;th&gt;Introduced&lt;/th&gt;
-&lt;th&gt;Deprecated&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Option Name&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Introduced&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Deprecated&lt;/strong&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -2209,7 +2209,7 @@
 &lt;p&gt;ON: Enable FIPS mode.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;STRICT: Enable “strict” FIPS mode.&lt;/p&gt;
+&lt;p&gt;STRICT: Enable &amp;ldquo;strict&amp;rdquo; FIPS mode.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
@@ -2569,7 +2569,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;If &lt;strong&gt;mysql&lt;/strong&gt; is invoked with the &lt;code&gt;--binary-mode&lt;/code&gt; option, all &lt;strong&gt;mysql&lt;/strong&gt; commands are disabled except &lt;em&gt;charset&lt;/em&gt; and &lt;em&gt;delimiter&lt;/em&gt; in noninteractive mode (for input piped to &lt;strong&gt;mysql&lt;/strong&gt; or loaded using the &lt;em&gt;source&lt;/em&gt; command).&lt;/p&gt;
 &lt;p&gt;Each command has both a long and short form. The long form is not case-sensitive; the short form is. The long form can be followed by an optional semicolon terminator, but the short form should not.&lt;/p&gt;
-&lt;p&gt;The use of short-form commands within multiple-line /* &amp;hellip; &lt;em&gt;/ comments is not supported. Short-form commands do work within single-line /&lt;/em&gt;! &amp;hellip; &lt;em&gt;/ version comments, as do /&lt;/em&gt;+ &amp;hellip; */ optimizer-hint comments, which are stored in object definitions. If there is a concern that optimizer-hint comments may be stored in object definitions so that dump files when reloaded with &lt;em&gt;mysql&lt;/em&gt; would result in execution of such commands, either invoke &lt;strong&gt;mysql&lt;/strong&gt; with the &lt;code&gt;--binary-mode&lt;/code&gt; option or use a reload client other than &lt;strong&gt;mysql&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The use of short-form commands within multiple-line /* &amp;hellip; */ comments is not supported. Short-form commands do work within single-line /*! &amp;hellip; */ version comments, as do /*+ &amp;hellip; */ optimizer-hint comments, which are stored in object definitions. If there is a concern that optimizer-hint comments may be stored in object definitions so that dump files when reloaded with &lt;em&gt;mysql&lt;/em&gt; would result in execution of such commands, either invoke &lt;strong&gt;mysql&lt;/strong&gt; with the &lt;code&gt;--binary-mode&lt;/code&gt; option or use a reload client other than &lt;strong&gt;mysql&lt;/strong&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;help [&lt;em&gt;arg&lt;/em&gt;], \h [&lt;em&gt;arg&lt;/em&gt;], \? [&lt;em&gt;arg&lt;/em&gt;], ? [&lt;em&gt;arg&lt;/em&gt;]&lt;/p&gt;
@@ -3155,11 +3155,11 @@
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;SYSTEM_USER&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;The operating system user name (login name) or &amp;ndash; if the user is unknown.&lt;/p&gt;
+&lt;p&gt;The operating system user name (login name) or -- if the user is unknown.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;MYSQL_USER&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;The MySQL user name (specified with the &lt;code&gt;--user&lt;/code&gt; option) or &amp;ndash; if the user is unknown.&lt;/p&gt;
+&lt;p&gt;The MySQL user name (specified with the &lt;code&gt;--user&lt;/code&gt; option) or -- if the user is unknown.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;CONNECTION_ID:&lt;/code&gt;&lt;/p&gt;
