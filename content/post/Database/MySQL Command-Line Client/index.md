@@ -1,7 +1,7 @@
 ---
 title: MySQL Command-Line Client
 description: MySQL 命令行客户端
-date: '2023-11-21'
+date: '2023-11-22'
 categories:
     - Database
 tags:
@@ -44,7 +44,7 @@ You can execute SQL statements in a script file (batch file) like this:
 mysql db_name < script.sql > output.tab
 ```
 
-On Unix, the mysql client logs statements executed interactively to a history file. See [mysql Client Logging](https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html).
+On Unix, the mysql client logs statements executed interactively to a history file. See [mysql Client Logging](https://javenjin.github.io/blog/p/mysql-command-line-client/#mysql-client-logging).
 
 ## mysql Client Options
 
@@ -451,7 +451,7 @@ Set the statement delimiter. The default is the semicolon character (;).
 
 ### \-\-disable-named-commands
 
-Disable named commands. Use the \\* form only, or use named commands only at the beginning of a line ending with a semicolon (;). **mysql** starts with this option *enabled* by default. However, even with this option, long-format commands still work from the first line. See ["mysql Client Commands"](https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html).
+Disable named commands. Use the \\* form only, or use named commands only at the beginning of a line ending with a semicolon (;). **mysql** starts with this option *enabled* by default. However, even with this option, long-format commands still work from the first line. See ["mysql Client Commands"](https://javenjin.github.io/blog/p/mysql-command-line-client/#mysql-client-commands).
 
 ### \-\-dns-srv-name=*name*
 
@@ -576,7 +576,7 @@ For information about the *caching_sha2_password* plugin, see ["Caching SHA-2 Pl
 |:--|--|
 |**Type**|**String**|
 
-A list of one or more colon-separated patterns specifying statements to ignore for logging purposes. These patterns are added to the default pattern list ("\*IDENTIFIED\*:\*PASSWORD\*"). The value specified for this option affects logging of statements written to the history file, and to syslog if the `--syslog` option is given. For more information, see ["mysql Client Logging"](https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html).
+A list of one or more colon-separated patterns specifying statements to ignore for logging purposes. These patterns are added to the default pattern list ("\*IDENTIFIED\*:\*PASSWORD\*"). The value specified for this option affects logging of statements written to the history file, and to syslog if the `--syslog` option is given. For more information, see ["mysql Client Logging"](https://javenjin.github.io/blog/p/mysql-command-line-client/#mysql-client-logging).
 
 ### \-\-host=*host_name*, -h *host_name*
 
@@ -693,7 +693,7 @@ The automatic limit for rows in a join when using `--safe-updates`. (Default val
 |:--|--|
 |**Disabled by**|**skip-named-commands**|
 
-Enable named **mysql** commands. Long-format commands are permitted, not just short-format commands. For example, `quit` and `\q` both are recognized. Use `--skip-named-commands` to disable named commands. See ["mysql Client Commands"](https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html).
+Enable named **mysql** commands. Long-format commands are permitted, not just short-format commands. For example, `quit` and `\q` both are recognized. Use `--skip-named-commands` to disable named commands. See ["mysql Client Commands"](https://javenjin.github.io/blog/p/mysql-command-line-client/#mysql-client-commands).
 
 ### \-\-net-buffer-length=*value*
 
@@ -777,7 +777,7 @@ If the command line is **mysql \-\-force \-\-one-database db1**, **mysql** handl
 |**Disabled by**|**skip-pager**|
 |**Type**|**String**|
 
-Use the given command for paging query output. If the command is omitted, the default pager is the value of your *PAGER* environment variable. Valid pagers are **less**, **more**, **cat [> filename]**, and so forth. This option works only on Unix and only in interactive mode. To disable paging, use `--skip-pager`. Section ["mysql Client Commands"](https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html), discusses output paging further.
+Use the given command for paging query output. If the command is omitted, the default pager is the value of your *PAGER* environment variable. Valid pagers are **less**, **more**, **cat [> filename]**, and so forth. This option works only on Unix and only in interactive mode. To disable paging, use `--skip-pager`. Section ["mysql Client Commands"](https://javenjin.github.io/blog/p/mysql-command-line-client/#mysql-client-commands), discusses output paging further.
 
 ### \-\-password[=*password*], -p [*password*]
 
@@ -919,7 +919,7 @@ If the connection to the server is lost, automatically try to reconnect. A singl
 |**Type**|**Boolean**|
 |**Default Value**|**FALSE**|
 
-If this option is enabled, `UPDATE` and `DELETE` statements that do not use a key in the WHERE clause or a `LIMIT` clause produce an error. In addition, restrictions are placed on `SELECT` statements that produce (or are estimated to produce) very large result sets. If you have set this option in an option file, you can use `--skip-safe-updates` on the command line to override it. For more information about this option, see [Using Safe-Updates Mode (--safe-updates)](https://dev.mysql.com/doc/refman/8.0/en/mysql-tips.html#safe-updates).
+If this option is enabled, `UPDATE` and `DELETE` statements that do not use a key in the WHERE clause or a `LIMIT` clause produce an error. In addition, restrictions are placed on `SELECT` statements that produce (or are estimated to produce) very large result sets. If you have set this option in an option file, you can use `--skip-safe-updates` on the command line to override it. For more information about this option, see [Using Safe-Updates Mode (--safe-updates)](https://javenjin.github.io/blog/p/mysql-command-line-client/#using-safe-updates-mode---safe-updates).
 
 ### \-\-select-limit=*value*
 
@@ -1048,7 +1048,7 @@ Mar  7 12:39:28 myhost MysqlClient[20824]:
   DB_SERVER:'127.0.0.1', DB:'test', QUERY:'SHOW TABLES;'
 ```
 
-For more information, see ["mysql Client Logging"](https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html).
+For more information, see ["mysql Client Logging"](https://javenjin.github.io/blog/p/mysql-command-line-client/#mysql-client-logging).
 
 ### \-\-table, -t
 
@@ -1063,7 +1063,7 @@ Display output in table format. This is the default for interactive use, but can
 |:--|--|
 |**Type**|**File name**|
 
-Append a copy of output to the given file. This option works only in interactive mode. Section ["mysql Client Commands"](https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html), discusses tee files further.
+Append a copy of output to the given file. This option works only in interactive mode. Section ["mysql Client Commands"](https://javenjin.github.io/blog/p/mysql-command-line-client/#mysql-client-commands), discusses tee files further.
 
 ### \-\-tls-ciphersuites=*ciphersuite_list*
 
@@ -1238,7 +1238,7 @@ The use of short-form commands within multiple-line /\* ... \*/ comments is not 
 
     Display a help message listing the available mysql commands.
     
-    If you provide an argument to the *help* command, **mysql** uses it as a search string to access server-side help from the contents of the MySQL Reference Manual. For more information, see ["mysql Client Server-Side Help"](https://dev.mysql.com/doc/refman/8.0/en/mysql-server-side-help.html).
+    If you provide an argument to the *help* command, **mysql** uses it as a search string to access server-side help from the contents of the MySQL Reference Manual. For more information, see ["mysql Client Server-Side Help"](https://javenjin.github.io/blog/p/mysql-command-line-client/#mysql-client-server-side-help).
 
 - charset *charset_name*, \\C *charset_name*
 
@@ -1531,11 +1531,11 @@ The **mysql** client can do these types of logging for statements executed inter
 
 The following discussion describes characteristics that apply to all logging types and provides information specific to each logging type.
 
-- How Logging Occurs
+- [How Logging Occurs](https://javenjin.github.io/blog/p/mysql-command-line-client/#how-logging-occurs)
 
-- Controlling the History File
+- [Controlling the History File](https://javenjin.github.io/blog/p/mysql-command-line-client/#controlling-the-history-file)
 
-- syslog Logging Characteristics
+- [syslog Logging Characteristics](https://javenjin.github.io/blog/p/mysql-command-line-client/#syslog-logging-characteristics)
 
 ### How Logging Occurs
 
@@ -1586,7 +1586,7 @@ mysql --histignore="*UPDATE*:*DELETE*"
 
 ### Controlling the History File
 
-The `.mysql_history` file should be protected with a restrictive access mode because sensitive information might be written to it, such as the text of SQL statements that contain passwords. See ["End-User Guidelines for Password Security"](https://dev.mysql.com/doc/refman/8.0/en/password-security-user.html). Statements in the file are accessible from the **mysql** client when the **up-arrow** key is used to recall the history. See [Disabling Interactive History](https://dev.mysql.com/doc/refman/8.0/en/mysql-tips.html#mysql-history).
+The `.mysql_history` file should be protected with a restrictive access mode because sensitive information might be written to it, such as the text of SQL statements that contain passwords. See ["End-User Guidelines for Password Security"](https://dev.mysql.com/doc/refman/8.0/en/password-security-user.html). Statements in the file are accessible from the **mysql** client when the **up-arrow** key is used to recall the history. See [Disabling Interactive History](https://javenjin.github.io/blog/p/mysql-command-line-client/#disabling-interactive-history).
 
 If you do not want to maintain a history file, first remove `.mysql_history` if it exists. Then use either of the following techniques to prevent it from being created again:
 
@@ -1782,19 +1782,19 @@ For more information about batch mode, see Section ["Using mysql in Batch Mode"]
 
 This section provides information about techniques for more effective use of **mysql** and about **mysql** operational behavior.
 
-- Input-Line Editing
+- [Input-Line Editing](https://javenjin.github.io/blog/p/mysql-command-line-client/#input-line-editing)
 
-- Disabling Interactive History
+- [Disabling Interactive History](https://javenjin.github.io/blog/p/mysql-command-line-client/#disabling-interactive-history)
 
-- Unicode Support on Windows
+- [Unicode Support on Windows](https://javenjin.github.io/blog/p/mysql-command-line-client/#unicode-support-on-windows)
 
-- Displaying Query Results Vertically
+- [Displaying Query Results Vertically](https://javenjin.github.io/blog/p/mysql-command-line-client/#displaying-query-results-vertically)
 
-- Using Safe-Updates Mode (--safe-updates)
+- [Using Safe-Updates Mode (--safe-updates)](https://javenjin.github.io/blog/p/mysql-command-line-client/#using-safe-updates-mode---safe-updates)
 
-- Disabling mysql Auto-Reconnect
+- [Disabling mysql Auto-Reconnect](https://javenjin.github.io/blog/p/mysql-command-line-client/#disabling-mysql-auto-reconnect)
 
-- mysql Client Parser Versus Server Parser
+- [mysql Client Parser Versus Server Parser](https://javenjin.github.io/blog/p/mysql-command-line-client/#mysql-client-parser-versus-server-parser)
 
 ### Input-Line Editing
 
@@ -1821,7 +1821,7 @@ On Windows, the history is stored in memory. `Alt+F7` deletes all input lines st
 
 To disable interactive history on Unix, first delete the `.mysql_history` file, if it exists (previous entries are recalled otherwise). Then start **mysql** with the `--histignore="*"` option to ignore all new input lines. To re-enable the recall (and logging) behavior, restart **mysql** without the option.
 
-If you prevent the `.mysql_history` file from being created (see [Controlling the History File](https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html#mysql-logging-history-file)) and use `--histignore="*"` to start the **mysql** client, the interactive history recall facility is disabled fully. Alternatively, if you omit the `--histignore` option, you can recall the input lines entered during the current session.
+If you prevent the `.mysql_history` file from being created (see [Controlling the History File](https://javenjin.github.io/blog/p/mysql-command-line-client/#controlling-the-history-file)) and use `--histignore="*"` to start the **mysql** client, the interactive history recall facility is disabled fully. Alternatively, if you omit the `--histignore` option, you can recall the input lines entered during the current session.
 
 ### Unicode Support on Windows
 

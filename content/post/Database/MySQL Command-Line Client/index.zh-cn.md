@@ -1,7 +1,7 @@
 ---
 title: MySQL 命令行客户端
 description: MySQL Command-Line Client
-date: '2023-11-21'
+date: '2023-11-22'
 categories:
     - Database
 tags:
@@ -44,7 +44,7 @@ Enter password: your_password
 mysql db_name < script.sql > output.tab
 ```
 
-在 Unix 上，mysql 客户端会将交互执行的语句记录到历史文件中。请参阅 [mysql 客户端日志](https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html)。
+在 Unix 上，mysql 客户端会将交互执行的语句记录到历史文件中。请参阅 [mysql Client Logging](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#mysql-%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%97%A5%E5%BF%97)。
 
 ## mysql 客户端选项
 
@@ -455,7 +455,7 @@ Binary data as: Hexadecimal
 
 ### \-\-disable-named-commands
 
-禁用命名命令。只使用 \\* 形式，或只在以分号（;）结尾的行首使用命名命令。默认情况下，**mysql**启动时该选项已*enabled*。不过，即使使用该选项，长格式命令仍可从第一行开始执行。参见["mysql Client Commands"](https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html)。
+禁用命名命令。只使用 \\* 形式，或只在以分号（;）结尾的行首使用命名命令。默认情况下，**mysql**启动时该选项已*enabled*。不过，即使使用该选项，长格式命令仍可从第一行开始执行。参见["mysql Client Commands"](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#mysql-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%91%BD%E4%BB%A4)。
 
 ### \-\-dns-srv-name=*name*
 
@@ -582,7 +582,7 @@ ALTER USER user factor FINISH REGISTRATION SET CHALLENGE_RESPONSE AS 'auth_strin
 |:--|--|
 |**Type**|**String**|
 
-由一个或多个冒号分隔模式组成的列表，用于指定忽略日志记录的语句。这些模式会添加到默认模式列表（"\*IDENTIFIED\*:\*PASSWORD\*"）中。为该选项指定的值会影响写入历史文件的语句的日志记录，如果给定了 `--syslog`选项，还会影响写入 syslog 的日志记录。更多信息，请参阅["mysql Client Logging"](https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html)。
+由一个或多个冒号分隔模式组成的列表，用于指定忽略日志记录的语句。这些模式会添加到默认模式列表（"\*IDENTIFIED\*:\*PASSWORD\*"）中。为该选项指定的值会影响写入历史文件的语句的日志记录，如果给定了 `--syslog`选项，还会影响写入 syslog 的日志记录。更多信息，请参阅["mysql Client Logging"](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#mysql-%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%97%A5%E5%BF%97)。
 
 ### \-\-host=*host_name*, -h *host_name*
 
@@ -701,9 +701,9 @@ Read options from the named login path in the *.mylogin.cnf* login path file. A 
 |:--|--|
 |**Disabled by**|**skip-named-commands**|
 
-Enable named **mysql** commands. Long-format commands are permitted, not just short-format commands. For example, `quit` and `\q` both are recognized. Use `--skip-named-commands` to disable named commands. See ["mysql Client Commands"](https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html).
+Enable named **mysql** commands. Long-format commands are permitted, not just short-format commands. For example, `quit` and `\q` both are recognized. Use `--skip-named-commands` to disable named commands. See ["mysql Client Commands"](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#mysql-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%91%BD%E4%BB%A4).
 
-启用已命名的 **mysql** 命令。允许使用长格式命令，而不仅仅是短格式命令。例如，`quit`和`\q`都能被识别。使用 `-skip-named-commands`禁用命名命令。参见["mysql Client Commands"](https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html)。
+启用已命名的 **mysql** 命令。允许使用长格式命令，而不仅仅是短格式命令。例如，`quit`和`\q`都能被识别。使用 `-skip-named-commands`禁用命名命令。参见["mysql Client Commands"](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#mysql-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%91%BD%E4%BB%A4)。
 
 ### \-\-net-buffer-length=*value*
 
@@ -787,7 +787,7 @@ CREATE TABLE db2.t1 (j INT);
 |**Disabled by**|**skip-pager**|
 |**Type**|**String**|
 
-使用给定命令对查询输出进行分页。如果省略该命令，默认分页器就是 *PAGER* 环境变量的值。有效的分页器有**less**、**more**、**cat [> filename]** 等。该选项仅在 Unix 和交互模式下有效。要禁用分页功能，请使用 `-skip-pager`。请参阅["mysql Client Commands"](https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html)节将进一步讨论输出分页。
+使用给定命令对查询输出进行分页。如果省略该命令，默认分页器就是 *PAGER* 环境变量的值。有效的分页器有**less**、**more**、**cat [> filename]** 等。该选项仅在 Unix 和交互模式下有效。要禁用分页功能，请使用 `-skip-pager`。请参阅["mysql Client Commands"](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#mysql-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%91%BD%E4%BB%A4)节将进一步讨论输出分页。
 
 ### \-\-password[=*password*], -p [*password*]
 
@@ -929,9 +929,7 @@ CHAR(92)
 |**Type**|**Boolean**|
 |**Default Value**|**FALSE**|
 
-If this option is enabled, `UPDATE` and `DELETE` statements that do not use a key in the WHERE clause or a `LIMIT` clause produce an error. In addition, restrictions are placed on `SELECT` statements that produce (or are estimated to produce) very large result sets. If you have set this option in an option file, you can use `--skip-safe-updates` on the command line to override it. For more information about this option, see [Using Safe-Updates Mode (--safe-updates)](https://dev.mysql.com/doc/refman/8.0/en/mysql-tips.html#safe-updates).
-
-如果启用了该选项，在 WHERE 子句中未使用键或 `LIMIT` 子句的 `UPDATE` 和 `DELETE` 语句将产生错误。此外，对产生（或估计会产生）超大结果集的 `SELECT` 语句也会进行限制。如果在选项文件中设置了该选项，可以在命令行中使用 `-skip-safe-updates`来覆盖它。有关该选项的更多信息，请参阅[Using Safe-Updates Mode (--safe-updates)](https://dev.mysql.com/doc/refman/8.0/en/mysql-tips.html#safe-updates)。
+如果启用了该选项，在 WHERE 子句中未使用键或 `LIMIT` 子句的 `UPDATE` 和 `DELETE` 语句将产生错误。此外，对产生（或估计会产生）超大结果集的 `SELECT` 语句也会进行限制。如果在选项文件中设置了该选项，可以在命令行中使用 `-skip-safe-updates`来覆盖它。有关该选项的更多信息，请参阅[Using Safe-Updates Mode (--safe-updates)](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E4%BD%BF%E7%94%A8%E5%AE%89%E5%85%A8%E6%9B%B4%E6%96%B0%E6%A8%A1%E5%BC%8F---safe-updates)。
 
 ### \-\-select-limit=*value*
 
@@ -1060,7 +1058,7 @@ Mar  7 12:39:28 myhost MysqlClient[20824]:
   DB_SERVER:'127.0.0.1', DB:'test', QUERY:'SHOW TABLES;'
 ```
 
-更多信息，请参阅["mysql Client Logging"](https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html)。
+更多信息，请参阅["mysql Client Logging"](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#mysql-%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%97%A5%E5%BF%97)。
 
 ### \-\-table, -t
 
@@ -1075,7 +1073,7 @@ Mar  7 12:39:28 myhost MysqlClient[20824]:
 |:--|--|
 |**Type**|**File name**|
 
-将输出副本附加到指定文件。该选项仅在交互模式下有效。请参阅["mysql Client Commands"](https://dev.mysql.com/doc/refman/8.0/en/mysql-commands.html) ，将进一步讨论 tee 文件。
+将输出副本附加到指定文件。该选项仅在交互模式下有效。请参阅["mysql Client Commands"](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#mysql-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%91%BD%E4%BB%A4) ，将进一步讨论 tee 文件。
 
 ### \-\-tls-ciphersuites=*ciphersuite_list*
 
@@ -1196,7 +1194,7 @@ $> mysql --xml -uroot -e "SHOW VARIABLES LIKE 'version%'"
 
 此选项在 MySQL 8.0.18 中添加。
 
-## mysql Client Commands
+## mysql 客户端命令
 
 **mysql** 会将你发出的每条 SQL 语句发送到服务器执行。此外，**mysql**本身也会解释一组命令。要查看这些命令的列表，请在 `mysql>` 提示符下键入 `help` 或 `\h`：
 
@@ -1250,7 +1248,7 @@ For server side help, type 'help contents'
 
     显示帮助信息，列出可用的 mysql 命令。
     
-    如果为 *help* 命令提供参数，**mysql** 会将其用作搜索字符串，从《MySQL 参考手册》的内容中访问服务器端帮助。更多信息，请参阅["mysql Client Server-Side Help"](https://dev.mysql.com/doc/refman/8.0/en/mysql-server-side-help.html)。
+    如果为 *help* 命令提供参数，**mysql** 会将其用作搜索字符串，从《MySQL 参考手册》的内容中访问服务器端帮助。更多信息，请参阅["mysql Client Server-Side Help"](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#syslog-%E6%97%A5%E5%BF%97%E7%89%B9%E5%BE%81)。
 
 - charset *charset_name*, \\C *charset_name*
 
@@ -1546,11 +1544,11 @@ For server side help, type 'help contents'
 
 以下讨论介绍了适用于所有记录类型的特征，并提供了每种记录类型的特定信息。
 
-- 如何记录日志
+- [如何记录日志](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E5%A6%82%E4%BD%95%E8%AE%B0%E5%BD%95%E6%97%A5%E5%BF%97)
 
-- 控制历史文件
+- [控制历史文件](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E6%8E%A7%E5%88%B6%E5%8E%86%E5%8F%B2%E6%96%87%E4%BB%B6)
 
-- syslog 日志特征
+- [syslog 日志特征](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#syslog-%E6%97%A5%E5%BF%97%E7%89%B9%E5%BE%81)
 
 ### 如何记录日志
 
@@ -1601,7 +1599,7 @@ mysql --histignore="*UPDATE*:*DELETE*"
 
 ### 控制历史文件
 
-应使用限制访问模式保护 `.mysql_history` 文件，因为敏感信息（如包含密码的 SQL 语句文本）可能会被写入该文件。请参阅["End-User Guidelines for Password Security"](https://dev.mysql.com/doc/refman/8.0/en/password-security-user.html)。使用**up-arrow**键调用历史记录时，可从**mysql**客户端访问文件中的语句。请参阅 [Disabling Interactive History](https://dev.mysql.com/doc/refman/8.0/en/mysql-tips.html#mysql-history)。
+应使用限制访问模式保护 `.mysql_history` 文件，因为敏感信息（如包含密码的 SQL 语句文本）可能会被写入该文件。请参阅["End-User Guidelines for Password Security"](https://dev.mysql.com/doc/refman/8.0/en/password-security-user.html)。使用**up-arrow**键调用历史记录时，可从**mysql**客户端访问文件中的语句。请参阅 [Disabling Interactive History](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E7%A6%81%E7%94%A8%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95)。
 
 如果不想维护历史文件，首先删除存在的 `.mysql_history`。然后使用以下任一技术防止再次创建该文件：
 
@@ -1797,19 +1795,19 @@ SELECT '<info_to_display>' AS ' ';
 
 本节介绍更有效使用 **mysql** 的技巧以及 **mysql** 的操作行为。
 
-- 输入行编辑
+- [输入行编辑](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E8%BE%93%E5%85%A5%E8%A1%8C%E7%BC%96%E8%BE%91)
 
-- 禁用交互式历史记录
+- [禁用交互式历史记录](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E7%A6%81%E7%94%A8%E4%BA%A4%E4%BA%92%E5%BC%8F%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95)
 
-- Windows 支持 Unicode
+- [Windows 支持 Unicode](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#windows-%E6%94%AF%E6%8C%81-unicode)
 
-- 垂直显示查询结果
+- [垂直显示查询结果](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E5%9E%82%E7%9B%B4%E6%98%BE%E7%A4%BA%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C)
 
-- 使用安全更新模式 (--safe-updates)
+- [使用安全更新模式 (--safe-updates)](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E4%BD%BF%E7%94%A8%E5%AE%89%E5%85%A8%E6%9B%B4%E6%96%B0%E6%A8%A1%E5%BC%8F---safe-updates)
 
-- 禁用 mysql 自动重新连接功能
+- [禁用 mysql 自动重新连接功能](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E7%A6%81%E7%94%A8-mysql-%E8%87%AA%E5%8A%A8%E9%87%8D%E6%96%B0%E8%BF%9E%E6%8E%A5%E5%8A%9F%E8%83%BD)
 
-- mysql 客户端解析器与服务器解析器对比
+- [mysql 客户端解析器与服务器解析器对比](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#mysql-%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%A7%A3%E6%9E%90%E5%99%A8%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%A7%A3%E6%9E%90%E5%99%A8%E5%AF%B9%E6%AF%94)
 
 ### 输入行编辑
 
@@ -1836,7 +1834,7 @@ bind "^U" vi-kill-line-prev
 
 要在 Unix 上禁用交互式历史记录，首先要删除 `.mysql_history` 文件（如果存在）（否则会调用以前的条目）。然后使用 `--histignore="*"`选项启动**mysql**，以忽略所有新输入行。要重新启用调用（和记录）行为，请在重启 **mysql** 时不带该选项。
 
-如果阻止创建`.mysql_history`文件（请查阅[Controlling the History File](https://dev.mysql.com/doc/refman/8.0/en/mysql-logging.html#mysql-logging-history-file)），并使用`--histignore="*"`来启动**mysql**客户端，交互式历史记录调用功能就会被完全禁用。另外，如果省略`--histignore`选项，则可以调用当前会话中输入的行。
+如果阻止创建`.mysql_history`文件（请查阅[Controlling the History File](https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/#%E6%8E%A7%E5%88%B6%E5%8E%86%E5%8F%B2%E6%96%87%E4%BB%B6)），并使用`--histignore="*"`来启动**mysql**客户端，交互式历史记录调用功能就会被完全禁用。另外，如果省略`--histignore`选项，则可以调用当前会话中输入的行。
 
 ### Windows 支持 Unicode
 
