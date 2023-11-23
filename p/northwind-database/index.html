@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='在Windows上安装MySQL-5.7.17'>
-<title>Install MySQL-5.7.17 on Windows</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Northwind Database'>
+<title>Northwind Database</title>
 
-<link rel='canonical' href='https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/'>
+<link rel='canonical' href='https://javenjin.github.io/blog/p/northwind-database/'>
 
-<link rel="stylesheet" href="/blog/scss/style.min.84fddddb435e5cc2e5f82ceae9480ccaf4410b94e3d1c786e727ff9ffc42f753.css"><meta property='og:title' content='Install MySQL-5.7.17 on Windows'>
-<meta property='og:description' content='在Windows上安装MySQL-5.7.17'>
-<meta property='og:url' content='https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/'>
+<link rel="stylesheet" href="/blog/scss/style.min.84fddddb435e5cc2e5f82ceae9480ccaf4410b94e3d1c786e727ff9ffc42f753.css"><meta property='og:title' content='Northwind Database'>
+<meta property='og:description' content='Northwind Database'>
+<meta property='og:url' content='https://javenjin.github.io/blog/p/northwind-database/'>
 <meta property='og:site_name' content='Javen Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Database' /><meta property='article:published_time' content='2021-05-29T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-05-29T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="Install MySQL-5.7.17 on Windows">
-<meta name="twitter:description" content="在Windows上安装MySQL-5.7.17">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Database' /><meta property='article:published_time' content='2023-07-06T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-07-06T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Northwind Database">
+<meta name="twitter:description" content="Northwind Database">
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
 
     </head>
@@ -299,29 +299,19 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#download-the-mysql-installation-package">Download the mysql installation package.</a></li>
-    <li><a href="#open-the-installation-package">Open the installation package</a></li>
-    <li><a href="#check-the-box-i-accept-the-license-terms-and-click-next">Check the box I accept the license terms and click Next</a></li>
-    <li><a href="#check-the-custom-box-and-click-next">Check the Custom box and click Next</a></li>
-    <li><a href="#select-the-installation-version-x64-for-64-bit-systems-and-x86-for-32-bit-systems">Select the installation version x64 for 64-bit systems and x86 for 32-bit systems</a></li>
-    <li><a href="#then-click-on-the-right-to-select-the-following-advanced-options-to-customize-the-path-i-installed-in-the-d-disk-root-directory-and-then-ok-and-then-next">Then click on the right to select the following Advanced Options, to customize the path, I installed in the D disk root directory, and then OK, and then Next</a></li>
-    <li><a href="#continue-to-click-execute-and-wait-for-the-installation">Continue to click Execute and wait for the installation</a></li>
-    <li><a href="#click-next-after-installation-continue-to-next">Click Next after installation, continue to Next</a></li>
-    <li><a href="#select-server-dedicated">Select Server Dedicated</a></li>
-    <li><a href="#set-the-port-number-generally-not-recommended-to-modify-the-default-3306-can-be-and-then-next">Set the port number, generally not recommended to modify, the default 3306 can be, and then Next</a></li>
-    <li><a href="#enter-the-mysql-password-and-then-next">Enter the mysql password, and then Next</a></li>
-    <li><a href="#set-the-server-name-which-generally-does-not-need-to-be-changed-either-and-then-next">Set the server name, which generally does not need to be changed either, and then Next</a></li>
-    <li><a href="#no-need-to-modify-directly-next">No need to modify directly Next</a></li>
-    <li><a href="#click-execute-to-start-the-installation">Click Execute to start the installation</a></li>
-    <li><a href="#click-finish">Click Finish</a></li>
-    <li><a href="#click-next">Click Next</a></li>
-    <li><a href="#click-finish-1">Click Finish</a></li>
-    <li><a href="#open-the-myini-file-in-the-installation-directory">Open the my.ini file in the installation directory</a></li>
-    <li><a href="#change-these-two-lines-to-innodb_flush_log_at_trx_commit0-and-innodb_buffer_pool_size2g">Change these two lines to innodb_flush_log_at_trx_commit=0 and innodb_buffer_pool_size=2G</a></li>
-    <li><a href="#save-the-changes-and-go-to-the-bin-folder-in-the-installation-directory">Save the changes and go to the bin folder in the installation directory</a></li>
-    <li><a href="#click-on-the-address-bar-above-and-type-cmd-then-enter-to-open-the-command-line-in-that-directory">Click on the address bar above and type cmd, then enter to open the command line in that directory</a></li>
-    <li><a href="#enter-the-command-mysql--uroot--p-then-enter-the-password-to-enter-the-mysql-database">Enter the command: &ldquo;mysql -uroot -p&rdquo;, then enter the password to enter the mysql database</a></li>
-    <li><a href="#enter-status-and-the-following-image-will-be-displayed-to-indicate-that-the-installation-is-complete">Enter &ldquo;status&rdquo; and the following image will be displayed to indicate that the installation is complete</a></li>
+    <li><a href="#categories">Categories</a></li>
+    <li><a href="#customercustomerdemo">CustomerCustomerDemo</a></li>
+    <li><a href="#customerdemographics">CustomerDemographics</a></li>
+    <li><a href="#customers">Customers</a></li>
+    <li><a href="#employees">Employees</a></li>
+    <li><a href="#employeeterritories">EmployeeTerritories</a></li>
+    <li><a href="#order-details">Order Details</a></li>
+    <li><a href="#orders">Orders</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#region">Region</a></li>
+    <li><a href="#shippers">Shippers</a></li>
+    <li><a href="#suppliers">Suppliers</a></li>
+    <li><a href="#territories">Territories</a></li>
   </ol>
 </nav>
         </div>
@@ -349,12 +339,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/blog/p/install-mysql-5.7.17-on-windows/">Install MySQL-5.7.17 on Windows</a>
+            <a href="/blog/p/northwind-database/">Northwind Database</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            在Windows上安装MySQL-5.7.17
+            Northwind Database
         </h3>
         
     </div>
@@ -375,7 +365,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">May 29, 2021</time>
+                <time class="article-time--published">Jul 06, 2023</time>
             </div>
         
 
@@ -390,7 +380,7 @@
 
 
                 <time class="article-time--reading">
-                    2 minute read
+                    1 minute read
                 </time>
             </div>
         
@@ -412,7 +402,7 @@
 
             <div>
                 
-                    <a href="https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85mysql-5.7.17/" class="link">中文</a>
+                    <a href="https://javenjin.github.io/blog/zh-cn/p/northwind-database/" class="link">中文</a>
                 
             </div>
         </footer>
@@ -424,217 +414,371 @@
     <section class="article-content">
     
     
-    <h1 id="install-mysql-5717-on-windows">Install MySQL-5.7.17 on Windows</h1>
-<h2 id="download-the-mysql-installation-package">Download the mysql installation package.</h2>
-<p>Download the mysql installation package: <a class="link" href="https://download.csdn.net/download/weixin_42718701/19201693"  target="_blank" rel="noopener"
-    >mysql-5.7.17.msi</a>.</p>
-<p>Or go to the official website to download the installation package.</p>
-<h2 id="open-the-installation-package">Open the installation package</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-1.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="check-the-box-i-accept-the-license-terms-and-click-next">Check the box I accept the license terms and click Next</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-2.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="check-the-custom-box-and-click-next">Check the Custom box and click Next</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-3.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="select-the-installation-version-x64-for-64-bit-systems-and-x86-for-32-bit-systems">Select the installation version x64 for 64-bit systems and x86 for 32-bit systems</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-4.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="then-click-on-the-right-to-select-the-following-advanced-options-to-customize-the-path-i-installed-in-the-d-disk-root-directory-and-then-ok-and-then-next">Then click on the right to select the following Advanced Options, to customize the path, I installed in the D disk root directory, and then OK, and then Next</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-5.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="continue-to-click-execute-and-wait-for-the-installation">Continue to click Execute and wait for the installation</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-6.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="click-next-after-installation-continue-to-next">Click Next after installation, continue to Next</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-7.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="select-server-dedicated">Select Server Dedicated</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-8.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="set-the-port-number-generally-not-recommended-to-modify-the-default-3306-can-be-and-then-next">Set the port number, generally not recommended to modify, the default 3306 can be, and then Next</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-9.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="enter-the-mysql-password-and-then-next">Enter the mysql password, and then Next</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-10.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="set-the-server-name-which-generally-does-not-need-to-be-changed-either-and-then-next">Set the server name, which generally does not need to be changed either, and then Next</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-11.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="no-need-to-modify-directly-next">No need to modify directly Next</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-12.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="click-execute-to-start-the-installation">Click Execute to start the installation</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-13.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="click-finish">Click Finish</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-14.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="click-next">Click Next</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-15.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="click-finish-1">Click Finish</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-16.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="open-the-myini-file-in-the-installation-directory">Open the my.ini file in the installation directory</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-17.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="change-these-two-lines-to-innodb_flush_log_at_trx_commit0-and-innodb_buffer_pool_size2g">Change these two lines to innodb_flush_log_at_trx_commit=0 and innodb_buffer_pool_size=2G</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-18.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-19.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="save-the-changes-and-go-to-the-bin-folder-in-the-installation-directory">Save the changes and go to the bin folder in the installation directory</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-20.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="click-on-the-address-bar-above-and-type-cmd-then-enter-to-open-the-command-line-in-that-directory">Click on the address bar above and type cmd, then enter to open the command line in that directory</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-21.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="enter-the-command-mysql--uroot--p-then-enter-the-password-to-enter-the-mysql-database">Enter the command: &ldquo;mysql -uroot -p&rdquo;, then enter the password to enter the mysql database</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-22.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="enter-status-and-the-following-image-will-be-displayed-to-indicate-that-the-installation-is-complete">Enter &ldquo;status&rdquo; and the following image will be displayed to indicate that the installation is complete</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7.17%20on%20Windows/install-mysql-5-7-17-23.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
+    <h1 id="northwind-database">Northwind Database</h1>
+<h2 id="categories">Categories</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>ColumnName</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CategoryID</td>
+</tr>
+<tr>
+<td>CategoryName</td>
+</tr>
+<tr>
+<td>Description</td>
+</tr>
+<tr>
+<td>Picture</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="customercustomerdemo">CustomerCustomerDemo</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>ColumnName</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CustomerID</td>
+</tr>
+<tr>
+<td>CustomerTypeID</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="customerdemographics">CustomerDemographics</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>ColumnName</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CustomerTypeID</td>
+</tr>
+<tr>
+<td>CustomerDesc</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="customers">Customers</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>ColumnName</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CustomerID</td>
+</tr>
+<tr>
+<td>CompanyName</td>
+</tr>
+<tr>
+<td>ContactName</td>
+</tr>
+<tr>
+<td>ContactTitle</td>
+</tr>
+<tr>
+<td>Address</td>
+</tr>
+<tr>
+<td>City</td>
+</tr>
+<tr>
+<td>Region</td>
+</tr>
+<tr>
+<td>PostalCode</td>
+</tr>
+<tr>
+<td>Country</td>
+</tr>
+<tr>
+<td>Phone</td>
+</tr>
+<tr>
+<td>Fax</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="employees">Employees</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>ColumnName</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EmployeeID</td>
+</tr>
+<tr>
+<td>LastName + FirstName</td>
+</tr>
+<tr>
+<td>Title</td>
+</tr>
+<tr>
+<td>TitleOfCourtesy</td>
+</tr>
+<tr>
+<td>BirthDate</td>
+</tr>
+<tr>
+<td>HireDate</td>
+</tr>
+<tr>
+<td>Address</td>
+</tr>
+<tr>
+<td>City</td>
+</tr>
+<tr>
+<td>Region</td>
+</tr>
+<tr>
+<td>PostalCode</td>
+</tr>
+<tr>
+<td>Country</td>
+</tr>
+<tr>
+<td>HomePhone</td>
+</tr>
+<tr>
+<td>Extension</td>
+</tr>
+<tr>
+<td>Photo</td>
+</tr>
+<tr>
+<td>notes</td>
+</tr>
+<tr>
+<td>ReportsTo</td>
+</tr>
+<tr>
+<td>PhotoPath</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="employeeterritories">EmployeeTerritories</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>ColumnName</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EmployeeID</td>
+</tr>
+<tr>
+<td>TerritoryID</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="order-details">Order Details</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>ColumnName</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OrderID</td>
+</tr>
+<tr>
+<td>ProductID</td>
+</tr>
+<tr>
+<td>UnitPrice</td>
+</tr>
+<tr>
+<td>Quantity</td>
+</tr>
+<tr>
+<td>Discount</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="orders">Orders</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>ColumnName</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OrderID</td>
+</tr>
+<tr>
+<td>CustomerID</td>
+</tr>
+<tr>
+<td>EmployeeID</td>
+</tr>
+<tr>
+<td>OrderDate</td>
+</tr>
+<tr>
+<td>RequiredDate</td>
+</tr>
+<tr>
+<td>ShippedDate</td>
+</tr>
+<tr>
+<td>ShipVia</td>
+</tr>
+<tr>
+<td>Freight</td>
+</tr>
+<tr>
+<td>ShipName</td>
+</tr>
+<tr>
+<td>ShipAddress</td>
+</tr>
+<tr>
+<td>ShipCity</td>
+</tr>
+<tr>
+<td>ShipRegion</td>
+</tr>
+<tr>
+<td>ShipPostalCode</td>
+</tr>
+<tr>
+<td>ShipCountry</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="products">Products</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>ColumnName</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ProductID</td>
+</tr>
+<tr>
+<td>ProductName</td>
+</tr>
+<tr>
+<td>SupplierID</td>
+</tr>
+<tr>
+<td>CategoryID</td>
+</tr>
+<tr>
+<td>QuantityPerUnit</td>
+</tr>
+<tr>
+<td>UnitPrice</td>
+</tr>
+<tr>
+<td>UnitsInStock</td>
+</tr>
+<tr>
+<td>UnitsOnOrder</td>
+</tr>
+<tr>
+<td>ReorderLevel</td>
+</tr>
+<tr>
+<td>Discontinued</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="region">Region</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>ColumnName</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RegionID</td>
+</tr>
+<tr>
+<td>RegionDescription</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="shippers">Shippers</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>ColumnName</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ShipperID</td>
+</tr>
+<tr>
+<td>CompanyName</td>
+</tr>
+<tr>
+<td>Phone</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="suppliers">Suppliers</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>ColumnName</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ShipperID</td>
+</tr>
+<tr>
+<td>CompanyName</td>
+</tr>
+<tr>
+<td>Phone</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="territories">Territories</h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>ColumnName</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TerritoryID</td>
+</tr>
+<tr>
+<td>TerritoryDescription</td>
+</tr>
+<tr>
+<td>RegionID</td>
+</tr>
+</tbody>
+</table></div>
 
 </section>
 
@@ -716,12 +860,12 @@
             
                 
 <article class="">
-    <a href="/blog/p/northwind-database/">
+    <a href="/blog/p/monetdb-remote-access/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Northwind Database</h2>
+            <h2 class="article-title">MonetDB Remote Access</h2>
         </div>
     </a>
 </article>
@@ -729,12 +873,12 @@
             
                 
 <article class="">
-    <a href="/blog/p/monetdb-remote-access/">
+    <a href="/blog/p/mysql-5.7-remote-access/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">MonetDB Remote Access</h2>
+            <h2 class="article-title">MySQL 5.7 Remote Access</h2>
         </div>
     </a>
 </article>

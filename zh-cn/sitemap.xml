@@ -160,6 +160,16 @@
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/northwind-database/</loc>
     <lastmod>2023-07-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/northwind-database/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/northwind-database/"
+                />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/page/</loc>
     <lastmod>2023-03-31T00:00:00+00:00</lastmod>

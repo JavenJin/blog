@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Northwind Database Categories (类别表) ColumnName Description CategoryID 类别ID CategoryName 类别名 Description 类别说明 Picture 产品样本 CustomerCustomerDemo (客户类型表1) ColumnName Description CustomerID 客户ID CustomerTypeID 客户类型ID CustomerDemographics (客户类型表2) ColumnName Description CustomerTypeID 客户类型ID CustomerDesc 客户描述 Customers (客户表) ColumnName Description CustomerID 客户ID CompanyName 公司名称 ContactName 客户姓名 ContactTitle 客户头衔 Address 联系地址 City 所在城市 Region 所在地区 PostalCode 邮编 Country 国家 Phone 电话 Fax 传真 Employees (员工表) ColumnName Description EmployeeID 员工ID LastName &#43; FirstName 员工姓名 Title 头衔 TitleOfCourtesy 职称 BirthDate 出生日期 HireDate 雇用日期 Address 家庭地址 City 所在城市 Region 所在地区 PostalCode 邮编 Country 国家 HomePhone 家庭电话 Extension 分机 Photo 照片 notes 笔记 ReportsTo 上级 PhotoPath 照片路径 EmployeeTerritories (员工部门表) ColumnName Description EmployeeID 员工编号 TerritoryID 部门代号 Order Details (订单明细表) ColumnName Description OrderID 订单编号 ProductID 产品编号 UnitPrice 单价 Quantity 订购数量 Discount 折扣 Orders (订单表) ColumnName Description OrderID 订单编号 CustomerID 客户编号 EmployeeID 员工编号 OrderDate 订购日期 RequiredDate 预计到达日期 ShippedDate 发货日期 ShipVia 运货商 Freight 运费 ShipName 货主姓名 ShipAddress 货主地址 ShipCity 货主所在城市 ShipRegion 货主所在地区 ShipPostalCode 货主邮编 ShipCountry 货主所在国家 Products (产品表) ColumnName Description ProductID 产品ID ProductName 产品名称 SupplierID 供应商ID CategoryID 类型ID QuantityPerUnit 数量 UnitPrice 单价 UnitsInStock 库存数量 UnitsOnOrder 订购量 ReorderLevel 再次订购量 Discontinued 中止 Region (地区表) ColumnName Description RegionID 地区ID RegionDescription 地区描述 Shippers (运货商表) ColumnName Description ShipperID 运货商ID CompanyName 公司名称 Phone 联系电话 Suppliers (供应商表) ColumnName Description ShipperID 供应商ID CompanyName 供应商姓名 Phone 联系电话 Territories (地域表) ColumnName Description TerritoryID 地域编号 TerritoryDescription 地域描述 RegionID 地区编号 '>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Northwind Database'>
 <title>Northwind Database</title>
 
 <link rel='canonical' href='https://javenjin.github.io/blog/zh-cn/p/northwind-database/'>
 
 <link rel="stylesheet" href="/blog/scss/style.min.84fddddb435e5cc2e5f82ceae9480ccaf4410b94e3d1c786e727ff9ffc42f753.css"><meta property='og:title' content='Northwind Database'>
-<meta property='og:description' content='Northwind Database Categories (类别表) ColumnName Description CategoryID 类别ID CategoryName 类别名 Description 类别说明 Picture 产品样本 CustomerCustomerDemo (客户类型表1) ColumnName Description CustomerID 客户ID CustomerTypeID 客户类型ID CustomerDemographics (客户类型表2) ColumnName Description CustomerTypeID 客户类型ID CustomerDesc 客户描述 Customers (客户表) ColumnName Description CustomerID 客户ID CompanyName 公司名称 ContactName 客户姓名 ContactTitle 客户头衔 Address 联系地址 City 所在城市 Region 所在地区 PostalCode 邮编 Country 国家 Phone 电话 Fax 传真 Employees (员工表) ColumnName Description EmployeeID 员工ID LastName &#43; FirstName 员工姓名 Title 头衔 TitleOfCourtesy 职称 BirthDate 出生日期 HireDate 雇用日期 Address 家庭地址 City 所在城市 Region 所在地区 PostalCode 邮编 Country 国家 HomePhone 家庭电话 Extension 分机 Photo 照片 notes 笔记 ReportsTo 上级 PhotoPath 照片路径 EmployeeTerritories (员工部门表) ColumnName Description EmployeeID 员工编号 TerritoryID 部门代号 Order Details (订单明细表) ColumnName Description OrderID 订单编号 ProductID 产品编号 UnitPrice 单价 Quantity 订购数量 Discount 折扣 Orders (订单表) ColumnName Description OrderID 订单编号 CustomerID 客户编号 EmployeeID 员工编号 OrderDate 订购日期 RequiredDate 预计到达日期 ShippedDate 发货日期 ShipVia 运货商 Freight 运费 ShipName 货主姓名 ShipAddress 货主地址 ShipCity 货主所在城市 ShipRegion 货主所在地区 ShipPostalCode 货主邮编 ShipCountry 货主所在国家 Products (产品表) ColumnName Description ProductID 产品ID ProductName 产品名称 SupplierID 供应商ID CategoryID 类型ID QuantityPerUnit 数量 UnitPrice 单价 UnitsInStock 库存数量 UnitsOnOrder 订购量 ReorderLevel 再次订购量 Discontinued 中止 Region (地区表) ColumnName Description RegionID 地区ID RegionDescription 地区描述 Shippers (运货商表) ColumnName Description ShipperID 运货商ID CompanyName 公司名称 Phone 联系电话 Suppliers (供应商表) ColumnName Description ShipperID 供应商ID CompanyName 供应商姓名 Phone 联系电话 Territories (地域表) ColumnName Description TerritoryID 地域编号 TerritoryDescription 地域描述 RegionID 地区编号 '>
+<meta property='og:description' content='Northwind Database'>
 <meta property='og:url' content='https://javenjin.github.io/blog/zh-cn/p/northwind-database/'>
 <meta property='og:site_name' content='Javen Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Database' /><meta property='article:published_time' content='2023-07-06T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-07-06T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Northwind Database">
-<meta name="twitter:description" content="Northwind Database Categories (类别表) ColumnName Description CategoryID 类别ID CategoryName 类别名 Description 类别说明 Picture 产品样本 CustomerCustomerDemo (客户类型表1) ColumnName Description CustomerID 客户ID CustomerTypeID 客户类型ID CustomerDemographics (客户类型表2) ColumnName Description CustomerTypeID 客户类型ID CustomerDesc 客户描述 Customers (客户表) ColumnName Description CustomerID 客户ID CompanyName 公司名称 ContactName 客户姓名 ContactTitle 客户头衔 Address 联系地址 City 所在城市 Region 所在地区 PostalCode 邮编 Country 国家 Phone 电话 Fax 传真 Employees (员工表) ColumnName Description EmployeeID 员工ID LastName &#43; FirstName 员工姓名 Title 头衔 TitleOfCourtesy 职称 BirthDate 出生日期 HireDate 雇用日期 Address 家庭地址 City 所在城市 Region 所在地区 PostalCode 邮编 Country 国家 HomePhone 家庭电话 Extension 分机 Photo 照片 notes 笔记 ReportsTo 上级 PhotoPath 照片路径 EmployeeTerritories (员工部门表) ColumnName Description EmployeeID 员工编号 TerritoryID 部门代号 Order Details (订单明细表) ColumnName Description OrderID 订单编号 ProductID 产品编号 UnitPrice 单价 Quantity 订购数量 Discount 折扣 Orders (订单表) ColumnName Description OrderID 订单编号 CustomerID 客户编号 EmployeeID 员工编号 OrderDate 订购日期 RequiredDate 预计到达日期 ShippedDate 发货日期 ShipVia 运货商 Freight 运费 ShipName 货主姓名 ShipAddress 货主地址 ShipCity 货主所在城市 ShipRegion 货主所在地区 ShipPostalCode 货主邮编 ShipCountry 货主所在国家 Products (产品表) ColumnName Description ProductID 产品ID ProductName 产品名称 SupplierID 供应商ID CategoryID 类型ID QuantityPerUnit 数量 UnitPrice 单价 UnitsInStock 库存数量 UnitsOnOrder 订购量 ReorderLevel 再次订购量 Discontinued 中止 Region (地区表) ColumnName Description RegionID 地区ID RegionDescription 地区描述 Shippers (运货商表) ColumnName Description ShipperID 运货商ID CompanyName 公司名称 Phone 联系电话 Suppliers (供应商表) ColumnName Description ShipperID 供应商ID CompanyName 供应商姓名 Phone 联系电话 Territories (地域表) ColumnName Description TerritoryID 地域编号 TerritoryDescription 地域描述 RegionID 地区编号 ">
+<meta name="twitter:description" content="Northwind Database">
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
 
     </head>
@@ -343,6 +343,10 @@
         </h2>
     
         
+        <h3 class="article-subtitle">
+            Northwind Database
+        </h3>
+        
     </div>
 
     
@@ -383,6 +387,25 @@
     </footer>
     
 
+    
+        <footer class="article-translations">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+            <div>
+                
+                    <a href="https://javenjin.github.io/blog/p/northwind-database/" class="link">English</a>
+                
+            </div>
+        </footer>
     
 </div>
 

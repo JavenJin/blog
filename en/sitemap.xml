@@ -158,6 +158,19 @@
                 href="https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/"
                 />
   </url><url>
+    <loc>https://javenjin.github.io/blog/p/northwind-database/</loc>
+    <lastmod>2023-07-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/northwind-database/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/northwind-database/"
+                />
+  </url><url>
     <loc>https://javenjin.github.io/blog/about/</loc>
     <lastmod>2023-03-31T00:00:00+00:00</lastmod>
     <xhtml:link
