@@ -6,7 +6,355 @@
         <description>Recent content in Posts on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Thu, 23 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 24 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>InfluxDB 时间序列数据平台</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/influxdb-%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/</link>
+        <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/zh-cn/p/influxdb-%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/</guid>
+        <description>&lt;h1 id=&#34;influxdb-时间序列数据平台&#34;&gt;InfluxDB 时间序列数据平台&lt;/h1&gt;
+&lt;p&gt;InfluxDB属于时序数据库。&lt;/p&gt;
+&lt;h2 id=&#34;influxdb的数据元素&#34;&gt;InfluxDB的数据元素&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.influxdata.com/influxdb/v2.1/reference/key-concepts/data-elements/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.influxdata.com/influxdb/v2.1/reference/key-concepts/data-elements/&lt;/a&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;_time&lt;/th&gt;
+&lt;th&gt;_measurement&lt;/th&gt;
+&lt;th&gt;location&lt;/th&gt;
+&lt;th&gt;scientist&lt;/th&gt;
+&lt;th&gt;_field&lt;/th&gt;
+&lt;th&gt;_value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;2019-08-18T00:00:00Z&lt;/td&gt;
+&lt;td&gt;census&lt;/td&gt;
+&lt;td&gt;klamath&lt;/td&gt;
+&lt;td&gt;anderson&lt;/td&gt;
+&lt;td&gt;bees&lt;/td&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2019-08-18T00:00:00Z&lt;/td&gt;
+&lt;td&gt;census&lt;/td&gt;
+&lt;td&gt;portland&lt;/td&gt;
+&lt;td&gt;mullen&lt;/td&gt;
+&lt;td&gt;ants&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2019-08-18T00:06:00Z&lt;/td&gt;
+&lt;td&gt;census&lt;/td&gt;
+&lt;td&gt;klamath&lt;/td&gt;
+&lt;td&gt;anderson&lt;/td&gt;
+&lt;td&gt;bees&lt;/td&gt;
+&lt;td&gt;28&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2019-08-18T00:06:00Z&lt;/td&gt;
+&lt;td&gt;census&lt;/td&gt;
+&lt;td&gt;portland&lt;/td&gt;
+&lt;td&gt;mullen&lt;/td&gt;
+&lt;td&gt;ants&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;时间戳(timestamp)&lt;/p&gt;
+&lt;p&gt;所有存储在InfluxDB的数据都有一个_time列，用来存储时间戳。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;测量(measurement)&lt;/p&gt;
+&lt;p&gt;_measurement列显示测量的名称。测量的名称是字符串。一个测量作为tag、field和timestamp的容器。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;字段(field)&lt;/p&gt;
+&lt;p&gt;一个字段包括存储在_field列的字段键和存储在_value列的字段值。一个测量至少需要一个字段。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;字段键(field key)&lt;/p&gt;
+&lt;p&gt;字段键是一个字符串，代表字段的名称。在上面的样本数据中，bees和ants是字段键。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;字段值(field value)&lt;/p&gt;
+&lt;p&gt;一个字段值代表一个相关字段的值。字段值可以是字符串、浮点数、整数或布尔值。样本数据中的字段值显示了指定时间的蜜蜂数量：23和28，以及指定时间的蚂蚁数量：30和32。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;字段集(field set)&lt;/p&gt;
+&lt;p&gt;一个字段集是一个与时间戳相关的字段键值对的集合。一个测量至少需要一个字段。样本数据包括以下字段集：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;census bees=23i,ants=30i 1566086400000000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;census bees=28i,ants=32i 1566086760000000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        -----------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            Field set
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;标签(tags)&lt;/p&gt;
+&lt;p&gt;标签包括标签键和标签值，以字符串形式存储。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;标签键(tag key)&lt;/p&gt;
+&lt;p&gt;样本数据中的标签键是location和scientist。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;标签值(tag value)&lt;/p&gt;
+&lt;p&gt;标签键location有两个标签值：klamath和portland。标签键scientist也有两个标签值：Anderson和Mullen。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;标签集(tag set)&lt;/p&gt;
+&lt;p&gt;标签的键值对的集合构成了一个标签集。样本数据包括以下四个标签集。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;location = klamath, scientist = anderson
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;location = portland, scientist = anderson
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;location = klamath, scientist = mullen
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;location = portland, scientist = mullen
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;系列(series)&lt;/p&gt;
+&lt;p&gt;一个系列键是共享一个测量、标签集和字段键的点的集合。例如，样本数据包括两个独特的系列键。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;_measurement&lt;/th&gt;
+&lt;th&gt;tag set&lt;/th&gt;
+&lt;th&gt;_field&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;census&lt;/td&gt;
+&lt;td&gt;location=klamath,scientist=anderson&lt;/td&gt;
+&lt;td&gt;bees&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;census&lt;/td&gt;
+&lt;td&gt;location=portland,scientist=mullen&lt;/td&gt;
+&lt;td&gt;ants&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;一个系列包括时间戳和给定系列键的字段值。从样本数据来看，这里有一个系列键和相应的系列。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# series key
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;census,location=klamath,scientist=anderson bees
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# series
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2019-08-18T00:00:00Z 23
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2019-08-18T00:06:00Z 28   
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;c的influxdb库&#34;&gt;C#的InfluxDB库&lt;/h2&gt;
+&lt;p&gt;支持C#的InfluxDB库由官方维护：influxdb-client-csharp(&lt;a class=&#34;link&#34; href=&#34;https://github.com/influxdata/influxdb-client-csharp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/influxdata/influxdb-client-csharp&lt;/a&gt;)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;该官方库不支持SQL语言，而使用了官方提出的Flux语言。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;InfluxDB可以使用InfluxQL和Flux以及api查询数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;InfluxQL语言与SQL语言非常相似，但它似乎只用于api查询使用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;InfluxQL和Flux在功能上基本等同。只有代码看起来不同。（https://docs.influxdata.com/influxdb/v2.1/reference/syntax/flux/flux-vs-influxql/#influxql-and-flux-parity）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;flux&#34;&gt;Flux&lt;/h2&gt;
+&lt;p&gt;Flux是一种开源的功能性数据脚本语言（https://docs.influxdata.com/flux/v0.x/）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;show databases&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;buckets()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;show tables&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import &amp;#34;influxdata/influxdb/schema&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;schema.measurements(bucket: &amp;#34;javen&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;show columns （需要手动添加_time和_value）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import &amp;#34;influxdata/influxdb/sample&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sample.data(set: &amp;#34;sampleTableName&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    |&amp;gt; keys()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    |&amp;gt; keep(columns: [&amp;#34;_value&amp;#34;])
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    |&amp;gt; distinct()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;数据类型&#34;&gt;数据类型&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;InfluxDB datatype&lt;/th&gt;
+&lt;th&gt;C# datatype&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;dateTime:RFC3339&lt;/td&gt;
+&lt;td&gt;DateTimeOffset&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;dateTime:RFC3339Nano&lt;/td&gt;
+&lt;td&gt;DateTimeOffset&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;double&lt;/td&gt;
+&lt;td&gt;Double&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;boolean&lt;/td&gt;
+&lt;td&gt;Boolean&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;long&lt;/td&gt;
+&lt;td&gt;Int64&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;unsignedLong&lt;/td&gt;
+&lt;td&gt;UInt64&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;base64Binary&lt;/td&gt;
+&lt;td&gt;Byte[]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;duration&lt;/td&gt;
+&lt;td&gt;TimeSpan&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;连接配置&#34;&gt;连接配置&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/influxdata/influxdb-client-csharp/tree/master/Client#client-connection-string&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/influxdata/influxdb-client-csharp/tree/master/Client#client-connection-string&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以使用一个连接字符串构建一个客户端，该字符串可以包含编码在URL中的InfluxDBClientOptions参数。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;connectionString = &amp;#34;http://localhost:8086?token=myToken&amp;amp;org=myOrg&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;支持以下选项：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Property&lt;/th&gt;
+&lt;th&gt;default&lt;/th&gt;
+&lt;th&gt;description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;org&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;default destination organization for writes and queries&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;bucket&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;default destination bucket for writes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;token&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;the token to use for the authorization&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;logLevel&lt;/td&gt;
+&lt;td&gt;NONE&lt;/td&gt;
+&lt;td&gt;rest client verbosity level&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;timeout&lt;/td&gt;
+&lt;td&gt;10000 ms&lt;/td&gt;
+&lt;td&gt;socket timeout&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;allowHttpRedirects&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;td&gt;Configure automatically following HTTP 3xx redirects&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;verifySsl&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;td&gt;Ignore Certificate Validation Errors when &lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The &lt;code&gt;timeout&lt;/code&gt; supports &lt;code&gt;ms&lt;/code&gt;, &lt;code&gt;s&lt;/code&gt; and &lt;code&gt;m&lt;/code&gt; as unit. Default is milliseconds.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>如何在 SQL Server 数据库中使用Stored Procedure进行分析</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/%E5%A6%82%E4%BD%95%E5%9C%A8-sql-server-%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E4%BD%BF%E7%94%A8stored-procedure%E8%BF%9B%E8%A1%8C%E5%88%86%E6%9E%90/</link>
         <pubDate>Thu, 23 Nov 2023 00:00:00 +0000</pubDate>

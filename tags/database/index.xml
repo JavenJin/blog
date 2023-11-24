@@ -6,7 +6,357 @@
         <description>Recent content in Database on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Thu, 23 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/tags/database/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 24 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/tags/database/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>InfluxDB Times Series Data Platform</title>
+        <link>https://javenjin.github.io/blog/p/influxdb-times-series-data-platform/</link>
+        <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/p/influxdb-times-series-data-platform/</guid>
+        <description>&lt;h1 id=&#34;influxdb-times-series-data-platform&#34;&gt;InfluxDB Times Series Data Platform&lt;/h1&gt;
+&lt;p&gt;InfluxDB is a temporal database.&lt;/p&gt;
+&lt;h2 id=&#34;data-elements-for-influxdb&#34;&gt;Data Elements for InfluxDB&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.influxdata.com/influxdb/v2.1/reference/key-concepts/data-elements/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.influxdata.com/influxdb/v2.1/reference/key-concepts/data-elements/&lt;/a&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;_time&lt;/th&gt;
+&lt;th&gt;_measurement&lt;/th&gt;
+&lt;th&gt;location&lt;/th&gt;
+&lt;th&gt;scientist&lt;/th&gt;
+&lt;th&gt;_field&lt;/th&gt;
+&lt;th&gt;_value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;2019-08-18T00:00:00Z&lt;/td&gt;
+&lt;td&gt;census&lt;/td&gt;
+&lt;td&gt;klamath&lt;/td&gt;
+&lt;td&gt;anderson&lt;/td&gt;
+&lt;td&gt;bees&lt;/td&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2019-08-18T00:00:00Z&lt;/td&gt;
+&lt;td&gt;census&lt;/td&gt;
+&lt;td&gt;portland&lt;/td&gt;
+&lt;td&gt;mullen&lt;/td&gt;
+&lt;td&gt;ants&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2019-08-18T00:06:00Z&lt;/td&gt;
+&lt;td&gt;census&lt;/td&gt;
+&lt;td&gt;klamath&lt;/td&gt;
+&lt;td&gt;anderson&lt;/td&gt;
+&lt;td&gt;bees&lt;/td&gt;
+&lt;td&gt;28&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2019-08-18T00:06:00Z&lt;/td&gt;
+&lt;td&gt;census&lt;/td&gt;
+&lt;td&gt;portland&lt;/td&gt;
+&lt;td&gt;mullen&lt;/td&gt;
+&lt;td&gt;ants&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;timestamp&lt;/p&gt;
+&lt;p&gt;All data stored in InfluxDB has a _time column that stores timestamps.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;measurement&lt;/p&gt;
+&lt;p&gt;The _measurement column shows the name of the measurement. Measurement names are strings. A measurement acts as a container for tags, fields, and timestamps.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;field&lt;/p&gt;
+&lt;p&gt;A field includes a field key stored in the _field column and a field value stored in the _value column. A measurement requires at least one field.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;field key&lt;/p&gt;
+&lt;p&gt;A field key is a string that represents the name of the field. In the sample data above, bees and ants are field keys.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;field value&lt;/p&gt;
+&lt;p&gt;A field value represents the value of an associated field. Field values can be strings, floats, integers, or booleans. The field values in the sample data show the number of bees at specified times: 23, and 28 and the number of ants at a specified time: 30 and 32.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;field set&lt;/p&gt;
+&lt;p&gt;A field set is a collection of field key-value pairs associated with a timestamp. A measurement requires at least one field. The sample data includes the following field sets:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;census bees=23i,ants=30i 1566086400000000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;census bees=28i,ants=32i 1566086760000000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        -----------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            Field set
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;tags&lt;/p&gt;
+&lt;p&gt;Tags include tag keys and tag values that are stored as strings.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;tag key&lt;/p&gt;
+&lt;p&gt;The tag keys in the sample data are location and scientist.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;tag value&lt;/p&gt;
+&lt;p&gt;The tag key location has two tag values: klamath and portland. The tag key scientist also has two tag values: anderson and mullen.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;tag set&lt;/p&gt;
+&lt;p&gt;The collection of tag key-value pairs make up a tag set. The sample data includes the following four tag sets:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;location = klamath, scientist = anderson
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;location = portland, scientist = anderson
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;location = klamath, scientist = mullen
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;location = portland, scientist = mullen
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;series&lt;/p&gt;
+&lt;p&gt;A series key is a collection of points that share a measurement, tag set, and field key. For example, the sample data includes two unique series keys.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;_measurement&lt;/th&gt;
+&lt;th&gt;tag set&lt;/th&gt;
+&lt;th&gt;_field&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;census&lt;/td&gt;
+&lt;td&gt;location=klamath,scientist=anderson&lt;/td&gt;
+&lt;td&gt;bees&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;census&lt;/td&gt;
+&lt;td&gt;location=portland,scientist=mullen&lt;/td&gt;
+&lt;td&gt;ants&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;A series includes timestamps and field values for a given series key. From the sample data, here’s a series key and the corresponding series.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# series key
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;census,location=klamath,scientist=anderson bees
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# series
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2019-08-18T00:00:00Z 23
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2019-08-18T00:06:00Z 28   
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;influxdb-library-with-c&#34;&gt;InfluxDB library with C#&lt;/h2&gt;
+&lt;p&gt;The InfluxDB library with C# support is officially maintained: influxdb-client-csharp(&lt;a class=&#34;link&#34; href=&#34;https://github.com/influxdata/influxdb-client-csharp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/influxdata/influxdb-client-csharp&lt;/a&gt;)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The official library does not support the SQL language, but uses the official proposed Flux language.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;InfluxDB can query data using InfluxQL and Flux as well as api.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The InfluxQL language is very similar to the SQL language, but it seems to be used only for for api query usage.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;InfluxQL and Flux are basically functionally equivalent. Only the code looks different.(&lt;a class=&#34;link&#34; href=&#34;https://docs.influxdata.com/influxdb/v2.1/reference/syntax/flux/flux-vs-influxql/#influxql-and-flux-parity&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.influxdata.com/influxdb/v2.1/reference/syntax/flux/flux-vs-influxql/#influxql-and-flux-parity&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;flux&#34;&gt;Flux&lt;/h2&gt;
+&lt;p&gt;Flux is an open source functional data scripting language(&lt;a class=&#34;link&#34; href=&#34;https://docs.influxdata.com/flux/v0.x/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.influxdata.com/flux/v0.x/&lt;/a&gt;)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;show databases&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;buckets()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;show tables&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import &amp;#34;influxdata/influxdb/schema&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;schema.measurements(bucket: &amp;#34;bucketsName&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;show columns (You need to add _time and _value manually)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import &amp;#34;influxdata/influxdb/sample&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sample.data(set: &amp;#34;sampleTableName&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    |&amp;gt; keys()
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    |&amp;gt; keep(columns: [&amp;#34;_value&amp;#34;])
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    |&amp;gt; distinct()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;data-type&#34;&gt;Data Type&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;InfluxDB datatype&lt;/th&gt;
+&lt;th&gt;C# datatype&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;dateTime:RFC3339&lt;/td&gt;
+&lt;td&gt;DateTimeOffset&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;dateTime:RFC3339Nano&lt;/td&gt;
+&lt;td&gt;DateTimeOffset&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;string&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;double&lt;/td&gt;
+&lt;td&gt;Double&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;boolean&lt;/td&gt;
+&lt;td&gt;Boolean&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;long&lt;/td&gt;
+&lt;td&gt;Int64&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;unsignedLong&lt;/td&gt;
+&lt;td&gt;UInt64&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;base64Binary&lt;/td&gt;
+&lt;td&gt;Byte[]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;duration&lt;/td&gt;
+&lt;td&gt;TimeSpan&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;connection-configuration&#34;&gt;Connection configuration&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/influxdata/influxdb-client-csharp/tree/master/Client#client-connection-string&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/influxdata/influxdb-client-csharp/tree/master/Client#client-connection-string&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A client can be constructed using a connection string that can contain the InfluxDBClientOptions parameters encoded into the URL.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;connectionString = &amp;#34;http://localhost:8086?token=myToken&amp;amp;org=myOrg&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The following options are supported:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Property&lt;/th&gt;
+&lt;th&gt;default&lt;/th&gt;
+&lt;th&gt;description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;org&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;default destination organization for writes and queries&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;bucket&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;default destination bucket for writes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;token&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;the token to use for the authorization&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;logLevel&lt;/td&gt;
+&lt;td&gt;NONE&lt;/td&gt;
+&lt;td&gt;rest client verbosity level&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;timeout&lt;/td&gt;
+&lt;td&gt;10000 ms&lt;/td&gt;
+&lt;td&gt;socket timeout&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;allowHttpRedirects&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;td&gt;Configure automatically following HTTP 3xx redirects&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;verifySsl&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;td&gt;Ignore Certificate Validation Errors when &lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The &lt;code&gt;timeout&lt;/code&gt; supports &lt;code&gt;ms&lt;/code&gt;, &lt;code&gt;s&lt;/code&gt; and &lt;code&gt;m&lt;/code&gt; as unit. Default is milliseconds.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>How to use Stored Procedure for analytics on SQL Server databases</title>
         <link>https://javenjin.github.io/blog/p/how-to-use-stored-procedure-for-analytics-on-sql-server-databases/</link>
         <pubDate>Thu, 23 Nov 2023 00:00:00 +0000</pubDate>
