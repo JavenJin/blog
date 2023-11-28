@@ -75,7 +75,7 @@ curl \
 
 ![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails4.png)
 
-3. 点击新增授权密码，保存好该授权密码。
+3. 点击新增授权密码，保存好该授权密码
 
 ![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails5.png)
 

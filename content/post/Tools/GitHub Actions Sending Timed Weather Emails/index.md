@@ -10,27 +10,27 @@ tags:
 
 # GitHub Actions: Sending Timed Weather Emails
 
-2019年底的时候，GitHub正式开放了[GitHub Actions](https://github.com/features/actions)这个功能，可以免费使用。
+Toward the end of 2019, GitHub officially opened up [GitHub Actions](https://github.com/features/actions), a feature that can be used for free.
 
-GitHub Actions 是一个 CI/CD（持续集成/持续部署）工具，但也可用作代码运行环境。功能非常强大，能够玩出许多花样。
+GitHub Actions is a CI/CD (Continuous Integration/Continuous Deployment) tool, but it can also be used as a code runtime environment. It's very powerful and can do a lot of tricks.
 
-这里使用GitHub Actions完成一个实例：每天定时运行一次脚本，获取天气预报，发送电子邮件。
+Here's an example of what you can do with GitHub Actions: run a script once a day to get the weather forecast and send an email.
 
-完整代码可以从[GitHub](https://github.com/JavenJin/weather-action)仓库获取。
+The full code is available from the [GitHub](https://github.com/JavenJin/weather-action) repository.
 
-## 获取天气预报
+## Get the weather forecast
 
-网站[wttr.in](wttr.in)支持使用命令行请求天气预报。
+The website [wttr.in](wttr.in) supports requesting weather forecasts using the command line.
 
 ```bash
 curl wttr.in
 ```
 
-上面的命令会返回，当前IP地址的天气。
+The above command will return, the weather for the current IP address.
 
 ![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails1.png)
 
-我们可以在URL中指定城市。
+We can specify the city in the URL.
 
 ```bash
 curl wttr.in/Xian
@@ -38,7 +38,7 @@ curl wttr.in/Xian
 
 ![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails2.png)
 
-返回的数据可以通过`curl`命令的`-o`参数，保存成文件，以便后面发送。
+The returned data can be saved to a file to be sent later, using the `-o` parameter of the `curl` command.
 
 ```bash
 curl -o result.html wttr.in/Xian
@@ -46,7 +46,7 @@ curl -o result.html wttr.in/Xian
 
 ![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails3.png)
 
-wttr.in允许定制天气预报的格式和内容，详见[https://github.com/chubin/wttr.in](https://github.com/chubin/wttr.in)，这里就不展开了。最后封装好的脚本[weather.sh](https://github.com/JavenJin/weather-action/blob/main/weather.sh)，完整代码如下：
+wttr.in allows customization of the format and content of the weather forecast, as detailed in [https://github.com/chubin/wttr.in](https://github.com/chubin/wttr.in), which will not be expanded upon here. The final encapsulated script [weather.sh](https://github.com/JavenJin/weather-action/blob/main/weather.sh), complete with code, is as follows:
 
 ```bash
 #!/bin/sh
@@ -63,27 +63,27 @@ curl \
   wttr.in/$CITY?format=4\&$UNIT
 ```
 
-## 配置发送邮件账户
+## Configuring an Outgoing Mail Account
 
-我使用的是网易163邮箱的免费发送服务，也可以使用其他邮箱。
+I use the free sending service of NetEase 163 mailbox, or you can use other mailboxes.
 
-需要首先在网易163邮箱中生成授权码。
+You need to first generate an authorization code in your Netflix 163 email.
 
-1. 登录网易163邮箱（[https://mail.163.com/](https://mail.163.com/)）
+1. Login to Netease 163 mailbox（[https://mail.163.com/](https://mail.163.com/)）
 
-2. 点击设置，选择设置POP3/SMTP/IMAP
+2. Click on Settings and choose to set POP3/SMTP/IMAP
 
 ![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails4.png)
 
-3. 点击新增授权密码，保存好该授权密码。
+3. Click Add Authorization Password to save that authorization password
 
 ![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails5.png)
 
-## 配置GitHub Actions
+## Configuring GitHub Actions
 
-触发GitHub Actions需要在项目仓库新建一个`.github/workflows`子目录，里面是YAML格式配置文件，文件名可以随便取。GitHub只要发现配置文件，就会运行Actions。
+Triggering GitHub Actions requires that you create a new `.github/workflows` subdirectory in your project repository with a YAML-formatted configuration file with any filename you want.GitHub will run the Actions as soon as it finds the configuration file.
 
-配置文件的第一部分是触发条件。
+The first part of the configuration file is the trigger condition.
 
 ```yaml
 name: 'GitHub Action Weather Bot'
@@ -94,9 +94,9 @@ on:
     - cron: '0 0 * * *'
 ```
 
-上面代码中，`name`字段是配置文件的描述，`on`字段是触发条件。我们指定两种情况下触发，第一种是代码Push进仓库，第二种是定时任务，每天在国际标准时间0点（北京时间早上8点）运行。
+In the above code, the `name` field is the description of the configuration file and the `on` field is the trigger condition. We specify two conditions for triggering, the first is code Push into the repository, the second is a timed task that runs every day at 0:00 international standard time (8:00 am Beijing time).
 
-接着，就是运行流程。
+Next, there is the running process.
 
 ```yaml
     runs-on: ubuntu-latest
@@ -105,18 +105,18 @@ on:
         uses: actions/checkout@v1
 ```
 
-上面代码中，运行环境指定为最新版的 Ubuntu。流程的第一步是从代码仓库获取代码。
+In the above code, the runtime environment is specified to be the latest version of Ubuntu. the first step in the process is to get the code from the code repository.
 
-拿到代码以后，就可以获取天气预报了。
+Once you have the code, you can get the weather forecast.
 
 ```yaml
       - name: 'Get Weather'
         run: bash ./weather.sh
 ```
 
-上面代码中，`run`字段就是所要运行的命令。
+In the above code, the `run` field is the command to be run.
 
-最后，发送邮件。
+Finally, send an email.
 
 ```yaml
       - name: 'Send mail'
@@ -133,11 +133,11 @@ on:
           content_type: text/html
 ```
 
-上面代码中，发送邮件使用的是一个已经写好的action，只要配几个参数就可以用。参数之中，邮件SMTP服务器的用户名和密码，使用的是加密变量，需要在项目的`settings/secrets`菜单里面设置。
+In the above code, the email is sent using an action that has already been written and can be used with just a few parameters. Among the parameters, the username and password of the mail SMTP server are encrypted variables, which need to be set in the `settings/secrets` menu of the project.
 
 ![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails6.png)
 
-[完整的配置文件](https://github.com/JavenJin/weather-action/blob/main/.github/workflows/weather.yml)如下：
+The [complete configuration file](https://github.com/JavenJin/weather-action/blob/main/.github/workflows/weather.yml) is below:
 
 ```yaml
 name: 'GitHub Action Weather Bot'
@@ -171,10 +171,10 @@ jobs:
           content_type: text/html
 ```
 
-写好配置，推送到仓库以后，就可以每天清早收到一封天气预报邮件了。在这个基础上不难扩展，可以定时执行各种脚本（比如每5分钟检查一次某个网站是否在线），然后将结果发到指定的渠道等等。
+After writing the configuration and pushing it to the repository, you can receive a weather forecast email early in the morning every day. It's not hard to expand on this by executing various scripts at regular intervals (e.g., checking whether a site is online every 5 minutes) and then sending the results to a specified channel, etc.
 
-## 成功发送
+## Successfully sent
 
-配置成功后，每天固定时间都会接收到当天的天气邮件。
+After successful configuration, you will receive the day's weather email at a fixed time every day.
 
 ![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails7.png)
