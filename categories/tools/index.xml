@@ -13,14 +13,14 @@
         
         <guid>https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/</guid>
         <description>&lt;h1 id=&#34;github-actions-sending-timed-weather-emails&#34;&gt;GitHub Actions: Sending Timed Weather Emails&lt;/h1&gt;
-&lt;p&gt;2019年底的时候，GitHub正式开放了&lt;a class=&#34;link&#34; href=&#34;https://github.com/features/actions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;GitHub Actions&lt;/a&gt;这个功能，可以免费使用。&lt;/p&gt;
-&lt;p&gt;GitHub Actions 是一个 CI/CD（持续集成/持续部署）工具，但也可用作代码运行环境。功能非常强大，能够玩出许多花样。&lt;/p&gt;
-&lt;p&gt;这里使用GitHub Actions完成一个实例：每天定时运行一次脚本，获取天气预报，发送电子邮件。&lt;/p&gt;
-&lt;p&gt;完整代码可以从&lt;a class=&#34;link&#34; href=&#34;https://github.com/JavenJin/weather-action&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;GitHub&lt;/a&gt;仓库获取。&lt;/p&gt;
-&lt;h2 id=&#34;获取天气预报&#34;&gt;获取天气预报&lt;/h2&gt;
-&lt;p&gt;网站&lt;a class=&#34;link&#34; href=&#34;wttr.in&#34; &gt;wttr.in&lt;/a&gt;支持使用命令行请求天气预报。&lt;/p&gt;
+&lt;p&gt;Toward the end of 2019, GitHub officially opened up &lt;a class=&#34;link&#34; href=&#34;https://github.com/features/actions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Actions&lt;/a&gt;, a feature that can be used for free.&lt;/p&gt;
+&lt;p&gt;GitHub Actions is a CI/CD (Continuous Integration/Continuous Deployment) tool, but it can also be used as a code runtime environment. It&amp;rsquo;s very powerful and can do a lot of tricks.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s an example of what you can do with GitHub Actions: run a script once a day to get the weather forecast and send an email.&lt;/p&gt;
+&lt;p&gt;The full code is available from the &lt;a class=&#34;link&#34; href=&#34;https://github.com/JavenJin/weather-action&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub&lt;/a&gt; repository.&lt;/p&gt;
+&lt;h2 id=&#34;get-the-weather-forecast&#34;&gt;Get the weather forecast&lt;/h2&gt;
+&lt;p&gt;The website &lt;a class=&#34;link&#34; href=&#34;wttr.in&#34; &gt;wttr.in&lt;/a&gt; supports requesting weather forecasts using the command line.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -29,7 +29,7 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl wttr.in
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;上面的命令会返回，当前IP地址的天气。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;The above command will return, the weather for the current IP address.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails1.png&#34;
 	
 	
@@ -38,7 +38,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;我们可以在URL中指定城市。&lt;/p&gt;
+&lt;p&gt;We can specify the city in the URL.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -55,7 +55,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;返回的数据可以通过&lt;code&gt;curl&lt;/code&gt;命令的&lt;code&gt;-o&lt;/code&gt;参数，保存成文件，以便后面发送。&lt;/p&gt;
+&lt;p&gt;The returned data can be saved to a file to be sent later, using the &lt;code&gt;-o&lt;/code&gt; parameter of the &lt;code&gt;curl&lt;/code&gt; command.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -72,9 +72,9 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;wttr.in允许定制天气预报的格式和内容，详见&lt;a class=&#34;link&#34; href=&#34;https://github.com/chubin/wttr.in&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/chubin/wttr.in&lt;/a&gt;，这里就不展开了。最后封装好的脚本&lt;a class=&#34;link&#34; href=&#34;https://github.com/JavenJin/weather-action/blob/main/weather.sh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;weather.sh&lt;/a&gt;，完整代码如下：&lt;/p&gt;
+&lt;p&gt;wttr.in allows customization of the format and content of the weather forecast, as detailed in &lt;a class=&#34;link&#34; href=&#34;https://github.com/chubin/wttr.in&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/chubin/wttr.in&lt;/a&gt;, which will not be expanded upon here. The final encapsulated script &lt;a class=&#34;link&#34; href=&#34;https://github.com/JavenJin/weather-action/blob/main/weather.sh&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;weather.sh&lt;/a&gt;, complete with code, is as follows:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -105,16 +105,16 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  wttr.in/&lt;span class=&#34;nv&#34;&gt;$CITY&lt;/span&gt;?format&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;4&lt;span class=&#34;se&#34;&gt;\&amp;amp;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$UNIT&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;配置发送邮件账户&#34;&gt;配置发送邮件账户&lt;/h2&gt;
-&lt;p&gt;我使用的是网易163邮箱的免费发送服务，也可以使用其他邮箱。&lt;/p&gt;
-&lt;p&gt;需要首先在网易163邮箱中生成授权码。&lt;/p&gt;
+&lt;/div&gt;&lt;h2 id=&#34;configuring-an-outgoing-mail-account&#34;&gt;Configuring an Outgoing Mail Account&lt;/h2&gt;
+&lt;p&gt;I use the free sending service of NetEase 163 mailbox, or you can use other mailboxes.&lt;/p&gt;
+&lt;p&gt;You need to first generate an authorization code in your Netflix 163 email.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;登录网易163邮箱（&lt;a class=&#34;link&#34; href=&#34;https://mail.163.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;Login to Netease 163 mailbox（&lt;a class=&#34;link&#34; href=&#34;https://mail.163.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://mail.163.com/&lt;/a&gt;）&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;点击设置，选择设置POP3/SMTP/IMAP&lt;/p&gt;
+&lt;p&gt;Click on Settings and choose to set POP3/SMTP/IMAP&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails4.png&#34;
@@ -126,7 +126,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;点击新增授权密码，保存好该授权密码。&lt;/li&gt;
+&lt;li&gt;Click Add Authorization Password to save that authorization password&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails5.png&#34;
 	
@@ -136,9 +136,9 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;配置github-actions&#34;&gt;配置GitHub Actions&lt;/h2&gt;
-&lt;p&gt;触发GitHub Actions需要在项目仓库新建一个&lt;code&gt;.github/workflows&lt;/code&gt;子目录，里面是YAML格式配置文件，文件名可以随便取。GitHub只要发现配置文件，就会运行Actions。&lt;/p&gt;
-&lt;p&gt;配置文件的第一部分是触发条件。&lt;/p&gt;
+&lt;h2 id=&#34;configuring-github-actions&#34;&gt;Configuring GitHub Actions&lt;/h2&gt;
+&lt;p&gt;Triggering GitHub Actions requires that you create a new &lt;code&gt;.github/workflows&lt;/code&gt; subdirectory in your project repository with a YAML-formatted configuration file with any filename you want.GitHub will run the Actions as soon as it finds the configuration file.&lt;/p&gt;
+&lt;p&gt;The first part of the configuration file is the trigger condition.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -157,8 +157,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;cron&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;0 0 * * *&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;上面代码中，&lt;code&gt;name&lt;/code&gt;字段是配置文件的描述，&lt;code&gt;on&lt;/code&gt;字段是触发条件。我们指定两种情况下触发，第一种是代码Push进仓库，第二种是定时任务，每天在国际标准时间0点（北京时间早上8点）运行。&lt;/p&gt;
-&lt;p&gt;接着，就是运行流程。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;In the above code, the &lt;code&gt;name&lt;/code&gt; field is the description of the configuration file and the &lt;code&gt;on&lt;/code&gt; field is the trigger condition. We specify two conditions for triggering, the first is code Push into the repository, the second is a timed task that runs every day at 0:00 international standard time (8:00 am Beijing time).&lt;/p&gt;
+&lt;p&gt;Next, there is the running process.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -173,8 +173,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;上面代码中，运行环境指定为最新版的 Ubuntu。流程的第一步是从代码仓库获取代码。&lt;/p&gt;
-&lt;p&gt;拿到代码以后，就可以获取天气预报了。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;In the above code, the runtime environment is specified to be the latest version of Ubuntu. the first step in the process is to get the code from the code repository.&lt;/p&gt;
+&lt;p&gt;Once you have the code, you can get the weather forecast.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -185,8 +185,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;bash ./weather.sh&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;上面代码中，&lt;code&gt;run&lt;/code&gt;字段就是所要运行的命令。&lt;/p&gt;
-&lt;p&gt;最后，发送邮件。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;In the above code, the &lt;code&gt;run&lt;/code&gt; field is the command to be run.&lt;/p&gt;
+&lt;p&gt;Finally, send an email.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -217,7 +217,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;content_type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;text/html&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;上面代码中，发送邮件使用的是一个已经写好的action，只要配几个参数就可以用。参数之中，邮件SMTP服务器的用户名和密码，使用的是加密变量，需要在项目的&lt;code&gt;settings/secrets&lt;/code&gt;菜单里面设置。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;In the above code, the email is sent using an action that has already been written and can be used with just a few parameters. Among the parameters, the username and password of the mail SMTP server are encrypted variables, which need to be set in the &lt;code&gt;settings/secrets&lt;/code&gt; menu of the project.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails6.png&#34;
 	
 	
@@ -226,8 +226,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/JavenJin/weather-action/blob/main/.github/workflows/weather.yml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;完整的配置文件&lt;/a&gt;如下：&lt;/p&gt;
+&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;https://github.com/JavenJin/weather-action/blob/main/.github/workflows/weather.yml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;complete configuration file&lt;/a&gt; is below:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -292,9 +292,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;content_type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;text/html&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;写好配置，推送到仓库以后，就可以每天清早收到一封天气预报邮件了。在这个基础上不难扩展，可以定时执行各种脚本（比如每5分钟检查一次某个网站是否在线），然后将结果发到指定的渠道等等。&lt;/p&gt;
-&lt;h2 id=&#34;成功发送&#34;&gt;成功发送&lt;/h2&gt;
-&lt;p&gt;配置成功后，每天固定时间都会接收到当天的天气邮件。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;After writing the configuration and pushing it to the repository, you can receive a weather forecast email early in the morning every day. It&amp;rsquo;s not hard to expand on this by executing various scripts at regular intervals (e.g., checking whether a site is online every 5 minutes) and then sending the results to a specified channel, etc.&lt;/p&gt;
+&lt;h2 id=&#34;successfully-sent&#34;&gt;Successfully sent&lt;/h2&gt;
+&lt;p&gt;After successful configuration, you will receive the day&amp;rsquo;s weather email at a fixed time every day.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails7.png&#34;
 	
 	
