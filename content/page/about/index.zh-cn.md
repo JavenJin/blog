@@ -40,6 +40,7 @@ menu:
 - 计算机技术与软件专业技术资格初级程序员技术资格（2019年11月）
 - 2018-2019学年度国家奖学金（2019年12月）
 - 2019-2020学年度国家励志奖学金（2020年12月）
+- 西安葡萄城信息技术有限公司最大进步奖（2023年5月）
 
 ## 校园经历
 
@@ -52,23 +53,23 @@ menu:
 
 以下均为我熟练使用的技能
 
-- 编程语言：C语言、C#语言、Java语言
-- 后端框架：Entity Framework Core、.NET Core
+- 语言：C语言、C#语言、DAX、SQL、Java语言
+- 后端框架：Entity Framework Core、.NET Core、RESTful API
 - 前端开发：Node.js
 - 前端框架：React、TypeScript、SaSS、Bootstrap、Ant Design
-- 数据库相关：MySQL、SqlServer、Postgres、InfluxDB、TDengine、Snowflake、SQLite
+- 数据库相关：MySQL、SqlServer、Postgres、DuckDB、InfluxDB、TDengine、Snowflake、SQLite、GaussDB(DWS)
 - 版本管理、文档和自动化部署工具：Git、JIRA、Bitbucket、Confluence
-- 操作系统：Windows Server、Windows 11、MacOS、 Ubuntu
-- 工具相关：Visual Studio、Visual Studio Code、IntelliJ IDEA
+- 操作系统：Windows Server、Windows、MacOS、Ubuntu、CentOS
+- 工具相关：Visual Studio、Visual Studio Code、IntelliJ IDEA、Word、Excel、PowerPoint、Power BI、DAX Studio、DBeaver、Postman、antlr4
 
 以下均为我会使用的技能
 
-- 编程语言：Python语言、C++语言、Go语言
+- 语言：Python语言、C++语言、Go语言
 - 后端框架：Spring、Spring MVC、MyBatis
 - 前端框架：Hugo
-- 数据库相关：Oracle、DM、TimeScale、MonetDB、ClickHouse
+- 数据库相关：Oracle、DM、TimeScale、MonetDB、ClickHouse、Teradata、MongoDB、ElasticSearch
 - 云和开放平台：微信应用开发、阿里云、Azure云
-- 工具相关：Eclipse、WebStorm、Jenkins
+- 工具相关：Eclipse、WebStorm、Jenkins、Shadowrocket、Clash
 
 ## 写在最后
 

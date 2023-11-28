@@ -84,7 +84,7 @@ params:
 
     sidebar:
         emoji: 🍥
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        subtitle: Javen.
         avatar:
             enabled: true
             local: true

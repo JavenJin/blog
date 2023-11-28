@@ -42,6 +42,7 @@ menu:
 - Computer Technology and Software Professional Technical Qualification Junior Programmer Technical Qualification (November 2019)
 - National Scholarships for the 2018-2019 Academic Year (December 2019)
 - National Inspirational Scholarship for Academic Year 2019-2020 (December 2020)
+- Best Progress Award, Xi'an GrapeCity Information Technology Company Limited (May 2023)
 
 ## Campus Experience
 
@@ -54,23 +55,23 @@ menu:
 
 The following are the skills that I am proficient in using
 
-- Programming language: C language, C# language, Java language
-- Backend Framework: Entity Framework Core、.NET Core
+- Programming language: C language, C# language, DAX, SQL, Java language
+- Backend Framework: Entity Framework Core, .NET Core, RESTful API
 - Front-end development: Node.js
-- Front-end framework: React、TypeScript、SaSS、Bootstrap、Ant Design
-- Database: MySQL、SqlServer、Postgres、InfluxDB、TDengine、Snowflake、SQLite
-- Versioning, documentation and automated deployment tools: Git、JIRA、Bitbucket、Confluence
-- Operating system: Windows Server、Windows 11、MacOS、 Ubuntu
-- Tools: Visual Studio、Visual Studio Code、IntelliJ IDEA
+- Front-end framework: React, TypeScript, SaSS, Bootstrap, Ant Design
+- Database: MySQL, SqlServer, Postgres, DuckDB, InfluxDB, TDengine, Snowflake, SQLite, GaussDB(DWS)
+- Versioning, documentation and automated deployment tools: Git, JIRA, Bitbucket, Confluence
+- Operating system: Windows Server, Windows, MacOS,  Ubuntu, CentOS
+- Tools: Visual Studio, Visual Studio Code, IntelliJ IDEA, Word, Excel, PowerPoint, Power BI, DAX Studio, DBeaver, Postman, antlr4
 
 The following are the skills I will use
 
 - Programming language：Python language, C++ language, Go language
-- Backend Framework: Spring、Spring MVC、MyBatis
+- Backend Framework: Spring, Spring MVC, MyBatis
 - Front-end framework：Hugo
-- Database：Oracle、DM、TimeScale、MonetDB、ClickHouse
+- Database：Oracle, DM, TimeScale, MonetDB, ClickHouse, Teradata, MongoDB, ElasticSearch
 - Cloud and open platform: WeChat application development, Ali cloud, Azure cloud
-- Tools：Eclipse、WebStorm、Jenkins
+- Tools：Eclipse, WebStorm, Jenkins, Shadowrocket, Clash
 
 ## Write at the end
 
