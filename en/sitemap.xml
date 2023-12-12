@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://javenjin.github.io/blog/</loc>
-    <lastmod>2023-11-28T00:00:00+00:00</lastmod>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/categories/</loc>
-    <lastmod>2023-11-28T00:00:00+00:00</lastmod>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -26,6 +26,71 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://javenjin.github.io/blog/categories/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/tags/database/</loc>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/tags/database/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/tags/database/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/categories/database/</loc>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/categories/database/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/categories/database/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/p/install-oracle-12c-r2-on-windows/</loc>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85oracle-12c-r2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/install-oracle-12c-r2-on-windows/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/post/</loc>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/post/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/tags/</loc>
+    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/tags/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/</loc>
@@ -39,32 +104,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/post/</loc>
-    <lastmod>2023-11-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/post/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/tags/</loc>
-    <lastmod>2023-11-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/tags/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/tags/tools/</loc>
@@ -91,32 +130,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://javenjin.github.io/blog/categories/tools/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/tags/database/</loc>
-    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/tags/database/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/tags/database/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/categories/database/</loc>
-    <lastmod>2023-11-24T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/categories/database/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/categories/database/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/influxdb-times-series-data-platform/</loc>

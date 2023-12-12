@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='MonetDB远程访问'>
-<title>MonetDB Remote Access</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Install Oracle-12c-R2 on Windows'>
+<title>在Windows上安装Oracle-12c-R2</title>
 
-<link rel='canonical' href='https://javenjin.github.io/blog/p/monetdb-remote-access/'>
+<link rel='canonical' href='https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85oracle-12c-r2/'>
 
-<link rel="stylesheet" href="/blog/scss/style.min.84fddddb435e5cc2e5f82ceae9480ccaf4410b94e3d1c786e727ff9ffc42f753.css"><meta property='og:title' content='MonetDB Remote Access'>
-<meta property='og:description' content='MonetDB远程访问'>
-<meta property='og:url' content='https://javenjin.github.io/blog/p/monetdb-remote-access/'>
+<link rel="stylesheet" href="/blog/scss/style.min.84fddddb435e5cc2e5f82ceae9480ccaf4410b94e3d1c786e727ff9ffc42f753.css"><meta property='og:title' content='在Windows上安装Oracle-12c-R2'>
+<meta property='og:description' content='Install Oracle-12c-R2 on Windows'>
+<meta property='og:url' content='https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85oracle-12c-r2/'>
 <meta property='og:site_name' content='Javen Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Database' /><meta property='article:published_time' content='2022-05-11T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-05-11T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="MonetDB Remote Access">
-<meta name="twitter:description" content="MonetDB远程访问">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Database' /><meta property='article:published_time' content='2023-12-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-12-12T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="在Windows上安装Oracle-12c-R2">
+<meta name="twitter:description" content="Install Oracle-12c-R2 on Windows">
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
 
     </head>
@@ -42,7 +42,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -52,7 +52,7 @@
         
             
             <figure class="site-avatar">
-                <a href="/blog">
+                <a href="/blog/zh-cn">
                 
                     
                     
@@ -71,7 +71,7 @@
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/blog">Javen Blog</a></h1>
+            <h1 class="site-name"><a href="/blog/zh-cn">Javen Blog</a></h1>
             <h2 class="site-description">Javen.</h2>
         </div>
     </header><ol class="social-menu">
@@ -133,7 +133,7 @@
         
         
         <li >
-            <a href='/blog/' >
+            <a href='/blog/zh-cn/' >
                 
                 
                 
@@ -147,13 +147,13 @@
 
 
                 
-                <span>Home</span>
+                <span>主页</span>
             </a>
         </li>
         
         
         <li >
-            <a href='/blog/about/' >
+            <a href='/blog/zh-cn/%E5%85%B3%E4%BA%8E/' >
                 
                 
                 
@@ -166,13 +166,13 @@
 
 
                 
-                <span>About</span>
+                <span>关于</span>
             </a>
         </li>
         
         
         <li >
-            <a href='/blog/archives/' >
+            <a href='/blog/zh-cn/archives/' >
                 
                 
                 
@@ -186,13 +186,13 @@
 
 
                 
-                <span>Archives</span>
+                <span>归档</span>
             </a>
         </li>
         
         
         <li >
-            <a href='/blog/search/' >
+            <a href='/blog/zh-cn/search/' >
                 
                 
                 
@@ -205,13 +205,13 @@
 
 
                 
-                <span>Search</span>
+                <span>搜索</span>
             </a>
         </li>
         
         
         <li >
-            <a href='/blog/links/' >
+            <a href='/blog/zh-cn/%E9%93%BE%E6%8E%A5/' >
                 
                 
                 
@@ -224,7 +224,7 @@
 
 
                 
-                <span>Links</span>
+                <span>链接</span>
             </a>
         </li>
         
@@ -244,9 +244,9 @@
 
                     <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
                         
-                            <option value="https://javenjin.github.io/blog/" selected>English</option>
+                            <option value="https://javenjin.github.io/blog/" >English</option>
                         
-                            <option value="https://javenjin.github.io/blog/zh-cn/" >中文</option>
+                            <option value="https://javenjin.github.io/blog/zh-cn/" selected>中文</option>
                         
                     </select>
                 </li>
@@ -270,7 +270,7 @@
 
 
 
-                    <span>Dark Mode</span>
+                    <span>暗色模式</span>
                 </li>
             
         </div>
@@ -294,17 +294,15 @@
 
 
         </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
+        <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#first-of-all-we-should-know-that-the-normal-way-to-start-monetdb-is-to-run-the-m5serverbat-file-directly-from-the-installation-directory">First of all, we should know that the normal way to start MonetDB is to run the M5server.bat file directly from the installation directory</a></li>
-    <li><a href="#after-starting-up-the-following-picture-at-this-time-directly-using-another-computers-dbeaver-connection-will-prompt-that-the-connection-is-rejected">After starting up, the following picture, at this time directly using another computer&rsquo;s DBeaver connection will prompt that the connection is rejected</a></li>
-    <li><a href="#edit-the-m5serverbat-file-in-the-installation-directory-and-add-the---set-mapi_listenaddrall-parameter-to-the-start-the-real-server-command-below">Edit the M5server.bat file in the installation directory and add the &ndash;set &ldquo;mapi_listenaddr=all&rdquo; parameter to the start the real server command below</a></li>
-    <li><a href="#save-the-file-and-re-run-m5serverbat">Save the file and re-run M5server.bat</a></li>
-    <li><a href="#finish">Finish</a></li>
-    <li><a href="#references">References</a></li>
+    <li><a href="#登录oracle账号">登录Oracle账号</a></li>
+    <li><a href="#下载安装包">下载安装包</a></li>
+    <li><a href="#安装oracle">安装Oracle</a></li>
+    <li><a href="#验证安装是否成功">验证安装是否成功</a></li>
   </ol>
 </nav>
         </div>
@@ -323,7 +321,7 @@
     
     <header class="article-category">
         
-            <a href="/blog/categories/database/" style="background-color: #2a9d8f; color: #fff;">
+            <a href="/blog/zh-cn/categories/database/" >
                 Database
             </a>
         
@@ -332,12 +330,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/blog/p/monetdb-remote-access/">MonetDB Remote Access</a>
+            <a href="/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85oracle-12c-r2/">在Windows上安装Oracle-12c-R2</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            MonetDB远程访问
+            Install Oracle-12c-R2 on Windows
         </h3>
         
     </div>
@@ -358,7 +356,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">May 11, 2022</time>
+                <time class="article-time--published">Dec 12, 2023</time>
             </div>
         
 
@@ -373,7 +371,7 @@
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    阅读时长: 1 分钟
                 </time>
             </div>
         
@@ -395,7 +393,7 @@
 
             <div>
                 
-                    <a href="https://javenjin.github.io/blog/zh-cn/p/monetdb%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/" class="link">中文</a>
+                    <a href="https://javenjin.github.io/blog/p/install-oracle-12c-r2-on-windows/" class="link">English</a>
                 
             </div>
         </footer>
@@ -407,9 +405,13 @@
     <section class="article-content">
     
     
-    <h1 id="monetdb-remote-access">MonetDB Remote Access</h1>
-<h2 id="first-of-all-we-should-know-that-the-normal-way-to-start-monetdb-is-to-run-the-m5serverbat-file-directly-from-the-installation-directory">First of all, we should know that the normal way to start MonetDB is to run the M5server.bat file directly from the installation directory</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MonetDB%20Remote%20Access/monetdb-remote-access-1.png"
+    <h1 id="在windows上安装oracle-12c-r2">在Windows上安装Oracle-12c-R2</h1>
+<p>Oracle下载地址：
+<a class="link" href="https://edelivery.oracle.com/osdc/faces/SoftwareDelivery"  target="_blank" rel="noopener"
+    >https://edelivery.oracle.com/osdc/faces/SoftwareDelivery</a></p>
+<h2 id="登录oracle账号">登录Oracle账号</h2>
+<p>打开Oracle下载地址连接，输入Oracle账号密码登录（如果没有账号请先注册账号）</p>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-1.png"
 	
 	
 	
@@ -417,33 +419,30 @@
 	
 	
 ></p>
-<h2 id="after-starting-up-the-following-picture-at-this-time-directly-using-another-computers-dbeaver-connection-will-prompt-that-the-connection-is-rejected">After starting up, the following picture, at this time directly using another computer&rsquo;s DBeaver connection will prompt that the connection is rejected</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MonetDB%20Remote%20Access/monetdb-remote-access-2.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MonetDB%20Remote%20Access/monetdb-remote-access-3.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="edit-the-m5serverbat-file-in-the-installation-directory-and-add-the---set-mapi_listenaddrall-parameter-to-the-start-the-real-server-command-below">Edit the M5server.bat file in the installation directory and add the &ndash;set &ldquo;mapi_listenaddr=all&rdquo; parameter to the start the real server command below</h2>
+<h2 id="下载安装包">下载安装包</h2>
+<ol>
+<li>在搜索框输入如下文本，搜索安装包</li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">--set &#34;mapi_listenaddr=all&#34;
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Oracle Database 12c Enterprise Edition
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MonetDB%20Remote%20Access/monetdb-remote-access-4.png"
+</div><ol start="2">
+<li>选择版本如下的安装包</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Oracle Database 12c Personal Edition 12.1.0.2.0
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-2.png"
 	
 	
 	
@@ -451,8 +450,10 @@
 	
 	
 ></p>
-<h2 id="save-the-file-and-re-run-m5serverbat">Save the file and re-run M5server.bat</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MonetDB%20Remote%20Access/monetdb-remote-access-5.png"
+<ol start="3">
+<li>点击右上方的View Items</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-3.png"
 	
 	
 	
@@ -460,8 +461,10 @@
 	
 	
 ></p>
-<h2 id="finish">Finish</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MonetDB%20Remote%20Access/monetdb-remote-access-6.png"
+<ol start="4">
+<li>选择对应的安装环境及语言，确认后点击Continue</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-4.png"
 	
 	
 	
@@ -469,9 +472,252 @@
 	
 	
 ></p>
-<h2 id="references">References</h2>
-<p><a class="link" href="https://www.monetdb.org/documentation-Jan2022/admin-guide/manpages/mserver5/"  target="_blank" rel="noopener"
-    >https://www.monetdb.org/documentation-Jan2022/admin-guide/manpages/mserver5/</a></p>
+<ol start="5">
+<li>选择同意并点击Continue</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-5.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol start="6">
+<li>点击Download</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-6.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol start="7">
+<li>打开下载下来的下载器</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-7.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol start="8">
+<li>选择下载路径点击Next</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-8.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol start="9">
+<li>等待下载完成</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-9.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol start="10">
+<li>下载完成后点击Open Destination</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-10.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol start="11">
+<li>解压下载下来的两个压缩包（两个分别都要解压，解压在同一目录下）</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-11.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="安装oracle">安装Oracle</h2>
+<ol>
+<li>打开刚才解压的目录，双击运行setup</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-12.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol start="2">
+<li>不需要输入Email以及不需要支持，直接点Next，并点击Yes</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-13.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol start="3">
+<li>选择Create and configure a database，并点击Next</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-14.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol start="4">
+<li>选择Desktop class，并点击Next</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-15.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol start="5">
+<li>选择Create New Windows User，输入用户名密码并点击Next</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-16.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol start="6">
+<li>设置安装路径，可以修改Global database name，输入密码，以及其他配置项后点击Next</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-17.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol start="7">
+<li>等待安装程序检查安装环境</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-18.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol start="8">
+<li>点击Install</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-19.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol start="9">
+<li>等待安装</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-20.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-21.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-22.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol start="10">
+<li>安装完成后点击OK（也可以点击Password Management去配置其他用户的密码）</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-23.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="验证安装是否成功">验证安装是否成功</h2>
+<ol>
+<li>安装程序会自动安装SQL Plus，打开SQL Plus</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-24.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol start="2">
+<li>输入系统用户名SYSTEM，密码为你自己配置的密码</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-25.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol start="3">
+<li>输入以下SQL，查询安装版本</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">product_component_version</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-26.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
 
 </section>
 
@@ -480,7 +726,7 @@
     
     <section class="article-tags">
         
-            <a href="/blog/tags/database/">Database</a>
+            <a href="/blog/zh-cn/tags/database/">Database</a>
         
     </section>
 
@@ -508,18 +754,18 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
+    <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
                 
 <article class="">
-    <a href="/blog/p/install-oracle-12c-r2-on-windows/">
+    <a href="/blog/zh-cn/p/influxdb-%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Install Oracle-12c-R2 on Windows</h2>
+            <h2 class="article-title">InfluxDB 时间序列数据平台</h2>
         </div>
     </a>
 </article>
@@ -527,12 +773,12 @@
             
                 
 <article class="">
-    <a href="/blog/p/influxdb-times-series-data-platform/">
+    <a href="/blog/zh-cn/p/%E5%A6%82%E4%BD%95%E5%9C%A8-sql-server-%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E4%BD%BF%E7%94%A8stored-procedure%E8%BF%9B%E8%A1%8C%E5%88%86%E6%9E%90/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">InfluxDB Times Series Data Platform</h2>
+            <h2 class="article-title">如何在 SQL Server 数据库中使用Stored Procedure进行分析</h2>
         </div>
     </a>
 </article>
@@ -540,12 +786,12 @@
             
                 
 <article class="">
-    <a href="/blog/p/how-to-use-stored-procedure-for-analytics-on-sql-server-databases/">
+    <a href="/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">How to use Stored Procedure for analytics on SQL Server databases</h2>
+            <h2 class="article-title">MySQL 命令行客户端</h2>
         </div>
     </a>
 </article>
@@ -553,12 +799,12 @@
             
                 
 <article class="">
-    <a href="/blog/p/mysql-command-line-client/">
+    <a href="/blog/zh-cn/p/mysql-8-%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">MySQL Command-Line Client</h2>
+            <h2 class="article-title">MySQL 8 远程访问</h2>
         </div>
     </a>
 </article>
@@ -566,12 +812,12 @@
             
                 
 <article class="">
-    <a href="/blog/p/mysql-8-remote-access/">
+    <a href="/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85postgresql-16.1/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">MySQL 8 Remote Access</h2>
+            <h2 class="article-title">在Windows上安装PostgreSQL 16.1</h2>
         </div>
     </a>
 </article>
@@ -597,7 +843,7 @@
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
