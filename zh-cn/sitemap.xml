@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://javenjin.github.io/blog/zh-cn/</loc>
-    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+    <lastmod>2023-12-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/categories/</loc>
-    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+    <lastmod>2023-12-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -29,7 +29,7 @@
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/tags/database/</loc>
-    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+    <lastmod>2023-12-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -42,7 +42,7 @@
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/categories/database/</loc>
-    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+    <lastmod>2023-12-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -55,7 +55,7 @@
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/post/</loc>
-    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+    <lastmod>2023-12-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -68,7 +68,7 @@
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/tags/</loc>
-    <lastmod>2023-12-12T00:00:00+00:00</lastmod>
+    <lastmod>2023-12-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -78,6 +78,19 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/tags/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85dm8/</loc>
+    <lastmod>2023-12-13T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/install-dm8-on-windows/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85dm8/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85oracle-12c-r2/</loc>

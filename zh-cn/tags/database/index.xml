@@ -6,7 +6,314 @@
         <description>Recent content in Database on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/tags/database/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 13 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/tags/database/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>在Windows上安装DM8</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85dm8/</link>
+        <pubDate>Wed, 13 Dec 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85dm8/</guid>
+        <description>&lt;h1 id=&#34;在windows上安装dm8&#34;&gt;在Windows上安装DM8&lt;/h1&gt;
+&lt;h2 id=&#34;下载安装镜像&#34;&gt;下载安装镜像&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;访问官网下载安装镜像&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.dameng.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.dameng.com/&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;解压压缩包&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装-dm8&#34;&gt;安装 DM8&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;运行安装程序&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;启动目录中的setup.exe&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;语言与时区选择&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;根据系统配置选择相应的语言与时区，点击OK按钮继续安装。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;欢迎页面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;点击Next按钮继续安装。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;许可证协议&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;选择接受协议，并点击Next继续安装。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;验证Key文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;直接点击Next，继续安装&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;选择安装组件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;DM 安装程序提供四种安装方式：“典型安装”、“服务器安装”、“客户端安装”和“自定义安装”，用户可根据实际情况灵活地选择。如下图所示：&lt;/p&gt;
+&lt;p&gt;典型安装包括：服务器、客户端、驱动、用户手册、数据库服务。&lt;/p&gt;
+&lt;p&gt;服务器安装包括：服务器、驱动、用户手册、数据库服务。&lt;/p&gt;
+&lt;p&gt;客户端安装包括：客户端、驱动、用户手册。&lt;/p&gt;
+&lt;p&gt;自定义安装包括：用户根据需求勾选组件，可以是服务器、客户端、驱动、用户手册、数据库服务中的任意组合。&lt;/p&gt;
+&lt;p&gt;选择后点击Next继续安装。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-8.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;选择安装目录&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-9.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;安装前小结&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;显示用户即将进行的安装的有关信息，例如产品名称、版本信息、安装类型、安装目录、可用空间、可用内存等信息，用户检查无误后点击Install按钮进行DM的安装。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-10.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;安装过程&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-11.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;等待安装完毕。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-12.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;初始化数据库&#34;&gt;初始化数据库&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;初始化数据库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;安装完成后，可以点击Init进行数据库的初始化。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-13.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;选择操作方式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;选择Create Database Instance并点击Start。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-14.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;创建数据库模板&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;系统提供三套数据库模板供用户选择：一般用途、联机分析处理和联机事务处理，用户可根据自身的用途选择相应的模板。&lt;/p&gt;
+&lt;p&gt;选择Common并点击Next继续。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-15.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;选择数据库目录&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;设置数据库目录后点击Next继续。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-16.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;输入数据库标识&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;用户可输入数据库名称、实例名、端口号等参数。&lt;/p&gt;
+&lt;p&gt;点击Next继续。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-17.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;数据库文件所在位置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;用户可通过选择或输入确定数据库控制、数据库日志等文件的所在位置，并可通过右侧功能按钮，对文件进行添加或删除。&lt;/p&gt;
+&lt;p&gt;点击Next继续。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-18.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;数据库初始化参数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;用户可输入数据库相关参数，如簇大小、页大小、日志文件大小、选择字符集、是否大小写敏感等。&lt;/p&gt;
+&lt;p&gt;点击Next继续。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-19.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;口令管理&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;用户可输入 SYSDBA，SYSAUDITOR 的密码，对默认口令进行更改，如果安装版本为安全版，将会增加 SYSSSO 用户的密码修改。&lt;/p&gt;
+&lt;p&gt;点击Next继续。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-20.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;选择创建示例库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;用户可选择是否创建示例库 BOOKSHOP 或 DMHR。&lt;/p&gt;
+&lt;p&gt;点击Next继续。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-21.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;创建数据库摘要&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在安装数据库之前，将显示用户通过数据库配置工具设置的相关参数。&lt;/p&gt;
+&lt;p&gt;点击Finish继续。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-22.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;安装初始化数据库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;等待安装完成。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-23.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;安装完成后将弹出数据库相关参数及文件位置。&lt;/p&gt;
+&lt;p&gt;点击Finish完成初始化数据库。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-24.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>在Windows上安装Oracle-12c-R2</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85oracle-12c-r2/</link>
         <pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate>
@@ -18,7 +325,7 @@
     &gt;https://edelivery.oracle.com/osdc/faces/SoftwareDelivery&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;登录oracle账号&#34;&gt;登录Oracle账号&lt;/h2&gt;
 &lt;p&gt;打开Oracle下载地址连接，输入Oracle账号密码登录（如果没有账号请先注册账号）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-1.png&#34;
 	
 	
 	
@@ -49,7 +356,7 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Oracle Database 12c Personal Edition 12.1.0.2.0
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-2.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-2.png&#34;
 	
 	
 	
@@ -60,7 +367,7 @@
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;点击右上方的View Items&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-3.png&#34;
 	
 	
 	
@@ -71,7 +378,7 @@
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;选择对应的安装环境及语言，确认后点击Continue&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-4.png&#34;
 	
 	
 	
@@ -82,7 +389,7 @@
 &lt;ol start=&#34;5&#34;&gt;
 &lt;li&gt;选择同意并点击Continue&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-5.png&#34;
 	
 	
 	
@@ -93,7 +400,7 @@
 &lt;ol start=&#34;6&#34;&gt;
 &lt;li&gt;点击Download&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-6.png&#34;
 	
 	
 	
@@ -104,7 +411,7 @@
 &lt;ol start=&#34;7&#34;&gt;
 &lt;li&gt;打开下载下来的下载器&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-7.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-7.png&#34;
 	
 	
 	
@@ -115,7 +422,7 @@
 &lt;ol start=&#34;8&#34;&gt;
 &lt;li&gt;选择下载路径点击Next&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-8.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-8.png&#34;
 	
 	
 	
@@ -126,7 +433,7 @@
 &lt;ol start=&#34;9&#34;&gt;
 &lt;li&gt;等待下载完成&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-9.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-9.png&#34;
 	
 	
 	
@@ -137,7 +444,7 @@
 &lt;ol start=&#34;10&#34;&gt;
 &lt;li&gt;下载完成后点击Open Destination&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-10.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-10.png&#34;
 	
 	
 	
@@ -148,7 +455,7 @@
 &lt;ol start=&#34;11&#34;&gt;
 &lt;li&gt;解压下载下来的两个压缩包（两个分别都要解压，解压在同一目录下）&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-11.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-11.png&#34;
 	
 	
 	
@@ -160,7 +467,7 @@
 &lt;ol&gt;
 &lt;li&gt;打开刚才解压的目录，双击运行setup&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-12.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-12.png&#34;
 	
 	
 	
@@ -171,7 +478,7 @@
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;不需要输入Email以及不需要支持，直接点Next，并点击Yes&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-13.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-13.png&#34;
 	
 	
 	
@@ -182,7 +489,7 @@
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;选择Create and configure a database，并点击Next&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-14.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-14.png&#34;
 	
 	
 	
@@ -193,7 +500,7 @@
 &lt;ol start=&#34;4&#34;&gt;
 &lt;li&gt;选择Desktop class，并点击Next&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-15.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-15.png&#34;
 	
 	
 	
@@ -204,7 +511,7 @@
 &lt;ol start=&#34;5&#34;&gt;
 &lt;li&gt;选择Create New Windows User，输入用户名密码并点击Next&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-16.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-16.png&#34;
 	
 	
 	
@@ -215,7 +522,7 @@
 &lt;ol start=&#34;6&#34;&gt;
 &lt;li&gt;设置安装路径，可以修改Global database name，输入密码，以及其他配置项后点击Next&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-17.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-17.png&#34;
 	
 	
 	
@@ -226,7 +533,7 @@
 &lt;ol start=&#34;7&#34;&gt;
 &lt;li&gt;等待安装程序检查安装环境&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-18.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-18.png&#34;
 	
 	
 	
@@ -237,7 +544,7 @@
 &lt;ol start=&#34;8&#34;&gt;
 &lt;li&gt;点击Install&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-19.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-19.png&#34;
 	
 	
 	
@@ -248,7 +555,7 @@
 &lt;ol start=&#34;9&#34;&gt;
 &lt;li&gt;等待安装&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-20.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-20.png&#34;
 	
 	
 	
@@ -256,7 +563,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-21.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-21.png&#34;
 	
 	
 	
@@ -264,7 +571,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-22.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-22.png&#34;
 	
 	
 	
@@ -275,7 +582,7 @@
 &lt;ol start=&#34;10&#34;&gt;
 &lt;li&gt;安装完成后点击OK（也可以点击Password Management去配置其他用户的密码）&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-23.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-23.png&#34;
 	
 	
 	
@@ -287,7 +594,7 @@
 &lt;ol&gt;
 &lt;li&gt;安装程序会自动安装SQL Plus，打开SQL Plus&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-24.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-24.png&#34;
 	
 	
 	
@@ -298,7 +605,7 @@
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;输入系统用户名SYSTEM，密码为你自己配置的密码&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-25.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-25.png&#34;
 	
 	
 	
@@ -317,7 +624,7 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;select&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;product_component_version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install%20Oracle-12c-R2%20on%20Windows-26.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20Oracle-12c-R2%20on%20Windows/Install-Oracle-12c-R2-on-Windows-26.png&#34;
 	
 	
 	
