@@ -6,7 +6,243 @@
         <description>Recent content in Database on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Wed, 13 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/tags/database/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 22 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/tags/database/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Install SQLServer 2022 (16.00.1000) on Windows</title>
+        <link>https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/</link>
+        <pubDate>Mon, 22 Jan 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/</guid>
+        <description>&lt;h1 id=&#34;install-sqlserver-2022-16001000-on-windows&#34;&gt;Install SQLServer 2022 (16.00.1000) on Windows&lt;/h1&gt;
+&lt;h2 id=&#34;go-to-the-official-website-to-download-the-sqlserver2022-installation-package&#34;&gt;Go to the official website to download the SQLServer2022 installation package&lt;/h2&gt;
+&lt;p&gt;Download the SQLServer 2022 installation package.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.microsoft.com/en-us/sql-server/sql-server-downloads&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.microsoft.com/en-us/sql-server/sql-server-downloads&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;open-the-installation-package&#34;&gt;Open the installation package&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;select-download-media&#34;&gt;Select Download Media&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;choose-to-download-the-iso-file-download-location-click-download&#34;&gt;Choose to download the ISO file, Download Location, click Download&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;waiting-for-the-download-to-complete&#34;&gt;Waiting for the download to complete&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;once-the-download-is-complete-right-click-download-image-and-select-mount&#34;&gt;Once the download is complete, right-click download image and select Mount&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;double-click-the-setupexe-programme-in-the-pop-up-page&#34;&gt;Double-click the setup.exe programme in the pop-up page&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-8.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;waiting-to-enter-the-installation-screen&#34;&gt;Waiting to enter the installation screen&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-9.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;click-to-installation&#34;&gt;Click to Installation&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-10.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;choose-new-sql-server-standalone-installation-or-add-features-to-an-existing-installation&#34;&gt;Choose New SQL Server standalone installation or add features to an existing installation&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-11.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;select-the-installation-version-evaluation-developer-and-click-next&#34;&gt;Select the installation version Evaluation, Developer and click Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-12.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;choose-to-accept-the-terms-of-the-licence-and-click-next&#34;&gt;Choose to accept the terms of the licence and click Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-13.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;deselect-check-for-updates-checking-for-updates-is-not-recommended-it-is-time-consuming-and-click-next&#34;&gt;Deselect Check for updates (checking for updates is not recommended, it is time consuming) and click Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-14.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;uncheck-azure-extension-and-click-next&#34;&gt;Uncheck Azure Extension and click Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-15.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;function-selection-it-is-recommended-to-select-these-two-basic-functions-change-the-instance-root-directory-click-next&#34;&gt;Function selection, it is recommended to select these two basic functions, change the instance root directory, click Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-16.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;instance-configuration-here-usually-choose-the-default-instance-click-next&#34;&gt;Instance configuration, here usually choose the default instance, click Next&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-17.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;service-account-configuration-here-you-can-choose-the-sql-server-agent-and-engine-account-usually-keep-the-default-and-can-be-changed-after-the-installation&#34;&gt;Service account configuration, here you can choose the SQL Server agent and engine account, usually keep the default and can be changed after the installation&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-18.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;sorting-rules-settings-generally-keep-the-default-if-you-need-to-modify-click-custom-select-the-specified-sorting-rules-note-database-migration-and-high-availability-to-maintain-the-same-sorting-rules-sorting-rules-are-not-easy-to-modify-after-installation-click-next&#34;&gt;Sorting rules settings, generally keep the default, if you need to modify click Custom, select the specified sorting rules (Note: database migration and high availability to maintain the same sorting rules, sorting rules are not easy to modify after installation), click Next!&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-19.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;server-configuration-select-mixed-mode-set-sa-password-sa-is-the-super-administrator-of-sql-server-click-add-current-user&#34;&gt;Server Configuration. Select mixed mode, set sa password (sa is the super administrator of sql server), click add current user&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-20.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;data-directory-here-you-can-change-the-default-location-of-the-user-database-files-you-can-keep-the-default-it-is-recommended-to-create-a-separate-directory-for-distribution&#34;&gt;Data directory, here you can change the default location of the user database files, you can keep the default, it is recommended to create a separate directory for distribution&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-21.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tempdb-system-temporary-database-restart-the-database-automatically-updated-you-can-set-the-initial-number-of-tempdb-data-files-recommended-4-8-do-not-exceed-8-and-tempdb-data-file-directory-it-is-recommended-to-allocate-a-separate-disk-and-directory-you-can-keep-the-default-click-next&#34;&gt;TempDB (system temporary database, restart the database automatically updated), you can set the initial number of TempDB data files (recommended 4-8, do not exceed 8) and TempDB data file directory, it is recommended to allocate a separate disk and directory, you can keep the default, click Next!&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-22.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;click-to-install&#34;&gt;Click to install&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-23.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;waiting-for-installation-to-complete&#34;&gt;Waiting for installation to complete&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-24.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;click-to-close-and-the-installation-is-complete&#34;&gt;Click to close and the installation is complete&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-25.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Install DM8 on Windows</title>
         <link>https://javenjin.github.io/blog/p/install-dm8-on-windows/</link>
         <pubDate>Wed, 13 Dec 2023 00:00:00 +0000</pubDate>

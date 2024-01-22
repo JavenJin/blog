@@ -6,7 +6,243 @@
         <description>Recent content on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Wed, 17 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 22 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>在 Windows 上安装 SQLServer 2022 (16.00.1000)</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8-windows-%E4%B8%8A%E5%AE%89%E8%A3%85-sqlserver-2022-16.00.1000/</link>
+        <pubDate>Mon, 22 Jan 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8-windows-%E4%B8%8A%E5%AE%89%E8%A3%85-sqlserver-2022-16.00.1000/</guid>
+        <description>&lt;h1 id=&#34;在-windows-上安装-sqlserver-2022-16001000&#34;&gt;在 Windows 上安装 SQLServer 2022 (16.00.1000)&lt;/h1&gt;
+&lt;h2 id=&#34;前往官网下载sqlserver2022安装包&#34;&gt;前往官网下载SQLServer2022安装包&lt;/h2&gt;
+&lt;p&gt;下载SQLServer2022安装包。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.microsoft.com/en-us/sql-server/sql-server-downloads&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.microsoft.com/en-us/sql-server/sql-server-downloads&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;打开安装包&#34;&gt;打开安装包&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;选择下载介质&#34;&gt;选择下载介质&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;选择下载iso文件下载位置点击下载&#34;&gt;选择下载ISO文件，下载位置，点击下载&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;等待下载完成&#34;&gt;等待下载完成&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;下载完成之后右键下载镜像点击装载&#34;&gt;下载完成之后，右键下载镜像，点击装载&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;在弹出的页面中双击setupexe程序&#34;&gt;在弹出的页面中双击setup.exe程序&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-8.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;等待进入安装界面&#34;&gt;等待进入安装界面&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-9.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;点击安装&#34;&gt;点击安装&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-10.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;选择全新sql-server独立安装或向现有安装添加功能&#34;&gt;选择全新SQL Server独立安装或向现有安装添加功能&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-11.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;选择安装版本evaluation试用版developer开发者版点击下一步&#34;&gt;选择安装版本Evaluation（试用版），Developer（开发者版），点击下一步&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-12.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;选择接受许可条款点击下一步&#34;&gt;选择接受许可条款，点击下一步&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-13.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;取消选择检查更新这里不建议勾选检查更新比较耗时点击下一步&#34;&gt;取消选择检查更新（这里不建议勾选，检查更新比较耗时），点击下一步&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-14.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;取消勾选azure-extension点击下一步&#34;&gt;取消勾选Azure Extension，点击下一步&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-15.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;功能选择建议选择这两个基本功能更改实例根目录点击下一步&#34;&gt;功能选择，建议选择这两个基本功能，更改实例根目录，点击下一步&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-16.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;实例配置这里一般选择默认实例点击下一步&#34;&gt;实例配置，这里一般选择默认实例，点击下一步&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-17.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;服务账户配置这里可以选择sql-server代理和引擎的账户一般保持默认并且安装好后还可以修改&#34;&gt;服务账户配置，这里可以选择SQL Server代理和引擎的账户，一般保持默认并且安装好后还可以修改&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-18.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;排序规则设置一般保持默认如需要修改点击自定义选择指定排序规则注意数据库迁移和高可用搭建需保持排序规则一致排序规则在安装后不易修改点击下一步&#34;&gt;排序规则设置，一般保持默认，如需要修改点击自定义，选择指定排序规则（注意：数据库迁移和高可用搭建需保持排序规则一致，排序规则在安装后不易修改），点击下一步&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-19.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;服务器配置选择混合模式设置sa密码sa是sql-server的超级管理员点击添加当前用户&#34;&gt;服务器配置。选择混合模式，设置sa密码（sa是sql server的超级管理员），点击添加当前用户&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-20.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;数据目录这里可以更改用户数据库文件的默认位置可以保持默认建议单独建立目录进行分配&#34;&gt;数据目录，这里可以更改用户数据库文件的默认位置，可以保持默认，建议单独建立目录进行分配&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-21.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tempdb系统临时数据库重启数据库自动更新可以设置tempdb数据文件初始数量建议4-8个不要超过8个和tempdb数据文件目录建议单独分配磁盘和目录可以保持默认点击下一步&#34;&gt;TempDB（系统临时数据库，重启数据库自动更新），可以设置TempDB数据文件初始数量（建议4-8个，不要超过8个）和TempDB数据文件目录，建议单独分配磁盘和目录，可以保持默认，点击下一步&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-22.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;点击安装-1&#34;&gt;点击安装&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-23.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;等待安装完成&#34;&gt;等待安装完成&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-24.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;点击关闭安装完成&#34;&gt;点击关闭，安装完成&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20SQLServer-2022-16.00.1000%20on%20Windows/Install-SQLServer-2022-16.00.1000-on-Windows-25.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Git error - connection to github.com failed on port 443</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/git-error-connection-to-github.com-failed-on-port-443/</link>
         <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>

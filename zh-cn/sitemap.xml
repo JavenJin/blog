@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://javenjin.github.io/blog/zh-cn/</loc>
-    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/categories/</loc>
-    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -26,6 +26,71 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/categories/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/tags/database/</loc>
+    <lastmod>2024-01-22T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/tags/database/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/tags/database/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/categories/database/</loc>
+    <lastmod>2024-01-22T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/categories/database/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/categories/database/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/post/</loc>
+    <lastmod>2024-01-22T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/post/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/tags/</loc>
+    <lastmod>2024-01-22T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/tags/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8-windows-%E4%B8%8A%E5%AE%89%E8%A3%85-sqlserver-2022-16.00.1000/</loc>
+    <lastmod>2024-01-22T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8-windows-%E4%B8%8A%E5%AE%89%E8%A3%85-sqlserver-2022-16.00.1000/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/git-error-connection-to-github.com-failed-on-port-443/</loc>
@@ -39,32 +104,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/p/git-error-connection-to-github.com-failed-on-port-443/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/post/</loc>
-    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/post/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/tags/</loc>
-    <lastmod>2024-01-17T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/tags/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/tags/tools/</loc>
@@ -91,32 +130,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/categories/tools/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/tags/database/</loc>
-    <lastmod>2023-12-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/tags/database/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/tags/database/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/categories/database/</loc>
-    <lastmod>2023-12-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/categories/database/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/categories/database/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85dm8/</loc>
