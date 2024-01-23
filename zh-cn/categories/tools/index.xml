@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Wed, 17 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/categories/tools/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Git error - connection to github.com failed on port 443</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/git-error-connection-to-github.com-failed-on-port-443/</link>
+        <title>Git报错： Failed to connect to github.com port 443</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/git%E6%8A%A5%E9%94%99-failed-to-connect-to-github.com-port-443/</link>
         <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://javenjin.github.io/blog/zh-cn/p/git-error-connection-to-github.com-failed-on-port-443/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/git%E6%8A%A5%E9%94%99-failed-to-connect-to-github.com-port-443/</guid>
         <description>&lt;h1 id=&#34;git报错-failed-to-connect-to-githubcom-port-443&#34;&gt;Git报错： Failed to connect to github.com port 443&lt;/h1&gt;
 &lt;p&gt;出现这个问题主要是代理的问题。&lt;/p&gt;
 &lt;p&gt;一般分为两种情况：&lt;/p&gt;
