@@ -1,6 +1,6 @@
 ---
-title: Git error - connection to github.com failed on port 443
-description: Git报错： Failed to connect to github.com port 443
+title: Git报错： Failed to connect to github.com port 443
+description: Git error - connection to github.com failed on port 443
 date: '2024-01-17'
 categories:
     - Tools
