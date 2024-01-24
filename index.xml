@@ -6,7 +6,36 @@
         <description>Recent content on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Mon, 22 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 24 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Setting Black Mode in Chrome</title>
+        <link>https://javenjin.github.io/blog/p/setting-black-mode-in-chrome/</link>
+        <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/p/setting-black-mode-in-chrome/</guid>
+        <description>&lt;h1 id=&#34;setting-black-mode-in-chrome&#34;&gt;Setting Black Mode in Chrome&lt;/h1&gt;
+&lt;p&gt;Enter the following address in the URL field:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chrome://flags/#enable-force-dark
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;After clicking Enter, the following is displayed:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Setting%20Black%20Mode%20in%20Chrome/setting-blank-mode-in-chrome-1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Set the value of Auto Dark Mode for Web Contents to Enabled.&lt;/p&gt;
+&lt;p&gt;Just click Relaunch below to restart Chrome after setting it up.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Install SQLServer 2022 (16.00.1000) on Windows</title>
         <link>https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/</link>
         <pubDate>Mon, 22 Jan 2024 00:00:00 +0000</pubDate>
