@@ -23,3 +23,5 @@ chrome://flags/#enable-force-dark
 设置Auto Dark Mode for Web Contents的值为Enabled。
 
 设置后点击下方Relaunch重启Chrome浏览器即可。
+
+![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Setting%20Black%20Mode%20in%20Chrome/setting-blank-mode-in-chrome-2.png)
