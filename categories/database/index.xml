@@ -6,7 +6,211 @@
         <description>Recent content in Database on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Mon, 22 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/categories/database/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 02 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/categories/database/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>SHOW TABLES in Snowflake</title>
+        <link>https://javenjin.github.io/blog/p/show-tables-in-snowflake/</link>
+        <pubDate>Fri, 02 Feb 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/p/show-tables-in-snowflake/</guid>
+        <description>&lt;h1 id=&#34;show-tables-in-snowflake&#34;&gt;SHOW TABLES in Snowflake&lt;/h1&gt;
+&lt;h2 id=&#34;problems-encountered&#34;&gt;Problems encountered&lt;/h2&gt;
+&lt;p&gt;Execute the following SQL in Snowflake to query the tables contained in the database.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;SHOW&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TABLES&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;When my database structure is as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Snowflake Schema Test(database)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    JAVEN(schema)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        TestTable(table)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        TestTable1(table)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    PUBLIC(schema)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        TestTable(table)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        TestTable1(table)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        TestTable2(table)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/SHOW%20TABLES%20in%20Snowflake/SHOW-TABLES-in-Snowflake-1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;At this point, the result of executing SHOW TABLES is as follows:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;created_on&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;name&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;database_name&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;schema_name&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;kind&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;owner&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2024-02-01 23:30:24.534 -0800&lt;/td&gt;
+&lt;td&gt;TestTable&lt;/td&gt;
+&lt;td&gt;Snowflake Schema Test&lt;/td&gt;
+&lt;td&gt;JAVEN&lt;/td&gt;
+&lt;td&gt;TABLE&lt;/td&gt;
+&lt;td&gt;ACCOUNTADMIN&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2024-02-01 23:30:30.178 -0800&lt;/td&gt;
+&lt;td&gt;TestTable1&lt;/td&gt;
+&lt;td&gt;Snowflake Schema Test&lt;/td&gt;
+&lt;td&gt;JAVEN&lt;/td&gt;
+&lt;td&gt;TABLE&lt;/td&gt;
+&lt;td&gt;ACCOUNTADMIN&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2024-02-01 23:30:36.126 -0800&lt;/td&gt;
+&lt;td&gt;TestTable2&lt;/td&gt;
+&lt;td&gt;Snowflake Schema Test&lt;/td&gt;
+&lt;td&gt;PUBLIC&lt;/td&gt;
+&lt;td&gt;TABLE&lt;/td&gt;
+&lt;td&gt;ACCOUNTADMIN&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/SHOW%20TABLES%20in%20Snowflake/SHOW-TABLES-in-Snowflake-2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Obviously, there are 5 tables in the database, but the query comes up with only 3 tables.&lt;/p&gt;
+&lt;h2 id=&#34;cause-of-the-problem&#34;&gt;Cause of the problem&lt;/h2&gt;
+&lt;p&gt;We guessed that it might be because there are renamed tables under different Schema, and Snowflake did the de-duplication. But this is not true, the official explanation for this is as follows:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In the output, results are sorted by database name, schema name, and then table name. This means results for a database can contain tables from multiple schemas and might break pagination. In order for pagination to work as expected, &lt;strong&gt;you must execute the SHOW TABLES command for a single schema&lt;/strong&gt;. You can use the IN SCHEMA &amp;lt;schema_name&amp;gt; parameter to the SHOW TABLES command. Alternatively, you can use the schema in the current context by executing a USE SCHEMA command before executing a SHOW TABLES command.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;References: &lt;a class=&#34;link&#34; href=&#34;https://docs.snowflake.com/en/sql-reference/sql/show-tables#usage-notes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.snowflake.com/en/sql-reference/sql/show-tables#usage-notes&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It means that only executing this SQL against a Schema is supported.&lt;/p&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;When our business must require a single SQL query for all the tables under that database, it is obviously wrong to use SHOW TABLES directly.&lt;/p&gt;
+&lt;p&gt;But Snowflake&amp;rsquo;s documentation has some optional parameters for SHOW TABLES:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[ IN &amp;hellip; ]&lt;br&gt;
+ Optionally specifies the scope of the command. Specify one of the following:&lt;br&gt;
+ &lt;br&gt;
+ &lt;strong&gt;&lt;code&gt;DATABASE&lt;/code&gt;&lt;/strong&gt;,&lt;br&gt;
+ &lt;strong&gt;&lt;code&gt;DATABASE &amp;lt;db_name&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
+  Returns records for the current database in use or for a specified database (&amp;lt;db_name&amp;gt;).&lt;br&gt;
+  If you specify &lt;code&gt;DATABASE&lt;/code&gt; without &amp;lt;db_name&amp;gt; and no database is in use, the keyword has no effect on the output.&lt;br&gt;
+ &lt;br&gt;
+ &lt;strong&gt;&lt;code&gt;Schema&lt;/code&gt;&lt;/strong&gt;,&lt;br&gt;
+ &lt;strong&gt;&lt;code&gt;SCHEMA &amp;lt;schema_name&amp;gt;&lt;/code&gt;&lt;/strong&gt;,&lt;br&gt;
+ &lt;strong&gt;&lt;code&gt;&amp;lt;schema_name&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;br&gt;
+  Returns records for the current schema in use or a specified schema (&amp;lt;schema_name&amp;gt;).&lt;br&gt;
+  SCHEMA is optional if a database is in use or if you specify the fully qualified &amp;lt;schema_name&amp;gt; (for example, &lt;code&gt;db.schema&lt;/code&gt;).&lt;br&gt;
+  If no database is in use, specifying &lt;code&gt;SCHEMA&lt;/code&gt; has no effect on the output.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;References: &lt;a class=&#34;link&#34; href=&#34;https://docs.snowflake.com/en/sql-reference/sql/show-tables#parameters&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.snowflake.com/en/sql-reference/sql/show-tables#parameters&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So when we use the following SQL:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;SHOW&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TABLES&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;IN&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DATABASE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Since no database is specified, the current default database is used, which happens to be in the range we expect.&lt;/p&gt;
+&lt;p&gt;The return result is as follows:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;created_on&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;name&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;database_name&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;schema_name&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;kind&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;owner&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2024-02-01 23:30:24.534 -0800&lt;/td&gt;
+&lt;td&gt;TestTable&lt;/td&gt;
+&lt;td&gt;Snowflake Schema Test&lt;/td&gt;
+&lt;td&gt;JAVEN&lt;/td&gt;
+&lt;td&gt;TABLE&lt;/td&gt;
+&lt;td&gt;ACCOUNTADMIN&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2024-02-01 23:30:30.178 -0800&lt;/td&gt;
+&lt;td&gt;TestTable1&lt;/td&gt;
+&lt;td&gt;Snowflake Schema Test&lt;/td&gt;
+&lt;td&gt;JAVEN&lt;/td&gt;
+&lt;td&gt;TABLE&lt;/td&gt;
+&lt;td&gt;ACCOUNTADMIN&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2024-02-01 23:29:33.955 -0800&lt;/td&gt;
+&lt;td&gt;TestTable&lt;/td&gt;
+&lt;td&gt;Snowflake Schema Test&lt;/td&gt;
+&lt;td&gt;PUBLIC&lt;/td&gt;
+&lt;td&gt;TABLE&lt;/td&gt;
+&lt;td&gt;ACCOUNTADMIN&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2024-02-01 23:29:42.900 -0800&lt;/td&gt;
+&lt;td&gt;TestTable1&lt;/td&gt;
+&lt;td&gt;Snowflake Schema Test&lt;/td&gt;
+&lt;td&gt;PUBLIC&lt;/td&gt;
+&lt;td&gt;TABLE&lt;/td&gt;
+&lt;td&gt;ACCOUNTADMIN&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2024-02-01 23:30:36.126 -0800&lt;/td&gt;
+&lt;td&gt;TestTable2&lt;/td&gt;
+&lt;td&gt;Snowflake Schema Test&lt;/td&gt;
+&lt;td&gt;PUBLIC&lt;/td&gt;
+&lt;td&gt;TABLE&lt;/td&gt;
+&lt;td&gt;ACCOUNTADMIN&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/SHOW%20TABLES%20in%20Snowflake/SHOW-TABLES-in-Snowflake-3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Install SQLServer 2022 (16.00.1000) on Windows</title>
         <link>https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/</link>
         <pubDate>Mon, 22 Jan 2024 00:00:00 +0000</pubDate>

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
+<html lang="en" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Install PostgreSQL 16.1 on Windows'>
-<title>在Windows上安装PostgreSQL 16.1</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Snowflake 中的 SHOW TABLES'>
+<title>SHOW TABLES in Snowflake</title>
 
-<link rel='canonical' href='https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85postgresql-16.1/'>
+<link rel='canonical' href='https://javenjin.github.io/blog/p/show-tables-in-snowflake/'>
 
-<link rel="stylesheet" href="/blog/scss/style.min.84fddddb435e5cc2e5f82ceae9480ccaf4410b94e3d1c786e727ff9ffc42f753.css"><meta property='og:title' content='在Windows上安装PostgreSQL 16.1'>
-<meta property='og:description' content='Install PostgreSQL 16.1 on Windows'>
-<meta property='og:url' content='https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85postgresql-16.1/'>
+<link rel="stylesheet" href="/blog/scss/style.min.84fddddb435e5cc2e5f82ceae9480ccaf4410b94e3d1c786e727ff9ffc42f753.css"><meta property='og:title' content='SHOW TABLES in Snowflake'>
+<meta property='og:description' content='Snowflake 中的 SHOW TABLES'>
+<meta property='og:url' content='https://javenjin.github.io/blog/p/show-tables-in-snowflake/'>
 <meta property='og:site_name' content='Javen Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Database' /><meta property='article:published_time' content='2023-11-15T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-11-15T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="在Windows上安装PostgreSQL 16.1">
-<meta name="twitter:description" content="Install PostgreSQL 16.1 on Windows">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Database' /><meta property='article:published_time' content='2024-02-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-02-02T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="SHOW TABLES in Snowflake">
+<meta name="twitter:description" content="Snowflake 中的 SHOW TABLES">
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
 
     </head>
@@ -42,7 +42,7 @@
     })();
 </script>
 <div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -52,7 +52,7 @@
         
             
             <figure class="site-avatar">
-                <a href="/blog/zh-cn">
+                <a href="/blog">
                 
                     
                     
@@ -71,7 +71,7 @@
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/blog/zh-cn">Javen Blog</a></h1>
+            <h1 class="site-name"><a href="/blog">Javen Blog</a></h1>
             <h2 class="site-description">Javen.</h2>
         </div>
     </header><ol class="social-menu">
@@ -133,7 +133,7 @@
         
         
         <li >
-            <a href='/blog/zh-cn/' >
+            <a href='/blog/' >
                 
                 
                 
@@ -147,13 +147,13 @@
 
 
                 
-                <span>主页</span>
+                <span>Home</span>
             </a>
         </li>
         
         
         <li >
-            <a href='/blog/zh-cn/%E5%85%B3%E4%BA%8E/' >
+            <a href='/blog/about/' >
                 
                 
                 
@@ -166,13 +166,13 @@
 
 
                 
-                <span>关于</span>
+                <span>About</span>
             </a>
         </li>
         
         
         <li >
-            <a href='/blog/zh-cn/archives/' >
+            <a href='/blog/archives/' >
                 
                 
                 
@@ -186,13 +186,13 @@
 
 
                 
-                <span>归档</span>
+                <span>Archives</span>
             </a>
         </li>
         
         
         <li >
-            <a href='/blog/zh-cn/search/' >
+            <a href='/blog/search/' >
                 
                 
                 
@@ -205,13 +205,13 @@
 
 
                 
-                <span>搜索</span>
+                <span>Search</span>
             </a>
         </li>
         
         
         <li >
-            <a href='/blog/zh-cn/%E9%93%BE%E6%8E%A5/' >
+            <a href='/blog/links/' >
                 
                 
                 
@@ -224,7 +224,7 @@
 
 
                 
-                <span>链接</span>
+                <span>Links</span>
             </a>
         </li>
         
@@ -244,9 +244,9 @@
 
                     <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
                         
-                            <option value="https://javenjin.github.io/blog/" >English</option>
+                            <option value="https://javenjin.github.io/blog/" selected>English</option>
                         
-                            <option value="https://javenjin.github.io/blog/zh-cn/" selected>中文</option>
+                            <option value="https://javenjin.github.io/blog/zh-cn/" >中文</option>
                         
                     </select>
                 </li>
@@ -270,7 +270,7 @@
 
 
 
-                    <span>暗色模式</span>
+                    <span>Dark Mode</span>
                 </li>
             
         </div>
@@ -294,29 +294,14 @@
 
 
         </div>
-        <h2 class="widget-title section-title">目录</h2>
+        <h2 class="widget-title section-title">Table of contents</h2>
         
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#前往官网下载postgresql安装包">前往官网下载PostgreSQL安装包</a></li>
-    <li><a href="#打开安装包">打开安装包</a></li>
-    <li><a href="#点击next">点击Next</a></li>
-    <li><a href="#修改安装目录然后点击next">修改安装目录然后点击Next</a></li>
-    <li><a href="#保持默认选项点击next">保持默认选项，点击Next</a></li>
-    <li><a href="#设置数据目录点击next">设置数据目录，点击Next</a></li>
-    <li><a href="#设置密码点击next">设置密码，点击Next</a></li>
-    <li><a href="#设置数据库端口号默认5432点击next">设置数据库端口号（默认5432），点击Next</a></li>
-    <li><a href="#设置语言点击next">设置语言，点击Next</a></li>
-    <li><a href="#后面一直点next即可">后面一直点Next即可</a></li>
-    <li><a href="#等待安装完毕">等待安装完毕</a></li>
-    <li><a href="#取消勾选stack-builder点击finish">取消勾选Stack Builder，点击Finish</a></li>
-    <li><a href="#至此postgresql安装完毕">至此，PostgreSQL安装完毕</a></li>
-    <li><a href="#postgressql安装携带了pgadmin软件可以用来管理postgresql数据库打开pgadmin">PostgresSQL安装携带了pgAdmin软件，可以用来管理PostgreSQL数据库，打开pgAdmin</a></li>
-    <li><a href="#点击左上角的server">点击左上角的Server</a></li>
-    <li><a href="#输入设置的密码点击ok">输入设置的密码，点击OK</a></li>
-    <li><a href="#如下界面即表示安装成功">如下界面即表示安装成功</a></li>
-    <li><a href="#也可以使用第三方数据库连接器进行连接测试postgresql的用户名为postgres">也可以使用第三方数据库连接器进行连接测试，PostgreSQL的用户名为postgres</a></li>
+    <li><a href="#problems-encountered">Problems encountered</a></li>
+    <li><a href="#cause-of-the-problem">Cause of the problem</a></li>
+    <li><a href="#solution">Solution</a></li>
   </ol>
 </nav>
         </div>
@@ -335,7 +320,7 @@
     
     <header class="article-category">
         
-            <a href="/blog/zh-cn/categories/database/" >
+            <a href="/blog/categories/database/" style="background-color: #2a9d8f; color: #fff;">
                 Database
             </a>
         
@@ -344,12 +329,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85postgresql-16.1/">在Windows上安装PostgreSQL 16.1</a>
+            <a href="/blog/p/show-tables-in-snowflake/">SHOW TABLES in Snowflake</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            Install PostgreSQL 16.1 on Windows
+            Snowflake 中的 SHOW TABLES
         </h3>
         
     </div>
@@ -370,7 +355,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 15, 2023</time>
+                <time class="article-time--published">Feb 02, 2024</time>
             </div>
         
 
@@ -385,7 +370,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    3 minute read
                 </time>
             </div>
         
@@ -407,7 +392,7 @@
 
             <div>
                 
-                    <a href="https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/" class="link">English</a>
+                    <a href="https://javenjin.github.io/blog/zh-cn/p/snowflake-%E4%B8%AD%E7%9A%84-show-tables/" class="link">中文</a>
                 
             </div>
         </footer>
@@ -419,12 +404,41 @@
     <section class="article-content">
     
     
-    <h1 id="在windows上安装postgresql-161">在Windows上安装PostgreSQL 16.1</h1>
-<h2 id="前往官网下载postgresql安装包">前往官网下载PostgreSQL安装包</h2>
-<p>下载PostgreSQL安装包。</p>
-<p><a class="link" href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads"  target="_blank" rel="noopener"
-    >https://www.enterprisedb.com/downloads/postgres-postgresql-downloads</a>.</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-1.png"
+    <h1 id="show-tables-in-snowflake">SHOW TABLES in Snowflake</h1>
+<h2 id="problems-encountered">Problems encountered</h2>
+<p>Execute the following SQL in Snowflake to query the tables contained in the database.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SHOW</span><span class="w"> </span><span class="n">TABLES</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>When my database structure is as follows:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Snowflake Schema Test(database)
+</span></span><span class="line"><span class="cl">    JAVEN(schema)
+</span></span><span class="line"><span class="cl">        TestTable(table)
+</span></span><span class="line"><span class="cl">        TestTable1(table)
+</span></span><span class="line"><span class="cl">    PUBLIC(schema)
+</span></span><span class="line"><span class="cl">        TestTable(table)
+</span></span><span class="line"><span class="cl">        TestTable1(table)
+</span></span><span class="line"><span class="cl">        TestTable2(table)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/SHOW%20TABLES%20in%20Snowflake/SHOW-TABLES-in-Snowflake-1.png"
 	
 	
 	
@@ -432,8 +446,46 @@
 	
 	
 ></p>
-<h2 id="打开安装包">打开安装包</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-2.png"
+<p>At this point, the result of executing SHOW TABLES is as follows:</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>created_on</strong></th>
+<th><strong>name</strong></th>
+<th><strong>database_name</strong></th>
+<th><strong>schema_name</strong></th>
+<th><strong>kind</strong></th>
+<th><strong>owner</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">2024-02-01 23:30:24.534 -0800</td>
+<td>TestTable</td>
+<td>Snowflake Schema Test</td>
+<td>JAVEN</td>
+<td>TABLE</td>
+<td>ACCOUNTADMIN</td>
+</tr>
+<tr>
+<td style="text-align:left">2024-02-01 23:30:30.178 -0800</td>
+<td>TestTable1</td>
+<td>Snowflake Schema Test</td>
+<td>JAVEN</td>
+<td>TABLE</td>
+<td>ACCOUNTADMIN</td>
+</tr>
+<tr>
+<td style="text-align:left">2024-02-01 23:30:36.126 -0800</td>
+<td>TestTable2</td>
+<td>Snowflake Schema Test</td>
+<td>PUBLIC</td>
+<td>TABLE</td>
+<td>ACCOUNTADMIN</td>
+</tr>
+</tbody>
+</table></div>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/SHOW%20TABLES%20in%20Snowflake/SHOW-TABLES-in-Snowflake-2.png"
 	
 	
 	
@@ -441,8 +493,106 @@
 	
 	
 ></p>
-<h2 id="点击next">点击Next</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-3.png"
+<p>Obviously, there are 5 tables in the database, but the query comes up with only 3 tables.</p>
+<h2 id="cause-of-the-problem">Cause of the problem</h2>
+<p>We guessed that it might be because there are renamed tables under different Schema, and Snowflake did the de-duplication. But this is not true, the official explanation for this is as follows:</p>
+<blockquote>
+<p>In the output, results are sorted by database name, schema name, and then table name. This means results for a database can contain tables from multiple schemas and might break pagination. In order for pagination to work as expected, <strong>you must execute the SHOW TABLES command for a single schema</strong>. You can use the IN SCHEMA &lt;schema_name&gt; parameter to the SHOW TABLES command. Alternatively, you can use the schema in the current context by executing a USE SCHEMA command before executing a SHOW TABLES command.</p>
+</blockquote>
+<blockquote>
+<p>References: <a class="link" href="https://docs.snowflake.com/en/sql-reference/sql/show-tables#usage-notes"  target="_blank" rel="noopener"
+    >https://docs.snowflake.com/en/sql-reference/sql/show-tables#usage-notes</a></p>
+</blockquote>
+<p>It means that only executing this SQL against a Schema is supported.</p>
+<h2 id="solution">Solution</h2>
+<p>When our business must require a single SQL query for all the tables under that database, it is obviously wrong to use SHOW TABLES directly.</p>
+<p>But Snowflake&rsquo;s documentation has some optional parameters for SHOW TABLES:</p>
+<blockquote>
+<p>[ IN &hellip; ]<br>
+ Optionally specifies the scope of the command. Specify one of the following:<br>
+ <br>
+ <strong><code>DATABASE</code></strong>,<br>
+ <strong><code>DATABASE &lt;db_name&gt;</code></strong><br>
+  Returns records for the current database in use or for a specified database (&lt;db_name&gt;).<br>
+  If you specify <code>DATABASE</code> without &lt;db_name&gt; and no database is in use, the keyword has no effect on the output.<br>
+ <br>
+ <strong><code>Schema</code></strong>,<br>
+ <strong><code>SCHEMA &lt;schema_name&gt;</code></strong>,<br>
+ <strong><code>&lt;schema_name&gt;</code></strong><br>
+  Returns records for the current schema in use or a specified schema (&lt;schema_name&gt;).<br>
+  SCHEMA is optional if a database is in use or if you specify the fully qualified &lt;schema_name&gt; (for example, <code>db.schema</code>).<br>
+  If no database is in use, specifying <code>SCHEMA</code> has no effect on the output.</p>
+</blockquote>
+<blockquote>
+<p>References: <a class="link" href="https://docs.snowflake.com/en/sql-reference/sql/show-tables#parameters"  target="_blank" rel="noopener"
+    >https://docs.snowflake.com/en/sql-reference/sql/show-tables#parameters</a></p>
+</blockquote>
+<p>So when we use the following SQL:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SHOW</span><span class="w"> </span><span class="n">TABLES</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="k">DATABASE</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>Since no database is specified, the current default database is used, which happens to be in the range we expect.</p>
+<p>The return result is as follows:</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>created_on</strong></th>
+<th><strong>name</strong></th>
+<th><strong>database_name</strong></th>
+<th><strong>schema_name</strong></th>
+<th><strong>kind</strong></th>
+<th><strong>owner</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">2024-02-01 23:30:24.534 -0800</td>
+<td>TestTable</td>
+<td>Snowflake Schema Test</td>
+<td>JAVEN</td>
+<td>TABLE</td>
+<td>ACCOUNTADMIN</td>
+</tr>
+<tr>
+<td style="text-align:left">2024-02-01 23:30:30.178 -0800</td>
+<td>TestTable1</td>
+<td>Snowflake Schema Test</td>
+<td>JAVEN</td>
+<td>TABLE</td>
+<td>ACCOUNTADMIN</td>
+</tr>
+<tr>
+<td style="text-align:left">2024-02-01 23:29:33.955 -0800</td>
+<td>TestTable</td>
+<td>Snowflake Schema Test</td>
+<td>PUBLIC</td>
+<td>TABLE</td>
+<td>ACCOUNTADMIN</td>
+</tr>
+<tr>
+<td style="text-align:left">2024-02-01 23:29:42.900 -0800</td>
+<td>TestTable1</td>
+<td>Snowflake Schema Test</td>
+<td>PUBLIC</td>
+<td>TABLE</td>
+<td>ACCOUNTADMIN</td>
+</tr>
+<tr>
+<td style="text-align:left">2024-02-01 23:30:36.126 -0800</td>
+<td>TestTable2</td>
+<td>Snowflake Schema Test</td>
+<td>PUBLIC</td>
+<td>TABLE</td>
+<td>ACCOUNTADMIN</td>
+</tr>
+</tbody>
+</table></div>
+<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/SHOW%20TABLES%20in%20Snowflake/SHOW-TABLES-in-Snowflake-3.png"
 	
 	
 	
@@ -450,125 +600,6 @@
 	
 	
 ></p>
-<h2 id="修改安装目录然后点击next">修改安装目录然后点击Next</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-4.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="保持默认选项点击next">保持默认选项，点击Next</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-5.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="设置数据目录点击next">设置数据目录，点击Next</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-6.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="设置密码点击next">设置密码，点击Next</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-7.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="设置数据库端口号默认5432点击next">设置数据库端口号（默认5432），点击Next</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-8.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="设置语言点击next">设置语言，点击Next</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-9.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="后面一直点next即可">后面一直点Next即可</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-10.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="等待安装完毕">等待安装完毕</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-11.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="取消勾选stack-builder点击finish">取消勾选Stack Builder，点击Finish</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-12.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="至此postgresql安装完毕">至此，PostgreSQL安装完毕</h2>
-<h2 id="postgressql安装携带了pgadmin软件可以用来管理postgresql数据库打开pgadmin">PostgresSQL安装携带了pgAdmin软件，可以用来管理PostgreSQL数据库，打开pgAdmin</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-13.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="点击左上角的server">点击左上角的Server</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-14.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="输入设置的密码点击ok">输入设置的密码，点击OK</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-15.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="如下界面即表示安装成功">如下界面即表示安装成功</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20PostgreSQL%2016.1%20on%20Windows/install-postgresql-16.1-on-windows-16.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-></p>
-<h2 id="也可以使用第三方数据库连接器进行连接测试postgresql的用户名为postgres">也可以使用第三方数据库连接器进行连接测试，PostgreSQL的用户名为postgres</h2>
 
 </section>
 
@@ -577,7 +608,7 @@
     
     <section class="article-tags">
         
-            <a href="/blog/zh-cn/tags/database/">Database</a>
+            <a href="/blog/tags/database/">Database</a>
         
     </section>
 
@@ -605,18 +636,18 @@
     
 
 <aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
+    <h2 class="section-title">Related content</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
             
                 
 <article class="">
-    <a href="/blog/zh-cn/p/snowflake-%E4%B8%AD%E7%9A%84-show-tables/">
+    <a href="/blog/p/install-sqlserver-2022-16.00.1000-on-windows/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Snowflake 中的 SHOW TABLES</h2>
+            <h2 class="article-title">Install SQLServer 2022 (16.00.1000) on Windows</h2>
         </div>
     </a>
 </article>
@@ -624,12 +655,12 @@
             
                 
 <article class="">
-    <a href="/blog/zh-cn/p/%E5%9C%A8-windows-%E4%B8%8A%E5%AE%89%E8%A3%85-sqlserver-2022-16.00.1000/">
+    <a href="/blog/p/install-dm8-on-windows/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">在 Windows 上安装 SQLServer 2022 (16.00.1000)</h2>
+            <h2 class="article-title">Install DM8 on Windows</h2>
         </div>
     </a>
 </article>
@@ -637,12 +668,12 @@
             
                 
 <article class="">
-    <a href="/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85dm8/">
+    <a href="/blog/p/install-oracle-12c-r2-on-windows/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">在Windows上安装DM8</h2>
+            <h2 class="article-title">Install Oracle-12c-R2 on Windows</h2>
         </div>
     </a>
 </article>
@@ -650,12 +681,12 @@
             
                 
 <article class="">
-    <a href="/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85oracle-12c-r2/">
+    <a href="/blog/p/influxdb-times-series-data-platform/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">在Windows上安装Oracle-12c-R2</h2>
+            <h2 class="article-title">InfluxDB Times Series Data Platform</h2>
         </div>
     </a>
 </article>
@@ -663,12 +694,12 @@
             
                 
 <article class="">
-    <a href="/blog/zh-cn/p/influxdb-%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/">
+    <a href="/blog/p/how-to-use-stored-procedure-for-analytics-on-sql-server-databases/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">InfluxDB 时间序列数据平台</h2>
+            <h2 class="article-title">How to use Stored Procedure for analytics on SQL Server databases</h2>
         </div>
     </a>
 </article>
@@ -694,7 +725,7 @@
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 

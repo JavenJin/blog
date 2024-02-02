@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://javenjin.github.io/blog/</loc>
-    <lastmod>2024-01-24T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/categories/</loc>
-    <lastmod>2024-01-24T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -28,8 +28,34 @@
                 href="https://javenjin.github.io/blog/categories/"
                 />
   </url><url>
+    <loc>https://javenjin.github.io/blog/tags/database/</loc>
+    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/tags/database/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/tags/database/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/categories/database/</loc>
+    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/categories/database/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/categories/database/"
+                />
+  </url><url>
     <loc>https://javenjin.github.io/blog/post/</loc>
-    <lastmod>2024-01-24T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -39,6 +65,32 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://javenjin.github.io/blog/post/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/p/show-tables-in-snowflake/</loc>
+    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/snowflake-%E4%B8%AD%E7%9A%84-show-tables/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/p/show-tables-in-snowflake/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/tags/</loc>
+    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://javenjin.github.io/blog/tags/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/setting-black-mode-in-chrome/</loc>
@@ -52,19 +104,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://javenjin.github.io/blog/p/setting-black-mode-in-chrome/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/tags/</loc>
-    <lastmod>2024-01-24T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/tags/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/tags/tools/</loc>
@@ -91,32 +130,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://javenjin.github.io/blog/categories/tools/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/tags/database/</loc>
-    <lastmod>2024-01-22T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/tags/database/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/tags/database/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/categories/database/</loc>
-    <lastmod>2024-01-22T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/categories/database/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://javenjin.github.io/blog/categories/database/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/</loc>
