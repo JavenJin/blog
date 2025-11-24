@@ -6,21 +6,21 @@
         <description>Recent content in Categories on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Fri, 02 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 24 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Tools</title>
+        <link>https://javenjin.github.io/blog/categories/tools/</link>
+        <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/categories/tools/</guid>
+        <description>&lt;img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/categories/tools/tools.png" alt="Featured image of post Tools" /&gt;</description>
+        </item>
+        <item>
         <title>Database</title>
         <link>https://javenjin.github.io/blog/categories/database/</link>
         <pubDate>Fri, 02 Feb 2024 00:00:00 +0000</pubDate>
         
         <guid>https://javenjin.github.io/blog/categories/database/</guid>
         <description>&lt;img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/categories/database/database.png" alt="Featured image of post Database" /&gt;</description>
-        </item>
-        <item>
-        <title>Tools</title>
-        <link>https://javenjin.github.io/blog/categories/tools/</link>
-        <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
-        
-        <guid>https://javenjin.github.io/blog/categories/tools/</guid>
-        <description>&lt;img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/categories/tools/tools.png" alt="Featured image of post Tools" /&gt;</description>
         </item>
         <item>
         <title>C Sharp</title>
@@ -44,7 +44,7 @@
         <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
         
         <guid>https://javenjin.github.io/blog/categories/java-programming-language/</guid>
-        <description>&lt;img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/categories/java-programming-language/java.png" alt="Featured image of post Java (Programming Language)" /&gt;</description>
+        <description></description>
         </item>
         <item>
         <title>Machine Learning</title>
@@ -68,7 +68,7 @@
         <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
         
         <guid>https://javenjin.github.io/blog/categories/c-programming-language/</guid>
-        <description>&lt;img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/categories/c-programming-language/c.jpg" alt="Featured image of post C (Programming Language)" /&gt;</description>
+        <description></description>
         </item>
         <item>
         <title>Front End</title>
@@ -85,6 +85,22 @@
         
         <guid>https://javenjin.github.io/blog/categories/computer-vision/</guid>
         <description>&lt;img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/categories/computer-vision/computer-vision.png" alt="Featured image of post Computer Vision" /&gt;</description>
+        </item>
+        <item>
+        <title>C (Programming Language)</title>
+        <link>https://javenjin.github.io/blog/categories/c-programming-language/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/categories/c-programming-language/</guid>
+        <description>&lt;img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/categories/c-programming-language/c.jpg" alt="Featured image of post C (Programming Language)" /&gt;</description>
+        </item>
+        <item>
+        <title>Java (Programming Language)</title>
+        <link>https://javenjin.github.io/blog/categories/java-programming-language/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://javenjin.github.io/blog/categories/java-programming-language/</guid>
+        <description>&lt;img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/categories/java-programming-language/java.png" alt="Featured image of post Java (Programming Language)" /&gt;</description>
         </item>
         
     </channel>

@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://javenjin.github.io/blog/zh-cn/p/influxdb-%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/'>
 
-<link rel="stylesheet" href="/blog/scss/style.min.84fddddb435e5cc2e5f82ceae9480ccaf4410b94e3d1c786e727ff9ffc42f753.css"><meta property='og:title' content='InfluxDB 时间序列数据平台'>
+<link rel="stylesheet" href="/blog/scss/style.min.3a2504374c2bd1bc51c39e9c286d2821ebf00b1d2086320785cf01db49e64bc9.css"><meta property='og:title' content='InfluxDB 时间序列数据平台'>
 <meta property='og:description' content='InfluxDB Times Series Data Platform'>
 <meta property='og:url' content='https://javenjin.github.io/blog/zh-cn/p/influxdb-%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/'>
 <meta property='og:site_name' content='Javen Blog'>
@@ -52,13 +52,13 @@
         
             
             <figure class="site-avatar">
-                <a href="/blog/zh-cn">
+                <a href="/blog/zh-cn/">
                 
                     
                     
                     
                         
-                        <img src="/blog/img/avatar_huaeed358bd88487ddef67db6ff58c090f_197841_300x0_resize_q75_box.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -412,50 +412,50 @@
 <p><a class="link" href="https://docs.influxdata.com/influxdb/v2.1/reference/key-concepts/data-elements/"  target="_blank" rel="noopener"
     >https://docs.influxdata.com/influxdb/v2.1/reference/key-concepts/data-elements/</a></p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>_time</th>
-<th>_measurement</th>
-<th>location</th>
-<th>scientist</th>
-<th>_field</th>
-<th>_value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2019-08-18T00:00:00Z</td>
-<td>census</td>
-<td>klamath</td>
-<td>anderson</td>
-<td>bees</td>
-<td>23</td>
-</tr>
-<tr>
-<td>2019-08-18T00:00:00Z</td>
-<td>census</td>
-<td>portland</td>
-<td>mullen</td>
-<td>ants</td>
-<td>30</td>
-</tr>
-<tr>
-<td>2019-08-18T00:06:00Z</td>
-<td>census</td>
-<td>klamath</td>
-<td>anderson</td>
-<td>bees</td>
-<td>28</td>
-</tr>
-<tr>
-<td>2019-08-18T00:06:00Z</td>
-<td>census</td>
-<td>portland</td>
-<td>mullen</td>
-<td>ants</td>
-<td>32</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>_time</th>
+          <th>_measurement</th>
+          <th>location</th>
+          <th>scientist</th>
+          <th>_field</th>
+          <th>_value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>2019-08-18T00:00:00Z</td>
+          <td>census</td>
+          <td>klamath</td>
+          <td>anderson</td>
+          <td>bees</td>
+          <td>23</td>
+      </tr>
+      <tr>
+          <td>2019-08-18T00:00:00Z</td>
+          <td>census</td>
+          <td>portland</td>
+          <td>mullen</td>
+          <td>ants</td>
+          <td>30</td>
+      </tr>
+      <tr>
+          <td>2019-08-18T00:06:00Z</td>
+          <td>census</td>
+          <td>klamath</td>
+          <td>anderson</td>
+          <td>bees</td>
+          <td>28</td>
+      </tr>
+      <tr>
+          <td>2019-08-18T00:06:00Z</td>
+          <td>census</td>
+          <td>portland</td>
+          <td>mullen</td>
+          <td>ants</td>
+          <td>32</td>
+      </tr>
+  </tbody>
 </table></div>
 <ul>
 <li>
@@ -530,25 +530,25 @@
 <p>系列(series)</p>
 <p>一个系列键是共享一个测量、标签集和字段键的点的集合。例如，样本数据包括两个独特的系列键。</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>_measurement</th>
-<th>tag set</th>
-<th>_field</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>census</td>
-<td>location=klamath,scientist=anderson</td>
-<td>bees</td>
-</tr>
-<tr>
-<td>census</td>
-<td>location=portland,scientist=mullen</td>
-<td>ants</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>_measurement</th>
+          <th>tag set</th>
+          <th>_field</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>census</td>
+          <td>location=klamath,scientist=anderson</td>
+          <td>bees</td>
+      </tr>
+      <tr>
+          <td>census</td>
+          <td>location=portland,scientist=mullen</td>
+          <td>ants</td>
+      </tr>
+  </tbody>
 </table></div>
 <p>一个系列包括时间戳和给定系列键的字段值。从样本数据来看，这里有一个系列键和相应的系列。</p>
 <div class="highlight"><div class="chroma">
@@ -641,50 +641,50 @@
 </ul>
 <h2 id="数据类型">数据类型</h2>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>InfluxDB datatype</th>
-<th>C# datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>dateTime:RFC3339</td>
-<td>DateTimeOffset</td>
-</tr>
-<tr>
-<td>dateTime:RFC3339Nano</td>
-<td>DateTimeOffset</td>
-</tr>
-<tr>
-<td>string</td>
-<td>String</td>
-</tr>
-<tr>
-<td>double</td>
-<td>Double</td>
-</tr>
-<tr>
-<td>boolean</td>
-<td>Boolean</td>
-</tr>
-<tr>
-<td>long</td>
-<td>Int64</td>
-</tr>
-<tr>
-<td>unsignedLong</td>
-<td>UInt64</td>
-</tr>
-<tr>
-<td>base64Binary</td>
-<td>Byte[]</td>
-</tr>
-<tr>
-<td>duration</td>
-<td>TimeSpan</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>InfluxDB datatype</th>
+          <th>C# datatype</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>dateTime:RFC3339</td>
+          <td>DateTimeOffset</td>
+      </tr>
+      <tr>
+          <td>dateTime:RFC3339Nano</td>
+          <td>DateTimeOffset</td>
+      </tr>
+      <tr>
+          <td>string</td>
+          <td>String</td>
+      </tr>
+      <tr>
+          <td>double</td>
+          <td>Double</td>
+      </tr>
+      <tr>
+          <td>boolean</td>
+          <td>Boolean</td>
+      </tr>
+      <tr>
+          <td>long</td>
+          <td>Int64</td>
+      </tr>
+      <tr>
+          <td>unsignedLong</td>
+          <td>UInt64</td>
+      </tr>
+      <tr>
+          <td>base64Binary</td>
+          <td>Byte[]</td>
+      </tr>
+      <tr>
+          <td>duration</td>
+          <td>TimeSpan</td>
+      </tr>
+  </tbody>
 </table></div>
 <h2 id="连接配置">连接配置</h2>
 <p><a class="link" href="https://github.com/influxdata/influxdb-client-csharp/tree/master/Client#client-connection-string"  target="_blank" rel="noopener"
@@ -700,50 +700,50 @@
 </div>
 </div><p>支持以下选项：</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>Property</th>
-<th>default</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>org</td>
-<td>-</td>
-<td>default destination organization for writes and queries</td>
-</tr>
-<tr>
-<td>bucket</td>
-<td>-</td>
-<td>default destination bucket for writes</td>
-</tr>
-<tr>
-<td>token</td>
-<td>-</td>
-<td>the token to use for the authorization</td>
-</tr>
-<tr>
-<td>logLevel</td>
-<td>NONE</td>
-<td>rest client verbosity level</td>
-</tr>
-<tr>
-<td>timeout</td>
-<td>10000 ms</td>
-<td>socket timeout</td>
-</tr>
-<tr>
-<td>allowHttpRedirects</td>
-<td>false</td>
-<td>Configure automatically following HTTP 3xx redirects</td>
-</tr>
-<tr>
-<td>verifySsl</td>
-<td>true</td>
-<td>Ignore Certificate Validation Errors when <code>false</code></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Property</th>
+          <th>default</th>
+          <th>description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>org</td>
+          <td>-</td>
+          <td>default destination organization for writes and queries</td>
+      </tr>
+      <tr>
+          <td>bucket</td>
+          <td>-</td>
+          <td>default destination bucket for writes</td>
+      </tr>
+      <tr>
+          <td>token</td>
+          <td>-</td>
+          <td>the token to use for the authorization</td>
+      </tr>
+      <tr>
+          <td>logLevel</td>
+          <td>NONE</td>
+          <td>rest client verbosity level</td>
+      </tr>
+      <tr>
+          <td>timeout</td>
+          <td>10000 ms</td>
+          <td>socket timeout</td>
+      </tr>
+      <tr>
+          <td>allowHttpRedirects</td>
+          <td>false</td>
+          <td>Configure automatically following HTTP 3xx redirects</td>
+      </tr>
+      <tr>
+          <td>verifySsl</td>
+          <td>true</td>
+          <td>Ignore Certificate Validation Errors when <code>false</code></td>
+      </tr>
+  </tbody>
 </table></div>
 <p>The <code>timeout</code> supports <code>ms</code>, <code>s</code> and <code>m</code> as unit. Default is milliseconds.</p>
 
@@ -866,7 +866,7 @@
         
             2020 - 
         
-        2024 Javen Blog
+        2025 Javen Blog
     </section>
     
     <section class="powerby">

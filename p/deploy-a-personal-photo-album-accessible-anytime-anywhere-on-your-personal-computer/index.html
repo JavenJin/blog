@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='个人电脑上部署一台随时随地可访问的私人相册'>
+<title>Deploy a Personal Photo Album Accessible Anytime, Anywhere on Your Personal Computer</title>
+
+<link rel='canonical' href='https://javenjin.github.io/blog/p/deploy-a-personal-photo-album-accessible-anytime-anywhere-on-your-personal-computer/'>
+
+<link rel="stylesheet" href="/blog/scss/style.min.3a2504374c2bd1bc51c39e9c286d2821ebf00b1d2086320785cf01db49e64bc9.css"><meta property='og:title' content='Deploy a Personal Photo Album Accessible Anytime, Anywhere on Your Personal Computer'>
+<meta property='og:description' content='个人电脑上部署一台随时随地可访问的私人相册'>
+<meta property='og:url' content='https://javenjin.github.io/blog/p/deploy-a-personal-photo-album-accessible-anytime-anywhere-on-your-personal-computer/'>
+<meta property='og:site_name' content='Javen Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Tools' /><meta property='article:published_time' content='2025-11-24T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-11-24T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Deploy a Personal Photo Album Accessible Anytime, Anywhere on Your Personal Computer">
+<meta name="twitter:description" content="个人电脑上部署一台随时随地可访问的私人相册">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/blog/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🤩</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/blog">Javen Blog</a></h1>
+            <h2 class="site-description">Javen.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/javenjin'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://instagram.com/javenjin98'
+                        target="_blank"
+                        title="Ins"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16.65 7.2H16.66M8 20H16C18.2091 20 20 18.2091 20 16V8C20 5.79086 18.2091 4 16 4H8C5.79086 4 4 5.79086 4 8V16C4 18.2091 5.79086 20 8 20ZM15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12Z"/>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:wenjie.jin@hotmail.com'
+                        target="_blank"
+                        title="Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/blog/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://javenjin.github.io/blog/" selected>English</option>
+                        
+                            <option value="https://javenjin.github.io/blog/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#final-goal">Final Goal</a></li>
+    <li><a href="#stage-1-install-docker-desktop">Stage 1: Install Docker Desktop</a>
+      <ol>
+        <li><a href="#download-docker-desktop-official-latest-version">Download Docker Desktop (Official Latest Version)</a></li>
+        <li><a href="#after-installation-the-system-will-automatically-restart-or-prompt-to-enable-wsl2-background-update-check-use-wsl2-instead-of-hyper-v--done">After installation, the system will automatically restart or prompt to enable WSL2, background update, check &ldquo;Use WSL2 instead of Hyper-V&rdquo; → Done.</a></li>
+        <li><a href="#start-docker-desktop-a-small-whale-icon-will-appear-on-the-desktop-turning-green-indicates-normal-operation">Start Docker Desktop (a small whale icon will appear on the desktop, turning green indicates normal operation).</a></li>
+        <li><a href="#optional-but-recommended-set-auto-start-on-boot-right-click-the-small-whale-in-the-lower-right-corner--settings--general--start-docker-desktop-when-you-log-in">(Optional but recommended) Set auto-start on boot: Right-click the small whale in the lower right corner → Settings → General → Start Docker Desktop when you log in.</a></li>
+      </ol>
+    </li>
+    <li><a href="#stage-2-deploy-immich-with-one-click-gui--two-commands">Stage 2: Deploy Immich with One Click (GUI + Two Commands)</a>
+      <ol>
+        <li><a href="#create-a-new-folder-as-the-project-directory-recommended-to-place-it-on-a-large-capacity-disk">Create a new folder as the project directory (recommended to place it on a large-capacity disk)</a></li>
+        <li><a href="#right-click-in-this-folder--open-in-terminal-or-open-powershell-here">Right-click in this folder → &ldquo;Open in Terminal&rdquo; or &ldquo;Open PowerShell here&rdquo;</a></li>
+        <li><a href="#copy-and-paste-the-following-two-commands-directly-one-line-at-a-time-press-enter-to-execute">Copy and paste the following two commands directly (one line at a time, press Enter to execute):</a></li>
+        <li><a href="#after-the-download-is-complete-you-will-see-two-more-files-in-the-folder-docker-composeyml-and-env">After the download is complete, you will see two more files in the folder: <code>docker-compose.yml</code> and <code>.env</code></a></li>
+        <li><a href="#double-click-to-open-the-env-file-using-notepad-or-notepad-modify-the-following-lines-keep-the-rest-unchanged">Double-click to open the <code>.env</code> file (using Notepad or Notepad++), modify the following lines (keep the rest unchanged):</a></li>
+        <li><a href="#return-to-the-terminal-window-and-start-immich-with-one-click">Return to the terminal window and start Immich with one click:</a></li>
+        <li><a href="#after-startup-is-complete-open-httplocalhost2283-in-the-browser">After startup is complete, open http://localhost:2283 in the browser</a></li>
+      </ol>
+    </li>
+    <li><a href="#stage-3-use-tailscale-for-public-network-access">Stage 3: Use Tailscale for Public Network Access</a>
+      <ol>
+        <li><a href="#register-a-tailscale-account">Register a Tailscale Account</a></li>
+        <li><a href="#install-tailscale-client-on-devices-to-access-remotely">Install Tailscale Client on Devices to Access Remotely</a></li>
+        <li><a href="#enable-funnel">Enable Funnel</a></li>
+        <li><a href="#expose-local-service-with-one-click">Expose Local Service with One Click</a></li>
+        <li><a href="#after-success-the-terminal-will-immediately-display-your-public-network-address-for-example">After success, the terminal will immediately display your public network address, for example:</a></li>
+        <li><a href="#run-in-background-auto-start-on-boot">Run in Background, Auto-start on Boot</a></li>
+      </ol>
+    </li>
+    <li><a href="#final-testing">Final Testing</a>
+      <ol>
+        <li><a href="#download-immich-app-on-your-phone-official-website--or-search-for-immich-in-the-app-store">Download Immich App on your phone (official website https://immich.app/ or search for Immich in the app store)</a></li>
+        <li><a href="#open-the-app--manually-add-server--enter-the-public-network-address-you-just-obtained">Open the App → Manually add server → Enter the public network address you just obtained</a></li>
+        <li><a href="#log-in-with-the-account-you-just-registered--enable-auto-backup--you-will-see-your-phone-photos-start-uploading-in-a-few-seconds">Log in with the account you just registered → Enable &ldquo;Auto Backup&rdquo; → You will see your phone photos start uploading in a few seconds!</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/blog/categories/tools/" style="background-color: #2a9d8f; color: #fff;">
+                Tools
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/blog/p/deploy-a-personal-photo-album-accessible-anytime-anywhere-on-your-personal-computer/">Deploy a Personal Photo Album Accessible Anytime, Anywhere on Your Personal Computer</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            个人电脑上部署一台随时随地可访问的私人相册
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 24, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    4 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+        <footer class="article-translations">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+            <div>
+                
+                    <a href="https://javenjin.github.io/blog/zh-cn/p/%E4%B8%AA%E4%BA%BA%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2%E4%B8%80%E5%8F%B0%E9%9A%8F%E6%97%B6%E9%9A%8F%E5%9C%B0%E5%8F%AF%E8%AE%BF%E9%97%AE%E7%9A%84%E7%A7%81%E4%BA%BA%E7%9B%B8%E5%86%8C/" class="link">中文</a>
+                
+            </div>
+        </footer>
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="deploy-a-personal-photo-album-accessible-anytime-anywhere-on-your-personal-computer">Deploy a Personal Photo Album Accessible Anytime, Anywhere on Your Personal Computer</h1>
+<p>The goal is to install <em>Immich</em> (a self-hosted photo/video backup server that supports mobile backup, similar to Google Photos) on a personal computer as the core backup service, and use <em>Tailscale</em> (a zero-configuration VPN tool based on WireGuard) to enable remote access (securely exposing the local service to the public network).</p>
+<p>This combination is suitable for personal backup scenarios: <em>Immich</em> handles backup storage, <em>Tailscale</em> solves the intranet penetration problem, requires no complex configuration and is secure and reliable.</p>
+<h2 id="final-goal">Final Goal</h2>
+<ul>
+<li>Immich runs locally at http://localhost:2283</li>
+<li>Expose port 2283 to the public network through Tailscale Funnel</li>
+<li>The mobile App can automatically backup photos/videos at any time using the public domain name</li>
+</ul>
+<h2 id="stage-1-install-docker-desktop">Stage 1: Install Docker Desktop</h2>
+<h3 id="download-docker-desktop-official-latest-version">Download Docker Desktop (Official Latest Version)</h3>
+<blockquote>
+<p><a class="link" href="https://www.docker.com/products/docker-desktop/"  target="_blank" rel="noopener"
+    >https://www.docker.com/products/docker-desktop/</a></p>
+</blockquote>
+<p>Click &ldquo;Download for Windows&rdquo; directly -&gt; Double-click to install (just click Next all the way)</p>
+<h3 id="after-installation-the-system-will-automatically-restart-or-prompt-to-enable-wsl2-background-update-check-use-wsl2-instead-of-hyper-v--done">After installation, the system will automatically restart or prompt to enable WSL2, background update, check &ldquo;Use WSL2 instead of Hyper-V&rdquo; → Done.</h3>
+<h3 id="start-docker-desktop-a-small-whale-icon-will-appear-on-the-desktop-turning-green-indicates-normal-operation">Start Docker Desktop (a small whale icon will appear on the desktop, turning green indicates normal operation).</h3>
+<h3 id="optional-but-recommended-set-auto-start-on-boot-right-click-the-small-whale-in-the-lower-right-corner--settings--general--start-docker-desktop-when-you-log-in">(Optional but recommended) Set auto-start on boot: Right-click the small whale in the lower right corner → Settings → General → Start Docker Desktop when you log in.</h3>
+<h2 id="stage-2-deploy-immich-with-one-click-gui--two-commands">Stage 2: Deploy Immich with One Click (GUI + Two Commands)</h2>
+<h3 id="create-a-new-folder-as-the-project-directory-recommended-to-place-it-on-a-large-capacity-disk">Create a new folder as the project directory (recommended to place it on a large-capacity disk)</h3>
+<p>For example: <code>D:\Immich-Backup</code> (photos will be stored here, need enough space)</p>
+<h3 id="right-click-in-this-folder--open-in-terminal-or-open-powershell-here">Right-click in this folder → &ldquo;Open in Terminal&rdquo; or &ldquo;Open PowerShell here&rdquo;</h3>
+<h3 id="copy-and-paste-the-following-two-commands-directly-one-line-at-a-time-press-enter-to-execute">Copy and paste the following two commands directly (one line at a time, press Enter to execute):</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Invoke-WebRequest</span> <span class="n">-Uri</span> <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="nb">immich-app</span><span class="p">/</span><span class="n">immich</span><span class="p">/</span><span class="n">releases</span><span class="p">/</span><span class="n">latest</span><span class="p">/</span><span class="n">download</span><span class="p">/</span><span class="nb">docker-compose</span><span class="p">.</span><span class="py">yml</span> <span class="n">-OutFile</span> <span class="nb">docker-compose</span><span class="p">.</span><span class="py">yml</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Invoke-WebRequest</span> <span class="n">-Uri</span> <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="nb">immich-app</span><span class="p">/</span><span class="n">immich</span><span class="p">/</span><span class="n">releases</span><span class="p">/</span><span class="n">latest</span><span class="p">/</span><span class="n">download</span><span class="p">/</span><span class="n">example</span><span class="p">.</span><span class="py">env</span> <span class="n">-OutFile</span> <span class="p">.</span><span class="py">env</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="after-the-download-is-complete-you-will-see-two-more-files-in-the-folder-docker-composeyml-and-env">After the download is complete, you will see two more files in the folder: <code>docker-compose.yml</code> and <code>.env</code></h3>
+<h3 id="double-click-to-open-the-env-file-using-notepad-or-notepad-modify-the-following-lines-keep-the-rest-unchanged">Double-click to open the <code>.env</code> file (using Notepad or Notepad++), modify the following lines (keep the rest unchanged):</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">UPLOAD_LOCATION=D:/Immich-Backup/library          # Change to your own absolute path, note the slash is /
+</span></span><span class="line"><span class="cl">DB_DATA_LOCATION=D:/Immich-Backup/postgres        # Same as above
+</span></span><span class="line"><span class="cl">DB_PASSWORD=Set a super strong password like Abc123456!@#   # Must change!
+</span></span><span class="line"><span class="cl">TZ=Asia/Shanghai
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Save and close.</p>
+<h3 id="return-to-the-terminal-window-and-start-immich-with-one-click">Return to the terminal window and start Immich with one click:</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">compose</span> <span class="n">up</span> <span class="n">-d</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The first time will download about 2GB of images, which will take 3~8 minutes with fast internet speed.</p>
+<h3 id="after-startup-is-complete-open-httplocalhost2283-in-the-browser">After startup is complete, open http://localhost:2283 in the browser</h3>
+<p>You will see the Immich registration page → Register the first admin account → Success!</p>
+<h2 id="stage-3-use-tailscale-for-public-network-access">Stage 3: Use Tailscale for Public Network Access</h2>
+<h3 id="register-a-tailscale-account">Register a Tailscale Account</h3>
+<p><a class="link" href="https://login.tailscale.com"  target="_blank" rel="noopener"
+    >https://login.tailscale.com</a></p>
+<h3 id="install-tailscale-client-on-devices-to-access-remotely">Install Tailscale Client on Devices to Access Remotely</h3>
+<p><a class="link" href="https://login.tailscale.com/admin"  target="_blank" rel="noopener"
+    >https://login.tailscale.com/admin</a></p>
+<p>Two devices need to be added here, you can download the app on your phone as another device.</p>
+<h3 id="enable-funnel">Enable Funnel</h3>
+<p>Enter the following command in the terminal to enable Funnel</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tailscale funnel state
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="expose-local-service-with-one-click">Expose Local Service with One Click</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tailscale funnel --https<span class="o">=</span><span class="m">443</span> <span class="m">2283</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="after-success-the-terminal-will-immediately-display-your-public-network-address-for-example">After success, the terminal will immediately display your public network address, for example:</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">https://beijing-nas.yourname.ts.net
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Now anyone can directly access this link in the browser to see your local service (actual test in mainland China shows China Telecom/China Unicom/China Mobile basically have 80~150ms latency, very stable in 2025).</p>
+<h3 id="run-in-background-auto-start-on-boot">Run in Background, Auto-start on Boot</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tailscale funnel --bg --https<span class="o">=</span><span class="m">443</span> <span class="m">2283</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="final-testing">Final Testing</h2>
+<h3 id="download-immich-app-on-your-phone-official-website--or-search-for-immich-in-the-app-store">Download Immich App on your phone (official website <a class="link" href="https://immich.app/"  target="_blank" rel="noopener"
+    >https://immich.app/</a> or search for Immich in the app store)</h3>
+<h3 id="open-the-app--manually-add-server--enter-the-public-network-address-you-just-obtained">Open the App → Manually add server → Enter the public network address you just obtained</h3>
+<p>For example: <a class="link" href="https://beijing-nas.yourname.ts.net"  target="_blank" rel="noopener"
+    >https://beijing-nas.yourname.ts.net</a> (if you used a custom remote port, include the port; if the panel gives you 80/443, you don&rsquo;t need to write the port)</p>
+<h3 id="log-in-with-the-account-you-just-registered--enable-auto-backup--you-will-see-your-phone-photos-start-uploading-in-a-few-seconds">Log in with the account you just registered → Enable &ldquo;Auto Backup&rdquo; → You will see your phone photos start uploading in a few seconds!</h3>
+<p>All done! Now your Windows 11 computer has become a personal &ldquo;Google Photos&rdquo; that can be accessed anytime, anywhere.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/blog/tags/tools/">Tools</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/blog/p/setting-black-mode-in-chrome/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Setting Black Mode in Chrome</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/p/git-error-connection-to-github.com-failed-on-port-443/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Git error - connection to github.com failed on port 443</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/p/github-actions-sending-timed-weather-emails/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">GitHub Actions (Sending Timed Weather Emails)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Install Ubuntu on Windows subsystem using WSL2 technology</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/p/rest-api-design-rulebook/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">REST API Design Rulebook</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Javen Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/blog/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

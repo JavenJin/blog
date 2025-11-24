@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://javenjin.github.io/blog/p/windows-batch-scripts.bat/'>
 
-<link rel="stylesheet" href="/blog/scss/style.min.84fddddb435e5cc2e5f82ceae9480ccaf4410b94e3d1c786e727ff9ffc42f753.css"><meta property='og:title' content='Windows batch scripts(.bat)'>
+<link rel="stylesheet" href="/blog/scss/style.min.3a2504374c2bd1bc51c39e9c286d2821ebf00b1d2086320785cf01db49e64bc9.css"><meta property='og:title' content='Windows batch scripts(.bat)'>
 <meta property='og:description' content='Windows批处理脚本（.bat）'>
 <meta property='og:url' content='https://javenjin.github.io/blog/p/windows-batch-scripts.bat/'>
 <meta property='og:site_name' content='Javen Blog'>
@@ -52,13 +52,13 @@
         
             
             <figure class="site-avatar">
-                <a href="/blog">
+                <a href="/blog/">
                 
                     
                     
                     
                         
-                        <img src="/blog/img/avatar_huaeed358bd88487ddef67db6ff58c090f_197841_300x0_resize_q75_box.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -450,82 +450,82 @@
 </ul>
 <h2 id="variables">Variables</h2>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Explanation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>set var=1</td>
-<td>Define the variable var and copy 1 to a</td>
-</tr>
-<tr>
-<td>set var</td>
-<td>View the value of the variable var</td>
-</tr>
-<tr>
-<td>set v</td>
-<td>View the values of all variables starting with v</td>
-</tr>
-<tr>
-<td>set</td>
-<td>View the values of all variables</td>
-</tr>
-<tr>
-<td>%var%</td>
-<td>Value (content) of var variable</td>
-</tr>
-<tr>
-<td>set /a var=48</td>
-<td>Assign the number 48 to the variable var, a 32-bit integer value, occupying 4 bytes</td>
-</tr>
-<tr>
-<td>set /p var</td>
-<td>The user manually enters a value for var</td>
-</tr>
-<tr>
-<td>set /p var=Please enter some text</td>
-<td>The user manually enters the value for var and displays the prompt text: &ldquo;Please enter some text&rdquo;</td>
-</tr>
-<tr>
-<td>set var=Hello world!</td>
-<td></td>
-</tr>
-<tr>
-<td>echo %var:o=z%</td>
-<td>Output Hello world! without changing the var value</td>
-</tr>
-<tr>
-<td>set var2=%var:ld=ms and bugs%</td>
-<td>Assign Hello worms and bugs! to var2 without changing the var value</td>
-</tr>
-<tr>
-<td>%var:~m%</td>
-<td>A positive number m means that the variable var is taken from the left side after the mth character. A negative number m means that the variable var is taken from the right side after the -mth character and all characters to the right of it.</td>
-</tr>
-<tr>
-<td>%var:~m,n%</td>
-<td>Starting from m, n characters are taken for positive numbers, and n characters are taken for negative numbers until -n characters are left</td>
-</tr>
-<tr>
-<td>set /a num=48</td>
-<td>Assign the value 48 to the variable num</td>
-</tr>
-<tr>
-<td>set /a result=%num%+12</td>
-<td>The result of adding the variables num and 12 is assigned to the variable result</td>
-</tr>
-<tr>
-<td>echo %result%</td>
-<td>Display the value of the variable result</td>
-</tr>
-<tr>
-<td>setlocal EnableDelayedExpansion</td>
-<td>Delayed variable expansion makes sense of !var!</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>Explanation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>set var=1</td>
+          <td>Define the variable var and copy 1 to a</td>
+      </tr>
+      <tr>
+          <td>set var</td>
+          <td>View the value of the variable var</td>
+      </tr>
+      <tr>
+          <td>set v</td>
+          <td>View the values of all variables starting with v</td>
+      </tr>
+      <tr>
+          <td>set</td>
+          <td>View the values of all variables</td>
+      </tr>
+      <tr>
+          <td>%var%</td>
+          <td>Value (content) of var variable</td>
+      </tr>
+      <tr>
+          <td>set /a var=48</td>
+          <td>Assign the number 48 to the variable var, a 32-bit integer value, occupying 4 bytes</td>
+      </tr>
+      <tr>
+          <td>set /p var</td>
+          <td>The user manually enters a value for var</td>
+      </tr>
+      <tr>
+          <td>set /p var=Please enter some text</td>
+          <td>The user manually enters the value for var and displays the prompt text: &ldquo;Please enter some text&rdquo;</td>
+      </tr>
+      <tr>
+          <td>set var=Hello world!</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>echo %var:o=z%</td>
+          <td>Output Hello world! without changing the var value</td>
+      </tr>
+      <tr>
+          <td>set var2=%var:ld=ms and bugs%</td>
+          <td>Assign Hello worms and bugs! to var2 without changing the var value</td>
+      </tr>
+      <tr>
+          <td>%var:~m%</td>
+          <td>A positive number m means that the variable var is taken from the left side after the mth character. A negative number m means that the variable var is taken from the right side after the -mth character and all characters to the right of it.</td>
+      </tr>
+      <tr>
+          <td>%var:~m,n%</td>
+          <td>Starting from m, n characters are taken for positive numbers, and n characters are taken for negative numbers until -n characters are left</td>
+      </tr>
+      <tr>
+          <td>set /a num=48</td>
+          <td>Assign the value 48 to the variable num</td>
+      </tr>
+      <tr>
+          <td>set /a result=%num%+12</td>
+          <td>The result of adding the variables num and 12 is assigned to the variable result</td>
+      </tr>
+      <tr>
+          <td>echo %result%</td>
+          <td>Display the value of the variable result</td>
+      </tr>
+      <tr>
+          <td>setlocal EnableDelayedExpansion</td>
+          <td>Delayed variable expansion makes sense of !var!</td>
+      </tr>
+  </tbody>
 </table></div>
 <h2 id="passing-parameters">Passing parameters</h2>
 <p>Use % to receive arguments Pass arguments directly after call or start or when running a batch file in cmd</p>
@@ -553,42 +553,42 @@
 </div>
 </div><h2 id="condition-if">Condition IF</h2>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>Symbols</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>EQU</td>
-<td>equal</td>
-</tr>
-<tr>
-<td>NEQ</td>
-<td>unequal</td>
-</tr>
-<tr>
-<td>LSS</td>
-<td>less than</td>
-</tr>
-<tr>
-<td>LEQ</td>
-<td>less than or equal to</td>
-</tr>
-<tr>
-<td>GTR</td>
-<td>Greater than</td>
-</tr>
-<tr>
-<td>GEQ</td>
-<td>greater than or equal to</td>
-</tr>
-<tr>
-<td>NOT</td>
-<td>NOT</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Symbols</th>
+          <th>Meaning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>EQU</td>
+          <td>equal</td>
+      </tr>
+      <tr>
+          <td>NEQ</td>
+          <td>unequal</td>
+      </tr>
+      <tr>
+          <td>LSS</td>
+          <td>less than</td>
+      </tr>
+      <tr>
+          <td>LEQ</td>
+          <td>less than or equal to</td>
+      </tr>
+      <tr>
+          <td>GTR</td>
+          <td>Greater than</td>
+      </tr>
+      <tr>
+          <td>GEQ</td>
+          <td>greater than or equal to</td>
+      </tr>
+      <tr>
+          <td>NOT</td>
+          <td>NOT</td>
+      </tr>
+  </tbody>
 </table></div>
 <ul>
 <li>if exist	(Determine if a file exists)</li>
@@ -747,6 +747,19 @@
             
                 
 <article class="">
+    <a href="/blog/p/deploy-a-personal-photo-album-accessible-anytime-anywhere-on-your-personal-computer/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Deploy a Personal Photo Album Accessible Anytime, Anywhere on Your Personal Computer</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
     <a href="/blog/p/setting-black-mode-in-chrome/">
         
         
@@ -797,19 +810,6 @@
 </article>
 
             
-                
-<article class="">
-    <a href="/blog/p/rest-api-design-rulebook/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">REST API Design Rulebook</h2>
-        </div>
-    </a>
-</article>
-
-            
         </div>
     </div>
 </aside>
@@ -825,7 +825,7 @@
         
             2020 - 
         
-        2024 Javen Blog
+        2025 Javen Blog
     </section>
     
     <section class="powerby">

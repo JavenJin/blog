@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://javenjin.github.io/blog/zh-cn/p/snowflake-%E4%B8%AD%E7%9A%84-show-tables/'>
 
-<link rel="stylesheet" href="/blog/scss/style.min.84fddddb435e5cc2e5f82ceae9480ccaf4410b94e3d1c786e727ff9ffc42f753.css"><meta property='og:title' content='Snowflake 中的 SHOW TABLES'>
+<link rel="stylesheet" href="/blog/scss/style.min.3a2504374c2bd1bc51c39e9c286d2821ebf00b1d2086320785cf01db49e64bc9.css"><meta property='og:title' content='Snowflake 中的 SHOW TABLES'>
 <meta property='og:description' content='SHOW TABLES in Snowflake'>
 <meta property='og:url' content='https://javenjin.github.io/blog/zh-cn/p/snowflake-%E4%B8%AD%E7%9A%84-show-tables/'>
 <meta property='og:site_name' content='Javen Blog'>
@@ -52,13 +52,13 @@
         
             
             <figure class="site-avatar">
-                <a href="/blog/zh-cn">
+                <a href="/blog/zh-cn/">
                 
                     
                     
                     
                         
-                        <img src="/blog/img/avatar_huaeed358bd88487ddef67db6ff58c090f_197841_300x0_resize_q75_box.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -448,42 +448,42 @@
 ></p>
 <p>此时，执行SHOW TABLES的结果如下：</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th style="text-align:left"><strong>created_on</strong></th>
-<th><strong>name</strong></th>
-<th><strong>database_name</strong></th>
-<th><strong>schema_name</strong></th>
-<th><strong>kind</strong></th>
-<th><strong>owner</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">2024-02-01 23:30:24.534 -0800</td>
-<td>TestTable</td>
-<td>Snowflake Schema Test</td>
-<td>JAVEN</td>
-<td>TABLE</td>
-<td>ACCOUNTADMIN</td>
-</tr>
-<tr>
-<td style="text-align:left">2024-02-01 23:30:30.178 -0800</td>
-<td>TestTable1</td>
-<td>Snowflake Schema Test</td>
-<td>JAVEN</td>
-<td>TABLE</td>
-<td>ACCOUNTADMIN</td>
-</tr>
-<tr>
-<td style="text-align:left">2024-02-01 23:30:36.126 -0800</td>
-<td>TestTable2</td>
-<td>Snowflake Schema Test</td>
-<td>PUBLIC</td>
-<td>TABLE</td>
-<td>ACCOUNTADMIN</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left"><strong>created_on</strong></th>
+          <th><strong>name</strong></th>
+          <th><strong>database_name</strong></th>
+          <th><strong>schema_name</strong></th>
+          <th><strong>kind</strong></th>
+          <th><strong>owner</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">2024-02-01 23:30:24.534 -0800</td>
+          <td>TestTable</td>
+          <td>Snowflake Schema Test</td>
+          <td>JAVEN</td>
+          <td>TABLE</td>
+          <td>ACCOUNTADMIN</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2024-02-01 23:30:30.178 -0800</td>
+          <td>TestTable1</td>
+          <td>Snowflake Schema Test</td>
+          <td>JAVEN</td>
+          <td>TABLE</td>
+          <td>ACCOUNTADMIN</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2024-02-01 23:30:36.126 -0800</td>
+          <td>TestTable2</td>
+          <td>Snowflake Schema Test</td>
+          <td>PUBLIC</td>
+          <td>TABLE</td>
+          <td>ACCOUNTADMIN</td>
+      </tr>
+  </tbody>
 </table></div>
 <p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/SHOW%20TABLES%20in%20Snowflake/SHOW-TABLES-in-Snowflake-2.png"
 	
@@ -539,58 +539,58 @@
 </div><p>由于未指定数据库，因此使用当前的默认数据库，恰巧和我们期望的范围一致。</p>
 <p>返回结果如下：</p>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th style="text-align:left"><strong>created_on</strong></th>
-<th><strong>name</strong></th>
-<th><strong>database_name</strong></th>
-<th><strong>schema_name</strong></th>
-<th><strong>kind</strong></th>
-<th><strong>owner</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">2024-02-01 23:30:24.534 -0800</td>
-<td>TestTable</td>
-<td>Snowflake Schema Test</td>
-<td>JAVEN</td>
-<td>TABLE</td>
-<td>ACCOUNTADMIN</td>
-</tr>
-<tr>
-<td style="text-align:left">2024-02-01 23:30:30.178 -0800</td>
-<td>TestTable1</td>
-<td>Snowflake Schema Test</td>
-<td>JAVEN</td>
-<td>TABLE</td>
-<td>ACCOUNTADMIN</td>
-</tr>
-<tr>
-<td style="text-align:left">2024-02-01 23:29:33.955 -0800</td>
-<td>TestTable</td>
-<td>Snowflake Schema Test</td>
-<td>PUBLIC</td>
-<td>TABLE</td>
-<td>ACCOUNTADMIN</td>
-</tr>
-<tr>
-<td style="text-align:left">2024-02-01 23:29:42.900 -0800</td>
-<td>TestTable1</td>
-<td>Snowflake Schema Test</td>
-<td>PUBLIC</td>
-<td>TABLE</td>
-<td>ACCOUNTADMIN</td>
-</tr>
-<tr>
-<td style="text-align:left">2024-02-01 23:30:36.126 -0800</td>
-<td>TestTable2</td>
-<td>Snowflake Schema Test</td>
-<td>PUBLIC</td>
-<td>TABLE</td>
-<td>ACCOUNTADMIN</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left"><strong>created_on</strong></th>
+          <th><strong>name</strong></th>
+          <th><strong>database_name</strong></th>
+          <th><strong>schema_name</strong></th>
+          <th><strong>kind</strong></th>
+          <th><strong>owner</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">2024-02-01 23:30:24.534 -0800</td>
+          <td>TestTable</td>
+          <td>Snowflake Schema Test</td>
+          <td>JAVEN</td>
+          <td>TABLE</td>
+          <td>ACCOUNTADMIN</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2024-02-01 23:30:30.178 -0800</td>
+          <td>TestTable1</td>
+          <td>Snowflake Schema Test</td>
+          <td>JAVEN</td>
+          <td>TABLE</td>
+          <td>ACCOUNTADMIN</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2024-02-01 23:29:33.955 -0800</td>
+          <td>TestTable</td>
+          <td>Snowflake Schema Test</td>
+          <td>PUBLIC</td>
+          <td>TABLE</td>
+          <td>ACCOUNTADMIN</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2024-02-01 23:29:42.900 -0800</td>
+          <td>TestTable1</td>
+          <td>Snowflake Schema Test</td>
+          <td>PUBLIC</td>
+          <td>TABLE</td>
+          <td>ACCOUNTADMIN</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2024-02-01 23:30:36.126 -0800</td>
+          <td>TestTable2</td>
+          <td>Snowflake Schema Test</td>
+          <td>PUBLIC</td>
+          <td>TABLE</td>
+          <td>ACCOUNTADMIN</td>
+      </tr>
+  </tbody>
 </table></div>
 <p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/SHOW%20TABLES%20in%20Snowflake/SHOW-TABLES-in-Snowflake-3.png"
 	
@@ -720,7 +720,7 @@
         
             2020 - 
         
-        2024 Javen Blog
+        2025 Javen Blog
     </section>
     
     <section class="powerby">

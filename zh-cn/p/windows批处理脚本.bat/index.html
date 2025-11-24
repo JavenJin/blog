@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://javenjin.github.io/blog/zh-cn/p/windows%E6%89%B9%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC.bat/'>
 
-<link rel="stylesheet" href="/blog/scss/style.min.84fddddb435e5cc2e5f82ceae9480ccaf4410b94e3d1c786e727ff9ffc42f753.css"><meta property='og:title' content='Windows批处理脚本（.bat）'>
+<link rel="stylesheet" href="/blog/scss/style.min.3a2504374c2bd1bc51c39e9c286d2821ebf00b1d2086320785cf01db49e64bc9.css"><meta property='og:title' content='Windows批处理脚本（.bat）'>
 <meta property='og:description' content='Windows batch scripts(.bat)'>
 <meta property='og:url' content='https://javenjin.github.io/blog/zh-cn/p/windows%E6%89%B9%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC.bat/'>
 <meta property='og:site_name' content='Javen Blog'>
@@ -52,13 +52,13 @@
         
             
             <figure class="site-avatar">
-                <a href="/blog/zh-cn">
+                <a href="/blog/zh-cn/">
                 
                     
                     
                     
                         
-                        <img src="/blog/img/avatar_huaeed358bd88487ddef67db6ff58c090f_197841_300x0_resize_q75_box.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -450,82 +450,82 @@
 </ul>
 <h2 id="变量">变量</h2>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>命令</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>set var=1</td>
-<td>定义变量var并将1复制给a</td>
-</tr>
-<tr>
-<td>set var</td>
-<td>查看变量var的值</td>
-</tr>
-<tr>
-<td>set v</td>
-<td>查看所有v开头的变量值</td>
-</tr>
-<tr>
-<td>set</td>
-<td>查看所有变量的值</td>
-</tr>
-<tr>
-<td>%var%</td>
-<td>var变量的值（内容）</td>
-</tr>
-<tr>
-<td>set /a var=48</td>
-<td>将数字48赋给变量var，32位的整数型数值，占用4个字节</td>
-</tr>
-<tr>
-<td>set /p var</td>
-<td>用户手动输入值给var</td>
-</tr>
-<tr>
-<td>set /p var=请输入一些文字</td>
-<td>用户手动输入值给var，并显示提示文字：“请输入一些文字”</td>
-</tr>
-<tr>
-<td>set var=Hello world!</td>
-<td></td>
-</tr>
-<tr>
-<td>echo %var:o=z%</td>
-<td>输出Hello world!不改变var值</td>
-</tr>
-<tr>
-<td>set var2=%var:ld=ms and bugs%</td>
-<td>将Hello worms and bugs!赋值给var2不改变var值</td>
-</tr>
-<tr>
-<td>%var:~m%</td>
-<td>数字m为正数表示取变量var中从左侧第m个字符以后的内容 数字m为负数表示取变量var中从右侧数第-m个字符以及其右侧所有字符</td>
-</tr>
-<tr>
-<td>%var:~m,n%</td>
-<td>从m开始，n为正数取n个字符，n为负数取到剩-n个字符为止</td>
-</tr>
-<tr>
-<td>set /a num=48</td>
-<td>将数值48赋值给变量num</td>
-</tr>
-<tr>
-<td>set /a result=%num%+12</td>
-<td>变量num与12相加的结果赋给变量result</td>
-</tr>
-<tr>
-<td>echo %result%</td>
-<td>显示变量result的值</td>
-</tr>
-<tr>
-<td>setlocal EnableDelayedExpansion</td>
-<td>延迟变量扩充使!var!有意义</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>命令</th>
+          <th>解释</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>set var=1</td>
+          <td>定义变量var并将1复制给a</td>
+      </tr>
+      <tr>
+          <td>set var</td>
+          <td>查看变量var的值</td>
+      </tr>
+      <tr>
+          <td>set v</td>
+          <td>查看所有v开头的变量值</td>
+      </tr>
+      <tr>
+          <td>set</td>
+          <td>查看所有变量的值</td>
+      </tr>
+      <tr>
+          <td>%var%</td>
+          <td>var变量的值（内容）</td>
+      </tr>
+      <tr>
+          <td>set /a var=48</td>
+          <td>将数字48赋给变量var，32位的整数型数值，占用4个字节</td>
+      </tr>
+      <tr>
+          <td>set /p var</td>
+          <td>用户手动输入值给var</td>
+      </tr>
+      <tr>
+          <td>set /p var=请输入一些文字</td>
+          <td>用户手动输入值给var，并显示提示文字：“请输入一些文字”</td>
+      </tr>
+      <tr>
+          <td>set var=Hello world!</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>echo %var:o=z%</td>
+          <td>输出Hello world!不改变var值</td>
+      </tr>
+      <tr>
+          <td>set var2=%var:ld=ms and bugs%</td>
+          <td>将Hello worms and bugs!赋值给var2不改变var值</td>
+      </tr>
+      <tr>
+          <td>%var:~m%</td>
+          <td>数字m为正数表示取变量var中从左侧第m个字符以后的内容 数字m为负数表示取变量var中从右侧数第-m个字符以及其右侧所有字符</td>
+      </tr>
+      <tr>
+          <td>%var:~m,n%</td>
+          <td>从m开始，n为正数取n个字符，n为负数取到剩-n个字符为止</td>
+      </tr>
+      <tr>
+          <td>set /a num=48</td>
+          <td>将数值48赋值给变量num</td>
+      </tr>
+      <tr>
+          <td>set /a result=%num%+12</td>
+          <td>变量num与12相加的结果赋给变量result</td>
+      </tr>
+      <tr>
+          <td>echo %result%</td>
+          <td>显示变量result的值</td>
+      </tr>
+      <tr>
+          <td>setlocal EnableDelayedExpansion</td>
+          <td>延迟变量扩充使!var!有意义</td>
+      </tr>
+  </tbody>
 </table></div>
 <h2 id="传递参数">传递参数</h2>
 <p>使用%接收参数 在call或者start或者在cmd中运行批处理文件时后面直接加上参数来传递参数</p>
@@ -553,42 +553,42 @@
 </div>
 </div><h2 id="条件if">条件IF</h2>
 <div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>符号</th>
-<th>意义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>EQU</td>
-<td>相等</td>
-</tr>
-<tr>
-<td>NEQ</td>
-<td>不相等</td>
-</tr>
-<tr>
-<td>LSS</td>
-<td>小于</td>
-</tr>
-<tr>
-<td>LEQ</td>
-<td>小于等于</td>
-</tr>
-<tr>
-<td>GTR</td>
-<td>大于</td>
-</tr>
-<tr>
-<td>GEQ</td>
-<td>大于等于</td>
-</tr>
-<tr>
-<td>NOT</td>
-<td>非</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>符号</th>
+          <th>意义</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>EQU</td>
+          <td>相等</td>
+      </tr>
+      <tr>
+          <td>NEQ</td>
+          <td>不相等</td>
+      </tr>
+      <tr>
+          <td>LSS</td>
+          <td>小于</td>
+      </tr>
+      <tr>
+          <td>LEQ</td>
+          <td>小于等于</td>
+      </tr>
+      <tr>
+          <td>GTR</td>
+          <td>大于</td>
+      </tr>
+      <tr>
+          <td>GEQ</td>
+          <td>大于等于</td>
+      </tr>
+      <tr>
+          <td>NOT</td>
+          <td>非</td>
+      </tr>
+  </tbody>
 </table></div>
 <ul>
 <li>if exist	判断文件是否存在</li>
@@ -747,6 +747,19 @@
             
                 
 <article class="">
+    <a href="/blog/zh-cn/p/%E4%B8%AA%E4%BA%BA%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2%E4%B8%80%E5%8F%B0%E9%9A%8F%E6%97%B6%E9%9A%8F%E5%9C%B0%E5%8F%AF%E8%AE%BF%E9%97%AE%E7%9A%84%E7%A7%81%E4%BA%BA%E7%9B%B8%E5%86%8C/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">个人电脑上部署一台随时随地可访问的私人相册</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
     <a href="/blog/zh-cn/p/%E5%9C%A8-chrome-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E8%AE%BE%E7%BD%AE%E9%BB%91%E8%89%B2%E6%A8%A1%E5%BC%8F/">
         
         
@@ -797,19 +810,6 @@
 </article>
 
             
-                
-<article class="">
-    <a href="/blog/zh-cn/p/rest-api-design-rulebook/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">REST API Design Rulebook</h2>
-        </div>
-    </a>
-</article>
-
-            
         </div>
     </div>
 </aside>
@@ -825,7 +825,7 @@
         
             2020 - 
         
-        2024 Javen Blog
+        2025 Javen Blog
     </section>
     
     <section class="powerby">
