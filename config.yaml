@@ -2,8 +2,10 @@
 baseurl: https://javenjin.github.io/blog
 languageCode: en-us
 theme: hugo-theme-stack
-paginate: 5
 title: Javen Blog
+
+pagination:
+    pagerSize: 5
 
 languages:
     en:
