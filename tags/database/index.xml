@@ -226,19 +226,19 @@
         </item>
         <item>
         <title>Install SQLServer 2022 (16.00.1000) on Windows</title>
-        <link>https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/</link>
+        <link>https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/</link>
         <pubDate>Mon, 22 Jan 2024 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/</guid>
+        <guid>https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/</guid>
         <description>&lt;h1 id=&#34;install-sqlserver-2022-16001000-on-windows&#34;&gt;Install SQLServer 2022 (16.00.1000) on Windows&lt;/h1&gt;
 &lt;h2 id=&#34;go-to-the-official-website-to-download-the-sqlserver2022-installation-package&#34;&gt;Go to the official website to download the SQLServer2022 installation package&lt;/h2&gt;
 &lt;p&gt;Download the SQLServer 2022 installation package.&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.microsoft.com/en-us/sql-server/sql-server-downloads&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://www.microsoft.com/en-us/sql-server/sql-server-downloads&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image01.png&#34;
 	width=&#34;1601&#34;
 	height=&#34;898&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image01_hu_113f577475a12de9.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image01_hu_de0cb81c009e877f.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image01_hu_113f577475a12de9.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image01_hu_de0cb81c009e877f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -248,10 +248,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;open-the-installation-package&#34;&gt;Open the installation package&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image02.png&#34;
 	width=&#34;76&#34;
 	height=&#34;97&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image02_hu_ad4de408fa775e86.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image02_hu_fc485cbc73add21e.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image02_hu_ad4de408fa775e86.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image02_hu_fc485cbc73add21e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -261,10 +261,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;select-download-media&#34;&gt;Select Download Media&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image03.png&#34;
 	width=&#34;845&#34;
 	height=&#34;670&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image03_hu_e82e9c9aa84b976d.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image03_hu_86b49820751747ae.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image03_hu_e82e9c9aa84b976d.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image03_hu_86b49820751747ae.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -274,10 +274,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;choose-to-download-the-iso-file-download-location-click-download&#34;&gt;Choose to download the ISO file, Download Location, click Download&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image04.png&#34;
 	width=&#34;845&#34;
 	height=&#34;670&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image04_hu_568ad20173cc1741.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image04_hu_3df81d6a88a07308.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image04_hu_568ad20173cc1741.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image04_hu_3df81d6a88a07308.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -287,10 +287,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;waiting-for-the-download-to-complete&#34;&gt;Waiting for the download to complete&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image05.png&#34;
 	width=&#34;845&#34;
 	height=&#34;670&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image05_hu_bf05b2e297fbc59a.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image05_hu_2e4cb16ad67d0bca.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image05_hu_bf05b2e297fbc59a.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image05_hu_2e4cb16ad67d0bca.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -299,10 +299,10 @@
 		data-flex-basis=&#34;302px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image06.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image06.png&#34;
 	width=&#34;845&#34;
 	height=&#34;670&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image06_hu_725f7125e9b34902.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image06_hu_4bf33451e9c63da6.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image06_hu_725f7125e9b34902.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image06_hu_4bf33451e9c63da6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -312,10 +312,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;once-the-download-is-complete-right-click-download-image-and-select-mount&#34;&gt;Once the download is complete, right-click download image and select Mount&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image07.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image07.png&#34;
 	width=&#34;662&#34;
 	height=&#34;417&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image07_hu_89aec3254b37237b.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image07_hu_a656b90fd0b46eae.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image07_hu_89aec3254b37237b.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image07_hu_a656b90fd0b46eae.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -325,10 +325,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;double-click-the-setupexe-programme-in-the-pop-up-page&#34;&gt;Double-click the setup.exe programme in the pop-up page&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image08.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image08.png&#34;
 	width=&#34;662&#34;
 	height=&#34;417&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image08_hu_8f5a43210ce6e828.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image08_hu_f46e6035f036bcea.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image08_hu_8f5a43210ce6e828.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image08_hu_f46e6035f036bcea.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -338,10 +338,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;waiting-to-enter-the-installation-screen&#34;&gt;Waiting to enter the installation screen&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image09.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image09.png&#34;
 	width=&#34;488&#34;
 	height=&#34;133&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image09_hu_97ea440be7132fe1.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image09_hu_ba7816340d0b7eff.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image09_hu_97ea440be7132fe1.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image09_hu_ba7816340d0b7eff.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -351,10 +351,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;click-to-installation&#34;&gt;Click to Installation&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image10.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image10.png&#34;
 	width=&#34;786&#34;
 	height=&#34;593&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image10_hu_7ae783a1a4a701e1.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image10_hu_1fda6c8770dacc25.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image10_hu_7ae783a1a4a701e1.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image10_hu_1fda6c8770dacc25.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -364,10 +364,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;choose-new-sql-server-standalone-installation-or-add-features-to-an-existing-installation&#34;&gt;Choose New SQL Server standalone installation or add features to an existing installation&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image11.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image11.png&#34;
 	width=&#34;786&#34;
 	height=&#34;593&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image11_hu_83f27a089fbf06cf.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image11_hu_deceedec035411d4.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image11_hu_83f27a089fbf06cf.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image11_hu_deceedec035411d4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -377,10 +377,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;select-the-installation-version-evaluation-developer-and-click-next&#34;&gt;Select the installation version Evaluation, Developer and click Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image12.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image12.png&#34;
 	width=&#34;806&#34;
 	height=&#34;708&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image12_hu_58ffbf6cdabbf438.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image12_hu_a2b22410d1d5b087.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image12_hu_58ffbf6cdabbf438.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image12_hu_a2b22410d1d5b087.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -390,10 +390,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;choose-to-accept-the-terms-of-the-licence-and-click-next&#34;&gt;Choose to accept the terms of the licence and click Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image13.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image13.png&#34;
 	width=&#34;806&#34;
 	height=&#34;708&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image13_hu_704639b17cc3d30c.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image13_hu_c3c358753d12d64d.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image13_hu_704639b17cc3d30c.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image13_hu_c3c358753d12d64d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -403,10 +403,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;deselect-check-for-updates-checking-for-updates-is-not-recommended-it-is-time-consuming-and-click-next&#34;&gt;Deselect Check for updates (checking for updates is not recommended, it is time consuming) and click Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image14.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image14.png&#34;
 	width=&#34;806&#34;
 	height=&#34;708&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image14_hu_3036ceb6fab9f944.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image14_hu_5b5576e1bb956aa8.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image14_hu_3036ceb6fab9f944.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image14_hu_5b5576e1bb956aa8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -416,10 +416,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;uncheck-azure-extension-and-click-next&#34;&gt;Uncheck Azure Extension and click Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image15.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image15.png&#34;
 	width=&#34;806&#34;
 	height=&#34;708&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image15_hu_da82c5a25245be43.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image15_hu_6252d59112dddd0d.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image15_hu_da82c5a25245be43.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image15_hu_6252d59112dddd0d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -429,10 +429,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;function-selection-it-is-recommended-to-select-these-two-basic-functions-change-the-instance-root-directory-click-next&#34;&gt;Function selection, it is recommended to select these two basic functions, change the instance root directory, click Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image16.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image16.png&#34;
 	width=&#34;806&#34;
 	height=&#34;708&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image16_hu_9946327c68c3604.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image16_hu_eb113100a2a57bd.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image16_hu_9946327c68c3604.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image16_hu_eb113100a2a57bd.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -442,10 +442,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;instance-configuration-here-usually-choose-the-default-instance-click-next&#34;&gt;Instance configuration, here usually choose the default instance, click Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image17.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image17.png&#34;
 	width=&#34;806&#34;
 	height=&#34;708&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image17_hu_87b424e4f6fb3348.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image17_hu_9001c37a4f2528de.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image17_hu_87b424e4f6fb3348.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image17_hu_9001c37a4f2528de.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -455,10 +455,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;service-account-configuration-here-you-can-choose-the-sql-server-agent-and-engine-account-usually-keep-the-default-and-can-be-changed-after-the-installation&#34;&gt;Service account configuration, here you can choose the SQL Server agent and engine account, usually keep the default and can be changed after the installation&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image18.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image18.png&#34;
 	width=&#34;806&#34;
 	height=&#34;708&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image18_hu_7fce5221e20f2a89.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image18_hu_77e78a7c3697b133.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image18_hu_7fce5221e20f2a89.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image18_hu_77e78a7c3697b133.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -468,10 +468,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;sorting-rules-settings-generally-keep-the-default-if-you-need-to-modify-click-custom-select-the-specified-sorting-rules-note-database-migration-and-high-availability-to-maintain-the-same-sorting-rules-sorting-rules-are-not-easy-to-modify-after-installation-click-next&#34;&gt;Sorting rules settings, generally keep the default, if you need to modify click Custom, select the specified sorting rules (Note: database migration and high availability to maintain the same sorting rules, sorting rules are not easy to modify after installation), click Next!&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image19.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image19.png&#34;
 	width=&#34;806&#34;
 	height=&#34;708&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image19_hu_2ad2bfc2f5790313.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image19_hu_43b756c056bfd963.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image19_hu_2ad2bfc2f5790313.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image19_hu_43b756c056bfd963.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -481,10 +481,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;server-configuration-select-mixed-mode-set-sa-password-sa-is-the-super-administrator-of-sql-server-click-add-current-user&#34;&gt;Server Configuration. Select mixed mode, set sa password (sa is the super administrator of sql server), click add current user&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image20.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image20.png&#34;
 	width=&#34;806&#34;
 	height=&#34;708&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image20_hu_f2fb72347d77fd87.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image20_hu_a394911da9907902.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image20_hu_f2fb72347d77fd87.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image20_hu_a394911da9907902.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -494,10 +494,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;data-directory-here-you-can-change-the-default-location-of-the-user-database-files-you-can-keep-the-default-it-is-recommended-to-create-a-separate-directory-for-distribution&#34;&gt;Data directory, here you can change the default location of the user database files, you can keep the default, it is recommended to create a separate directory for distribution&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image21.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image21.png&#34;
 	width=&#34;806&#34;
 	height=&#34;708&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image21_hu_f8b6b9972f9f4d78.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image21_hu_2cfaa571fd898338.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image21_hu_f8b6b9972f9f4d78.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image21_hu_2cfaa571fd898338.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -507,10 +507,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;tempdb-system-temporary-database-restart-the-database-automatically-updated-you-can-set-the-initial-number-of-tempdb-data-files-recommended-4-8-do-not-exceed-8-and-tempdb-data-file-directory-it-is-recommended-to-allocate-a-separate-disk-and-directory-you-can-keep-the-default-click-next&#34;&gt;TempDB (system temporary database, restart the database automatically updated), you can set the initial number of TempDB data files (recommended 4-8, do not exceed 8) and TempDB data file directory, it is recommended to allocate a separate disk and directory, you can keep the default, click Next!&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image22.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image22.png&#34;
 	width=&#34;806&#34;
 	height=&#34;708&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image22_hu_974d0f2047013f68.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image22_hu_844ef3e512b10639.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image22_hu_974d0f2047013f68.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image22_hu_844ef3e512b10639.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -520,10 +520,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;click-to-install&#34;&gt;Click to install&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image23.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image23.png&#34;
 	width=&#34;806&#34;
 	height=&#34;708&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image23_hu_8f19a76b0c2abf4f.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image23_hu_94d89a973bbc2c8e.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image23_hu_8f19a76b0c2abf4f.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image23_hu_94d89a973bbc2c8e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -533,10 +533,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;waiting-for-installation-to-complete&#34;&gt;Waiting for installation to complete&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image24.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image24.png&#34;
 	width=&#34;806&#34;
 	height=&#34;708&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image24_hu_5b9ce523304c6996.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image24_hu_8ca2a182e41c1c25.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image24_hu_5b9ce523304c6996.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image24_hu_8ca2a182e41c1c25.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -546,10 +546,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;click-to-close-and-the-installation-is-complete&#34;&gt;Click to close and the installation is complete&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image25.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image25.png&#34;
 	width=&#34;806&#34;
 	height=&#34;708&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image25_hu_c80d98eed4d8fdca.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/images/image25_hu_d0ec02f945a3f887.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image25_hu_c80d98eed4d8fdca.png 480w, https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/images/image25_hu_d0ec02f945a3f887.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -6731,19 +6731,19 @@
         </item>
         <item>
         <title>Install PostgreSQL 16.1 on Windows</title>
-        <link>https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/</link>
+        <link>https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/</link>
         <pubDate>Wed, 15 Nov 2023 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/</guid>
+        <guid>https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/</guid>
         <description>&lt;h1 id=&#34;install-postgresql-161-on-windows&#34;&gt;Install PostgreSQL 16.1 on Windows&lt;/h1&gt;
 &lt;h2 id=&#34;go-to-the-official-website-to-download-the-postgresql-installation-package&#34;&gt;Go to the official website to download the PostgreSQL installation package&lt;/h2&gt;
 &lt;p&gt;Download the PostgreSQL installation package.&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.enterprisedb.com/downloads/postgres-postgresql-downloads&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://www.enterprisedb.com/downloads/postgres-postgresql-downloads&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image01.png&#34;
 	width=&#34;1283&#34;
 	height=&#34;663&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image01_hu_64d745b68278a3bc.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image01_hu_855fe5f13ac34281.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image01_hu_64d745b68278a3bc.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image01_hu_855fe5f13ac34281.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -6753,10 +6753,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;open-the-installation-package&#34;&gt;Open the installation package&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image02.png&#34;
 	width=&#34;78&#34;
 	height=&#34;101&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image02_hu_32d746e01a01ef61.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image02_hu_6312554545741c75.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image02_hu_32d746e01a01ef61.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image02_hu_6312554545741c75.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -6766,10 +6766,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;click-next&#34;&gt;Click Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image03.png&#34;
 	width=&#34;552&#34;
 	height=&#34;432&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image03_hu_daa0f99facdff814.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image03_hu_a826d2e7f46866c3.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image03_hu_daa0f99facdff814.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image03_hu_a826d2e7f46866c3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -6779,10 +6779,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;modify-the-installation-directory-and-click-next&#34;&gt;Modify the installation directory and click Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image04.png&#34;
 	width=&#34;552&#34;
 	height=&#34;432&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image04_hu_13e6394e25f42047.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image04_hu_f27108c57b58ece6.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image04_hu_13e6394e25f42047.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image04_hu_f27108c57b58ece6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -6792,10 +6792,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;keep-the-default-options-and-click-next&#34;&gt;Keep the default options and click Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image05.png&#34;
 	width=&#34;552&#34;
 	height=&#34;432&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image05_hu_1deb9ca9e1b00b52.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image05_hu_77ebe4cf229e0fdf.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image05_hu_1deb9ca9e1b00b52.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image05_hu_77ebe4cf229e0fdf.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -6805,10 +6805,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;set-the-data-directory-and-click-next&#34;&gt;Set the data directory and click Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image06.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image06.png&#34;
 	width=&#34;552&#34;
 	height=&#34;432&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image06_hu_3af451b8dec415e1.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image06_hu_7d250e78d72fa694.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image06_hu_3af451b8dec415e1.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image06_hu_7d250e78d72fa694.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -6818,10 +6818,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;set-a-password-and-click-next&#34;&gt;Set a password and click Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image07.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image07.png&#34;
 	width=&#34;552&#34;
 	height=&#34;432&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image07_hu_6d1c732a78df50c6.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image07_hu_fca1a649a2071e5.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image07_hu_6d1c732a78df50c6.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image07_hu_fca1a649a2071e5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -6831,10 +6831,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;set-the-database-port-number-default-5432-click-next&#34;&gt;Set the database port number (default 5432), click Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image08.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image08.png&#34;
 	width=&#34;552&#34;
 	height=&#34;432&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image08_hu_456df59e40c19ba1.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image08_hu_4028fac783738efc.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image08_hu_456df59e40c19ba1.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image08_hu_4028fac783738efc.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -6844,10 +6844,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;set-the-language-and-click-next&#34;&gt;Set the language and click Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image09.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image09.png&#34;
 	width=&#34;552&#34;
 	height=&#34;432&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image09_hu_9ffd068c6aa7ce47.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image09_hu_b22c4f4a3b2f094.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image09_hu_9ffd068c6aa7ce47.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image09_hu_b22c4f4a3b2f094.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -6857,10 +6857,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;just-keep-clicking-next&#34;&gt;Just keep clicking Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image10.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image10.png&#34;
 	width=&#34;552&#34;
 	height=&#34;432&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image10_hu_130ba1f7421cd401.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image10_hu_59c9c4c10f626100.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image10_hu_130ba1f7421cd401.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image10_hu_59c9c4c10f626100.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -6870,10 +6870,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;waiting-for-the-installation-to-finish&#34;&gt;Waiting for the installation to finish&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image11.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image11.png&#34;
 	width=&#34;552&#34;
 	height=&#34;432&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image11_hu_b3fa99ac1d432731.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image11_hu_3f8f897b740c3c71.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image11_hu_b3fa99ac1d432731.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image11_hu_3f8f897b740c3c71.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -6883,10 +6883,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;uncheck-stack-builder-and-click-finish&#34;&gt;Uncheck Stack Builder and click Finish&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image12.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image12.png&#34;
 	width=&#34;552&#34;
 	height=&#34;432&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image12_hu_25eef0865d73e517.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image12_hu_7f77faef30de70d2.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image12_hu_25eef0865d73e517.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image12_hu_7f77faef30de70d2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -6897,10 +6897,10 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;at-this-point-the-postgresql-installation-is-complete&#34;&gt;At this point, the PostgreSQL installation is complete!&lt;/h2&gt;
 &lt;h2 id=&#34;the-postgressql-installation-carries-the-pgadmin-software-which-can-be-used-to-manage-postgresql-databases-open-the-pgadmin&#34;&gt;The PostgresSQL installation carries the pgAdmin software, which can be used to manage PostgreSQL databases, open the pgAdmin&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image13.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image13.png&#34;
 	width=&#34;832&#34;
 	height=&#34;636&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image13_hu_5c0c21acf42fd40.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image13_hu_f92e2a016928211d.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image13_hu_5c0c21acf42fd40.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image13_hu_f92e2a016928211d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -6910,10 +6910,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;click-on-server-in-the-upper-left-corner&#34;&gt;Click on Server in the upper left corner&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image14.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image14.png&#34;
 	width=&#34;1026&#34;
 	height=&#34;800&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image14_hu_78ddb0b04e046cfb.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image14_hu_fd1667d3c116038d.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image14_hu_78ddb0b04e046cfb.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image14_hu_fd1667d3c116038d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -6923,10 +6923,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;enter-the-set-password-and-click-ok&#34;&gt;Enter the set password and click OK&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image15.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image15.png&#34;
 	width=&#34;1026&#34;
 	height=&#34;800&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image15_hu_a2ff288c4de95c87.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image15_hu_5747cdffa748fd65.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image15_hu_a2ff288c4de95c87.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image15_hu_5747cdffa748fd65.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -6936,10 +6936,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;the-following-screen-indicates-successful-installation&#34;&gt;The following screen indicates successful installation&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image16.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image16.png&#34;
 	width=&#34;1026&#34;
 	height=&#34;800&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image16_hu_9ac3db54880d2ec2.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/images/image16_hu_dc54fad5fee524f1.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image16_hu_9ac3db54880d2ec2.png 480w, https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/images/image16_hu_dc54fad5fee524f1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7423,16 +7423,16 @@
         </item>
         <item>
         <title>MySQL 5.7 Remote Access</title>
-        <link>https://javenjin.github.io/blog/p/mysql-5.7-remote-access/</link>
+        <link>https://javenjin.github.io/blog/p/mysql-5-7-remote-access/</link>
         <pubDate>Wed, 11 May 2022 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/p/mysql-5.7-remote-access/</guid>
+        <guid>https://javenjin.github.io/blog/p/mysql-5-7-remote-access/</guid>
         <description>&lt;h1 id=&#34;mysql-57-remote-access&#34;&gt;MySQL 5.7 Remote Access&lt;/h1&gt;
 &lt;h2 id=&#34;go-to-the-bin-directory-in-the-mysql-installation-directory-if-you-have-configured-environment-variables-go-directly-to-step-2&#34;&gt;Go to the bin directory in the MySQL installation directory (if you have configured environment variables, go directly to step 2)&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/mysql-5.7-remote-access/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/mysql-5-7-remote-access/images/image01.png&#34;
 	width=&#34;1109&#34;
 	height=&#34;545&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/mysql-5.7-remote-access/images/image01_hu_656ac72afe560e31.png 480w, https://javenjin.github.io/blog/p/mysql-5.7-remote-access/images/image01_hu_4a9ee77d0aae9bc3.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/mysql-5-7-remote-access/images/image01_hu_656ac72afe560e31.png 480w, https://javenjin.github.io/blog/p/mysql-5-7-remote-access/images/image01_hu_4a9ee77d0aae9bc3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7451,10 +7451,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mysql -uroot -p
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/mysql-5.7-remote-access/images/image02.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/mysql-5-7-remote-access/images/image02.png&#34;
 	width=&#34;985&#34;
 	height=&#34;518&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/mysql-5.7-remote-access/images/image02_hu_8edc565f3098b684.png 480w, https://javenjin.github.io/blog/p/mysql-5.7-remote-access/images/image02_hu_10baae10dc982758.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/mysql-5-7-remote-access/images/image02_hu_8edc565f3098b684.png 480w, https://javenjin.github.io/blog/p/mysql-5-7-remote-access/images/image02_hu_10baae10dc982758.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7472,10 +7472,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grant all privileges on *.* to &amp;#39;root&amp;#39;@&amp;#39;%&amp;#39; identified by &amp;#39;password&amp;#39;;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/mysql-5.7-remote-access/images/image03.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/mysql-5-7-remote-access/images/image03.png&#34;
 	width=&#34;984&#34;
 	height=&#34;512&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/mysql-5.7-remote-access/images/image03_hu_86910781f38b90b1.png 480w, https://javenjin.github.io/blog/p/mysql-5.7-remote-access/images/image03_hu_79bfb233754994dd.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/mysql-5-7-remote-access/images/image03_hu_86910781f38b90b1.png 480w, https://javenjin.github.io/blog/p/mysql-5-7-remote-access/images/image03_hu_79bfb233754994dd.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7493,10 +7493,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;flush privileges;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/mysql-5.7-remote-access/images/image04.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/mysql-5-7-remote-access/images/image04.png&#34;
 	width=&#34;983&#34;
 	height=&#34;513&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/mysql-5.7-remote-access/images/image04_hu_26290a7cb8fa4ac1.png 480w, https://javenjin.github.io/blog/p/mysql-5.7-remote-access/images/image04_hu_4219783bc40143e0.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/mysql-5-7-remote-access/images/image04_hu_26290a7cb8fa4ac1.png 480w, https://javenjin.github.io/blog/p/mysql-5-7-remote-access/images/image04_hu_4219783bc40143e0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7506,10 +7506,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;close-the-window-and-finish&#34;&gt;Close the window and finish&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/mysql-5.7-remote-access/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/mysql-5-7-remote-access/images/image05.png&#34;
 	width=&#34;402&#34;
 	height=&#34;235&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/mysql-5.7-remote-access/images/image05_hu_48accb2ae29d1813.png 480w, https://javenjin.github.io/blog/p/mysql-5.7-remote-access/images/image05_hu_bcca559cf8b667c.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/mysql-5-7-remote-access/images/image05_hu_48accb2ae29d1813.png 480w, https://javenjin.github.io/blog/p/mysql-5-7-remote-access/images/image05_hu_bcca559cf8b667c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7578,10 +7578,10 @@
         </item>
         <item>
         <title>Install MySQL-5.7 on CentOS7</title>
-        <link>https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/</link>
+        <link>https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/</link>
         <pubDate>Wed, 11 Aug 2021 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/</guid>
+        <guid>https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/</guid>
         <description>&lt;h1 id=&#34;install-mysql-57-on-centos7&#34;&gt;Install MySQL-5.7 on CentOS7&lt;/h1&gt;
 &lt;p&gt;At that time, the installation of mysql5.7 encountered many problems, online solutions are not right, record down their own installation of successful installation steps and notes&lt;/p&gt;
 &lt;h2 id=&#34;install-mysql-57&#34;&gt;Install mysql 5.7&lt;/h2&gt;
@@ -7632,10 +7632,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image01.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image01.png&#34;
 	width=&#34;738&#34;
 	height=&#34;335&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image01_hu_adfba2e2d1032bd7.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image01_hu_9df73016162e9f7a.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image01_hu_adfba2e2d1032bd7.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image01_hu_9df73016162e9f7a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7645,10 +7645,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;install-the-downloaded-rpm-file&#34;&gt;Install the downloaded rpm file&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image02.png&#34;
 	width=&#34;761&#34;
 	height=&#34;546&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image02_hu_bfd3ac757574525.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image02_hu_58a3399b59282646.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image02_hu_bfd3ac757574525.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image02_hu_58a3399b59282646.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7658,10 +7658,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;go-to-the-directory-etcyumreposd-and-these-two-files-will-be-added&#34;&gt;Go to the directory /etc/yum.repos.d/ and these two files will be added&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image03.png&#34;
 	width=&#34;500&#34;
 	height=&#34;206&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image03_hu_c3e9ceb7b0764ff2.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image03_hu_8ece253436e55f0b.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image03_hu_c3e9ceb7b0764ff2.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image03_hu_8ece253436e55f0b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7679,10 +7679,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi mysql-community.repo
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image04.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image04.png&#34;
 	width=&#34;759&#34;
 	height=&#34;590&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image04_hu_d1243b4c617383bd.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image04_hu_e8dc53e611690bba.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image04_hu_d1243b4c617383bd.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image04_hu_e8dc53e611690bba.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7700,10 +7700,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum install mysql-community-server -y
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image05.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image05.png&#34;
 	width=&#34;758&#34;
 	height=&#34;695&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image05_hu_6fc4f3b4d8e4bcf1.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image05_hu_86b0fff001007ab.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image05_hu_6fc4f3b4d8e4bcf1.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image05_hu_86b0fff001007ab.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7712,10 +7712,10 @@
 		data-flex-basis=&#34;261px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image06.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image06.png&#34;
 	width=&#34;759&#34;
 	height=&#34;261&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image06_hu_1660eba3d90ac415.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image06_hu_594c6f6b82843c8e.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image06_hu_1660eba3d90ac415.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image06_hu_594c6f6b82843c8e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7733,10 +7733,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mysql -V
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image07.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image07.png&#34;
 	width=&#34;752&#34;
 	height=&#34;34&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image07_hu_ee4c18b107cfca84.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image07_hu_7b4d85ceaeb0db55.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image07_hu_ee4c18b107cfca84.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image07_hu_7b4d85ceaeb0db55.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7754,10 +7754,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;service mysqld start
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image08.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image08.png&#34;
 	width=&#34;755&#34;
 	height=&#34;34&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image08_hu_c48df1c96b9de433.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image08_hu_c57a4b2577d10e8a.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image08_hu_c48df1c96b9de433.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image08_hu_c57a4b2577d10e8a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7784,10 +7784,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grep &lt;span class=&#34;s2&#34;&gt;&amp;#34;password&amp;#34;&lt;/span&gt; /var/log/mysqld.log
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image09.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image09.png&#34;
 	width=&#34;750&#34;
 	height=&#34;51&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image09_hu_459bc0291b95ff67.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image09_hu_2fec8af679b2834b.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image09_hu_459bc0291b95ff67.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image09_hu_2fec8af679b2834b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7822,10 +7822,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;alter&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;identified&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;by&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image10.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image10.png&#34;
 	width=&#34;749&#34;
 	height=&#34;152&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image10_hu_7400873ef503e32c.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image10_hu_fe57cc20b1e7dcbb.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image10_hu_7400873ef503e32c.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image10_hu_fe57cc20b1e7dcbb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7846,10 +7846,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;grant&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;all&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;privileges&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;identified&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;by&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;123456&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;grant&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;option&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image11.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image11.png&#34;
 	width=&#34;656&#34;
 	height=&#34;66&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image11_hu_e391bc94d50ffed6.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image11_hu_d17a8b61e4d88a5e.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image11_hu_e391bc94d50ffed6.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image11_hu_d17a8b61e4d88a5e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7870,10 +7870,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;flush&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;privileges&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image12.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image12.png&#34;
 	width=&#34;588&#34;
 	height=&#34;64&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image12_hu_461134f0ffb16f35.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image12_hu_603257d75ec4e1aa.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image12_hu_461134f0ffb16f35.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image12_hu_603257d75ec4e1aa.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7902,10 +7902,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;firewall-cmd --query-port&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3306/tcp
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image13.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image13.png&#34;
 	width=&#34;761&#34;
 	height=&#34;32&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image13_hu_ac5def98a6ee797a.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image13_hu_354939d75f70dbd3.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image13_hu_ac5def98a6ee797a.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image13_hu_354939d75f70dbd3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7926,10 +7926,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;firewall-cmd --add-port&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3306/tcp --permanent
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image14.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image14.png&#34;
 	width=&#34;760&#34;
 	height=&#34;37&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image14_hu_61952b0034ba810a.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image14_hu_f192a3e996f7417b.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image14_hu_61952b0034ba810a.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image14_hu_f192a3e996f7417b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7947,10 +7947,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;firewall-cmd --reload
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image15.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image15.png&#34;
 	width=&#34;760&#34;
 	height=&#34;31&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image15_hu_6fb3e1ea5d2c3770.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image15_hu_f5f6b098e8392032.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image15_hu_6fb3e1ea5d2c3770.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image15_hu_f5f6b098e8392032.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7968,10 +7968,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;firewall-cmd --query-port&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3306/tcp
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image16.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image16.png&#34;
 	width=&#34;760&#34;
 	height=&#34;36&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image16_hu_9451150aee4fbc1.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image16_hu_40691d5172853e46.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image16_hu_9451150aee4fbc1.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image16_hu_40691d5172853e46.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7991,10 +7991,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rpm -qa &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -i mysql
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image17.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image17.png&#34;
 	width=&#34;349&#34;
 	height=&#34;110&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image17_hu_5e83deb9ec2c7dc6.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image17_hu_d298f02481e26ad6.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image17_hu_5e83deb9ec2c7dc6.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image17_hu_d298f02481e26ad6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8016,10 +8016,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum remove mysql-community-common-5.7.35-1.el7.x86_64
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image18.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image18.png&#34;
 	width=&#34;757&#34;
 	height=&#34;676&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image18_hu_8084adfff54a3ba9.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image18_hu_ff9272d737946e95.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image18_hu_8084adfff54a3ba9.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image18_hu_ff9272d737946e95.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8028,10 +8028,10 @@
 		data-flex-basis=&#34;268px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image19.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image19.png&#34;
 	width=&#34;759&#34;
 	height=&#34;875&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image19_hu_f5eefdad1cb7d602.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/images/image19_hu_7a521c4ddf29057.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image19_hu_f5eefdad1cb7d602.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/images/image19_hu_7a521c4ddf29057.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8072,20 +8072,20 @@
         </item>
         <item>
         <title>Install MySQL-5.7.17 on Windows</title>
-        <link>https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/</link>
+        <link>https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/</link>
         <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/</guid>
+        <guid>https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/</guid>
         <description>&lt;h1 id=&#34;install-mysql-5717-on-windows&#34;&gt;Install MySQL-5.7.17 on Windows&lt;/h1&gt;
 &lt;h2 id=&#34;download-the-mysql-installation-package&#34;&gt;Download the mysql installation package.&lt;/h2&gt;
 &lt;p&gt;Download the mysql installation package: &lt;a class=&#34;link&#34; href=&#34;https://download.csdn.net/download/weixin_42718701/19201693&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;mysql-5.7.17.msi&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Or go to the official website to download the installation package.&lt;/p&gt;
 &lt;h2 id=&#34;open-the-installation-package&#34;&gt;Open the installation package&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image01.png&#34;
 	width=&#34;88&#34;
 	height=&#34;100&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image01_hu_c69bff856d675ebf.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image01_hu_2a2e0d4680df9264.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image01_hu_c69bff856d675ebf.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image01_hu_2a2e0d4680df9264.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8095,10 +8095,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;check-the-box-i-accept-the-license-terms-and-click-next&#34;&gt;Check the box I accept the license terms and click Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image02.png&#34;
 	width=&#34;790&#34;
 	height=&#34;590&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image02_hu_1bbf4955fb47c464.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image02_hu_cc2a852b23a69a9f.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image02_hu_1bbf4955fb47c464.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image02_hu_cc2a852b23a69a9f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8108,10 +8108,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;check-the-custom-box-and-click-next&#34;&gt;Check the Custom box and click Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image03.png&#34;
 	width=&#34;790&#34;
 	height=&#34;590&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image03_hu_d4c6de7681e9b2f1.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image03_hu_43da8250af0f5593.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image03_hu_d4c6de7681e9b2f1.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image03_hu_43da8250af0f5593.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8121,10 +8121,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;select-the-installation-version-x64-for-64-bit-systems-and-x86-for-32-bit-systems&#34;&gt;Select the installation version x64 for 64-bit systems and x86 for 32-bit systems&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image04.png&#34;
 	width=&#34;790&#34;
 	height=&#34;590&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image04_hu_9b026d4b825c610a.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image04_hu_1e588c1230bfd500.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image04_hu_9b026d4b825c610a.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image04_hu_1e588c1230bfd500.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8134,10 +8134,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;then-click-on-the-right-to-select-the-following-advanced-options-to-customize-the-path-i-installed-in-the-d-disk-root-directory-and-then-ok-and-then-next&#34;&gt;Then click on the right to select the following Advanced Options, to customize the path, I installed in the D disk root directory, and then OK, and then Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image05.png&#34;
 	width=&#34;508&#34;
 	height=&#34;278&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image05_hu_bf21b5daca7a2ab.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image05_hu_d9ebccee409fa373.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image05_hu_bf21b5daca7a2ab.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image05_hu_d9ebccee409fa373.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8147,10 +8147,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;continue-to-click-execute-and-wait-for-the-installation&#34;&gt;Continue to click Execute and wait for the installation&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image06.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image06.png&#34;
 	width=&#34;790&#34;
 	height=&#34;590&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image06_hu_b2ceb8b62d656d57.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image06_hu_9ea4329434da0f88.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image06_hu_b2ceb8b62d656d57.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image06_hu_9ea4329434da0f88.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8160,10 +8160,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;click-next-after-installation-continue-to-next&#34;&gt;Click Next after installation, continue to Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image07.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image07.png&#34;
 	width=&#34;790&#34;
 	height=&#34;590&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image07_hu_4c49c69b12a6ad76.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image07_hu_aa2c1ac88ecc42a5.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image07_hu_4c49c69b12a6ad76.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image07_hu_aa2c1ac88ecc42a5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8173,10 +8173,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;select-server-dedicated&#34;&gt;Select Server Dedicated&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image08.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image08.png&#34;
 	width=&#34;790&#34;
 	height=&#34;590&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image08_hu_92a8c6cb9d9a33b8.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image08_hu_37e30b7ca3155fa9.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image08_hu_92a8c6cb9d9a33b8.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image08_hu_37e30b7ca3155fa9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8186,10 +8186,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;set-the-port-number-generally-not-recommended-to-modify-the-default-3306-can-be-and-then-next&#34;&gt;Set the port number, generally not recommended to modify, the default 3306 can be, and then Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image09.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image09.png&#34;
 	width=&#34;790&#34;
 	height=&#34;590&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image09_hu_4e6b2f9fa384aea6.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image09_hu_b60b8aea9d3473ef.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image09_hu_4e6b2f9fa384aea6.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image09_hu_b60b8aea9d3473ef.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8199,10 +8199,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;enter-the-mysql-password-and-then-next&#34;&gt;Enter the mysql password, and then Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image10.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image10.png&#34;
 	width=&#34;790&#34;
 	height=&#34;590&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image10_hu_a5bd4573680eb13e.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image10_hu_670efc7d697ea95c.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image10_hu_a5bd4573680eb13e.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image10_hu_670efc7d697ea95c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8212,10 +8212,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;set-the-server-name-which-generally-does-not-need-to-be-changed-either-and-then-next&#34;&gt;Set the server name, which generally does not need to be changed either, and then Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image11.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image11.png&#34;
 	width=&#34;790&#34;
 	height=&#34;590&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image11_hu_8a03176bbc3e7f3.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image11_hu_849db8f292bde105.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image11_hu_8a03176bbc3e7f3.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image11_hu_849db8f292bde105.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8225,10 +8225,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;no-need-to-modify-directly-next&#34;&gt;No need to modify directly Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image12.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image12.png&#34;
 	width=&#34;790&#34;
 	height=&#34;590&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image12_hu_f62e0e4c31baa93d.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image12_hu_4ad091a73eaa03fd.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image12_hu_f62e0e4c31baa93d.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image12_hu_4ad091a73eaa03fd.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8238,10 +8238,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;click-execute-to-start-the-installation&#34;&gt;Click Execute to start the installation&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image13.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image13.png&#34;
 	width=&#34;790&#34;
 	height=&#34;590&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image13_hu_e2c6ce6cda084c4e.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image13_hu_89cb9d1bfa25e62a.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image13_hu_e2c6ce6cda084c4e.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image13_hu_89cb9d1bfa25e62a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8251,10 +8251,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;click-finish&#34;&gt;Click Finish&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image14.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image14.png&#34;
 	width=&#34;790&#34;
 	height=&#34;590&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image14_hu_ae3e406a97fc49a8.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image14_hu_a822544b4eaec94f.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image14_hu_ae3e406a97fc49a8.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image14_hu_a822544b4eaec94f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8264,10 +8264,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;click-next&#34;&gt;Click Next&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image15.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image15.png&#34;
 	width=&#34;790&#34;
 	height=&#34;590&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image15_hu_b326dd122307acff.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image15_hu_3661cd2f18967601.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image15_hu_b326dd122307acff.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image15_hu_3661cd2f18967601.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8277,10 +8277,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;click-finish-1&#34;&gt;Click Finish&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image16.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image16.png&#34;
 	width=&#34;790&#34;
 	height=&#34;590&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image16_hu_b57d374a914e3282.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image16_hu_e9598a061b0527a9.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image16_hu_b57d374a914e3282.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image16_hu_e9598a061b0527a9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8290,10 +8290,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;open-the-myini-file-in-the-installation-directory&#34;&gt;Open the my.ini file in the installation directory&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image17.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image17.png&#34;
 	width=&#34;1139&#34;
 	height=&#34;641&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image17_hu_10bddeb0da123e22.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image17_hu_464a441cee65e72b.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image17_hu_10bddeb0da123e22.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image17_hu_464a441cee65e72b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8303,10 +8303,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;change-these-two-lines-to-innodb_flush_log_at_trx_commit0-and-innodb_buffer_pool_size2g&#34;&gt;Change these two lines to innodb_flush_log_at_trx_commit=0 and innodb_buffer_pool_size=2G&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image18.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image18.png&#34;
 	width=&#34;653&#34;
 	height=&#34;602&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image18_hu_9f4a6edc8426d8e8.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image18_hu_dc4bef56fbf0029d.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image18_hu_9f4a6edc8426d8e8.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image18_hu_dc4bef56fbf0029d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8315,10 +8315,10 @@
 		data-flex-basis=&#34;260px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image19.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image19.png&#34;
 	width=&#34;642&#34;
 	height=&#34;625&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image19_hu_7f9ce2854c0b7142.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image19_hu_f384b62b6e4135ab.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image19_hu_7f9ce2854c0b7142.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image19_hu_f384b62b6e4135ab.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8328,10 +8328,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;save-the-changes-and-go-to-the-bin-folder-in-the-installation-directory&#34;&gt;Save the changes and go to the bin folder in the installation directory&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image20.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image20.png&#34;
 	width=&#34;1139&#34;
 	height=&#34;641&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image20_hu_b825cce3ab5021f.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image20_hu_3737b6e5747705bf.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image20_hu_b825cce3ab5021f.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image20_hu_3737b6e5747705bf.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8341,10 +8341,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;click-on-the-address-bar-above-and-type-cmd-then-enter-to-open-the-command-line-in-that-directory&#34;&gt;Click on the address bar above and type cmd, then enter to open the command line in that directory&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image21.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image21.png&#34;
 	width=&#34;1139&#34;
 	height=&#34;641&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image21_hu_91ddfa21cb7f1772.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image21_hu_4f09e64695fca872.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image21_hu_91ddfa21cb7f1772.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image21_hu_4f09e64695fca872.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8354,10 +8354,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;enter-the-command-mysql--uroot--p-then-enter-the-password-to-enter-the-mysql-database&#34;&gt;Enter the command: &amp;ldquo;mysql -uroot -p&amp;rdquo;, then enter the password to enter the mysql database&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image22.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image22.png&#34;
 	width=&#34;993&#34;
 	height=&#34;519&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image22_hu_40bf934f91eafeb3.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image22_hu_147f63469ec84e4f.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image22_hu_40bf934f91eafeb3.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image22_hu_147f63469ec84e4f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8367,10 +8367,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;enter-status-and-the-following-image-will-be-displayed-to-indicate-that-the-installation-is-complete&#34;&gt;Enter &amp;ldquo;status&amp;rdquo; and the following image will be displayed to indicate that the installation is complete&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image23.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image23.png&#34;
 	width=&#34;993&#34;
 	height=&#34;519&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image23_hu_267ab6dc94c2c3d.png 480w, https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/images/image23_hu_a20f0309dd726728.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image23_hu_267ab6dc94c2c3d.png 480w, https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/images/image23_hu_a20f0309dd726728.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

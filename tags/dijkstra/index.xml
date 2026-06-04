@@ -10,10 +10,10 @@
         <webMaster>wenjie.jin@hotmail.com (Javen)</webMaster>
         <lastBuildDate>Wed, 27 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/tags/dijkstra/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Campus tour guide system (pure C implementation) Shortest path - Dijkstra algorithm</title>
-        <link>https://javenjin.github.io/blog/p/campus-tour-guide-system-pure-c-implementation-shortest-path-dijkstra-algorithm/</link>
+        <link>https://javenjin.github.io/blog/p/campus-tour-guide-system/</link>
         <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/p/campus-tour-guide-system-pure-c-implementation-shortest-path-dijkstra-algorithm/</guid>
+        <guid>https://javenjin.github.io/blog/p/campus-tour-guide-system/</guid>
         <description>&lt;h4 id=&#34;xijing-university-tour-guide-system&#34;&gt;Xijing University Tour Guide System&lt;/h4&gt;
 &lt;p&gt;Learn data structures + C implementation&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;

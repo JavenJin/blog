@@ -8,12 +8,469 @@
         <language>zh-cn</language>
         <managingEditor>wenjie.jin@hotmail.com (Javen)</managingEditor>
         <webMaster>wenjie.jin@hotmail.com (Javen)</webMaster>
-        <lastBuildDate>Mon, 24 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/tags/tools/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 04 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/tags/tools/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>使用 Cloudflare 部署 edgetunnel 免费节点（永久可用 &#43; 免费域名）</title>
+        <link>https://javenjin.github.io/blog/zh-cn/p/deploy-edgetunnel-free-node-with-cloudflare/</link>
+        <pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate>
+        <author>wenjie.jin@hotmail.com (Javen)</author>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/deploy-edgetunnel-free-node-with-cloudflare/</guid>
+        <description>&lt;h1 id=&#34;使用-cloudflare-部署-edgetunnel-免费节点永久可用--免费域名&#34;&gt;使用 Cloudflare 部署 edgetunnel 免费节点（永久可用 + 免费域名）&lt;/h1&gt;
+&lt;p&gt;如果你需要“长期可用”的免费节点方案，那么使用这套基于 Cloudflare 的搭建方式是你的不二选择。&lt;/p&gt;
+&lt;p&gt;它最大的特点只有三个：免费、稳定、速度极快！不需要服务器、不需要额外成本，甚至连域名都可以免费获取；整个搭建过程从零开始，大约 10 分钟就能完成。同时，由于依托 Cloudflare 本身的网络基础，这套方案在稳定性和可用性方面，也远远优于传统的临时节点或不稳定方案。&lt;/p&gt;
+&lt;p&gt;相比过去那些复杂、容易失效、需要频繁维护的方式，这种方案更像是一种“轻量级长期解决方案”：一次搭建，持续可用，几乎不需要额外折腾，非常适合个人用户或轻度使用场景。&lt;/p&gt;
+&lt;h2 id=&#34;域名注册&#34;&gt;域名注册&lt;/h2&gt;
+&lt;p&gt;注册一个永久免费的域名。&lt;/p&gt;
+&lt;p&gt;访问这个链接：&lt;a class=&#34;link&#34; href=&#34;https://my.dnshe.com/aff.php?aff=180471&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.dnshe.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image01.png&#34;
+	width=&#34;1324&#34;
+	height=&#34;724&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image01_hu_c122ff01ebbdd6ea.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image01_hu_18fc63f8a936600d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;438px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;选择右上角的 &lt;code&gt;Sign Up&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image02.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;911&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image02_hu_9ad7d6c84a223ad.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image02_hu_f6d3db9836766251.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;210&#34;
+		data-flex-basis=&#34;505px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;填写所有信息，点击立即注册。&lt;/p&gt;
+&lt;p&gt;注册成功后进入免费域名。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image03.png&#34;
+	width=&#34;1421&#34;
+	height=&#34;888&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image03_hu_5d697846d6902580.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image03_hu_c5c5ec64438762cb.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;使用 GitHub 进行验证。&lt;/p&gt;
+&lt;p&gt;验证完成后选择注册新域名，填写信息，点击确认注册。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image04.png&#34;
+	width=&#34;1460&#34;
+	height=&#34;813&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image04_hu_dae2279129e8172c.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image04_hu_eb1c8358caacf8c4.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;179&#34;
+		data-flex-basis=&#34;430px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;注册后保留该网页不要关闭。&lt;/p&gt;
+&lt;h2 id=&#34;注册并登录-cloudflare-平台&#34;&gt;注册并登录 Cloudflare 平台&lt;/h2&gt;
+&lt;p&gt;注册并登录 Cloudflare 平台。&lt;/p&gt;
+&lt;p&gt;访问这个链接：&lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.cloudflare.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image05.png&#34;
+	width=&#34;1533&#34;
+	height=&#34;820&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image05_hu_3a559996e21a6c1a.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image05_hu_9c7e4bc8725a6fc8.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;448px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;选择 &lt;code&gt;Login&lt;/code&gt;，然后点击 &lt;code&gt;Sign up&lt;/code&gt;，输入 &lt;code&gt;Email&lt;/code&gt; 和 &lt;code&gt;Password&lt;/code&gt; 信息后点击 &lt;code&gt;Sign up&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image06.png&#34;
+	width=&#34;620&#34;
+	height=&#34;877&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image06_hu_de2e8a9560b4b7dc.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image06_hu_547363c38e55b715.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;70&#34;
+		data-flex-basis=&#34;169px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;点 &lt;code&gt;Skip&lt;/code&gt; 跳过前面的步骤即可。&lt;/p&gt;
+&lt;h2 id=&#34;在-cloudflare-平台托管域名&#34;&gt;在 Cloudflare 平台托管域名&lt;/h2&gt;
+&lt;p&gt;登录后，选择左边的 &lt;code&gt;Domains&lt;/code&gt;，点击右上方的 &lt;code&gt;Add domain&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image07.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;911&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image07_hu_7e44d20adf7567f9.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image07_hu_2823a2403e0126a9.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;210&#34;
+		data-flex-basis=&#34;505px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;选择 &lt;code&gt;Connect a domain&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image08.png&#34;
+	width=&#34;763&#34;
+	height=&#34;383&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image08_hu_f9e4101807fac67e.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image08_hu_f7d602a8dc02eaa9.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;199&#34;
+		data-flex-basis=&#34;478px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;输入第一步注册的域名，点击 &lt;code&gt;Continue&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image09.png&#34;
+	width=&#34;763&#34;
+	height=&#34;383&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image09_hu_cf1530486412a39c.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image09_hu_b8e96ec5491a3ca3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;199&#34;
+		data-flex-basis=&#34;478px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;选择 &lt;code&gt;Free Plan&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image10.png&#34;
+	width=&#34;1534&#34;
+	height=&#34;703&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image10_hu_253d2fa6c20177a9.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image10_hu_ade4334baf871ec5.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;218&#34;
+		data-flex-basis=&#34;523px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;直接点击 &lt;code&gt;Continue to activation&lt;/code&gt;，然后 &lt;code&gt;Confirm&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image11.png&#34;
+	width=&#34;912&#34;
+	height=&#34;767&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image11_hu_bea0f296586b03e.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image11_hu_f29923e86f8e59d8.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;118&#34;
+		data-flex-basis=&#34;285px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;将下面的两个地址，填写到域名注册网站的 &lt;code&gt;DNS服务器&lt;/code&gt; 配置上，然后点击 &lt;code&gt;保存设置&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image12.png&#34;
+	width=&#34;766&#34;
+	height=&#34;731&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image12_hu_47f4967a6fe39a21.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image12_hu_300710579d8e7af5.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;104&#34;
+		data-flex-basis=&#34;251px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image13.png&#34;
+	width=&#34;1136&#34;
+	height=&#34;622&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image13_hu_47010e7c16728599.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image13_hu_8ec2f5d155353fd7.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;438px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;保存成功后在 &lt;code&gt;Cloudflare&lt;/code&gt; 站点上点击 &lt;code&gt;I updated my nameservers&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image14.png&#34;
+	width=&#34;795&#34;
+	height=&#34;796&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image14_hu_d2b166769059b4e9.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image14_hu_15d0099c1aad6172.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;99&#34;
+		data-flex-basis=&#34;239px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;部署-edgetunnel-程序到-cloudflare-站点&#34;&gt;部署 edgetunnel 程序到 Cloudflare 站点&lt;/h2&gt;
+&lt;p&gt;点击 &lt;a class=&#34;link&#34; href=&#34;https://github.com/cmliu/edgetunnel/archive/refs/heads/main.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;edgetunnel-main.zip&lt;/a&gt; 下载由 &lt;a class=&#34;link&#34; href=&#34;https://github.com/cmliu/edgetunnel&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CMliu&lt;/a&gt; 开源的程序备用。&lt;/p&gt;
+&lt;p&gt;进入 &lt;code&gt;Workers &amp;amp; Pages&lt;/code&gt; 页面，选择 &lt;code&gt;Create application&lt;/code&gt;，这一步可能需要验证邮箱，验证即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image15.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;911&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image15_hu_7cb102221c857fec.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image15_hu_7330791c18268761.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;210&#34;
+		data-flex-basis=&#34;505px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;选择 &lt;code&gt;Pages&lt;/code&gt;，点击 &lt;code&gt;Get started&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image16.png&#34;
+	width=&#34;787&#34;
+	height=&#34;516&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image16_hu_3beb809dfc1a9272.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image16_hu_a5c5356733fc2ea9.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;366px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;选择 &lt;code&gt;Drag and drop your files&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image17.png&#34;
+	width=&#34;731&#34;
+	height=&#34;395&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image17_hu_b3b6379a38df3e25.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image17_hu_edf5789d9d49b6dc.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;185&#34;
+		data-flex-basis=&#34;444px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;设置项目名称，并点击 &lt;code&gt;Create project&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image18.png&#34;
+	width=&#34;1285&#34;
+	height=&#34;665&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image18_hu_ab0d9f6584d8386.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image18_hu_cffb99525ba2e2db.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;463px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;上传开始下载的 &lt;a class=&#34;link&#34; href=&#34;https://github.com/cmliu/edgetunnel/archive/refs/heads/main.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;edgetunnel-main.zip&lt;/a&gt; 文件。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image19.png&#34;
+	width=&#34;1314&#34;
+	height=&#34;656&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image19_hu_b684cfac616459bb.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image19_hu_3f7f2b2a687b1ec2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;200&#34;
+		data-flex-basis=&#34;480px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;上传完成后点击 &lt;code&gt;Deploy site&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image20.png&#34;
+	width=&#34;1309&#34;
+	height=&#34;673&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image20_hu_2c8a3b973b05a0a.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image20_hu_b86ba686e786e628.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;194&#34;
+		data-flex-basis=&#34;466px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;成功后点击 &lt;code&gt;Continue to project&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image21.png&#34;
+	width=&#34;1212&#34;
+	height=&#34;790&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image21_hu_31194b8a1e583be9.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image21_hu_498d1856839e0503.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;153&#34;
+		data-flex-basis=&#34;368px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;然后进入到项目后，选择 &lt;code&gt;Settings&lt;/code&gt;，然后选择 &lt;code&gt;Variables and Secrets&lt;/code&gt;，点击 &lt;code&gt;Add&lt;/code&gt; 来添加一个变量。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image22.png&#34;
+	width=&#34;1283&#34;
+	height=&#34;628&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image22_hu_a2ade19a931520d3.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image22_hu_32b8655e4f97327b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;204&#34;
+		data-flex-basis=&#34;490px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;类型选择 &lt;code&gt;Text&lt;/code&gt;，变量名为 &lt;code&gt;ADMIN&lt;/code&gt;，&lt;code&gt;Value&lt;/code&gt; 为登录密码，建议设置复杂，完成后点 &lt;code&gt;Save&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image23.png&#34;
+	width=&#34;397&#34;
+	height=&#34;899&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image23_hu_1dfb0b830c41d56b.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image23_hu_ce160178bf9039b6.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;44&#34;
+		data-flex-basis=&#34;105px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;再点击 &lt;code&gt;Storage &amp;amp; databases&lt;/code&gt;，选择 &lt;code&gt;Workers KV&lt;/code&gt;，点击右上角的 &lt;code&gt;Create Instance&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image24.png&#34;
+	width=&#34;1900&#34;
+	height=&#34;806&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image24_hu_329296fa7c08b689.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image24_hu_17499199dbfd4ef8.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;235&#34;
+		data-flex-basis=&#34;565px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;设置 &lt;code&gt;KV&lt;/code&gt; 空间名称后点击 &lt;code&gt;Create&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image25.png&#34;
+	width=&#34;584&#34;
+	height=&#34;287&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image25_hu_3344fe972d80b83c.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image25_hu_961c23884488e365.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;203&#34;
+		data-flex-basis=&#34;488px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;返回项目设置页面（在 &lt;code&gt;Compute&lt;/code&gt; 下的 &lt;code&gt;Workers &amp;amp; Pages&lt;/code&gt; 里找）。然后选择 &lt;code&gt;Bindings&lt;/code&gt;，点击 &lt;code&gt;Add&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image26.png&#34;
+	width=&#34;1537&#34;
+	height=&#34;779&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image26_hu_c2d9f5cd3bd785c9.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image26_hu_3db22007a288f641.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;197&#34;
+		data-flex-basis=&#34;473px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;选择 &lt;code&gt;KV&lt;/code&gt; 命名空间。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image27.png&#34;
+	width=&#34;383&#34;
+	height=&#34;776&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image27_hu_3c9cbda0345ce460.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image27_hu_b2754883a1736f7f.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;49&#34;
+		data-flex-basis=&#34;118px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;变量名称添加 &lt;code&gt;KV&lt;/code&gt;，选择刚才创建的命名空间后点 &lt;code&gt;Save&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image28.png&#34;
+	width=&#34;395&#34;
+	height=&#34;894&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image28_hu_2908048962b19ec4.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image28_hu_2dc922f2d8ba57e5.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;44&#34;
+		data-flex-basis=&#34;106px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;再次点击右上角的 &lt;code&gt;Create deployment&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image29.png&#34;
+	width=&#34;1640&#34;
+	height=&#34;553&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image29_hu_47b557f93fc4efc5.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image29_hu_31605f85032b1ef6.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;296&#34;
+		data-flex-basis=&#34;711px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;再次上传文件后点击 &lt;code&gt;Save and deploy&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image30.png&#34;
+	width=&#34;1246&#34;
+	height=&#34;662&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image30_hu_89909cbc3e6df5b7.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image30_hu_2bec0fc4dc03198d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;451px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;至此，部署完成。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image31.png&#34;
+	width=&#34;1336&#34;
+	height=&#34;278&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image31_hu_4e40c38be8393b7d.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image31_hu_910af442f7af3b3b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;480&#34;
+		data-flex-basis=&#34;1153px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;访问显示的站点会显示 &lt;code&gt;nginx&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image32.png&#34;
+	width=&#34;958&#34;
+	height=&#34;666&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image32_hu_641f17c5fc293a83.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image32_hu_5979f642d1215ad5.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;143&#34;
+		data-flex-basis=&#34;345px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;需要在地址后面加上 &lt;code&gt;admin&lt;/code&gt; 即可访问，输入设置的管理员密码。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image33.png&#34;
+	width=&#34;1254&#34;
+	height=&#34;781&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image33_hu_94a88f0ce9e637e7.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image33_hu_8e815443057fcc50.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;385px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;复制订阅信息即可使用。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>个人电脑上部署一台随时随地可访问的私人相册</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E4%B8%AA%E4%BA%BA%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2%E4%B8%80%E5%8F%B0%E9%9A%8F%E6%97%B6%E9%9A%8F%E5%9C%B0%E5%8F%AF%E8%AE%BF%E9%97%AE%E7%9A%84%E7%A7%81%E4%BA%BA%E7%9B%B8%E5%86%8C/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/deploy-personal-photo-album/</link>
         <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E4%B8%AA%E4%BA%BA%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2%E4%B8%80%E5%8F%B0%E9%9A%8F%E6%97%B6%E9%9A%8F%E5%9C%B0%E5%8F%AF%E8%AE%BF%E9%97%AE%E7%9A%84%E7%A7%81%E4%BA%BA%E7%9B%B8%E5%86%8C/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/deploy-personal-photo-album/</guid>
         <description>&lt;h1 id=&#34;个人电脑上部署一台随时随地可访问的私人相册&#34;&gt;个人电脑上部署一台随时随地可访问的私人相册&lt;/h1&gt;
 &lt;p&gt;目标是想在个人电脑上安装&lt;em&gt;Immich&lt;/em&gt;（一个自托管的照片/视频备份服务器，支持移动端备份，类似于Google Photos）作为核心备份服务，并使用&lt;em&gt;Tailscale&lt;/em&gt;（一个基于WireGuard的零配置VPN工具）来实现远程访问（将本地服务安全地暴露到公网）。&lt;/p&gt;
 &lt;p&gt;这个组合适合个人备份场景：&lt;em&gt;Immich&lt;/em&gt;处理备份存储，&lt;em&gt;Tailscale&lt;/em&gt;解决内网穿透问题，无需复杂配置且安全可靠。&lt;/p&gt;
@@ -134,10 +591,10 @@
         </item>
         <item>
         <title>在 Chrome 浏览器中设置黑色模式</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8-chrome-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E8%AE%BE%E7%BD%AE%E9%BB%91%E8%89%B2%E6%A8%A1%E5%BC%8F/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/setting-black-mode-in-chrome/</link>
         <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8-chrome-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E8%AE%BE%E7%BD%AE%E9%BB%91%E8%89%B2%E6%A8%A1%E5%BC%8F/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/setting-black-mode-in-chrome/</guid>
         <description>&lt;h1 id=&#34;在-chrome-浏览器中设置黑色模式&#34;&gt;在 Chrome 浏览器中设置黑色模式&lt;/h1&gt;
 &lt;p&gt;在网址栏输入下面的地址：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -179,10 +636,10 @@
         </item>
         <item>
         <title>Git报错： Failed to connect to github.com port 443</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/git%E6%8A%A5%E9%94%99-failed-to-connect-to-github.com-port-443/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/git-error-connection-to-github-com-failed-on-port-443/</link>
         <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/git%E6%8A%A5%E9%94%99-failed-to-connect-to-github.com-port-443/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/git-error-connection-to-github-com-failed-on-port-443/</guid>
         <description>&lt;h1 id=&#34;git报错-failed-to-connect-to-githubcom-port-443&#34;&gt;Git报错： Failed to connect to github.com port 443&lt;/h1&gt;
 &lt;p&gt;出现这个问题主要是代理的问题。&lt;/p&gt;
 &lt;p&gt;一般分为两种情况：&lt;/p&gt;
@@ -254,10 +711,10 @@
         </item>
         <item>
         <title>GitHub Actions：定时发送天气邮件</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/github-actions%E5%AE%9A%E6%97%B6%E5%8F%91%E9%80%81%E5%A4%A9%E6%B0%94%E9%82%AE%E4%BB%B6/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/github-actions-sending-timed-weather-emails/</link>
         <pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/github-actions%E5%AE%9A%E6%97%B6%E5%8F%91%E9%80%81%E5%A4%A9%E6%B0%94%E9%82%AE%E4%BB%B6/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/github-actions-sending-timed-weather-emails/</guid>
         <description>&lt;h1 id=&#34;github-actions定时发送天气邮件&#34;&gt;GitHub Actions：定时发送天气邮件&lt;/h1&gt;
 &lt;p&gt;2019年底的时候，GitHub正式开放了&lt;a class=&#34;link&#34; href=&#34;https://github.com/features/actions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GitHub Actions&lt;/a&gt;这个功能，可以免费使用。&lt;/p&gt;
@@ -581,10 +1038,10 @@
         </item>
         <item>
         <title>使用WSL2技术在Windows子系统上安装Ubuntu</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E4%BD%BF%E7%94%A8wsl2%E6%8A%80%E6%9C%AF%E5%9C%A8windows%E5%AD%90%E7%B3%BB%E7%BB%9F%E4%B8%8A%E5%AE%89%E8%A3%85ubuntu/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/</link>
         <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E4%BD%BF%E7%94%A8wsl2%E6%8A%80%E6%9C%AF%E5%9C%A8windows%E5%AD%90%E7%B3%BB%E7%BB%9F%E4%B8%8A%E5%AE%89%E8%A3%85ubuntu/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/</guid>
         <description>&lt;h1 id=&#34;使用wsl2技术在windows子系统上安装ubuntu&#34;&gt;使用WSL2技术在Windows子系统上安装Ubuntu&lt;/h1&gt;
 &lt;h2 id=&#34;安装wsl2&#34;&gt;安装WSL2&lt;/h2&gt;
 &lt;p&gt;参考资料：&lt;a class=&#34;link&#34; href=&#34;https://docs.microsoft.com/en-us/windows/wsl/install-manual&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -635,10 +1092,10 @@
     &gt;https://linuxhostsupport.com/blog/how-to-install-and-configure-docker-compose-on-ubuntu-20-04/&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;打开microsoft-store并选择ubuntu版本进行下载&#34;&gt;打开&lt;a class=&#34;link&#34; href=&#34;https://aka.ms/wslstore&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Microsoft Store&lt;/a&gt;并选择Ubuntu版本进行下载&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image01.png&#34;
 	width=&#34;1210&#34;
 	height=&#34;830&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image01_hu_e7c726021b0e6d8a.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image01_hu_aa9d3036a97393a.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image01_hu_e7c726021b0e6d8a.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image01_hu_aa9d3036a97393a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -647,10 +1104,10 @@
 		data-flex-basis=&#34;349px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image02.png&#34;
 	width=&#34;1219&#34;
 	height=&#34;836&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image02_hu_a7f3e39e09914103.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image02_hu_95d77d60f29bd8eb.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image02_hu_a7f3e39e09914103.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image02_hu_95d77d60f29bd8eb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -660,10 +1117,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;等待自动安装成功&#34;&gt;等待自动安装成功&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image03.png&#34;
 	width=&#34;1213&#34;
 	height=&#34;833&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image03_hu_5613be8507592f65.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image03_hu_daacdbe7e577d8a8.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image03_hu_5613be8507592f65.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image03_hu_daacdbe7e577d8a8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -673,10 +1130,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;启动ubuntu等待自动安装&#34;&gt;启动Ubuntu，等待自动安装&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image04.png&#34;
 	width=&#34;797&#34;
 	height=&#34;741&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image04_hu_1d4d0d34e79779af.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image04_hu_37cf7085e2597149.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image04_hu_1d4d0d34e79779af.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image04_hu_37cf7085e2597149.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -686,10 +1143,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;设置用户名及密码后进入ubuntu系统中&#34;&gt;设置用户名及密码后进入Ubuntu系统中&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image05.png&#34;
 	width=&#34;990&#34;
 	height=&#34;649&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image05_hu_bf7b900697685762.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image05_hu_283f1184a9c96b65.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image05_hu_bf7b900697685762.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image05_hu_283f1184a9c96b65.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -709,10 +1166,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo curl -sSL https://get.daocloud.io/docker &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image06.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image06.png&#34;
 	width=&#34;989&#34;
 	height=&#34;647&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image06_hu_e001c806b62c40ff.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image06_hu_544bbd5216f621bd.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image06_hu_e001c806b62c40ff.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image06_hu_544bbd5216f621bd.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -722,10 +1179,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;等待安装成功&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image07.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image07.png&#34;
 	width=&#34;994&#34;
 	height=&#34;650&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image07_hu_26f05c30c9184963.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image07_hu_f93982e5a80116c.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image07_hu_26f05c30c9184963.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image07_hu_f93982e5a80116c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -753,10 +1210,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;显示如下即安装Ubuntu Docker成功&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image08.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image08.png&#34;
 	width=&#34;991&#34;
 	height=&#34;652&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image08_hu_7335ee6a8fe5b2c8.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image08_hu_299ae7e5077863d7.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image08_hu_7335ee6a8fe5b2c8.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image08_hu_299ae7e5077863d7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -775,10 +1232,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update -y
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image09.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image09.png&#34;
 	width=&#34;988&#34;
 	height=&#34;648&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image09_hu_5136b040901857c6.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image09_hu_90d410a62b56be85.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image09_hu_5136b040901857c6.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image09_hu_90d410a62b56be85.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -796,10 +1253,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install docker-compose
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image10.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image10.png&#34;
 	width=&#34;988&#34;
 	height=&#34;650&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image10_hu_c0d1e33b2f2677ec.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image10_hu_50da08a6607dace.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image10_hu_c0d1e33b2f2677ec.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image10_hu_50da08a6607dace.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -809,10 +1266,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;中途输入y回车即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image11.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image11.png&#34;
 	width=&#34;992&#34;
 	height=&#34;648&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image11_hu_71de1072da4f7692.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image11_hu_b0e4e5a62135ab4e.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image11_hu_71de1072da4f7692.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image11_hu_b0e4e5a62135ab4e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1367,10 +1824,10 @@
         </item>
         <item>
         <title>Windows批处理脚本（.bat）</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/windows%E6%89%B9%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC.bat/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/windows-batch-scripts/</link>
         <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/windows%E6%89%B9%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC.bat/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/windows-batch-scripts/</guid>
         <description>&lt;h1 id=&#34;windows批处理脚本bat&#34;&gt;Windows批处理脚本（.bat）&lt;/h1&gt;
 &lt;h2 id=&#34;常用文件操作dos命令&#34;&gt;常用文件操作DOS命令&lt;/h2&gt;
 &lt;ul&gt;
@@ -1671,17 +2128,17 @@
         </item>
         <item>
         <title>Windows 11 允许远程桌面/远程访问</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/windows-11-%E5%85%81%E8%AE%B8%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/windows-11-allows-remote-desktop-or-remote-access/</link>
         <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/windows-11-%E5%85%81%E8%AE%B8%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/windows-11-allows-remote-desktop-or-remote-access/</guid>
         <description>&lt;h1 id=&#34;windows-11-允许远程桌面远程访问&#34;&gt;Windows 11 允许远程桌面/远程访问&lt;/h1&gt;
 &lt;h2 id=&#34;windows-11-允许远程桌面&#34;&gt;Windows 11 允许远程桌面&lt;/h2&gt;
 &lt;h3 id=&#34;打开设置&#34;&gt;打开设置&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image01.png&#34;
 	width=&#34;311&#34;
 	height=&#34;642&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image01_hu_69133c72dd11de5d.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image01_hu_a087a0d325931240.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image01_hu_69133c72dd11de5d.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image01_hu_a087a0d325931240.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1691,10 +2148,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;搜索remote-desktop&#34;&gt;搜索Remote Desktop&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image02.png&#34;
 	width=&#34;1338&#34;
 	height=&#34;690&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image02_hu_fee5a5570b71d4ba.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image02_hu_b32a1e3c4a4de621.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image02_hu_fee5a5570b71d4ba.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image02_hu_b32a1e3c4a4de621.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1704,10 +2161,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;打开remote-desktop&#34;&gt;打开Remote Desktop&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image03.png&#34;
 	width=&#34;1378&#34;
 	height=&#34;668&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image03_hu_c750ee4a2df80061.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image03_hu_751c1208e22e9d41.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image03_hu_c750ee4a2df80061.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image03_hu_751c1208e22e9d41.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1718,10 +2175,10 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;windows-11-允许远程访问&#34;&gt;Windows 11 允许远程访问&lt;/h2&gt;
 &lt;h3 id=&#34;搜索打开windows-defender-firewall&#34;&gt;搜索打开Windows Defender Firewall&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image04.png&#34;
 	width=&#34;806&#34;
 	height=&#34;801&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image04_hu_e99b925636e1b1f8.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image04_hu_d59ce239751c6010.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image04_hu_e99b925636e1b1f8.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image04_hu_d59ce239751c6010.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1731,10 +2188,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;点击turn-windows-defender-firewall-on-or-off&#34;&gt;点击Turn Windows Defender Firewall on or off&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image05.png&#34;
 	width=&#34;864&#34;
 	height=&#34;438&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image05_hu_c8ea7bc680c642f4.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image05_hu_5bf3ca5a1f92048a.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image05_hu_c8ea7bc680c642f4.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image05_hu_5bf3ca5a1f92048a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1744,10 +2201,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;将public-network-settings-选择-turn-off-windows-defender-firewall-not-recommended&#34;&gt;将Public network settings 选择 Turn off Windows Defender Firewall (not recommended)&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image06.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image06.png&#34;
 	width=&#34;1142&#34;
 	height=&#34;494&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image06_hu_fc55af9361aab602.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image06_hu_6f7837533d37058a.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image06_hu_fc55af9361aab602.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image06_hu_6f7837533d37058a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1757,10 +2214,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;点击下方ok保存&#34;&gt;点击下方OK保存&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image07.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image07.png&#34;
 	width=&#34;1138&#34;
 	height=&#34;650&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image07_hu_808eea7be21060ed.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image07_hu_923d01aa9c60d03c.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image07_hu_808eea7be21060ed.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image07_hu_923d01aa9c60d03c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1770,10 +2227,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;显示如图即可&#34;&gt;显示如图即可&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image08.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image08.png&#34;
 	width=&#34;1139&#34;
 	height=&#34;647&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image08_hu_a2cc48ce74d0194c.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image08_hu_1917f5f48ad7d106.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image08_hu_a2cc48ce74d0194c.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image08_hu_1917f5f48ad7d106.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1786,10 +2243,10 @@
         </item>
         <item>
         <title>在VMware上安装CentOS7</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8vmware%E4%B8%8A%E5%AE%89%E8%A3%85centos7/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/install-centos7-on-vmware/</link>
         <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8vmware%E4%B8%8A%E5%AE%89%E8%A3%85centos7/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/install-centos7-on-vmware/</guid>
         <description>&lt;h1 id=&#34;在vmware上安装centos7&#34;&gt;在VMware上安装CentOS7&lt;/h1&gt;
 &lt;h2 id=&#34;安装前准备&#34;&gt;安装前准备&lt;/h2&gt;
 &lt;ul&gt;
@@ -2083,10 +2540,10 @@
         </item>
         <item>
         <title>在Windows上安装Tomcat8</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85tomcat8/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/install-tomcat8-on-windows/</link>
         <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85tomcat8/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/install-tomcat8-on-windows/</guid>
         <description>&lt;h1 id=&#34;在windows上安装tomcat8&#34;&gt;在Windows上安装Tomcat8&lt;/h1&gt;
 &lt;h2 id=&#34;下载安装包&#34;&gt;下载安装包&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;访问Tomcat官网 &lt;a class=&#34;link&#34; href=&#34;https://tomcat.apache.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -2307,18 +2764,18 @@
         </item>
         <item>
         <title>谷歌Chrome浏览器导出密码和导入密码</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E8%B0%B7%E6%AD%8Cchrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%BC%E5%87%BA%E5%AF%86%E7%A0%81%E5%92%8C%E5%AF%BC%E5%85%A5%E5%AF%86%E7%A0%81/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/google-chrome-web-browser-import-password-and-export-password/</link>
         <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%B0%B7%E6%AD%8Cchrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%BC%E5%87%BA%E5%AF%86%E7%A0%81%E5%92%8C%E5%AF%BC%E5%85%A5%E5%AF%86%E7%A0%81/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/google-chrome-web-browser-import-password-and-export-password/</guid>
         <description>&lt;h1 id=&#34;谷歌chrome浏览器导出密码和导入密码&#34;&gt;谷歌Chrome浏览器导出密码和导入密码&lt;/h1&gt;
 &lt;p&gt;       有时候大家遇到换了新电脑，或者公司需要调整电脑，或者说需要导入别人电脑上谷歌浏览器存的账号密码，发现可以导出密码，但是没有导入密码的选项，就很烦，这里教大家如何导出导入chrome谷歌浏览器的账号密码。&lt;/p&gt;
 &lt;h2 id=&#34;导出账号密码&#34;&gt;导出账号密码&lt;/h2&gt;
 &lt;h3 id=&#34;点击右上角的设置&#34;&gt;点击右上角的设置&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image01.png&#34;
 	width=&#34;464&#34;
 	height=&#34;539&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image01_hu_e041c33092ff9903.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image01_hu_f161693a480a427c.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image01_hu_e041c33092ff9903.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image01_hu_f161693a480a427c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2328,10 +2785,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;选择密码&#34;&gt;选择密码&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image02.png&#34;
 	width=&#34;908&#34;
 	height=&#34;727&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image02_hu_56bf14b7b824ccc1.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image02_hu_7caa0645c185c868.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image02_hu_56bf14b7b824ccc1.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image02_hu_7caa0645c185c868.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2341,10 +2798,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;点击右边的更多操作&#34;&gt;点击右边的更多操作&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image03.png&#34;
 	width=&#34;910&#34;
 	height=&#34;244&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image03_hu_6f26b9adb40a82bd.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image03_hu_8a6a7d88a3f1a075.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image03_hu_6f26b9adb40a82bd.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image03_hu_8a6a7d88a3f1a075.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2354,10 +2811,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;点击导出密码即可&#34;&gt;点击导出密码即可&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image04.png&#34;
 	width=&#34;817&#34;
 	height=&#34;213&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image04_hu_5afc1341c46c2e00.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image04_hu_a05c6944ba2663ef.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image04_hu_5afc1341c46c2e00.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image04_hu_a05c6944ba2663ef.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2369,10 +2826,10 @@
 &lt;h3 id=&#34;导出的密码是csv格式可以用excel查看但仍不方便那么如何导入呢&#34;&gt;导出的密码是csv格式，可以用excel查看，但仍不方便，那么如何导入呢？&lt;/h3&gt;
 &lt;h2 id=&#34;导入账号密码&#34;&gt;导入账号密码&lt;/h2&gt;
 &lt;h3 id=&#34;打开谷歌浏览器在地址栏输入chromeflagspassword-import-export&#34;&gt;打开谷歌浏览器，在地址栏输入chrome://flags/#password-import-export&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image05.png&#34;
 	width=&#34;1451&#34;
 	height=&#34;874&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image05_hu_5b667e2efa820ee5.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image05_hu_ea3ad9663c53510d.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image05_hu_5b667e2efa820ee5.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image05_hu_ea3ad9663c53510d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2382,10 +2839,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;然后在上面的搜索栏搜索password-import&#34;&gt;然后在上面的搜索栏搜索：password import&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image06.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image06.png&#34;
 	width=&#34;1430&#34;
 	height=&#34;575&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image06_hu_a96b367b882af6e6.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image06_hu_b29679b290074e06.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image06_hu_a96b367b882af6e6.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image06_hu_b29679b290074e06.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2395,10 +2852,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;然后选择右边的default为enabled并点击下方relaunch刷新浏览器&#34;&gt;然后选择右边的Default为Enabled，并点击下方Relaunch刷新浏览器&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image07.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image07.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1043&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image07_hu_fe706f55115941e9.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image07_hu_ed10c83a70975e8e.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image07_hu_fe706f55115941e9.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image07_hu_ed10c83a70975e8e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2408,10 +2865,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;最后重新进入导出密码的地方就可以看到导入的选项啦&#34;&gt;最后重新进入导出密码的地方，就可以看到导入的选项啦&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image08.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image08.png&#34;
 	width=&#34;871&#34;
 	height=&#34;241&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image08_hu_1d95a3a6eec10bf5.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image08_hu_c82a4d0ea8e7603f.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image08_hu_1d95a3a6eec10bf5.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image08_hu_c82a4d0ea8e7603f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2425,10 +2882,10 @@
         </item>
         <item>
         <title>切换eclipse后出现菜单栏乱码问题</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E5%88%87%E6%8D%A2eclipse%E5%90%8E%E5%87%BA%E7%8E%B0%E8%8F%9C%E5%8D%95%E6%A0%8F%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/switching-eclipse-after-the-menu-bar-messy-problem/</link>
         <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E5%88%87%E6%8D%A2eclipse%E5%90%8E%E5%87%BA%E7%8E%B0%E8%8F%9C%E5%8D%95%E6%A0%8F%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/switching-eclipse-after-the-menu-bar-messy-problem/</guid>
         <description>&lt;h1 id=&#34;切换eclipse后出现菜单栏乱码问题&#34;&gt;切换eclipse后出现菜单栏乱码问题&lt;/h1&gt;
 &lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;
 &lt;p&gt;今天切换了eclipse的工作目录&lt;/p&gt;
@@ -2527,10 +2984,10 @@
         </item>
         <item>
         <title>eclipse中安装和使用AmaterasUML插件绘制类图</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/eclipse%E4%B8%AD%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8amaterasuml%E6%8F%92%E4%BB%B6%E7%BB%98%E5%88%B6%E7%B1%BB%E5%9B%BE/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/</link>
         <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/eclipse%E4%B8%AD%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8amaterasuml%E6%8F%92%E4%BB%B6%E7%BB%98%E5%88%B6%E7%B1%BB%E5%9B%BE/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/</guid>
         <description>&lt;h1 id=&#34;eclipse中安装和使用amaterasuml插件绘制类图&#34;&gt;eclipse中安装和使用AmaterasUML插件绘制类图&lt;/h1&gt;
 &lt;h2 id=&#34;安装gef插件&#34;&gt;安装GEF插件&lt;/h2&gt;
 &lt;h3 id=&#34;打开eclipse官网&#34;&gt;打开eclipse官网 &lt;a class=&#34;link&#34; href=&#34;https://www.eclipse.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

@@ -10,10 +10,10 @@
         <webMaster>wenjie.jin@hotmail.com (Javen)</webMaster>
         <lastBuildDate>Fri, 12 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/tags/computer-vision/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>计算机视觉 - 实验十六 用高斯背景建模分离背景实验</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E5%85%AD-%E7%94%A8%E9%AB%98%E6%96%AF%E8%83%8C%E6%99%AF%E5%BB%BA%E6%A8%A1%E5%88%86%E7%A6%BB%E8%83%8C%E6%99%AF%E5%AE%9E%E9%AA%8C/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/</link>
         <pubDate>Fri, 12 Jun 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E5%85%AD-%E7%94%A8%E9%AB%98%E6%96%AF%E8%83%8C%E6%99%AF%E5%BB%BA%E6%A8%A1%E5%88%86%E7%A6%BB%E8%83%8C%E6%99%AF%E5%AE%9E%E9%AA%8C/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/</guid>
         <description>&lt;h2 id=&#34;计算机视觉---实验十六-用高斯背景建模分离背景实验&#34;&gt;计算机视觉 - 实验十六 用高斯背景建模分离背景实验&lt;/h2&gt;
 &lt;h3 id=&#34;实验目的和要求&#34;&gt;实验目的和要求&lt;/h3&gt;
 &lt;p&gt;  理解背景建模的基本原理；掌握实现背景建模的代码编写方法。&lt;/p&gt;
@@ -232,10 +232,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;  （二）显示结果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image01.png&#34;
 	width=&#34;540&#34;
 	height=&#34;292&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image01_hu_e658ad0b07348780.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image01_hu_abb0cd97fdc94746.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image01_hu_e658ad0b07348780.png 480w, https://javenjin.github.io/blog/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image01_hu_abb0cd97fdc94746.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Separate background experiments with Gaussian background modeling 1&#34;
@@ -246,10 +246,10 @@
 		data-flex-basis=&#34;443px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image02.png&#34;
 	width=&#34;558&#34;
 	height=&#34;340&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image02_hu_b64728965da8157e.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image02_hu_57b780da3270b2af.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image02_hu_b64728965da8157e.png 480w, https://javenjin.github.io/blog/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image02_hu_57b780da3270b2af.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Separate background experiments with Gaussian background modeling 2&#34;
@@ -260,10 +260,10 @@
 		data-flex-basis=&#34;393px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image03.png&#34;
 	width=&#34;557&#34;
 	height=&#34;340&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image03_hu_89f0749f28a06ba9.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image03_hu_eb327c5747cc431a.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image03_hu_89f0749f28a06ba9.png 480w, https://javenjin.github.io/blog/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image03_hu_eb327c5747cc431a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Separate background experiments with Gaussian background modeling 3&#34;
@@ -274,10 +274,10 @@
 		data-flex-basis=&#34;393px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image04.png&#34;
 	width=&#34;557&#34;
 	height=&#34;340&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image04_hu_459ae94c8546d716.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image04_hu_b067a0136a43eb43.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image04_hu_459ae94c8546d716.png 480w, https://javenjin.github.io/blog/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image04_hu_b067a0136a43eb43.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Separate background experiments with Gaussian background modeling 4&#34;
@@ -288,10 +288,10 @@
 		data-flex-basis=&#34;393px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image05.png&#34;
 	width=&#34;557&#34;
 	height=&#34;340&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image05_hu_7d9b2e6696f9257b.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image05_hu_8544b7498eb9e65e.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image05_hu_7d9b2e6696f9257b.png 480w, https://javenjin.github.io/blog/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/images/image05_hu_8544b7498eb9e65e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Separate background experiments with Gaussian background modeling 5&#34;
@@ -308,10 +308,10 @@
         </item>
         <item>
         <title>计算机视觉 - 实验十五 对视频的快速角点检测实验</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%94-%E5%AF%B9%E8%A7%86%E9%A2%91%E7%9A%84%E5%BF%AB%E9%80%9F%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B%E5%AE%9E%E9%AA%8C/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/experiment-15-fast-corner-point-detection-experiments-on-video/</link>
         <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%94-%E5%AF%B9%E8%A7%86%E9%A2%91%E7%9A%84%E5%BF%AB%E9%80%9F%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B%E5%AE%9E%E9%AA%8C/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/experiment-15-fast-corner-point-detection-experiments-on-video/</guid>
         <description>&lt;h2 id=&#34;计算机视觉---实验十五-对视频的快速角点检测实验&#34;&gt;计算机视觉 - 实验十五 对视频的快速角点检测实验&lt;/h2&gt;
 &lt;h3 id=&#34;实验目的和要求&#34;&gt;实验目的和要求&lt;/h3&gt;
 &lt;p&gt;  理解角点检测的基本原理；掌握实现角点检测的代码编写方法。&lt;/p&gt;
@@ -475,10 +475,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;  （二）显示结果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-15-fast-corner-point-detection-experiments-on-video/images/image01.png&#34;
 	width=&#34;544&#34;
 	height=&#34;292&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image01_hu_d3bb794ac019f358.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image01_hu_66e6670d2ebc307e.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-15-fast-corner-point-detection-experiments-on-video/images/image01_hu_d3bb794ac019f358.png 480w, https://javenjin.github.io/blog/p/experiment-15-fast-corner-point-detection-experiments-on-video/images/image01_hu_66e6670d2ebc307e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Fast corner point detection experiments on video 1&#34;
@@ -489,10 +489,10 @@
 		data-flex-basis=&#34;447px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-15-fast-corner-point-detection-experiments-on-video/images/image02.png&#34;
 	width=&#34;558&#34;
 	height=&#34;340&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image02_hu_24e59381944b8cf4.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image02_hu_9153af6370a63907.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-15-fast-corner-point-detection-experiments-on-video/images/image02_hu_24e59381944b8cf4.png 480w, https://javenjin.github.io/blog/p/experiment-15-fast-corner-point-detection-experiments-on-video/images/image02_hu_9153af6370a63907.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Fast corner point detection experiments on video 2&#34;
@@ -503,10 +503,10 @@
 		data-flex-basis=&#34;393px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-15-fast-corner-point-detection-experiments-on-video/images/image03.png&#34;
 	width=&#34;237&#34;
 	height=&#34;348&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image03_hu_9024e43268e1b909.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image03_hu_d1334202d094d75b.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-15-fast-corner-point-detection-experiments-on-video/images/image03_hu_9024e43268e1b909.png 480w, https://javenjin.github.io/blog/p/experiment-15-fast-corner-point-detection-experiments-on-video/images/image03_hu_d1334202d094d75b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Fast corner point detection experiments on video 3&#34;
@@ -517,10 +517,10 @@
 		data-flex-basis=&#34;163px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-15-fast-corner-point-detection-experiments-on-video/images/image04.png&#34;
 	width=&#34;253&#34;
 	height=&#34;348&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image04_hu_605f907c020819a5.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image04_hu_726e366407281edd.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-15-fast-corner-point-detection-experiments-on-video/images/image04_hu_605f907c020819a5.png 480w, https://javenjin.github.io/blog/p/experiment-15-fast-corner-point-detection-experiments-on-video/images/image04_hu_726e366407281edd.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Fast corner point detection experiments on video 4&#34;
@@ -531,10 +531,10 @@
 		data-flex-basis=&#34;174px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-15-fast-corner-point-detection-experiments-on-video/images/image05.png&#34;
 	width=&#34;357&#34;
 	height=&#34;491&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image05_hu_bb18977263ebe19a.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image05_hu_ebfe0f1425650822.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-15-fast-corner-point-detection-experiments-on-video/images/image05_hu_bb18977263ebe19a.png 480w, https://javenjin.github.io/blog/p/experiment-15-fast-corner-point-detection-experiments-on-video/images/image05_hu_ebfe0f1425650822.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Fast corner point detection experiments on video 5&#34;
@@ -551,10 +551,10 @@
         </item>
         <item>
         <title>计算机视觉 - 实验十四 分水岭算法实验</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E5%9B%9B-%E5%88%86%E6%B0%B4%E5%B2%AD%E7%AE%97%E6%B3%95%E5%AE%9E%E9%AA%8C/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/experiment-14-watershed-algorithm-experiment/</link>
         <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E5%9B%9B-%E5%88%86%E6%B0%B4%E5%B2%AD%E7%AE%97%E6%B3%95%E5%AE%9E%E9%AA%8C/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/experiment-14-watershed-algorithm-experiment/</guid>
         <description>&lt;h2 id=&#34;计算机视觉---实验十四-分水岭算法实验&#34;&gt;计算机视觉 - 实验十四 分水岭算法实验&lt;/h2&gt;
 &lt;h3 id=&#34;实验目的和要求&#34;&gt;实验目的和要求&lt;/h3&gt;
 &lt;p&gt;  理解分水岭算法的基本原理；掌握实现分水岭算法的代码编写方法。&lt;/p&gt;
@@ -965,10 +965,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;  （二）显示结果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-14-watershed-algorithm-experiment/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-14-watershed-algorithm-experiment/images/image01.png&#34;
 	width=&#34;560&#34;
 	height=&#34;292&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-14-watershed-algorithm-experiment/images/image01_hu_a70e87dc64b97dc9.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-14-watershed-algorithm-experiment/images/image01_hu_ed2ac7a76c9ba97f.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-14-watershed-algorithm-experiment/images/image01_hu_a70e87dc64b97dc9.png 480w, https://javenjin.github.io/blog/p/experiment-14-watershed-algorithm-experiment/images/image01_hu_ed2ac7a76c9ba97f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Watershed algorithm experiment 1&#34;
@@ -979,10 +979,10 @@
 		data-flex-basis=&#34;460px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-14-watershed-algorithm-experiment/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-14-watershed-algorithm-experiment/images/image02.png&#34;
 	width=&#34;558&#34;
 	height=&#34;349&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-14-watershed-algorithm-experiment/images/image02_hu_daa4790c38d76d38.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-14-watershed-algorithm-experiment/images/image02_hu_e35efd60d4fbb62e.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-14-watershed-algorithm-experiment/images/image02_hu_daa4790c38d76d38.png 480w, https://javenjin.github.io/blog/p/experiment-14-watershed-algorithm-experiment/images/image02_hu_e35efd60d4fbb62e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Watershed algorithm experiment 2&#34;
@@ -993,10 +993,10 @@
 		data-flex-basis=&#34;383px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-14-watershed-algorithm-experiment/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-14-watershed-algorithm-experiment/images/image03.png&#34;
 	width=&#34;557&#34;
 	height=&#34;348&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-14-watershed-algorithm-experiment/images/image03_hu_874e9f8d7e568272.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-14-watershed-algorithm-experiment/images/image03_hu_ec80eba6d75f3d2d.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-14-watershed-algorithm-experiment/images/image03_hu_874e9f8d7e568272.png 480w, https://javenjin.github.io/blog/p/experiment-14-watershed-algorithm-experiment/images/image03_hu_ec80eba6d75f3d2d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Watershed algorithm experiment 3&#34;
@@ -1007,10 +1007,10 @@
 		data-flex-basis=&#34;384px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-14-watershed-algorithm-experiment/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-14-watershed-algorithm-experiment/images/image04.png&#34;
 	width=&#34;558&#34;
 	height=&#34;291&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-14-watershed-algorithm-experiment/images/image04_hu_3df4b2b1627fb737.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-14-watershed-algorithm-experiment/images/image04_hu_24c992b3a7650265.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-14-watershed-algorithm-experiment/images/image04_hu_3df4b2b1627fb737.png 480w, https://javenjin.github.io/blog/p/experiment-14-watershed-algorithm-experiment/images/image04_hu_24c992b3a7650265.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Watershed algorithm experiment 4&#34;
@@ -1027,10 +1027,10 @@
         </item>
         <item>
         <title>计算机视觉 - 实验十三 轮廓形状分析实验</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%89-%E8%BD%AE%E5%BB%93%E5%BD%A2%E7%8A%B6%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/experiment-13-contour-shape-analysis-experiment/</link>
         <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%89-%E8%BD%AE%E5%BB%93%E5%BD%A2%E7%8A%B6%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/experiment-13-contour-shape-analysis-experiment/</guid>
         <description>&lt;h2 id=&#34;计算机视觉---实验十三-轮廓形状分析实验&#34;&gt;计算机视觉 - 实验十三 轮廓形状分析实验&lt;/h2&gt;
 &lt;h3 id=&#34;实验目的和要求&#34;&gt;实验目的和要求&lt;/h3&gt;
 &lt;p&gt;  理解轮廓形状分析的基本原理；掌握实现轮廓形状分析的代码编写方法。&lt;/p&gt;
@@ -1317,10 +1317,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;  （二）显示结果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-13-contour-shape-analysis-experiment/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-13-contour-shape-analysis-experiment/images/image01.png&#34;
 	width=&#34;560&#34;
 	height=&#34;303&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-13-contour-shape-analysis-experiment/images/image01_hu_ca7fb5f004e4459.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-13-contour-shape-analysis-experiment/images/image01_hu_19747aeb304bf155.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-13-contour-shape-analysis-experiment/images/image01_hu_ca7fb5f004e4459.png 480w, https://javenjin.github.io/blog/p/experiment-13-contour-shape-analysis-experiment/images/image01_hu_19747aeb304bf155.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Contour shape analysis experiment 1&#34;
@@ -1331,10 +1331,10 @@
 		data-flex-basis=&#34;443px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-13-contour-shape-analysis-experiment/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-13-contour-shape-analysis-experiment/images/image02.png&#34;
 	width=&#34;558&#34;
 	height=&#34;400&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-13-contour-shape-analysis-experiment/images/image02_hu_29eb26c92c4d859.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-13-contour-shape-analysis-experiment/images/image02_hu_bb01bd5654e041b4.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-13-contour-shape-analysis-experiment/images/image02_hu_29eb26c92c4d859.png 480w, https://javenjin.github.io/blog/p/experiment-13-contour-shape-analysis-experiment/images/image02_hu_bb01bd5654e041b4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Contour shape analysis experiment 2&#34;
@@ -1345,10 +1345,10 @@
 		data-flex-basis=&#34;334px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-13-contour-shape-analysis-experiment/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-13-contour-shape-analysis-experiment/images/image03.png&#34;
 	width=&#34;558&#34;
 	height=&#34;348&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-13-contour-shape-analysis-experiment/images/image03_hu_206100dabb7dd03b.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-13-contour-shape-analysis-experiment/images/image03_hu_e75f5c0d68f7923d.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-13-contour-shape-analysis-experiment/images/image03_hu_206100dabb7dd03b.png 480w, https://javenjin.github.io/blog/p/experiment-13-contour-shape-analysis-experiment/images/image03_hu_e75f5c0d68f7923d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Contour shape analysis experiment 3&#34;
@@ -1359,10 +1359,10 @@
 		data-flex-basis=&#34;384px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-13-contour-shape-analysis-experiment/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-13-contour-shape-analysis-experiment/images/image04.png&#34;
 	width=&#34;558&#34;
 	height=&#34;302&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-13-contour-shape-analysis-experiment/images/image04_hu_3fad202192c1ed1d.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-13-contour-shape-analysis-experiment/images/image04_hu_afa486a0704edd5e.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-13-contour-shape-analysis-experiment/images/image04_hu_3fad202192c1ed1d.png 480w, https://javenjin.github.io/blog/p/experiment-13-contour-shape-analysis-experiment/images/image04_hu_afa486a0704edd5e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Contour shape analysis experiment 4&#34;
@@ -1379,10 +1379,10 @@
         </item>
         <item>
         <title>计算机视觉 - 实验十二 离散傅里叶变换实验</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E7%A6%BB%E6%95%A3%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/experiment-12-discrete-fourier-transform-experiment/</link>
         <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E7%A6%BB%E6%95%A3%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/experiment-12-discrete-fourier-transform-experiment/</guid>
         <description>&lt;h2 id=&#34;计算机视觉---实验十二-离散傅里叶变换实验&#34;&gt;计算机视觉 - 实验十二 离散傅里叶变换实验&lt;/h2&gt;
 &lt;h3 id=&#34;实验目的和要求&#34;&gt;实验目的和要求&lt;/h3&gt;
 &lt;p&gt;  理解傅立叶变换的基本原理；掌握实现傅立叶变换的代码编写方法。&lt;/p&gt;
@@ -1613,10 +1613,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;  （二）显示结果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-12-discrete-fourier-transform-experiment/images/image01.png&#34;
 	width=&#34;560&#34;
 	height=&#34;303&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image01_hu_63bcae41b08da9c6.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image01_hu_35afd8578649f30.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-12-discrete-fourier-transform-experiment/images/image01_hu_63bcae41b08da9c6.png 480w, https://javenjin.github.io/blog/p/experiment-12-discrete-fourier-transform-experiment/images/image01_hu_35afd8578649f30.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Discrete Fourier Transform Experiment 1&#34;
@@ -1627,10 +1627,10 @@
 		data-flex-basis=&#34;443px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-12-discrete-fourier-transform-experiment/images/image02.png&#34;
 	width=&#34;492&#34;
 	height=&#34;529&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image02_hu_bd2f2c67806be5b4.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image02_hu_87bdbe1f95e6f428.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-12-discrete-fourier-transform-experiment/images/image02_hu_bd2f2c67806be5b4.png 480w, https://javenjin.github.io/blog/p/experiment-12-discrete-fourier-transform-experiment/images/image02_hu_87bdbe1f95e6f428.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Discrete Fourier Transform Experiment 2&#34;
@@ -1641,10 +1641,10 @@
 		data-flex-basis=&#34;223px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-12-discrete-fourier-transform-experiment/images/image03.png&#34;
 	width=&#34;492&#34;
 	height=&#34;529&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image03_hu_a5b6bb75d50f8f4a.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image03_hu_6ddac09274bc55b8.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-12-discrete-fourier-transform-experiment/images/image03_hu_a5b6bb75d50f8f4a.png 480w, https://javenjin.github.io/blog/p/experiment-12-discrete-fourier-transform-experiment/images/image03_hu_6ddac09274bc55b8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Discrete Fourier Transform Experiment 3&#34;
@@ -1655,10 +1655,10 @@
 		data-flex-basis=&#34;223px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-12-discrete-fourier-transform-experiment/images/image04.png&#34;
 	width=&#34;558&#34;
 	height=&#34;302&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image04_hu_505a136982602c48.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image04_hu_c086736c0762c6f.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-12-discrete-fourier-transform-experiment/images/image04_hu_505a136982602c48.png 480w, https://javenjin.github.io/blog/p/experiment-12-discrete-fourier-transform-experiment/images/image04_hu_c086736c0762c6f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Discrete Fourier Transform Experiment 4&#34;
@@ -1675,10 +1675,10 @@
         </item>
         <item>
         <title>计算机视觉 - 实验十一 LBP变换实验</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-lbp%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/experiment-11-lbp-transformation-experiment/</link>
         <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-lbp%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/experiment-11-lbp-transformation-experiment/</guid>
         <description>&lt;h2 id=&#34;计算机视觉---实验十一-lbp变换实验&#34;&gt;计算机视觉 - 实验十一 LBP变换实验&lt;/h2&gt;
 &lt;h3 id=&#34;实验目的和要求&#34;&gt;实验目的和要求&lt;/h3&gt;
 &lt;p&gt;  理解局部二值模式的基本原理；掌握实现局部二值模式的代码编写方法。&lt;/p&gt;
@@ -1928,10 +1928,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;  （二）显示结果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-11-lbp-transformation-experiment/images/image01.png&#34;
 	width=&#34;564&#34;
 	height=&#34;303&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image01_hu_89e84373d4e383d9.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image01_hu_840d146caafe1cd4.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-11-lbp-transformation-experiment/images/image01_hu_89e84373d4e383d9.png 480w, https://javenjin.github.io/blog/p/experiment-11-lbp-transformation-experiment/images/image01_hu_840d146caafe1cd4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LBP transformation experiment 1&#34;
@@ -1942,10 +1942,10 @@
 		data-flex-basis=&#34;446px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-11-lbp-transformation-experiment/images/image02.png&#34;
 	width=&#34;241&#34;
 	height=&#34;397&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image02_hu_97da50788d6c5cef.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image02_hu_2b1ffe2e756a444d.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-11-lbp-transformation-experiment/images/image02_hu_97da50788d6c5cef.png 480w, https://javenjin.github.io/blog/p/experiment-11-lbp-transformation-experiment/images/image02_hu_2b1ffe2e756a444d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LBP transformation experiment 2&#34;
@@ -1956,10 +1956,10 @@
 		data-flex-basis=&#34;145px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-11-lbp-transformation-experiment/images/image03.png&#34;
 	width=&#34;241&#34;
 	height=&#34;397&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image03_hu_a68a0f86a9d68bb2.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image03_hu_4e789e707adcf91a.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-11-lbp-transformation-experiment/images/image03_hu_a68a0f86a9d68bb2.png 480w, https://javenjin.github.io/blog/p/experiment-11-lbp-transformation-experiment/images/image03_hu_4e789e707adcf91a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LBP transformation experiment 3&#34;
@@ -1970,10 +1970,10 @@
 		data-flex-basis=&#34;145px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-11-lbp-transformation-experiment/images/image04.png&#34;
 	width=&#34;562&#34;
 	height=&#34;302&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image04_hu_1829c5ada828ba42.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image04_hu_dae69c73335179e1.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-11-lbp-transformation-experiment/images/image04_hu_1829c5ada828ba42.png 480w, https://javenjin.github.io/blog/p/experiment-11-lbp-transformation-experiment/images/image04_hu_dae69c73335179e1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LBP transformation experiment 4&#34;
@@ -1990,10 +1990,10 @@
         </item>
         <item>
         <title>计算机视觉 - 实验十 创建包围轮廓的矩形边界</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81-%E5%88%9B%E5%BB%BA%E5%8C%85%E5%9B%B4%E8%BD%AE%E5%BB%93%E7%9A%84%E7%9F%A9%E5%BD%A2%E8%BE%B9%E7%95%8C/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/</link>
         <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81-%E5%88%9B%E5%BB%BA%E5%8C%85%E5%9B%B4%E8%BD%AE%E5%BB%93%E7%9A%84%E7%9F%A9%E5%BD%A2%E8%BE%B9%E7%95%8C/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/</guid>
         <description>&lt;h2 id=&#34;计算机视觉---实验十-创建包围轮廓的矩形边界&#34;&gt;计算机视觉 - 实验十 创建包围轮廓的矩形边界&lt;/h2&gt;
 &lt;h3 id=&#34;实验目的和要求&#34;&gt;实验目的和要求&lt;/h3&gt;
 &lt;p&gt;  理解创建包围轮廓的矩形边界的基本原理；掌握使用OpenCV创建包围轮廓的矩形边界的代码编写方法。&lt;/p&gt;
@@ -2197,10 +2197,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;  （二）显示结果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image01.png&#34;
 	width=&#34;565&#34;
 	height=&#34;303&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image01_hu_94b61a319c5d43ec.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image01_hu_c4c760ee3b94618a.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image01_hu_94b61a319c5d43ec.png 480w, https://javenjin.github.io/blog/p/experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image01_hu_c4c760ee3b94618a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Create a rectangular boundary that encloses the outline 1&#34;
@@ -2211,10 +2211,10 @@
 		data-flex-basis=&#34;447px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image02.png&#34;
 	width=&#34;378&#34;
 	height=&#34;397&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image02_hu_e1d297d711bb7100.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image02_hu_f0ccd6c741517a3b.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image02_hu_e1d297d711bb7100.png 480w, https://javenjin.github.io/blog/p/experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image02_hu_f0ccd6c741517a3b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Create a rectangular boundary that encloses the outline 2&#34;
@@ -2225,10 +2225,10 @@
 		data-flex-basis=&#34;228px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image03.png&#34;
 	width=&#34;378&#34;
 	height=&#34;397&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image03_hu_39c1ed70db425b27.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image03_hu_f886bea53dd3f901.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image03_hu_39c1ed70db425b27.png 480w, https://javenjin.github.io/blog/p/experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image03_hu_f886bea53dd3f901.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Create a rectangular boundary that encloses the outline 3&#34;
@@ -2239,10 +2239,10 @@
 		data-flex-basis=&#34;228px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image04.png&#34;
 	width=&#34;562&#34;
 	height=&#34;304&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image04_hu_c31c18e3e4415a0f.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image04_hu_ee944a2fd8766534.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image04_hu_c31c18e3e4415a0f.png 480w, https://javenjin.github.io/blog/p/experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image04_hu_ee944a2fd8766534.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Create a rectangular boundary that encloses the outline 4&#34;
@@ -2259,10 +2259,10 @@
         </item>
         <item>
         <title>计算机视觉 - 实验九 寻找和绘制物体的凸包实验</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B9%9D-%E5%AF%BB%E6%89%BE%E5%92%8C%E7%BB%98%E5%88%B6%E7%89%A9%E4%BD%93%E7%9A%84%E5%87%B8%E5%8C%85%E5%AE%9E%E9%AA%8C/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/</link>
         <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B9%9D-%E5%AF%BB%E6%89%BE%E5%92%8C%E7%BB%98%E5%88%B6%E7%89%A9%E4%BD%93%E7%9A%84%E5%87%B8%E5%8C%85%E5%AE%9E%E9%AA%8C/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/</guid>
         <description>&lt;h2 id=&#34;计算机视觉---实验九-寻找和绘制物体的凸包实验&#34;&gt;计算机视觉 - 实验九 寻找和绘制物体的凸包实验&lt;/h2&gt;
 &lt;h3 id=&#34;实验目的和要求&#34;&gt;实验目的和要求&lt;/h3&gt;
 &lt;p&gt;  理解使用凸包的基本原理；掌握使用OpenCV通过凸包理解物体形状或轮廊的代码编写方法。&lt;/p&gt;
@@ -2529,10 +2529,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;  （二）显示结果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/images/image01.png&#34;
 	width=&#34;565&#34;
 	height=&#34;304&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/images/image01_hu_4711501dbd05f0d7.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/images/image01_hu_15c198b122f01a56.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/images/image01_hu_4711501dbd05f0d7.png 480w, https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/images/image01_hu_15c198b122f01a56.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Find and draw convex packets of objects experimentally 1&#34;
@@ -2543,10 +2543,10 @@
 		data-flex-basis=&#34;446px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/images/image02.png&#34;
 	width=&#34;265&#34;
 	height=&#34;406&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/images/image02_hu_26908a34c48fea4.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/images/image02_hu_5b679e6a8efd0ab9.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/images/image02_hu_26908a34c48fea4.png 480w, https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/images/image02_hu_5b679e6a8efd0ab9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Find and draw convex packets of objects experimentally 2&#34;
@@ -2557,10 +2557,10 @@
 		data-flex-basis=&#34;156px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/images/image03.png&#34;
 	width=&#34;302&#34;
 	height=&#34;427&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/images/image03_hu_6492f037c74ded20.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/images/image03_hu_77ad007e154f8359.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/images/image03_hu_6492f037c74ded20.png 480w, https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/images/image03_hu_77ad007e154f8359.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Find and draw convex packets of objects experimentally 3&#34;
@@ -2571,10 +2571,10 @@
 		data-flex-basis=&#34;169px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/images/image04.png&#34;
 	width=&#34;302&#34;
 	height=&#34;427&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/images/image04_hu_822e4f49db227037.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/images/image04_hu_3bcb7ef5d2353d7d.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/images/image04_hu_822e4f49db227037.png 480w, https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/images/image04_hu_3bcb7ef5d2353d7d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Find and draw convex packets of objects experimentally 4&#34;
@@ -2585,10 +2585,10 @@
 		data-flex-basis=&#34;169px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/images/image05.png&#34;
 	width=&#34;302&#34;
 	height=&#34;427&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/images/image05_hu_b37c040f955b602d.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/images/image05_hu_3a725b48387b5399.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/images/image05_hu_b37c040f955b602d.png 480w, https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/images/image05_hu_3a725b48387b5399.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Find and draw convex packets of objects experimentally 5&#34;
@@ -2599,10 +2599,10 @@
 		data-flex-basis=&#34;169px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/images/image06.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/images/image06.png&#34;
 	width=&#34;562&#34;
 	height=&#34;304&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/images/image06_hu_c9ac92b82759e95e.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/images/image06_hu_546b5e2fdbda44e7.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/images/image06_hu_c9ac92b82759e95e.png 480w, https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/images/image06_hu_546b5e2fdbda44e7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Find and draw convex packets of objects experimentally 6&#34;
@@ -2619,10 +2619,10 @@
         </item>
         <item>
         <title>计算机视觉 - 实验八 图像分割实验</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%85%AB-%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2%E5%AE%9E%E9%AA%8C/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/experiment-08-image-segmentation-experiment/</link>
         <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%85%AB-%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2%E5%AE%9E%E9%AA%8C/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/experiment-08-image-segmentation-experiment/</guid>
         <description>&lt;h2 id=&#34;计算机视觉---实验八-图像分割实验&#34;&gt;计算机视觉 - 实验八 图像分割实验&lt;/h2&gt;
 &lt;h3 id=&#34;实验目的和要求&#34;&gt;实验目的和要求&lt;/h3&gt;
 &lt;p&gt;  理解使用meanShfit进行图像分割的基本原理；掌握使用OpenCV通过均值漂移算法实现彩色图像分割的代码编写方法。&lt;/p&gt;
@@ -2827,10 +2827,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;  （二）显示结果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-08-image-segmentation-experiment/images/image01.png&#34;
 	width=&#34;565&#34;
 	height=&#34;304&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image01_hu_dba1fc370198663.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image01_hu_fbd696f8142efe00.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-08-image-segmentation-experiment/images/image01_hu_dba1fc370198663.png 480w, https://javenjin.github.io/blog/p/experiment-08-image-segmentation-experiment/images/image01_hu_fbd696f8142efe00.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image segmentation experiment 1&#34;
@@ -2841,10 +2841,10 @@
 		data-flex-basis=&#34;446px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-08-image-segmentation-experiment/images/image02.png&#34;
 	width=&#34;340&#34;
 	height=&#34;366&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image02_hu_89cb8957ef1db09a.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image02_hu_f3ee954a271d1d4f.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-08-image-segmentation-experiment/images/image02_hu_89cb8957ef1db09a.png 480w, https://javenjin.github.io/blog/p/experiment-08-image-segmentation-experiment/images/image02_hu_f3ee954a271d1d4f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image segmentation experiment 2&#34;
@@ -2855,10 +2855,10 @@
 		data-flex-basis=&#34;222px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-08-image-segmentation-experiment/images/image03.png&#34;
 	width=&#34;340&#34;
 	height=&#34;506&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image03_hu_5b264f3cfe4012d1.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image03_hu_5e4ae62864c3d999.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-08-image-segmentation-experiment/images/image03_hu_5b264f3cfe4012d1.png 480w, https://javenjin.github.io/blog/p/experiment-08-image-segmentation-experiment/images/image03_hu_5e4ae62864c3d999.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image segmentation experiment 3&#34;
@@ -2869,10 +2869,10 @@
 		data-flex-basis=&#34;161px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-08-image-segmentation-experiment/images/image04.png&#34;
 	width=&#34;562&#34;
 	height=&#34;294&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image04_hu_9d9098562235fe4e.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image04_hu_9bcd040aea6b9c99.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-08-image-segmentation-experiment/images/image04_hu_9d9098562235fe4e.png 480w, https://javenjin.github.io/blog/p/experiment-08-image-segmentation-experiment/images/image04_hu_9bcd040aea6b9c99.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image segmentation experiment 4&#34;
@@ -2883,10 +2883,10 @@
 		data-flex-basis=&#34;458px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-08-image-segmentation-experiment/images/image05.png&#34;
 	width=&#34;562&#34;
 	height=&#34;304&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image05_hu_c755510fa5f5f413.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image05_hu_96315c404e5bd64c.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-08-image-segmentation-experiment/images/image05_hu_c755510fa5f5f413.png 480w, https://javenjin.github.io/blog/p/experiment-08-image-segmentation-experiment/images/image05_hu_96315c404e5bd64c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image segmentation experiment 5&#34;
@@ -2903,10 +2903,10 @@
         </item>
         <item>
         <title>计算机视觉 - 实验七 查找并绘制轮廓实验</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%83-%E6%9F%A5%E6%89%BE%E5%B9%B6%E7%BB%98%E5%88%B6%E8%BD%AE%E5%BB%93%E5%AE%9E%E9%AA%8C/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/experiment-07-find-and-draw-outline-experiments/</link>
         <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%83-%E6%9F%A5%E6%89%BE%E5%B9%B6%E7%BB%98%E5%88%B6%E8%BD%AE%E5%BB%93%E5%AE%9E%E9%AA%8C/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/experiment-07-find-and-draw-outline-experiments/</guid>
         <description>&lt;h2 id=&#34;计算机视觉---实验七-查找并绘制轮廓实验&#34;&gt;计算机视觉 - 实验七 查找并绘制轮廓实验&lt;/h2&gt;
 &lt;h3 id=&#34;实验目的和要求&#34;&gt;实验目的和要求&lt;/h3&gt;
 &lt;p&gt;  理解查找图像轮廓的基本原理；掌握使用OpenCV实现查找轮廓的代码编写方法；掌握使用OpenCV实现绘制轮廓的代码编写方法。&lt;/p&gt;
@@ -3164,10 +3164,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;  （二）显示结果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-07-find-and-draw-outline-experiments/images/image01.png&#34;
 	width=&#34;565&#34;
 	height=&#34;304&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image01_hu_875237ed44fad956.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image01_hu_bbd176d89cf27e4a.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-07-find-and-draw-outline-experiments/images/image01_hu_875237ed44fad956.png 480w, https://javenjin.github.io/blog/p/experiment-07-find-and-draw-outline-experiments/images/image01_hu_bbd176d89cf27e4a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Find and draw outline experiments 1&#34;
@@ -3178,10 +3178,10 @@
 		data-flex-basis=&#34;446px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-07-find-and-draw-outline-experiments/images/image02.png&#34;
 	width=&#34;204&#34;
 	height=&#34;416&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image02_hu_642997ecc68b96a8.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image02_hu_3dccfb40fdbfa724.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-07-find-and-draw-outline-experiments/images/image02_hu_642997ecc68b96a8.png 480w, https://javenjin.github.io/blog/p/experiment-07-find-and-draw-outline-experiments/images/image02_hu_3dccfb40fdbfa724.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Find and draw outline experiments 2&#34;
@@ -3192,10 +3192,10 @@
 		data-flex-basis=&#34;117px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-07-find-and-draw-outline-experiments/images/image03.png&#34;
 	width=&#34;222&#34;
 	height=&#34;416&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image03_hu_35df75a34d13eb27.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image03_hu_47e3657b2990e8a8.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-07-find-and-draw-outline-experiments/images/image03_hu_35df75a34d13eb27.png 480w, https://javenjin.github.io/blog/p/experiment-07-find-and-draw-outline-experiments/images/image03_hu_47e3657b2990e8a8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Find and draw outline experiments 3&#34;
@@ -3206,10 +3206,10 @@
 		data-flex-basis=&#34;128px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-07-find-and-draw-outline-experiments/images/image04.png&#34;
 	width=&#34;222&#34;
 	height=&#34;416&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image04_hu_2ce6407161fe04eb.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image04_hu_7fb34a0b4d55a755.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-07-find-and-draw-outline-experiments/images/image04_hu_2ce6407161fe04eb.png 480w, https://javenjin.github.io/blog/p/experiment-07-find-and-draw-outline-experiments/images/image04_hu_7fb34a0b4d55a755.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Find and draw outline experiments 4&#34;
@@ -3220,10 +3220,10 @@
 		data-flex-basis=&#34;128px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-07-find-and-draw-outline-experiments/images/image05.png&#34;
 	width=&#34;562&#34;
 	height=&#34;304&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image05_hu_1e647234d41c9e06.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image05_hu_3d9cd3dd25504d44.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-07-find-and-draw-outline-experiments/images/image05_hu_1e647234d41c9e06.png 480w, https://javenjin.github.io/blog/p/experiment-07-find-and-draw-outline-experiments/images/image05_hu_3d9cd3dd25504d44.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Find and draw outline experiments 5&#34;
@@ -3240,10 +3240,10 @@
         </item>
         <item>
         <title>计算机视觉 - 实验六 哈夫变换实验</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%85%AD-%E5%93%88%E5%A4%AB%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/experiment-06-haff-transform-experiment/</link>
         <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%85%AD-%E5%93%88%E5%A4%AB%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/experiment-06-haff-transform-experiment/</guid>
         <description>&lt;h2 id=&#34;计算机视觉---实验六-哈夫变换实验&#34;&gt;计算机视觉 - 实验六 哈夫变换实验&lt;/h2&gt;
 &lt;h3 id=&#34;实验目的和要求&#34;&gt;实验目的和要求&lt;/h3&gt;
 &lt;p&gt;  理解哈夫变换的基本原理；掌握使用OpenCV实现哈夫变换的代码编写方法。&lt;/p&gt;
@@ -3503,10 +3503,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;  （二）显示结果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-06-haff-transform-experiment/images/image01.png&#34;
 	width=&#34;567&#34;
 	height=&#34;304&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image01_hu_74c4adc7acc9a28a.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image01_hu_3cace72bccbcd8b3.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-06-haff-transform-experiment/images/image01_hu_74c4adc7acc9a28a.png 480w, https://javenjin.github.io/blog/p/experiment-06-haff-transform-experiment/images/image01_hu_3cace72bccbcd8b3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Haff transform experiment 1&#34;
@@ -3517,10 +3517,10 @@
 		data-flex-basis=&#34;447px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-06-haff-transform-experiment/images/image02.png&#34;
 	width=&#34;567&#34;
 	height=&#34;337&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image02_hu_9e05bbccee40275e.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image02_hu_ee6e9f86a5865cf6.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-06-haff-transform-experiment/images/image02_hu_9e05bbccee40275e.png 480w, https://javenjin.github.io/blog/p/experiment-06-haff-transform-experiment/images/image02_hu_ee6e9f86a5865cf6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Haff transform experiment 2&#34;
@@ -3531,10 +3531,10 @@
 		data-flex-basis=&#34;403px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-06-haff-transform-experiment/images/image03.png&#34;
 	width=&#34;567&#34;
 	height=&#34;365&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image03_hu_e8eb0e243a60592f.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image03_hu_c3d33fe6a3d6777.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-06-haff-transform-experiment/images/image03_hu_e8eb0e243a60592f.png 480w, https://javenjin.github.io/blog/p/experiment-06-haff-transform-experiment/images/image03_hu_c3d33fe6a3d6777.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Haff transform experiment 3&#34;
@@ -3545,10 +3545,10 @@
 		data-flex-basis=&#34;372px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-06-haff-transform-experiment/images/image04.png&#34;
 	width=&#34;567&#34;
 	height=&#34;337&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image04_hu_69cc42edf8cd66d3.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image04_hu_6205808f73acc4db.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-06-haff-transform-experiment/images/image04_hu_69cc42edf8cd66d3.png 480w, https://javenjin.github.io/blog/p/experiment-06-haff-transform-experiment/images/image04_hu_6205808f73acc4db.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Haff transform experiment 4&#34;
@@ -3559,10 +3559,10 @@
 		data-flex-basis=&#34;403px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-06-haff-transform-experiment/images/image05.png&#34;
 	width=&#34;567&#34;
 	height=&#34;304&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image05_hu_29f0a0818f05b2b3.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image05_hu_f2e8c653156cc64.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-06-haff-transform-experiment/images/image05_hu_29f0a0818f05b2b3.png 480w, https://javenjin.github.io/blog/p/experiment-06-haff-transform-experiment/images/image05_hu_f2e8c653156cc64.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Haff transform experiment 5&#34;
@@ -3579,10 +3579,10 @@
         </item>
         <item>
         <title>计算机视觉 - 实验五 边缘检测实验</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%BA%94-%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%AE%9E%E9%AA%8C/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/experiment-05-edge-detection-experiment/</link>
         <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%BA%94-%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%AE%9E%E9%AA%8C/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/experiment-05-edge-detection-experiment/</guid>
         <description>&lt;h2 id=&#34;计算机视觉---实验五-边缘检测实验&#34;&gt;计算机视觉 - 实验五 边缘检测实验&lt;/h2&gt;
 &lt;h3 id=&#34;实验目的和要求&#34;&gt;实验目的和要求&lt;/h3&gt;
 &lt;p&gt;  （一）通过实验掌握图像的canny边缘检测的原理和编程实现方法；&lt;/p&gt;
@@ -4000,10 +4000,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;  （二）显示结果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image01.png&#34;
 	width=&#34;567&#34;
 	height=&#34;305&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image01_hu_7059803e5a0fcfbc.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image01_hu_167edfbf07bfeec7.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image01_hu_7059803e5a0fcfbc.png 480w, https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image01_hu_167edfbf07bfeec7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Edge detection experiment 1&#34;
@@ -4014,10 +4014,10 @@
 		data-flex-basis=&#34;446px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image02.png&#34;
 	width=&#34;238&#34;
 	height=&#34;371&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image02_hu_edb044d7d8a0de2.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image02_hu_7a481dd3aa5f813c.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image02_hu_edb044d7d8a0de2.png 480w, https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image02_hu_7a481dd3aa5f813c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Edge detection experiment 2&#34;
@@ -4028,10 +4028,10 @@
 		data-flex-basis=&#34;153px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image03.png&#34;
 	width=&#34;251&#34;
 	height=&#34;414&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image03_hu_87436e50a0c655e2.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image03_hu_cc04f13abda74060.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image03_hu_87436e50a0c655e2.png 480w, https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image03_hu_cc04f13abda74060.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Edge detection experiment 3&#34;
@@ -4042,10 +4042,10 @@
 		data-flex-basis=&#34;145px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image04.png&#34;
 	width=&#34;229&#34;
 	height=&#34;394&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image04_hu_164b7ebc1a69f3b8.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image04_hu_3a668c12166d1267.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image04_hu_164b7ebc1a69f3b8.png 480w, https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image04_hu_3a668c12166d1267.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Edge detection experiment 4&#34;
@@ -4056,10 +4056,10 @@
 		data-flex-basis=&#34;139px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image05.png&#34;
 	width=&#34;253&#34;
 	height=&#34;394&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image05_hu_3eb777a46599d329.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image05_hu_97d750f0d58ada14.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image05_hu_3eb777a46599d329.png 480w, https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image05_hu_97d750f0d58ada14.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Edge detection experiment 5&#34;
@@ -4070,10 +4070,10 @@
 		data-flex-basis=&#34;154px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image06.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image06.png&#34;
 	width=&#34;253&#34;
 	height=&#34;394&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image06_hu_b08c001fea1376e.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image06_hu_8ff60ed2695e5b22.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image06_hu_b08c001fea1376e.png 480w, https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image06_hu_8ff60ed2695e5b22.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Edge detection experiment 6&#34;
@@ -4084,10 +4084,10 @@
 		data-flex-basis=&#34;154px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image07.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image07.png&#34;
 	width=&#34;252&#34;
 	height=&#34;394&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image07_hu_b68fd838cbbe54d4.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image07_hu_7a81015550751b79.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image07_hu_b68fd838cbbe54d4.png 480w, https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image07_hu_7a81015550751b79.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Edge detection experiment 7&#34;
@@ -4098,10 +4098,10 @@
 		data-flex-basis=&#34;153px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image08.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image08.png&#34;
 	width=&#34;253&#34;
 	height=&#34;394&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image08_hu_42cc69f41e1be1fc.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image08_hu_57f52ec76a171909.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image08_hu_42cc69f41e1be1fc.png 480w, https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image08_hu_57f52ec76a171909.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Edge detection experiment 8&#34;
@@ -4112,10 +4112,10 @@
 		data-flex-basis=&#34;154px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image09.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image09.png&#34;
 	width=&#34;253&#34;
 	height=&#34;394&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image09_hu_42cc69f41e1be1fc.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image09_hu_57f52ec76a171909.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image09_hu_42cc69f41e1be1fc.png 480w, https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image09_hu_57f52ec76a171909.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Edge detection experiment 9&#34;
@@ -4126,10 +4126,10 @@
 		data-flex-basis=&#34;154px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image10.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image10.png&#34;
 	width=&#34;252&#34;
 	height=&#34;394&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image10_hu_cba2163cdd5a007d.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image10_hu_1b7a8716c8f5591f.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image10_hu_cba2163cdd5a007d.png 480w, https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image10_hu_1b7a8716c8f5591f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Edge detection experiment 10&#34;
@@ -4140,10 +4140,10 @@
 		data-flex-basis=&#34;153px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image11.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image11.png&#34;
 	width=&#34;567&#34;
 	height=&#34;305&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image11_hu_4771ea5a53830d6f.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image11_hu_83787da5a2aa5063.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image11_hu_4771ea5a53830d6f.png 480w, https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/images/image11_hu_83787da5a2aa5063.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Edge detection experiment 11&#34;
@@ -4160,10 +4160,10 @@
         </item>
         <item>
         <title>计算机视觉 - 实验四 图像非线性滤波实验</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%9B%9B-%E5%9B%BE%E5%83%8F%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%BB%A4%E6%B3%A2%E5%AE%9E%E9%AA%8C/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/experiment-04-image-nonlinear-filtering-experiment/</link>
         <pubDate>Wed, 18 Mar 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%9B%9B-%E5%9B%BE%E5%83%8F%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%BB%A4%E6%B3%A2%E5%AE%9E%E9%AA%8C/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/experiment-04-image-nonlinear-filtering-experiment/</guid>
         <description>&lt;h2 id=&#34;计算机视觉---实验四-图像非线性滤波实验&#34;&gt;计算机视觉 - 实验四 图像非线性滤波实验&lt;/h2&gt;
 &lt;h3 id=&#34;实验目的和要求&#34;&gt;实验目的和要求&lt;/h3&gt;
 &lt;p&gt;  （一）通过实验掌握图像的中值滤波原理和编程实现方法；&lt;/p&gt;
@@ -4551,10 +4551,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;  （二）显示结果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image01.png&#34;
 	width=&#34;567&#34;
 	height=&#34;307&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image01_hu_5ce0eec40e9b3594.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image01_hu_94f570393fac2ef2.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image01_hu_5ce0eec40e9b3594.png 480w, https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image01_hu_94f570393fac2ef2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image nonlinear filtering experiment 1&#34;
@@ -4565,10 +4565,10 @@
 		data-flex-basis=&#34;443px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image02.png&#34;
 	width=&#34;302&#34;
 	height=&#34;371&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image02_hu_e7128d31a8bee9ce.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image02_hu_e6deac9516955531.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image02_hu_e7128d31a8bee9ce.png 480w, https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image02_hu_e6deac9516955531.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image nonlinear filtering experiment 2&#34;
@@ -4579,10 +4579,10 @@
 		data-flex-basis=&#34;195px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image03.png&#34;
 	width=&#34;302&#34;
 	height=&#34;414&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image03_hu_d2e98ed0e0e405b7.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image03_hu_c6ddc9e23659c4da.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image03_hu_d2e98ed0e0e405b7.png 480w, https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image03_hu_c6ddc9e23659c4da.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image nonlinear filtering experiment 3&#34;
@@ -4593,10 +4593,10 @@
 		data-flex-basis=&#34;175px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image04.png&#34;
 	width=&#34;302&#34;
 	height=&#34;394&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image04_hu_d57cd18cca0ab9d3.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image04_hu_f7375a469ea0d390.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image04_hu_d57cd18cca0ab9d3.png 480w, https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image04_hu_f7375a469ea0d390.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image nonlinear filtering experiment 4&#34;
@@ -4607,10 +4607,10 @@
 		data-flex-basis=&#34;183px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image05.png&#34;
 	width=&#34;302&#34;
 	height=&#34;394&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image05_hu_1f26e96a49d1bcf9.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image05_hu_1aa857ffd61a797d.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image05_hu_1f26e96a49d1bcf9.png 480w, https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image05_hu_1aa857ffd61a797d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image nonlinear filtering experiment 5&#34;
@@ -4621,10 +4621,10 @@
 		data-flex-basis=&#34;183px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image06.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image06.png&#34;
 	width=&#34;302&#34;
 	height=&#34;394&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image06_hu_607e206c0173f2eb.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image06_hu_8ae2ac7460f601ff.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image06_hu_607e206c0173f2eb.png 480w, https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image06_hu_8ae2ac7460f601ff.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image nonlinear filtering experiment 6&#34;
@@ -4635,10 +4635,10 @@
 		data-flex-basis=&#34;183px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image07.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image07.png&#34;
 	width=&#34;302&#34;
 	height=&#34;394&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image07_hu_75fc33a932c553eb.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image07_hu_1e2ee07edb303138.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image07_hu_75fc33a932c553eb.png 480w, https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image07_hu_1e2ee07edb303138.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image nonlinear filtering experiment 7&#34;
@@ -4649,10 +4649,10 @@
 		data-flex-basis=&#34;183px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image08.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image08.png&#34;
 	width=&#34;567&#34;
 	height=&#34;307&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image08_hu_7aaf7977bcdc5c9b.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/images/image08_hu_20e049806ada18a0.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image08_hu_7aaf7977bcdc5c9b.png 480w, https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/images/image08_hu_20e049806ada18a0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image nonlinear filtering experiment 8&#34;
@@ -4669,10 +4669,10 @@
         </item>
         <item>
         <title>计算机视觉 - 实验三 图像线性滤波实验</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%89-%E5%9B%BE%E5%83%8F%E7%BA%BF%E6%80%A7%E6%BB%A4%E6%B3%A2%E5%AE%9E%E9%AA%8C/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/experiment-03-image-linear-filtering-experiment/</link>
         <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%89-%E5%9B%BE%E5%83%8F%E7%BA%BF%E6%80%A7%E6%BB%A4%E6%B3%A2%E5%AE%9E%E9%AA%8C/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/experiment-03-image-linear-filtering-experiment/</guid>
         <description>&lt;h2 id=&#34;计算机视觉---实验三-图像线性滤波实验&#34;&gt;计算机视觉 - 实验三 图像线性滤波实验&lt;/h2&gt;
 &lt;h3 id=&#34;实验目的和要求&#34;&gt;实验目的和要求&lt;/h3&gt;
 &lt;p&gt;  （一）通过实验掌握图像的方框滤波原理和编程实现方法；&lt;/p&gt;
@@ -5007,10 +5007,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;  （二）显示结果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/images/image01.png&#34;
 	width=&#34;549&#34;
 	height=&#34;297&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image01_hu_6b6f1500e12579ec.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image01_hu_dbcf356a0a629b3c.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/images/image01_hu_6b6f1500e12579ec.png 480w, https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/images/image01_hu_dbcf356a0a629b3c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image linear filtering experiment 1&#34;
@@ -5021,10 +5021,10 @@
 		data-flex-basis=&#34;443px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/images/image02.png&#34;
 	width=&#34;282&#34;
 	height=&#34;492&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image02_hu_29e855810a886a1d.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image02_hu_5f440261c6007157.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/images/image02_hu_29e855810a886a1d.png 480w, https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/images/image02_hu_5f440261c6007157.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image linear filtering experiment 2&#34;
@@ -5035,10 +5035,10 @@
 		data-flex-basis=&#34;137px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/images/image03.png&#34;
 	width=&#34;567&#34;
 	height=&#34;304&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image03_hu_8fb299fb4902a75c.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image03_hu_d9680532dca262b3.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/images/image03_hu_8fb299fb4902a75c.png 480w, https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/images/image03_hu_d9680532dca262b3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image linear filtering experiment 3&#34;
@@ -5049,10 +5049,10 @@
 		data-flex-basis=&#34;447px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/images/image04.png&#34;
 	width=&#34;567&#34;
 	height=&#34;304&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image04_hu_a806ee82fb35a4a9.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image04_hu_7380042e33a7fe72.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/images/image04_hu_a806ee82fb35a4a9.png 480w, https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/images/image04_hu_7380042e33a7fe72.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image linear filtering experiment 4&#34;
@@ -5063,10 +5063,10 @@
 		data-flex-basis=&#34;447px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/images/image05.png&#34;
 	width=&#34;567&#34;
 	height=&#34;304&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image05_hu_815cd7b1f33c9462.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image05_hu_22fdb645f7fde41.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/images/image05_hu_815cd7b1f33c9462.png 480w, https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/images/image05_hu_22fdb645f7fde41.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image linear filtering experiment 5&#34;
@@ -5077,10 +5077,10 @@
 		data-flex-basis=&#34;447px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image06.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/images/image06.png&#34;
 	width=&#34;550&#34;
 	height=&#34;298&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image06_hu_a6243a38f5ae46f4.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image06_hu_e5ba2d4bacf2f9f5.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/images/image06_hu_a6243a38f5ae46f4.png 480w, https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/images/image06_hu_e5ba2d4bacf2f9f5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image linear filtering experiment 6&#34;
@@ -5097,10 +5097,10 @@
         </item>
         <item>
         <title>计算机视觉 - 实验二 图像的直方图</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%BA%8C-%E5%9B%BE%E5%83%8F%E7%9A%84%E7%9B%B4%E6%96%B9%E5%9B%BE/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/experiment-02-histogram-of-images/</link>
         <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%BA%8C-%E5%9B%BE%E5%83%8F%E7%9A%84%E7%9B%B4%E6%96%B9%E5%9B%BE/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/experiment-02-histogram-of-images/</guid>
         <description>&lt;h2 id=&#34;计算机视觉---实验二-图像的直方图&#34;&gt;计算机视觉 - 实验二 图像的直方图&lt;/h2&gt;
 &lt;h3 id=&#34;实验目的和要求&#34;&gt;实验目的和要求&lt;/h3&gt;
 &lt;p&gt;  （一）通过实验掌握绘制图像的直方图方法；&lt;/p&gt;
@@ -5268,10 +5268,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;  （二）显示结果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/images/image01.png&#34;
 	width=&#34;554&#34;
 	height=&#34;297&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/images/image01_hu_78921f394d8fb9da.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/images/image01_hu_5595ca1bf00d9f50.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/images/image01_hu_78921f394d8fb9da.png 480w, https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/images/image01_hu_5595ca1bf00d9f50.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Histogram of images 1&#34;
@@ -5282,10 +5282,10 @@
 		data-flex-basis=&#34;447px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/images/image02.png&#34;
 	width=&#34;491&#34;
 	height=&#34;492&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/images/image02_hu_332be9f133b9719d.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/images/image02_hu_512e7d8a56c9c60.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/images/image02_hu_332be9f133b9719d.png 480w, https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/images/image02_hu_512e7d8a56c9c60.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Histogram of images 2&#34;
@@ -5296,10 +5296,10 @@
 		data-flex-basis=&#34;239px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/images/image03.png&#34;
 	width=&#34;378&#34;
 	height=&#34;422&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/images/image03_hu_f43c6fd7d7da44a5.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/images/image03_hu_f5f4d4323dec1e87.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/images/image03_hu_f43c6fd7d7da44a5.png 480w, https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/images/image03_hu_f5f4d4323dec1e87.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Histogram of images 3&#34;
@@ -5310,10 +5310,10 @@
 		data-flex-basis=&#34;214px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/images/image04.png&#34;
 	width=&#34;378&#34;
 	height=&#34;422&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/images/image04_hu_2216b1f395379190.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/images/image04_hu_45c5123a00c58b0b.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/images/image04_hu_2216b1f395379190.png 480w, https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/images/image04_hu_45c5123a00c58b0b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Histogram of images 4&#34;
@@ -5324,10 +5324,10 @@
 		data-flex-basis=&#34;214px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/images/image05.png&#34;
 	width=&#34;491&#34;
 	height=&#34;492&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/images/image05_hu_a5dc9d938eb20b3.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/images/image05_hu_abcdd48fea6215d1.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/images/image05_hu_a5dc9d938eb20b3.png 480w, https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/images/image05_hu_abcdd48fea6215d1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Histogram of images 5&#34;
@@ -5338,10 +5338,10 @@
 		data-flex-basis=&#34;239px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/images/image06.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/images/image06.png&#34;
 	width=&#34;554&#34;
 	height=&#34;298&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/images/image06_hu_ca302ff1d23bf021.png 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/images/image06_hu_2b79bd741bdb15c0.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/images/image06_hu_ca302ff1d23bf021.png 480w, https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/images/image06_hu_2b79bd741bdb15c0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Histogram of images 6&#34;
@@ -5358,10 +5358,10 @@
         </item>
         <item>
         <title>计算机视觉 - 实验一 图像的载入、显示与输出</title>
-        <link>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%80-%E5%9B%BE%E5%83%8F%E7%9A%84%E8%BD%BD%E5%85%A5%E6%98%BE%E7%A4%BA%E4%B8%8E%E8%BE%93%E5%87%BA/</link>
+        <link>https://javenjin.github.io/blog/zh-cn/p/experiment-01-image-loading-display-and-output/</link>
         <pubDate>Mon, 09 Mar 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%80-%E5%9B%BE%E5%83%8F%E7%9A%84%E8%BD%BD%E5%85%A5%E6%98%BE%E7%A4%BA%E4%B8%8E%E8%BE%93%E5%87%BA/</guid>
+        <guid>https://javenjin.github.io/blog/zh-cn/p/experiment-01-image-loading-display-and-output/</guid>
         <description>&lt;h2 id=&#34;计算机视觉---实验一-图像的载入显示与输出&#34;&gt;计算机视觉 - 实验一 图像的载入、显示与输出&lt;/h2&gt;
 &lt;h3 id=&#34;实验目的和要求&#34;&gt;实验目的和要求&lt;/h3&gt;
 &lt;p&gt;  （一）通过实验掌握 Windows 中安装 OpenCV 的方法；&lt;/p&gt;
@@ -5501,10 +5501,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;  （二）显示结果&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image01.jpeg&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/images/image01.jpeg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1031&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image01_hu_ac457d2441a8fdb.jpeg 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image01_hu_93caa2e29ab4b3eb.jpeg 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/images/image01_hu_ac457d2441a8fdb.jpeg 480w, https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/images/image01_hu_93caa2e29ab4b3eb.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image loading, display and output 1&#34;
@@ -5515,10 +5515,10 @@
 		data-flex-basis=&#34;446px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image02.jpeg&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/images/image02.jpeg&#34;
 	width=&#34;587&#34;
 	height=&#34;916&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image02_hu_3f44b3395d48a8c4.jpeg 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image02_hu_70385a31525732c0.jpeg 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/images/image02_hu_3f44b3395d48a8c4.jpeg 480w, https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/images/image02_hu_70385a31525732c0.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image loading, display and output 2&#34;
@@ -5529,10 +5529,10 @@
 		data-flex-basis=&#34;153px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image03.jpeg&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/images/image03.jpeg&#34;
 	width=&#34;1283&#34;
 	height=&#34;761&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image03_hu_c513f70fe1c4b99a.jpeg 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image03_hu_fadb457316229707.jpeg 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/images/image03_hu_c513f70fe1c4b99a.jpeg 480w, https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/images/image03_hu_fadb457316229707.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image loading, display and output 3&#34;
@@ -5543,10 +5543,10 @@
 		data-flex-basis=&#34;404px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image04.jpeg&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/images/image04.jpeg&#34;
 	width=&#34;253&#34;
 	height=&#34;291&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image04_hu_f59cff19c3abd2ad.jpeg 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image04_hu_a3e7f1a8ce3297fd.jpeg 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/images/image04_hu_f59cff19c3abd2ad.jpeg 480w, https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/images/image04_hu_a3e7f1a8ce3297fd.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image loading, display and output 4&#34;
@@ -5557,10 +5557,10 @@
 		data-flex-basis=&#34;208px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image05.jpeg&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/images/image05.jpeg&#34;
 	width=&#34;1283&#34;
 	height=&#34;761&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image05_hu_fb199ad5cc635323.jpeg 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image05_hu_826bfd93a9dc64c9.jpeg 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/images/image05_hu_fb199ad5cc635323.jpeg 480w, https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/images/image05_hu_826bfd93a9dc64c9.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image loading, display and output 5&#34;
@@ -5571,10 +5571,10 @@
 		data-flex-basis=&#34;404px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image06.jpeg&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/images/image06.jpeg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1032&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image06_hu_e7c7c309004ed16e.jpeg 480w, https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image06_hu_33210d839145d6a9.jpeg 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/images/image06_hu_e7c7c309004ed16e.jpeg 480w, https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/images/image06_hu_33210d839145d6a9.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image loading, display and output 6&#34;

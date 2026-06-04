@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Deploy an edgetunnel free node with Cloudflare (permanent availability &#43; free domain)'>
+<title>使用 Cloudflare 部署 edgetunnel 免费节点（永久可用 &#43; 免费域名）</title>
+
+<link rel='canonical' href='https://javenjin.github.io/blog/zh-cn/p/deploy-edgetunnel-free-node-with-cloudflare/'>
+
+<link rel="stylesheet" href="/blog/scss/style.min.c23ac85127f8ff583870a396f5a1d8e3919d4dda7d292cb9b68b5e272d69739d.css"><meta property='og:title' content='使用 Cloudflare 部署 edgetunnel 免费节点（永久可用 &#43; 免费域名）'>
+<meta property='og:description' content='Deploy an edgetunnel free node with Cloudflare (permanent availability &#43; free domain)'>
+<meta property='og:url' content='https://javenjin.github.io/blog/zh-cn/p/deploy-edgetunnel-free-node-with-cloudflare/'>
+<meta property='og:site_name' content='Javen Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Tools' /><meta property='article:published_time' content='2026-06-04T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-06-04T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="使用 Cloudflare 部署 edgetunnel 免费节点（永久可用 &#43; 免费域名）">
+<meta name="twitter:description" content="Deploy an edgetunnel free node with Cloudflare (permanent availability &#43; free domain)">
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/blog/zh-cn/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🤩</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/blog/zh-cn">Javen Blog</a></h1>
+            <h2 class="site-description">Javen.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/javenjin'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://instagram.com/javenjin98'
+                        target="_blank"
+                        title="Ins"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16.65 7.2H16.66M8 20H16C18.2091 20 20 18.2091 20 16V8C20 5.79086 18.2091 4 16 4H8C5.79086 4 4 5.79086 4 8V16C4 18.2091 5.79086 20 8 20ZM15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12Z"/>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:wenjie.jin@hotmail.com'
+                        target="_blank"
+                        title="Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/blog/zh-cn/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://javenjin.github.io/blog/" >English</option>
+                        
+                            <option value="https://javenjin.github.io/blog/zh-cn/" selected>中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#域名注册">域名注册</a></li>
+    <li><a href="#注册并登录-cloudflare-平台">注册并登录 Cloudflare 平台</a></li>
+    <li><a href="#在-cloudflare-平台托管域名">在 Cloudflare 平台托管域名</a></li>
+    <li><a href="#部署-edgetunnel-程序到-cloudflare-站点">部署 edgetunnel 程序到 Cloudflare 站点</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/blog/zh-cn/categories/tools/" >
+                Tools
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/blog/zh-cn/p/deploy-edgetunnel-free-node-with-cloudflare/">使用 Cloudflare 部署 edgetunnel 免费节点（永久可用 &#43; 免费域名）</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Deploy an edgetunnel free node with Cloudflare (permanent availability &#43; free domain)
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jun 04, 2026</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 1 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+        <footer class="article-translations">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+            <div>
+                
+                    <a href="https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/" class="link">English</a>
+                
+            </div>
+        </footer>
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="使用-cloudflare-部署-edgetunnel-免费节点永久可用--免费域名">使用 Cloudflare 部署 edgetunnel 免费节点（永久可用 + 免费域名）</h1>
+<p>如果你需要“长期可用”的免费节点方案，那么使用这套基于 Cloudflare 的搭建方式是你的不二选择。</p>
+<p>它最大的特点只有三个：免费、稳定、速度极快！不需要服务器、不需要额外成本，甚至连域名都可以免费获取；整个搭建过程从零开始，大约 10 分钟就能完成。同时，由于依托 Cloudflare 本身的网络基础，这套方案在稳定性和可用性方面，也远远优于传统的临时节点或不稳定方案。</p>
+<p>相比过去那些复杂、容易失效、需要频繁维护的方式，这种方案更像是一种“轻量级长期解决方案”：一次搭建，持续可用，几乎不需要额外折腾，非常适合个人用户或轻度使用场景。</p>
+<h2 id="域名注册">域名注册</h2>
+<p>注册一个永久免费的域名。</p>
+<p>访问这个链接：<a class="link" href="https://my.dnshe.com/aff.php?aff=180471"  target="_blank" rel="noopener"
+    >https://www.dnshe.com/</a></p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image01.png"
+	width="1324"
+	height="724"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image01_hu_c122ff01ebbdd6ea.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image01_hu_18fc63f8a936600d.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="182"
+		data-flex-basis="438px"
+	
+></p>
+<p>选择右上角的 <code>Sign Up</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image02.png"
+	width="1920"
+	height="911"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image02_hu_9ad7d6c84a223ad.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image02_hu_f6d3db9836766251.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="210"
+		data-flex-basis="505px"
+	
+></p>
+<p>填写所有信息，点击立即注册。</p>
+<p>注册成功后进入免费域名。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image03.png"
+	width="1421"
+	height="888"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image03_hu_5d697846d6902580.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image03_hu_c5c5ec64438762cb.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="160"
+		data-flex-basis="384px"
+	
+></p>
+<p>使用 GitHub 进行验证。</p>
+<p>验证完成后选择注册新域名，填写信息，点击确认注册。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image04.png"
+	width="1460"
+	height="813"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image04_hu_dae2279129e8172c.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image04_hu_eb1c8358caacf8c4.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="179"
+		data-flex-basis="430px"
+	
+></p>
+<p>注册后保留该网页不要关闭。</p>
+<h2 id="注册并登录-cloudflare-平台">注册并登录 Cloudflare 平台</h2>
+<p>注册并登录 Cloudflare 平台。</p>
+<p>访问这个链接：<a class="link" href="https://www.cloudflare.com/"  target="_blank" rel="noopener"
+    >https://www.cloudflare.com/</a></p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image05.png"
+	width="1533"
+	height="820"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image05_hu_3a559996e21a6c1a.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image05_hu_9c7e4bc8725a6fc8.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="448px"
+	
+></p>
+<p>选择 <code>Login</code>，然后点击 <code>Sign up</code>，输入 <code>Email</code> 和 <code>Password</code> 信息后点击 <code>Sign up</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image06.png"
+	width="620"
+	height="877"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image06_hu_de2e8a9560b4b7dc.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image06_hu_547363c38e55b715.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="70"
+		data-flex-basis="169px"
+	
+></p>
+<p>点 <code>Skip</code> 跳过前面的步骤即可。</p>
+<h2 id="在-cloudflare-平台托管域名">在 Cloudflare 平台托管域名</h2>
+<p>登录后，选择左边的 <code>Domains</code>，点击右上方的 <code>Add domain</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image07.png"
+	width="1920"
+	height="911"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image07_hu_7e44d20adf7567f9.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image07_hu_2823a2403e0126a9.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="210"
+		data-flex-basis="505px"
+	
+></p>
+<p>选择 <code>Connect a domain</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image08.png"
+	width="763"
+	height="383"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image08_hu_f9e4101807fac67e.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image08_hu_f7d602a8dc02eaa9.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="199"
+		data-flex-basis="478px"
+	
+></p>
+<p>输入第一步注册的域名，点击 <code>Continue</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image09.png"
+	width="763"
+	height="383"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image09_hu_cf1530486412a39c.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image09_hu_b8e96ec5491a3ca3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="199"
+		data-flex-basis="478px"
+	
+></p>
+<p>选择 <code>Free Plan</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image10.png"
+	width="1534"
+	height="703"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image10_hu_253d2fa6c20177a9.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image10_hu_ade4334baf871ec5.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="218"
+		data-flex-basis="523px"
+	
+></p>
+<p>直接点击 <code>Continue to activation</code>，然后 <code>Confirm</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image11.png"
+	width="912"
+	height="767"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image11_hu_bea0f296586b03e.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image11_hu_f29923e86f8e59d8.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="118"
+		data-flex-basis="285px"
+	
+></p>
+<p>将下面的两个地址，填写到域名注册网站的 <code>DNS服务器</code> 配置上，然后点击 <code>保存设置</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image12.png"
+	width="766"
+	height="731"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image12_hu_47f4967a6fe39a21.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image12_hu_300710579d8e7af5.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="104"
+		data-flex-basis="251px"
+	
+></p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image13.png"
+	width="1136"
+	height="622"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image13_hu_47010e7c16728599.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image13_hu_8ec2f5d155353fd7.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="182"
+		data-flex-basis="438px"
+	
+></p>
+<p>保存成功后在 <code>Cloudflare</code> 站点上点击 <code>I updated my nameservers</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image14.png"
+	width="795"
+	height="796"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image14_hu_d2b166769059b4e9.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image14_hu_15d0099c1aad6172.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="99"
+		data-flex-basis="239px"
+	
+></p>
+<h2 id="部署-edgetunnel-程序到-cloudflare-站点">部署 edgetunnel 程序到 Cloudflare 站点</h2>
+<p>点击 <a class="link" href="https://github.com/cmliu/edgetunnel/archive/refs/heads/main.zip"  target="_blank" rel="noopener"
+    >edgetunnel-main.zip</a> 下载由 <a class="link" href="https://github.com/cmliu/edgetunnel"  target="_blank" rel="noopener"
+    >CMliu</a> 开源的程序备用。</p>
+<p>进入 <code>Workers &amp; Pages</code> 页面，选择 <code>Create application</code>，这一步可能需要验证邮箱，验证即可。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image15.png"
+	width="1920"
+	height="911"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image15_hu_7cb102221c857fec.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image15_hu_7330791c18268761.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="210"
+		data-flex-basis="505px"
+	
+></p>
+<p>选择 <code>Pages</code>，点击 <code>Get started</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image16.png"
+	width="787"
+	height="516"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image16_hu_3beb809dfc1a9272.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image16_hu_a5c5356733fc2ea9.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="152"
+		data-flex-basis="366px"
+	
+></p>
+<p>选择 <code>Drag and drop your files</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image17.png"
+	width="731"
+	height="395"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image17_hu_b3b6379a38df3e25.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image17_hu_edf5789d9d49b6dc.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="444px"
+	
+></p>
+<p>设置项目名称，并点击 <code>Create project</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image18.png"
+	width="1285"
+	height="665"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image18_hu_ab0d9f6584d8386.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image18_hu_cffb99525ba2e2db.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="193"
+		data-flex-basis="463px"
+	
+></p>
+<p>上传开始下载的 <a class="link" href="https://github.com/cmliu/edgetunnel/archive/refs/heads/main.zip"  target="_blank" rel="noopener"
+    >edgetunnel-main.zip</a> 文件。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image19.png"
+	width="1314"
+	height="656"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image19_hu_b684cfac616459bb.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image19_hu_3f7f2b2a687b1ec2.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+></p>
+<p>上传完成后点击 <code>Deploy site</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image20.png"
+	width="1309"
+	height="673"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image20_hu_2c8a3b973b05a0a.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image20_hu_b86ba686e786e628.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="194"
+		data-flex-basis="466px"
+	
+></p>
+<p>成功后点击 <code>Continue to project</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image21.png"
+	width="1212"
+	height="790"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image21_hu_31194b8a1e583be9.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image21_hu_498d1856839e0503.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="153"
+		data-flex-basis="368px"
+	
+></p>
+<p>然后进入到项目后，选择 <code>Settings</code>，然后选择 <code>Variables and Secrets</code>，点击 <code>Add</code> 来添加一个变量。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image22.png"
+	width="1283"
+	height="628"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image22_hu_a2ade19a931520d3.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image22_hu_32b8655e4f97327b.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="204"
+		data-flex-basis="490px"
+	
+></p>
+<p>类型选择 <code>Text</code>，变量名为 <code>ADMIN</code>，<code>Value</code> 为登录密码，建议设置复杂，完成后点 <code>Save</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image23.png"
+	width="397"
+	height="899"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image23_hu_1dfb0b830c41d56b.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image23_hu_ce160178bf9039b6.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="44"
+		data-flex-basis="105px"
+	
+></p>
+<p>再点击 <code>Storage &amp; databases</code>，选择 <code>Workers KV</code>，点击右上角的 <code>Create Instance</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image24.png"
+	width="1900"
+	height="806"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image24_hu_329296fa7c08b689.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image24_hu_17499199dbfd4ef8.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="235"
+		data-flex-basis="565px"
+	
+></p>
+<p>设置 <code>KV</code> 空间名称后点击 <code>Create</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image25.png"
+	width="584"
+	height="287"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image25_hu_3344fe972d80b83c.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image25_hu_961c23884488e365.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="203"
+		data-flex-basis="488px"
+	
+></p>
+<p>返回项目设置页面（在 <code>Compute</code> 下的 <code>Workers &amp; Pages</code> 里找）。然后选择 <code>Bindings</code>，点击 <code>Add</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image26.png"
+	width="1537"
+	height="779"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image26_hu_c2d9f5cd3bd785c9.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image26_hu_3db22007a288f641.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="197"
+		data-flex-basis="473px"
+	
+></p>
+<p>选择 <code>KV</code> 命名空间。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image27.png"
+	width="383"
+	height="776"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image27_hu_3c9cbda0345ce460.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image27_hu_b2754883a1736f7f.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="49"
+		data-flex-basis="118px"
+	
+></p>
+<p>变量名称添加 <code>KV</code>，选择刚才创建的命名空间后点 <code>Save</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image28.png"
+	width="395"
+	height="894"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image28_hu_2908048962b19ec4.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image28_hu_2dc922f2d8ba57e5.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="44"
+		data-flex-basis="106px"
+	
+></p>
+<p>再次点击右上角的 <code>Create deployment</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image29.png"
+	width="1640"
+	height="553"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image29_hu_47b557f93fc4efc5.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image29_hu_31605f85032b1ef6.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="296"
+		data-flex-basis="711px"
+	
+></p>
+<p>再次上传文件后点击 <code>Save and deploy</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image30.png"
+	width="1246"
+	height="662"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image30_hu_89909cbc3e6df5b7.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image30_hu_2bec0fc4dc03198d.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="188"
+		data-flex-basis="451px"
+	
+></p>
+<p>至此，部署完成。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image31.png"
+	width="1336"
+	height="278"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image31_hu_4e40c38be8393b7d.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image31_hu_910af442f7af3b3b.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="480"
+		data-flex-basis="1153px"
+	
+></p>
+<p>访问显示的站点会显示 <code>nginx</code>。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image32.png"
+	width="958"
+	height="666"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image32_hu_641f17c5fc293a83.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image32_hu_5979f642d1215ad5.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="143"
+		data-flex-basis="345px"
+	
+></p>
+<p>需要在地址后面加上 <code>admin</code> 即可访问，输入设置的管理员密码。</p>
+<p><img src="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image33.png"
+	width="1254"
+	height="781"
+	srcset="/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image33_hu_94a88f0ce9e637e7.png 480w, /blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image33_hu_8e815443057fcc50.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="160"
+		data-flex-basis="385px"
+	
+></p>
+<p>复制订阅信息即可使用。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/blog/zh-cn/tags/tools/">Tools</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/deploy-personal-photo-album/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">个人电脑上部署一台随时随地可访问的私人相册</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/setting-black-mode-in-chrome/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在 Chrome 浏览器中设置黑色模式</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/git-error-connection-to-github-com-failed-on-port-443/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Git报错： Failed to connect to github.com port 443</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/github-actions-sending-timed-weather-emails/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">GitHub Actions：定时发送天气邮件</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">使用WSL2技术在Windows子系统上安装Ubuntu</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2026 Javen Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/blog/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

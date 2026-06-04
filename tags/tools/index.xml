@@ -8,12 +8,469 @@
         <language>en-us</language>
         <managingEditor>wenjie.jin@hotmail.com (Javen)</managingEditor>
         <webMaster>wenjie.jin@hotmail.com (Javen)</webMaster>
-        <lastBuildDate>Mon, 24 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/tags/tools/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 04 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/tags/tools/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Deploy an edgetunnel Free Node with Cloudflare (Permanent Availability &#43; Free Domain)</title>
+        <link>https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/</link>
+        <pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate>
+        <author>wenjie.jin@hotmail.com (Javen)</author>
+        <guid>https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/</guid>
+        <description>&lt;h1 id=&#34;deploy-an-edgetunnel-free-node-with-cloudflare-permanent-availability--free-domain&#34;&gt;Deploy an edgetunnel Free Node with Cloudflare (Permanent Availability + Free Domain)&lt;/h1&gt;
+&lt;p&gt;If you need a free node solution that can stay available for the long term, this Cloudflare-based setup is a great choice.&lt;/p&gt;
+&lt;p&gt;Its biggest advantages are simple: it is free, stable, and fast. You do not need to rent a server, pay extra costs, or even buy a domain name. The whole setup can be completed from scratch in about 10 minutes. Because it is built on Cloudflare&amp;rsquo;s network infrastructure, this solution is also much more stable and reliable than temporary or unstable node setups.&lt;/p&gt;
+&lt;p&gt;Compared with older methods that are complicated, easy to break, and require frequent maintenance, this approach feels more like a lightweight long-term solution: set it up once, keep using it, and avoid most of the extra maintenance work. It is especially suitable for personal users and light usage scenarios.&lt;/p&gt;
+&lt;h2 id=&#34;register-a-domain&#34;&gt;Register a Domain&lt;/h2&gt;
+&lt;p&gt;Register a permanently free domain name.&lt;/p&gt;
+&lt;p&gt;Open this link: &lt;a class=&#34;link&#34; href=&#34;https://my.dnshe.com/aff.php?aff=180471&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.dnshe.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image01.png&#34;
+	width=&#34;1324&#34;
+	height=&#34;724&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image01_hu_c122ff01ebbdd6ea.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image01_hu_18fc63f8a936600d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;438px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Select &lt;code&gt;Sign Up&lt;/code&gt; in the upper-right corner.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image02.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;911&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image02_hu_9ad7d6c84a223ad.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image02_hu_f6d3db9836766251.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;210&#34;
+		data-flex-basis=&#34;505px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Fill in all the required information, then click the registration button.&lt;/p&gt;
+&lt;p&gt;After registration succeeds, go to the free domain section.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image03.png&#34;
+	width=&#34;1421&#34;
+	height=&#34;888&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image03_hu_5d697846d6902580.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image03_hu_c5c5ec64438762cb.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Use GitHub to complete the verification.&lt;/p&gt;
+&lt;p&gt;After verification is complete, choose to register a new domain, fill in the required information, and confirm the registration.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image04.png&#34;
+	width=&#34;1460&#34;
+	height=&#34;813&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image04_hu_dae2279129e8172c.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image04_hu_eb1c8358caacf8c4.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;179&#34;
+		data-flex-basis=&#34;430px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;After the domain is registered, keep this page open.&lt;/p&gt;
+&lt;h2 id=&#34;register-and-log-in-to-cloudflare&#34;&gt;Register and Log In to Cloudflare&lt;/h2&gt;
+&lt;p&gt;Register and log in to the Cloudflare platform.&lt;/p&gt;
+&lt;p&gt;Open this link: &lt;a class=&#34;link&#34; href=&#34;https://www.cloudflare.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.cloudflare.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image05.png&#34;
+	width=&#34;1533&#34;
+	height=&#34;820&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image05_hu_3a559996e21a6c1a.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image05_hu_9c7e4bc8725a6fc8.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;448px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Select &lt;code&gt;Login&lt;/code&gt;, then click &lt;code&gt;Sign up&lt;/code&gt;. Enter your &lt;code&gt;Email&lt;/code&gt; and &lt;code&gt;Password&lt;/code&gt;, then click &lt;code&gt;Sign up&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image06.png&#34;
+	width=&#34;620&#34;
+	height=&#34;877&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image06_hu_de2e8a9560b4b7dc.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image06_hu_547363c38e55b715.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;70&#34;
+		data-flex-basis=&#34;169px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Click &lt;code&gt;Skip&lt;/code&gt; to skip the initial setup steps.&lt;/p&gt;
+&lt;h2 id=&#34;host-the-domain-on-cloudflare&#34;&gt;Host the Domain on Cloudflare&lt;/h2&gt;
+&lt;p&gt;After logging in, select &lt;code&gt;Domains&lt;/code&gt; on the left, then click &lt;code&gt;Add domain&lt;/code&gt; in the upper-right corner.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image07.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;911&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image07_hu_7e44d20adf7567f9.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image07_hu_2823a2403e0126a9.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;210&#34;
+		data-flex-basis=&#34;505px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Select &lt;code&gt;Connect a domain&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image08.png&#34;
+	width=&#34;763&#34;
+	height=&#34;383&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image08_hu_f9e4101807fac67e.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image08_hu_f7d602a8dc02eaa9.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;199&#34;
+		data-flex-basis=&#34;478px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Enter the domain name registered in the first step, then click &lt;code&gt;Continue&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image09.png&#34;
+	width=&#34;763&#34;
+	height=&#34;383&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image09_hu_cf1530486412a39c.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image09_hu_b8e96ec5491a3ca3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;199&#34;
+		data-flex-basis=&#34;478px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Select the &lt;code&gt;Free Plan&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image10.png&#34;
+	width=&#34;1534&#34;
+	height=&#34;703&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image10_hu_253d2fa6c20177a9.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image10_hu_ade4334baf871ec5.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;218&#34;
+		data-flex-basis=&#34;523px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Click &lt;code&gt;Continue to activation&lt;/code&gt;, then click &lt;code&gt;Confirm&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image11.png&#34;
+	width=&#34;912&#34;
+	height=&#34;767&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image11_hu_bea0f296586b03e.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image11_hu_f29923e86f8e59d8.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;118&#34;
+		data-flex-basis=&#34;285px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Copy the two nameserver addresses shown by Cloudflare, paste them into the &lt;code&gt;DNS服务器&lt;/code&gt; configuration on the domain registration website, then click &lt;code&gt;保存设置&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image12.png&#34;
+	width=&#34;766&#34;
+	height=&#34;731&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image12_hu_47f4967a6fe39a21.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image12_hu_300710579d8e7af5.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;104&#34;
+		data-flex-basis=&#34;251px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image13.png&#34;
+	width=&#34;1136&#34;
+	height=&#34;622&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image13_hu_47010e7c16728599.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image13_hu_8ec2f5d155353fd7.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;438px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;After saving the settings successfully, return to Cloudflare and click &lt;code&gt;I updated my nameservers&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image14.png&#34;
+	width=&#34;795&#34;
+	height=&#34;796&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image14_hu_d2b166769059b4e9.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image14_hu_15d0099c1aad6172.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;99&#34;
+		data-flex-basis=&#34;239px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;deploy-edgetunnel-to-cloudflare&#34;&gt;Deploy edgetunnel to Cloudflare&lt;/h2&gt;
+&lt;p&gt;Click &lt;a class=&#34;link&#34; href=&#34;https://github.com/cmliu/edgetunnel/archive/refs/heads/main.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;edgetunnel-main.zip&lt;/a&gt; to download the open-source project by &lt;a class=&#34;link&#34; href=&#34;https://github.com/cmliu/edgetunnel&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CMliu&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Go to &lt;code&gt;Workers &amp;amp; Pages&lt;/code&gt;, then select &lt;code&gt;Create application&lt;/code&gt;. Cloudflare may ask you to verify your email at this step; complete the verification if prompted.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image15.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;911&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image15_hu_7cb102221c857fec.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image15_hu_7330791c18268761.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;210&#34;
+		data-flex-basis=&#34;505px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Select &lt;code&gt;Pages&lt;/code&gt;, then click &lt;code&gt;Get started&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image16.png&#34;
+	width=&#34;787&#34;
+	height=&#34;516&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image16_hu_3beb809dfc1a9272.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image16_hu_a5c5356733fc2ea9.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;366px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Select &lt;code&gt;Drag and drop your files&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image17.png&#34;
+	width=&#34;731&#34;
+	height=&#34;395&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image17_hu_b3b6379a38df3e25.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image17_hu_edf5789d9d49b6dc.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;185&#34;
+		data-flex-basis=&#34;444px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Set a project name, then click &lt;code&gt;Create project&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image18.png&#34;
+	width=&#34;1285&#34;
+	height=&#34;665&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image18_hu_ab0d9f6584d8386.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image18_hu_cffb99525ba2e2db.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;463px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Upload the &lt;a class=&#34;link&#34; href=&#34;https://github.com/cmliu/edgetunnel/archive/refs/heads/main.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;edgetunnel-main.zip&lt;/a&gt; file downloaded earlier.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image19.png&#34;
+	width=&#34;1314&#34;
+	height=&#34;656&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image19_hu_b684cfac616459bb.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image19_hu_3f7f2b2a687b1ec2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;200&#34;
+		data-flex-basis=&#34;480px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;After the upload completes, click &lt;code&gt;Deploy site&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image20.png&#34;
+	width=&#34;1309&#34;
+	height=&#34;673&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image20_hu_2c8a3b973b05a0a.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image20_hu_b86ba686e786e628.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;194&#34;
+		data-flex-basis=&#34;466px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;After deployment succeeds, click &lt;code&gt;Continue to project&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image21.png&#34;
+	width=&#34;1212&#34;
+	height=&#34;790&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image21_hu_31194b8a1e583be9.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image21_hu_498d1856839e0503.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;153&#34;
+		data-flex-basis=&#34;368px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;After entering the project, open &lt;code&gt;Settings&lt;/code&gt;, select &lt;code&gt;Variables and Secrets&lt;/code&gt;, and click &lt;code&gt;Add&lt;/code&gt; to add a variable.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image22.png&#34;
+	width=&#34;1283&#34;
+	height=&#34;628&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image22_hu_a2ade19a931520d3.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image22_hu_32b8655e4f97327b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;204&#34;
+		data-flex-basis=&#34;490px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Set the type to &lt;code&gt;Text&lt;/code&gt;. Set the variable name to &lt;code&gt;ADMIN&lt;/code&gt;, and set &lt;code&gt;Value&lt;/code&gt; to your login password. It is recommended to use a strong password. Click &lt;code&gt;Save&lt;/code&gt; when finished.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image23.png&#34;
+	width=&#34;397&#34;
+	height=&#34;899&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image23_hu_1dfb0b830c41d56b.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image23_hu_ce160178bf9039b6.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;44&#34;
+		data-flex-basis=&#34;105px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Next, click &lt;code&gt;Storage &amp;amp; databases&lt;/code&gt;, select &lt;code&gt;Workers KV&lt;/code&gt;, and click &lt;code&gt;Create Instance&lt;/code&gt; in the upper-right corner.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image24.png&#34;
+	width=&#34;1900&#34;
+	height=&#34;806&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image24_hu_329296fa7c08b689.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image24_hu_17499199dbfd4ef8.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;235&#34;
+		data-flex-basis=&#34;565px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Enter a name for the &lt;code&gt;KV&lt;/code&gt; namespace, then click &lt;code&gt;Create&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image25.png&#34;
+	width=&#34;584&#34;
+	height=&#34;287&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image25_hu_3344fe972d80b83c.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image25_hu_961c23884488e365.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;203&#34;
+		data-flex-basis=&#34;488px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Return to the project settings page. You can find it under &lt;code&gt;Compute&lt;/code&gt; -&amp;gt; &lt;code&gt;Workers &amp;amp; Pages&lt;/code&gt;. Select &lt;code&gt;Bindings&lt;/code&gt;, then click &lt;code&gt;Add&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image26.png&#34;
+	width=&#34;1537&#34;
+	height=&#34;779&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image26_hu_c2d9f5cd3bd785c9.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image26_hu_3db22007a288f641.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;197&#34;
+		data-flex-basis=&#34;473px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Select the &lt;code&gt;KV&lt;/code&gt; namespace.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image27.png&#34;
+	width=&#34;383&#34;
+	height=&#34;776&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image27_hu_3c9cbda0345ce460.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image27_hu_b2754883a1736f7f.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;49&#34;
+		data-flex-basis=&#34;118px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Set the variable name to &lt;code&gt;KV&lt;/code&gt;, select the namespace you just created, then click &lt;code&gt;Save&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image28.png&#34;
+	width=&#34;395&#34;
+	height=&#34;894&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image28_hu_2908048962b19ec4.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image28_hu_2dc922f2d8ba57e5.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;44&#34;
+		data-flex-basis=&#34;106px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Click &lt;code&gt;Create deployment&lt;/code&gt; again in the upper-right corner.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image29.png&#34;
+	width=&#34;1640&#34;
+	height=&#34;553&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image29_hu_47b557f93fc4efc5.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image29_hu_31605f85032b1ef6.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;296&#34;
+		data-flex-basis=&#34;711px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Upload the file again, then click &lt;code&gt;Save and deploy&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image30.png&#34;
+	width=&#34;1246&#34;
+	height=&#34;662&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image30_hu_89909cbc3e6df5b7.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image30_hu_2bec0fc4dc03198d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;451px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;At this point, the deployment is complete.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image31.png&#34;
+	width=&#34;1336&#34;
+	height=&#34;278&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image31_hu_4e40c38be8393b7d.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image31_hu_910af442f7af3b3b.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;480&#34;
+		data-flex-basis=&#34;1153px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;When you visit the displayed site, it will show &lt;code&gt;nginx&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image32.png&#34;
+	width=&#34;958&#34;
+	height=&#34;666&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image32_hu_641f17c5fc293a83.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image32_hu_5979f642d1215ad5.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;143&#34;
+		data-flex-basis=&#34;345px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Append &lt;code&gt;admin&lt;/code&gt; to the URL to open the admin page, then enter the administrator password you configured earlier.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image33.png&#34;
+	width=&#34;1254&#34;
+	height=&#34;781&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image33_hu_94a88f0ce9e637e7.png 480w, https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/images/image33_hu_8e815443057fcc50.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;385px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Copy the subscription information and use it as needed.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Deploy a Personal Photo Album Accessible Anytime, Anywhere on Your Personal Computer</title>
-        <link>https://javenjin.github.io/blog/p/deploy-a-personal-photo-album-accessible-anytime-anywhere-on-your-personal-computer/</link>
+        <link>https://javenjin.github.io/blog/p/deploy-personal-photo-album/</link>
         <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/p/deploy-a-personal-photo-album-accessible-anytime-anywhere-on-your-personal-computer/</guid>
+        <guid>https://javenjin.github.io/blog/p/deploy-personal-photo-album/</guid>
         <description>&lt;h1 id=&#34;deploy-a-personal-photo-album-accessible-anytime-anywhere-on-your-personal-computer&#34;&gt;Deploy a Personal Photo Album Accessible Anytime, Anywhere on Your Personal Computer&lt;/h1&gt;
 &lt;p&gt;The goal is to install &lt;em&gt;Immich&lt;/em&gt; (a self-hosted photo/video backup server that supports mobile backup, similar to Google Photos) on a personal computer as the core backup service, and use &lt;em&gt;Tailscale&lt;/em&gt; (a zero-configuration VPN tool based on WireGuard) to enable remote access (securely exposing the local service to the public network).&lt;/p&gt;
 &lt;p&gt;This combination is suitable for personal backup scenarios: &lt;em&gt;Immich&lt;/em&gt; handles backup storage, &lt;em&gt;Tailscale&lt;/em&gt; solves the intranet penetration problem, requires no complex configuration and is secure and reliable.&lt;/p&gt;
@@ -180,10 +637,10 @@
         </item>
         <item>
         <title>Git error - connection to github.com failed on port 443</title>
-        <link>https://javenjin.github.io/blog/p/git-error-connection-to-github.com-failed-on-port-443/</link>
+        <link>https://javenjin.github.io/blog/p/git-error-connection-to-github-com-failed-on-port-443/</link>
         <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/p/git-error-connection-to-github.com-failed-on-port-443/</guid>
+        <guid>https://javenjin.github.io/blog/p/git-error-connection-to-github-com-failed-on-port-443/</guid>
         <description>&lt;h1 id=&#34;git-error-connection-to-githubcom-failed-on-port-443&#34;&gt;Git error: connection to github.com failed on port 443&lt;/h1&gt;
 &lt;p&gt;This problem occurs mainly with proxies.&lt;/p&gt;
 &lt;p&gt;There are two general categories:&lt;/p&gt;
@@ -582,10 +1039,10 @@
         </item>
         <item>
         <title>Install Ubuntu on Windows subsystem using WSL2 technology</title>
-        <link>https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/</link>
+        <link>https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/</link>
         <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/</guid>
+        <guid>https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/</guid>
         <description>&lt;h1 id=&#34;install-ubuntu-on-windows-subsystem-using-wsl2-technology&#34;&gt;Install Ubuntu on Windows subsystem using WSL2 technology&lt;/h1&gt;
 &lt;h2 id=&#34;install-wsl2&#34;&gt;Install WSL2&lt;/h2&gt;
 &lt;p&gt;Reference: &lt;a class=&#34;link&#34; href=&#34;https://docs.microsoft.com/en-us/windows/wsl/install-manual&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -636,10 +1093,10 @@
     &gt;https://linuxhostsupport.com/blog/how-to-install-and-configure-docker-compose-on-ubuntu-20-04/&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;open-the-microsoft-store-and-select-the-ubuntu-version-to-download&#34;&gt;Open the &lt;a class=&#34;link&#34; href=&#34;https://aka.ms/wslstore&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Microsoft Store&lt;/a&gt; and select the Ubuntu version to download&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image01.png&#34;
 	width=&#34;1210&#34;
 	height=&#34;830&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image01_hu_e7c726021b0e6d8a.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image01_hu_aa9d3036a97393a.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image01_hu_e7c726021b0e6d8a.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image01_hu_aa9d3036a97393a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -648,10 +1105,10 @@
 		data-flex-basis=&#34;349px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image02.png&#34;
 	width=&#34;1219&#34;
 	height=&#34;836&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image02_hu_a7f3e39e09914103.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image02_hu_95d77d60f29bd8eb.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image02_hu_a7f3e39e09914103.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image02_hu_95d77d60f29bd8eb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -661,10 +1118,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;wait-for-the-automatic-installation-to-succeed&#34;&gt;Wait for the automatic installation to succeed&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image03.png&#34;
 	width=&#34;1213&#34;
 	height=&#34;833&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image03_hu_5613be8507592f65.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image03_hu_daacdbe7e577d8a8.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image03_hu_5613be8507592f65.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image03_hu_daacdbe7e577d8a8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -674,10 +1131,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;start-ubuntu-and-wait-for-it-to-install-automatically&#34;&gt;Start Ubuntu and wait for it to install automatically&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image04.png&#34;
 	width=&#34;797&#34;
 	height=&#34;741&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image04_hu_1d4d0d34e79779af.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image04_hu_37cf7085e2597149.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image04_hu_1d4d0d34e79779af.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image04_hu_37cf7085e2597149.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -687,10 +1144,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;after-setting-the-username-and-password-enter-the-ubuntu-system&#34;&gt;After setting the username and password, enter the Ubuntu system&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image05.png&#34;
 	width=&#34;990&#34;
 	height=&#34;649&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image05_hu_bf7b900697685762.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image05_hu_283f1184a9c96b65.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image05_hu_bf7b900697685762.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image05_hu_283f1184a9c96b65.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -710,10 +1167,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo curl -sSL https://get.daocloud.io/docker &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image06.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image06.png&#34;
 	width=&#34;989&#34;
 	height=&#34;647&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image06_hu_e001c806b62c40ff.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image06_hu_544bbd5216f621bd.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image06_hu_e001c806b62c40ff.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image06_hu_544bbd5216f621bd.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -723,10 +1180,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Wait for successful installation&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image07.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image07.png&#34;
 	width=&#34;994&#34;
 	height=&#34;650&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image07_hu_26f05c30c9184963.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image07_hu_f93982e5a80116c.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image07_hu_26f05c30c9184963.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image07_hu_f93982e5a80116c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -754,10 +1211,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;The installation of Ubuntu Docker is successful when the following is displayed&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image08.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image08.png&#34;
 	width=&#34;991&#34;
 	height=&#34;652&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image08_hu_7335ee6a8fe5b2c8.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image08_hu_299ae7e5077863d7.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image08_hu_7335ee6a8fe5b2c8.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image08_hu_299ae7e5077863d7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -776,10 +1233,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update -y
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image09.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image09.png&#34;
 	width=&#34;988&#34;
 	height=&#34;648&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image09_hu_5136b040901857c6.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image09_hu_90d410a62b56be85.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image09_hu_5136b040901857c6.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image09_hu_90d410a62b56be85.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -797,10 +1254,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install docker-compose
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image10.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image10.png&#34;
 	width=&#34;988&#34;
 	height=&#34;650&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image10_hu_c0d1e33b2f2677ec.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image10_hu_50da08a6607dace.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image10_hu_c0d1e33b2f2677ec.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image10_hu_50da08a6607dace.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -810,10 +1267,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Enter y in the middle to enter&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image11.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image11.png&#34;
 	width=&#34;992&#34;
 	height=&#34;648&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image11_hu_71de1072da4f7692.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image11_hu_b0e4e5a62135ab4e.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image11_hu_71de1072da4f7692.png 480w, https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/images/image11_hu_b0e4e5a62135ab4e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1368,10 +1825,10 @@
         </item>
         <item>
         <title>Windows batch scripts(.bat)</title>
-        <link>https://javenjin.github.io/blog/p/windows-batch-scripts.bat/</link>
+        <link>https://javenjin.github.io/blog/p/windows-batch-scripts/</link>
         <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/p/windows-batch-scripts.bat/</guid>
+        <guid>https://javenjin.github.io/blog/p/windows-batch-scripts/</guid>
         <description>&lt;h1 id=&#34;windows-batch-scriptsbat&#34;&gt;Windows batch scripts(.bat)&lt;/h1&gt;
 &lt;h2 id=&#34;common-file-manipulation-dos-commands&#34;&gt;Common file manipulation DOS commands&lt;/h2&gt;
 &lt;ul&gt;
@@ -1672,17 +2129,17 @@
         </item>
         <item>
         <title>Windows 11 allows remote desktop/remote access</title>
-        <link>https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/</link>
+        <link>https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/</link>
         <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/</guid>
+        <guid>https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/</guid>
         <description>&lt;h1 id=&#34;windows-11-allows-remote-desktopremote-access&#34;&gt;Windows 11 allows remote desktop/remote access&lt;/h1&gt;
 &lt;h2 id=&#34;windows-11-allows-remote-desktop&#34;&gt;Windows 11 allows remote desktop&lt;/h2&gt;
 &lt;h3 id=&#34;open-settings&#34;&gt;Open Settings&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image01.png&#34;
 	width=&#34;311&#34;
 	height=&#34;642&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image01_hu_69133c72dd11de5d.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image01_hu_a087a0d325931240.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image01_hu_69133c72dd11de5d.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image01_hu_a087a0d325931240.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1692,10 +2149,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;search-remote-desktop&#34;&gt;Search Remote Desktop&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image02.png&#34;
 	width=&#34;1338&#34;
 	height=&#34;690&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image02_hu_fee5a5570b71d4ba.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image02_hu_b32a1e3c4a4de621.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image02_hu_fee5a5570b71d4ba.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image02_hu_b32a1e3c4a4de621.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1705,10 +2162,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;open-remote-desktop&#34;&gt;Open Remote Desktop&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image03.png&#34;
 	width=&#34;1378&#34;
 	height=&#34;668&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image03_hu_c750ee4a2df80061.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image03_hu_751c1208e22e9d41.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image03_hu_c750ee4a2df80061.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image03_hu_751c1208e22e9d41.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1719,10 +2176,10 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;windows-11-allows-remote-access&#34;&gt;Windows 11 allows remote access&lt;/h2&gt;
 &lt;h3 id=&#34;search-windows-defender-firewall&#34;&gt;Search Windows Defender Firewall&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image04.png&#34;
 	width=&#34;806&#34;
 	height=&#34;801&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image04_hu_e99b925636e1b1f8.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image04_hu_d59ce239751c6010.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image04_hu_e99b925636e1b1f8.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image04_hu_d59ce239751c6010.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1732,10 +2189,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;click-turn-windows-defender-firewall-on-or-off&#34;&gt;Click Turn Windows Defender Firewall on or off&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image05.png&#34;
 	width=&#34;864&#34;
 	height=&#34;438&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image05_hu_c8ea7bc680c642f4.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image05_hu_5bf3ca5a1f92048a.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image05_hu_c8ea7bc680c642f4.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image05_hu_5bf3ca5a1f92048a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1745,10 +2202,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;select-turn-off-windows-defender-firewall-from-public-network-settings-not-recommended&#34;&gt;Select Turn off Windows Defender Firewall from Public network settings (not recommended)&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image06.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image06.png&#34;
 	width=&#34;1142&#34;
 	height=&#34;494&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image06_hu_fc55af9361aab602.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image06_hu_6f7837533d37058a.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image06_hu_fc55af9361aab602.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image06_hu_6f7837533d37058a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1758,10 +2215,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;click-ok-below-to-save&#34;&gt;Click OK below to save&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image07.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image07.png&#34;
 	width=&#34;1138&#34;
 	height=&#34;650&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image07_hu_808eea7be21060ed.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image07_hu_923d01aa9c60d03c.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image07_hu_808eea7be21060ed.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image07_hu_923d01aa9c60d03c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1771,10 +2228,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;the-display-can-be-as-shown&#34;&gt;The display can be as shown&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image08.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image08.png&#34;
 	width=&#34;1139&#34;
 	height=&#34;647&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image08_hu_a2cc48ce74d0194c.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image08_hu_1917f5f48ad7d106.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image08_hu_a2cc48ce74d0194c.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/images/image08_hu_1917f5f48ad7d106.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2011,18 +2468,18 @@
         </item>
         <item>
         <title>Google Chrome Web Browser Export Password and Import Password</title>
-        <link>https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/</link>
+        <link>https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/</link>
         <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/</guid>
+        <guid>https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/</guid>
         <description>&lt;h1 id=&#34;google-chrome-web-browser-export-password-and-import-password&#34;&gt;Google Chrome Web Browser Export Password and Import Password&lt;/h1&gt;
 &lt;p&gt;       Sometimes people encounter a new computer, or the company needs to adjust the computer, or that they need to import the account password stored in Google Chrome on other people&amp;rsquo;s computers, and find that you can export the password, but there is no option to import the password, it is very annoying, here to teach you how to export and import the account password of chrome Google Chrome.&lt;/p&gt;
 &lt;h2 id=&#34;export-account-password&#34;&gt;Export account password&lt;/h2&gt;
 &lt;h3 id=&#34;click-on-settings-in-the-upper-right-corner&#34;&gt;Click on Settings in the upper right corner&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image01.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image01.png&#34;
 	width=&#34;464&#34;
 	height=&#34;539&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image01_hu_e041c33092ff9903.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image01_hu_f161693a480a427c.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image01_hu_e041c33092ff9903.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image01_hu_f161693a480a427c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2032,10 +2489,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;select-password&#34;&gt;Select password&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image02.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image02.png&#34;
 	width=&#34;908&#34;
 	height=&#34;727&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image02_hu_56bf14b7b824ccc1.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image02_hu_7caa0645c185c868.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image02_hu_56bf14b7b824ccc1.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image02_hu_7caa0645c185c868.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2045,10 +2502,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;click-on-the-right-for-more-actions&#34;&gt;Click on the right for more actions&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image03.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image03.png&#34;
 	width=&#34;910&#34;
 	height=&#34;244&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image03_hu_6f26b9adb40a82bd.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image03_hu_8a6a7d88a3f1a075.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image03_hu_6f26b9adb40a82bd.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image03_hu_8a6a7d88a3f1a075.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2058,10 +2515,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;just-click-on-export-password&#34;&gt;Just click on Export Password&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image04.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image04.png&#34;
 	width=&#34;817&#34;
 	height=&#34;213&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image04_hu_5afc1341c46c2e00.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image04_hu_a05c6944ba2663ef.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image04_hu_5afc1341c46c2e00.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image04_hu_a05c6944ba2663ef.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2073,10 +2530,10 @@
 &lt;h3 id=&#34;the-exported-passwords-are-in-csv-format-which-can-be-viewed-in-excel-but-it-is-still-not-convenient-so-how-to-import-them&#34;&gt;The exported passwords are in csv format, which can be viewed in excel, but it is still not convenient, so how to import them?&lt;/h3&gt;
 &lt;h3 id=&#34;import-account-password&#34;&gt;Import account password&lt;/h3&gt;
 &lt;h3 id=&#34;open-google-chrome-and-type-chromeflagspassword-import-export-in-the-address-bar&#34;&gt;Open Google Chrome and type chrome://flags/#password-import-export in the address bar&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image05.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image05.png&#34;
 	width=&#34;1451&#34;
 	height=&#34;874&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image05_hu_5b667e2efa820ee5.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image05_hu_ea3ad9663c53510d.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image05_hu_5b667e2efa820ee5.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image05_hu_ea3ad9663c53510d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2086,10 +2543,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;then-search-in-the-search-field-above-password-import&#34;&gt;Then search in the search field above: password import&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image06.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image06.png&#34;
 	width=&#34;1430&#34;
 	height=&#34;575&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image06_hu_a96b367b882af6e6.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image06_hu_b29679b290074e06.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image06_hu_a96b367b882af6e6.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image06_hu_b29679b290074e06.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2099,10 +2556,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;then-select-default-as-enabled-on-the-right-and-click-relaunch-below-to-refresh-the-browser&#34;&gt;Then select Default as Enabled on the right, and click Relaunch below to refresh the browser&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image07.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image07.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1043&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image07_hu_fe706f55115941e9.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image07_hu_ed10c83a70975e8e.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image07_hu_fe706f55115941e9.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image07_hu_ed10c83a70975e8e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2112,10 +2569,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;finally-go-back-to-the-place-where-you-exported-your-password-and-you-will-see-the-option-to-import&#34;&gt;Finally, go back to the place where you exported your password and you will see the option to import&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image08.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image08.png&#34;
 	width=&#34;871&#34;
 	height=&#34;241&#34;
-	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image08_hu_1d95a3a6eec10bf5.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image08_hu_c82a4d0ea8e7603f.png 1024w&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image08_hu_1d95a3a6eec10bf5.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/images/image08_hu_c82a4d0ea8e7603f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

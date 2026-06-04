@@ -4,7 +4,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://javenjin.github.io/blog/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -17,7 +17,7 @@
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/categories/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -29,21 +29,21 @@
                 href="https://javenjin.github.io/blog/zh-cn/categories/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/deploy-a-personal-photo-album-accessible-anytime-anywhere-on-your-personal-computer/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <loc>https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/</loc>
+    <lastmod>2026-06-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/deploy-a-personal-photo-album-accessible-anytime-anywhere-on-your-personal-computer/"
+                href="https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E4%B8%AA%E4%BA%BA%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2%E4%B8%80%E5%8F%B0%E9%9A%8F%E6%97%B6%E9%9A%8F%E5%9C%B0%E5%8F%AF%E8%AE%BF%E9%97%AE%E7%9A%84%E7%A7%81%E4%BA%BA%E7%9B%B8%E5%86%8C/"
+                href="https://javenjin.github.io/blog/zh-cn/p/deploy-edgetunnel-free-node-with-cloudflare/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/post/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -56,7 +56,7 @@
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/tags/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -69,7 +69,7 @@
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/categories/tools/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -82,7 +82,7 @@
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/tags/tools/</loc>
-    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -92,6 +92,19 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/tags/tools/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/p/deploy-personal-photo-album/</loc>
+    <lastmod>2025-11-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://javenjin.github.io/blog/p/deploy-personal-photo-album/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/deploy-personal-photo-album/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/categories/database/</loc>
@@ -130,7 +143,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/snowflake-%E4%B8%AD%E7%9A%84-show-tables/"
+                href="https://javenjin.github.io/blog/zh-cn/p/show-tables-in-snowflake/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/setting-black-mode-in-chrome/</loc>
@@ -143,33 +156,33 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8-chrome-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E8%AE%BE%E7%BD%AE%E9%BB%91%E8%89%B2%E6%A8%A1%E5%BC%8F/"
+                href="https://javenjin.github.io/blog/zh-cn/p/setting-black-mode-in-chrome/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/</loc>
+    <loc>https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/</loc>
     <lastmod>2024-01-22T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/install-sqlserver-2022-16.00.1000-on-windows/"
+                href="https://javenjin.github.io/blog/p/install-sqlserver-2022-16-00-1000-on-windows/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8-windows-%E4%B8%8A%E5%AE%89%E8%A3%85-sqlserver-2022-16.00.1000/"
+                href="https://javenjin.github.io/blog/zh-cn/p/install-sqlserver-2022-16-00-1000-on-windows/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/git-error-connection-to-github.com-failed-on-port-443/</loc>
+    <loc>https://javenjin.github.io/blog/p/git-error-connection-to-github-com-failed-on-port-443/</loc>
     <lastmod>2024-01-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/git-error-connection-to-github.com-failed-on-port-443/"
+                href="https://javenjin.github.io/blog/p/git-error-connection-to-github-com-failed-on-port-443/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/git%E6%8A%A5%E9%94%99-failed-to-connect-to-github.com-port-443/"
+                href="https://javenjin.github.io/blog/zh-cn/p/git-error-connection-to-github-com-failed-on-port-443/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/install-dm8-on-windows/</loc>
@@ -182,7 +195,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85dm8/"
+                href="https://javenjin.github.io/blog/zh-cn/p/install-dm8-on-windows/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/install-oracle-12c-r2-on-windows/</loc>
@@ -195,7 +208,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85oracle-12c-r2/"
+                href="https://javenjin.github.io/blog/zh-cn/p/install-oracle-12c-r2-on-windows/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/</loc>
@@ -208,7 +221,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/github-actions%E5%AE%9A%E6%97%B6%E5%8F%91%E9%80%81%E5%A4%A9%E6%B0%94%E9%82%AE%E4%BB%B6/"
+                href="https://javenjin.github.io/blog/zh-cn/p/github-actions-sending-timed-weather-emails/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/influxdb-times-series-data-platform/</loc>
@@ -221,7 +234,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/influxdb-%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0/"
+                href="https://javenjin.github.io/blog/zh-cn/p/influxdb-times-series-data-platform/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/how-to-use-stored-procedure-for-analytics-on-sql-server-databases/</loc>
@@ -234,7 +247,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E5%A6%82%E4%BD%95%E5%9C%A8-sql-server-%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E4%BD%BF%E7%94%A8stored-procedure%E8%BF%9B%E8%A1%8C%E5%88%86%E6%9E%90/"
+                href="https://javenjin.github.io/blog/zh-cn/p/how-to-use-stored-procedure-for-analytics-on-sql-server-databases/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/mysql-command-line-client/</loc>
@@ -247,7 +260,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/mysql-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF/"
+                href="https://javenjin.github.io/blog/zh-cn/p/mysql-command-line-client/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/categories/c-sharp/</loc>
@@ -276,17 +289,17 @@
                 href="https://javenjin.github.io/blog/zh-cn/tags/c-sharp/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/get-current-operating-system-information-c/</loc>
+    <loc>https://javenjin.github.io/blog/p/get-current-operating-system-information-c-sharp/</loc>
     <lastmod>2023-11-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/get-current-operating-system-information-c/"
+                href="https://javenjin.github.io/blog/p/get-current-operating-system-information-c-sharp/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AFc/"
+                href="https://javenjin.github.io/blog/zh-cn/p/get-current-operating-system-information-c-sharp/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/mysql-8-remote-access/</loc>
@@ -299,20 +312,20 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/mysql-8-%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/"
+                href="https://javenjin.github.io/blog/zh-cn/p/mysql-8-remote-access/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/</loc>
+    <loc>https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/</loc>
     <lastmod>2023-11-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/install-postgresql-16.1-on-windows/"
+                href="https://javenjin.github.io/blog/p/install-postgresql-16-1-on-windows/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85postgresql-16.1/"
+                href="https://javenjin.github.io/blog/zh-cn/p/install-postgresql-16-1-on-windows/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/northwind-database/</loc>
@@ -354,17 +367,17 @@
                 href="https://javenjin.github.io/blog/zh-cn/page/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/</loc>
+    <loc>https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/</loc>
     <lastmod>2022-09-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/"
+                href="https://javenjin.github.io/blog/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E4%BD%BF%E7%94%A8wsl2%E6%8A%80%E6%9C%AF%E5%9C%A8windows%E5%AD%90%E7%B3%BB%E7%BB%9F%E4%B8%8A%E5%AE%89%E8%A3%85ubuntu/"
+                href="https://javenjin.github.io/blog/zh-cn/p/installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/rest-api-design-rulebook/</loc>
@@ -380,30 +393,30 @@
                 href="https://javenjin.github.io/blog/zh-cn/p/rest-api-design-rulebook/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/windows-batch-scripts.bat/</loc>
+    <loc>https://javenjin.github.io/blog/p/windows-batch-scripts/</loc>
     <lastmod>2022-05-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/windows-batch-scripts.bat/"
+                href="https://javenjin.github.io/blog/p/windows-batch-scripts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/windows%E6%89%B9%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC.bat/"
+                href="https://javenjin.github.io/blog/zh-cn/p/windows-batch-scripts/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/</loc>
+    <loc>https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/</loc>
     <lastmod>2022-05-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/"
+                href="https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop-or-remote-access/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/windows-11-%E5%85%81%E8%AE%B8%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/"
+                href="https://javenjin.github.io/blog/zh-cn/p/windows-11-allows-remote-desktop-or-remote-access/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/monetdb-remote-access/</loc>
@@ -416,20 +429,20 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/monetdb%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/"
+                href="https://javenjin.github.io/blog/zh-cn/p/monetdb-remote-access/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/mysql-5.7-remote-access/</loc>
+    <loc>https://javenjin.github.io/blog/p/mysql-5-7-remote-access/</loc>
     <lastmod>2022-05-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/mysql-5.7-remote-access/"
+                href="https://javenjin.github.io/blog/p/mysql-5-7-remote-access/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/mysql-5.7-%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/"
+                href="https://javenjin.github.io/blog/zh-cn/p/mysql-5-7-remote-access/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/postgresql-remote-access/</loc>
@@ -442,7 +455,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/postgresql%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/"
+                href="https://javenjin.github.io/blog/zh-cn/p/postgresql-remote-access/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/categories/algorithm/</loc>
@@ -481,20 +494,20 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%91%A1%E8%90%84%E5%9F%8Egrapecity%E7%AC%94%E8%AF%95%E9%A2%98/"
+                href="https://javenjin.github.io/blog/zh-cn/p/grapecity-written-test-question/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/</loc>
+    <loc>https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/</loc>
     <lastmod>2021-08-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/install-mysql-5.7-on-centos7/"
+                href="https://javenjin.github.io/blog/p/install-mysql-5-7-on-centos7/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8centos7%E4%B8%8A%E5%AE%89%E8%A3%85mysql-5.7/"
+                href="https://javenjin.github.io/blog/zh-cn/p/install-mysql-5-7-on-centos7/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/install-tomcat8-on-windows/</loc>
@@ -507,33 +520,33 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85tomcat8/"
+                href="https://javenjin.github.io/blog/zh-cn/p/install-tomcat8-on-windows/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/</loc>
+    <loc>https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/</loc>
     <lastmod>2021-05-29T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/install-mysql-5.7.17-on-windows/"
+                href="https://javenjin.github.io/blog/p/install-mysql-5-7-17-on-windows/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85mysql-5.7.17/"
+                href="https://javenjin.github.io/blog/zh-cn/p/install-mysql-5-7-17-on-windows/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/</loc>
+    <loc>https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/</loc>
     <lastmod>2021-05-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/"
+                href="https://javenjin.github.io/blog/p/google-chrome-web-browser-import-password-and-export-password/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%B0%B7%E6%AD%8Cchrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%BC%E5%87%BA%E5%AF%86%E7%A0%81%E5%92%8C%E5%AF%BC%E5%85%A5%E5%AF%86%E7%A0%81/"
+                href="https://javenjin.github.io/blog/zh-cn/p/google-chrome-web-browser-import-password-and-export-password/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/gluttony-game-java-gui/</loc>
@@ -546,7 +559,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%B4%AA%E5%90%83%E8%9B%87%E6%B8%B8%E6%88%8Fjava-gui/"
+                href="https://javenjin.github.io/blog/zh-cn/p/gluttony-game-java-gui/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/categories/java-programming-language/</loc>
@@ -601,17 +614,17 @@
                 href="https://javenjin.github.io/blog/zh-cn/tags/machine-learning/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/machine-learning-model-evaluation-and-selection-k-means-clustering-algorithm/</loc>
+    <loc>https://javenjin.github.io/blog/p/model-evaluation-and-selection-and-k-means-clustering-algorithm/</loc>
     <lastmod>2020-11-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/machine-learning-model-evaluation-and-selection-k-means-clustering-algorithm/"
+                href="https://javenjin.github.io/blog/p/model-evaluation-and-selection-and-k-means-clustering-algorithm/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9-k-means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%E5%AE%9E%E9%AA%8C/"
+                href="https://javenjin.github.io/blog/zh-cn/p/model-evaluation-and-selection-and-k-means-clustering-algorithm/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/tags/python/</loc>
@@ -627,17 +640,17 @@
                 href="https://javenjin.github.io/blog/zh-cn/tags/python/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/</loc>
+    <loc>https://javenjin.github.io/blog/p/logistic-regression-experiments/</loc>
     <lastmod>2020-10-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/"
+                href="https://javenjin.github.io/blog/p/logistic-regression-experiments/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%AE%9E%E9%AA%8C/"
+                href="https://javenjin.github.io/blog/zh-cn/p/logistic-regression-experiments/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/categories/design-pattern/</loc>
@@ -689,7 +702,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F-%E5%92%8C-%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/"
+                href="https://javenjin.github.io/blog/zh-cn/p/simple-factory-pattern-and-factory-method-pattern/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/</loc>
@@ -702,7 +715,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E5%88%87%E6%8D%A2eclipse%E5%90%8E%E5%87%BA%E7%8E%B0%E8%8F%9C%E5%8D%95%E6%A0%8F%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/"
+                href="https://javenjin.github.io/blog/zh-cn/p/switching-eclipse-after-the-menu-bar-messy-problem/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/</loc>
@@ -715,7 +728,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/eclipse%E4%B8%AD%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8amaterasuml%E6%8F%92%E4%BB%B6%E7%BB%98%E5%88%B6%E7%B1%BB%E5%9B%BE/"
+                href="https://javenjin.github.io/blog/zh-cn/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/categories/c-programming-language/</loc>
@@ -744,56 +757,56 @@
                 href="https://javenjin.github.io/blog/zh-cn/tags/c-programming-language/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1072-soda-bottles-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1072/</loc>
     <lastmod>2020-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1072-soda-bottles-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1072/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1072-%E6%B1%BD%E6%B0%B4%E7%93%B6-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1072/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1157-affinity-number-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1157/</loc>
     <lastmod>2020-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1157-affinity-number-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1157/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1157-%E4%BA%B2%E5%92%8C%E6%95%B0-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1157/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1393-bell-god-racing-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1393/</loc>
     <lastmod>2020-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1393-bell-god-racing-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1393/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1393-%E9%92%9F%E7%A5%9E%E8%B5%9B%E8%BD%A6-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1393/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1537-algorithm-improvement-vipraster-printing-problems-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1537/</loc>
     <lastmod>2020-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1537-algorithm-improvement-vipraster-printing-problems-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1537/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1537-%E7%AE%97%E6%B3%95%E6%8F%90%E9%AB%98vip%E6%A0%85%E6%A0%BC%E6%89%93%E5%8D%B0%E9%97%AE%E9%A2%98-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1537/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/tags/css/</loc>
@@ -871,7 +884,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF%E8%AF%BE%E7%A8%8B%E5%A4%A7%E4%BD%9C%E4%B8%9A/"
+                href="https://javenjin.github.io/blog/zh-cn/p/web-front-end-development-technology-course-big-assignment/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/categories/computer-vision/</loc>
@@ -900,17 +913,17 @@
                 href="https://javenjin.github.io/blog/zh-cn/tags/computer-vision/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/computer-vision-experiment-16-separate-background-experiments-with-gaussian-background-modeling/</loc>
+    <loc>https://javenjin.github.io/blog/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/</loc>
     <lastmod>2020-06-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-16-separate-background-experiments-with-gaussian-background-modeling/"
+                href="https://javenjin.github.io/blog/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E5%85%AD-%E7%94%A8%E9%AB%98%E6%96%AF%E8%83%8C%E6%99%AF%E5%BB%BA%E6%A8%A1%E5%88%86%E7%A6%BB%E8%83%8C%E6%99%AF%E5%AE%9E%E9%AA%8C/"
+                href="https://javenjin.github.io/blog/zh-cn/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/tags/opencv/</loc>
@@ -926,95 +939,95 @@
                 href="https://javenjin.github.io/blog/zh-cn/tags/opencv/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/</loc>
+    <loc>https://javenjin.github.io/blog/p/experiment-15-fast-corner-point-detection-experiments-on-video/</loc>
     <lastmod>2020-06-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/"
+                href="https://javenjin.github.io/blog/p/experiment-15-fast-corner-point-detection-experiments-on-video/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%94-%E5%AF%B9%E8%A7%86%E9%A2%91%E7%9A%84%E5%BF%AB%E9%80%9F%E8%A7%92%E7%82%B9%E6%A3%80%E6%B5%8B%E5%AE%9E%E9%AA%8C/"
+                href="https://javenjin.github.io/blog/zh-cn/p/experiment-15-fast-corner-point-detection-experiments-on-video/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/computer-vision-experiment-14-watershed-algorithm-experiment/</loc>
+    <loc>https://javenjin.github.io/blog/p/experiment-14-watershed-algorithm-experiment/</loc>
     <lastmod>2020-06-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-14-watershed-algorithm-experiment/"
+                href="https://javenjin.github.io/blog/p/experiment-14-watershed-algorithm-experiment/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E5%9B%9B-%E5%88%86%E6%B0%B4%E5%B2%AD%E7%AE%97%E6%B3%95%E5%AE%9E%E9%AA%8C/"
+                href="https://javenjin.github.io/blog/zh-cn/p/experiment-14-watershed-algorithm-experiment/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/computer-vision-experiment-13-contour-shape-analysis-experiment/</loc>
+    <loc>https://javenjin.github.io/blog/p/experiment-13-contour-shape-analysis-experiment/</loc>
     <lastmod>2020-05-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-13-contour-shape-analysis-experiment/"
+                href="https://javenjin.github.io/blog/p/experiment-13-contour-shape-analysis-experiment/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%89-%E8%BD%AE%E5%BB%93%E5%BD%A2%E7%8A%B6%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/"
+                href="https://javenjin.github.io/blog/zh-cn/p/experiment-13-contour-shape-analysis-experiment/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/</loc>
+    <loc>https://javenjin.github.io/blog/p/experiment-12-discrete-fourier-transform-experiment/</loc>
     <lastmod>2020-05-18T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/"
+                href="https://javenjin.github.io/blog/p/experiment-12-discrete-fourier-transform-experiment/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E7%A6%BB%E6%95%A3%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/"
+                href="https://javenjin.github.io/blog/zh-cn/p/experiment-12-discrete-fourier-transform-experiment/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/</loc>
+    <loc>https://javenjin.github.io/blog/p/experiment-11-lbp-transformation-experiment/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/"
+                href="https://javenjin.github.io/blog/p/experiment-11-lbp-transformation-experiment/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-lbp%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/"
+                href="https://javenjin.github.io/blog/zh-cn/p/experiment-11-lbp-transformation-experiment/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/</loc>
+    <loc>https://javenjin.github.io/blog/p/experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/</loc>
     <lastmod>2020-05-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/"
+                href="https://javenjin.github.io/blog/p/experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%8D%81-%E5%88%9B%E5%BB%BA%E5%8C%85%E5%9B%B4%E8%BD%AE%E5%BB%93%E7%9A%84%E7%9F%A9%E5%BD%A2%E8%BE%B9%E7%95%8C/"
+                href="https://javenjin.github.io/blog/zh-cn/p/experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/</loc>
+    <loc>https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/</loc>
     <lastmod>2020-04-29T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-9-find-and-draw-convex-packets-of-objects-experimentally/"
+                href="https://javenjin.github.io/blog/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B9%9D-%E5%AF%BB%E6%89%BE%E5%92%8C%E7%BB%98%E5%88%B6%E7%89%A9%E4%BD%93%E7%9A%84%E5%87%B8%E5%8C%85%E5%AE%9E%E9%AA%8C/"
+                href="https://javenjin.github.io/blog/zh-cn/p/experiment-09-find-and-draw-convex-packets-of-objects-experimentally/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/front-end-personal-resume-exercise/</loc>
@@ -1027,332 +1040,332 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E5%89%8D%E7%AB%AF-%E4%B8%AA%E4%BA%BAresume%E7%BB%83%E4%B9%A0/"
+                href="https://javenjin.github.io/blog/zh-cn/p/front-end-personal-resume-exercise/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/computer-vision-experiment-8-image-segmentation-experiment/</loc>
+    <loc>https://javenjin.github.io/blog/p/experiment-08-image-segmentation-experiment/</loc>
     <lastmod>2020-04-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-8-image-segmentation-experiment/"
+                href="https://javenjin.github.io/blog/p/experiment-08-image-segmentation-experiment/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%85%AB-%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2%E5%AE%9E%E9%AA%8C/"
+                href="https://javenjin.github.io/blog/zh-cn/p/experiment-08-image-segmentation-experiment/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/</loc>
+    <loc>https://javenjin.github.io/blog/p/experiment-07-find-and-draw-outline-experiments/</loc>
     <lastmod>2020-04-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/"
+                href="https://javenjin.github.io/blog/p/experiment-07-find-and-draw-outline-experiments/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%83-%E6%9F%A5%E6%89%BE%E5%B9%B6%E7%BB%98%E5%88%B6%E8%BD%AE%E5%BB%93%E5%AE%9E%E9%AA%8C/"
+                href="https://javenjin.github.io/blog/zh-cn/p/experiment-07-find-and-draw-outline-experiments/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1616-algorithm-improvement-vipinverted-number-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1616/</loc>
     <lastmod>2020-04-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1616-algorithm-improvement-vipinverted-number-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1616/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1616-%E7%AE%97%E6%B3%95%E6%8F%90%E9%AB%98vip%E5%8F%8D%E7%BD%AE%E6%95%B0-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1616/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1815-2014-5th-exam-questionsranking-order-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1815/</loc>
     <lastmod>2020-04-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1815-2014-5th-exam-questionsranking-order-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1815/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1815-2014%E5%B9%B4%E7%AC%AC%E4%BA%94%E5%B1%8A%E7%9C%9F%E9%A2%98%E6%8E%92%E5%88%97%E5%BA%8F%E6%95%B0-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1815/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/computer-vision-experiment-6-haff-transform-experiment/</loc>
+    <loc>https://javenjin.github.io/blog/p/experiment-06-haff-transform-experiment/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-6-haff-transform-experiment/"
+                href="https://javenjin.github.io/blog/p/experiment-06-haff-transform-experiment/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%85%AD-%E5%93%88%E5%A4%AB%E5%8F%98%E6%8D%A2%E5%AE%9E%E9%AA%8C/"
+                href="https://javenjin.github.io/blog/zh-cn/p/experiment-06-haff-transform-experiment/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/</loc>
+    <loc>https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/</loc>
     <lastmod>2020-03-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-5-edge-detection-experiment/"
+                href="https://javenjin.github.io/blog/p/experiment-05-edge-detection-experiment/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%BA%94-%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B%E5%AE%9E%E9%AA%8C/"
+                href="https://javenjin.github.io/blog/zh-cn/p/experiment-05-edge-detection-experiment/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1427-2014-5th-exam-questions-dividing-candy-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1431/</loc>
     <lastmod>2020-03-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1427-2014-5th-exam-questions-dividing-candy-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1431/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1427-2014%E5%B9%B4%E7%AC%AC%E4%BA%94%E5%B1%8A%E7%9C%9F%E9%A2%98%E5%88%86%E7%B3%96%E6%9E%9C-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1431/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1609-algorithm-improvement-vipblack-friday-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1609/</loc>
     <lastmod>2020-03-21T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1609-algorithm-improvement-vipblack-friday-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1609/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1609-%E7%AE%97%E6%B3%95%E6%8F%90%E9%AB%98vip%E9%BB%91%E8%89%B2%E6%98%9F%E6%9C%9F%E4%BA%94-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1609/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1616-algorithm-improvement-vippassing-game-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1610/</loc>
     <lastmod>2020-03-21T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1616-algorithm-improvement-vippassing-game-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1610/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1616-%E7%AE%97%E6%B3%95%E6%8F%90%E9%AB%98vip%E4%BC%A0%E7%90%83%E6%B8%B8%E6%88%8F-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1610/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1629-algorithm-training-vipwater-connection-problems-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1629/</loc>
     <lastmod>2020-03-21T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1629-algorithm-training-vipwater-connection-problems-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1629/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1629-%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83vip%E6%8E%A5%E6%B0%B4%E9%97%AE%E9%A2%98-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1629/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1632-algorithm-improvement-vipnumber-of-pairs-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1632/</loc>
     <lastmod>2020-03-21T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1632-algorithm-improvement-vipnumber-of-pairs-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1632/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1632-%E7%AE%97%E6%B3%95%E6%8F%90%E9%AB%98vip%E6%95%B0%E5%AF%B9-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1632/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1648-algorithm-training-viporder-of-precedence-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1648/</loc>
     <lastmod>2020-03-21T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1648-algorithm-training-viporder-of-precedence-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1648/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1648-%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83vip%E6%B1%82%E5%85%88%E5%BA%8F%E6%8E%92%E5%88%97-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1648/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/</loc>
+    <loc>https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/</loc>
     <lastmod>2020-03-18T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-4-image-nonlinear-filtering-experiment/"
+                href="https://javenjin.github.io/blog/p/experiment-04-image-nonlinear-filtering-experiment/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E5%9B%9B-%E5%9B%BE%E5%83%8F%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%BB%A4%E6%B3%A2%E5%AE%9E%E9%AA%8C/"
+                href="https://javenjin.github.io/blog/zh-cn/p/experiment-04-image-nonlinear-filtering-experiment/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/</loc>
+    <loc>https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/</loc>
     <lastmod>2020-03-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/"
+                href="https://javenjin.github.io/blog/p/experiment-03-image-linear-filtering-experiment/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%89-%E5%9B%BE%E5%83%8F%E7%BA%BF%E6%80%A7%E6%BB%A4%E6%B3%A2%E5%AE%9E%E9%AA%8C/"
+                href="https://javenjin.github.io/blog/zh-cn/p/experiment-03-image-linear-filtering-experiment/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/</loc>
+    <loc>https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/</loc>
     <lastmod>2020-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-2-histogram-of-images/"
+                href="https://javenjin.github.io/blog/p/experiment-02-histogram-of-images/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%BA%8C-%E5%9B%BE%E5%83%8F%E7%9A%84%E7%9B%B4%E6%96%B9%E5%9B%BE/"
+                href="https://javenjin.github.io/blog/zh-cn/p/experiment-02-histogram-of-images/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/</loc>
+    <loc>https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/</loc>
     <lastmod>2020-03-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/computer-vision-experiment-1-image-loading-display-and-output/"
+                href="https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89-%E5%AE%9E%E9%AA%8C%E4%B8%80-%E5%9B%BE%E5%83%8F%E7%9A%84%E8%BD%BD%E5%85%A5%E6%98%BE%E7%A4%BA%E4%B8%8E%E8%BE%93%E5%87%BA/"
+                href="https://javenjin.github.io/blog/zh-cn/p/experiment-01-image-loading-display-and-output/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1084-use-the-sieve-method-to-find-the-prime-numbers-in-n-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1084/</loc>
     <lastmod>2020-02-14T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1084-use-the-sieve-method-to-find-the-prime-numbers-in-n-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1084/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1084-%E7%94%A8%E7%AD%9B%E6%B3%95%E6%B1%82%E4%B9%8Bn%E5%86%85%E7%9A%84%E7%B4%A0%E6%95%B0-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1084/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1432-2013-4th-exam-questionscut-the-grid-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1432/</loc>
     <lastmod>2020-02-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1432-2013-4th-exam-questionscut-the-grid-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1432/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1432-2013%E5%B9%B4%E7%AC%AC%E5%9B%9B%E5%B1%8A%E7%9C%9F%E9%A2%98%E5%89%AA%E6%A0%BC%E5%AD%90-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1432/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1429-2014-5th-exam-questions-landon-ants-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1429/</loc>
     <lastmod>2020-02-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1429-2014-5th-exam-questions-landon-ants-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1429/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1429-2014%E5%B9%B4%E7%AC%AC%E4%BA%94%E5%B1%8A%E7%9C%9F%E9%A2%98%E5%85%B0%E9%A1%BF%E8%9A%82%E8%9A%81-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1429/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1427-2013-4th-exam-questions-the-number-that-cannot-be-bought-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1427/</loc>
     <lastmod>2020-02-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1427-2013-4th-exam-questions-the-number-that-cannot-be-bought-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1427/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1427-2013%E5%B9%B4%E7%AC%AC%E5%9B%9B%E5%B1%8A%E7%9C%9F%E9%A2%98%E4%B9%B0%E4%B8%8D%E5%88%B0%E7%9A%84%E6%95%B0%E7%9B%AE-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1427/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1255-algorithm-improvementenergy-necklace-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1255/</loc>
     <lastmod>2020-02-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1255-algorithm-improvementenergy-necklace-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1255/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1115-%E7%AE%97%E6%B3%95%E6%8F%90%E9%AB%98%E8%83%BD%E9%87%8F%E9%A1%B9%E9%93%BE-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1255/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1117-k-decimal-number-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1117/</loc>
     <lastmod>2020-02-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1117-k-decimal-number-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1117/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1117-k-%E8%BF%9B%E5%88%B6%E6%95%B0-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1117/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1110-2k-decimal-numbers-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1110/</loc>
     <lastmod>2020-02-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1110-2k-decimal-numbers-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1110/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1110-2k%E8%BF%9B%E5%88%B6%E6%95%B0-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1110/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1115-dna-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1115/</loc>
     <lastmod>2020-02-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1115-dna-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1115/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1115-dna-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1115/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/campus-tour-guide-system-pure-c-implementation-shortest-path-dijkstra-algorithm/</loc>
+    <loc>https://javenjin.github.io/blog/p/campus-tour-guide-system/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/campus-tour-guide-system-pure-c-implementation-shortest-path-dijkstra-algorithm/"
+                href="https://javenjin.github.io/blog/p/campus-tour-guide-system/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E6%A0%A1%E5%9B%AD%E5%AF%BC%E6%B8%B8%E7%B3%BB%E7%BB%9F%E7%BA%AFc%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84-dijkstra%E7%AE%97%E6%B3%95/"
+                href="https://javenjin.github.io/blog/zh-cn/p/campus-tour-guide-system/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/tags/dijkstra/</loc>
@@ -1368,108 +1381,108 @@
                 href="https://javenjin.github.io/blog/zh-cn/tags/dijkstra/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/</loc>
+    <loc>https://javenjin.github.io/blog/p/bayesian-classification-experiments/</loc>
     <lastmod>2019-11-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/"
+                href="https://javenjin.github.io/blog/p/bayesian-classification-experiments/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%AE%9E%E9%AA%8C/"
+                href="https://javenjin.github.io/blog/zh-cn/p/bayesian-classification-experiments/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/</loc>
+    <loc>https://javenjin.github.io/blog/p/linear-regression-experiments/</loc>
     <lastmod>2019-10-21T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/"
+                href="https://javenjin.github.io/blog/p/linear-regression-experiments/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%AE%9E%E9%AA%8C/"
+                href="https://javenjin.github.io/blog/zh-cn/p/linear-regression-experiments/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1456-past-test-questionsnumber-of-consecutive-number-intervals-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1456/</loc>
     <lastmod>2019-04-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1456-past-test-questionsnumber-of-consecutive-number-intervals-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1456/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1456-%E5%8E%86%E5%B1%8A%E8%AF%95%E9%A2%98%E8%BF%9E%E5%8F%B7%E5%8C%BA%E9%97%B4%E6%95%B0-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1456/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1462-basic-exercise-viphuffuman-tree-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1462/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1462-basic-exercise-viphuffuman-tree-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1462/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1462-%E5%9F%BA%E7%A1%80%E7%BB%83%E4%B9%A0viphuffuman%E6%A0%91-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1462/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/student-management-system-pure-c-implementation/</loc>
+    <loc>https://javenjin.github.io/blog/p/student-management-system/</loc>
     <lastmod>2018-12-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/student-management-system-pure-c-implementation/"
+                href="https://javenjin.github.io/blog/p/student-management-system/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E5%AD%A6%E7%94%9F%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E7%BA%AFc%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0/"
+                href="https://javenjin.github.io/blog/zh-cn/p/student-management-system/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1116-ip-judgment-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1116/</loc>
     <lastmod>2018-12-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1116-ip-judgment-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1116/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1094-ip%E5%88%A4%E6%96%AD-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1116/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1004-recursive-the-story-of-the-cow-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1004/</loc>
     <lastmod>2018-11-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1004-recursive-the-story-of-the-cow-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1004/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1004-%E9%80%92%E5%BD%92%E6%AF%8D%E7%89%9B%E7%9A%84%E6%95%85%E4%BA%8B-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1004/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/p/q-1094-input-and-output-processing-of-strings-c-language/</loc>
+    <loc>https://javenjin.github.io/blog/p/q-1094/</loc>
     <lastmod>2018-11-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/p/q-1094-input-and-output-processing-of-strings-c-language/"
+                href="https://javenjin.github.io/blog/p/q-1094/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/p/%E9%A2%98%E7%9B%AE-1094-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%A4%84%E7%90%86-c%E8%AF%AD%E8%A8%80/"
+                href="https://javenjin.github.io/blog/zh-cn/p/q-1094/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/archives/</loc>

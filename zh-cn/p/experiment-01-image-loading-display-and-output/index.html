@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Computer Vision - Experiment 1 - Image loading, display and output'>
+<title>计算机视觉 - 实验一 图像的载入、显示与输出</title>
+
+<link rel='canonical' href='https://javenjin.github.io/blog/zh-cn/p/experiment-01-image-loading-display-and-output/'>
+
+<link rel="stylesheet" href="/blog/scss/style.min.c23ac85127f8ff583870a396f5a1d8e3919d4dda7d292cb9b68b5e272d69739d.css"><meta property='og:title' content='计算机视觉 - 实验一 图像的载入、显示与输出'>
+<meta property='og:description' content='Computer Vision - Experiment 1 - Image loading, display and output'>
+<meta property='og:url' content='https://javenjin.github.io/blog/zh-cn/p/experiment-01-image-loading-display-and-output/'>
+<meta property='og:site_name' content='Javen Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Computer Vision' /><meta property='article:tag' content='OpenCV' /><meta property='article:published_time' content='2020-03-09T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-03-09T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="计算机视觉 - 实验一 图像的载入、显示与输出">
+<meta name="twitter:description" content="Computer Vision - Experiment 1 - Image loading, display and output">
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/blog/zh-cn/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🤩</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/blog/zh-cn">Javen Blog</a></h1>
+            <h2 class="site-description">Javen.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/javenjin'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://instagram.com/javenjin98'
+                        target="_blank"
+                        title="Ins"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16.65 7.2H16.66M8 20H16C18.2091 20 20 18.2091 20 16V8C20 5.79086 18.2091 4 16 4H8C5.79086 4 4 5.79086 4 8V16C4 18.2091 5.79086 20 8 20ZM15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12Z"/>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:wenjie.jin@hotmail.com'
+                        target="_blank"
+                        title="Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/blog/zh-cn/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/zh-cn/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://javenjin.github.io/blog/" >English</option>
+                        
+                            <option value="https://javenjin.github.io/blog/zh-cn/" selected>中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#计算机视觉---实验一-图像的载入显示与输出">计算机视觉 - 实验一 图像的载入、显示与输出</a>
+      <ol>
+        <li><a href="#实验目的和要求">实验目的和要求</a></li>
+        <li><a href="#实验内容">实验内容</a></li>
+        <li><a href="#实验仪器设备">实验仪器、设备</a></li>
+        <li><a href="#实验原理">实验原理</a></li>
+        <li><a href="#实验步骤">实验步骤</a></li>
+        <li><a href="#实验注意事项">实验注意事项</a></li>
+        <li><a href="#实验结果">实验结果</a></li>
+        <li><a href="#实验总结">实验总结</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/blog/zh-cn/categories/computer-vision/" >
+                Computer Vision
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/blog/zh-cn/p/experiment-01-image-loading-display-and-output/">计算机视觉 - 实验一 图像的载入、显示与输出</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Computer Vision - Experiment 1 - Image loading, display and output
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 09, 2020</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 1 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+        <footer class="article-translations">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+            <div>
+                
+                    <a href="https://javenjin.github.io/blog/p/experiment-01-image-loading-display-and-output/" class="link">English</a>
+                
+            </div>
+        </footer>
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="计算机视觉---实验一-图像的载入显示与输出">计算机视觉 - 实验一 图像的载入、显示与输出</h2>
+<h3 id="实验目的和要求">实验目的和要求</h3>
+<p>  （一）通过实验掌握 Windows 中安装 OpenCV 的方法；</p>
+<p>  （二）通过实验掌握图像的载入、显示与输出的方法</p>
+<h3 id="实验内容">实验内容</h3>
+<p>  （一）Windows中安装OpenCV;</p>
+<p>  （二）编写图像的载入、显示与输出的程序.</p>
+<h3 id="实验仪器设备">实验仪器、设备</h3>
+<p>  计算机一台，已安装 Windows 7 操作系统和 Visual Studio 2015</p>
+<h3 id="实验原理">实验原理</h3>
+<p>  Opencv用 Mat类来实现图像的存储。图像存储在矩阵格式中，每个像素都有个位置，可以通过列数和行数引用。Mat类不只用于存储图像，而且还可以存储任意大小的不同类型的矩阵。可以使用Mat类执行矩阵加法、矩阵乘法、创建矩阵等操作。imread函数用于读取图像。imwrite函数用于写图像。imshow函数用于显示图像。</p>
+<h3 id="实验步骤">实验步骤</h3>
+<p>  （一）Windows中安装OpenCV</p>
+<p>  在网址<a class="link" href="https://sourceforge.net/projects/opencvlibrary/"  target="_blank" rel="noopener"
+    >https://sourceforge.net/projects/opencvlibrary/</a>中下载opencv源代码，在Windows中安装OpenCV。</p>
+<p>  （二）在Visual Studio 2015中配置OpenCV；</p>
+<p>  （三）编写代码，使用imread函数读取图像；</p>
+<p>  （四）编写代码，使用imwrite函数写图像；</p>
+<p>  （五）编写代码，使用imshow函数显示图像。</p>
+<h3 id="实验注意事项">实验注意事项</h3>
+<p>  （一）完成OpenCV安装之后，VS中配置OpenCV的方法；</p>
+<p>  （二）imread、imwrite、imshow函数的功能和使用方法。</p>
+<h3 id="实验结果">实验结果</h3>
+<p>  （一）实验代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;opencv2/core/core.hpp&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;opencv2/highgui/highgui.hpp&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//-------------------------------【一、图像的载入和显示】----------------------------
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	描述：以下三行代码用于完成图像的载入和显示
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//---------------------------------------------------------------------------------
+</span></span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="n">cv</span><span class="o">::</span><span class="n">Mat</span> <span class="n">girl</span> <span class="o">=</span> <span class="n">cv</span><span class="o">::</span><span class="n">imread</span><span class="p">(</span><span class="s">&#34;girl.jpg&#34;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">//载入图像到Mat
+</span></span></span><span class="line"><span class="cl">	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【1】动漫图&#34;</span><span class="p">);</span> <span class="c1">//创建一个名为 &#34;【1】e动漫图&#34;的窗口  
+</span></span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【1】动漫图&#34;</span><span class="p">,</span><span class="n">girl</span><span class="p">);</span><span class="c1">//显示名为 &#34;【1】动漫图&#34;的窗口  
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">//-------------------------------【二、初级图像混合】---------------------------------
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	描述：二、初级图像混合
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//---------------------------------------------------------------------------------
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//载入图片
+</span></span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s">&#34;dota.jpg&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">logo</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s">&#34;dota_logo.jpg&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">//载入后先显示
+</span></span></span><span class="line"><span class="cl">	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【2】原画图&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【2】原画图&#34;</span><span class="p">,</span><span class="n">image</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【3】logo图&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【3】logo图&#34;</span><span class="p">,</span><span class="n">logo</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 定义一个Mat类型，用于存放，图像的ROI
+</span></span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">imageROI</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//方法一
+</span></span></span><span class="line"><span class="cl">	<span class="n">imageROI</span><span class="o">=</span> <span class="n">image</span><span class="p">(</span><span class="n">Rect</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span><span class="mi">350</span><span class="p">,</span><span class="n">logo</span><span class="p">.</span><span class="n">cols</span><span class="p">,</span><span class="n">logo</span><span class="p">.</span><span class="n">rows</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//方法二
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//imageROI= image(Range(350,350+logo.rows),Range(800,800+logo.cols));
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 将logo加到原图上
+</span></span></span><span class="line"><span class="cl">	<span class="n">addWeighted</span><span class="p">(</span><span class="n">imageROI</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="n">logo</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="n">imageROI</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">//显示结果
+</span></span></span><span class="line"><span class="cl">	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【4】原画+logo图&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【4】原画+logo图&#34;</span><span class="p">,</span><span class="n">image</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">//--------------------------------【三、图像的输出】----------------------------------
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	描述：将一个Mat图像输出到图像文件
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//---------------------------------------------------------------------------------
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//输出一张jpg图片到工程目录下
+</span></span></span><span class="line"><span class="cl">	<span class="n">imwrite</span><span class="p">(</span><span class="s">&#34;由imwrite生成的图片.jpg&#34;</span><span class="p">,</span> <span class="n">image</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//imwrite(&#34;由imwrite生成的图片.jpg&#34;, image);
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">waitKey</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>  （二）显示结果</p>
+<p><img src="/blog/p/experiment-01-image-loading-display-and-output/images/image01.jpeg"
+	width="1920"
+	height="1031"
+	srcset="/blog/p/experiment-01-image-loading-display-and-output/images/image01_hu_ac457d2441a8fdb.jpeg 480w, /blog/p/experiment-01-image-loading-display-and-output/images/image01_hu_93caa2e29ab4b3eb.jpeg 1024w"
+	loading="lazy"
+	
+		alt="Image loading, display and output 1"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="446px"
+	
+></p>
+<p><img src="/blog/p/experiment-01-image-loading-display-and-output/images/image02.jpeg"
+	width="587"
+	height="916"
+	srcset="/blog/p/experiment-01-image-loading-display-and-output/images/image02_hu_3f44b3395d48a8c4.jpeg 480w, /blog/p/experiment-01-image-loading-display-and-output/images/image02_hu_70385a31525732c0.jpeg 1024w"
+	loading="lazy"
+	
+		alt="Image loading, display and output 2"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="64"
+		data-flex-basis="153px"
+	
+></p>
+<p><img src="/blog/p/experiment-01-image-loading-display-and-output/images/image03.jpeg"
+	width="1283"
+	height="761"
+	srcset="/blog/p/experiment-01-image-loading-display-and-output/images/image03_hu_c513f70fe1c4b99a.jpeg 480w, /blog/p/experiment-01-image-loading-display-and-output/images/image03_hu_fadb457316229707.jpeg 1024w"
+	loading="lazy"
+	
+		alt="Image loading, display and output 3"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="168"
+		data-flex-basis="404px"
+	
+></p>
+<p><img src="/blog/p/experiment-01-image-loading-display-and-output/images/image04.jpeg"
+	width="253"
+	height="291"
+	srcset="/blog/p/experiment-01-image-loading-display-and-output/images/image04_hu_f59cff19c3abd2ad.jpeg 480w, /blog/p/experiment-01-image-loading-display-and-output/images/image04_hu_a3e7f1a8ce3297fd.jpeg 1024w"
+	loading="lazy"
+	
+		alt="Image loading, display and output 4"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="86"
+		data-flex-basis="208px"
+	
+></p>
+<p><img src="/blog/p/experiment-01-image-loading-display-and-output/images/image05.jpeg"
+	width="1283"
+	height="761"
+	srcset="/blog/p/experiment-01-image-loading-display-and-output/images/image05_hu_fb199ad5cc635323.jpeg 480w, /blog/p/experiment-01-image-loading-display-and-output/images/image05_hu_826bfd93a9dc64c9.jpeg 1024w"
+	loading="lazy"
+	
+		alt="Image loading, display and output 5"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="168"
+		data-flex-basis="404px"
+	
+></p>
+<p><img src="/blog/p/experiment-01-image-loading-display-and-output/images/image06.jpeg"
+	width="1920"
+	height="1032"
+	srcset="/blog/p/experiment-01-image-loading-display-and-output/images/image06_hu_e7c7c309004ed16e.jpeg 480w, /blog/p/experiment-01-image-loading-display-and-output/images/image06_hu_33210d839145d6a9.jpeg 1024w"
+	loading="lazy"
+	
+		alt="Image loading, display and output 6"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="446px"
+	
+></p>
+<h3 id="实验总结">实验总结</h3>
+<p>  本次实验的主要内容是编写图像的载入、显示与输出的程序。用到的函数主要有cv::Mat girl=cv::imread(&ldquo;xx.jpg&rdquo;, 0);（载入图像到Mat，第一个参数xx.jpg是图片名称，第二个参数0是灰度图）；namedWindow(&ldquo;窗口名称&rdquo;); ；显示函数imshow(&ldquo;窗口名称&rdquo;,xx); ；载入图片函数Mat image= imread(&ldquo;xx.jpg&rdquo;); ；imageROI= image(Rect());；addWeighted();；imwrite(&quot;.jpg&quot;,image); ；等等函数。本次试验让我充分理解了上述的函数以及试验流程。学会了自己使用上述函数进行图片最基本的载入、显示与输入。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/blog/zh-cn/tags/computer-vision/">Computer Vision</a>
+        
+            <a href="/blog/zh-cn/tags/opencv/">OpenCV</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">计算机视觉 - 实验十六 用高斯背景建模分离背景实验</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/experiment-15-fast-corner-point-detection-experiments-on-video/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">计算机视觉 - 实验十五 对视频的快速角点检测实验</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/experiment-14-watershed-algorithm-experiment/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">计算机视觉 - 实验十四 分水岭算法实验</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/experiment-13-contour-shape-analysis-experiment/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">计算机视觉 - 实验十三 轮廓形状分析实验</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/blog/zh-cn/p/experiment-12-discrete-fourier-transform-experiment/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">计算机视觉 - 实验十二 离散傅里叶变换实验</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2026 Javen Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/blog/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
