@@ -58,21 +58,21 @@ Install Docker-Compose Reference: [https://linuxhostsupport.com/blog/how-to-inst
 
 ### Open the [Microsoft Store](https://aka.ms/wslstore) and select the Ubuntu version to download
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-1.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-1.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-2.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-2.png)
 
 ### Wait for the automatic installation to succeed
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-3.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-3.png)
 
 ### Start Ubuntu and wait for it to install automatically
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-4.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-4.png)
 
 ### After setting the username and password, enter the Ubuntu system
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-5.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-5.png)
 
 ### Install Docker
 
@@ -84,11 +84,11 @@ The installation command is as follows:
 sudo curl -sSL https://get.daocloud.io/docker | sh
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-6.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-6.png)
 
 Wait for successful installation
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-7.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-7.png)
 
 Start the docker service command
 
@@ -104,7 +104,7 @@ sudo docker ps -a
 
 The installation of Ubuntu Docker is successful when the following is displayed
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-8.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-8.png)
 
 ### Install docker-compose
 
@@ -114,7 +114,7 @@ Update the apt-get command:
 sudo apt-get update -y
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-9.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-9.png)
 
 Install the docker-compose command:
 
@@ -122,10 +122,10 @@ Install the docker-compose command:
 sudo apt-get install docker-compose
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-10.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-10.png)
 
 Enter y in the middle to enter
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-11.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-11.png)
 
 Installation complete!

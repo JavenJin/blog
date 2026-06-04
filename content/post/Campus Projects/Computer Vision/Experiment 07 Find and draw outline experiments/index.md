@@ -175,15 +175,15 @@ static void ShowHelpText()
 
 &emsp;&emsp; (ii) Show results
 
-![Find and draw outline experiments 1](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2007%20Find%20and%20draw%20outline%20experiments/find-and-draw-outline-experiments1.png)
+![Find and draw outline experiments 1](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2007%20Find%20and%20draw%20outline%20experiments/find-and-draw-outline-experiments1.png)
 
-![Find and draw outline experiments 2](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2007%20Find%20and%20draw%20outline%20experiments/find-and-draw-outline-experiments2.png)
+![Find and draw outline experiments 2](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2007%20Find%20and%20draw%20outline%20experiments/find-and-draw-outline-experiments2.png)
 
-![Find and draw outline experiments 3](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2007%20Find%20and%20draw%20outline%20experiments/find-and-draw-outline-experiments3.png)
+![Find and draw outline experiments 3](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2007%20Find%20and%20draw%20outline%20experiments/find-and-draw-outline-experiments3.png)
 
-![Find and draw outline experiments 4](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2007%20Find%20and%20draw%20outline%20experiments/find-and-draw-outline-experiments4.png)
+![Find and draw outline experiments 4](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2007%20Find%20and%20draw%20outline%20experiments/find-and-draw-outline-experiments4.png)
 
-![Find and draw outline experiments 5](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2007%20Find%20and%20draw%20outline%20experiments/find-and-draw-outline-experiments5.png)
+![Find and draw outline experiments 5](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2007%20Find%20and%20draw%20outline%20experiments/find-and-draw-outline-experiments5.png)
 
 ### Experiment Summary
 

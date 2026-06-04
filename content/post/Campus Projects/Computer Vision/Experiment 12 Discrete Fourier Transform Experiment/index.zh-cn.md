@@ -175,13 +175,13 @@ int main( )
 
 &emsp;&emsp;（二）显示结果
 
-![Discrete Fourier Transform Experiment 1](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2012%20Discrete%20Fourier%20Transform%20Experiment/discrete-fourier-transform-experiment1.png)
+![Discrete Fourier Transform Experiment 1](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2012%20Discrete%20Fourier%20Transform%20Experiment/discrete-fourier-transform-experiment1.png)
 
-![Discrete Fourier Transform Experiment 2](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2012%20Discrete%20Fourier%20Transform%20Experiment/discrete-fourier-transform-experiment2.png)
+![Discrete Fourier Transform Experiment 2](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2012%20Discrete%20Fourier%20Transform%20Experiment/discrete-fourier-transform-experiment2.png)
 
-![Discrete Fourier Transform Experiment 3](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2012%20Discrete%20Fourier%20Transform%20Experiment/discrete-fourier-transform-experiment3.png)
+![Discrete Fourier Transform Experiment 3](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2012%20Discrete%20Fourier%20Transform%20Experiment/discrete-fourier-transform-experiment3.png)
 
-![Discrete Fourier Transform Experiment 4](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2012%20Discrete%20Fourier%20Transform%20Experiment/discrete-fourier-transform-experiment4.png)
+![Discrete Fourier Transform Experiment 4](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2012%20Discrete%20Fourier%20Transform%20Experiment/discrete-fourier-transform-experiment4.png)
 
 ### 实验总结
 

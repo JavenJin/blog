@@ -173,15 +173,15 @@ static void ShowHelpText()
 
 &emsp;&emsp;（二）显示结果
 
-![Haff transform experiment 1](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2006%20Haff%20transform%20experiment/haff-transform-experiment1.png)
+![Haff transform experiment 1](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2006%20Haff%20transform%20experiment/haff-transform-experiment1.png)
 
-![Haff transform experiment 2](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2006%20Haff%20transform%20experiment/haff-transform-experiment2.png)
+![Haff transform experiment 2](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2006%20Haff%20transform%20experiment/haff-transform-experiment2.png)
 
-![Haff transform experiment 3](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2006%20Haff%20transform%20experiment/haff-transform-experiment3.png)
+![Haff transform experiment 3](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2006%20Haff%20transform%20experiment/haff-transform-experiment3.png)
 
-![Haff transform experiment 4](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2006%20Haff%20transform%20experiment/haff-transform-experiment4.png)
+![Haff transform experiment 4](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2006%20Haff%20transform%20experiment/haff-transform-experiment4.png)
 
-![Haff transform experiment 5](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2006%20Haff%20transform%20experiment/haff-transform-experiment5.png)
+![Haff transform experiment 5](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2006%20Haff%20transform%20experiment/haff-transform-experiment5.png)
 
 ### 实验总结
 

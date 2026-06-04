@@ -127,17 +127,17 @@ int main()
 
 &emsp;&emsp;（二）显示结果
 
-![Histogram of images 1](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2002%20Histogram%20of%20images/histogram-of-image1.png)
+![Histogram of images 1](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2002%20Histogram%20of%20images/histogram-of-image1.png)
 
-![Histogram of images 2](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2002%20Histogram%20of%20images/histogram-of-image2.png)
+![Histogram of images 2](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2002%20Histogram%20of%20images/histogram-of-image2.png)
 
-![Histogram of images 3](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2002%20Histogram%20of%20images/histogram-of-image3.png)
+![Histogram of images 3](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2002%20Histogram%20of%20images/histogram-of-image3.png)
 
-![Histogram of images 4](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2002%20Histogram%20of%20images/histogram-of-image4.png)
+![Histogram of images 4](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2002%20Histogram%20of%20images/histogram-of-image4.png)
 
-![Histogram of images 5](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2002%20Histogram%20of%20images/histogram-of-image5.png)
+![Histogram of images 5](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2002%20Histogram%20of%20images/histogram-of-image5.png)
 
-![Histogram of images 6](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2002%20Histogram%20of%20images/histogram-of-image6.png)
+![Histogram of images 6](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2002%20Histogram%20of%20images/histogram-of-image6.png)
 
 ### 实验总结
 

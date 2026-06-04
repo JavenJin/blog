@@ -23,7 +23,7 @@ tags:
 
 &nbsp;&nbsp;&nbsp;&nbsp;**简单工厂模式结构：** 简单工厂模式的结构比较简单，其核心是工厂类的设计。
 
-![Simple Factory Pattern Structure](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Design%20Pattern/Simple%20Factory%20Pattern%20and%20Factory%20Method%20Pattern/simple-factory-pattern-and-factory-method-pattern1.png)
+![Simple Factory Pattern Structure](https://javenjin.github.io/blog/content/post/Design%20Pattern/Simple%20Factory%20Pattern%20and%20Factory%20Method%20Pattern/simple-factory-pattern-and-factory-method-pattern1.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;**（1）Factory（工厂角色）：** 工厂角色即工厂类，它是简单工厂模式的核心，负责实现创建所有产品实例的内部逻辑；工厂类可以被外界直接调用，创建所需的产品对象；在工厂类中提供了静态的工厂方法factoryMethod()，它的返回类型为抽象产品类型Product。
 
@@ -125,7 +125,7 @@ public class Client {
 
 &nbsp;&nbsp;&nbsp;&nbsp;**工厂方法模式结构：** 工厂方法模式提供一个抽象工厂接口来声明抽象工厂方法，而由其子类来具体实现工厂方法，创建具体的产品对象。
 
-![Factory Method Pattern Structure](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Design%20Pattern/Simple%20Factory%20Pattern%20and%20Factory%20Method%20Pattern/simple-factory-pattern-and-factory-method-pattern2.png)
+![Factory Method Pattern Structure](https://javenjin.github.io/blog/content/post/Design%20Pattern/Simple%20Factory%20Pattern%20and%20Factory%20Method%20Pattern/simple-factory-pattern-and-factory-method-pattern2.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;**（1）Product（抽象产品）：** 它是定义产品的接口，是工厂方法模式所创建对象的超类型，也就是产品对象的公共父类。
 

@@ -73,7 +73,7 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon: https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg
+    favicon: https://javenjin.github.io/blog/favicon/favicon.svg
 
     footer:
         since: 2020

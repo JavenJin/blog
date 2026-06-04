@@ -45,15 +45,15 @@ yum install wget -y
 wget dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-1.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-1.png)
 
 ### Install the downloaded rpm file
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-2.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-2.png)
 
 ### Go to the directory /etc/yum.repos.d/ and these two files will be added
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-3.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-3.png)
 
 ### Modify the mysql-community.repo file
 
@@ -61,7 +61,7 @@ wget dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm
 vi mysql-community.repo
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-4.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-4.png)
 
 ### Install mysql using yum
 
@@ -69,9 +69,9 @@ vi mysql-community.repo
 yum install mysql-community-server -y
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-5.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-5.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-6.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-6.png)
 
 ### Check the version of mysql to make sure it's installed successfully
 
@@ -79,7 +79,7 @@ yum install mysql-community-server -y
 mysql -V
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-7.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-7.png)
 
 ### Start mysql service
 
@@ -87,7 +87,7 @@ mysql -V
 service mysqld start
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-8.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-8.png)
 
 ### Set mysql to start on boot
 
@@ -101,7 +101,7 @@ chkconfig mysqld on
 grep "password" /var/log/mysqld.log
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-9.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-9.png)
 
 ### Copy the temporary password above and login to mysql
 
@@ -120,7 +120,7 @@ set global validate_password_length=4;
 alter user 'root'@'localhost' identified by '123456';
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-10.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-10.png)
 
 - After successfully changing your password, type quit to log out, and then log back in with your new password.
 
@@ -130,7 +130,7 @@ alter user 'root'@'localhost' identified by '123456';
 grant all privileges on *.* to 'root'@'%' identified by '123456' with grant option;
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-11.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-11.png)
 
 - where root is the user, % indicates all privileges, and the password is 123456
 
@@ -140,7 +140,7 @@ grant all privileges on *.* to 'root'@'%' identified by '123456' with grant opti
 flush privileges;
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-12.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-12.png)
 
 ### Use quit or exit to quit mysql and restart mysql service
 
@@ -158,7 +158,7 @@ The linux firewall is not opened on port 3306 by default, you need to open it ma
 firewall-cmd --query-port=3306/tcp
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-13.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-13.png)
 
 - yes, means on; no means not on
 
@@ -168,7 +168,7 @@ firewall-cmd --query-port=3306/tcp
 firewall-cmd --add-port=3306/tcp --permanent
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-14.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-14.png)
 
 ### Reload the added port
 
@@ -176,7 +176,7 @@ firewall-cmd --add-port=3306/tcp --permanent
 firewall-cmd --reload
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-15.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-15.png)
 
 ### Query again whether port 3306 is open, and confirm that it is open
 
@@ -184,7 +184,7 @@ firewall-cmd --reload
 firewall-cmd --query-port=3306/tcp
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-16.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-16.png)
 
 ## Uninstall mysql on linux
 
@@ -196,7 +196,7 @@ If the installation fails and you want to reinstall it, you need to remove all m
 rpm -qa | grep -i mysql
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-17.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-17.png)
 
 ### Delete the queried files one by one
 
@@ -206,9 +206,9 @@ yum remove mysql-community-release-el6-5.noarch
 yum remove mysql-community-common-5.7.35-1.el7.x86_64
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-18.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-18.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-19.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-19.png)
 
 ### Delete mysql related files
 

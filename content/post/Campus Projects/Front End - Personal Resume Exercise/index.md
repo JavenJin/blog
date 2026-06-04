@@ -19,7 +19,7 @@ tags:
 
 ##### Personal Works
 
-![Personal Works](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Front%20End%20-%20Personal%20Resume%20Exercise/personal-works.jpeg)
+![Personal Works](https://javenjin.github.io/blog/content/post/Campus%20Projects/Front%20End%20-%20Personal%20Resume%20Exercise/personal-works.jpeg)
 
 ### Code
 

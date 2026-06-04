@@ -55,7 +55,7 @@ LogisticRegression(penalty='l2', dual=False,
 
 #### 2. 查看数据
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments1.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments1.png)
 
 Data columns (total 12 columns):
 |||
@@ -94,16 +94,16 @@ Age特征非常重要（逃命时通常女士和小孩优先），因此我们�
 
 此处我们使用均值填充。fillna()函数。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments2.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments2.png)
 
 Cabin缺失值较多，我们直接将其舍弃，以免引入较大的噪声。（删某一特征，列）
 用drop()函数。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments3.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments3.png)
 
 Embarked特征在训练集中只有2个样本有缺失值，因此可以直接将有缺失的样本删除。（删某一样本，行）
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments4.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments4.png)
 
 同理，对测试集的缺失值进行处理。
 
@@ -111,11 +111,11 @@ Embarked特征在训练集中只有2个样本有缺失值，因此可以直接�
 
 现在的数据还存在一些问题，如Name特征是文本型，不利于后续处理，我们训练模型时暂时将其舍弃。Ticket特征比较乱，也将其暂时忽略。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments5.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments5.png)
 
 Pclass特征、Sex特征、Embarked特征都是类别型，一般需要将其进行one-hot编码。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments6.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments6.png)
 
 Age特征、SibSp特征、Parch特征和Fare特征为数值型，取值变化范围较大，一般先将其标准化或归一化。
 
@@ -125,13 +125,13 @@ fit()用于计算训练数据的均值和方差， 后面就会用均值和方�
 
 fit_transform()不仅计算训练数据的均值和方差，还会基于计算出来的均值和方差来转换训练数据，从而把数据转换成标准的正太分布。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments7.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments7.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments8.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments8.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments9.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments9.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments10.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments10.png)
 
 #### 5. 模型训练
 
@@ -162,19 +162,19 @@ LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
 
 （5）在验证集上验证，评估性能。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments11.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments11.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments12.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments12.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments13.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments13.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments14.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments14.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments15.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments15.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments16.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments16.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments17.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments17.png)
 
 模型已经训练好，并且性能还不错，可以拿来进行预测了。
 

@@ -28,7 +28,7 @@ curl wttr.in
 
 上面的命令会返回，当前IP地址的天气。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails1.png)
+![](https://javenjin.github.io/blog/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails1.png)
 
 我们可以在URL中指定城市。
 
@@ -36,7 +36,7 @@ curl wttr.in
 curl wttr.in/Xian
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails2.png)
+![](https://javenjin.github.io/blog/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails2.png)
 
 返回的数据可以通过`curl`命令的`-o`参数，保存成文件，以便后面发送。
 
@@ -44,7 +44,7 @@ curl wttr.in/Xian
 curl -o result.html wttr.in/Xian
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails3.png)
+![](https://javenjin.github.io/blog/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails3.png)
 
 wttr.in允许定制天气预报的格式和内容，详见[https://github.com/chubin/wttr.in](https://github.com/chubin/wttr.in)，这里就不展开了。最后封装好的脚本[weather.sh](https://github.com/JavenJin/weather-action/blob/main/weather.sh)，完整代码如下：
 
@@ -73,11 +73,11 @@ curl \
 
 2. 点击设置，选择设置POP3/SMTP/IMAP
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails4.png)
+![](https://javenjin.github.io/blog/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails4.png)
 
 3. 点击新增授权密码，保存好该授权密码
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails5.png)
+![](https://javenjin.github.io/blog/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails5.png)
 
 ## 配置GitHub Actions
 
@@ -135,7 +135,7 @@ on:
 
 上面代码中，发送邮件使用的是一个已经写好的action，只要配几个参数就可以用。参数之中，邮件SMTP服务器的用户名和密码，使用的是加密变量，需要在项目的`settings/secrets`菜单里面设置。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails6.png)
+![](https://javenjin.github.io/blog/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails6.png)
 
 [完整的配置文件](https://github.com/JavenJin/weather-action/blob/main/.github/workflows/weather.yml)如下：
 
@@ -177,4 +177,4 @@ jobs:
 
 配置成功后，每天固定时间都会接收到当天的天气邮件。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails7.png)
+![](https://javenjin.github.io/blog/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails7.png)

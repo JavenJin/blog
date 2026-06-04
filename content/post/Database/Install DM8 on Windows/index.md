@@ -18,41 +18,41 @@ tags:
 
 2. Unzip the package
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-1.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-1.png)
 
 ## Installing the DM8
 
 1. Run the installation program
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-2.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-2.png)
 
 2. Start setup.exe in the directory
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-3.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-3.png)
 
 3. Language and Time Zone Selection
 
 Select the appropriate language and time zone according to your system configuration and click the OK button to continue the installation.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-4.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-4.png)
 
 4. Welcome Page
 
 Click the Next button to continue the installation.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-5.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-5.png)
 
 5. License Agreement
 
 Select Accept Agreement and click Next to continue the installation.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-6.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-6.png)
 
 6. Verify the Key file
 
 Click Next directly to continue the installation
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-7.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-7.png)
 
 7. Selecting Installation Components
 
@@ -68,25 +68,25 @@ Customized installation includes: user check the components according to the req
 
 Click Next to continue the installation.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-8.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-8.png)
 
 8. Select installation directory
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-9.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-9.png)
 
 9. Pre-installation Summary
 
 Displays information about the upcoming installation, such as product name, version information, installation type, installation directory, free space, free memory, etc. Users check for accuracy and then click the Install button to proceed with the installation of DM.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-10.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-10.png)
 
 10. Installation Process
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-11.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-11.png)
 
 Wait for the installation to complete.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-12.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-12.png)
 
 ## Initializing the database
 
@@ -94,13 +94,13 @@ Wait for the installation to complete.
 
 After the installation is complete, you can click Init to initialize the database.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-13.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-13.png)
 
 2. Selecting the Operation Method
 
 Select Create Database Instance and click Start.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-14.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-14.png)
 
 3. Creating database templates
 
@@ -108,13 +108,13 @@ The system provides three sets of database templates for users to choose from: G
 
 Select Common and click Next to continue.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-15.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-15.png)
 
 4. Selecting the database directory
 
 Set the database directory and click Next to continue.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-16.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-16.png)
 
 5. Input database identification
 
@@ -122,7 +122,7 @@ Users can enter parameters such as database name, instance name, port number, et
 
 Click Next to continue.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-17.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-17.png)
 
 6. Database File Location
 
@@ -130,7 +130,7 @@ The user can determine the location of the database control, database log, and o
 
 Click Next to continue.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-18.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-18.png)
 
 7. Database initialization parameters
 
@@ -138,7 +138,7 @@ Users can enter database related parameters, such as cluster size, page size, lo
 
 Click Next to continue.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-19.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-19.png)
 
 8. Password Management
 
@@ -146,7 +146,7 @@ Users can enter the password of SYSDBA, SYSAUDITOR to change the default passwor
 
 Click Next to continue.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-20.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-20.png)
 
 9. Choosing to Create a Sample Library
 
@@ -154,7 +154,7 @@ Users can choose whether to create a sample library BOOKSHOP or DMHR.
 
 Click Next to continue.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-21.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-21.png)
 
 10. Creating a Database Summary
 
@@ -162,16 +162,16 @@ Before installing the database, the relevant parameters set by the user through 
 
 Click Finish to continue.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-22.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-22.png)
 
 11. Install the initialization database
 
 Wait for the installation to complete.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-23.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-23.png)
 
 After the installation is complete, a pop-up will appear with database related parameters and file locations.
 
 Click Finish to finish initializing the database.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-24.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-24.png)

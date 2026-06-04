@@ -174,13 +174,13 @@ int main(int argc, char* argv[]) {
 
 &emsp;&emsp; (ii) Show results
 
-![LBP transformation experiment 1](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2011%20LBP%20transformation%20experiment/lbp-transformation-experiment1.png)
+![LBP transformation experiment 1](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2011%20LBP%20transformation%20experiment/lbp-transformation-experiment1.png)
 
-![LBP transformation experiment 2](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2011%20LBP%20transformation%20experiment/lbp-transformation-experiment2.png)
+![LBP transformation experiment 2](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2011%20LBP%20transformation%20experiment/lbp-transformation-experiment2.png)
 
-![LBP transformation experiment 3](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2011%20LBP%20transformation%20experiment/lbp-transformation-experiment3.png)
+![LBP transformation experiment 3](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2011%20LBP%20transformation%20experiment/lbp-transformation-experiment3.png)
 
-![LBP transformation experiment 4](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2011%20LBP%20transformation%20experiment/lbp-transformation-experiment4.png)
+![LBP transformation experiment 4](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2011%20LBP%20transformation%20experiment/lbp-transformation-experiment4.png)
 
 ### Experiment summary
 

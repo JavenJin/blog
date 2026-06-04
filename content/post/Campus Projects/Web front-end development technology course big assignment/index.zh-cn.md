@@ -29,17 +29,17 @@ tags:
 
 ### 最终界面
 
-![homework1](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework1.jpeg)
+![homework1](https://javenjin.github.io/blog/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework1.jpeg)
 
-![homework2](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework2.jpeg)
+![homework2](https://javenjin.github.io/blog/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework2.jpeg)
 
-![homework3](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework3.jpeg)
+![homework3](https://javenjin.github.io/blog/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework3.jpeg)
 
-![homework4](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework4.jpeg)
+![homework4](https://javenjin.github.io/blog/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework4.jpeg)
 
-![homework5](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework5.jpeg)
+![homework5](https://javenjin.github.io/blog/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework5.jpeg)
 
-![homework6](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework6.jpeg)
+![homework6](https://javenjin.github.io/blog/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework6.jpeg)
 
 ### 代码
 

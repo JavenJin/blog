@@ -166,15 +166,15 @@ int main(int argc, const char** argv)
 
 &emsp;&emsp;（二）显示结果
 
-![Separate background experiments with Gaussian background modeling 1](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2016%20Separate%20background%20experiments%20with%20Gaussian%20background%20modeling/separate-background-experiments-with-gaussian-background-modeling1.png)
+![Separate background experiments with Gaussian background modeling 1](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2016%20Separate%20background%20experiments%20with%20Gaussian%20background%20modeling/separate-background-experiments-with-gaussian-background-modeling1.png)
 
-![Separate background experiments with Gaussian background modeling 2](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2016%20Separate%20background%20experiments%20with%20Gaussian%20background%20modeling/separate-background-experiments-with-gaussian-background-modeling2.png)
+![Separate background experiments with Gaussian background modeling 2](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2016%20Separate%20background%20experiments%20with%20Gaussian%20background%20modeling/separate-background-experiments-with-gaussian-background-modeling2.png)
 
-![Separate background experiments with Gaussian background modeling 3](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2016%20Separate%20background%20experiments%20with%20Gaussian%20background%20modeling/separate-background-experiments-with-gaussian-background-modeling3.png)
+![Separate background experiments with Gaussian background modeling 3](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2016%20Separate%20background%20experiments%20with%20Gaussian%20background%20modeling/separate-background-experiments-with-gaussian-background-modeling3.png)
 
-![Separate background experiments with Gaussian background modeling 4](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2016%20Separate%20background%20experiments%20with%20Gaussian%20background%20modeling/separate-background-experiments-with-gaussian-background-modeling4.png)
+![Separate background experiments with Gaussian background modeling 4](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2016%20Separate%20background%20experiments%20with%20Gaussian%20background%20modeling/separate-background-experiments-with-gaussian-background-modeling4.png)
 
-![Separate background experiments with Gaussian background modeling 5](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2016%20Separate%20background%20experiments%20with%20Gaussian%20background%20modeling/separate-background-experiments-with-gaussian-background-modeling5.png)
+![Separate background experiments with Gaussian background modeling 5](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2016%20Separate%20background%20experiments%20with%20Gaussian%20background%20modeling/separate-background-experiments-with-gaussian-background-modeling5.png)
 
 ### 实验总结
 

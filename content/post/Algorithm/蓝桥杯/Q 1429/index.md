@@ -12,7 +12,7 @@ tags:
 # Q 1429: [2014 5th exam questions] Landon Ants
 Time limit: 1Sec Memory Limit: 128MB
 ## Title Description
-![Landon Ants](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/%E8%93%9D%E6%A1%A5%E6%9D%AF/Q%201429/landon-ants.png)
+![Landon Ants](https://javenjin.github.io/blog/content/post/%E8%93%9D%E6%A1%A5%E6%9D%AF/Q%201429/landon-ants.png)
 
 The Langdon ant, which was introduced in 1986 by Chris Langdon, is a type of cellular automaton.
 

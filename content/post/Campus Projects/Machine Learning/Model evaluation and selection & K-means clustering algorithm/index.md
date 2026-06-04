@@ -82,4 +82,4 @@ Method 2: Import warnings
       warnings.filterwarnings("ignore")
 ```
 ### Sklearn implementation of K-means clustering:
-![sklearn implementation of k-means clustering](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Model%20evaluation%20and%20selection%20%26%20K-means%20clustering%20algorithm/sklearn-implementation-of-k-means-clustering.png)
+![sklearn implementation of k-means clustering](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Model%20evaluation%20and%20selection%20%26%20K-means%20clustering%20algorithm/sklearn-implementation-of-k-means-clustering.png)

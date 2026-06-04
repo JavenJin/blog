@@ -34,11 +34,11 @@ tags:
 
 ## Game screenshots
 
-![Gluttony Game 1](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Gluttony%20game%20(Java%20GUI)/gluttony-game1.jpeg)
+![Gluttony Game 1](https://javenjin.github.io/blog/content/post/Campus%20Projects/Gluttony%20game%20%28Java%20GUI%29/gluttony-game1.jpeg)
 
-![Gluttony Game 2](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Gluttony%20game%20(Java%20GUI)/gluttony-game2.jpeg)
+![Gluttony Game 2](https://javenjin.github.io/blog/content/post/Campus%20Projects/Gluttony%20game%20%28Java%20GUI%29/gluttony-game2.jpeg)
 
-![Gluttony Game 3](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Gluttony%20game%20(Java%20GUI)/gluttony-game3.jpeg)
+![Gluttony Game 3](https://javenjin.github.io/blog/content/post/Campus%20Projects/Gluttony%20game%20%28Java%20GUI%29/gluttony-game3.jpeg)
 
 ## Code display
 

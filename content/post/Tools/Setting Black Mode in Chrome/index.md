@@ -18,10 +18,10 @@ chrome://flags/#enable-force-dark
 
 After clicking Enter, the following is displayed:
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Setting%20Black%20Mode%20in%20Chrome/setting-blank-mode-in-chrome-1.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Setting%20Black%20Mode%20in%20Chrome/setting-blank-mode-in-chrome-1.png)
 
 Set the value of Auto Dark Mode for Web Contents to Enabled.
 
 Just click Relaunch below to restart Chrome after setting it up.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Setting%20Black%20Mode%20in%20Chrome/setting-blank-mode-in-chrome-2.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Setting%20Black%20Mode%20in%20Chrome/setting-blank-mode-in-chrome-2.png)

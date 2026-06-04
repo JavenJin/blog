@@ -48,7 +48,7 @@ Web挖掘：在互联网上进行数据和文本的挖掘，并特别关注网�
 
 词映射到向量空间。余弦相似度。“快乐”、“高兴”、“悲伤”三个向量的余弦？
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments1.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments1.png)
 
 余弦相似度用向量空间中两个向量夹角的余弦值作为衡量两个个体间差异的大小。余弦值越接近1，就表明夹角越接近0度，也就是两个向量越相似，这就叫"余弦相似性"。
 
@@ -94,57 +94,57 @@ from sklearn.metrics import classification accuracy_score
 
 ### 4. 实验步骤
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments2.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments2.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments3.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments3.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments4.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments4.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments5.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments5.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments6.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments6.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments7.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments7.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments8.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments8.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments9.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments9.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments10.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments10.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments11.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments11.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments12.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments12.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments13.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments13.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments14.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments14.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments15.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments15.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments16.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments16.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments17.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments17.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments18.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments18.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments19.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments19.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments20.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments20.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments21.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments21.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments22.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments22.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments23.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments23.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments24.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments24.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments25.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments25.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments26.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments26.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments27.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments27.png)
 
 ### 5. 实验完整代码python
 

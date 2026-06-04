@@ -153,13 +153,13 @@ int main(  )
 
 &emsp;&emsp; (ii) Show the results
 
-![Create a rectangular boundary that encloses the outline 1](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2010%20Create%20a%20rectangular%20boundary%20that%20encloses%20the%20outline/create-a-rectangular-boundary-that-encloses-the-outline1.png)
+![Create a rectangular boundary that encloses the outline 1](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2010%20Create%20a%20rectangular%20boundary%20that%20encloses%20the%20outline/create-a-rectangular-boundary-that-encloses-the-outline1.png)
 
-![Create a rectangular boundary that encloses the outline 2](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2010%20Create%20a%20rectangular%20boundary%20that%20encloses%20the%20outline/create-a-rectangular-boundary-that-encloses-the-outline2.png)
+![Create a rectangular boundary that encloses the outline 2](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2010%20Create%20a%20rectangular%20boundary%20that%20encloses%20the%20outline/create-a-rectangular-boundary-that-encloses-the-outline2.png)
 
-![Create a rectangular boundary that encloses the outline 3](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2010%20Create%20a%20rectangular%20boundary%20that%20encloses%20the%20outline/create-a-rectangular-boundary-that-encloses-the-outline3.png)
+![Create a rectangular boundary that encloses the outline 3](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2010%20Create%20a%20rectangular%20boundary%20that%20encloses%20the%20outline/create-a-rectangular-boundary-that-encloses-the-outline3.png)
 
-![Create a rectangular boundary that encloses the outline 4](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2010%20Create%20a%20rectangular%20boundary%20that%20encloses%20the%20outline/create-a-rectangular-boundary-that-encloses-the-outline4.png)
+![Create a rectangular boundary that encloses the outline 4](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2010%20Create%20a%20rectangular%20boundary%20that%20encloses%20the%20outline/create-a-rectangular-boundary-that-encloses-the-outline4.png)
 
 ### Experiment Summary
 

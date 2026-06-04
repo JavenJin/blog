@@ -20,7 +20,7 @@ We ran linear regression with publicly available machine learning data from UCI 
 
 The data can be downloaded here:[https://archive.ics.uci.edu/ml/datasets/combined+cycle+power+plant](https://archive.ics.uci.edu/ml/datasets/combined+cycle+power+plant) The downloaded data can be found as a compressed file, after decompression there is an xlsx file, open it with excel, save it as a csv format, and later use this csv format file to run linear regression.
 
-![linear regression experiments](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments1.png)
+![linear regression experiments](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments1.png)
 
 This is a cyclic generation field data with 9568 sample data, each with 5 columns: $AT$ (Temperature), $V$ (Pressure), $AP$ (Humidity), $RH$ (Pressure), $PE$ (Output power). We don't need to get hung up on the exact meaning of each item.
 
@@ -68,9 +68,9 @@ from pandas.plotting import scatter_matrix
 scatter_matrix(data)
 ```
 
-![2.6 Data visualization, histogram display](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments2.png)
+![2.6 Data visualization, histogram display](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments2.png)
 
-![2.7 Scatter matrix](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments3.png)
+![2.7 Scatter matrix](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments3.png)
 
 #### 3. Prepare data
 
@@ -83,7 +83,7 @@ X = data[['AT','V','AP','RH']]
 X.head()
 ```
 
-![Prepare data](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments4.png)
+![Prepare data](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments4.png)
 
 Prepare the sample output $y$, and we use $PE$ as the sample output.
 
@@ -226,7 +226,7 @@ print("MSE:",metrics.mean_squared_error(y,predicted))
 print("RMSE:",np.sqrt(metrics.mean_squared_error(y,predicted)))
 ```
 
-![Cross-validation 10-fold cross-validation](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments5.png)
+![Cross-validation 10-fold cross-validation](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments5.png)
 
 #### 6. Graphical observation of the results
 
@@ -242,7 +242,7 @@ ax.set_ylabel('Predicted')
 plt.show()
 ```
 
-![Graphical observation of the results](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments6.png)
+![Graphical observation of the results](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments6.png)
 
 #### 7. python program full source code
 

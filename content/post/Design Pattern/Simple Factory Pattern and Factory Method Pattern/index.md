@@ -23,7 +23,7 @@ tags:
 
 &nbsp;&nbsp;&nbsp;&nbsp;**Simple Factory Pattern Structure:** The structure of the Simple Factory Pattern is relatively simple, and its core is the design of the factory class.
 
-![Simple Factory Pattern Structure](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Design%20Pattern/Simple%20Factory%20Pattern%20and%20Factory%20Method%20Pattern/simple-factory-pattern-and-factory-method-pattern1.png)
+![Simple Factory Pattern Structure](https://javenjin.github.io/blog/content/post/Design%20Pattern/Simple%20Factory%20Pattern%20and%20Factory%20Method%20Pattern/simple-factory-pattern-and-factory-method-pattern1.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;**(1) Factory (factory role):** The factory role is the factory class, which is the core of the simple factory pattern and is responsible for implementing the internal logic of creating all product instances; the factory class can be called directly by the outside world to create the required product objects; static factory methods are provided in the factory class factoryMethod(), which returns a type of abstract product type Product.
 
@@ -125,7 +125,7 @@ public class Client {
 
 &nbsp;&nbsp;&nbsp;&nbsp;**Factory Method Pattern Structure:** The Factory Method Pattern provides an abstract factory interface to declare abstract factory methods, and its subclasses to concretely implement the factory methods to create concrete product objects.
 
-![Factory Method Pattern Structure](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Design%20Pattern/Simple%20Factory%20Pattern%20and%20Factory%20Method%20Pattern/simple-factory-pattern-and-factory-method-pattern2.png)
+![Factory Method Pattern Structure](https://javenjin.github.io/blog/content/post/Design%20Pattern/Simple%20Factory%20Pattern%20and%20Factory%20Method%20Pattern/simple-factory-pattern-and-factory-method-pattern2.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;**(1) Product (abstract product):** It is the interface that defines the product, the supertype of the object created by the factory method pattern, which is the public parent class of the product object.
 

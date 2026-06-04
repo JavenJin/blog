@@ -265,13 +265,13 @@ static void ShowHelpText()
 
 &emsp;&emsp;（二）显示结果
 
-![Watershed algorithm experiment 1](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2014%20Watershed%20algorithm%20experiment/watershed-algorithm-experiment1.png)
+![Watershed algorithm experiment 1](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2014%20Watershed%20algorithm%20experiment/watershed-algorithm-experiment1.png)
 
-![Watershed algorithm experiment 2](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2014%20Watershed%20algorithm%20experiment/watershed-algorithm-experiment2.png)
+![Watershed algorithm experiment 2](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2014%20Watershed%20algorithm%20experiment/watershed-algorithm-experiment2.png)
 
-![Watershed algorithm experiment 3](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2014%20Watershed%20algorithm%20experiment/watershed-algorithm-experiment3.png)
+![Watershed algorithm experiment 3](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2014%20Watershed%20algorithm%20experiment/watershed-algorithm-experiment3.png)
 
-![Watershed algorithm experiment 4](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2014%20Watershed%20algorithm%20experiment/watershed-algorithm-experiment4.png)
+![Watershed algorithm experiment 4](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2014%20Watershed%20algorithm%20experiment/watershed-algorithm-experiment4.png)
 
 ### 实验总结
 

@@ -114,17 +114,17 @@ int main( )
 
 &emsp;&emsp; (ii) Show results
 
-![Image loading, display and output 1](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2001%20Image%20loading%2C%20display%20and%20output/image-loading-display-and-output1.jpeg)
+![Image loading, display and output 1](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2001%20Image%20loading%2C%20display%20and%20output/image-loading-display-and-output1.jpeg)
 
-![Image loading, display and output 2](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2001%20Image%20loading%2C%20display%20and%20output/image-loading-display-and-output2.jpeg)
+![Image loading, display and output 2](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2001%20Image%20loading%2C%20display%20and%20output/image-loading-display-and-output2.jpeg)
 
-![Image loading, display and output 3](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2001%20Image%20loading%2C%20display%20and%20output/image-loading-display-and-output3.jpeg)
+![Image loading, display and output 3](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2001%20Image%20loading%2C%20display%20and%20output/image-loading-display-and-output3.jpeg)
 
-![Image loading, display and output 4](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2001%20Image%20loading%2C%20display%20and%20output/image-loading-display-and-output4.jpeg)
+![Image loading, display and output 4](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2001%20Image%20loading%2C%20display%20and%20output/image-loading-display-and-output4.jpeg)
 
-![Image loading, display and output 5](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2001%20Image%20loading%2C%20display%20and%20output/image-loading-display-and-output5.jpeg)
+![Image loading, display and output 5](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2001%20Image%20loading%2C%20display%20and%20output/image-loading-display-and-output5.jpeg)
 
-![Image loading, display and output 6](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2001%20Image%20loading%2C%20display%20and%20output/image-loading-display-and-output6.jpeg)
+![Image loading, display and output 6](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2001%20Image%20loading%2C%20display%20and%20output/image-loading-display-and-output6.jpeg)
 
 ### Experiment Summary
 

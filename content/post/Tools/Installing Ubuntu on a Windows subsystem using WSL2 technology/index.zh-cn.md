@@ -58,21 +58,21 @@ wsl --set-default-version 2
 
 ### 打开[Microsoft Store](https://aka.ms/wslstore)并选择Ubuntu版本进行下载
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-1.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-1.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-2.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-2.png)
 
 ### 等待自动安装成功
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-3.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-3.png)
 
 ### 启动Ubuntu，等待自动安装
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-4.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-4.png)
 
 ### 设置用户名及密码后进入Ubuntu系统中
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-5.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-5.png)
 
 ### Ubuntu Docker安装
 
@@ -84,11 +84,11 @@ wsl --set-default-version 2
 sudo curl -sSL https://get.daocloud.io/docker | sh
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-6.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-6.png)
 
 等待安装成功
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-7.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-7.png)
 
 启动docker服务命令
 
@@ -104,7 +104,7 @@ sudo docker ps -a
 
 显示如下即安装Ubuntu Docker成功
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-8.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-8.png)
 
 ### 安装docker-compose
 
@@ -114,7 +114,7 @@ sudo docker ps -a
 sudo apt-get update -y
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-9.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-9.png)
 
 安装docker-compose命令：
 
@@ -122,10 +122,10 @@ sudo apt-get update -y
 sudo apt-get install docker-compose
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-10.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-10.png)
 
 中途输入y回车即可
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-11.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-11.png)
 
 安装完成！

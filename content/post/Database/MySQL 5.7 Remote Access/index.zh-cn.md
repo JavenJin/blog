@@ -12,7 +12,7 @@ tags:
 
 ## 进入MySQL安装目录下的bin目录（如果配置过环境变量就直接到第二步）
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-1.png)
+![](https://javenjin.github.io/blog/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-1.png)
 
 ## 在地址栏输入cmd打开命令行窗口（如果配置过环境变量直接Win+R输入cmd回车即可）
 
@@ -22,7 +22,7 @@ tags:
 mysql -uroot -p
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-2.png)
+![](https://javenjin.github.io/blog/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-2.png)
 
 ## 输入命令并回车，其中password是你msyql数据库的密码
 
@@ -30,7 +30,7 @@ mysql -uroot -p
 grant all privileges on *.* to 'root'@'%' identified by 'password';
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-3.png)
+![](https://javenjin.github.io/blog/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-3.png)
 
 ## 输入命令并回车
 
@@ -38,8 +38,8 @@ grant all privileges on *.* to 'root'@'%' identified by 'password';
 flush privileges;
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-4.png)
+![](https://javenjin.github.io/blog/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-4.png)
 
 ## 关闭窗口，完成
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-5.png)
+![](https://javenjin.github.io/blog/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-5.png)

@@ -12,7 +12,7 @@ tags:
 # 题目 1429: \[2014年第五届真题\]兰顿蚂蚁
 时间限制: 1Sec 内存限制: 128MB
 ## 题目描述
-![Landon Ants](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/%E8%93%9D%E6%A1%A5%E6%9D%AF/Q%201429/landon-ants.png)
+![Landon Ants](https://javenjin.github.io/blog/content/post/%E8%93%9D%E6%A1%A5%E6%9D%AF/Q%201429/landon-ants.png)
 
 兰顿蚂蚁，是于1986年，由克里斯·兰顿提出来的，属于细胞自动机的一种。
 

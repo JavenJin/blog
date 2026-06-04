@@ -28,7 +28,7 @@ curl wttr.in
 
 The above command will return, the weather for the current IP address.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails1.png)
+![](https://javenjin.github.io/blog/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails1.png)
 
 We can specify the city in the URL.
 
@@ -36,7 +36,7 @@ We can specify the city in the URL.
 curl wttr.in/Xian
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails2.png)
+![](https://javenjin.github.io/blog/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails2.png)
 
 The returned data can be saved to a file to be sent later, using the `-o` parameter of the `curl` command.
 
@@ -44,7 +44,7 @@ The returned data can be saved to a file to be sent later, using the `-o` parame
 curl -o result.html wttr.in/Xian
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails3.png)
+![](https://javenjin.github.io/blog/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails3.png)
 
 wttr.in allows customization of the format and content of the weather forecast, as detailed in [https://github.com/chubin/wttr.in](https://github.com/chubin/wttr.in), which will not be expanded upon here. The final encapsulated script [weather.sh](https://github.com/JavenJin/weather-action/blob/main/weather.sh), complete with code, is as follows:
 
@@ -73,11 +73,11 @@ You need to first generate an authorization code in your Netflix 163 email.
 
 2. Click on Settings and choose to set POP3/SMTP/IMAP
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails4.png)
+![](https://javenjin.github.io/blog/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails4.png)
 
 3. Click Add Authorization Password to save that authorization password
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails5.png)
+![](https://javenjin.github.io/blog/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails5.png)
 
 ## Configuring GitHub Actions
 
@@ -135,7 +135,7 @@ Finally, send an email.
 
 In the above code, the email is sent using an action that has already been written and can be used with just a few parameters. Among the parameters, the username and password of the mail SMTP server are encrypted variables, which need to be set in the `settings/secrets` menu of the project.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails6.png)
+![](https://javenjin.github.io/blog/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails6.png)
 
 The [complete configuration file](https://github.com/JavenJin/weather-action/blob/main/.github/workflows/weather.yml) is below:
 
@@ -177,4 +177,4 @@ After writing the configuration and pushing it to the repository, you can receiv
 
 After successful configuration, you will receive the day's weather email at a fixed time every day.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails7.png)
+![](https://javenjin.github.io/blog/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails7.png)

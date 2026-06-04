@@ -150,15 +150,15 @@ int main(int argc, char** argv)
 
 &emsp;&emsp;（二）显示结果
 
-![Image segmentation experiment 1](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2008%20Image%20segmentation%20experiment/image-segmentation-experimet1.png)
+![Image segmentation experiment 1](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2008%20Image%20segmentation%20experiment/image-segmentation-experimet1.png)
 
-![Image segmentation experiment 2](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2008%20Image%20segmentation%20experiment/image-segmentation-experimet2.png)
+![Image segmentation experiment 2](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2008%20Image%20segmentation%20experiment/image-segmentation-experimet2.png)
 
-![Image segmentation experiment 3](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2008%20Image%20segmentation%20experiment/image-segmentation-experimet3.png)
+![Image segmentation experiment 3](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2008%20Image%20segmentation%20experiment/image-segmentation-experimet3.png)
 
-![Image segmentation experiment 4](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2008%20Image%20segmentation%20experiment/image-segmentation-experimet4.png)
+![Image segmentation experiment 4](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2008%20Image%20segmentation%20experiment/image-segmentation-experimet4.png)
 
-![Image segmentation experiment 5](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2008%20Image%20segmentation%20experiment/image-segmentation-experimet5.png)
+![Image segmentation experiment 5](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2008%20Image%20segmentation%20experiment/image-segmentation-experimet5.png)
 
 ### 实验总结
 

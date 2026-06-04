@@ -45,15 +45,15 @@ yum install wget -y
 wget dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-1.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-1.png)
 
 ### 安装下载好的rpm文件
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-2.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-2.png)
 
 ### 进入目录/etc/yum.repos.d/会多出这两个文件
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-3.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-3.png)
 
 ### 修改mysql-community.repo文件
 
@@ -61,7 +61,7 @@ wget dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm
 vi mysql-community.repo
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-4.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-4.png)
 
 ### 使用yum安装mysql
 
@@ -69,9 +69,9 @@ vi mysql-community.repo
 yum install mysql-community-server -y
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-5.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-5.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-6.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-6.png)
 
 ### 查看下mysql的版本，确定是否安装成功
 
@@ -79,7 +79,7 @@ yum install mysql-community-server -y
 mysql -V
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-7.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-7.png)
 
 ### 启动mysql服务
 
@@ -87,7 +87,7 @@ mysql -V
 service mysqld start
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-8.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-8.png)
 
 ### 设置mysql开机启动
 
@@ -101,7 +101,7 @@ chkconfig mysqld on
 grep "password" /var/log/mysqld.log
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-9.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-9.png)
 
 ### 复制上面的临时密码，登录mysql
 
@@ -120,7 +120,7 @@ set global validate_password_length=4;
 alter user 'root'@'localhost' identified by '123456';
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-10.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-10.png)
 
 - 修改密码成功后，输入quit退出，然后使用新密码重新登录。
 
@@ -130,7 +130,7 @@ alter user 'root'@'localhost' identified by '123456';
 grant all privileges on *.* to 'root'@'%' identified by '123456' with grant option;
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-11.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-11.png)
 
 - 其中root为用户，%表示所有权限，密码为123456
 
@@ -140,7 +140,7 @@ grant all privileges on *.* to 'root'@'%' identified by '123456' with grant opti
 flush privileges;
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-12.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-12.png)
 
 ### 使用quit或exit退出mysql，重启mysql服务
 
@@ -158,7 +158,7 @@ linux防火墙默认是没有开通3306端口的，需要手动开通，这样�
 firewall-cmd --query-port=3306/tcp
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-13.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-13.png)
 
 - yes，表示开启；no表示未开启
 
@@ -168,7 +168,7 @@ firewall-cmd --query-port=3306/tcp
 firewall-cmd --add-port=3306/tcp --permanent
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-14.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-14.png)
 
 ### 重载入添加的端口
 
@@ -176,7 +176,7 @@ firewall-cmd --add-port=3306/tcp --permanent
 firewall-cmd --reload
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-15.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-15.png)
 
 ### 再次查询3306端口是否开启，确认已开启
 
@@ -184,7 +184,7 @@ firewall-cmd --reload
 firewall-cmd --query-port=3306/tcp
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-16.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-16.png)
 
 ## 卸载linux上的mysql
 
@@ -196,7 +196,7 @@ firewall-cmd --query-port=3306/tcp
 rpm -qa | grep -i mysql
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-17.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-17.png)
 
 ### 将查询出来的文件逐个删除
 
@@ -206,9 +206,9 @@ yum remove mysql-community-release-el6-5.noarch
 yum remove mysql-community-common-5.7.35-1.el7.x86_64
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-18.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-18.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-19.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-19.png)
 
 ### 删除mysql相关文件
 

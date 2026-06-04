@@ -14,34 +14,34 @@ tags:
 
 ### 打开设置
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-1.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-1.png)
 
 ### 搜索Remote Desktop
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-2.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-2.png)
 
 ### 打开Remote Desktop
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-3.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-3.png)
 
 ## Windows 11 允许远程访问
 
 ### 搜索打开Windows Defender Firewall
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-4.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-4.png)
 
 ### 点击Turn Windows Defender Firewall on or off
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-5.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-5.png)
 
 ### 将Public network settings 选择 Turn off Windows Defender Firewall (not recommended)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-6.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-6.png)
 
 ### 点击下方OK保存
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-7.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-7.png)
 
 ### 显示如图即可
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-8.png)
+![](https://javenjin.github.io/blog/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-8.png)

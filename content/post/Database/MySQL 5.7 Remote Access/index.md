@@ -12,7 +12,7 @@ tags:
 
 ## Go to the bin directory in the MySQL installation directory (if you have configured environment variables, go directly to step 2)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-1.png)
+![](https://javenjin.github.io/blog/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-1.png)
 
 ## Type cmd in the address bar to open a command line window (if you have configured the environment variables directly Win+R type cmd to enter)
 
@@ -22,7 +22,7 @@ tags:
 mysql -uroot -p
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-2.png)
+![](https://javenjin.github.io/blog/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-2.png)
 
 ## Enter the command and enter, where password is the password of your msyql database
 
@@ -30,7 +30,7 @@ mysql -uroot -p
 grant all privileges on *.* to 'root'@'%' identified by 'password';
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-3.png)
+![](https://javenjin.github.io/blog/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-3.png)
 
 ## Type the command and enter
 
@@ -38,8 +38,8 @@ grant all privileges on *.* to 'root'@'%' identified by 'password';
 flush privileges;
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-4.png)
+![](https://javenjin.github.io/blog/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-4.png)
 
 ## Close the window and finish
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-5.png)
+![](https://javenjin.github.io/blog/content/post/Database/MySQL%205.7%20Remote%20Access/mysql-5.7-remote-access-5.png)

@@ -200,13 +200,13 @@ static void ShowHelpText()
 
 &emsp;&emsp;（二）显示结果
 
-![Contour shape analysis experiment 1](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2013%20Contour%20shape%20analysis%20experiment/contour-shape-analysis-experiment1.png)
+![Contour shape analysis experiment 1](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2013%20Contour%20shape%20analysis%20experiment/contour-shape-analysis-experiment1.png)
 
-![Contour shape analysis experiment 2](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2013%20Contour%20shape%20analysis%20experiment/contour-shape-analysis-experiment2.png)
+![Contour shape analysis experiment 2](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2013%20Contour%20shape%20analysis%20experiment/contour-shape-analysis-experiment2.png)
 
-![Contour shape analysis experiment 3](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2013%20Contour%20shape%20analysis%20experiment/contour-shape-analysis-experiment3.png)
+![Contour shape analysis experiment 3](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2013%20Contour%20shape%20analysis%20experiment/contour-shape-analysis-experiment3.png)
 
-![Contour shape analysis experiment 4](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2013%20Contour%20shape%20analysis%20experiment/contour-shape-analysis-experiment4.png)
+![Contour shape analysis experiment 4](https://javenjin.github.io/blog/content/post/Campus%20Projects/Computer%20Vision/Experiment%2013%20Contour%20shape%20analysis%20experiment/contour-shape-analysis-experiment4.png)
 
 ### 实验总结
 

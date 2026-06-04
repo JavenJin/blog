@@ -76,7 +76,7 @@ pineapple 10
 
 >Output Example
 
->![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Algorithm/GrapeCity%20written%20test%20questions/grapecity-written-test-question-1.png)
+>![](https://javenjin.github.io/blog/content/post/Algorithm/GrapeCity%20written%20test%20questions/grapecity-written-test-question-1.png)
 
 ### Problem Solving
 
@@ -192,4 +192,4 @@ public class test {
 
 ### Run Screenshot
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Algorithm/GrapeCity%20written%20test%20questions/grapecity-written-test-question-2.png)
+![](https://javenjin.github.io/blog/content/post/Algorithm/GrapeCity%20written%20test%20questions/grapecity-written-test-question-2.png)

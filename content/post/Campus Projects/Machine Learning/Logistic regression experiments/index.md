@@ -55,7 +55,7 @@ Methods:    fit(X_train,y_train)
 
 #### 2. View Data
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments1.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments1.png)
 
 Data columns (total 12 columns):
 |||
@@ -94,16 +94,16 @@ The methods of filling missing values are: fixed value filling, mean/median fill
 
 Here we use mean fill. fillna() function.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments2.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments2.png)
 
 Cabin has more missing values, and we directly discard them to avoid introducing larger noise. (Delete a feature, column)
 with the drop() function.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments3.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments3.png)
 
 Embarked features have only 2 samples with missing values in the training set, so the samples with missing values can be removed directly. (Delete a sample, line)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments4.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments4.png)
 
 Similarly, the missing values of the test set are processed.
 
@@ -111,11 +111,11 @@ Similarly, the missing values of the test set are processed.
 
 There are still some problems with the current data, such as the Name feature is text-based, which is not conducive to subsequent processing, so we temporarily discard it when training the model, and the Ticket feature is messy, so we also ignore it temporarily.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments5.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments5.png)
 
 Pclass features, Sex features, and Embarked features are all category types, which generally need to be one-hot encoded.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments6.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments6.png)
 
 Age features, SibSp features, Parch features and Fare features are numerical and have a wide range of values, so they are generally normalized or normalized first.
 
@@ -125,13 +125,13 @@ fit() is used to calculate the mean and variance of the training data, which are
 
 fit_transform() not only calculates the mean and variance of the training data, but also transforms the training data based on the calculated mean and variance, thus converting the data into a standard orthogonal distribution.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments7.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments7.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments8.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments8.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments9.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments9.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments10.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments10.png)
 
 #### 5. Model Training
 
@@ -162,19 +162,19 @@ LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
 
 (5) Verify on the validation set and evaluate the performance.
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments11.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments11.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments12.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments12.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments13.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments13.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments14.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments14.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments15.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments15.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments16.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments16.png)
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments17.png)
+![](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments17.png)
 
 The model has been trained and is performing well enough to be used for prediction.
 

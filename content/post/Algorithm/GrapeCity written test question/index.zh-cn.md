@@ -76,7 +76,7 @@ pineapple 10
 
 >输出示例
 
->![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Algorithm/GrapeCity%20written%20test%20questions/grapecity-written-test-question-1.png)
+>![](https://javenjin.github.io/blog/content/post/Algorithm/GrapeCity%20written%20test%20questions/grapecity-written-test-question-1.png)
 
 ### 题解
 
@@ -192,4 +192,4 @@ public class test {
 
 ### 运行截图
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Algorithm/GrapeCity%20written%20test%20questions/grapecity-written-test-question-2.png)
+![](https://javenjin.github.io/blog/content/post/Algorithm/GrapeCity%20written%20test%20questions/grapecity-written-test-question-2.png)

@@ -31,7 +31,7 @@ Snowflake Schema Test(database)
         TestTable2(table)
 ```
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/SHOW%20TABLES%20in%20Snowflake/SHOW-TABLES-in-Snowflake-1.png)
+![](https://javenjin.github.io/blog/content/post/Database/SHOW%20TABLES%20in%20Snowflake/SHOW-TABLES-in-Snowflake-1.png)
 
 此时，执行SHOW TABLES的结果如下：
 
@@ -41,7 +41,7 @@ Snowflake Schema Test(database)
 |2024-02-01 23:30:30.178 -0800|TestTable1|Snowflake Schema Test|JAVEN|TABLE|ACCOUNTADMIN|
 |2024-02-01 23:30:36.126 -0800|TestTable2|Snowflake Schema Test|PUBLIC|TABLE|ACCOUNTADMIN|
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/SHOW%20TABLES%20in%20Snowflake/SHOW-TABLES-in-Snowflake-2.png)
+![](https://javenjin.github.io/blog/content/post/Database/SHOW%20TABLES%20in%20Snowflake/SHOW-TABLES-in-Snowflake-2.png)
 
 很明显，在数据库中包含5张表，但是查询出来仅剩下3张表。
 
@@ -96,4 +96,4 @@ SHOW TABLES IN DATABASE;
 |2024-02-01 23:29:42.900 -0800|TestTable1|Snowflake Schema Test|PUBLIC|TABLE|ACCOUNTADMIN|
 |2024-02-01 23:30:36.126 -0800|TestTable2|Snowflake Schema Test|PUBLIC|TABLE|ACCOUNTADMIN|
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/SHOW%20TABLES%20in%20Snowflake/SHOW-TABLES-in-Snowflake-3.png)
+![](https://javenjin.github.io/blog/content/post/Database/SHOW%20TABLES%20in%20Snowflake/SHOW-TABLES-in-Snowflake-3.png)

@@ -8,7 +8,7 @@ links:
   - title: TypeScript
     description: TypeScript是一个类型化的JavaScript超集，可以编译成普通JavaScript。
     website: https://www.typescriptlang.org
-    image: https://github.com/JavenJin/blog-image/blob/master/content/page/links/ts-logo-128.jpg
+    image: https://javenjin.github.io/blog/content/page/links/ts-logo-128.jpg
 menu:
     main: 
         weight: -50

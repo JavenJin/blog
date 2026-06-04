@@ -20,7 +20,7 @@ math: true
 
 数据的下载地址在这里：[https://archive.ics.uci.edu/ml/datasets/combined+cycle+power+plant](https://archive.ics.uci.edu/ml/datasets/combined+cycle+power+plant) 下载后的数据可以发现是一个压缩文件，解压后有一个xlsx文件，用excel打开，另存为csv格式，之后用这个csv格式的文件来运行线性回归。
 
-![linear regression experiments](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments1.png)
+![linear regression experiments](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments1.png)
 
 这是一个循环发电场数据，共有9568个样本数据，每个数据有5列：$AT$（温度）、$V$（压力）、$AP$（湿度）、$RH$（压强）、$PE$（输出电力）。我们不用纠结于每项的具体意义。
 
@@ -68,9 +68,9 @@ from pandas.plotting import scatter_matrix
 scatter_matrix(data)
 ```
 
-![2.6数据可视化，直方图显示](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments2.png)
+![2.6数据可视化，直方图显示](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments2.png)
 
-![2.7散点矩阵图](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments3.png)
+![2.7散点矩阵图](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments3.png)
 
 #### 3. 准备数据
 
@@ -83,7 +83,7 @@ X = data[['AT','V','AP','RH']]
 X.head()
 ```
 
-![准备数据](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments4.png)
+![准备数据](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments4.png)
 
 准备样本输出$y$，我们用$PE$作为样本输出。
 
@@ -226,7 +226,7 @@ print("MSE:",metrics.mean_squared_error(y,predicted))
 print("RMSE:",np.sqrt(metrics.mean_squared_error(y,predicted)))
 ```
 
-![交叉验证10折交叉验证](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments5.png)
+![交叉验证10折交叉验证](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments5.png)
 
 #### 6. 画图观察结果
 
@@ -242,7 +242,7 @@ ax.set_ylabel('Predicted')
 plt.show()
 ```
 
-![画图观察结果](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments6.png)
+![画图观察结果](https://javenjin.github.io/blog/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments6.png)
 
 #### 7. python程序完整源代码
 

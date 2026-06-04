@@ -18,41 +18,41 @@ tags:
 
 2. 解压压缩包
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-1.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-1.png)
 
 ## 安装 DM8
 
 1. 运行安装程序
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-2.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-2.png)
 
 2. 启动目录中的setup.exe
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-3.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-3.png)
 
 3. 语言与时区选择
 
 根据系统配置选择相应的语言与时区，点击OK按钮继续安装。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-4.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-4.png)
 
 4. 欢迎页面
 
 点击Next按钮继续安装。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-5.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-5.png)
 
 5. 许可证协议
 
 选择接受协议，并点击Next继续安装。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-6.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-6.png)
 
 6. 验证Key文件
 
 直接点击Next，继续安装
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-7.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-7.png)
 
 7. 选择安装组件
 
@@ -68,25 +68,25 @@ DM 安装程序提供四种安装方式：“典型安装”、“服务器安�
 
 选择后点击Next继续安装。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-8.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-8.png)
 
 8. 选择安装目录
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-9.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-9.png)
 
 9. 安装前小结
 
 显示用户即将进行的安装的有关信息，例如产品名称、版本信息、安装类型、安装目录、可用空间、可用内存等信息，用户检查无误后点击Install按钮进行DM的安装。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-10.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-10.png)
 
 10. 安装过程
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-11.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-11.png)
 
 等待安装完毕。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-12.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-12.png)
 
 ## 初始化数据库
 
@@ -94,13 +94,13 @@ DM 安装程序提供四种安装方式：“典型安装”、“服务器安�
 
 安装完成后，可以点击Init进行数据库的初始化。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-13.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-13.png)
 
 2. 选择操作方式
 
 选择Create Database Instance并点击Start。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-14.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-14.png)
 
 3. 创建数据库模板
 
@@ -108,13 +108,13 @@ DM 安装程序提供四种安装方式：“典型安装”、“服务器安�
 
 选择Common并点击Next继续。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-15.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-15.png)
 
 4. 选择数据库目录
 
 设置数据库目录后点击Next继续。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-16.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-16.png)
 
 5. 输入数据库标识
 
@@ -122,7 +122,7 @@ DM 安装程序提供四种安装方式：“典型安装”、“服务器安�
 
 点击Next继续。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-17.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-17.png)
 
 6. 数据库文件所在位置
 
@@ -130,7 +130,7 @@ DM 安装程序提供四种安装方式：“典型安装”、“服务器安�
 
 点击Next继续。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-18.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-18.png)
 
 7. 数据库初始化参数
 
@@ -138,7 +138,7 @@ DM 安装程序提供四种安装方式：“典型安装”、“服务器安�
 
 点击Next继续。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-19.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-19.png)
 
 8. 口令管理
 
@@ -146,7 +146,7 @@ DM 安装程序提供四种安装方式：“典型安装”、“服务器安�
 
 点击Next继续。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-20.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-20.png)
 
 9. 选择创建示例库
 
@@ -154,7 +154,7 @@ DM 安装程序提供四种安装方式：“典型安装”、“服务器安�
 
 点击Next继续。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-21.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-21.png)
 
 10. 创建数据库摘要
 
@@ -162,16 +162,16 @@ DM 安装程序提供四种安装方式：“典型安装”、“服务器安�
 
 点击Finish继续。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-22.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-22.png)
 
 11. 安装初始化数据库
 
 等待安装完成。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-23.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-23.png)
 
 安装完成后将弹出数据库相关参数及文件位置。
 
 点击Finish完成初始化数据库。
 
-![](https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-24.png)
+![](https://javenjin.github.io/blog/content/post/Database/Install%20DM8%20on%20Windows/Install-DM8-on-Windows-24.png)
