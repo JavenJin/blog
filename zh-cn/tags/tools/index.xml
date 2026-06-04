@@ -6,11 +6,13 @@
         <description>Recent content in Tools on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
+        <managingEditor>wenjie.jin@hotmail.com (Javen)</managingEditor>
+        <webMaster>wenjie.jin@hotmail.com (Javen)</webMaster>
         <lastBuildDate>Mon, 24 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/tags/tools/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>个人电脑上部署一台随时随地可访问的私人相册</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/%E4%B8%AA%E4%BA%BA%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2%E4%B8%80%E5%8F%B0%E9%9A%8F%E6%97%B6%E9%9A%8F%E5%9C%B0%E5%8F%AF%E8%AE%BF%E9%97%AE%E7%9A%84%E7%A7%81%E4%BA%BA%E7%9B%B8%E5%86%8C/</link>
         <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/p/%E4%B8%AA%E4%BA%BA%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2%E4%B8%80%E5%8F%B0%E9%9A%8F%E6%97%B6%E9%9A%8F%E5%9C%B0%E5%8F%AF%E8%AE%BF%E9%97%AE%E7%9A%84%E7%A7%81%E4%BA%BA%E7%9B%B8%E5%86%8C/</guid>
         <description>&lt;h1 id=&#34;个人电脑上部署一台随时随地可访问的私人相册&#34;&gt;个人电脑上部署一台随时随地可访问的私人相册&lt;/h1&gt;
 &lt;p&gt;目标是想在个人电脑上安装&lt;em&gt;Immich&lt;/em&gt;（一个自托管的照片/视频备份服务器，支持移动端备份，类似于Google Photos）作为核心备份服务，并使用&lt;em&gt;Tailscale&lt;/em&gt;（一个基于WireGuard的零配置VPN工具）来实现远程访问（将本地服务安全地暴露到公网）。&lt;/p&gt;
@@ -134,7 +136,7 @@
         <title>在 Chrome 浏览器中设置黑色模式</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8-chrome-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E8%AE%BE%E7%BD%AE%E9%BB%91%E8%89%B2%E6%A8%A1%E5%BC%8F/</link>
         <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8-chrome-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E8%AE%BE%E7%BD%AE%E9%BB%91%E8%89%B2%E6%A8%A1%E5%BC%8F/</guid>
         <description>&lt;h1 id=&#34;在-chrome-浏览器中设置黑色模式&#34;&gt;在 Chrome 浏览器中设置黑色模式&lt;/h1&gt;
 &lt;p&gt;在网址栏输入下面的地址：&lt;/p&gt;
@@ -147,22 +149,30 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;点击Enter后，显示如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Setting%20Black%20Mode%20in%20Chrome/setting-blank-mode-in-chrome-1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/setting-black-mode-in-chrome/images/image01.png&#34;
+	width=&#34;1216&#34;
+	height=&#34;737&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/setting-black-mode-in-chrome/images/image01_hu_fc94cc5471188c92.png 480w, https://javenjin.github.io/blog/p/setting-black-mode-in-chrome/images/image01_hu_41d7f9e70a3a9469.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;164&#34;
+		data-flex-basis=&#34;395px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;设置Auto Dark Mode for Web Contents的值为Enabled。&lt;/p&gt;
 &lt;p&gt;设置后点击下方Relaunch重启Chrome浏览器即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Setting%20Black%20Mode%20in%20Chrome/setting-blank-mode-in-chrome-2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/setting-black-mode-in-chrome/images/image02.png&#34;
+	width=&#34;1024&#34;
+	height=&#34;737&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/setting-black-mode-in-chrome/images/image02_hu_998f547bf02ef9ee.png 480w, https://javenjin.github.io/blog/p/setting-black-mode-in-chrome/images/image02_hu_30faf5ec2e1a1fd5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;138&#34;
+		data-flex-basis=&#34;333px&#34;
 	
 &gt;&lt;/p&gt;
 </description>
@@ -171,7 +181,7 @@
         <title>Git报错： Failed to connect to github.com port 443</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/git%E6%8A%A5%E9%94%99-failed-to-connect-to-github.com-port-443/</link>
         <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/p/git%E6%8A%A5%E9%94%99-failed-to-connect-to-github.com-port-443/</guid>
         <description>&lt;h1 id=&#34;git报错-failed-to-connect-to-githubcom-port-443&#34;&gt;Git报错： Failed to connect to github.com port 443&lt;/h1&gt;
 &lt;p&gt;出现这个问题主要是代理的问题。&lt;/p&gt;
@@ -246,7 +256,7 @@
         <title>GitHub Actions：定时发送天气邮件</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/github-actions%E5%AE%9A%E6%97%B6%E5%8F%91%E9%80%81%E5%A4%A9%E6%B0%94%E9%82%AE%E4%BB%B6/</link>
         <pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/p/github-actions%E5%AE%9A%E6%97%B6%E5%8F%91%E9%80%81%E5%A4%A9%E6%B0%94%E9%82%AE%E4%BB%B6/</guid>
         <description>&lt;h1 id=&#34;github-actions定时发送天气邮件&#34;&gt;GitHub Actions：定时发送天气邮件&lt;/h1&gt;
 &lt;p&gt;2019年底的时候，GitHub正式开放了&lt;a class=&#34;link&#34; href=&#34;https://github.com/features/actions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -266,12 +276,16 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;上面的命令会返回，当前IP地址的天气。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image01.png&#34;
+	width=&#34;1140&#34;
+	height=&#34;759&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image01_hu_56306b0968cda73b.png 480w, https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image01_hu_e86fa6f6d15abdd.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;我们可以在URL中指定城市。&lt;/p&gt;
@@ -283,12 +297,16 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl wttr.in/Xian
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails2.png&#34;
-	
-	
-	
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image02.png&#34;
+	width=&#34;1139&#34;
+	height=&#34;780&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image02_hu_34b4e74b4b0a62dc.png 480w, https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image02_hu_d36e672bd323c03e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;350px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;返回的数据可以通过&lt;code&gt;curl&lt;/code&gt;命令的&lt;code&gt;-o&lt;/code&gt;参数，保存成文件，以便后面发送。&lt;/p&gt;
@@ -300,12 +318,16 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -o result.html wttr.in/Xian
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails3.png&#34;
-	
-	
-	
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image03.png&#34;
+	width=&#34;1138&#34;
+	height=&#34;919&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image03_hu_1f87842c6e0f081e.png 480w, https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image03_hu_34af42be02874578.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;123&#34;
+		data-flex-basis=&#34;297px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;wttr.in允许定制天气预报的格式和内容，详见&lt;a class=&#34;link&#34; href=&#34;https://github.com/chubin/wttr.in&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -328,7 +350,7 @@
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/sh
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -eux
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;CITY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;Xian
@@ -336,9 +358,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;UNIT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;m
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;Accept-Language: &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$LANGUAGE&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  -o result.html &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  wttr.in/&lt;span class=&#34;nv&#34;&gt;$CITY&lt;/span&gt;?format&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;4&lt;span class=&#34;se&#34;&gt;\&amp;amp;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$UNIT&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;Accept-Language: &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$LANGUAGE&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -o result.html &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  wttr.in/&lt;span class=&#34;nv&#34;&gt;$CITY&lt;/span&gt;?format&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;4&lt;span class=&#34;se&#34;&gt;\&amp;amp;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$UNIT&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;配置发送邮件账户&#34;&gt;配置发送邮件账户&lt;/h2&gt;
@@ -353,23 +375,31 @@
 &lt;p&gt;点击设置，选择设置POP3/SMTP/IMAP&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails4.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image04.png&#34;
+	width=&#34;1085&#34;
+	height=&#34;666&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image04_hu_263832abe10a16dc.png 480w, https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image04_hu_486ab0c009549ff4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;162&#34;
+		data-flex-basis=&#34;390px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;点击新增授权密码，保存好该授权密码&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails5.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image05.png&#34;
+	width=&#34;699&#34;
+	height=&#34;276&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image05_hu_d109c63d770f00b.png 480w, https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image05_hu_75215295ad216f7b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;253&#34;
+		data-flex-basis=&#34;607px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;配置github-actions&#34;&gt;配置GitHub Actions&lt;/h2&gt;
@@ -387,7 +417,7 @@
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;GitHub Action Weather Bot&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;push&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;schedule&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;cron&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;0 0 * * *&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -454,12 +484,16 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;上面代码中，发送邮件使用的是一个已经写好的action，只要配几个参数就可以用。参数之中，邮件SMTP服务器的用户名和密码，使用的是加密变量，需要在项目的&lt;code&gt;settings/secrets&lt;/code&gt;菜单里面设置。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails6.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image06.png&#34;
+	width=&#34;1433&#34;
+	height=&#34;831&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image06_hu_8419eb238ebd8c56.png 480w, https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image06_hu_d180e0e4ee344cf0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;172&#34;
+		data-flex-basis=&#34;413px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/JavenJin/weather-action/blob/main/.github/workflows/weather.yml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -499,12 +533,12 @@
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;GitHub Action Weather Bot&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;push&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;schedule&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;cron&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;0 0 * * *&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;jobs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;jobs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;bot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;runs-on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ubuntu-latest&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;steps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -531,12 +565,16 @@
 &lt;/div&gt;&lt;p&gt;写好配置，推送到仓库以后，就可以每天清早收到一封天气预报邮件了。在这个基础上不难扩展，可以定时执行各种脚本（比如每5分钟检查一次某个网站是否在线），然后将结果发到指定的渠道等等。&lt;/p&gt;
 &lt;h2 id=&#34;成功发送&#34;&gt;成功发送&lt;/h2&gt;
 &lt;p&gt;配置成功后，每天固定时间都会接收到当天的天气邮件。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails7.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image07.png&#34;
+	width=&#34;789&#34;
+	height=&#34;694&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image07_hu_1333675657a2bb50.png 480w, https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image07_hu_cdb27391911ad2ea.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;113&#34;
+		data-flex-basis=&#34;272px&#34;
 	
 &gt;&lt;/p&gt;
 </description>
@@ -545,7 +583,7 @@
         <title>使用WSL2技术在Windows子系统上安装Ubuntu</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/%E4%BD%BF%E7%94%A8wsl2%E6%8A%80%E6%9C%AF%E5%9C%A8windows%E5%AD%90%E7%B3%BB%E7%BB%9F%E4%B8%8A%E5%AE%89%E8%A3%85ubuntu/</link>
         <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/p/%E4%BD%BF%E7%94%A8wsl2%E6%8A%80%E6%9C%AF%E5%9C%A8windows%E5%AD%90%E7%B3%BB%E7%BB%9F%E4%B8%8A%E5%AE%89%E8%A3%85ubuntu/</guid>
         <description>&lt;h1 id=&#34;使用wsl2技术在windows子系统上安装ubuntu&#34;&gt;使用WSL2技术在Windows子系统上安装Ubuntu&lt;/h1&gt;
 &lt;h2 id=&#34;安装wsl2&#34;&gt;安装WSL2&lt;/h2&gt;
@@ -597,47 +635,67 @@
     &gt;https://linuxhostsupport.com/blog/how-to-install-and-configure-docker-compose-on-ubuntu-20-04/&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;打开microsoft-store并选择ubuntu版本进行下载&#34;&gt;打开&lt;a class=&#34;link&#34; href=&#34;https://aka.ms/wslstore&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Microsoft Store&lt;/a&gt;并选择Ubuntu版本进行下载&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image01.png&#34;
+	width=&#34;1210&#34;
+	height=&#34;830&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image01_hu_e7c726021b0e6d8a.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image01_hu_aa9d3036a97393a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;145&#34;
+		data-flex-basis=&#34;349px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image02.png&#34;
+	width=&#34;1219&#34;
+	height=&#34;836&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image02_hu_a7f3e39e09914103.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image02_hu_95d77d60f29bd8eb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;145&#34;
+		data-flex-basis=&#34;349px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;等待自动安装成功&#34;&gt;等待自动安装成功&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-3.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image03.png&#34;
+	width=&#34;1213&#34;
+	height=&#34;833&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image03_hu_5613be8507592f65.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image03_hu_daacdbe7e577d8a8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;145&#34;
+		data-flex-basis=&#34;349px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;启动ubuntu等待自动安装&#34;&gt;启动Ubuntu，等待自动安装&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-4.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image04.png&#34;
+	width=&#34;797&#34;
+	height=&#34;741&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image04_hu_1d4d0d34e79779af.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image04_hu_37cf7085e2597149.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;107&#34;
+		data-flex-basis=&#34;258px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;设置用户名及密码后进入ubuntu系统中&#34;&gt;设置用户名及密码后进入Ubuntu系统中&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-5.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image05.png&#34;
+	width=&#34;990&#34;
+	height=&#34;649&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image05_hu_bf7b900697685762.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image05_hu_283f1184a9c96b65.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;366px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;ubuntu-docker安装&#34;&gt;Ubuntu Docker安装&lt;/h3&gt;
@@ -651,21 +709,29 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo curl -sSL https://get.daocloud.io/docker &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-6.png&#34;
-	
-	
-	
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image06.png&#34;
+	width=&#34;989&#34;
+	height=&#34;647&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image06_hu_e001c806b62c40ff.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image06_hu_544bbd5216f621bd.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;366px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;等待安装成功&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-7.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image07.png&#34;
+	width=&#34;994&#34;
+	height=&#34;650&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image07_hu_26f05c30c9184963.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image07_hu_f93982e5a80116c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;367px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;启动docker服务命令&lt;/p&gt;
@@ -687,12 +753,16 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;显示如下即安装Ubuntu Docker成功&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-8.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image08.png&#34;
+	width=&#34;991&#34;
+	height=&#34;652&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image08_hu_7335ee6a8fe5b2c8.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image08_hu_299ae7e5077863d7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;151&#34;
+		data-flex-basis=&#34;364px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;安装docker-compose&#34;&gt;安装docker-compose&lt;/h3&gt;
@@ -705,12 +775,16 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update -y
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-9.png&#34;
-	
-	
-	
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image09.png&#34;
+	width=&#34;988&#34;
+	height=&#34;648&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image09_hu_5136b040901857c6.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image09_hu_90d410a62b56be85.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;365px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;安装docker-compose命令：&lt;/p&gt;
@@ -722,21 +796,29 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install docker-compose
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-10.png&#34;
-	
-	
-	
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image10.png&#34;
+	width=&#34;988&#34;
+	height=&#34;650&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image10_hu_c0d1e33b2f2677ec.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image10_hu_50da08a6607dace.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;364px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;中途输入y回车即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-11.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image11.png&#34;
+	width=&#34;992&#34;
+	height=&#34;648&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image11_hu_71de1072da4f7692.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image11_hu_b0e4e5a62135ab4e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;153&#34;
+		data-flex-basis=&#34;367px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;安装完成！&lt;/p&gt;
@@ -746,7 +828,7 @@
         <title>REST API Design Rulebook</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/rest-api-design-rulebook/</link>
         <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/p/rest-api-design-rulebook/</guid>
         <description>&lt;h1 id=&#34;rest-api-design-rulebook&#34;&gt;REST API Design Rulebook&lt;/h1&gt;
 &lt;h2 id=&#34;uri-formatrfc-3986&#34;&gt;URI Format(RFC 3986)&lt;/h2&gt;
@@ -1115,34 +1197,34 @@
 &lt;/ol&gt;
 &lt;h2 id=&#34;response-status-codes&#34;&gt;Response Status Codes&lt;/h2&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Category&lt;/th&gt;
-          &lt;th&gt;Description&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;1xx: Informational&lt;/td&gt;
-          &lt;td&gt;Communicates transfer protocol-level information.&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;2xx: Success&lt;/td&gt;
-          &lt;td&gt;Indicates that the client&amp;rsquo;s request was accepted successfully.&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;3xx: Redirection&lt;/td&gt;
-          &lt;td&gt;Indicates that the client must take some additional action in order to complete their request.&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;4xx: Client Error&lt;/td&gt;
-          &lt;td&gt;This category of error status codes points the finger at clients.&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;5xx: Server Error&lt;/td&gt;
-          &lt;td&gt;The server takes responsibility for these error status codes&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Category&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;1xx: Informational&lt;/td&gt;
+					&lt;td&gt;Communicates transfer protocol-level information.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;2xx: Success&lt;/td&gt;
+					&lt;td&gt;Indicates that the client&amp;rsquo;s request was accepted successfully.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;3xx: Redirection&lt;/td&gt;
+					&lt;td&gt;Indicates that the client must take some additional action in order to complete their request.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;4xx: Client Error&lt;/td&gt;
+					&lt;td&gt;This category of error status codes points the finger at clients.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;5xx: Server Error&lt;/td&gt;
+					&lt;td&gt;The server takes responsibility for these error status codes&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;response-status--code-rules&#34;&gt;Response Status  Code Rules&lt;/h2&gt;
 &lt;ol&gt;
@@ -1193,42 +1275,42 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;registered-media-types&#34;&gt;Registered Media Types&lt;/h2&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Registered Media Types&lt;/th&gt;
-          &lt;th&gt;Description&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;text/plain&lt;/td&gt;
-          &lt;td&gt;A plain text format with no specific content structure or markup.&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;text/html&lt;/td&gt;
-          &lt;td&gt;Content that is formatted using the HyperText Markup Language (HTML).&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;image/jpeg&lt;/td&gt;
-          &lt;td&gt;An image compression method that was standardized by the Joint Photographic Experts Group (JEPG).&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;application/xml&lt;/td&gt;
-          &lt;td&gt;Content that is structured using the Extensible Markup Language (XML).&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;application/atom+xml&lt;/td&gt;
-          &lt;td&gt;Content that uses the Atom Syndication Format (Atom), which is an XML-based format that structures data into lists known as feeds.&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;application/javascript&lt;/td&gt;
-          &lt;td&gt;Source code written in the JavaScript programming language.&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;application/json&lt;/td&gt;
-          &lt;td&gt;The JavaScript Object Notation (JSON) text-based format that is often used by programs to exchange structured data.&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Registered Media Types&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;text/plain&lt;/td&gt;
+					&lt;td&gt;A plain text format with no specific content structure or markup.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;text/html&lt;/td&gt;
+					&lt;td&gt;Content that is formatted using the HyperText Markup Language (HTML).&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;image/jpeg&lt;/td&gt;
+					&lt;td&gt;An image compression method that was standardized by the Joint Photographic Experts Group (JEPG).&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;application/xml&lt;/td&gt;
+					&lt;td&gt;Content that is structured using the Extensible Markup Language (XML).&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;application/atom+xml&lt;/td&gt;
+					&lt;td&gt;Content that uses the Atom Syndication Format (Atom), which is an XML-based format that structures data into lists known as feeds.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;application/javascript&lt;/td&gt;
+					&lt;td&gt;Source code written in the JavaScript programming language.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;application/json&lt;/td&gt;
+					&lt;td&gt;The JavaScript Object Notation (JSON) text-based format that is often used by programs to exchange structured data.&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;media-types-rules&#34;&gt;Media Types Rules&lt;/h2&gt;
 &lt;ol&gt;
@@ -1287,7 +1369,7 @@
         <title>Windows批处理脚本（.bat）</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/windows%E6%89%B9%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC.bat/</link>
         <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/p/windows%E6%89%B9%E5%A4%84%E7%90%86%E8%84%9A%E6%9C%AC.bat/</guid>
         <description>&lt;h1 id=&#34;windows批处理脚本bat&#34;&gt;Windows批处理脚本（.bat）&lt;/h1&gt;
 &lt;h2 id=&#34;常用文件操作dos命令&#34;&gt;常用文件操作DOS命令&lt;/h2&gt;
@@ -1330,82 +1412,82 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;变量&#34;&gt;变量&lt;/h2&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;命令&lt;/th&gt;
-          &lt;th&gt;解释&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set var=1&lt;/td&gt;
-          &lt;td&gt;定义变量var并将1复制给a&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set var&lt;/td&gt;
-          &lt;td&gt;查看变量var的值&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set v&lt;/td&gt;
-          &lt;td&gt;查看所有v开头的变量值&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set&lt;/td&gt;
-          &lt;td&gt;查看所有变量的值&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;%var%&lt;/td&gt;
-          &lt;td&gt;var变量的值（内容）&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set /a var=48&lt;/td&gt;
-          &lt;td&gt;将数字48赋给变量var，32位的整数型数值，占用4个字节&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set /p var&lt;/td&gt;
-          &lt;td&gt;用户手动输入值给var&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set /p var=请输入一些文字&lt;/td&gt;
-          &lt;td&gt;用户手动输入值给var，并显示提示文字：“请输入一些文字”&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set var=Hello world!&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;echo %var:o=z%&lt;/td&gt;
-          &lt;td&gt;输出Hello world!不改变var值&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set var2=%var:ld=ms and bugs%&lt;/td&gt;
-          &lt;td&gt;将Hello worms and bugs!赋值给var2不改变var值&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;%var:~m%&lt;/td&gt;
-          &lt;td&gt;数字m为正数表示取变量var中从左侧第m个字符以后的内容 数字m为负数表示取变量var中从右侧数第-m个字符以及其右侧所有字符&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;%var:~m,n%&lt;/td&gt;
-          &lt;td&gt;从m开始，n为正数取n个字符，n为负数取到剩-n个字符为止&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set /a num=48&lt;/td&gt;
-          &lt;td&gt;将数值48赋值给变量num&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set /a result=%num%+12&lt;/td&gt;
-          &lt;td&gt;变量num与12相加的结果赋给变量result&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;echo %result%&lt;/td&gt;
-          &lt;td&gt;显示变量result的值&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;setlocal EnableDelayedExpansion&lt;/td&gt;
-          &lt;td&gt;延迟变量扩充使!var!有意义&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;命令&lt;/th&gt;
+					&lt;th&gt;解释&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set var=1&lt;/td&gt;
+					&lt;td&gt;定义变量var并将1复制给a&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set var&lt;/td&gt;
+					&lt;td&gt;查看变量var的值&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set v&lt;/td&gt;
+					&lt;td&gt;查看所有v开头的变量值&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set&lt;/td&gt;
+					&lt;td&gt;查看所有变量的值&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;%var%&lt;/td&gt;
+					&lt;td&gt;var变量的值（内容）&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set /a var=48&lt;/td&gt;
+					&lt;td&gt;将数字48赋给变量var，32位的整数型数值，占用4个字节&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set /p var&lt;/td&gt;
+					&lt;td&gt;用户手动输入值给var&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set /p var=请输入一些文字&lt;/td&gt;
+					&lt;td&gt;用户手动输入值给var，并显示提示文字：“请输入一些文字”&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set var=Hello world!&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;echo %var:o=z%&lt;/td&gt;
+					&lt;td&gt;输出Hello world!不改变var值&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set var2=%var:ld=ms and bugs%&lt;/td&gt;
+					&lt;td&gt;将Hello worms and bugs!赋值给var2不改变var值&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;%var:~m%&lt;/td&gt;
+					&lt;td&gt;数字m为正数表示取变量var中从左侧第m个字符以后的内容 数字m为负数表示取变量var中从右侧数第-m个字符以及其右侧所有字符&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;%var:~m,n%&lt;/td&gt;
+					&lt;td&gt;从m开始，n为正数取n个字符，n为负数取到剩-n个字符为止&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set /a num=48&lt;/td&gt;
+					&lt;td&gt;将数值48赋值给变量num&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set /a result=%num%+12&lt;/td&gt;
+					&lt;td&gt;变量num与12相加的结果赋给变量result&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;echo %result%&lt;/td&gt;
+					&lt;td&gt;显示变量result的值&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;setlocal EnableDelayedExpansion&lt;/td&gt;
+					&lt;td&gt;延迟变量扩充使!var!有意义&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;传递参数&#34;&gt;传递参数&lt;/h2&gt;
 &lt;p&gt;使用%接收参数 在call或者start或者在cmd中运行批处理文件时后面直接加上参数来传递参数&lt;/p&gt;
@@ -1433,42 +1515,42 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;条件if&#34;&gt;条件IF&lt;/h2&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;符号&lt;/th&gt;
-          &lt;th&gt;意义&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;EQU&lt;/td&gt;
-          &lt;td&gt;相等&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;NEQ&lt;/td&gt;
-          &lt;td&gt;不相等&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;LSS&lt;/td&gt;
-          &lt;td&gt;小于&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;LEQ&lt;/td&gt;
-          &lt;td&gt;小于等于&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;GTR&lt;/td&gt;
-          &lt;td&gt;大于&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;GEQ&lt;/td&gt;
-          &lt;td&gt;大于等于&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;NOT&lt;/td&gt;
-          &lt;td&gt;非&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;符号&lt;/th&gt;
+					&lt;th&gt;意义&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;EQU&lt;/td&gt;
+					&lt;td&gt;相等&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;NEQ&lt;/td&gt;
+					&lt;td&gt;不相等&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;LSS&lt;/td&gt;
+					&lt;td&gt;小于&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;LEQ&lt;/td&gt;
+					&lt;td&gt;小于等于&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GTR&lt;/td&gt;
+					&lt;td&gt;大于&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GEQ&lt;/td&gt;
+					&lt;td&gt;大于等于&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;NOT&lt;/td&gt;
+					&lt;td&gt;非&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;ul&gt;
 &lt;li&gt;if exist	判断文件是否存在&lt;/li&gt;
@@ -1591,81 +1673,113 @@
         <title>Windows 11 允许远程桌面/远程访问</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/windows-11-%E5%85%81%E8%AE%B8%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/</link>
         <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/p/windows-11-%E5%85%81%E8%AE%B8%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/</guid>
         <description>&lt;h1 id=&#34;windows-11-允许远程桌面远程访问&#34;&gt;Windows 11 允许远程桌面/远程访问&lt;/h1&gt;
 &lt;h2 id=&#34;windows-11-允许远程桌面&#34;&gt;Windows 11 允许远程桌面&lt;/h2&gt;
 &lt;h3 id=&#34;打开设置&#34;&gt;打开设置&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image01.png&#34;
+	width=&#34;311&#34;
+	height=&#34;642&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image01_hu_69133c72dd11de5d.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image01_hu_a087a0d325931240.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;搜索remote-desktop&#34;&gt;搜索Remote Desktop&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image02.png&#34;
+	width=&#34;1338&#34;
+	height=&#34;690&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image02_hu_fee5a5570b71d4ba.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image02_hu_b32a1e3c4a4de621.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;465px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;打开remote-desktop&#34;&gt;打开Remote Desktop&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-3.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image03.png&#34;
+	width=&#34;1378&#34;
+	height=&#34;668&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image03_hu_c750ee4a2df80061.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image03_hu_751c1208e22e9d41.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;206&#34;
+		data-flex-basis=&#34;495px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;windows-11-允许远程访问&#34;&gt;Windows 11 允许远程访问&lt;/h2&gt;
 &lt;h3 id=&#34;搜索打开windows-defender-firewall&#34;&gt;搜索打开Windows Defender Firewall&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-4.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image04.png&#34;
+	width=&#34;806&#34;
+	height=&#34;801&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image04_hu_e99b925636e1b1f8.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image04_hu_d59ce239751c6010.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;100&#34;
+		data-flex-basis=&#34;241px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;点击turn-windows-defender-firewall-on-or-off&#34;&gt;点击Turn Windows Defender Firewall on or off&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-5.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image05.png&#34;
+	width=&#34;864&#34;
+	height=&#34;438&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image05_hu_c8ea7bc680c642f4.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image05_hu_5bf3ca5a1f92048a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;197&#34;
+		data-flex-basis=&#34;473px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;将public-network-settings-选择-turn-off-windows-defender-firewall-not-recommended&#34;&gt;将Public network settings 选择 Turn off Windows Defender Firewall (not recommended)&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-6.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image06.png&#34;
+	width=&#34;1142&#34;
+	height=&#34;494&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image06_hu_fc55af9361aab602.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image06_hu_6f7837533d37058a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;231&#34;
+		data-flex-basis=&#34;554px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;点击下方ok保存&#34;&gt;点击下方OK保存&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-7.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image07.png&#34;
+	width=&#34;1138&#34;
+	height=&#34;650&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image07_hu_808eea7be21060ed.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image07_hu_923d01aa9c60d03c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;175&#34;
+		data-flex-basis=&#34;420px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;显示如图即可&#34;&gt;显示如图即可&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-8.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image08.png&#34;
+	width=&#34;1139&#34;
+	height=&#34;647&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image08_hu_a2cc48ce74d0194c.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image08_hu_1917f5f48ad7d106.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;176&#34;
+		data-flex-basis=&#34;422px&#34;
 	
 &gt;&lt;/p&gt;
 </description>
@@ -1674,7 +1788,7 @@
         <title>在VMware上安装CentOS7</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8vmware%E4%B8%8A%E5%AE%89%E8%A3%85centos7/</link>
         <pubDate>Mon, 16 Aug 2021 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8vmware%E4%B8%8A%E5%AE%89%E8%A3%85centos7/</guid>
         <description>&lt;h1 id=&#34;在vmware上安装centos7&#34;&gt;在VMware上安装CentOS7&lt;/h1&gt;
 &lt;h2 id=&#34;安装前准备&#34;&gt;安装前准备&lt;/h2&gt;
@@ -1686,7 +1800,7 @@
 &lt;p&gt;下载CentOS-7-x86_64-DVD-1611.iso镜像文件&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image01.png&#34;
 	
 	
 	
@@ -1696,7 +1810,7 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;安装centos-7&#34;&gt;安装CentOS 7&lt;/h2&gt;
 &lt;h3 id=&#34;打开vmware软件点击创建新的虚拟机打开新建虚拟机向导&#34;&gt;打开VMware软件，点击创建新的虚拟机，打开新建虚拟机向导&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image02.png&#34;
 	
 	
 	
@@ -1705,7 +1819,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;选择自定义高级点击下一步&#34;&gt;选择自定义（高级），点击下一步&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image03.png&#34;
 	
 	
 	
@@ -1714,7 +1828,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;选择workstation-15x点击下一步&#34;&gt;选择Workstation 15.x，点击下一步&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image04.png&#34;
 	
 	
 	
@@ -1723,7 +1837,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;选择稍后安装操作系统点击下一步&#34;&gt;选择稍后安装操作系统，点击下一步&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image05.png&#34;
 	
 	
 	
@@ -1732,7 +1846,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;客户机操作系统选择linux版本选择centos-7-64位点击下一步&#34;&gt;客户机操作系统选择Linux，版本选择CentOS 7 64位，点击下一步&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image06.png&#34;
 	
 	
 	
@@ -1741,7 +1855,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;修改虚拟机名称和虚拟机存储路径后点击下一步&#34;&gt;修改虚拟机名称，和虚拟机存储路径后点击下一步&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-7.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image07.png&#34;
 	
 	
 	
@@ -1750,7 +1864,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;虚拟机处理器数量和内核数量都选择2点击下一步&#34;&gt;虚拟机处理器数量和内核数量都选择2，点击下一步&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-8.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image08.png&#34;
 	
 	
 	
@@ -1759,7 +1873,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;选择虚拟机内存为1gb点击下一步&#34;&gt;选择虚拟机内存为1GB，点击下一步&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-9.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image09.png&#34;
 	
 	
 	
@@ -1768,7 +1882,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;选择使用网络地址转换nat后点击下一步&#34;&gt;选择使用网络地址转换（NAT）后点击下一步&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-10.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image10.png&#34;
 	
 	
 	
@@ -1777,7 +1891,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;选择lsi-logic点击下一步&#34;&gt;选择LSI Logic，点击下一步&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-11.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image11.png&#34;
 	
 	
 	
@@ -1786,7 +1900,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;硬盘类型选择scsi点击下一步&#34;&gt;硬盘类型选择SCSI，点击下一步&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-12.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image12.png&#34;
 	
 	
 	
@@ -1795,7 +1909,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;选择创建新虚拟硬盘点击下一步&#34;&gt;选择创建新虚拟硬盘，点击下一步&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-13.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image13.png&#34;
 	
 	
 	
@@ -1804,7 +1918,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;最大磁盘大侠设置为20g选择将虚拟磁盘拆分成多个文件点击下一步&#34;&gt;最大磁盘大侠设置为20G，选择将虚拟磁盘拆分成多个文件，点击下一步&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-14.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image14.png&#34;
 	
 	
 	
@@ -1813,7 +1927,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;设置磁盘文件名后点击下一步&#34;&gt;设置磁盘文件名后点击下一步&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-15.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image15.png&#34;
 	
 	
 	
@@ -1822,7 +1936,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;点击完成&#34;&gt;点击完成&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-16.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image16.png&#34;
 	
 	
 	
@@ -1831,7 +1945,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;点击编辑虚拟机设置&#34;&gt;点击编辑虚拟机设置&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-17.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image17.png&#34;
 	
 	
 	
@@ -1840,7 +1954,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;左侧选择cddvd选择使用iso映像文件点击浏览选择centos-7-x86_64-dvd-1611iso镜像文件点击确定&#34;&gt;左侧选择CD/DVD，选择使用ISO映像文件，点击浏览，选择CentOS-7-x86_64-DVD-1611.iso镜像文件，点击确定&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-18.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image18.png&#34;
 	
 	
 	
@@ -1849,7 +1963,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;点击开启此虚拟机等待虚拟机启动&#34;&gt;点击开启此虚拟机，等待虚拟机启动&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-19.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image19.png&#34;
 	
 	
 	
@@ -1858,7 +1972,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;使用键盘上下选择install-centos-linux-7回车&#34;&gt;使用键盘上下选择Install CentOS Linux 7回车&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-20.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image20.png&#34;
 	
 	
 	
@@ -1867,7 +1981,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;等待系统自检&#34;&gt;等待系统自检&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-21.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image21.png&#34;
 	
 	
 	
@@ -1876,7 +1990,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;选择中文点击继续&#34;&gt;选择中文，点击继续&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-22.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image22.png&#34;
 	
 	
 	
@@ -1885,7 +1999,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;点击软件选择&#34;&gt;点击软件选择&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-23.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image23.png&#34;
 	
 	
 	
@@ -1894,7 +2008,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;勾选需要的功能这里我只需要最小安装即可点击完成&#34;&gt;勾选需要的功能（这里我只需要最小安装即可），点击完成&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-24.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image24.png&#34;
 	
 	
 	
@@ -1903,7 +2017,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;点击安装位置&#34;&gt;点击安装位置&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-25.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image25.png&#34;
 	
 	
 	
@@ -1912,7 +2026,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;点击完成-1&#34;&gt;点击完成&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-26.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image26.png&#34;
 	
 	
 	
@@ -1921,7 +2035,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;点击开始安装&#34;&gt;点击开始安装&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-27.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image27.png&#34;
 	
 	
 	
@@ -1930,7 +2044,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;点击root密码&#34;&gt;点击ROOT密码&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-28.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image28.png&#34;
 	
 	
 	
@@ -1939,7 +2053,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;设置密码后点击完成&#34;&gt;设置密码后，点击完成&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-29.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image29.png&#34;
 	
 	
 	
@@ -1948,7 +2062,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;由于密码过于简单需二次确认密码再次点击完成&#34;&gt;由于密码过于简单，需二次确认密码，再次点击完成&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-30.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image30.png&#34;
 	
 	
 	
@@ -1957,7 +2071,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;等待系统安装完毕后点击重启即可使用&#34;&gt;等待系统安装完毕后点击重启即可使用&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20CentOS7%20on%20VMware/install-centos7-on-vmware-31.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/images/image31.png&#34;
 	
 	
 	
@@ -1971,158 +2085,222 @@
         <title>在Windows上安装Tomcat8</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85tomcat8/</link>
         <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/p/%E5%9C%A8windows%E4%B8%8A%E5%AE%89%E8%A3%85tomcat8/</guid>
         <description>&lt;h1 id=&#34;在windows上安装tomcat8&#34;&gt;在Windows上安装Tomcat8&lt;/h1&gt;
 &lt;h2 id=&#34;下载安装包&#34;&gt;下载安装包&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;访问Tomcat官网 &lt;a class=&#34;link&#34; href=&#34;https://tomcat.apache.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://tomcat.apache.org/&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image01.png&#34;
+	width=&#34;1295&#34;
+	height=&#34;806&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image01_hu_e5c26b329af1fc2f.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image01_hu_6f68bb4733ef4dd0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;385px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;在左侧Download栏选择下载版本，这里选择的是Tomcat8版本，点击进入&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image02.png&#34;
+	width=&#34;1295&#34;
+	height=&#34;690&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image02_hu_ff967efa51e5b8a0.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image02_hu_92ad499fc1ba5c05.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;187&#34;
+		data-flex-basis=&#34;450px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;根据自己系统版本选择对应版本下载，这里选择的是Windows64位操作系统版本，如图点击下载&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-3.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image03.png&#34;
+	width=&#34;1295&#34;
+	height=&#34;806&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image03_hu_2dadd999f6dbc8c7.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image03_hu_d81eca520e6a8147.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;385px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;安装tomcat8下载的zip包为免安装版解压后可直接使用&#34;&gt;安装Tomcat8（下载的zip包为免安装版，解压后可直接使用）&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;将下载下来的文件解压&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-4.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image04.png&#34;
+	width=&#34;1123&#34;
+	height=&#34;616&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image04_hu_34f0c54c0d66d24a.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image04_hu_4b60504d2616c620.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;437px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;将解压的文件放在D盘&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-5.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image05.png&#34;
+	width=&#34;1123&#34;
+	height=&#34;595&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image05_hu_f206bc4614c011f0.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image05_hu_46acb9e35dfc574c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;452px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;配置环境变量&#34;&gt;配置环境变量&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;在此电脑上右键点击属性，打开设置&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-6.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image06.png&#34;
+	width=&#34;426&#34;
+	height=&#34;400&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image06_hu_5184664ae3db592d.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image06_hu_9eb72ef2a77f47e0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;106&#34;
+		data-flex-basis=&#34;255px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;点击高级系统设置，打开系统属性&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-7.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image07.png&#34;
+	width=&#34;1317&#34;
+	height=&#34;819&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image07_hu_c07b506978e5b8f8.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image07_hu_c89346f796ad402f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;385px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;点击环境变量，打开环境变量&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-8.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image08.png&#34;
+	width=&#34;478&#34;
+	height=&#34;598&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image08_hu_3849597f048c88e.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image08_hu_604bd7382ad7f54a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;79&#34;
+		data-flex-basis=&#34;191px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;选中path，点击编辑，进入编辑path变量页面&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-9.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image09.png&#34;
+	width=&#34;616&#34;
+	height=&#34;660&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image09_hu_7d350527ba4faf13.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image09_hu_26b19431be4e8e91.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;93&#34;
+		data-flex-basis=&#34;224px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;点击新建，输入Tomcat8的安装目录下bin文件夹的目录，点击确定，确定，确定&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-10.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image10.png&#34;
+	width=&#34;526&#34;
+	height=&#34;562&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image10_hu_de9c903430106290.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image10_hu_ce78e75ffe152e81.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;93&#34;
+		data-flex-basis=&#34;224px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;运行命令&#34;&gt;运行命令&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;进入Tomcat8安装目录下bin文件夹中&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-11.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image11.png&#34;
+	width=&#34;1123&#34;
+	height=&#34;594&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image11_hu_c0b7a70afd2d42ea.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image11_hu_b6a7c79bad8fab18.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;189&#34;
+		data-flex-basis=&#34;453px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;点击地址栏，输入cmd，回车，打开命令行窗口&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-12.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image12.png&#34;
+	width=&#34;1123&#34;
+	height=&#34;594&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image12_hu_82d61661d3d33302.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image12_hu_9e46a91df8ecf82e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;189&#34;
+		data-flex-basis=&#34;453px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;在命令行窗口中输入service.bat install后回车&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-13.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image13.png&#34;
+	width=&#34;979&#34;
+	height=&#34;512&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image13_hu_9f7cd082d7f7087c.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image13_hu_6e6350bd5c7c5296.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;191&#34;
+		data-flex-basis=&#34;458px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;显示如图即为安装成功&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;测试是否成功&#34;&gt;测试是否成功&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;双击运行bin文件夹下的Tomcat8w.exe文件，打开启动窗口&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-14.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image14.png&#34;
+	width=&#34;1123&#34;
+	height=&#34;595&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image14_hu_6ede35d29d8508ca.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image14_hu_bd35dfd5c7cbbf3f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;452px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;点击Start启动Tomcat8&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-15.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image15.png&#34;
+	width=&#34;411&#34;
+	height=&#34;509&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image15_hu_f44627757b97d174.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image15_hu_4e2b9ce2bd057e2a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;80&#34;
+		data-flex-basis=&#34;193px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;打开浏览器，输入127.0.0.1:8080访问出现如下画面即为安装成功&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-16.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image16.png&#34;
+	width=&#34;1295&#34;
+	height=&#34;806&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image16_hu_87c3070f18097b87.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image16_hu_38ca3153fdfcd13b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;385px&#34;
 	
 &gt;&lt;/p&gt;
 </description>
@@ -2131,83 +2309,115 @@
         <title>谷歌Chrome浏览器导出密码和导入密码</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/%E8%B0%B7%E6%AD%8Cchrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%BC%E5%87%BA%E5%AF%86%E7%A0%81%E5%92%8C%E5%AF%BC%E5%85%A5%E5%AF%86%E7%A0%81/</link>
         <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%B0%B7%E6%AD%8Cchrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%BC%E5%87%BA%E5%AF%86%E7%A0%81%E5%92%8C%E5%AF%BC%E5%85%A5%E5%AF%86%E7%A0%81/</guid>
         <description>&lt;h1 id=&#34;谷歌chrome浏览器导出密码和导入密码&#34;&gt;谷歌Chrome浏览器导出密码和导入密码&lt;/h1&gt;
 &lt;p&gt;       有时候大家遇到换了新电脑，或者公司需要调整电脑，或者说需要导入别人电脑上谷歌浏览器存的账号密码，发现可以导出密码，但是没有导入密码的选项，就很烦，这里教大家如何导出导入chrome谷歌浏览器的账号密码。&lt;/p&gt;
 &lt;h2 id=&#34;导出账号密码&#34;&gt;导出账号密码&lt;/h2&gt;
 &lt;h3 id=&#34;点击右上角的设置&#34;&gt;点击右上角的设置&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image01.png&#34;
+	width=&#34;464&#34;
+	height=&#34;539&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image01_hu_e041c33092ff9903.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image01_hu_f161693a480a427c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;86&#34;
+		data-flex-basis=&#34;206px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;选择密码&#34;&gt;选择密码&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image02.png&#34;
+	width=&#34;908&#34;
+	height=&#34;727&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image02_hu_56bf14b7b824ccc1.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image02_hu_7caa0645c185c868.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;124&#34;
+		data-flex-basis=&#34;299px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;点击右边的更多操作&#34;&gt;点击右边的更多操作&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password3.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image03.png&#34;
+	width=&#34;910&#34;
+	height=&#34;244&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image03_hu_6f26b9adb40a82bd.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image03_hu_8a6a7d88a3f1a075.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;372&#34;
+		data-flex-basis=&#34;895px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;点击导出密码即可&#34;&gt;点击导出密码即可&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password4.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image04.png&#34;
+	width=&#34;817&#34;
+	height=&#34;213&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image04_hu_5afc1341c46c2e00.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image04_hu_a05c6944ba2663ef.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;383&#34;
+		data-flex-basis=&#34;920px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;导出的密码是csv格式可以用excel查看但仍不方便那么如何导入呢&#34;&gt;导出的密码是csv格式，可以用excel查看，但仍不方便，那么如何导入呢？&lt;/h3&gt;
 &lt;h2 id=&#34;导入账号密码&#34;&gt;导入账号密码&lt;/h2&gt;
 &lt;h3 id=&#34;打开谷歌浏览器在地址栏输入chromeflagspassword-import-export&#34;&gt;打开谷歌浏览器，在地址栏输入chrome://flags/#password-import-export&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password5.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image05.png&#34;
+	width=&#34;1451&#34;
+	height=&#34;874&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image05_hu_5b667e2efa820ee5.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image05_hu_ea3ad9663c53510d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;166&#34;
+		data-flex-basis=&#34;398px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;然后在上面的搜索栏搜索password-import&#34;&gt;然后在上面的搜索栏搜索：password import&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password6.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image06.png&#34;
+	width=&#34;1430&#34;
+	height=&#34;575&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image06_hu_a96b367b882af6e6.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image06_hu_b29679b290074e06.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;248&#34;
+		data-flex-basis=&#34;596px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;然后选择右边的default为enabled并点击下方relaunch刷新浏览器&#34;&gt;然后选择右边的Default为Enabled，并点击下方Relaunch刷新浏览器&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password7.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image07.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1043&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image07_hu_fe706f55115941e9.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image07_hu_ed10c83a70975e8e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;184&#34;
+		data-flex-basis=&#34;441px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;最后重新进入导出密码的地方就可以看到导入的选项啦&#34;&gt;最后重新进入导出密码的地方，就可以看到导入的选项啦&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password8.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image08.png&#34;
+	width=&#34;871&#34;
+	height=&#34;241&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image08_hu_1d95a3a6eec10bf5.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image08_hu_c82a4d0ea8e7603f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;361&#34;
+		data-flex-basis=&#34;867px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;导入自己从别的电脑导出的密码就会发现两台电脑的谷歌浏览器所拥有的密码一样啦&#34;&gt;导入自己从别的电脑导出的密码，就会发现两台电脑的谷歌浏览器所拥有的密码一样啦&lt;/h3&gt;
@@ -2217,72 +2427,100 @@
         <title>切换eclipse后出现菜单栏乱码问题</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/%E5%88%87%E6%8D%A2eclipse%E5%90%8E%E5%87%BA%E7%8E%B0%E8%8F%9C%E5%8D%95%E6%A0%8F%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</link>
         <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/p/%E5%88%87%E6%8D%A2eclipse%E5%90%8E%E5%87%BA%E7%8E%B0%E8%8F%9C%E5%8D%95%E6%A0%8F%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</guid>
         <description>&lt;h1 id=&#34;切换eclipse后出现菜单栏乱码问题&#34;&gt;切换eclipse后出现菜单栏乱码问题&lt;/h1&gt;
 &lt;h2 id=&#34;问题&#34;&gt;问题&lt;/h2&gt;
 &lt;p&gt;今天切换了eclipse的工作目录&lt;/p&gt;
 &lt;p&gt;打开后发现出现了菜单栏乱码问题&lt;/p&gt;
 &lt;p&gt;eclipse打开是这样的：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image01.png&#34;
+	width=&#34;1008&#34;
+	height=&#34;760&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image01_hu_e6fb5fe3b015666c.png 480w, https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image01_hu_b20b9012046e6a28.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;132&#34;
+		data-flex-basis=&#34;318px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image02.png&#34;
+	width=&#34;192&#34;
+	height=&#34;58&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image02_hu_f0423c722fa99b51.png 480w, https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image02_hu_e51a911e56d84264.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;331&#34;
+		data-flex-basis=&#34;794px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem3.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image03.png&#34;
+	width=&#34;919&#34;
+	height=&#34;173&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image03_hu_6823843348e1c815.png 480w, https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image03_hu_53815bc5d72100a6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;531&#34;
+		data-flex-basis=&#34;1274px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;发现菜单栏都变成乱码了&lt;/p&gt;
 &lt;h2 id=&#34;解决办法&#34;&gt;解决办法&lt;/h2&gt;
 &lt;p&gt;解决办法：打开Window - Preferences - General - Appearance&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem4.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image04.png&#34;
+	width=&#34;839&#34;
+	height=&#34;670&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image04_hu_57e201b008056be.png 480w, https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image04_hu_aeb92c3b616cb252.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;125&#34;
+		data-flex-basis=&#34;300px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;修改右边的Theme为Windows Classic&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem5.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image05.png&#34;
+	width=&#34;625&#34;
+	height=&#34;581&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image05_hu_51602e210fa1cb7d.png 480w, https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image05_hu_bade8b4e84687bc4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;107&#34;
+		data-flex-basis=&#34;258px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;然后点Apply或者Apply and Close就好了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem6.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image06.png&#34;
+	width=&#34;674&#34;
+	height=&#34;81&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image06_hu_273a01a290ec791e.png 480w, https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image06_hu_876db43d8068208a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;832&#34;
+		data-flex-basis=&#34;1997px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem7.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image07.png&#34;
+	width=&#34;278&#34;
+	height=&#34;570&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image07_hu_89ff294384435686.png 480w, https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image07_hu_940ebcd181b798a1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;117px&#34;
 	
 &gt;&lt;/p&gt;
 </description>
@@ -2291,76 +2529,100 @@
         <title>eclipse中安装和使用AmaterasUML插件绘制类图</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/eclipse%E4%B8%AD%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8amaterasuml%E6%8F%92%E4%BB%B6%E7%BB%98%E5%88%B6%E7%B1%BB%E5%9B%BE/</link>
         <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/p/eclipse%E4%B8%AD%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8amaterasuml%E6%8F%92%E4%BB%B6%E7%BB%98%E5%88%B6%E7%B1%BB%E5%9B%BE/</guid>
         <description>&lt;h1 id=&#34;eclipse中安装和使用amaterasuml插件绘制类图&#34;&gt;eclipse中安装和使用AmaterasUML插件绘制类图&lt;/h1&gt;
 &lt;h2 id=&#34;安装gef插件&#34;&gt;安装GEF插件&lt;/h2&gt;
 &lt;h3 id=&#34;打开eclipse官网&#34;&gt;打开eclipse官网 &lt;a class=&#34;link&#34; href=&#34;https://www.eclipse.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://www.eclipse.org/&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image01.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;643&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image01_hu_6d4ec4a282b40244.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image01_hu_6aed5ebf320874d7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Open the eclipse website&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;298&#34;
+		data-flex-basis=&#34;716px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;点击projects搜索gef&#34;&gt;点击Projects，搜索GEF&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image02.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;625&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image02_hu_db3368eb7665ffcd.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image02_hu_7a988cbf2c0f7baa.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Search GEF&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;307&#34;
+		data-flex-basis=&#34;737px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;点击右边的download&#34;&gt;点击右边的Download&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams3.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image03.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;712&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image03_hu_8d51723cad462d05.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image03_hu_b7072cbbda2e7261.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Download&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;269&#34;
+		data-flex-basis=&#34;647px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;在弹出的窗口中复制下载地址&#34;&gt;在弹出的窗口中，复制下载地址&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams4.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image04.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;873&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image04_hu_14b09a17c8a51ada.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image04_hu_c21b6945d787572b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Copy download address&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;219&#34;
+		data-flex-basis=&#34;527px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;现在的地址是：http://download.eclipse.org/tools/gef/updates/releases&lt;/p&gt;
 &lt;h3 id=&#34;打开eclipse点击上方help选择install-new-software粘贴复制的地址点击add插件名字可以为空&#34;&gt;打开eclipse，点击上方Help，选择install new software，粘贴复制的地址，点击Add，插件名字可以为空&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams5.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image05.png&#34;
+	width=&#34;1028&#34;
+	height=&#34;866&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image05_hu_b5024bcd43c87fc2.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image05_hu_afac2acdd9faabd6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Add new plugin&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;118&#34;
+		data-flex-basis=&#34;284px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;选择select-all不知道需要那个全部安装也不大然后一直next和accept就好了&#34;&gt;选择Select All（不知道需要那个，全部安装也不大），然后一直Next和accept就好了&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams6.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image06.png&#34;
+	width=&#34;1025&#34;
+	height=&#34;868&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image06_hu_7632d2e26b1d8842.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image06_hu_27cb44a301d17731.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Select Select All&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;118&#34;
+		data-flex-basis=&#34;283px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;安装amaterasuml插件&#34;&gt;安装AmaterasUML插件&lt;/h2&gt;
@@ -2369,49 +2631,69 @@
     &gt;AmaterasUML_1.3.4&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;也可以去官网下载最新版本的AmaterasUML&lt;/p&gt;
 &lt;h3 id=&#34;下载好了之后解压解压出来有3个jar包复制到eclipse安装目录的plugins目录下重启eclipse&#34;&gt;下载好了之后解压，解压出来有3个jar包，复制到eclipse安装目录的plugins目录下，重启eclipse&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams7.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image07.png&#34;
+	width=&#34;1208&#34;
+	height=&#34;437&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image07_hu_d24296a3a5ee0daa.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image07_hu_d30fe2534da59a96.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;276&#34;
+		data-flex-basis=&#34;663px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;通过window-preference可以看到amaterasuml&#34;&gt;通过Window-Preference可以看到AmaterasUML&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams8.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image08.png&#34;
+	width=&#34;921&#34;
+	height=&#34;738&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image08_hu_e4029d5727c7cc07.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image08_hu_1f202f0959c572b3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;124&#34;
+		data-flex-basis=&#34;299px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;amaterasuml的简单使用&#34;&gt;AmaterasUML的简单使用&lt;/h2&gt;
 &lt;h3 id=&#34;右键单击一个工程new-other选择class-diagram然后点击next&#34;&gt;右键单击一个工程，New-Other，选择Class Diagram，然后点击Next&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams9.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image09.png&#34;
+	width=&#34;601&#34;
+	height=&#34;496&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image09_hu_35972d05e395befe.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image09_hu_2fd2b0916a0db58e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;121&#34;
+		data-flex-basis=&#34;290px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;给类图取一个名字然后点击finish&#34;&gt;给类图取一个名字，然后点击Finish&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams10.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image10.png&#34;
+	width=&#34;600&#34;
+	height=&#34;663&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image10_hu_f4231b5c12a2c19a.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image10_hu_e2590e658ee7c7d7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;90&#34;
+		data-flex-basis=&#34;217px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;然后拖动类或接口到界面中类就华丽的出现了&#34;&gt;然后拖动类或接口到界面中，类就华丽的出现了&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams11.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image11.png&#34;
+	width=&#34;1916&#34;
+	height=&#34;830&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image11_hu_1485e7934ba4a198.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image11_hu_837a4a056d071d87.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;230&#34;
+		data-flex-basis=&#34;554px&#34;
 	
 &gt;&lt;/p&gt;
 </description>

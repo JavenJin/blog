@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C (Programming Language)' /><meta property='article:tag' content='Algorithm' /><meta property='article:published_time' content='2020-03-21T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-03-21T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="题目 1629 [算法训练VIP]接水问题 (C语言)">
 <meta name="twitter:description" content="Q 1629 [Algorithm Training VIP]Water connection problems (C Language)">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -485,7 +485,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="n">dm</span><span class="p">[</span><span class="mi">101</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">dm</span><span class="p">[</span><span class="mi">101</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">w</span><span class="p">[</span><span class="mi">10001</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">t</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">bj</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
@@ -500,16 +500,16 @@
 </span></span><span class="line"><span class="cl">		<span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">		<span class="p">{</span>
 </span></span><span class="line"><span class="cl">			<span class="k">if</span><span class="p">(</span><span class="n">dm</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="c1">//若有水龙头 这一单位时间 没使用 则替换 接水者 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">			<span class="p">{</span>
 </span></span><span class="line"><span class="cl">				<span class="k">if</span><span class="p">(</span><span class="n">d</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">)</span><span class="n">dm</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">d</span><span class="o">++</span><span class="p">;</span><span class="c1">//dm[i]  i 代表 水龙头 编号 dm[i]存储 这一单位时间 接水人编号 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="p">}</span>
+</span></span></span><span class="line"><span class="cl">			<span class="p">}</span>
 </span></span><span class="line"><span class="cl">			<span class="k">if</span><span class="p">(</span><span class="n">dm</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span><span class="c1">//水龙头有人接水  本水龙头接水人节水量-1 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">			<span class="p">{</span>
 </span></span><span class="line"><span class="cl">				<span class="n">w</span><span class="p">[</span><span class="n">dm</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">-=</span><span class="mi">1</span><span class="p">;</span> <span class="k">if</span><span class="p">(</span><span class="n">w</span><span class="p">[</span><span class="n">dm</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="n">dm</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">bj</span><span class="o">=</span><span class="mi">1</span><span class="p">;}</span><span class="c1">//这一单位本水龙头接水人接水量为0则空出水龙头
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="p">}</span>
+</span></span></span><span class="line"><span class="cl">			<span class="p">}</span>
 </span></span><span class="line"><span class="cl">			<span class="k">if</span><span class="p">(</span><span class="n">bj</span><span class="o">!=</span><span class="mi">1</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">				<span class="k">break</span><span class="p">;</span> <span class="c1">//bj==1则表示 本次单位时间 有水龙头使用 bj==0则标记本单位时间没水龙头使用则所有过程上一秒已完成   
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="n">bj</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">			<span class="n">bj</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">			<span class="n">t</span><span class="o">++</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">		<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="nf">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
@@ -641,7 +641,7 @@
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

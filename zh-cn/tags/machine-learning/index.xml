@@ -6,11 +6,13 @@
         <description>Recent content in Machine Learning on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
+        <managingEditor>wenjie.jin@hotmail.com (Javen)</managingEditor>
+        <webMaster>wenjie.jin@hotmail.com (Javen)</webMaster>
         <lastBuildDate>Wed, 11 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>机器学习 - 模型评估与选择 &amp; K-means聚类算法实验</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9-k-means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%E5%AE%9E%E9%AA%8C/</link>
         <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9-k-means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%E5%AE%9E%E9%AA%8C/</guid>
         <description>&lt;h2 id=&#34;机器学习---模型评估与选择--k-means聚类算法实验&#34;&gt;机器学习 - 模型评估与选择 &amp;amp; K-means聚类算法实验&lt;/h2&gt;
 &lt;p&gt;Note: 代码仅供参考，根据实际情况做相应的修改，不能完全照搬，否则运行不通！&lt;/p&gt;
@@ -156,14 +158,18 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;k-means聚类的sklearn实现&#34;&gt;K-means聚类的sklearn实现：&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Model%20evaluation%20and%20selection%20%26%20K-means%20clustering%20algorithm/sklearn-implementation-of-k-means-clustering.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-model-evaluation-and-selection-k-means-clustering-algorithm/images/image01.png&#34;
+	width=&#34;554&#34;
+	height=&#34;281&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-model-evaluation-and-selection-k-means-clustering-algorithm/images/image01_hu_44a965e05c8416c4.png 480w, https://javenjin.github.io/blog/p/machine-learning-model-evaluation-and-selection-k-means-clustering-algorithm/images/image01_hu_9ff3bad162e4dcf3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;sklearn implementation of k-means clustering&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;197&#34;
+		data-flex-basis=&#34;473px&#34;
 	
 &gt;&lt;/p&gt;
 </description>
@@ -172,7 +178,7 @@
         <title>机器学习 - 逻辑回归实验</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%AE%9E%E9%AA%8C/</link>
         <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%AE%9E%E9%AA%8C/</guid>
         <description>&lt;h2 id=&#34;机器学习---逻辑回归实验&#34;&gt;机器学习 - 逻辑回归实验&lt;/h2&gt;
 &lt;h3 id=&#34;用scikit-learn和pandas学习logistic回归&#34;&gt;用scikit-learn和pandas学习Logistic回归&lt;/h3&gt;
@@ -224,68 +230,72 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h4 id=&#34;2-查看数据&#34;&gt;2. 查看数据&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image01.png&#34;
+	width=&#34;553&#34;
+	height=&#34;98&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image01_hu_1369677718cea436.png 480w, https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image01_hu_f1e076a9b040fea0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;564&#34;
+		data-flex-basis=&#34;1354px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Data columns (total 12 columns):&lt;/p&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;PassengerId&lt;/td&gt;
-          &lt;td&gt;891 non-null int64&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Pclass&lt;/td&gt;
-          &lt;td&gt;891 non-null int64&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Name&lt;/td&gt;
-          &lt;td&gt;891 non-null object&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Sex&lt;/td&gt;
-          &lt;td&gt;891 non-null object&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Age&lt;/td&gt;
-          &lt;td&gt;714 non-null float64&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;SibSp&lt;/td&gt;
-          &lt;td&gt;891 non-null int64&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Parch&lt;/td&gt;
-          &lt;td&gt;891 non-null int64&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Ticket&lt;/td&gt;
-          &lt;td&gt;891 non-null object&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Fare&lt;/td&gt;
-          &lt;td&gt;891 non-null float64&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Cabin&lt;/td&gt;
-          &lt;td&gt;204 non-null object&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Embarked&lt;/td&gt;
-          &lt;td&gt;889 non-null object&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;&lt;/th&gt;
+					&lt;th&gt;&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;PassengerId&lt;/td&gt;
+					&lt;td&gt;891 non-null int64&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Pclass&lt;/td&gt;
+					&lt;td&gt;891 non-null int64&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Name&lt;/td&gt;
+					&lt;td&gt;891 non-null object&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Sex&lt;/td&gt;
+					&lt;td&gt;891 non-null object&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Age&lt;/td&gt;
+					&lt;td&gt;714 non-null float64&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;SibSp&lt;/td&gt;
+					&lt;td&gt;891 non-null int64&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Parch&lt;/td&gt;
+					&lt;td&gt;891 non-null int64&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Ticket&lt;/td&gt;
+					&lt;td&gt;891 non-null object&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Fare&lt;/td&gt;
+					&lt;td&gt;891 non-null float64&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Cabin&lt;/td&gt;
+					&lt;td&gt;204 non-null object&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Embarked&lt;/td&gt;
+					&lt;td&gt;889 non-null object&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;可以看到，训练集一共包含891个样本，每个样本有12个特征，其中Age、Cabin和Embarked有缺失值。特别是Carbin特征，只有204个样本有值。&lt;/p&gt;
 &lt;p&gt;同理：观察测试集中的缺失值。&lt;/p&gt;
@@ -310,87 +320,123 @@
 &lt;p&gt;Age特征非常重要（逃命时通常女士和小孩优先），因此我们需要对其填充。&lt;/p&gt;
 &lt;p&gt;缺失值的填充方法有:固定值填充、均值/中位数填充、相邻值填充、模型预测填充。&lt;/p&gt;
 &lt;p&gt;此处我们使用均值填充。fillna()函数。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image02.png&#34;
+	width=&#34;554&#34;
+	height=&#34;51&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image02_hu_5dfd2263e779dae7.png 480w, https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image02_hu_6ce6d8bbee3dad95.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1086&#34;
+		data-flex-basis=&#34;2607px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Cabin缺失值较多，我们直接将其舍弃，以免引入较大的噪声。（删某一特征，列）
 用drop()函数。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments3.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image03.png&#34;
+	width=&#34;554&#34;
+	height=&#34;107&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image03_hu_3683dd053c1e7ad5.png 480w, https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image03_hu_4c7b8f327fba445a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;517&#34;
+		data-flex-basis=&#34;1242px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Embarked特征在训练集中只有2个样本有缺失值，因此可以直接将有缺失的样本删除。（删某一样本，行）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments4.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image04.png&#34;
+	width=&#34;511&#34;
+	height=&#34;78&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image04_hu_3acb4650b8eb0ff4.png 480w, https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image04_hu_1d238625696be755.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;655&#34;
+		data-flex-basis=&#34;1572px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;同理，对测试集的缺失值进行处理。&lt;/p&gt;
 &lt;h4 id=&#34;4-特征处理&#34;&gt;4. 特征处理&lt;/h4&gt;
 &lt;p&gt;现在的数据还存在一些问题，如Name特征是文本型，不利于后续处理，我们训练模型时暂时将其舍弃。Ticket特征比较乱，也将其暂时忽略。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments5.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image05.png&#34;
+	width=&#34;553&#34;
+	height=&#34;58&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image05_hu_b0f96024ea59e70.png 480w, https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image05_hu_9c4200af337eb590.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;953&#34;
+		data-flex-basis=&#34;2288px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Pclass特征、Sex特征、Embarked特征都是类别型，一般需要将其进行one-hot编码。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments6.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image06.png&#34;
+	width=&#34;553&#34;
+	height=&#34;98&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image06_hu_14159e4055dfbd9b.png 480w, https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image06_hu_9c296a924488c37a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;564&#34;
+		data-flex-basis=&#34;1354px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Age特征、SibSp特征、Parch特征和Fare特征为数值型，取值变化范围较大，一般先将其标准化或归一化。&lt;/p&gt;
 &lt;p&gt;标准化使用preprocessing.StandardScaler类库中的fit()函数和fit_transform()函数。&lt;/p&gt;
 &lt;p&gt;fit()用于计算训练数据的均值和方差， 后面就会用均值和方差来转换训练数据。&lt;/p&gt;
 &lt;p&gt;fit_transform()不仅计算训练数据的均值和方差，还会基于计算出来的均值和方差来转换训练数据，从而把数据转换成标准的正太分布。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments7.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image07.png&#34;
+	width=&#34;521&#34;
+	height=&#34;95&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image07_hu_9e4f0b640421a111.png 480w, https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image07_hu_d18eaf207aa46924.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;548&#34;
+		data-flex-basis=&#34;1316px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments8.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image08.png&#34;
+	width=&#34;615&#34;
+	height=&#34;148&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image08_hu_ee1095031052be48.png 480w, https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image08_hu_72f500e2f8849791.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;415&#34;
+		data-flex-basis=&#34;997px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments9.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image09.png&#34;
+	width=&#34;619&#34;
+	height=&#34;290&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image09_hu_78e7e869587c5f00.png 480w, https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image09_hu_861290ede6ca1370.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;213&#34;
+		data-flex-basis=&#34;512px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments10.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image10.png&#34;
+	width=&#34;595&#34;
+	height=&#34;70&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image10_hu_455d0abf5e8f37eb.png 480w, https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image10_hu_4d9fde8d71edd994.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;850&#34;
+		data-flex-basis=&#34;2040px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;5-模型训练&#34;&gt;5. 模型训练&lt;/h4&gt;
@@ -424,60 +470,88 @@
 &lt;p&gt;（4）训练模型。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;fit()函数。&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;（5）在验证集上验证，评估性能。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments11.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image11.png&#34;
+	width=&#34;486&#34;
+	height=&#34;146&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image11_hu_aebb73622e5d8338.png 480w, https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image11_hu_4649ebb874accb78.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;332&#34;
+		data-flex-basis=&#34;798px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments12.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image12.png&#34;
+	width=&#34;553&#34;
+	height=&#34;141&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image12_hu_ad9b79540681e242.png 480w, https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image12_hu_afe7341f5c722a55.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;392&#34;
+		data-flex-basis=&#34;941px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments13.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image13.png&#34;
+	width=&#34;554&#34;
+	height=&#34;143&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image13_hu_e6187909aa88a00e.png 480w, https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image13_hu_b3985082548e9c90.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;387&#34;
+		data-flex-basis=&#34;929px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments14.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image14.png&#34;
+	width=&#34;553&#34;
+	height=&#34;81&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image14_hu_40143627677746ea.png 480w, https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image14_hu_5bda4dc8032554ca.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;682&#34;
+		data-flex-basis=&#34;1638px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments15.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image15.png&#34;
+	width=&#34;553&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image15_hu_9578a4807e4a9491.png 480w, https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image15_hu_f8511fc5817e0d09.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;700&#34;
+		data-flex-basis=&#34;1680px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments16.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image16.png&#34;
+	width=&#34;554&#34;
+	height=&#34;96&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image16_hu_75813eed11b8a89a.png 480w, https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image16_hu_7ee26c21fb06201f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;577&#34;
+		data-flex-basis=&#34;1385px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments17.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image17.png&#34;
+	width=&#34;514&#34;
+	height=&#34;378&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image17_hu_59ec1a6739e0a13f.png 480w, https://javenjin.github.io/blog/p/machine-learning-logistic-regression-experiments/images/image17_hu_5d7265e843010352.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;135&#34;
+		data-flex-basis=&#34;326px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;模型已经训练好，并且性能还不错，可以拿来进行预测了。&lt;/p&gt;
@@ -742,7 +816,7 @@
         <title>机器学习 - 贝叶斯分类实验</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%AE%9E%E9%AA%8C/</link>
         <pubDate>Mon, 04 Nov 2019 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%AE%9E%E9%AA%8C/</guid>
         <description>&lt;h2 id=&#34;机器学习---贝叶斯分类实验&#34;&gt;机器学习 - 贝叶斯分类实验&lt;/h2&gt;
 &lt;h3 id=&#34;1-中文文本分类介绍&#34;&gt;1. 中文文本分类介绍&lt;/h3&gt;
@@ -763,12 +837,16 @@
 &lt;p&gt;中文分词和英文分词对比，中文分词难点：没有形式上的分界符。（英文用空格区分单词）&lt;/p&gt;
 &lt;p&gt;（3）构建词向量空间：统计文本词频，生成文本的词向量空间。&lt;/p&gt;
 &lt;p&gt;词映射到向量空间。余弦相似度。“快乐”、“高兴”、“悲伤”三个向量的余弦？&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image01.png&#34;
+	width=&#34;235&#34;
+	height=&#34;131&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image01_hu_1694e37ed8052cbc.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image01_hu_f5cec668cc5aa4f3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;179&#34;
+		data-flex-basis=&#34;430px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;余弦相似度用向量空间中两个向量夹角的余弦值作为衡量两个个体间差异的大小。余弦值越接近1，就表明夹角越接近0度，也就是两个向量越相似，这就叫&amp;quot;余弦相似性&amp;quot;。&lt;/p&gt;
@@ -793,212 +871,316 @@
 &lt;p&gt;from sklearn.metrics import classification_report&lt;/p&gt;
 &lt;p&gt;from sklearn.metrics import classification accuracy_score&lt;/p&gt;
 &lt;h3 id=&#34;4-实验步骤&#34;&gt;4. 实验步骤&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image02.png&#34;
+	width=&#34;679&#34;
+	height=&#34;445&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image02_hu_dbce89a46512d336.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image02_hu_33eef86b2f21285b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;366px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments3.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image03.png&#34;
+	width=&#34;677&#34;
+	height=&#34;1034&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image03_hu_74c0a36608abded1.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image03_hu_ce36dd453ed8ac51.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;65&#34;
+		data-flex-basis=&#34;157px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments4.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image04.png&#34;
+	width=&#34;677&#34;
+	height=&#34;1034&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image04_hu_67c0af5d3035e9d6.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image04_hu_5acef1e075c09784.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;65&#34;
+		data-flex-basis=&#34;157px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments5.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image05.png&#34;
+	width=&#34;1203&#34;
+	height=&#34;45&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image05_hu_82a6279269717ab3.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image05_hu_ff97fc3bd448403f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;2673&#34;
+		data-flex-basis=&#34;6416px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments6.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image06.png&#34;
+	width=&#34;1194&#34;
+	height=&#34;241&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image06_hu_bb734309136bf7f.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image06_hu_f3a411d4cbd20a4e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;495&#34;
+		data-flex-basis=&#34;1189px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments7.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image07.png&#34;
+	width=&#34;1199&#34;
+	height=&#34;322&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image07_hu_39946b41da36c973.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image07_hu_b911f8263c50687a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;372&#34;
+		data-flex-basis=&#34;893px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments8.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image08.png&#34;
+	width=&#34;1204&#34;
+	height=&#34;251&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image08_hu_bf66da72a2e1e2cf.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image08_hu_1908c0230e2afff0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;479&#34;
+		data-flex-basis=&#34;1151px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments9.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image09.png&#34;
+	width=&#34;1216&#34;
+	height=&#34;250&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image09_hu_e938507951cca047.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image09_hu_6da3809141cdd13.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;486&#34;
+		data-flex-basis=&#34;1167px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments10.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image10.png&#34;
+	width=&#34;1202&#34;
+	height=&#34;189&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image10_hu_cc794abcf6b1ea03.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image10_hu_9a5b4aaff221c60d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;635&#34;
+		data-flex-basis=&#34;1526px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments11.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image11.png&#34;
+	width=&#34;1206&#34;
+	height=&#34;485&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image11_hu_a81b478d207bd5c3.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image11_hu_7b34d456fe4f6aec.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;248&#34;
+		data-flex-basis=&#34;596px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments12.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image12.png&#34;
+	width=&#34;1212&#34;
+	height=&#34;588&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image12_hu_9bba10d9602e68d6.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image12_hu_2d194e37c1a6a04d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;206&#34;
+		data-flex-basis=&#34;494px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments13.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image13.png&#34;
+	width=&#34;1206&#34;
+	height=&#34;302&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image13_hu_b65e43fd29a27a05.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image13_hu_117c9e37dc915cc2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;399&#34;
+		data-flex-basis=&#34;958px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments14.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image14.png&#34;
+	width=&#34;1207&#34;
+	height=&#34;476&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image14_hu_7b96ad191561e59e.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image14_hu_c1f0d8c92a7ffc3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;253&#34;
+		data-flex-basis=&#34;608px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments15.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image15.png&#34;
+	width=&#34;1208&#34;
+	height=&#34;187&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image15_hu_be93378b84daf40c.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image15_hu_c0dfdeb5d4f50856.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;645&#34;
+		data-flex-basis=&#34;1550px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments16.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image16.png&#34;
+	width=&#34;1209&#34;
+	height=&#34;312&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image16_hu_464ddfd9bef017c3.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image16_hu_2ab6e3dbe73417b8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;387&#34;
+		data-flex-basis=&#34;930px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments17.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image17.png&#34;
+	width=&#34;1200&#34;
+	height=&#34;335&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image17_hu_7569c40ab8560e1f.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image17_hu_10554e7237de5f05.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;358&#34;
+		data-flex-basis=&#34;859px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments18.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image18.png&#34;
+	width=&#34;1212&#34;
+	height=&#34;370&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image18_hu_128460ae42d8d0d8.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image18_hu_ac1d1eee6e46be0e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;327&#34;
+		data-flex-basis=&#34;786px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments19.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image19.png&#34;
+	width=&#34;1202&#34;
+	height=&#34;385&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image19_hu_86fb62af33246b57.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image19_hu_33509f899c0cb96c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;312&#34;
+		data-flex-basis=&#34;749px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments20.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image20.png&#34;
+	width=&#34;1218&#34;
+	height=&#34;368&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image20_hu_da3adc848ff87b21.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image20_hu_c454205d9a4e82ce.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;330&#34;
+		data-flex-basis=&#34;794px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments21.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image21.png&#34;
+	width=&#34;1214&#34;
+	height=&#34;444&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image21_hu_a1e0b95353842a4e.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image21_hu_77eccd9cd6ffd71.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;273&#34;
+		data-flex-basis=&#34;656px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments22.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image22.png&#34;
+	width=&#34;1212&#34;
+	height=&#34;290&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image22_hu_beb28bf90aea665b.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image22_hu_b6f9489820d860a6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;417&#34;
+		data-flex-basis=&#34;1003px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments23.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image23.png&#34;
+	width=&#34;1215&#34;
+	height=&#34;379&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image23_hu_ddbe47a8c0fd2fc6.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image23_hu_fc7582394fc58b72.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;320&#34;
+		data-flex-basis=&#34;769px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments24.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image24.png&#34;
+	width=&#34;1217&#34;
+	height=&#34;371&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image24_hu_ed8adcd9d793320c.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image24_hu_8ce4776007bc41bb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;328&#34;
+		data-flex-basis=&#34;787px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments25.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image25.png&#34;
+	width=&#34;1219&#34;
+	height=&#34;217&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image25_hu_70341df720cf22de.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image25_hu_e63106efb55bf20a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;561&#34;
+		data-flex-basis=&#34;1348px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments26.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image26.png&#34;
+	width=&#34;1218&#34;
+	height=&#34;460&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image26_hu_bfb48581dc0466a7.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image26_hu_e4ffd72e339ad0e7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;264&#34;
+		data-flex-basis=&#34;635px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments27.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image27.png&#34;
+	width=&#34;1203&#34;
+	height=&#34;323&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image27_hu_2e36e637984e4ae1.png 480w, https://javenjin.github.io/blog/p/machine-learning-bayesian-classification-experiments/images/image27_hu_dc0b8db3d5038b42.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;372&#34;
+		data-flex-basis=&#34;893px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;5-实验完整代码python&#34;&gt;5. 实验完整代码python&lt;/h3&gt;
@@ -1598,7 +1780,7 @@
         <title>机器学习 - 线性回归实验</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%AE%9E%E9%AA%8C/</link>
         <pubDate>Mon, 21 Oct 2019 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%AE%9E%E9%AA%8C/</guid>
         <description>&lt;h2 id=&#34;机器学习---线性回归实验&#34;&gt;机器学习 - 线性回归实验&lt;/h2&gt;
 &lt;h3 id=&#34;用scikit-learn和pandas学习线性回归&#34;&gt;用scikit-learn和pandas学习线性回归&lt;/h3&gt;
@@ -1606,14 +1788,18 @@
 &lt;p&gt;我们用UCI大学公开的机器学习数据来跑线性回归。&lt;/p&gt;
 &lt;p&gt;数据的下载地址在这里：&lt;a class=&#34;link&#34; href=&#34;https://archive.ics.uci.edu/ml/datasets/combined&amp;#43;cycle&amp;#43;power&amp;#43;plant&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://archive.ics.uci.edu/ml/datasets/combined+cycle+power+plant&lt;/a&gt; 下载后的数据可以发现是一个压缩文件，解压后有一个xlsx文件，用excel打开，另存为csv格式，之后用这个csv格式的文件来运行线性回归。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/images/image01.png&#34;
+	width=&#34;1167&#34;
+	height=&#34;138&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/images/image01_hu_3673ad849b3a9033.png 480w, https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/images/image01_hu_86429a6afd2bdd7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;linear regression experiments&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;845&#34;
+		data-flex-basis=&#34;2029px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;这是一个循环发电场数据，共有9568个样本数据，每个数据有5列：$AT$（温度）、$V$（压力）、$AP$（湿度）、$RH$（压强）、$PE$（输出电力）。我们不用纠结于每项的具体意义。&lt;/p&gt;
@@ -1685,24 +1871,32 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;scatter_matrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments2.png&#34;
-	
-	
-	
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/images/image02.png&#34;
+	width=&#34;843&#34;
+	height=&#34;479&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/images/image02_hu_a927fe26390b8a53.png 480w, https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/images/image02_hu_8476cf2439a8c8e1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;2.6数据可视化，直方图显示&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;175&#34;
+		data-flex-basis=&#34;422px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments3.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/images/image03.png&#34;
+	width=&#34;760&#34;
+	height=&#34;794&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/images/image03_hu_4b5c68ebd4a2dec2.png 480w, https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/images/image03_hu_5ea69316d13afe14.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;2.7散点矩阵图&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;95&#34;
+		data-flex-basis=&#34;229px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;3-准备数据&#34;&gt;3. 准备数据&lt;/h4&gt;
@@ -1718,14 +1912,18 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments4.png&#34;
-	
-	
-	
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/images/image04.png&#34;
+	width=&#34;345&#34;
+	height=&#34;251&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/images/image04_hu_1d257791bd703d1f.png 480w, https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/images/image04_hu_9553f5b7922074f4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;准备数据&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;137&#34;
+		data-flex-basis=&#34;329px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;准备样本输出$y$，我们用$PE$作为样本输出。&lt;/p&gt;
@@ -1929,14 +2127,18 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;RMSE:&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;np&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sqrt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;metrics&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mean_squared_error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;predicted&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments5.png&#34;
-	
-	
-	
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/images/image05.png&#34;
+	width=&#34;561&#34;
+	height=&#34;182&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/images/image05_hu_92d9df5f44346d80.png 480w, https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/images/image05_hu_75041386b37fc495.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;交叉验证10折交叉验证&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;308&#34;
+		data-flex-basis=&#34;739px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;6-画图观察结果&#34;&gt;6. 画图观察结果&lt;/h4&gt;
@@ -1961,14 +2163,18 @@ $$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments6.png&#34;
-	
-	
-	
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/images/image06.png&#34;
+	width=&#34;486&#34;
+	height=&#34;400&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/images/image06_hu_20c217e66f329cb.png 480w, https://javenjin.github.io/blog/p/machine-learning-linear-regression-experiments/images/image06_hu_791240b9034bc10c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;画图观察结果&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;121&#34;
+		data-flex-basis=&#34;291px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;7-python程序完整源代码&#34;&gt;7. python程序完整源代码&lt;/h4&gt;

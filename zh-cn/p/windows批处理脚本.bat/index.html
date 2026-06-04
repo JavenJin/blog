@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Tools' /><meta property='article:published_time' content='2022-05-17T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-05-17T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Windows批处理脚本（.bat）">
 <meta name="twitter:description" content="Windows batch scripts(.bat)">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -450,82 +450,82 @@
 </ul>
 <h2 id="变量">变量</h2>
 <div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>命令</th>
-          <th>解释</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>set var=1</td>
-          <td>定义变量var并将1复制给a</td>
-      </tr>
-      <tr>
-          <td>set var</td>
-          <td>查看变量var的值</td>
-      </tr>
-      <tr>
-          <td>set v</td>
-          <td>查看所有v开头的变量值</td>
-      </tr>
-      <tr>
-          <td>set</td>
-          <td>查看所有变量的值</td>
-      </tr>
-      <tr>
-          <td>%var%</td>
-          <td>var变量的值（内容）</td>
-      </tr>
-      <tr>
-          <td>set /a var=48</td>
-          <td>将数字48赋给变量var，32位的整数型数值，占用4个字节</td>
-      </tr>
-      <tr>
-          <td>set /p var</td>
-          <td>用户手动输入值给var</td>
-      </tr>
-      <tr>
-          <td>set /p var=请输入一些文字</td>
-          <td>用户手动输入值给var，并显示提示文字：“请输入一些文字”</td>
-      </tr>
-      <tr>
-          <td>set var=Hello world!</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>echo %var:o=z%</td>
-          <td>输出Hello world!不改变var值</td>
-      </tr>
-      <tr>
-          <td>set var2=%var:ld=ms and bugs%</td>
-          <td>将Hello worms and bugs!赋值给var2不改变var值</td>
-      </tr>
-      <tr>
-          <td>%var:~m%</td>
-          <td>数字m为正数表示取变量var中从左侧第m个字符以后的内容 数字m为负数表示取变量var中从右侧数第-m个字符以及其右侧所有字符</td>
-      </tr>
-      <tr>
-          <td>%var:~m,n%</td>
-          <td>从m开始，n为正数取n个字符，n为负数取到剩-n个字符为止</td>
-      </tr>
-      <tr>
-          <td>set /a num=48</td>
-          <td>将数值48赋值给变量num</td>
-      </tr>
-      <tr>
-          <td>set /a result=%num%+12</td>
-          <td>变量num与12相加的结果赋给变量result</td>
-      </tr>
-      <tr>
-          <td>echo %result%</td>
-          <td>显示变量result的值</td>
-      </tr>
-      <tr>
-          <td>setlocal EnableDelayedExpansion</td>
-          <td>延迟变量扩充使!var!有意义</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>命令</th>
+					<th>解释</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>set var=1</td>
+					<td>定义变量var并将1复制给a</td>
+			</tr>
+			<tr>
+					<td>set var</td>
+					<td>查看变量var的值</td>
+			</tr>
+			<tr>
+					<td>set v</td>
+					<td>查看所有v开头的变量值</td>
+			</tr>
+			<tr>
+					<td>set</td>
+					<td>查看所有变量的值</td>
+			</tr>
+			<tr>
+					<td>%var%</td>
+					<td>var变量的值（内容）</td>
+			</tr>
+			<tr>
+					<td>set /a var=48</td>
+					<td>将数字48赋给变量var，32位的整数型数值，占用4个字节</td>
+			</tr>
+			<tr>
+					<td>set /p var</td>
+					<td>用户手动输入值给var</td>
+			</tr>
+			<tr>
+					<td>set /p var=请输入一些文字</td>
+					<td>用户手动输入值给var，并显示提示文字：“请输入一些文字”</td>
+			</tr>
+			<tr>
+					<td>set var=Hello world!</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>echo %var:o=z%</td>
+					<td>输出Hello world!不改变var值</td>
+			</tr>
+			<tr>
+					<td>set var2=%var:ld=ms and bugs%</td>
+					<td>将Hello worms and bugs!赋值给var2不改变var值</td>
+			</tr>
+			<tr>
+					<td>%var:~m%</td>
+					<td>数字m为正数表示取变量var中从左侧第m个字符以后的内容 数字m为负数表示取变量var中从右侧数第-m个字符以及其右侧所有字符</td>
+			</tr>
+			<tr>
+					<td>%var:~m,n%</td>
+					<td>从m开始，n为正数取n个字符，n为负数取到剩-n个字符为止</td>
+			</tr>
+			<tr>
+					<td>set /a num=48</td>
+					<td>将数值48赋值给变量num</td>
+			</tr>
+			<tr>
+					<td>set /a result=%num%+12</td>
+					<td>变量num与12相加的结果赋给变量result</td>
+			</tr>
+			<tr>
+					<td>echo %result%</td>
+					<td>显示变量result的值</td>
+			</tr>
+			<tr>
+					<td>setlocal EnableDelayedExpansion</td>
+					<td>延迟变量扩充使!var!有意义</td>
+			</tr>
+	</tbody>
 </table></div>
 <h2 id="传递参数">传递参数</h2>
 <p>使用%接收参数 在call或者start或者在cmd中运行批处理文件时后面直接加上参数来传递参数</p>
@@ -553,42 +553,42 @@
 </div>
 </div><h2 id="条件if">条件IF</h2>
 <div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>符号</th>
-          <th>意义</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>EQU</td>
-          <td>相等</td>
-      </tr>
-      <tr>
-          <td>NEQ</td>
-          <td>不相等</td>
-      </tr>
-      <tr>
-          <td>LSS</td>
-          <td>小于</td>
-      </tr>
-      <tr>
-          <td>LEQ</td>
-          <td>小于等于</td>
-      </tr>
-      <tr>
-          <td>GTR</td>
-          <td>大于</td>
-      </tr>
-      <tr>
-          <td>GEQ</td>
-          <td>大于等于</td>
-      </tr>
-      <tr>
-          <td>NOT</td>
-          <td>非</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>符号</th>
+					<th>意义</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>EQU</td>
+					<td>相等</td>
+			</tr>
+			<tr>
+					<td>NEQ</td>
+					<td>不相等</td>
+			</tr>
+			<tr>
+					<td>LSS</td>
+					<td>小于</td>
+			</tr>
+			<tr>
+					<td>LEQ</td>
+					<td>小于等于</td>
+			</tr>
+			<tr>
+					<td>GTR</td>
+					<td>大于</td>
+			</tr>
+			<tr>
+					<td>GEQ</td>
+					<td>大于等于</td>
+			</tr>
+			<tr>
+					<td>NOT</td>
+					<td>非</td>
+			</tr>
+	</tbody>
 </table></div>
 <ul>
 <li>if exist	判断文件是否存在</li>
@@ -825,7 +825,7 @@
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Tools' /><meta property='article:published_time' content='2023-11-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-11-28T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="GitHub Actions：定时发送天气邮件">
 <meta name="twitter:description" content="GitHub Actions (Sending Timed Weather Emails)">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -423,12 +423,16 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>上面的命令会返回，当前IP地址的天气。</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails1.png"
-	
-	
-	
+<p><img src="/blog/p/github-actions-sending-timed-weather-emails/images/image01.png"
+	width="1140"
+	height="759"
+	srcset="/blog/p/github-actions-sending-timed-weather-emails/images/image01_hu_56306b0968cda73b.png 480w, /blog/p/github-actions-sending-timed-weather-emails/images/image01_hu_e86fa6f6d15abdd.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="150"
+		data-flex-basis="360px"
 	
 ></p>
 <p>我们可以在URL中指定城市。</p>
@@ -440,12 +444,16 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl wttr.in/Xian
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails2.png"
-	
-	
-	
+</div><p><img src="/blog/p/github-actions-sending-timed-weather-emails/images/image02.png"
+	width="1139"
+	height="780"
+	srcset="/blog/p/github-actions-sending-timed-weather-emails/images/image02_hu_34b4e74b4b0a62dc.png 480w, /blog/p/github-actions-sending-timed-weather-emails/images/image02_hu_d36e672bd323c03e.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="350px"
 	
 ></p>
 <p>返回的数据可以通过<code>curl</code>命令的<code>-o</code>参数，保存成文件，以便后面发送。</p>
@@ -457,12 +465,16 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -o result.html wttr.in/Xian
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails3.png"
-	
-	
-	
+</div><p><img src="/blog/p/github-actions-sending-timed-weather-emails/images/image03.png"
+	width="1138"
+	height="919"
+	srcset="/blog/p/github-actions-sending-timed-weather-emails/images/image03_hu_1f87842c6e0f081e.png 480w, /blog/p/github-actions-sending-timed-weather-emails/images/image03_hu_34af42be02874578.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="123"
+		data-flex-basis="297px"
 	
 ></p>
 <p>wttr.in允许定制天气预报的格式和内容，详见<a class="link" href="https://github.com/chubin/wttr.in"  target="_blank" rel="noopener"
@@ -485,7 +497,7 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/sh
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nb">set</span> -eux
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nv">CITY</span><span class="o">=</span>Xian
@@ -493,9 +505,9 @@
 </span></span><span class="line"><span class="cl"><span class="nv">UNIT</span><span class="o">=</span>m
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">curl <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -H <span class="s2">&#34;Accept-Language: </span><span class="nv">$LANGUAGE</span><span class="s2">&#34;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  -o result.html <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>  wttr.in/<span class="nv">$CITY</span>?format<span class="o">=</span>4<span class="se">\&amp;</span><span class="nv">$UNIT</span>
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Accept-Language: </span><span class="nv">$LANGUAGE</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -o result.html <span class="se">\
+</span></span></span><span class="line"><span class="cl">  wttr.in/<span class="nv">$CITY</span>?format<span class="o">=</span>4<span class="se">\&amp;</span><span class="nv">$UNIT</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="配置发送邮件账户">配置发送邮件账户</h2>
@@ -510,23 +522,31 @@
 <p>点击设置，选择设置POP3/SMTP/IMAP</p>
 </li>
 </ol>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails4.png"
-	
-	
-	
+<p><img src="/blog/p/github-actions-sending-timed-weather-emails/images/image04.png"
+	width="1085"
+	height="666"
+	srcset="/blog/p/github-actions-sending-timed-weather-emails/images/image04_hu_263832abe10a16dc.png 480w, /blog/p/github-actions-sending-timed-weather-emails/images/image04_hu_486ab0c009549ff4.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="162"
+		data-flex-basis="390px"
 	
 ></p>
 <ol start="3">
 <li>点击新增授权密码，保存好该授权密码</li>
 </ol>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails5.png"
-	
-	
-	
+<p><img src="/blog/p/github-actions-sending-timed-weather-emails/images/image05.png"
+	width="699"
+	height="276"
+	srcset="/blog/p/github-actions-sending-timed-weather-emails/images/image05_hu_d109c63d770f00b.png 480w, /blog/p/github-actions-sending-timed-weather-emails/images/image05_hu_75215295ad216f7b.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="253"
+		data-flex-basis="607px"
 	
 ></p>
 <h2 id="配置github-actions">配置GitHub Actions</h2>
@@ -544,7 +564,7 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;GitHub Action Weather Bot&#39;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">on</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">schedule</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">cron</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;0 0 * * *&#39;</span><span class="w">
@@ -611,12 +631,16 @@
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>上面代码中，发送邮件使用的是一个已经写好的action，只要配几个参数就可以用。参数之中，邮件SMTP服务器的用户名和密码，使用的是加密变量，需要在项目的<code>settings/secrets</code>菜单里面设置。</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails6.png"
-	
-	
-	
+<p><img src="/blog/p/github-actions-sending-timed-weather-emails/images/image06.png"
+	width="1433"
+	height="831"
+	srcset="/blog/p/github-actions-sending-timed-weather-emails/images/image06_hu_8419eb238ebd8c56.png 480w, /blog/p/github-actions-sending-timed-weather-emails/images/image06_hu_d180e0e4ee344cf0.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="172"
+		data-flex-basis="413px"
 	
 ></p>
 <p><a class="link" href="https://github.com/JavenJin/weather-action/blob/main/.github/workflows/weather.yml"  target="_blank" rel="noopener"
@@ -656,12 +680,12 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;GitHub Action Weather Bot&#39;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">on</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">schedule</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">cron</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;0 0 * * *&#39;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">jobs</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">bot</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
@@ -688,12 +712,16 @@
 </div><p>写好配置，推送到仓库以后，就可以每天清早收到一封天气预报邮件了。在这个基础上不难扩展，可以定时执行各种脚本（比如每5分钟检查一次某个网站是否在线），然后将结果发到指定的渠道等等。</p>
 <h2 id="成功发送">成功发送</h2>
 <p>配置成功后，每天固定时间都会接收到当天的天气邮件。</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails7.png"
-	
-	
-	
+<p><img src="/blog/p/github-actions-sending-timed-weather-emails/images/image07.png"
+	width="789"
+	height="694"
+	srcset="/blog/p/github-actions-sending-timed-weather-emails/images/image07_hu_1333675657a2bb50.png 480w, /blog/p/github-actions-sending-timed-weather-emails/images/image07_hu_cdb27391911ad2ea.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="113"
+		data-flex-basis="272px"
 	
 ></p>
 
@@ -816,7 +844,7 @@
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

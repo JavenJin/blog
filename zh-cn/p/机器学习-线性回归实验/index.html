@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Machine Learning' /><meta property='article:tag' content='Python' /><meta property='article:published_time' content='2019-10-21T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2019-10-21T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="机器学习 - 线性回归实验">
 <meta name="twitter:description" content="Machine Learning - Linear regression experiments">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -422,14 +422,18 @@
 <p>我们用UCI大学公开的机器学习数据来跑线性回归。</p>
 <p>数据的下载地址在这里：<a class="link" href="https://archive.ics.uci.edu/ml/datasets/combined&#43;cycle&#43;power&#43;plant"  target="_blank" rel="noopener"
     >https://archive.ics.uci.edu/ml/datasets/combined+cycle+power+plant</a> 下载后的数据可以发现是一个压缩文件，解压后有一个xlsx文件，用excel打开，另存为csv格式，之后用这个csv格式的文件来运行线性回归。</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments1.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-linear-regression-experiments/images/image01.png"
+	width="1167"
+	height="138"
+	srcset="/blog/p/machine-learning-linear-regression-experiments/images/image01_hu_3673ad849b3a9033.png 480w, /blog/p/machine-learning-linear-regression-experiments/images/image01_hu_86429a6afd2bdd7.png 1024w"
 	loading="lazy"
 	
 		alt="linear regression experiments"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="845"
+		data-flex-basis="2029px"
 	
 ></p>
 <p>这是一个循环发电场数据，共有9568个样本数据，每个数据有5列：$AT$（温度）、$V$（压力）、$AP$（湿度）、$RH$（压强）、$PE$（输出电力）。我们不用纠结于每项的具体意义。</p>
@@ -501,24 +505,32 @@ $$</p>
 </span></span><span class="line"><span class="cl"><span class="n">scatter_matrix</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments2.png"
-	
-	
-	
+</div><p><img src="/blog/p/machine-learning-linear-regression-experiments/images/image02.png"
+	width="843"
+	height="479"
+	srcset="/blog/p/machine-learning-linear-regression-experiments/images/image02_hu_a927fe26390b8a53.png 480w, /blog/p/machine-learning-linear-regression-experiments/images/image02_hu_8476cf2439a8c8e1.png 1024w"
 	loading="lazy"
 	
 		alt="2.6数据可视化，直方图显示"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="175"
+		data-flex-basis="422px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments3.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-linear-regression-experiments/images/image03.png"
+	width="760"
+	height="794"
+	srcset="/blog/p/machine-learning-linear-regression-experiments/images/image03_hu_4b5c68ebd4a2dec2.png 480w, /blog/p/machine-learning-linear-regression-experiments/images/image03_hu_5ea69316d13afe14.png 1024w"
 	loading="lazy"
 	
 		alt="2.7散点矩阵图"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="95"
+		data-flex-basis="229px"
 	
 ></p>
 <h4 id="3-准备数据">3. 准备数据</h4>
@@ -534,14 +546,18 @@ $$</p>
 </span></span><span class="line"><span class="cl"><span class="n">X</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments4.png"
-	
-	
-	
+</div><p><img src="/blog/p/machine-learning-linear-regression-experiments/images/image04.png"
+	width="345"
+	height="251"
+	srcset="/blog/p/machine-learning-linear-regression-experiments/images/image04_hu_1d257791bd703d1f.png 480w, /blog/p/machine-learning-linear-regression-experiments/images/image04_hu_9553f5b7922074f4.png 1024w"
 	loading="lazy"
 	
 		alt="准备数据"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="137"
+		data-flex-basis="329px"
 	
 ></p>
 <p>准备样本输出$y$，我们用$PE$作为样本输出。</p>
@@ -745,14 +761,18 @@ $$</p>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;RMSE:&#34;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">predicted</span><span class="p">)))</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments5.png"
-	
-	
-	
+</div><p><img src="/blog/p/machine-learning-linear-regression-experiments/images/image05.png"
+	width="561"
+	height="182"
+	srcset="/blog/p/machine-learning-linear-regression-experiments/images/image05_hu_92d9df5f44346d80.png 480w, /blog/p/machine-learning-linear-regression-experiments/images/image05_hu_75041386b37fc495.png 1024w"
 	loading="lazy"
 	
 		alt="交叉验证10折交叉验证"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="308"
+		data-flex-basis="739px"
 	
 ></p>
 <h4 id="6-画图观察结果">6. 画图观察结果</h4>
@@ -777,14 +797,18 @@ $$</p>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments6.png"
-	
-	
-	
+</div><p><img src="/blog/p/machine-learning-linear-regression-experiments/images/image06.png"
+	width="486"
+	height="400"
+	srcset="/blog/p/machine-learning-linear-regression-experiments/images/image06_hu_20c217e66f329cb.png 480w, /blog/p/machine-learning-linear-regression-experiments/images/image06_hu_791240b9034bc10c.png 1024w"
 	loading="lazy"
 	
 		alt="画图观察结果"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="121"
+		data-flex-basis="291px"
 	
 ></p>
 <h4 id="7-python程序完整源代码">7. python程序完整源代码</h4>
@@ -1080,7 +1104,7 @@ $$</p>
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

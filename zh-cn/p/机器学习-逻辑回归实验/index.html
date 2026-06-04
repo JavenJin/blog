@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Machine Learning' /><meta property='article:tag' content='Python' /><meta property='article:published_time' content='2020-10-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-10-28T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="机器学习 - 逻辑回归实验">
 <meta name="twitter:description" content="Machine Learning - Logistic regression experiments">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -465,68 +465,72 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="2-查看数据">2. 查看数据</h4>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments1.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-logistic-regression-experiments/images/image01.png"
+	width="553"
+	height="98"
+	srcset="/blog/p/machine-learning-logistic-regression-experiments/images/image01_hu_1369677718cea436.png 480w, /blog/p/machine-learning-logistic-regression-experiments/images/image01_hu_f1e076a9b040fea0.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="564"
+		data-flex-basis="1354px"
 	
 ></p>
 <p>Data columns (total 12 columns):</p>
 <div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th></th>
-          <th></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>PassengerId</td>
-          <td>891 non-null int64</td>
-      </tr>
-      <tr>
-          <td>Pclass</td>
-          <td>891 non-null int64</td>
-      </tr>
-      <tr>
-          <td>Name</td>
-          <td>891 non-null object</td>
-      </tr>
-      <tr>
-          <td>Sex</td>
-          <td>891 non-null object</td>
-      </tr>
-      <tr>
-          <td>Age</td>
-          <td>714 non-null float64</td>
-      </tr>
-      <tr>
-          <td>SibSp</td>
-          <td>891 non-null int64</td>
-      </tr>
-      <tr>
-          <td>Parch</td>
-          <td>891 non-null int64</td>
-      </tr>
-      <tr>
-          <td>Ticket</td>
-          <td>891 non-null object</td>
-      </tr>
-      <tr>
-          <td>Fare</td>
-          <td>891 non-null float64</td>
-      </tr>
-      <tr>
-          <td>Cabin</td>
-          <td>204 non-null object</td>
-      </tr>
-      <tr>
-          <td>Embarked</td>
-          <td>889 non-null object</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th></th>
+					<th></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>PassengerId</td>
+					<td>891 non-null int64</td>
+			</tr>
+			<tr>
+					<td>Pclass</td>
+					<td>891 non-null int64</td>
+			</tr>
+			<tr>
+					<td>Name</td>
+					<td>891 non-null object</td>
+			</tr>
+			<tr>
+					<td>Sex</td>
+					<td>891 non-null object</td>
+			</tr>
+			<tr>
+					<td>Age</td>
+					<td>714 non-null float64</td>
+			</tr>
+			<tr>
+					<td>SibSp</td>
+					<td>891 non-null int64</td>
+			</tr>
+			<tr>
+					<td>Parch</td>
+					<td>891 non-null int64</td>
+			</tr>
+			<tr>
+					<td>Ticket</td>
+					<td>891 non-null object</td>
+			</tr>
+			<tr>
+					<td>Fare</td>
+					<td>891 non-null float64</td>
+			</tr>
+			<tr>
+					<td>Cabin</td>
+					<td>204 non-null object</td>
+			</tr>
+			<tr>
+					<td>Embarked</td>
+					<td>889 non-null object</td>
+			</tr>
+	</tbody>
 </table></div>
 <p>可以看到，训练集一共包含891个样本，每个样本有12个特征，其中Age、Cabin和Embarked有缺失值。特别是Carbin特征，只有204个样本有值。</p>
 <p>同理：观察测试集中的缺失值。</p>
@@ -551,87 +555,123 @@
 <p>Age特征非常重要（逃命时通常女士和小孩优先），因此我们需要对其填充。</p>
 <p>缺失值的填充方法有:固定值填充、均值/中位数填充、相邻值填充、模型预测填充。</p>
 <p>此处我们使用均值填充。fillna()函数。</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments2.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-logistic-regression-experiments/images/image02.png"
+	width="554"
+	height="51"
+	srcset="/blog/p/machine-learning-logistic-regression-experiments/images/image02_hu_5dfd2263e779dae7.png 480w, /blog/p/machine-learning-logistic-regression-experiments/images/image02_hu_6ce6d8bbee3dad95.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="1086"
+		data-flex-basis="2607px"
 	
 ></p>
 <p>Cabin缺失值较多，我们直接将其舍弃，以免引入较大的噪声。（删某一特征，列）
 用drop()函数。</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments3.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-logistic-regression-experiments/images/image03.png"
+	width="554"
+	height="107"
+	srcset="/blog/p/machine-learning-logistic-regression-experiments/images/image03_hu_3683dd053c1e7ad5.png 480w, /blog/p/machine-learning-logistic-regression-experiments/images/image03_hu_4c7b8f327fba445a.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="517"
+		data-flex-basis="1242px"
 	
 ></p>
 <p>Embarked特征在训练集中只有2个样本有缺失值，因此可以直接将有缺失的样本删除。（删某一样本，行）</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments4.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-logistic-regression-experiments/images/image04.png"
+	width="511"
+	height="78"
+	srcset="/blog/p/machine-learning-logistic-regression-experiments/images/image04_hu_3acb4650b8eb0ff4.png 480w, /blog/p/machine-learning-logistic-regression-experiments/images/image04_hu_1d238625696be755.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="655"
+		data-flex-basis="1572px"
 	
 ></p>
 <p>同理，对测试集的缺失值进行处理。</p>
 <h4 id="4-特征处理">4. 特征处理</h4>
 <p>现在的数据还存在一些问题，如Name特征是文本型，不利于后续处理，我们训练模型时暂时将其舍弃。Ticket特征比较乱，也将其暂时忽略。</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments5.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-logistic-regression-experiments/images/image05.png"
+	width="553"
+	height="58"
+	srcset="/blog/p/machine-learning-logistic-regression-experiments/images/image05_hu_b0f96024ea59e70.png 480w, /blog/p/machine-learning-logistic-regression-experiments/images/image05_hu_9c4200af337eb590.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="953"
+		data-flex-basis="2288px"
 	
 ></p>
 <p>Pclass特征、Sex特征、Embarked特征都是类别型，一般需要将其进行one-hot编码。</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments6.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-logistic-regression-experiments/images/image06.png"
+	width="553"
+	height="98"
+	srcset="/blog/p/machine-learning-logistic-regression-experiments/images/image06_hu_14159e4055dfbd9b.png 480w, /blog/p/machine-learning-logistic-regression-experiments/images/image06_hu_9c296a924488c37a.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="564"
+		data-flex-basis="1354px"
 	
 ></p>
 <p>Age特征、SibSp特征、Parch特征和Fare特征为数值型，取值变化范围较大，一般先将其标准化或归一化。</p>
 <p>标准化使用preprocessing.StandardScaler类库中的fit()函数和fit_transform()函数。</p>
 <p>fit()用于计算训练数据的均值和方差， 后面就会用均值和方差来转换训练数据。</p>
 <p>fit_transform()不仅计算训练数据的均值和方差，还会基于计算出来的均值和方差来转换训练数据，从而把数据转换成标准的正太分布。</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments7.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-logistic-regression-experiments/images/image07.png"
+	width="521"
+	height="95"
+	srcset="/blog/p/machine-learning-logistic-regression-experiments/images/image07_hu_9e4f0b640421a111.png 480w, /blog/p/machine-learning-logistic-regression-experiments/images/image07_hu_d18eaf207aa46924.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="548"
+		data-flex-basis="1316px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments8.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-logistic-regression-experiments/images/image08.png"
+	width="615"
+	height="148"
+	srcset="/blog/p/machine-learning-logistic-regression-experiments/images/image08_hu_ee1095031052be48.png 480w, /blog/p/machine-learning-logistic-regression-experiments/images/image08_hu_72f500e2f8849791.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="415"
+		data-flex-basis="997px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments9.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-logistic-regression-experiments/images/image09.png"
+	width="619"
+	height="290"
+	srcset="/blog/p/machine-learning-logistic-regression-experiments/images/image09_hu_78e7e869587c5f00.png 480w, /blog/p/machine-learning-logistic-regression-experiments/images/image09_hu_861290ede6ca1370.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="213"
+		data-flex-basis="512px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments10.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-logistic-regression-experiments/images/image10.png"
+	width="595"
+	height="70"
+	srcset="/blog/p/machine-learning-logistic-regression-experiments/images/image10_hu_455d0abf5e8f37eb.png 480w, /blog/p/machine-learning-logistic-regression-experiments/images/image10_hu_4d9fde8d71edd994.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="850"
+		data-flex-basis="2040px"
 	
 ></p>
 <h4 id="5-模型训练">5. 模型训练</h4>
@@ -665,60 +705,88 @@
 <p>（4）训练模型。</p>
 <p><code>fit()函数。</code></p>
 <p>（5）在验证集上验证，评估性能。</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments11.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-logistic-regression-experiments/images/image11.png"
+	width="486"
+	height="146"
+	srcset="/blog/p/machine-learning-logistic-regression-experiments/images/image11_hu_aebb73622e5d8338.png 480w, /blog/p/machine-learning-logistic-regression-experiments/images/image11_hu_4649ebb874accb78.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="332"
+		data-flex-basis="798px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments12.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-logistic-regression-experiments/images/image12.png"
+	width="553"
+	height="141"
+	srcset="/blog/p/machine-learning-logistic-regression-experiments/images/image12_hu_ad9b79540681e242.png 480w, /blog/p/machine-learning-logistic-regression-experiments/images/image12_hu_afe7341f5c722a55.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="392"
+		data-flex-basis="941px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments13.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-logistic-regression-experiments/images/image13.png"
+	width="554"
+	height="143"
+	srcset="/blog/p/machine-learning-logistic-regression-experiments/images/image13_hu_e6187909aa88a00e.png 480w, /blog/p/machine-learning-logistic-regression-experiments/images/image13_hu_b3985082548e9c90.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="387"
+		data-flex-basis="929px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments14.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-logistic-regression-experiments/images/image14.png"
+	width="553"
+	height="81"
+	srcset="/blog/p/machine-learning-logistic-regression-experiments/images/image14_hu_40143627677746ea.png 480w, /blog/p/machine-learning-logistic-regression-experiments/images/image14_hu_5bda4dc8032554ca.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="682"
+		data-flex-basis="1638px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments15.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-logistic-regression-experiments/images/image15.png"
+	width="553"
+	height="79"
+	srcset="/blog/p/machine-learning-logistic-regression-experiments/images/image15_hu_9578a4807e4a9491.png 480w, /blog/p/machine-learning-logistic-regression-experiments/images/image15_hu_f8511fc5817e0d09.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="700"
+		data-flex-basis="1680px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments16.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-logistic-regression-experiments/images/image16.png"
+	width="554"
+	height="96"
+	srcset="/blog/p/machine-learning-logistic-regression-experiments/images/image16_hu_75813eed11b8a89a.png 480w, /blog/p/machine-learning-logistic-regression-experiments/images/image16_hu_7ee26c21fb06201f.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="577"
+		data-flex-basis="1385px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Logistic%20regression%20experiments/logistic-regression-experiments17.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-logistic-regression-experiments/images/image17.png"
+	width="514"
+	height="378"
+	srcset="/blog/p/machine-learning-logistic-regression-experiments/images/image17_hu_59ec1a6739e0a13f.png 480w, /blog/p/machine-learning-logistic-regression-experiments/images/image17_hu_5d7265e843010352.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="135"
+		data-flex-basis="326px"
 	
 ></p>
 <p>模型已经训练好，并且性能还不错，可以拿来进行预测了。</p>
@@ -1097,7 +1165,7 @@
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

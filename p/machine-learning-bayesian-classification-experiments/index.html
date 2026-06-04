@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='机器学习 - 贝叶斯分类实验'>
 <title>Machine Learning - Bayesian classification experiments</title>
@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Machine Learning' /><meta property='article:tag' content='Python' /><meta property='article:published_time' content='2019-11-04T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2019-11-04T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Machine Learning - Bayesian classification experiments">
 <meta name="twitter:description" content="机器学习 - 贝叶斯分类实验">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -429,12 +429,16 @@
 <p>中文分词和英文分词对比，中文分词难点：没有形式上的分界符。（英文用空格区分单词）</p>
 <p>（3）构建词向量空间：统计文本词频，生成文本的词向量空间。</p>
 <p>词映射到向量空间。余弦相似度。“快乐”、“高兴”、“悲伤”三个向量的余弦？</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments1.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image01.png"
+	width="235"
+	height="131"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image01_hu_1694e37ed8052cbc.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image01_hu_f5cec668cc5aa4f3.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="179"
+		data-flex-basis="430px"
 	
 ></p>
 <p>余弦相似度用向量空间中两个向量夹角的余弦值作为衡量两个个体间差异的大小。余弦值越接近1，就表明夹角越接近0度，也就是两个向量越相似，这就叫&quot;余弦相似性&quot;。</p>
@@ -459,212 +463,316 @@
 <p>from sklearn.metrics import classification_report</p>
 <p>from sklearn.metrics import classification accuracy_score</p>
 <h3 id="4-实验步骤">4. 实验步骤</h3>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments2.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image02.png"
+	width="679"
+	height="445"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image02_hu_dbce89a46512d336.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image02_hu_33eef86b2f21285b.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="152"
+		data-flex-basis="366px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments3.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image03.png"
+	width="677"
+	height="1034"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image03_hu_74c0a36608abded1.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image03_hu_ce36dd453ed8ac51.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="65"
+		data-flex-basis="157px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments4.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image04.png"
+	width="677"
+	height="1034"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image04_hu_67c0af5d3035e9d6.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image04_hu_5acef1e075c09784.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="65"
+		data-flex-basis="157px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments5.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image05.png"
+	width="1203"
+	height="45"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image05_hu_82a6279269717ab3.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image05_hu_ff97fc3bd448403f.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="2673"
+		data-flex-basis="6416px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments6.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image06.png"
+	width="1194"
+	height="241"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image06_hu_bb734309136bf7f.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image06_hu_f3a411d4cbd20a4e.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="495"
+		data-flex-basis="1189px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments7.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image07.png"
+	width="1199"
+	height="322"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image07_hu_39946b41da36c973.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image07_hu_b911f8263c50687a.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="372"
+		data-flex-basis="893px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments8.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image08.png"
+	width="1204"
+	height="251"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image08_hu_bf66da72a2e1e2cf.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image08_hu_1908c0230e2afff0.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="479"
+		data-flex-basis="1151px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments9.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image09.png"
+	width="1216"
+	height="250"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image09_hu_e938507951cca047.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image09_hu_6da3809141cdd13.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="486"
+		data-flex-basis="1167px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments10.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image10.png"
+	width="1202"
+	height="189"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image10_hu_cc794abcf6b1ea03.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image10_hu_9a5b4aaff221c60d.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="635"
+		data-flex-basis="1526px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments11.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image11.png"
+	width="1206"
+	height="485"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image11_hu_a81b478d207bd5c3.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image11_hu_7b34d456fe4f6aec.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="248"
+		data-flex-basis="596px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments12.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image12.png"
+	width="1212"
+	height="588"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image12_hu_9bba10d9602e68d6.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image12_hu_2d194e37c1a6a04d.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="206"
+		data-flex-basis="494px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments13.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image13.png"
+	width="1206"
+	height="302"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image13_hu_b65e43fd29a27a05.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image13_hu_117c9e37dc915cc2.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="399"
+		data-flex-basis="958px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments14.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image14.png"
+	width="1207"
+	height="476"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image14_hu_7b96ad191561e59e.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image14_hu_c1f0d8c92a7ffc3.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="253"
+		data-flex-basis="608px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments15.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image15.png"
+	width="1208"
+	height="187"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image15_hu_be93378b84daf40c.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image15_hu_c0dfdeb5d4f50856.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="645"
+		data-flex-basis="1550px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments16.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image16.png"
+	width="1209"
+	height="312"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image16_hu_464ddfd9bef017c3.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image16_hu_2ab6e3dbe73417b8.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="387"
+		data-flex-basis="930px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments17.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image17.png"
+	width="1200"
+	height="335"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image17_hu_7569c40ab8560e1f.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image17_hu_10554e7237de5f05.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="358"
+		data-flex-basis="859px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments18.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image18.png"
+	width="1212"
+	height="370"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image18_hu_128460ae42d8d0d8.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image18_hu_ac1d1eee6e46be0e.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="327"
+		data-flex-basis="786px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments19.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image19.png"
+	width="1202"
+	height="385"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image19_hu_86fb62af33246b57.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image19_hu_33509f899c0cb96c.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="312"
+		data-flex-basis="749px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments20.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image20.png"
+	width="1218"
+	height="368"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image20_hu_da3adc848ff87b21.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image20_hu_c454205d9a4e82ce.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="330"
+		data-flex-basis="794px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments21.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image21.png"
+	width="1214"
+	height="444"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image21_hu_a1e0b95353842a4e.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image21_hu_77eccd9cd6ffd71.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="273"
+		data-flex-basis="656px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments22.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image22.png"
+	width="1212"
+	height="290"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image22_hu_beb28bf90aea665b.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image22_hu_b6f9489820d860a6.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="417"
+		data-flex-basis="1003px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments23.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image23.png"
+	width="1215"
+	height="379"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image23_hu_ddbe47a8c0fd2fc6.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image23_hu_fc7582394fc58b72.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="320"
+		data-flex-basis="769px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments24.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image24.png"
+	width="1217"
+	height="371"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image24_hu_ed8adcd9d793320c.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image24_hu_8ce4776007bc41bb.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="328"
+		data-flex-basis="787px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments25.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image25.png"
+	width="1219"
+	height="217"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image25_hu_70341df720cf22de.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image25_hu_e63106efb55bf20a.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="561"
+		data-flex-basis="1348px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments26.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image26.png"
+	width="1218"
+	height="460"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image26_hu_bfb48581dc0466a7.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image26_hu_e4ffd72e339ad0e7.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="264"
+		data-flex-basis="635px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Bayesian%20classification%20experiments/bayesian-classification-experiments27.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-bayesian-classification-experiments/images/image27.png"
+	width="1203"
+	height="323"
+	srcset="/blog/p/machine-learning-bayesian-classification-experiments/images/image27_hu_2e36e637984e4ae1.png 480w, /blog/p/machine-learning-bayesian-classification-experiments/images/image27_hu_dc0b8db3d5038b42.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="372"
+		data-flex-basis="893px"
 	
 ></p>
 <h3 id="5-实验完整代码python">5. 实验完整代码python</h3>
@@ -1378,7 +1486,7 @@
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

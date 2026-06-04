@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='计算机视觉 - 实验十 创建包围轮廓的矩形边界'>
 <title>Computer Vision - Experiment 10 - Create a rectangular boundary that encloses the outline</title>
@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Computer Vision' /><meta property='article:tag' content='OpenCV' /><meta property='article:published_time' content='2020-05-04T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-05-04T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Computer Vision - Experiment 10 - Create a rectangular boundary that encloses the outline">
 <meta name="twitter:description" content="计算机视觉 - 实验十 创建包围轮廓的矩形边界">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -532,26 +532,26 @@ the boundaries of the image are not parallel.</p>
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//---------------------------------【头文件、命名空间包含部分】--------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：包含程序所使用的头文件和命名空间
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#include</span> <span class="cpf">&#34;opencv2/highgui/highgui.hpp&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;opencv2/highgui/highgui.hpp&#34;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;opencv2/imgproc/imgproc.hpp&#34;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//-----------------------------------【ShowHelpText( )函数】-----------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//          描述：输出一些帮助信息
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">()</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//输出欢迎信息和OpenCV版本
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">非常感谢购买《OpenCV3编程入门》一书！</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">非常感谢购买《OpenCV3编程入门》一书！</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">此为本书OpenCV3版的第73个配套示例程序</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">   当前使用的OpenCV版本为：&#34;</span> <span class="n">CV_VERSION</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n</span><span class="s">  ----------------------------------------------------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//输出一些帮助信息
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\n\t\t\t</span><span class="s">欢迎来到【矩形包围示例】示例程序~</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">);</span> 
+</span></span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\n\t\t\t</span><span class="s">欢迎来到【矩形包围示例】示例程序~</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">);</span> 
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t</span><span class="s">按键操作说明: </span><span class="se">\n\n</span><span class="s">&#34;</span> 
 </span></span><span class="line"><span class="cl">		<span class="s">&#34;</span><span class="se">\t\t</span><span class="s">键盘按键【ESC】、【Q】、【q】- 退出程序</span><span class="se">\n\n</span><span class="s">&#34;</span> 
 </span></span><span class="line"><span class="cl">		<span class="s">&#34;</span><span class="se">\t\t</span><span class="s">键盘按键任意键 - 重新生成随机点，并寻找最小面积的包围矩形</span><span class="se">\n</span><span class="s">&#34;</span> <span class="p">);</span>  
@@ -560,24 +560,24 @@ the boundaries of the image are not parallel.</p>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span>  <span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//改变console字体颜色
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">system</span><span class="p">(</span><span class="s">&#34;color 1F&#34;</span><span class="p">);</span> 
+</span></span></span><span class="line"><span class="cl">	<span class="n">system</span><span class="p">(</span><span class="s">&#34;color 1F&#34;</span><span class="p">);</span> 
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//显示帮助文字
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">ShowHelpText</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">ShowHelpText</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//初始化变量和随机值
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Mat</span> <span class="n">image</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="n">CV_8UC3</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">image</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="n">CV_8UC3</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">RNG</span><span class="o">&amp;</span> <span class="n">rng</span> <span class="o">=</span> <span class="n">theRNG</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//循环，按下ESC,Q,q键程序退出，否则有键按下便一直更新
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">	<span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="c1">//参数初始化
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="n">rng</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">103</span><span class="p">);</span><span class="c1">//随机生成点的数量
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">vector</span><span class="o">&lt;</span><span class="n">Point</span><span class="o">&gt;</span> <span class="n">points</span><span class="p">;</span><span class="c1">//点值
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="n">rng</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">103</span><span class="p">);</span><span class="c1">//随机生成点的数量
+</span></span></span><span class="line"><span class="cl">		<span class="n">vector</span><span class="o">&lt;</span><span class="n">Point</span><span class="o">&gt;</span> <span class="n">points</span><span class="p">;</span><span class="c1">//点值
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">		<span class="c1">//随机生成点坐标
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span><span class="p">(</span><span class="kt">int</span>  <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">		<span class="k">for</span><span class="p">(</span><span class="kt">int</span>  <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl">		<span class="p">{</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">			<span class="n">Point</span> <span class="n">point</span><span class="p">;</span>
@@ -588,27 +588,27 @@ the boundaries of the image are not parallel.</p>
 </span></span><span class="line"><span class="cl">		<span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">		<span class="c1">//对给定的 2D 点集，寻找最小面积的包围矩形
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">RotatedRect</span> <span class="n">box</span> <span class="o">=</span> <span class="n">minAreaRect</span><span class="p">(</span><span class="n">Mat</span><span class="p">(</span><span class="n">points</span><span class="p">));</span>
+</span></span></span><span class="line"><span class="cl">		<span class="n">RotatedRect</span> <span class="n">box</span> <span class="o">=</span> <span class="n">minAreaRect</span><span class="p">(</span><span class="n">Mat</span><span class="p">(</span><span class="n">points</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">		<span class="n">Point2f</span> <span class="n">vertex</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl">		<span class="n">box</span><span class="p">.</span><span class="n">points</span><span class="p">(</span><span class="n">vertex</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">		<span class="c1">//绘制出随机颜色的点
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">image</span> <span class="o">=</span> <span class="n">Scalar</span><span class="o">::</span><span class="n">all</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">		<span class="n">image</span> <span class="o">=</span> <span class="n">Scalar</span><span class="o">::</span><span class="n">all</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">		<span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">count</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl">			<span class="n">circle</span><span class="p">(</span> <span class="n">image</span><span class="p">,</span> <span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="mi">3</span><span class="p">,</span> <span class="n">Scalar</span><span class="p">(</span><span class="n">rng</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="n">rng</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="n">rng</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)),</span> <span class="n">FILLED</span><span class="p">,</span> <span class="n">LINE_AA</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">		<span class="c1">//绘制出最小面积的包围矩形
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">		<span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl">			<span class="n">line</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">vertex</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">vertex</span><span class="p">[(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="mi">4</span><span class="p">],</span> <span class="n">Scalar</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">211</span><span class="p">),</span> <span class="mi">2</span><span class="p">,</span> <span class="n">LINE_AA</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">		<span class="c1">//显示窗口
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">imshow</span><span class="p">(</span> <span class="s">&#34;矩形包围示例&#34;</span><span class="p">,</span> <span class="n">image</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">		<span class="n">imshow</span><span class="p">(</span> <span class="s">&#34;矩形包围示例&#34;</span><span class="p">,</span> <span class="n">image</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">		<span class="c1">//按下ESC,Q,或者q，程序退出
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kt">char</span> <span class="n">key</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="n">waitKey</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl">		<span class="kt">char</span> <span class="n">key</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="n">waitKey</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span> <span class="n">key</span> <span class="o">==</span> <span class="mi">27</span> <span class="o">||</span> <span class="n">key</span> <span class="o">==</span> <span class="sc">&#39;q&#39;</span> <span class="o">||</span> <span class="n">key</span> <span class="o">==</span> <span class="sc">&#39;Q&#39;</span> <span class="p">)</span> <span class="c1">// &#39;ESC&#39;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">break</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">			<span class="k">break</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
@@ -616,44 +616,60 @@ the boundaries of the image are not parallel.</p>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>   (ii) Show the results</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2010%20Create%20a%20rectangular%20boundary%20that%20encloses%20the%20outline/create-a-rectangular-boundary-that-encloses-the-outline1.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image01.png"
+	width="565"
+	height="303"
+	srcset="/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image01_hu_94b61a319c5d43ec.png 480w, /blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image01_hu_c4c760ee3b94618a.png 1024w"
 	loading="lazy"
 	
 		alt="Create a rectangular boundary that encloses the outline 1"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="447px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2010%20Create%20a%20rectangular%20boundary%20that%20encloses%20the%20outline/create-a-rectangular-boundary-that-encloses-the-outline2.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image02.png"
+	width="378"
+	height="397"
+	srcset="/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image02_hu_e1d297d711bb7100.png 480w, /blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image02_hu_f0ccd6c741517a3b.png 1024w"
 	loading="lazy"
 	
 		alt="Create a rectangular boundary that encloses the outline 2"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="95"
+		data-flex-basis="228px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2010%20Create%20a%20rectangular%20boundary%20that%20encloses%20the%20outline/create-a-rectangular-boundary-that-encloses-the-outline3.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image03.png"
+	width="378"
+	height="397"
+	srcset="/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image03_hu_39c1ed70db425b27.png 480w, /blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image03_hu_f886bea53dd3f901.png 1024w"
 	loading="lazy"
 	
 		alt="Create a rectangular boundary that encloses the outline 3"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="95"
+		data-flex-basis="228px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2010%20Create%20a%20rectangular%20boundary%20that%20encloses%20the%20outline/create-a-rectangular-boundary-that-encloses-the-outline4.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image04.png"
+	width="562"
+	height="304"
+	srcset="/blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image04_hu_c31c18e3e4415a0f.png 480w, /blog/p/computer-vision-experiment-10-create-a-rectangular-boundary-that-encloses-the-outline/images/image04_hu_ee944a2fd8766534.png 1024w"
 	loading="lazy"
 	
 		alt="Create a rectangular boundary that encloses the outline 4"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="184"
+		data-flex-basis="443px"
 	
 ></p>
 <h3 id="experiment-summary">Experiment Summary</h3>
@@ -780,7 +796,7 @@ the boundaries of the image are not parallel.</p>
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

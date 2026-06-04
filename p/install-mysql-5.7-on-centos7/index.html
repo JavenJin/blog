@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='在CentOS7上安装MySQL-5.7'>
 <title>Install MySQL-5.7 on CentOS7</title>
@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Database' /><meta property='article:published_time' content='2021-08-11T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-08-11T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Install MySQL-5.7 on CentOS7">
 <meta name="twitter:description" content="在CentOS7上安装MySQL-5.7">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -489,30 +489,42 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-1.png"
-	
-	
-	
+</div><p><img src="/blog/p/install-mysql-5.7-on-centos7/images/image01.png"
+	width="738"
+	height="335"
+	srcset="/blog/p/install-mysql-5.7-on-centos7/images/image01_hu_adfba2e2d1032bd7.png 480w, /blog/p/install-mysql-5.7-on-centos7/images/image01_hu_9df73016162e9f7a.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="220"
+		data-flex-basis="528px"
 	
 ></p>
 <h3 id="install-the-downloaded-rpm-file">Install the downloaded rpm file</h3>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-2.png"
-	
-	
-	
+<p><img src="/blog/p/install-mysql-5.7-on-centos7/images/image02.png"
+	width="761"
+	height="546"
+	srcset="/blog/p/install-mysql-5.7-on-centos7/images/image02_hu_bfd3ac757574525.png 480w, /blog/p/install-mysql-5.7-on-centos7/images/image02_hu_58a3399b59282646.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="139"
+		data-flex-basis="334px"
 	
 ></p>
 <h3 id="go-to-the-directory-etcyumreposd-and-these-two-files-will-be-added">Go to the directory /etc/yum.repos.d/ and these two files will be added</h3>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-3.png"
-	
-	
-	
+<p><img src="/blog/p/install-mysql-5.7-on-centos7/images/image03.png"
+	width="500"
+	height="206"
+	srcset="/blog/p/install-mysql-5.7-on-centos7/images/image03_hu_c3e9ceb7b0764ff2.png 480w, /blog/p/install-mysql-5.7-on-centos7/images/image03_hu_8ece253436e55f0b.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="242"
+		data-flex-basis="582px"
 	
 ></p>
 <h3 id="modify-the-mysql-communityrepo-file">Modify the mysql-community.repo file</h3>
@@ -524,12 +536,16 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vi mysql-community.repo
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-4.png"
-	
-	
-	
+</div><p><img src="/blog/p/install-mysql-5.7-on-centos7/images/image04.png"
+	width="759"
+	height="590"
+	srcset="/blog/p/install-mysql-5.7-on-centos7/images/image04_hu_d1243b4c617383bd.png 480w, /blog/p/install-mysql-5.7-on-centos7/images/image04_hu_e8dc53e611690bba.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="128"
+		data-flex-basis="308px"
 	
 ></p>
 <h3 id="install-mysql-using-yum">Install mysql using yum</h3>
@@ -541,20 +557,28 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yum install mysql-community-server -y
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-5.png"
-	
-	
-	
+</div><p><img src="/blog/p/install-mysql-5.7-on-centos7/images/image05.png"
+	width="758"
+	height="695"
+	srcset="/blog/p/install-mysql-5.7-on-centos7/images/image05_hu_6fc4f3b4d8e4bcf1.png 480w, /blog/p/install-mysql-5.7-on-centos7/images/image05_hu_86b0fff001007ab.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="109"
+		data-flex-basis="261px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-6.png"
-	
-	
-	
+<p><img src="/blog/p/install-mysql-5.7-on-centos7/images/image06.png"
+	width="759"
+	height="261"
+	srcset="/blog/p/install-mysql-5.7-on-centos7/images/image06_hu_1660eba3d90ac415.png 480w, /blog/p/install-mysql-5.7-on-centos7/images/image06_hu_594c6f6b82843c8e.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="290"
+		data-flex-basis="697px"
 	
 ></p>
 <h3 id="check-the-version-of-mysql-to-make-sure-its-installed-successfully">Check the version of mysql to make sure it&rsquo;s installed successfully</h3>
@@ -566,12 +590,16 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mysql -V
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-7.png"
-	
-	
-	
+</div><p><img src="/blog/p/install-mysql-5.7-on-centos7/images/image07.png"
+	width="752"
+	height="34"
+	srcset="/blog/p/install-mysql-5.7-on-centos7/images/image07_hu_ee4c18b107cfca84.png 480w, /blog/p/install-mysql-5.7-on-centos7/images/image07_hu_7b4d85ceaeb0db55.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="2211"
+		data-flex-basis="5308px"
 	
 ></p>
 <h3 id="start-mysql-service">Start mysql service</h3>
@@ -583,12 +611,16 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">service mysqld start
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-8.png"
-	
-	
-	
+</div><p><img src="/blog/p/install-mysql-5.7-on-centos7/images/image08.png"
+	width="755"
+	height="34"
+	srcset="/blog/p/install-mysql-5.7-on-centos7/images/image08_hu_c48df1c96b9de433.png 480w, /blog/p/install-mysql-5.7-on-centos7/images/image08_hu_c57a4b2577d10e8a.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="2220"
+		data-flex-basis="5329px"
 	
 ></p>
 <h3 id="set-mysql-to-start-on-boot">Set mysql to start on boot</h3>
@@ -609,12 +641,16 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep <span class="s2">&#34;password&#34;</span> /var/log/mysqld.log
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-9.png"
-	
-	
-	
+</div><p><img src="/blog/p/install-mysql-5.7-on-centos7/images/image09.png"
+	width="750"
+	height="51"
+	srcset="/blog/p/install-mysql-5.7-on-centos7/images/image09_hu_459bc0291b95ff67.png 480w, /blog/p/install-mysql-5.7-on-centos7/images/image09_hu_2fec8af679b2834b.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="1470"
+		data-flex-basis="3529px"
 	
 ></p>
 <h3 id="copy-the-temporary-password-above-and-login-to-mysql">Copy the temporary password above and login to mysql</h3>
@@ -639,16 +675,20 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">set</span><span class="w"> </span><span class="k">global</span><span class="w"> </span><span class="n">validate_password_policy</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">set</span><span class="w"> </span><span class="k">global</span><span class="w"> </span><span class="n">validate_password_length</span><span class="o">=</span><span class="mi">4</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">alter</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="s1">&#39;root&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="s1">&#39;123456&#39;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">set</span><span class="w"> </span><span class="k">global</span><span class="w"> </span><span class="n">validate_password_length</span><span class="o">=</span><span class="mi">4</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">alter</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="s1">&#39;root&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="s1">&#39;123456&#39;</span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-10.png"
-	
-	
-	
+</div><p><img src="/blog/p/install-mysql-5.7-on-centos7/images/image10.png"
+	width="749"
+	height="152"
+	srcset="/blog/p/install-mysql-5.7-on-centos7/images/image10_hu_7400873ef503e32c.png 480w, /blog/p/install-mysql-5.7-on-centos7/images/image10_hu_fe57cc20b1e7dcbb.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="492"
+		data-flex-basis="1182px"
 	
 ></p>
 <ul>
@@ -663,12 +703,16 @@
 <pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">grant</span><span class="w"> </span><span class="k">all</span><span class="w"> </span><span class="k">privileges</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="s1">&#39;root&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="s1">&#39;123456&#39;</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="k">grant</span><span class="w"> </span><span class="k">option</span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-11.png"
-	
-	
-	
+</div><p><img src="/blog/p/install-mysql-5.7-on-centos7/images/image11.png"
+	width="656"
+	height="66"
+	srcset="/blog/p/install-mysql-5.7-on-centos7/images/image11_hu_e391bc94d50ffed6.png 480w, /blog/p/install-mysql-5.7-on-centos7/images/image11_hu_d17a8b61e4d88a5e.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="993"
+		data-flex-basis="2385px"
 	
 ></p>
 <ul>
@@ -683,12 +727,16 @@
 <pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="n">flush</span><span class="w"> </span><span class="k">privileges</span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-12.png"
-	
-	
-	
+</div><p><img src="/blog/p/install-mysql-5.7-on-centos7/images/image12.png"
+	width="588"
+	height="64"
+	srcset="/blog/p/install-mysql-5.7-on-centos7/images/image12_hu_461134f0ffb16f35.png 480w, /blog/p/install-mysql-5.7-on-centos7/images/image12_hu_603257d75ec4e1aa.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="918"
+		data-flex-basis="2205px"
 	
 ></p>
 <h3 id="use-quit-or-exit-to-quit-mysql-and-restart-mysql-service">Use quit or exit to quit mysql and restart mysql service</h3>
@@ -711,12 +759,16 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">firewall-cmd --query-port<span class="o">=</span>3306/tcp
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-13.png"
-	
-	
-	
+</div><p><img src="/blog/p/install-mysql-5.7-on-centos7/images/image13.png"
+	width="761"
+	height="32"
+	srcset="/blog/p/install-mysql-5.7-on-centos7/images/image13_hu_ac5def98a6ee797a.png 480w, /blog/p/install-mysql-5.7-on-centos7/images/image13_hu_354939d75f70dbd3.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="2378"
+		data-flex-basis="5707px"
 	
 ></p>
 <ul>
@@ -731,12 +783,16 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">firewall-cmd --add-port<span class="o">=</span>3306/tcp --permanent
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-14.png"
-	
-	
-	
+</div><p><img src="/blog/p/install-mysql-5.7-on-centos7/images/image14.png"
+	width="760"
+	height="37"
+	srcset="/blog/p/install-mysql-5.7-on-centos7/images/image14_hu_61952b0034ba810a.png 480w, /blog/p/install-mysql-5.7-on-centos7/images/image14_hu_f192a3e996f7417b.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="2054"
+		data-flex-basis="4929px"
 	
 ></p>
 <h3 id="reload-the-added-port">Reload the added port</h3>
@@ -748,12 +804,16 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">firewall-cmd --reload
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-15.png"
-	
-	
-	
+</div><p><img src="/blog/p/install-mysql-5.7-on-centos7/images/image15.png"
+	width="760"
+	height="31"
+	srcset="/blog/p/install-mysql-5.7-on-centos7/images/image15_hu_6fb3e1ea5d2c3770.png 480w, /blog/p/install-mysql-5.7-on-centos7/images/image15_hu_f5f6b098e8392032.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="2451"
+		data-flex-basis="5883px"
 	
 ></p>
 <h3 id="query-again-whether-port-3306-is-open-and-confirm-that-it-is-open">Query again whether port 3306 is open, and confirm that it is open</h3>
@@ -765,12 +825,16 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">firewall-cmd --query-port<span class="o">=</span>3306/tcp
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-16.png"
-	
-	
-	
+</div><p><img src="/blog/p/install-mysql-5.7-on-centos7/images/image16.png"
+	width="760"
+	height="36"
+	srcset="/blog/p/install-mysql-5.7-on-centos7/images/image16_hu_9451150aee4fbc1.png 480w, /blog/p/install-mysql-5.7-on-centos7/images/image16_hu_40691d5172853e46.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="2111"
+		data-flex-basis="5066px"
 	
 ></p>
 <h2 id="uninstall-mysql-on-linux">Uninstall mysql on linux</h2>
@@ -784,12 +848,16 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rpm -qa <span class="p">|</span> grep -i mysql
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-17.png"
-	
-	
-	
+</div><p><img src="/blog/p/install-mysql-5.7-on-centos7/images/image17.png"
+	width="349"
+	height="110"
+	srcset="/blog/p/install-mysql-5.7-on-centos7/images/image17_hu_5e83deb9ec2c7dc6.png 480w, /blog/p/install-mysql-5.7-on-centos7/images/image17_hu_d298f02481e26ad6.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="317"
+		data-flex-basis="761px"
 	
 ></p>
 <h3 id="delete-the-queried-files-one-by-one">Delete the queried files one by one</h3>
@@ -805,20 +873,28 @@
 </span></span><span class="line"><span class="cl">yum remove mysql-community-common-5.7.35-1.el7.x86_64
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-18.png"
-	
-	
-	
+</div><p><img src="/blog/p/install-mysql-5.7-on-centos7/images/image18.png"
+	width="757"
+	height="676"
+	srcset="/blog/p/install-mysql-5.7-on-centos7/images/image18_hu_8084adfff54a3ba9.png 480w, /blog/p/install-mysql-5.7-on-centos7/images/image18_hu_ff9272d737946e95.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="111"
+		data-flex-basis="268px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/Install%20MySQL-5.7%20on%20CentOS7/install-mysql-5-7-19.png"
-	
-	
-	
+<p><img src="/blog/p/install-mysql-5.7-on-centos7/images/image19.png"
+	width="759"
+	height="875"
+	srcset="/blog/p/install-mysql-5.7-on-centos7/images/image19_hu_f5eefdad1cb7d602.png 480w, /blog/p/install-mysql-5.7-on-centos7/images/image19_hu_7a521c4ddf29057.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="86"
+		data-flex-basis="208px"
 	
 ></p>
 <h3 id="delete-mysql-related-files">Delete mysql related files</h3>
@@ -969,7 +1045,7 @@
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

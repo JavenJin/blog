@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Computer Vision' /><meta property='article:tag' content='OpenCV' /><meta property='article:published_time' content='2020-04-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-04-01T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="计算机视觉 - 实验六 哈夫变换实验">
 <meta name="twitter:description" content="Computer Vision - Experiment 6 - Haff transform experiment">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -557,61 +557,61 @@
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//--------------------------------【头文件、命名空间包含部分】----------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：包含程序所使用的头文件和命名空间
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#include</span> <span class="cpf">&lt;opencv2/opencv.hpp&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;opencv2/opencv.hpp&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;opencv2/highgui/highgui.hpp&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;opencv2/imgproc/imgproc.hpp&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//--------------------------------【全局变量声明部分】-----------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：全局变量声明
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Mat</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_dstImage</span><span class="p">,</span><span class="n">g_midImage</span><span class="p">;</span><span class="c1">//原始图、中间图和效果图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vec4i</span><span class="o">&gt;</span> <span class="n">g_lines</span><span class="p">;</span><span class="c1">//定义一个矢量结构g_lines用于存放得到的线段矢量集合
+</span></span></span><span class="line"><span class="cl"><span class="n">Mat</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_dstImage</span><span class="p">,</span><span class="n">g_midImage</span><span class="p">;</span><span class="c1">//原始图、中间图和效果图
+</span></span></span><span class="line"><span class="cl"><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vec4i</span><span class="o">&gt;</span> <span class="n">g_lines</span><span class="p">;</span><span class="c1">//定义一个矢量结构g_lines用于存放得到的线段矢量集合
 </span></span></span><span class="line"><span class="cl"><span class="c1">//变量接收的TrackBar位置参数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">g_nthreshold</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">g_nthreshold</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//--------------------------------【全局函数声明部分】-----------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：全局函数声明
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_HoughLines</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span><span class="p">);</span><span class="c1">//回调函数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------【main( )函数】-----------------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：控制台应用程序的入口函数，我们的程序从这里开始
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//改变console字体颜色
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">system</span><span class="p">(</span><span class="s">&#34;color 4F&#34;</span><span class="p">);</span>  
+</span></span></span><span class="line"><span class="cl">	<span class="n">system</span><span class="p">(</span><span class="s">&#34;color 4F&#34;</span><span class="p">);</span>  
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="n">ShowHelpText</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//载入原始图和Mat变量定义   
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Mat</span> <span class="n">g_srcImage</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s">&#34;1.jpg&#34;</span><span class="p">);</span>  <span class="c1">//工程目录下应该有一张名为1.jpg的素材图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">g_srcImage</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s">&#34;1.jpg&#34;</span><span class="p">);</span>  <span class="c1">//工程目录下应该有一张名为1.jpg的素材图
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//显示原始图  
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【原始图】&#34;</span><span class="p">,</span> <span class="n">g_srcImage</span><span class="p">);</span>  
+</span></span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【原始图】&#34;</span><span class="p">,</span> <span class="n">g_srcImage</span><span class="p">);</span>  
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//创建滚动条
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【效果图】&#34;</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【效果图】&#34;</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">createTrackbar</span><span class="p">(</span><span class="s">&#34;值&#34;</span><span class="p">,</span> <span class="s">&#34;【效果图】&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">g_nthreshold</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="n">on_HoughLines</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//进行边缘检测和转化为灰度图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Canny</span><span class="p">(</span><span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_midImage</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span><span class="c1">//进行一次canny边缘检测
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;canny&#34;</span><span class="p">,</span> <span class="n">g_midImage</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">Canny</span><span class="p">(</span><span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_midImage</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span><span class="c1">//进行一次canny边缘检测
+</span></span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;canny&#34;</span><span class="p">,</span> <span class="n">g_midImage</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">cvtColor</span><span class="p">(</span><span class="n">g_midImage</span><span class="p">,</span><span class="n">g_dstImage</span><span class="p">,</span> <span class="n">COLOR_GRAY2BGR</span><span class="p">);</span><span class="c1">//转化边缘检测后的图为灰度图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//调用一次回调函数，调用一次HoughLinesP函数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">on_HoughLines</span><span class="p">(</span><span class="n">g_nthreshold</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">on_HoughLines</span><span class="p">(</span><span class="n">g_nthreshold</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">HoughLinesP</span><span class="p">(</span><span class="n">g_midImage</span><span class="p">,</span> <span class="n">g_lines</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">CV_PI</span><span class="o">/</span><span class="mi">180</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//显示效果图  
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【效果图】&#34;</span><span class="p">,</span> <span class="n">g_dstImage</span><span class="p">);</span>  
+</span></span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【效果图】&#34;</span><span class="p">,</span> <span class="n">g_dstImage</span><span class="p">);</span>  
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="n">waitKey</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>  
@@ -624,102 +624,122 @@
 </span></span><span class="line"><span class="cl"><span class="c1">//---------------------------------【on_HoughLines( )函数】------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：【顶帽运算/黑帽运算】窗口的回调函数
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_HoughLines</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_HoughLines</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//定义局部变量储存全局变量
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Mat</span> <span class="n">dstImage</span><span class="o">=</span><span class="n">g_dstImage</span><span class="p">.</span><span class="n">clone</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">dstImage</span><span class="o">=</span><span class="n">g_dstImage</span><span class="p">.</span><span class="n">clone</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">midImage</span><span class="o">=</span><span class="n">g_midImage</span><span class="p">.</span><span class="n">clone</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//调用HoughLinesP函数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//CV_EXPORTS_W void HoughLinesP(InputArray image, OutputArray lines,
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	double rho, double theta, int threshold,
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	double minLineLength = 0, double maxLineGap = 0);
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//image： 必须是二值图像，推荐使用canny边缘检测的结果图像； 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//rho: 线段以像素为单位的距离精度，double类型的，推荐用1.0
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//theta： 线段以弧度为单位的角度精度，推荐用numpy.pi / 180
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//threshod : 累加平面的阈值参数，int类型，超过设定阈值才被检测出线段，值越大，基本上意味着检出的线段越长，检出的线段个数越少。根据情况推荐先用100试试
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//lines：这个参数的意义未知，发现不同的lines对结果没影响，但是不要忽略了它的存在 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//minLineLength：线段以像素为单位的最小长度，根据应用场景设置 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//maxLineGap：同一方向上两条线段判定为一条线段的最大允许间隔（断裂），超过了设定值，则把两条线段当成一条线段，值越大，允许线段上的断裂越大，越有可能检出潜在的直线段
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//CV_EXPORTS_W void HoughLinesP(InputArray image, OutputArray lines,
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	double rho, double theta, int threshold,
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	double minLineLength = 0, double maxLineGap = 0);
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//image： 必须是二值图像，推荐使用canny边缘检测的结果图像； 
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//rho: 线段以像素为单位的距离精度，double类型的，推荐用1.0
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//theta： 线段以弧度为单位的角度精度，推荐用numpy.pi / 180
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//threshod : 累加平面的阈值参数，int类型，超过设定阈值才被检测出线段，值越大，基本上意味着检出的线段越长，检出的线段个数越少。根据情况推荐先用100试试
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//lines：这个参数的意义未知，发现不同的lines对结果没影响，但是不要忽略了它的存在 
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//minLineLength：线段以像素为单位的最小长度，根据应用场景设置 
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//maxLineGap：同一方向上两条线段判定为一条线段的最大允许间隔（断裂），超过了设定值，则把两条线段当成一条线段，值越大，允许线段上的断裂越大，越有可能检出潜在的直线段
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="n">vector</span><span class="o">&lt;</span><span class="n">Vec4i</span><span class="o">&gt;</span> <span class="n">mylines</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="n">HoughLinesP</span><span class="p">(</span><span class="n">midImage</span><span class="p">,</span> <span class="n">mylines</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">CV_PI</span><span class="o">/</span><span class="mi">180</span><span class="p">,</span> <span class="n">g_nthreshold</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//循环遍历绘制每一条线段
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span><span class="p">(</span> <span class="n">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">mylines</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span> <span class="n">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">mylines</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl">	<span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="n">Vec4i</span> <span class="n">l</span> <span class="o">=</span> <span class="n">mylines</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl">		<span class="n">line</span><span class="p">(</span> <span class="n">dstImage</span><span class="p">,</span> <span class="n">Point</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">Point</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">l</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="n">Scalar</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span><span class="mi">180</span><span class="p">,</span><span class="mi">55</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">LINE_AA</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//显示图像
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【效果图】&#34;</span><span class="p">,</span><span class="n">dstImage</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【效果图】&#34;</span><span class="p">,</span><span class="n">dstImage</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//--------------------------------【ShowHelpText( )函数】--------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：输出一些帮助信息
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">()</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//输出欢迎信息和OpenCV版本
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">非常感谢购买《OpenCV3编程入门》一书！</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">非常感谢购买《OpenCV3编程入门》一书！</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">此为本书OpenCV3版的第64个配套示例程序</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">   当前使用的OpenCV版本为：&#34;</span> <span class="n">CV_VERSION</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n</span><span class="s">  ----------------------------------------------------------------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//输出一些帮助信息
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\n\t</span><span class="s">请调整滚动条观察图像效果~</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\n\t</span><span class="s">请调整滚动条观察图像效果~</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span> 
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>  （二）显示结果</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2006%20Haff%20transform%20experiment/haff-transform-experiment1.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image01.png"
+	width="567"
+	height="304"
+	srcset="/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image01_hu_74c4adc7acc9a28a.png 480w, /blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image01_hu_3cace72bccbcd8b3.png 1024w"
 	loading="lazy"
 	
 		alt="Haff transform experiment 1"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="447px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2006%20Haff%20transform%20experiment/haff-transform-experiment2.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image02.png"
+	width="567"
+	height="337"
+	srcset="/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image02_hu_9e05bbccee40275e.png 480w, /blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image02_hu_ee6e9f86a5865cf6.png 1024w"
 	loading="lazy"
 	
 		alt="Haff transform experiment 2"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="168"
+		data-flex-basis="403px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2006%20Haff%20transform%20experiment/haff-transform-experiment3.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image03.png"
+	width="567"
+	height="365"
+	srcset="/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image03_hu_e8eb0e243a60592f.png 480w, /blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image03_hu_c3d33fe6a3d6777.png 1024w"
 	loading="lazy"
 	
 		alt="Haff transform experiment 3"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="155"
+		data-flex-basis="372px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2006%20Haff%20transform%20experiment/haff-transform-experiment4.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image04.png"
+	width="567"
+	height="337"
+	srcset="/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image04_hu_69cc42edf8cd66d3.png 480w, /blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image04_hu_6205808f73acc4db.png 1024w"
 	loading="lazy"
 	
 		alt="Haff transform experiment 4"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="168"
+		data-flex-basis="403px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2006%20Haff%20transform%20experiment/haff-transform-experiment5.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image05.png"
+	width="567"
+	height="304"
+	srcset="/blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image05_hu_29f0a0818f05b2b3.png 480w, /blog/p/computer-vision-experiment-6-haff-transform-experiment/images/image05_hu_f2e8c653156cc64.png 1024w"
 	loading="lazy"
 	
 		alt="Haff transform experiment 5"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="447px"
 	
 ></p>
 <h3 id="实验总结">实验总结</h3>
@@ -846,7 +866,7 @@
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

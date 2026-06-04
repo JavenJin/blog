@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Computer Vision' /><meta property='article:tag' content='OpenCV' /><meta property='article:published_time' content='2020-03-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-03-16T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="计算机视觉 - 实验三 图像线性滤波实验">
 <meta name="twitter:description" content="Computer Vision - Experiment 3 - Image linear filtering experiment">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -596,11 +596,11 @@
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//------------------------------【头文件、命名空间包含部分】------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：包含程序所使用的头文件和命名空间
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#include</span> <span class="cpf">&lt;opencv2/core/core.hpp&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;opencv2/core/core.hpp&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;opencv2/highgui/highgui.hpp&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;opencv2/imgproc/imgproc.hpp&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
@@ -608,78 +608,78 @@
 </span></span><span class="line"><span class="cl"><span class="c1">//----------------------------------【全局变量声明部分】---------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//	描述：全局变量声明
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Mat</span> <span class="n">g_srcImage</span><span class="p">,</span><span class="n">g_dstImage1</span><span class="p">,</span><span class="n">g_dstImage2</span><span class="p">,</span><span class="n">g_dstImage3</span><span class="p">;</span><span class="c1">//存储图片的Mat类型
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">g_nBoxFilterValue</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>  <span class="c1">//方框滤波参数值
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">g_nMeanBlurValue</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>  <span class="c1">//均值滤波参数值
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">g_nGaussianBlurValue</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>  <span class="c1">//高斯滤波参数值
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl"><span class="n">Mat</span> <span class="n">g_srcImage</span><span class="p">,</span><span class="n">g_dstImage1</span><span class="p">,</span><span class="n">g_dstImage2</span><span class="p">,</span><span class="n">g_dstImage3</span><span class="p">;</span><span class="c1">//存储图片的Mat类型
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">g_nBoxFilterValue</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>  <span class="c1">//方框滤波参数值
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">g_nMeanBlurValue</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>  <span class="c1">//均值滤波参数值
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">g_nGaussianBlurValue</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>  <span class="c1">//高斯滤波参数值
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//---------------------------------【全局函数声明部分】----------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//	描述：全局函数声明
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//四个轨迹条的回调函数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_BoxFilter</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="p">);</span>		<span class="c1">//方框滤波
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_MeanBlur</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="p">);</span>		<span class="c1">//均值滤波
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_GaussianBlur</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="p">);</span>			<span class="c1">//高斯滤波
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_BoxFilter</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="p">);</span>		<span class="c1">//方框滤波
+</span></span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_MeanBlur</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="p">);</span>		<span class="c1">//均值滤波
+</span></span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_GaussianBlur</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="p">);</span>			<span class="c1">//高斯滤波
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//----------------------------------【main( )函数】------------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//	描述：控制台应用程序的入口函数，我们的程序从这里开始
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span>   <span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span>   <span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//改变console字体颜色
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">system</span><span class="p">(</span><span class="s">&#34;color 5F&#34;</span><span class="p">);</span>  
+</span></span></span><span class="line"><span class="cl">	<span class="n">system</span><span class="p">(</span><span class="s">&#34;color 5F&#34;</span><span class="p">);</span>  
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//输出帮助文字
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">ShowHelpText</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">ShowHelpText</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 载入原图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">g_srcImage</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span> <span class="s">&#34;20170829110313260.png&#34;</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">g_srcImage</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span> <span class="s">&#34;20170829110313260.png&#34;</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">g_srcImage</span><span class="p">.</span><span class="n">data</span> <span class="p">)</span> <span class="p">{</span> <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Oh，no，读取srcImage错误~！ </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//克隆原图到三个Mat类型中
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">g_dstImage1</span> <span class="o">=</span> <span class="n">g_srcImage</span><span class="p">.</span><span class="n">clone</span><span class="p">(</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">g_dstImage1</span> <span class="o">=</span> <span class="n">g_srcImage</span><span class="p">.</span><span class="n">clone</span><span class="p">(</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">g_dstImage2</span> <span class="o">=</span> <span class="n">g_srcImage</span><span class="p">.</span><span class="n">clone</span><span class="p">(</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">g_dstImage3</span> <span class="o">=</span> <span class="n">g_srcImage</span><span class="p">.</span><span class="n">clone</span><span class="p">(</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//显示原图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【&lt;0&gt;原图窗口】&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【&lt;0&gt;原图窗口】&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【&lt;0&gt;原图窗口】&#34;</span><span class="p">,</span><span class="n">g_srcImage</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//=================【&lt;1&gt;方框滤波】==================
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//创建窗口
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【&lt;1&gt;方框滤波】&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//创建窗口
+</span></span></span><span class="line"><span class="cl">	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【&lt;1&gt;方框滤波】&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//创建轨迹条
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">createTrackbar</span><span class="p">(</span><span class="s">&#34;内核值：&#34;</span><span class="p">,</span> <span class="s">&#34;【&lt;1&gt;方框滤波】&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">g_nBoxFilterValue</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="n">on_BoxFilter</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">createTrackbar</span><span class="p">(</span><span class="s">&#34;内核值：&#34;</span><span class="p">,</span> <span class="s">&#34;【&lt;1&gt;方框滤波】&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">g_nBoxFilterValue</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="n">on_BoxFilter</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">on_BoxFilter</span><span class="p">(</span><span class="n">g_nBoxFilterValue</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//================================================
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//=================【&lt;2&gt;均值滤波】==================
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//创建窗口
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【&lt;2&gt;均值滤波】&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//创建窗口
+</span></span></span><span class="line"><span class="cl">	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【&lt;2&gt;均值滤波】&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//创建轨迹条
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">createTrackbar</span><span class="p">(</span><span class="s">&#34;内核值：&#34;</span><span class="p">,</span> <span class="s">&#34;【&lt;2&gt;均值滤波】&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">g_nMeanBlurValue</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span><span class="n">on_MeanBlur</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">createTrackbar</span><span class="p">(</span><span class="s">&#34;内核值：&#34;</span><span class="p">,</span> <span class="s">&#34;【&lt;2&gt;均值滤波】&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">g_nMeanBlurValue</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span><span class="n">on_MeanBlur</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">on_MeanBlur</span><span class="p">(</span><span class="n">g_nMeanBlurValue</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//================================================
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//=================【&lt;3&gt;高斯滤波】=====================
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//创建窗口
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【&lt;3&gt;高斯滤波】&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//创建窗口
+</span></span></span><span class="line"><span class="cl">	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【&lt;3&gt;高斯滤波】&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//创建轨迹条
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">createTrackbar</span><span class="p">(</span><span class="s">&#34;内核值：&#34;</span><span class="p">,</span> <span class="s">&#34;【&lt;3&gt;高斯滤波】&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">g_nGaussianBlurValue</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span><span class="n">on_GaussianBlur</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">createTrackbar</span><span class="p">(</span><span class="s">&#34;内核值：&#34;</span><span class="p">,</span> <span class="s">&#34;【&lt;3&gt;高斯滤波】&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">g_nGaussianBlurValue</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span><span class="n">on_GaussianBlur</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">on_GaussianBlur</span><span class="p">(</span><span class="n">g_nGaussianBlurValue</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//================================================
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//输出一些帮助信息
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="o">&lt;&lt;</span><span class="s">&#34;</span><span class="se">\t</span><span class="s">运行成功，请调整滚动条观察图像效果~</span><span class="se">\n\n</span><span class="s">&#34;</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="o">&lt;&lt;</span><span class="s">&#34;</span><span class="se">\t</span><span class="s">运行成功，请调整滚动条观察图像效果~</span><span class="se">\n\n</span><span class="s">&#34;</span>
 </span></span><span class="line"><span class="cl">		<span class="o">&lt;&lt;</span><span class="s">&#34;</span><span class="se">\t</span><span class="s">按下“q”键时，程序退出。</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//按下“q”键时，程序退出
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">while</span><span class="p">(</span><span class="kt">char</span><span class="p">(</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="o">!=</span> <span class="sc">&#39;q&#39;</span><span class="p">)</span> <span class="p">{}</span>
+</span></span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="p">(</span><span class="kt">char</span><span class="p">(</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="o">!=</span> <span class="sc">&#39;q&#39;</span><span class="p">)</span> <span class="p">{}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -688,58 +688,58 @@
 </span></span><span class="line"><span class="cl"><span class="c1">//----------------------------【on_BoxFilter( )函数】------------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//	描述：方框滤波操作的回调函数
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_BoxFilter</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_BoxFilter</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//方框滤波操作，其主要功能是：在给定的滑动窗口大小下，对每个窗口内的像素值进行快速相加求和
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">boxFilter</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_dstImage1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">Size</span><span class="p">(</span> <span class="n">g_nBoxFilterValue</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">g_nBoxFilterValue</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">boxFilter</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_dstImage1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">Size</span><span class="p">(</span> <span class="n">g_nBoxFilterValue</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">g_nBoxFilterValue</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//显示窗口
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【&lt;1&gt;方框滤波】&#34;</span><span class="p">,</span> <span class="n">g_dstImage1</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【&lt;1&gt;方框滤波】&#34;</span><span class="p">,</span> <span class="n">g_dstImage1</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//-----------------------------【on_MeanBlur( )函数】------------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//	描述：均值滤波操作的回调函数
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_MeanBlur</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_MeanBlur</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//均值滤波操作，均值滤波是一种典型的线性滤波算法，主要是利用像素点邻域的像素值来计算像素点的值。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//其具体方法是首先给出一个滤波模板kernel，该模板将覆盖像素点周围的其他邻域像素点，
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//去掉像素本身，将其邻域像素点相加然后取平均值即为该像素点的新的像素值，这就是均值滤波的本质。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//. Size ksize : 滤波模板kernel的尺寸，一般使用Size(w, h)来指定，如Size(3, 3)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//.Point anchor = Point(-1, -1) : 字面意思是锚点，也就是处理的像素位于kernel的什么位置，
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//默认值为(-1, -1)即位于kernel中心点，如果没有特殊需要则不需要更改
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">blur</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_dstImage2</span><span class="p">,</span> <span class="n">Size</span><span class="p">(</span> <span class="n">g_nMeanBlurValue</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">g_nMeanBlurValue</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//其具体方法是首先给出一个滤波模板kernel，该模板将覆盖像素点周围的其他邻域像素点，
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//去掉像素本身，将其邻域像素点相加然后取平均值即为该像素点的新的像素值，这就是均值滤波的本质。
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//. Size ksize : 滤波模板kernel的尺寸，一般使用Size(w, h)来指定，如Size(3, 3)
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//.Point anchor = Point(-1, -1) : 字面意思是锚点，也就是处理的像素位于kernel的什么位置，
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//默认值为(-1, -1)即位于kernel中心点，如果没有特殊需要则不需要更改
+</span></span></span><span class="line"><span class="cl">	<span class="n">blur</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_dstImage2</span><span class="p">,</span> <span class="n">Size</span><span class="p">(</span> <span class="n">g_nMeanBlurValue</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">g_nMeanBlurValue</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//显示窗口
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【&lt;2&gt;均值滤波】&#34;</span><span class="p">,</span> <span class="n">g_dstImage2</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【&lt;2&gt;均值滤波】&#34;</span><span class="p">,</span> <span class="n">g_dstImage2</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//-----------------------------【ContrastAndBright( )函数】------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//	描述：高斯滤波操作的回调函数
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_GaussianBlur</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_GaussianBlur</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//高斯滤波操作
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//void GaussianBlur(InputArray src, OutputArray dst, Size ksize,
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	double sigmaX, double sigmaY = 0,
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	int borderType = BORDER_DEFAULT);
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//. double sigmaX : 高斯核函数在X方向上的标准偏差
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//. double sigmaY : 高斯核函数在Y方向上的标准偏差
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//如果sigmaX和sigmaY都是0，这两个值将由ksize.width和ksize.height计算而来。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//具体可以参考getGaussianKernel()函数查看具体细节。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">GaussianBlur</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_dstImage3</span><span class="p">,</span> <span class="n">Size</span><span class="p">(</span> <span class="n">g_nGaussianBlurValue</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">g_nGaussianBlurValue</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span> <span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//void GaussianBlur(InputArray src, OutputArray dst, Size ksize,
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	double sigmaX, double sigmaY = 0,
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	int borderType = BORDER_DEFAULT);
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//. double sigmaX : 高斯核函数在X方向上的标准偏差
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//. double sigmaY : 高斯核函数在Y方向上的标准偏差
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//如果sigmaX和sigmaY都是0，这两个值将由ksize.width和ksize.height计算而来。
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//具体可以参考getGaussianKernel()函数查看具体细节。
+</span></span></span><span class="line"><span class="cl">	<span class="n">GaussianBlur</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_dstImage3</span><span class="p">,</span> <span class="n">Size</span><span class="p">(</span> <span class="n">g_nGaussianBlurValue</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">g_nGaussianBlurValue</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span> <span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//显示窗口
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【&lt;3&gt;高斯滤波】&#34;</span><span class="p">,</span> <span class="n">g_dstImage3</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【&lt;3&gt;高斯滤波】&#34;</span><span class="p">,</span> <span class="n">g_dstImage3</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//--------------------------------【ShowHelpText( )函数】--------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		 描述：输出一些帮助信息
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">()</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//输出欢迎信息和OpenCV版本
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">非常感谢购买《OpenCV3编程入门》一书！</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">非常感谢购买《OpenCV3编程入门》一书！</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">此为本书OpenCV3版的第34个配套示例程序</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">   当前使用的OpenCV版本为：&#34;</span> <span class="n">CV_VERSION</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n</span><span class="s">  ----------------------------------------------------------------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
@@ -747,64 +747,88 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>  （二）显示结果</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2003%20Image%20linear%20filtering%20experiment/image-linear-filtering-experiment1.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image01.png"
+	width="549"
+	height="297"
+	srcset="/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image01_hu_6b6f1500e12579ec.png 480w, /blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image01_hu_dbcf356a0a629b3c.png 1024w"
 	loading="lazy"
 	
 		alt="Image linear filtering experiment 1"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="184"
+		data-flex-basis="443px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2003%20Image%20linear%20filtering%20experiment/image-linear-filtering-experiment2.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image02.png"
+	width="282"
+	height="492"
+	srcset="/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image02_hu_29e855810a886a1d.png 480w, /blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image02_hu_5f440261c6007157.png 1024w"
 	loading="lazy"
 	
 		alt="Image linear filtering experiment 2"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="57"
+		data-flex-basis="137px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2003%20Image%20linear%20filtering%20experiment/image-linear-filtering-experiment3.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image03.png"
+	width="567"
+	height="304"
+	srcset="/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image03_hu_8fb299fb4902a75c.png 480w, /blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image03_hu_d9680532dca262b3.png 1024w"
 	loading="lazy"
 	
 		alt="Image linear filtering experiment 3"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="447px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2003%20Image%20linear%20filtering%20experiment/image-linear-filtering-experiment4.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image04.png"
+	width="567"
+	height="304"
+	srcset="/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image04_hu_a806ee82fb35a4a9.png 480w, /blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image04_hu_7380042e33a7fe72.png 1024w"
 	loading="lazy"
 	
 		alt="Image linear filtering experiment 4"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="447px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2003%20Image%20linear%20filtering%20experiment/image-linear-filtering-experiment5.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image05.png"
+	width="567"
+	height="304"
+	srcset="/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image05_hu_815cd7b1f33c9462.png 480w, /blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image05_hu_22fdb645f7fde41.png 1024w"
 	loading="lazy"
 	
 		alt="Image linear filtering experiment 5"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="447px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2003%20Image%20linear%20filtering%20experiment/image-linear-filtering-experiment6.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image06.png"
+	width="550"
+	height="298"
+	srcset="/blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image06_hu_a6243a38f5ae46f4.png 480w, /blog/p/computer-vision-experiment-3-image-linear-filtering-experiment/images/image06_hu_e5ba2d4bacf2f9f5.png 1024w"
 	loading="lazy"
 	
 		alt="Image linear filtering experiment 6"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="184"
+		data-flex-basis="442px"
 	
 ></p>
 <h3 id="实验总结">实验总结</h3>
@@ -931,7 +955,7 @@
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

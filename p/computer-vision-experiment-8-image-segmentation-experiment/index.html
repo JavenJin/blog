@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='计算机视觉 - 实验八 图像分割实验'>
 <title>Computer Vision - Experiment 8 - Image segmentation experiment</title>
@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Computer Vision' /><meta property='article:tag' content='OpenCV' /><meta property='article:published_time' content='2020-04-20T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-04-20T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Computer Vision - Experiment 8 - Image segmentation experiment">
 <meta name="twitter:description" content="计算机视觉 - 实验八 图像分割实验">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -531,18 +531,18 @@
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//-------------------------------【头文件、命名空间包含部分】----------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：包含程序所使用的头文件和命名空间
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#include</span> <span class="cpf">&#34;opencv2/highgui/highgui.hpp&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;opencv2/highgui/highgui.hpp&#34;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;opencv2/core/core.hpp&#34;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;opencv2/imgproc/imgproc.hpp&#34;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//---------------------------------【help( )函数】--------------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		 描述：输出一些帮助信息
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">help</span><span class="p">()</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">help</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n\t</span><span class="s">此程序演示了OpenCV中MeanShift图像分割的使用。</span><span class="se">\n</span><span class="s">&#34;</span>
 </span></span><span class="line"><span class="cl">		<span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n\t</span><span class="s">程序运行后我们可以通过3个滑动条调节分割效果。调节滑动条后可能会有些许卡顿，请耐心等待</span><span class="se">\n</span><span class="s">&#34;</span>
@@ -552,7 +552,7 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//This colors the segmentations
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">floodFillPostprocess</span><span class="p">(</span> <span class="n">Mat</span><span class="o">&amp;</span> <span class="n">img</span><span class="p">,</span> <span class="k">const</span> <span class="n">Scalar</span><span class="o">&amp;</span> <span class="n">colorDiff</span><span class="o">=</span><span class="n">Scalar</span><span class="o">::</span><span class="n">all</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">floodFillPostprocess</span><span class="p">(</span> <span class="n">Mat</span><span class="o">&amp;</span> <span class="n">img</span><span class="p">,</span> <span class="k">const</span> <span class="n">Scalar</span><span class="o">&amp;</span> <span class="n">colorDiff</span><span class="o">=</span><span class="n">Scalar</span><span class="o">::</span><span class="n">all</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="n">CV_Assert</span><span class="p">(</span> <span class="o">!</span><span class="n">img</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">RNG</span> <span class="n">rng</span> <span class="o">=</span> <span class="n">theRNG</span><span class="p">();</span>
@@ -591,7 +591,7 @@
 </span></span><span class="line"><span class="cl"><span class="c1">//--------------------------【main( )函数】--------------------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：控制台应用程序的入口函数，我们的程序从这里开始
 </span></span></span><span class="line"><span class="cl"><span class="c1">//------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="n">help</span><span class="p">();</span>
@@ -617,54 +617,74 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>   (ii) Show results</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2008%20Image%20segmentation%20experiment/image-segmentation-experimet1.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image01.png"
+	width="565"
+	height="304"
+	srcset="/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image01_hu_dba1fc370198663.png 480w, /blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image01_hu_fbd696f8142efe00.png 1024w"
 	loading="lazy"
 	
 		alt="Image segmentation experiment 1"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="446px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2008%20Image%20segmentation%20experiment/image-segmentation-experimet2.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image02.png"
+	width="340"
+	height="366"
+	srcset="/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image02_hu_89cb8957ef1db09a.png 480w, /blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image02_hu_f3ee954a271d1d4f.png 1024w"
 	loading="lazy"
 	
 		alt="Image segmentation experiment 2"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="92"
+		data-flex-basis="222px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2008%20Image%20segmentation%20experiment/image-segmentation-experimet3.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image03.png"
+	width="340"
+	height="506"
+	srcset="/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image03_hu_5b264f3cfe4012d1.png 480w, /blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image03_hu_5e4ae62864c3d999.png 1024w"
 	loading="lazy"
 	
 		alt="Image segmentation experiment 3"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="67"
+		data-flex-basis="161px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2008%20Image%20segmentation%20experiment/image-segmentation-experimet4.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image04.png"
+	width="562"
+	height="294"
+	srcset="/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image04_hu_9d9098562235fe4e.png 480w, /blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image04_hu_9bcd040aea6b9c99.png 1024w"
 	loading="lazy"
 	
 		alt="Image segmentation experiment 4"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="191"
+		data-flex-basis="458px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2008%20Image%20segmentation%20experiment/image-segmentation-experimet5.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image05.png"
+	width="562"
+	height="304"
+	srcset="/blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image05_hu_c755510fa5f5f413.png 480w, /blog/p/computer-vision-experiment-8-image-segmentation-experiment/images/image05_hu_96315c404e5bd64c.png 1024w"
 	loading="lazy"
 	
 		alt="Image segmentation experiment 5"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="184"
+		data-flex-basis="443px"
 	
 ></p>
 <h3 id="experiment-summary">Experiment Summary</h3>
@@ -791,7 +811,7 @@
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

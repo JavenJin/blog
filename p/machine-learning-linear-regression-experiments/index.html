@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='机器学习 - 线性回归实验'>
 <title>Machine Learning - Linear regression experiments</title>
@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Machine Learning' /><meta property='article:tag' content='Python' /><meta property='article:published_time' content='2019-10-21T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2019-10-21T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Machine Learning - Linear regression experiments">
 <meta name="twitter:description" content="机器学习 - 线性回归实验">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -422,14 +422,18 @@
 <p>We ran linear regression with publicly available machine learning data from UCI University.</p>
 <p>The data can be downloaded here:<a class="link" href="https://archive.ics.uci.edu/ml/datasets/combined&#43;cycle&#43;power&#43;plant"  target="_blank" rel="noopener"
     >https://archive.ics.uci.edu/ml/datasets/combined+cycle+power+plant</a> The downloaded data can be found as a compressed file, after decompression there is an xlsx file, open it with excel, save it as a csv format, and later use this csv format file to run linear regression.</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments1.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-linear-regression-experiments/images/image01.png"
+	width="1167"
+	height="138"
+	srcset="/blog/p/machine-learning-linear-regression-experiments/images/image01_hu_3673ad849b3a9033.png 480w, /blog/p/machine-learning-linear-regression-experiments/images/image01_hu_86429a6afd2bdd7.png 1024w"
 	loading="lazy"
 	
 		alt="linear regression experiments"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="845"
+		data-flex-basis="2029px"
 	
 ></p>
 <p>This is a cyclic generation field data with 9568 sample data, each with 5 columns: $AT$ (Temperature), $V$ (Pressure), $AP$ (Humidity), $RH$ (Pressure), $PE$ (Output power). We don&rsquo;t need to get hung up on the exact meaning of each item.</p>
@@ -501,24 +505,32 @@ $$</p>
 </span></span><span class="line"><span class="cl"><span class="n">scatter_matrix</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments2.png"
-	
-	
-	
+</div><p><img src="/blog/p/machine-learning-linear-regression-experiments/images/image02.png"
+	width="843"
+	height="479"
+	srcset="/blog/p/machine-learning-linear-regression-experiments/images/image02_hu_a927fe26390b8a53.png 480w, /blog/p/machine-learning-linear-regression-experiments/images/image02_hu_8476cf2439a8c8e1.png 1024w"
 	loading="lazy"
 	
 		alt="2.6 Data visualization, histogram display"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="175"
+		data-flex-basis="422px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments3.png"
-	
-	
-	
+<p><img src="/blog/p/machine-learning-linear-regression-experiments/images/image03.png"
+	width="760"
+	height="794"
+	srcset="/blog/p/machine-learning-linear-regression-experiments/images/image03_hu_4b5c68ebd4a2dec2.png 480w, /blog/p/machine-learning-linear-regression-experiments/images/image03_hu_5ea69316d13afe14.png 1024w"
 	loading="lazy"
 	
 		alt="2.7 Scatter matrix"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="95"
+		data-flex-basis="229px"
 	
 ></p>
 <h4 id="3-prepare-data">3. Prepare data</h4>
@@ -534,14 +546,18 @@ $$</p>
 </span></span><span class="line"><span class="cl"><span class="n">X</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments4.png"
-	
-	
-	
+</div><p><img src="/blog/p/machine-learning-linear-regression-experiments/images/image04.png"
+	width="345"
+	height="251"
+	srcset="/blog/p/machine-learning-linear-regression-experiments/images/image04_hu_1d257791bd703d1f.png 480w, /blog/p/machine-learning-linear-regression-experiments/images/image04_hu_9553f5b7922074f4.png 1024w"
 	loading="lazy"
 	
 		alt="Prepare data"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="137"
+		data-flex-basis="329px"
 	
 ></p>
 <p>Prepare the sample output $y$, and we use $PE$ as the sample output.</p>
@@ -745,14 +761,18 @@ Note: $X$, $y$ and the values returned by model.fit() are 2-D arrays, e.g., $a=[
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;RMSE:&#34;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">metrics</span><span class="o">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">predicted</span><span class="p">)))</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments5.png"
-	
-	
-	
+</div><p><img src="/blog/p/machine-learning-linear-regression-experiments/images/image05.png"
+	width="561"
+	height="182"
+	srcset="/blog/p/machine-learning-linear-regression-experiments/images/image05_hu_92d9df5f44346d80.png 480w, /blog/p/machine-learning-linear-regression-experiments/images/image05_hu_75041386b37fc495.png 1024w"
 	loading="lazy"
 	
 		alt="Cross-validation 10-fold cross-validation"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="308"
+		data-flex-basis="739px"
 	
 ></p>
 <h4 id="6-graphical-observation-of-the-results">6. Graphical observation of the results</h4>
@@ -777,14 +797,18 @@ Note: $X$, $y$ and the values returned by model.fit() are 2-D arrays, e.g., $a=[
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Machine%20Learning/Linear%20regression%20experiments/linear-regression-experiments6.png"
-	
-	
-	
+</div><p><img src="/blog/p/machine-learning-linear-regression-experiments/images/image06.png"
+	width="486"
+	height="400"
+	srcset="/blog/p/machine-learning-linear-regression-experiments/images/image06_hu_20c217e66f329cb.png 480w, /blog/p/machine-learning-linear-regression-experiments/images/image06_hu_791240b9034bc10c.png 1024w"
 	loading="lazy"
 	
 		alt="Graphical observation of the results"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="121"
+		data-flex-basis="291px"
 	
 ></p>
 <h4 id="7-python-program-full-source-code">7. python program full source code</h4>
@@ -1080,7 +1104,7 @@ Note: $X$, $y$ and the values returned by model.fit() are 2-D arrays, e.g., $a=[
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

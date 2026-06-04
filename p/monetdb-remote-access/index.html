@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='MonetDB远程访问'>
 <title>MonetDB Remote Access</title>
@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Database' /><meta property='article:published_time' content='2022-05-11T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-05-11T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="MonetDB Remote Access">
 <meta name="twitter:description" content="MonetDB远程访问">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -409,29 +409,41 @@
     
     <h1 id="monetdb-remote-access">MonetDB Remote Access</h1>
 <h2 id="first-of-all-we-should-know-that-the-normal-way-to-start-monetdb-is-to-run-the-m5serverbat-file-directly-from-the-installation-directory">First of all, we should know that the normal way to start MonetDB is to run the M5server.bat file directly from the installation directory</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MonetDB%20Remote%20Access/monetdb-remote-access-1.png"
-	
-	
-	
+<p><img src="/blog/p/monetdb-remote-access/images/image01.png"
+	width="903"
+	height="631"
+	srcset="/blog/p/monetdb-remote-access/images/image01_hu_229bf7849ea0dca2.png 480w, /blog/p/monetdb-remote-access/images/image01_hu_dea0242b4202debb.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="143"
+		data-flex-basis="343px"
 	
 ></p>
 <h2 id="after-starting-up-the-following-picture-at-this-time-directly-using-another-computers-dbeaver-connection-will-prompt-that-the-connection-is-rejected">After starting up, the following picture, at this time directly using another computer&rsquo;s DBeaver connection will prompt that the connection is rejected</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MonetDB%20Remote%20Access/monetdb-remote-access-2.png"
-	
-	
-	
+<p><img src="/blog/p/monetdb-remote-access/images/image02.png"
+	width="983"
+	height="518"
+	srcset="/blog/p/monetdb-remote-access/images/image02_hu_9e448be8cbe8f813.png 480w, /blog/p/monetdb-remote-access/images/image02_hu_154d06f997cd801e.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="189"
+		data-flex-basis="455px"
 	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MonetDB%20Remote%20Access/monetdb-remote-access-3.png"
-	
-	
-	
+<p><img src="/blog/p/monetdb-remote-access/images/image03.png"
+	width="457"
+	height="186"
+	srcset="/blog/p/monetdb-remote-access/images/image03_hu_39ca6eee031ee9d6.png 480w, /blog/p/monetdb-remote-access/images/image03_hu_68e57658f7ea590e.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="245"
+		data-flex-basis="589px"
 	
 ></p>
 <h2 id="edit-the-m5serverbat-file-in-the-installation-directory-and-add-the-set-mapi_listenaddrall-parameter-to-the-start-the-real-server-command-below">Edit the M5server.bat file in the installation directory and add the &ndash;set &ldquo;mapi_listenaddr=all&rdquo; parameter to the start the real server command below</h2>
@@ -443,30 +455,42 @@
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">--set &#34;mapi_listenaddr=all&#34;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MonetDB%20Remote%20Access/monetdb-remote-access-4.png"
-	
-	
-	
+</div><p><img src="/blog/p/monetdb-remote-access/images/image04.png"
+	width="1310"
+	height="616"
+	srcset="/blog/p/monetdb-remote-access/images/image04_hu_efd42a7601390cca.png 480w, /blog/p/monetdb-remote-access/images/image04_hu_4329c25dcf8123d3.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="212"
+		data-flex-basis="510px"
 	
 ></p>
 <h2 id="save-the-file-and-re-run-m5serverbat">Save the file and re-run M5server.bat</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MonetDB%20Remote%20Access/monetdb-remote-access-5.png"
-	
-	
-	
+<p><img src="/blog/p/monetdb-remote-access/images/image05.png"
+	width="985"
+	height="515"
+	srcset="/blog/p/monetdb-remote-access/images/image05_hu_ed733534765d8c5a.png 480w, /blog/p/monetdb-remote-access/images/image05_hu_6182d12c31774f5f.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="191"
+		data-flex-basis="459px"
 	
 ></p>
 <h2 id="finish">Finish</h2>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/MonetDB%20Remote%20Access/monetdb-remote-access-6.png"
-	
-	
-	
+<p><img src="/blog/p/monetdb-remote-access/images/image06.png"
+	width="412"
+	height="144"
+	srcset="/blog/p/monetdb-remote-access/images/image06_hu_e3a1fb928824568.png 480w, /blog/p/monetdb-remote-access/images/image06_hu_3b1a47863fbbcb8a.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="286"
+		data-flex-basis="686px"
 	
 ></p>
 <h2 id="references">References</h2>
@@ -592,7 +616,7 @@
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

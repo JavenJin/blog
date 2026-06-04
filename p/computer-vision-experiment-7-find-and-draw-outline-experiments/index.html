@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='计算机视觉 - 实验七 查找并绘制轮廓实验'>
 <title>Computer Vision - Experiment 7 - Find and draw outline experiments</title>
@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Computer Vision' /><meta property='article:tag' content='OpenCV' /><meta property='article:published_time' content='2020-04-15T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-04-15T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Computer Vision - Experiment 7 - Find and draw outline experiments">
 <meta name="twitter:description" content="计算机视觉 - 实验七 查找并绘制轮廓实验">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -557,24 +557,24 @@
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//----------------------------【头文件、命名空间包含部分】----------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：包含程序所使用的头文件和命名空间
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#include</span> <span class="cpf">&#34;opencv2/highgui/highgui.hpp&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;opencv2/highgui/highgui.hpp&#34;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;opencv2/imgproc/imgproc.hpp&#34;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//----------------------------【宏定义部分】-------------------------------------------- 
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：定义一些辅助宏 
 </span></span></span><span class="line"><span class="cl"><span class="c1">//------------------------------------------------------------------------------------- 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#define WINDOW_NAME1 &#34;【原始图窗口】&#34;			</span><span class="c1">//为窗口标题定义的宏 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#define WINDOW_NAME2 &#34;【轮廓图】&#34;					</span><span class="c1">//为窗口标题定义的宏 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define WINDOW_NAME1 &#34;【原始图窗口】&#34;			</span><span class="c1">//为窗口标题定义的宏 
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define WINDOW_NAME2 &#34;【轮廓图】&#34;					</span><span class="c1">//为窗口标题定义的宏 
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//----------------------------【全局变量声明部分】--------------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：全局变量的声明
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Mat</span> <span class="n">g_srcImage</span><span class="p">;</span> 
+</span></span></span><span class="line"><span class="cl"><span class="n">Mat</span> <span class="n">g_srcImage</span><span class="p">;</span> 
 </span></span><span class="line"><span class="cl"><span class="n">Mat</span> <span class="n">g_grayImage</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">g_nThresh</span> <span class="o">=</span> <span class="mi">80</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">g_nThresh_max</span> <span class="o">=</span> <span class="mi">255</span><span class="p">;</span>
@@ -587,35 +587,35 @@
 </span></span><span class="line"><span class="cl"><span class="c1">//----------------------------【全局函数声明部分】--------------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：全局函数的声明
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">(</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">(</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">on_ThreshChange</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//---------------------------【main( )函数】--------------------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：控制台应用程序的入口函数，我们的程序从这里开始执行
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span> <span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//【0】改变console字体颜色
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">system</span><span class="p">(</span><span class="s">&#34;color 1F&#34;</span><span class="p">);</span> 
+</span></span></span><span class="line"><span class="cl">	<span class="n">system</span><span class="p">(</span><span class="s">&#34;color 1F&#34;</span><span class="p">);</span> 
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//【0】显示欢迎和帮助文字
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">ShowHelpText</span><span class="p">(</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">ShowHelpText</span><span class="p">(</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 加载源图像
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">g_srcImage</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span> <span class="s">&#34;1.jpg&#34;</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">g_srcImage</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span> <span class="s">&#34;1.jpg&#34;</span><span class="p">,</span> <span class="mi">1</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">g_srcImage</span><span class="p">.</span><span class="n">data</span> <span class="p">)</span> <span class="p">{</span> <span class="n">printf</span><span class="p">(</span><span class="s">&#34;读取图片错误，请确定目录下是否有imread函数指定的图片存在~！ </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span> <span class="p">}</span> 
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 转成灰度并模糊化降噪
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">cvtColor</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_grayImage</span><span class="p">,</span> <span class="n">COLOR_BGR2GRAY</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">cvtColor</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_grayImage</span><span class="p">,</span> <span class="n">COLOR_BGR2GRAY</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">blur</span><span class="p">(</span> <span class="n">g_grayImage</span><span class="p">,</span> <span class="n">g_grayImage</span><span class="p">,</span> <span class="n">Size</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 创建窗口
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">namedWindow</span><span class="p">(</span> <span class="n">WINDOW_NAME1</span><span class="p">,</span> <span class="n">WINDOW_AUTOSIZE</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">namedWindow</span><span class="p">(</span> <span class="n">WINDOW_NAME1</span><span class="p">,</span> <span class="n">WINDOW_AUTOSIZE</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span> <span class="n">WINDOW_NAME1</span><span class="p">,</span> <span class="n">g_srcImage</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//创建滚动条并初始化
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">createTrackbar</span><span class="p">(</span> <span class="s">&#34;canny阈值&#34;</span><span class="p">,</span> <span class="n">WINDOW_NAME1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">g_nThresh</span><span class="p">,</span> <span class="n">g_nThresh_max</span><span class="p">,</span> <span class="n">on_ThreshChange</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">createTrackbar</span><span class="p">(</span> <span class="s">&#34;canny阈值&#34;</span><span class="p">,</span> <span class="n">WINDOW_NAME1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">g_nThresh</span><span class="p">,</span> <span class="n">g_nThresh_max</span><span class="p">,</span> <span class="n">on_ThreshChange</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">on_ThreshChange</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="n">waitKey</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
@@ -625,44 +625,44 @@
 </span></span><span class="line"><span class="cl"><span class="c1">//-----------------------------【on_ThreshChange( )函数】------------------------------  
 </span></span></span><span class="line"><span class="cl"><span class="c1">//      描述：回调函数
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------  
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">on_ThreshChange</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">on_ThreshChange</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 用Canny算子检测边缘
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Canny</span><span class="p">(</span> <span class="n">g_grayImage</span><span class="p">,</span> <span class="n">g_cannyMat_output</span><span class="p">,</span> <span class="n">g_nThresh</span><span class="p">,</span> <span class="n">g_nThresh</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">Canny</span><span class="p">(</span> <span class="n">g_grayImage</span><span class="p">,</span> <span class="n">g_cannyMat_output</span><span class="p">,</span> <span class="n">g_nThresh</span><span class="p">,</span> <span class="n">g_nThresh</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;canny&#34;</span><span class="p">,</span> <span class="n">g_cannyMat_output</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 寻找轮廓
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//void findContours(InputOutputArray image, OutputArrayOfArrays contours,
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	OutputArray hierarchy, int mode,
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	int method, Point offset = Point());
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">findContours</span><span class="p">(</span> <span class="n">g_cannyMat_output</span><span class="p">,</span> <span class="n">g_vContours</span><span class="p">,</span> <span class="n">g_vHierarchy</span><span class="p">,</span> <span class="n">RETR_TREE</span><span class="p">,</span> <span class="n">CHAIN_APPROX_SIMPLE</span><span class="p">,</span> <span class="n">Point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//void findContours(InputOutputArray image, OutputArrayOfArrays contours,
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	OutputArray hierarchy, int mode,
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	int method, Point offset = Point());
+</span></span></span><span class="line"><span class="cl">	<span class="n">findContours</span><span class="p">(</span> <span class="n">g_cannyMat_output</span><span class="p">,</span> <span class="n">g_vContours</span><span class="p">,</span> <span class="n">g_vHierarchy</span><span class="p">,</span> <span class="n">RETR_TREE</span><span class="p">,</span> <span class="n">CHAIN_APPROX_SIMPLE</span><span class="p">,</span> <span class="n">Point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 绘出轮廓
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Mat</span> <span class="n">drawing</span> <span class="o">=</span> <span class="n">Mat</span><span class="o">::</span><span class="n">zeros</span><span class="p">(</span> <span class="n">g_cannyMat_output</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="n">CV_8UC3</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">drawing</span> <span class="o">=</span> <span class="n">Mat</span><span class="o">::</span><span class="n">zeros</span><span class="p">(</span> <span class="n">g_cannyMat_output</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="n">CV_8UC3</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span> <span class="n">g_vContours</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl">	<span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="n">Scalar</span> <span class="n">color</span> <span class="o">=</span> <span class="n">Scalar</span><span class="p">(</span> <span class="n">g_rng</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="n">g_rng</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">),</span> <span class="n">g_rng</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">)</span> <span class="p">);</span><span class="c1">//任意值
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">drawContours</span><span class="p">(</span> <span class="n">drawing</span><span class="p">,</span> <span class="n">g_vContours</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">g_vHierarchy</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Point</span><span class="p">()</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">		<span class="n">drawContours</span><span class="p">(</span> <span class="n">drawing</span><span class="p">,</span> <span class="n">g_vContours</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">g_vHierarchy</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Point</span><span class="p">()</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 显示效果图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">imshow</span><span class="p">(</span> <span class="n">WINDOW_NAME2</span><span class="p">,</span> <span class="n">drawing</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span> <span class="n">WINDOW_NAME2</span><span class="p">,</span> <span class="n">drawing</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//----------------------------【ShowHelpText( )函数】----------------------------------  
 </span></span></span><span class="line"><span class="cl"><span class="c1">//      描述：输出一些帮助信息  
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------  
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">()</span>  
+</span></span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">()</span>  
 </span></span><span class="line"><span class="cl"><span class="p">{</span>  
 </span></span><span class="line"><span class="cl">	<span class="c1">//输出欢迎信息和OpenCV版本
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">非常感谢购买《OpenCV3编程入门》一书！</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">非常感谢购买《OpenCV3编程入门》一书！</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">此为本书OpenCV3版的第70个配套示例程序</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">   当前使用的OpenCV版本为：&#34;</span> <span class="n">CV_VERSION</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n</span><span class="s">  ----------------------------------------------------------------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//输出一些帮助信息  
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">printf</span><span class="p">(</span>   <span class="s">&#34;</span><span class="se">\n\n\t</span><span class="s">欢迎来到【在图形中寻找轮廓】示例程序~</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">);</span>  
+</span></span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span>   <span class="s">&#34;</span><span class="se">\n\n\t</span><span class="s">欢迎来到【在图形中寻找轮廓】示例程序~</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">);</span>  
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span>   <span class="s">&#34;</span><span class="se">\n\n\t</span><span class="s">按键操作说明: </span><span class="se">\n\n</span><span class="s">&#34;</span>  
 </span></span><span class="line"><span class="cl">		<span class="s">&#34;</span><span class="se">\t\t</span><span class="s">键盘按键任意键- 退出程序</span><span class="se">\n\n</span><span class="s">&#34;</span>  
 </span></span><span class="line"><span class="cl">		<span class="s">&#34;</span><span class="se">\t\t</span><span class="s">滑动滚动条-改变阈值</span><span class="se">\n</span><span class="s">&#34;</span> <span class="p">);</span>  
@@ -670,54 +670,74 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>   (ii) Show results</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2007%20Find%20and%20draw%20outline%20experiments/find-and-draw-outline-experiments1.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image01.png"
+	width="565"
+	height="304"
+	srcset="/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image01_hu_875237ed44fad956.png 480w, /blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image01_hu_bbd176d89cf27e4a.png 1024w"
 	loading="lazy"
 	
 		alt="Find and draw outline experiments 1"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="446px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2007%20Find%20and%20draw%20outline%20experiments/find-and-draw-outline-experiments2.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image02.png"
+	width="204"
+	height="416"
+	srcset="/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image02_hu_642997ecc68b96a8.png 480w, /blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image02_hu_3dccfb40fdbfa724.png 1024w"
 	loading="lazy"
 	
 		alt="Find and draw outline experiments 2"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="49"
+		data-flex-basis="117px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2007%20Find%20and%20draw%20outline%20experiments/find-and-draw-outline-experiments3.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image03.png"
+	width="222"
+	height="416"
+	srcset="/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image03_hu_35df75a34d13eb27.png 480w, /blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image03_hu_47e3657b2990e8a8.png 1024w"
 	loading="lazy"
 	
 		alt="Find and draw outline experiments 3"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="53"
+		data-flex-basis="128px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2007%20Find%20and%20draw%20outline%20experiments/find-and-draw-outline-experiments4.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image04.png"
+	width="222"
+	height="416"
+	srcset="/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image04_hu_2ce6407161fe04eb.png 480w, /blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image04_hu_7fb34a0b4d55a755.png 1024w"
 	loading="lazy"
 	
 		alt="Find and draw outline experiments 4"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="53"
+		data-flex-basis="128px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2007%20Find%20and%20draw%20outline%20experiments/find-and-draw-outline-experiments5.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image05.png"
+	width="562"
+	height="304"
+	srcset="/blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image05_hu_1e647234d41c9e06.png 480w, /blog/p/computer-vision-experiment-7-find-and-draw-outline-experiments/images/image05_hu_3d9cd3dd25504d44.png 1024w"
 	loading="lazy"
 	
 		alt="Find and draw outline experiments 5"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="184"
+		data-flex-basis="443px"
 	
 ></p>
 <h3 id="experiment-summary">Experiment Summary</h3>
@@ -844,7 +864,7 @@
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

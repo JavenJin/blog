@@ -5,6 +5,8 @@
         <link>https://javenjin.github.io/blog/categories/java-programming-language/</link>
         <description>Recent content in Java (Programming Language) on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language><atom:link href="https://javenjin.github.io/blog/categories/java-programming-language/index.xml" rel="self" type="application/rss+xml" />
+        <language>en-us</language>
+        <managingEditor>wenjie.jin@hotmail.com (Javen)</managingEditor>
+        <webMaster>wenjie.jin@hotmail.com (Javen)</webMaster><atom:link href="https://javenjin.github.io/blog/categories/java-programming-language/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

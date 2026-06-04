@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C (Programming Language)' /><meta property='article:tag' content='Dijkstra' /><meta property='article:published_time' content='2019-11-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2019-11-27T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="校园导游系统（纯C语言实现）最短路径 - Dijkstra算法">
 <meta name="twitter:description" content="Campus tour guide system (pure C implementation) Shortest path - Dijkstra algorithm">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -932,16 +932,16 @@
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;conio.h&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;graphics.h&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">      
 </span></span><span class="line"><span class="cl"><span class="cp">#define MaxViewNum 50      </span><span class="cm">/*景点个数最大50*/</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#define MaxRoad 10000      </span><span class="cm">/*定义路径为无穷大*/</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">int</span> <span class="n">dist</span><span class="p">[</span><span class="n">MaxViewNum</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="kt">int</span> <span class="n">path</span><span class="p">[</span><span class="n">MaxViewNum</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//定义三个结构体表示图中内容 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">typedef</span> <span class="k">struct</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">struct</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">30</span><span class="p">];</span>          <span class="cm">/*景点名称*/</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="n">introduce</span><span class="p">[</span><span class="mi">200</span><span class="p">];</span>    <span class="cm">/*景点介绍*/</span>	
@@ -1085,10 +1085,10 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">zengj</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>  <span class="kt">char</span> <span class="n">s1</span><span class="p">[</span><span class="mi">30</span><span class="p">],</span><span class="n">s2</span><span class="p">[</span><span class="mi">200</span><span class="p">];</span>    <span class="c1">//景点名称；景点介绍 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="kt">int</span> <span class="n">t</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span>        <span class="c1">//t为与该景点共有几个景点相连；i为应第几个景点与之相连；
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                           <span class="c1">//q为与之相连的景点；p为这个景点和新景点的距离 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                           <span class="c1">//x为此景点位置的x值；y为此景点位置的y值 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="n">N</span><span class="o">++</span><span class="p">;</span>  
+</span></span></span><span class="line"><span class="cl">   <span class="kt">int</span> <span class="n">t</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span>        <span class="c1">//t为与该景点共有几个景点相连；i为应第几个景点与之相连；
+</span></span></span><span class="line"><span class="cl">                           <span class="c1">//q为与之相连的景点；p为这个景点和新景点的距离 
+</span></span></span><span class="line"><span class="cl">                           <span class="c1">//x为此景点位置的x值；y为此景点位置的y值 
+</span></span></span><span class="line"><span class="cl">   <span class="n">N</span><span class="o">++</span><span class="p">;</span>  
 </span></span><span class="line"><span class="cl">   <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入该景点的名称：&#34;</span><span class="p">);</span>                 
 </span></span><span class="line"><span class="cl">   <span class="nf">scanf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">s1</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">   <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;请输入该景点的介绍：&#34;</span><span class="p">);</span>
@@ -1566,7 +1566,7 @@
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

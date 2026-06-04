@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Snowflake 中的 SHOW TABLES'>
 <title>SHOW TABLES in Snowflake</title>
@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Database' /><meta property='article:published_time' content='2024-02-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-02-02T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="SHOW TABLES in Snowflake">
 <meta name="twitter:description" content="Snowflake 中的 SHOW TABLES">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -438,59 +438,67 @@
 </span></span><span class="line"><span class="cl">        TestTable2(table)
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/SHOW%20TABLES%20in%20Snowflake/SHOW-TABLES-in-Snowflake-1.png"
-	
-	
-	
+</div><p><img src="/blog/p/show-tables-in-snowflake/images/image01.png"
+	width="281"
+	height="735"
+	srcset="/blog/p/show-tables-in-snowflake/images/image01_hu_37bb182be9f6c27c.png 480w, /blog/p/show-tables-in-snowflake/images/image01_hu_d3df96a332712911.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="38"
+		data-flex-basis="91px"
 	
 ></p>
 <p>At this point, the result of executing SHOW TABLES is as follows:</p>
 <div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: left"><strong>created_on</strong></th>
-          <th><strong>name</strong></th>
-          <th><strong>database_name</strong></th>
-          <th><strong>schema_name</strong></th>
-          <th><strong>kind</strong></th>
-          <th><strong>owner</strong></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left">2024-02-01 23:30:24.534 -0800</td>
-          <td>TestTable</td>
-          <td>Snowflake Schema Test</td>
-          <td>JAVEN</td>
-          <td>TABLE</td>
-          <td>ACCOUNTADMIN</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">2024-02-01 23:30:30.178 -0800</td>
-          <td>TestTable1</td>
-          <td>Snowflake Schema Test</td>
-          <td>JAVEN</td>
-          <td>TABLE</td>
-          <td>ACCOUNTADMIN</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">2024-02-01 23:30:36.126 -0800</td>
-          <td>TestTable2</td>
-          <td>Snowflake Schema Test</td>
-          <td>PUBLIC</td>
-          <td>TABLE</td>
-          <td>ACCOUNTADMIN</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: left"><strong>created_on</strong></th>
+					<th><strong>name</strong></th>
+					<th><strong>database_name</strong></th>
+					<th><strong>schema_name</strong></th>
+					<th><strong>kind</strong></th>
+					<th><strong>owner</strong></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">2024-02-01 23:30:24.534 -0800</td>
+					<td>TestTable</td>
+					<td>Snowflake Schema Test</td>
+					<td>JAVEN</td>
+					<td>TABLE</td>
+					<td>ACCOUNTADMIN</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">2024-02-01 23:30:30.178 -0800</td>
+					<td>TestTable1</td>
+					<td>Snowflake Schema Test</td>
+					<td>JAVEN</td>
+					<td>TABLE</td>
+					<td>ACCOUNTADMIN</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">2024-02-01 23:30:36.126 -0800</td>
+					<td>TestTable2</td>
+					<td>Snowflake Schema Test</td>
+					<td>PUBLIC</td>
+					<td>TABLE</td>
+					<td>ACCOUNTADMIN</td>
+			</tr>
+	</tbody>
 </table></div>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/SHOW%20TABLES%20in%20Snowflake/SHOW-TABLES-in-Snowflake-2.png"
-	
-	
-	
+<p><img src="/blog/p/show-tables-in-snowflake/images/image02.png"
+	width="1067"
+	height="732"
+	srcset="/blog/p/show-tables-in-snowflake/images/image02_hu_58fd2127cc95d8b1.png 480w, /blog/p/show-tables-in-snowflake/images/image02_hu_ba1cc565093f8a9a.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="145"
+		data-flex-basis="349px"
 	
 ></p>
 <p>Obviously, there are 5 tables in the database, but the query comes up with only 3 tables.</p>
@@ -539,65 +547,69 @@
 </div><p>Since no database is specified, the current default database is used, which happens to be in the range we expect.</p>
 <p>The return result is as follows:</p>
 <div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th style="text-align: left"><strong>created_on</strong></th>
-          <th><strong>name</strong></th>
-          <th><strong>database_name</strong></th>
-          <th><strong>schema_name</strong></th>
-          <th><strong>kind</strong></th>
-          <th><strong>owner</strong></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: left">2024-02-01 23:30:24.534 -0800</td>
-          <td>TestTable</td>
-          <td>Snowflake Schema Test</td>
-          <td>JAVEN</td>
-          <td>TABLE</td>
-          <td>ACCOUNTADMIN</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">2024-02-01 23:30:30.178 -0800</td>
-          <td>TestTable1</td>
-          <td>Snowflake Schema Test</td>
-          <td>JAVEN</td>
-          <td>TABLE</td>
-          <td>ACCOUNTADMIN</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">2024-02-01 23:29:33.955 -0800</td>
-          <td>TestTable</td>
-          <td>Snowflake Schema Test</td>
-          <td>PUBLIC</td>
-          <td>TABLE</td>
-          <td>ACCOUNTADMIN</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">2024-02-01 23:29:42.900 -0800</td>
-          <td>TestTable1</td>
-          <td>Snowflake Schema Test</td>
-          <td>PUBLIC</td>
-          <td>TABLE</td>
-          <td>ACCOUNTADMIN</td>
-      </tr>
-      <tr>
-          <td style="text-align: left">2024-02-01 23:30:36.126 -0800</td>
-          <td>TestTable2</td>
-          <td>Snowflake Schema Test</td>
-          <td>PUBLIC</td>
-          <td>TABLE</td>
-          <td>ACCOUNTADMIN</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th style="text-align: left"><strong>created_on</strong></th>
+					<th><strong>name</strong></th>
+					<th><strong>database_name</strong></th>
+					<th><strong>schema_name</strong></th>
+					<th><strong>kind</strong></th>
+					<th><strong>owner</strong></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">2024-02-01 23:30:24.534 -0800</td>
+					<td>TestTable</td>
+					<td>Snowflake Schema Test</td>
+					<td>JAVEN</td>
+					<td>TABLE</td>
+					<td>ACCOUNTADMIN</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">2024-02-01 23:30:30.178 -0800</td>
+					<td>TestTable1</td>
+					<td>Snowflake Schema Test</td>
+					<td>JAVEN</td>
+					<td>TABLE</td>
+					<td>ACCOUNTADMIN</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">2024-02-01 23:29:33.955 -0800</td>
+					<td>TestTable</td>
+					<td>Snowflake Schema Test</td>
+					<td>PUBLIC</td>
+					<td>TABLE</td>
+					<td>ACCOUNTADMIN</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">2024-02-01 23:29:42.900 -0800</td>
+					<td>TestTable1</td>
+					<td>Snowflake Schema Test</td>
+					<td>PUBLIC</td>
+					<td>TABLE</td>
+					<td>ACCOUNTADMIN</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">2024-02-01 23:30:36.126 -0800</td>
+					<td>TestTable2</td>
+					<td>Snowflake Schema Test</td>
+					<td>PUBLIC</td>
+					<td>TABLE</td>
+					<td>ACCOUNTADMIN</td>
+			</tr>
+	</tbody>
 </table></div>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Database/SHOW%20TABLES%20in%20Snowflake/SHOW-TABLES-in-Snowflake-3.png"
-	
-	
-	
+<p><img src="/blog/p/show-tables-in-snowflake/images/image03.png"
+	width="1067"
+	height="732"
+	srcset="/blog/p/show-tables-in-snowflake/images/image03_hu_df7c7810d7bc4656.png 480w, /blog/p/show-tables-in-snowflake/images/image03_hu_2f45d813eae3d28e.png 1024w"
 	loading="lazy"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="145"
+		data-flex-basis="349px"
 	
 ></p>
 
@@ -720,7 +732,7 @@
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

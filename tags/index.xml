@@ -5,12 +5,14 @@
         <link>https://javenjin.github.io/blog/tags/</link>
         <description>Recent content in Tags on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
+        <language>en-us</language>
+        <managingEditor>wenjie.jin@hotmail.com (Javen)</managingEditor>
+        <webMaster>wenjie.jin@hotmail.com (Javen)</webMaster>
         <lastBuildDate>Mon, 24 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Tools</title>
         <link>https://javenjin.github.io/blog/tags/tools/</link>
         <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/tags/tools/</guid>
         <description></description>
         </item>
@@ -18,7 +20,7 @@
         <title>Database</title>
         <link>https://javenjin.github.io/blog/tags/database/</link>
         <pubDate>Fri, 02 Feb 2024 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/tags/database/</guid>
         <description></description>
         </item>
@@ -26,7 +28,7 @@
         <title>C Sharp</title>
         <link>https://javenjin.github.io/blog/tags/c-sharp/</link>
         <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/tags/c-sharp/</guid>
         <description></description>
         </item>
@@ -34,7 +36,7 @@
         <title>Algorithm</title>
         <link>https://javenjin.github.io/blog/tags/algorithm/</link>
         <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/tags/algorithm/</guid>
         <description></description>
         </item>
@@ -42,7 +44,7 @@
         <title>Java (Programming Language)</title>
         <link>https://javenjin.github.io/blog/tags/java-programming-language/</link>
         <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/tags/java-programming-language/</guid>
         <description></description>
         </item>
@@ -50,7 +52,7 @@
         <title>Machine Learning</title>
         <link>https://javenjin.github.io/blog/tags/machine-learning/</link>
         <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/tags/machine-learning/</guid>
         <description></description>
         </item>
@@ -58,7 +60,7 @@
         <title>Python</title>
         <link>https://javenjin.github.io/blog/tags/python/</link>
         <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/tags/python/</guid>
         <description></description>
         </item>
@@ -66,7 +68,7 @@
         <title>Design Pattern</title>
         <link>https://javenjin.github.io/blog/tags/design-pattern/</link>
         <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/tags/design-pattern/</guid>
         <description></description>
         </item>
@@ -74,7 +76,7 @@
         <title>Java</title>
         <link>https://javenjin.github.io/blog/tags/java/</link>
         <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/tags/java/</guid>
         <description></description>
         </item>
@@ -82,7 +84,7 @@
         <title>C (Programming Language)</title>
         <link>https://javenjin.github.io/blog/tags/c-programming-language/</link>
         <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/tags/c-programming-language/</guid>
         <description></description>
         </item>
@@ -90,7 +92,7 @@
         <title>CSS</title>
         <link>https://javenjin.github.io/blog/tags/css/</link>
         <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/tags/css/</guid>
         <description></description>
         </item>
@@ -98,7 +100,7 @@
         <title>Front End</title>
         <link>https://javenjin.github.io/blog/tags/front-end/</link>
         <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/tags/front-end/</guid>
         <description></description>
         </item>
@@ -106,7 +108,7 @@
         <title>Html</title>
         <link>https://javenjin.github.io/blog/tags/html/</link>
         <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/tags/html/</guid>
         <description></description>
         </item>
@@ -114,7 +116,7 @@
         <title>JavaScript</title>
         <link>https://javenjin.github.io/blog/tags/javascript/</link>
         <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/tags/javascript/</guid>
         <description></description>
         </item>
@@ -122,7 +124,7 @@
         <title>Computer Vision</title>
         <link>https://javenjin.github.io/blog/tags/computer-vision/</link>
         <pubDate>Fri, 12 Jun 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/tags/computer-vision/</guid>
         <description></description>
         </item>
@@ -130,7 +132,7 @@
         <title>OpenCV</title>
         <link>https://javenjin.github.io/blog/tags/opencv/</link>
         <pubDate>Fri, 12 Jun 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/tags/opencv/</guid>
         <description></description>
         </item>
@@ -138,7 +140,7 @@
         <title>Dijkstra</title>
         <link>https://javenjin.github.io/blog/tags/dijkstra/</link>
         <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/tags/dijkstra/</guid>
         <description></description>
         </item>

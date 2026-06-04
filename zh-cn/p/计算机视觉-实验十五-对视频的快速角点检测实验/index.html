@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Computer Vision' /><meta property='article:tag' content='OpenCV' /><meta property='article:published_time' content='2020-06-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-06-10T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="计算机视觉 - 实验十五 对视频的快速角点检测实验">
 <meta name="twitter:description" content="Computer Vision - Experiment 15 - Fast corner point detection experiments on video">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -513,33 +513,33 @@
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//------------------------------【头文件、命名空间包含部分】----------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：包含程序所使用的头文件和命名空间
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#include</span> <span class="cpf">&#34;opencv2/calib3d/calib3d.hpp&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;opencv2/calib3d/calib3d.hpp&#34;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;opencv2/highgui/highgui.hpp&#34;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;opencv2/imgproc/imgproc.hpp&#34;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;opencv2/features2d/features2d.hpp&#34;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;list&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="c1">//---------------------------------【help( )函数】--------------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		 描述：输出一些帮助信息
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-----------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">Harris</span><span class="p">(</span><span class="n">Mat</span> <span class="o">&amp;</span><span class="n">img</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">grayImage</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//转换灰度图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">cvtColor</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">grayImage</span><span class="p">,</span> <span class="n">CV_BGR2GRAY</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">cvtColor</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">grayImage</span><span class="p">,</span> <span class="n">CV_BGR2GRAY</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//开始进行角点检测  
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">vector</span><span class="o">&lt;</span><span class="n">Point2f</span><span class="o">&gt;</span> <span class="n">dstPoint2f</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">vector</span><span class="o">&lt;</span><span class="n">Point2f</span><span class="o">&gt;</span> <span class="n">dstPoint2f</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="n">goodFeaturesToTrack</span><span class="p">(</span><span class="n">grayImage</span><span class="p">,</span> <span class="n">dstPoint2f</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">Mat</span><span class="p">(),</span> <span class="mi">3</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//遍历每个点，进行绘制，便于显示  
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//Mat dstImage;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//img.copyTo(dstImage);
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">dstPoint2f</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//Mat dstImage;
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//img.copyTo(dstImage);
+</span></span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">dstPoint2f</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">	<span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="n">circle</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">dstPoint2f</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="mi">3</span><span class="p">,</span> <span class="n">Scalar</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">),</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
@@ -548,7 +548,7 @@
 </span></span><span class="line"><span class="cl"><span class="c1">//---------------------------【main( )函数】--------------------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：控制台应用程序的入口函数，我们的程序从这里开始
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="n">VideoCapture</span> <span class="n">capture</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="n">capture</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="s">&#34;1.avi&#34;</span><span class="p">);</span>
@@ -570,60 +570,80 @@
 </span></span><span class="line"><span class="cl">		<span class="n">Harris</span><span class="p">(</span><span class="n">frame</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">		<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;frame&#34;</span><span class="p">,</span> <span class="n">frame</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">		<span class="n">waitKey</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>  <span class="c1">//延时30ms
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">}</span>
+</span></span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span> 
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>  （二）显示结果</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2015%20Fast%20corner%20point%20detection%20experiments%20on%20video/fast-corner-point-detection-experiments-on-video1.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image01.png"
+	width="544"
+	height="292"
+	srcset="/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image01_hu_d3bb794ac019f358.png 480w, /blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image01_hu_66e6670d2ebc307e.png 1024w"
 	loading="lazy"
 	
 		alt="Fast corner point detection experiments on video 1"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="447px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2015%20Fast%20corner%20point%20detection%20experiments%20on%20video/fast-corner-point-detection-experiments-on-video2.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image02.png"
+	width="558"
+	height="340"
+	srcset="/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image02_hu_24e59381944b8cf4.png 480w, /blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image02_hu_9153af6370a63907.png 1024w"
 	loading="lazy"
 	
 		alt="Fast corner point detection experiments on video 2"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="164"
+		data-flex-basis="393px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2015%20Fast%20corner%20point%20detection%20experiments%20on%20video/fast-corner-point-detection-experiments-on-video3.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image03.png"
+	width="237"
+	height="348"
+	srcset="/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image03_hu_9024e43268e1b909.png 480w, /blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image03_hu_d1334202d094d75b.png 1024w"
 	loading="lazy"
 	
 		alt="Fast corner point detection experiments on video 3"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="68"
+		data-flex-basis="163px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2015%20Fast%20corner%20point%20detection%20experiments%20on%20video/fast-corner-point-detection-experiments-on-video4.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image04.png"
+	width="253"
+	height="348"
+	srcset="/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image04_hu_605f907c020819a5.png 480w, /blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image04_hu_726e366407281edd.png 1024w"
 	loading="lazy"
 	
 		alt="Fast corner point detection experiments on video 4"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="72"
+		data-flex-basis="174px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2015%20Fast%20corner%20point%20detection%20experiments%20on%20video/fast-corner-point-detection-experiments-on-video5.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image05.png"
+	width="357"
+	height="491"
+	srcset="/blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image05_hu_bb18977263ebe19a.png 480w, /blog/p/computer-vision-experiment-15-fast-corner-point-detection-experiments-on-video/images/image05_hu_ebfe0f1425650822.png 1024w"
 	loading="lazy"
 	
 		alt="Fast corner point detection experiments on video 5"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="72"
+		data-flex-basis="174px"
 	
 ></p>
 <h3 id="实验总结">实验总结</h3>
@@ -750,7 +770,7 @@
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

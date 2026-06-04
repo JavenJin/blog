@@ -6,11 +6,13 @@
         <description>Recent content in JavaScript on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
+        <managingEditor>wenjie.jin@hotmail.com (Javen)</managingEditor>
+        <webMaster>wenjie.jin@hotmail.com (Javen)</webMaster>
         <lastBuildDate>Mon, 27 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/tags/javascript/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Web前端开发技术课程大作业</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF%E8%AF%BE%E7%A8%8B%E5%A4%A7%E4%BD%9C%E4%B8%9A/</link>
         <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/p/web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF%E8%AF%BE%E7%A8%8B%E5%A4%A7%E4%BD%9C%E4%B8%9A/</guid>
         <description>&lt;h2 id=&#34;web前端开发技术课程大作业&#34;&gt;Web前端开发技术课程大作业&lt;/h2&gt;
 &lt;h3 id=&#34;作业要求&#34;&gt;作业要求&lt;/h3&gt;
@@ -22,64 +24,88 @@
 &lt;p&gt;（4）广告轮播。广告轮播实现了重要客户的主要产品核心位置展示功能。&lt;/p&gt;
 &lt;p&gt;（5）搜索入口。搜索功能提供客户搜索定位功能，可以帮助客户快速找到需要的产品。&lt;/p&gt;
 &lt;h3 id=&#34;最终界面&#34;&gt;最终界面&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework1.jpeg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image01.jpeg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1032&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image01_hu_b08ec9ef40afaae5.jpeg 480w, https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image01_hu_7be01d9ab9eca015.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;homework1&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;446px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework2.jpeg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image02.jpeg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1031&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image02_hu_e59a98725a24d392.jpeg 480w, https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image02_hu_f2cc7e5195335993.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;homework2&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;446px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework3.jpeg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image03.jpeg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1032&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image03_hu_e3fb6ba32d107815.jpeg 480w, https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image03_hu_fdc80aa6b1256367.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;homework3&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;446px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework4.jpeg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image04.jpeg&#34;
+	width=&#34;1920&#34;
+	height=&#34;875&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image04_hu_6b5b03c98116f3cf.jpeg 480w, https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image04_hu_dce5fa32515c2e88.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;homework4&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;219&#34;
+		data-flex-basis=&#34;526px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework5.jpeg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image05.jpeg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1030&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image05_hu_dfcbbfcc63eb463b.jpeg 480w, https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image05_hu_b84b51ddec384596.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;homework5&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;447px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework6.jpeg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image06.jpeg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1031&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image06_hu_f44f2c5084765498.jpeg 480w, https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image06_hu_a176e0585d94f7a4.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;homework6&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;446px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;代码&#34;&gt;代码&lt;/h3&gt;

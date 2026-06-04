@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='计算机视觉 - 实验十一 LBP变换实验'>
 <title>Computer Vision - Experiment 11 - LBP transformation experiment</title>
@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Computer Vision' /><meta property='article:tag' content='OpenCV' /><meta property='article:published_time' content='2020-05-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-05-13T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Computer Vision - Experiment 11 - LBP transformation experiment">
 <meta name="twitter:description" content="计算机视觉 - 实验十一 LBP变换实验">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -553,12 +553,12 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;opencv2/opencv.hpp&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;limits&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//原始的LBP算法
 </span></span></span><span class="line"><span class="cl"><span class="c1">//使用模板参数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">/**
 </span></span></span><span class="line"><span class="cl"><span class="cm">*将原图去除最外围的一圈，里面的每个都作为中心点，来计算这个中心点相应矩形区域
 </span></span></span><span class="line"><span class="cl"><span class="cm">*的lbp特征值。
 </span></span></span><span class="line"><span class="cl"><span class="cm">*算出来的这个lbp特征值，就是目标mat的值，
@@ -591,34 +591,34 @@
 </span></span><span class="line"><span class="cl"><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">_Tp</span><span class="o">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">ELBP_</span><span class="p">(</span><span class="k">const</span> <span class="n">Mat</span><span class="o">&amp;</span> <span class="n">src</span><span class="p">,</span> <span class="n">Mat</span><span class="o">&amp;</span> <span class="n">dst</span><span class="p">,</span> <span class="kt">int</span> <span class="n">radius</span><span class="p">,</span> <span class="kt">int</span> <span class="n">neighbors</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="n">neighbors</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">min</span><span class="p">(</span><span class="n">neighbors</span><span class="p">,</span> <span class="mi">31</span><span class="p">),</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// set bounds...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>											<span class="c1">// Note: alternatively you can switch to the new OpenCV Mat_
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>											<span class="c1">// type system to define an unsigned int matrix... I am probably
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>											<span class="c1">// mistaken here, but I didn&#39;t see an unsigned int representation
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>											<span class="c1">// in OpenCV&#39;s classic typesystem...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">dst</span> <span class="o">=</span> <span class="n">Mat</span><span class="o">::</span><span class="n">zeros</span><span class="p">(</span><span class="n">src</span><span class="p">.</span><span class="n">rows</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">radius</span><span class="p">,</span> <span class="n">src</span><span class="p">.</span><span class="n">cols</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">radius</span><span class="p">,</span> <span class="n">CV_32SC1</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">											<span class="c1">// Note: alternatively you can switch to the new OpenCV Mat_
+</span></span></span><span class="line"><span class="cl">											<span class="c1">// type system to define an unsigned int matrix... I am probably
+</span></span></span><span class="line"><span class="cl">											<span class="c1">// mistaken here, but I didn&#39;t see an unsigned int representation
+</span></span></span><span class="line"><span class="cl">											<span class="c1">// in OpenCV&#39;s classic typesystem...
+</span></span></span><span class="line"><span class="cl">	<span class="n">dst</span> <span class="o">=</span> <span class="n">Mat</span><span class="o">::</span><span class="n">zeros</span><span class="p">(</span><span class="n">src</span><span class="p">.</span><span class="n">rows</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">radius</span><span class="p">,</span> <span class="n">src</span><span class="p">.</span><span class="n">cols</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">radius</span><span class="p">,</span> <span class="n">CV_32SC1</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">n</span><span class="o">&lt;</span><span class="n">neighbors</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="c1">// sample points
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kt">float</span> <span class="n">x</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">M_PI</span><span class="o">*</span><span class="n">n</span> <span class="o">/</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">neighbors</span><span class="p">));</span>
+</span></span></span><span class="line"><span class="cl">		<span class="kt">float</span> <span class="n">x</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">M_PI</span><span class="o">*</span><span class="n">n</span> <span class="o">/</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">neighbors</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">		<span class="kt">float</span> <span class="n">y</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span> <span class="o">*</span> <span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">M_PI</span><span class="o">*</span><span class="n">n</span> <span class="o">/</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">neighbors</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">		<span class="c1">// relative indices
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kt">int</span> <span class="n">fx</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">floor</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
+</span></span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">fx</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">floor</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">fy</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">floor</span><span class="p">(</span><span class="n">y</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">cx</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">ceil</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">cy</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">ceil</span><span class="p">(</span><span class="n">y</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">		<span class="c1">// fractional part
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kt">float</span> <span class="n">ty</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">fy</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">		<span class="kt">float</span> <span class="n">ty</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">fy</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">		<span class="kt">float</span> <span class="n">tx</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">fx</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">		<span class="c1">// set interpolation weights
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kt">float</span> <span class="n">w1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">tx</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">ty</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">		<span class="kt">float</span> <span class="n">w1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">tx</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">ty</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">		<span class="kt">float</span> <span class="n">w2</span> <span class="o">=</span> <span class="n">tx</span>  <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">ty</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">		<span class="kt">float</span> <span class="n">w3</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">tx</span><span class="p">)</span> <span class="o">*</span>      <span class="n">ty</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">		<span class="kt">float</span> <span class="n">w4</span> <span class="o">=</span> <span class="n">tx</span>  <span class="o">*</span>      <span class="n">ty</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">		<span class="c1">// iterate through your data
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">radius</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">src</span><span class="p">.</span><span class="n">rows</span> <span class="o">-</span> <span class="n">radius</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">radius</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">src</span><span class="p">.</span><span class="n">rows</span> <span class="o">-</span> <span class="n">radius</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">			<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">radius</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">src</span><span class="p">.</span><span class="n">cols</span> <span class="o">-</span> <span class="n">radius</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">				<span class="kt">float</span> <span class="n">t</span> <span class="o">=</span> <span class="n">w1</span><span class="o">*</span><span class="n">src</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="n">_Tp</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">fy</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="n">fx</span><span class="p">)</span> <span class="o">+</span> <span class="n">w2</span><span class="o">*</span><span class="n">src</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="n">_Tp</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">fy</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="n">cx</span><span class="p">)</span> <span class="o">+</span> <span class="n">w3</span><span class="o">*</span><span class="n">src</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="n">_Tp</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">cy</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="n">fx</span><span class="p">)</span> <span class="o">+</span> <span class="n">w4</span><span class="o">*</span><span class="n">src</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="n">_Tp</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">cy</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="n">cx</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">				<span class="c1">// we are dealing with floating point precision, so add some little tolerance
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="n">dst</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="n">radius</span><span class="p">,</span> <span class="n">j</span> <span class="o">-</span> <span class="n">radius</span><span class="p">)</span> <span class="o">+=</span> <span class="p">((</span><span class="n">t</span> <span class="o">&gt;</span> <span class="n">src</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="n">_Tp</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">src</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="n">_Tp</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span> <span class="o">&gt;</span> <span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">epsilon</span><span class="p">()))</span> <span class="o">&lt;&lt;</span> <span class="n">n</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">				<span class="n">dst</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="n">radius</span><span class="p">,</span> <span class="n">j</span> <span class="o">-</span> <span class="n">radius</span><span class="p">)</span> <span class="o">+=</span> <span class="p">((</span><span class="n">t</span> <span class="o">&gt;</span> <span class="n">src</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="n">_Tp</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">src</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="n">_Tp</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">))</span> <span class="o">&gt;</span> <span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;::</span><span class="n">epsilon</span><span class="p">()))</span> <span class="o">&lt;&lt;</span> <span class="n">n</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">			<span class="p">}</span>
 </span></span><span class="line"><span class="cl">		<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
@@ -635,25 +635,25 @@
 </span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">olbp_face</span> <span class="o">=</span> <span class="n">Mat</span><span class="o">::</span><span class="n">zeros</span><span class="p">(</span><span class="n">color_face</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="n">color_face</span><span class="p">.</span><span class="n">type</span><span class="p">());</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//change to grey color picture
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">cvtColor</span><span class="p">(</span><span class="n">color_face</span><span class="p">,</span> <span class="n">olbp_face</span><span class="p">,</span> <span class="n">CV_BGR2GRAY</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">cvtColor</span><span class="p">(</span><span class="n">color_face</span><span class="p">,</span> <span class="n">olbp_face</span><span class="p">,</span> <span class="n">CV_BGR2GRAY</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//显示原始的输入图像
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">cvNamedWindow</span><span class="p">(</span><span class="s">&#34;Src Image&#34;</span><span class="p">,</span> <span class="n">CV_WINDOW_AUTOSIZE</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">cvNamedWindow</span><span class="p">(</span><span class="s">&#34;Src Image&#34;</span><span class="p">,</span> <span class="n">CV_WINDOW_AUTOSIZE</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;Src Image&#34;</span><span class="p">,</span> <span class="n">olbp_face</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//计算输入图像的LBP纹理特征
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Mat</span> <span class="n">lbp_face</span><span class="p">;</span><span class="c1">//= Mat::zeros(color_face.size(),color_face.type()) ;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">OLBP_</span><span class="o">&lt;</span><span class="n">uchar</span><span class="o">&gt;</span><span class="p">(</span><span class="n">olbp_face</span><span class="p">,</span> <span class="n">lbp_face</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">lbp_face</span><span class="p">;</span><span class="c1">//= Mat::zeros(color_face.size(),color_face.type()) ;
+</span></span></span><span class="line"><span class="cl">	<span class="n">OLBP_</span><span class="o">&lt;</span><span class="n">uchar</span><span class="o">&gt;</span><span class="p">(</span><span class="n">olbp_face</span><span class="p">,</span> <span class="n">lbp_face</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//显示LBP纹理特征图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;LBP Image1&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;LBP Image1&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;LBP Image1&#34;</span><span class="p">,</span> <span class="n">lbp_face</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//use elbp
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//  Mat elbp_face;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//  ELBP_&lt;uchar&gt;(olbp_face,elbp_face,2,4);
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//  Mat elbp_face;
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//  ELBP_&lt;uchar&gt;(olbp_face,elbp_face,2,4);
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="n">waitKey</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
@@ -662,44 +662,60 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>   (ii) Show results</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2011%20LBP%20transformation%20experiment/lbp-transformation-experiment1.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image01.png"
+	width="564"
+	height="303"
+	srcset="/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image01_hu_89e84373d4e383d9.png 480w, /blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image01_hu_840d146caafe1cd4.png 1024w"
 	loading="lazy"
 	
 		alt="LBP transformation experiment 1"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="446px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2011%20LBP%20transformation%20experiment/lbp-transformation-experiment2.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image02.png"
+	width="241"
+	height="397"
+	srcset="/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image02_hu_97da50788d6c5cef.png 480w, /blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image02_hu_2b1ffe2e756a444d.png 1024w"
 	loading="lazy"
 	
 		alt="LBP transformation experiment 2"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="60"
+		data-flex-basis="145px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2011%20LBP%20transformation%20experiment/lbp-transformation-experiment3.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image03.png"
+	width="241"
+	height="397"
+	srcset="/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image03_hu_a68a0f86a9d68bb2.png 480w, /blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image03_hu_4e789e707adcf91a.png 1024w"
 	loading="lazy"
 	
 		alt="LBP transformation experiment 3"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="60"
+		data-flex-basis="145px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2011%20LBP%20transformation%20experiment/lbp-transformation-experiment4.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image04.png"
+	width="562"
+	height="302"
+	srcset="/blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image04_hu_1829c5ada828ba42.png 480w, /blog/p/computer-vision-experiment-11-lbp-transformation-experiment/images/image04_hu_dae69c73335179e1.png 1024w"
 	loading="lazy"
 	
 		alt="LBP transformation experiment 4"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="446px"
 	
 ></p>
 <h3 id="experiment-summary">Experiment summary</h3>
@@ -826,7 +842,7 @@
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

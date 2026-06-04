@@ -5,12 +5,14 @@
         <link>https://javenjin.github.io/blog/categories/c-sharp/</link>
         <description>Recent content in C Sharp on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
+        <language>en-us</language>
+        <managingEditor>wenjie.jin@hotmail.com (Javen)</managingEditor>
+        <webMaster>wenjie.jin@hotmail.com (Javen)</webMaster>
         <lastBuildDate>Mon, 20 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/categories/c-sharp/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Get current operating system information (c#)</title>
         <link>https://javenjin.github.io/blog/p/get-current-operating-system-information-c/</link>
         <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/p/get-current-operating-system-information-c/</guid>
         <description>&lt;h1 id=&#34;get-current-operating-system-information-c&#34;&gt;Get current operating system information (c#)&lt;/h1&gt;
 &lt;h2 id=&#34;systemruntimeinteropservicesosplatform&#34;&gt;System.Runtime.InteropServices.OSPlatform&lt;/h2&gt;

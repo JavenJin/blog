@@ -5,12 +5,14 @@
         <link>https://javenjin.github.io/blog/categories/tools/</link>
         <description>Recent content in Tools on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
+        <language>en-us</language>
+        <managingEditor>wenjie.jin@hotmail.com (Javen)</managingEditor>
+        <webMaster>wenjie.jin@hotmail.com (Javen)</webMaster>
         <lastBuildDate>Mon, 24 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/categories/tools/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Deploy a Personal Photo Album Accessible Anytime, Anywhere on Your Personal Computer</title>
         <link>https://javenjin.github.io/blog/p/deploy-a-personal-photo-album-accessible-anytime-anywhere-on-your-personal-computer/</link>
         <pubDate>Mon, 24 Nov 2025 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/p/deploy-a-personal-photo-album-accessible-anytime-anywhere-on-your-personal-computer/</guid>
         <description>&lt;h1 id=&#34;deploy-a-personal-photo-album-accessible-anytime-anywhere-on-your-personal-computer&#34;&gt;Deploy a Personal Photo Album Accessible Anytime, Anywhere on Your Personal Computer&lt;/h1&gt;
 &lt;p&gt;The goal is to install &lt;em&gt;Immich&lt;/em&gt; (a self-hosted photo/video backup server that supports mobile backup, similar to Google Photos) on a personal computer as the core backup service, and use &lt;em&gt;Tailscale&lt;/em&gt; (a zero-configuration VPN tool based on WireGuard) to enable remote access (securely exposing the local service to the public network).&lt;/p&gt;
@@ -135,7 +137,7 @@
         <title>Setting Black Mode in Chrome</title>
         <link>https://javenjin.github.io/blog/p/setting-black-mode-in-chrome/</link>
         <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/p/setting-black-mode-in-chrome/</guid>
         <description>&lt;h1 id=&#34;setting-black-mode-in-chrome&#34;&gt;Setting Black Mode in Chrome&lt;/h1&gt;
 &lt;p&gt;Enter the following address in the URL field:&lt;/p&gt;
@@ -148,22 +150,30 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;After clicking Enter, the following is displayed:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Setting%20Black%20Mode%20in%20Chrome/setting-blank-mode-in-chrome-1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/setting-black-mode-in-chrome/images/image01.png&#34;
+	width=&#34;1216&#34;
+	height=&#34;737&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/setting-black-mode-in-chrome/images/image01_hu_fc94cc5471188c92.png 480w, https://javenjin.github.io/blog/p/setting-black-mode-in-chrome/images/image01_hu_41d7f9e70a3a9469.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;164&#34;
+		data-flex-basis=&#34;395px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Set the value of Auto Dark Mode for Web Contents to Enabled.&lt;/p&gt;
 &lt;p&gt;Just click Relaunch below to restart Chrome after setting it up.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Setting%20Black%20Mode%20in%20Chrome/setting-blank-mode-in-chrome-2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/setting-black-mode-in-chrome/images/image02.png&#34;
+	width=&#34;1024&#34;
+	height=&#34;737&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/setting-black-mode-in-chrome/images/image02_hu_998f547bf02ef9ee.png 480w, https://javenjin.github.io/blog/p/setting-black-mode-in-chrome/images/image02_hu_30faf5ec2e1a1fd5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;138&#34;
+		data-flex-basis=&#34;333px&#34;
 	
 &gt;&lt;/p&gt;
 </description>
@@ -172,7 +182,7 @@
         <title>Git error - connection to github.com failed on port 443</title>
         <link>https://javenjin.github.io/blog/p/git-error-connection-to-github.com-failed-on-port-443/</link>
         <pubDate>Wed, 17 Jan 2024 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/p/git-error-connection-to-github.com-failed-on-port-443/</guid>
         <description>&lt;h1 id=&#34;git-error-connection-to-githubcom-failed-on-port-443&#34;&gt;Git error: connection to github.com failed on port 443&lt;/h1&gt;
 &lt;p&gt;This problem occurs mainly with proxies.&lt;/p&gt;
@@ -247,7 +257,7 @@
         <title>GitHub Actions (Sending Timed Weather Emails)</title>
         <link>https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/</link>
         <pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/</guid>
         <description>&lt;h1 id=&#34;github-actions-sending-timed-weather-emails&#34;&gt;GitHub Actions: Sending Timed Weather Emails&lt;/h1&gt;
 &lt;p&gt;Toward the end of 2019, GitHub officially opened up &lt;a class=&#34;link&#34; href=&#34;https://github.com/features/actions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -267,12 +277,16 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;The above command will return, the weather for the current IP address.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image01.png&#34;
+	width=&#34;1140&#34;
+	height=&#34;759&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image01_hu_56306b0968cda73b.png 480w, https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image01_hu_e86fa6f6d15abdd.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;We can specify the city in the URL.&lt;/p&gt;
@@ -284,12 +298,16 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl wttr.in/Xian
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails2.png&#34;
-	
-	
-	
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image02.png&#34;
+	width=&#34;1139&#34;
+	height=&#34;780&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image02_hu_34b4e74b4b0a62dc.png 480w, https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image02_hu_d36e672bd323c03e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;350px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;The returned data can be saved to a file to be sent later, using the &lt;code&gt;-o&lt;/code&gt; parameter of the &lt;code&gt;curl&lt;/code&gt; command.&lt;/p&gt;
@@ -301,12 +319,16 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -o result.html wttr.in/Xian
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails3.png&#34;
-	
-	
-	
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image03.png&#34;
+	width=&#34;1138&#34;
+	height=&#34;919&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image03_hu_1f87842c6e0f081e.png 480w, https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image03_hu_34af42be02874578.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;123&#34;
+		data-flex-basis=&#34;297px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;wttr.in allows customization of the format and content of the weather forecast, as detailed in &lt;a class=&#34;link&#34; href=&#34;https://github.com/chubin/wttr.in&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -329,7 +351,7 @@
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/sh
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -eux
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;CITY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;Xian
@@ -337,9 +359,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;UNIT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;m
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;Accept-Language: &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$LANGUAGE&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  -o result.html &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  wttr.in/&lt;span class=&#34;nv&#34;&gt;$CITY&lt;/span&gt;?format&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;4&lt;span class=&#34;se&#34;&gt;\&amp;amp;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$UNIT&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;Accept-Language: &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$LANGUAGE&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -o result.html &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  wttr.in/&lt;span class=&#34;nv&#34;&gt;$CITY&lt;/span&gt;?format&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;4&lt;span class=&#34;se&#34;&gt;\&amp;amp;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$UNIT&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;configuring-an-outgoing-mail-account&#34;&gt;Configuring an Outgoing Mail Account&lt;/h2&gt;
@@ -354,23 +376,31 @@
 &lt;p&gt;Click on Settings and choose to set POP3/SMTP/IMAP&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails4.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image04.png&#34;
+	width=&#34;1085&#34;
+	height=&#34;666&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image04_hu_263832abe10a16dc.png 480w, https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image04_hu_486ab0c009549ff4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;162&#34;
+		data-flex-basis=&#34;390px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;Click Add Authorization Password to save that authorization password&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails5.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image05.png&#34;
+	width=&#34;699&#34;
+	height=&#34;276&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image05_hu_d109c63d770f00b.png 480w, https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image05_hu_75215295ad216f7b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;253&#34;
+		data-flex-basis=&#34;607px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;configuring-github-actions&#34;&gt;Configuring GitHub Actions&lt;/h2&gt;
@@ -388,7 +418,7 @@
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;GitHub Action Weather Bot&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;push&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;schedule&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;cron&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;0 0 * * *&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -455,12 +485,16 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;In the above code, the email is sent using an action that has already been written and can be used with just a few parameters. Among the parameters, the username and password of the mail SMTP server are encrypted variables, which need to be set in the &lt;code&gt;settings/secrets&lt;/code&gt; menu of the project.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails6.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image06.png&#34;
+	width=&#34;1433&#34;
+	height=&#34;831&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image06_hu_8419eb238ebd8c56.png 480w, https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image06_hu_d180e0e4ee344cf0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;172&#34;
+		data-flex-basis=&#34;413px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;https://github.com/JavenJin/weather-action/blob/main/.github/workflows/weather.yml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -500,12 +534,12 @@
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;GitHub Action Weather Bot&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;push&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;schedule&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;cron&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;0 0 * * *&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;jobs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;jobs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;bot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;runs-on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ubuntu-latest&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;steps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
@@ -532,12 +566,16 @@
 &lt;/div&gt;&lt;p&gt;After writing the configuration and pushing it to the repository, you can receive a weather forecast email early in the morning every day. It&amp;rsquo;s not hard to expand on this by executing various scripts at regular intervals (e.g., checking whether a site is online every 5 minutes) and then sending the results to a specified channel, etc.&lt;/p&gt;
 &lt;h2 id=&#34;successfully-sent&#34;&gt;Successfully sent&lt;/h2&gt;
 &lt;p&gt;After successful configuration, you will receive the day&amp;rsquo;s weather email at a fixed time every day.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails/GitHub%20Actions%20Sending%20Timed%20Weather%20Emails7.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image07.png&#34;
+	width=&#34;789&#34;
+	height=&#34;694&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image07_hu_1333675657a2bb50.png 480w, https://javenjin.github.io/blog/p/github-actions-sending-timed-weather-emails/images/image07_hu_cdb27391911ad2ea.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;113&#34;
+		data-flex-basis=&#34;272px&#34;
 	
 &gt;&lt;/p&gt;
 </description>
@@ -546,7 +584,7 @@
         <title>Install Ubuntu on Windows subsystem using WSL2 technology</title>
         <link>https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/</link>
         <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/</guid>
         <description>&lt;h1 id=&#34;install-ubuntu-on-windows-subsystem-using-wsl2-technology&#34;&gt;Install Ubuntu on Windows subsystem using WSL2 technology&lt;/h1&gt;
 &lt;h2 id=&#34;install-wsl2&#34;&gt;Install WSL2&lt;/h2&gt;
@@ -598,47 +636,67 @@
     &gt;https://linuxhostsupport.com/blog/how-to-install-and-configure-docker-compose-on-ubuntu-20-04/&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;open-the-microsoft-store-and-select-the-ubuntu-version-to-download&#34;&gt;Open the &lt;a class=&#34;link&#34; href=&#34;https://aka.ms/wslstore&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Microsoft Store&lt;/a&gt; and select the Ubuntu version to download&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image01.png&#34;
+	width=&#34;1210&#34;
+	height=&#34;830&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image01_hu_e7c726021b0e6d8a.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image01_hu_aa9d3036a97393a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;145&#34;
+		data-flex-basis=&#34;349px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image02.png&#34;
+	width=&#34;1219&#34;
+	height=&#34;836&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image02_hu_a7f3e39e09914103.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image02_hu_95d77d60f29bd8eb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;145&#34;
+		data-flex-basis=&#34;349px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;wait-for-the-automatic-installation-to-succeed&#34;&gt;Wait for the automatic installation to succeed&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-3.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image03.png&#34;
+	width=&#34;1213&#34;
+	height=&#34;833&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image03_hu_5613be8507592f65.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image03_hu_daacdbe7e577d8a8.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;145&#34;
+		data-flex-basis=&#34;349px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;start-ubuntu-and-wait-for-it-to-install-automatically&#34;&gt;Start Ubuntu and wait for it to install automatically&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-4.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image04.png&#34;
+	width=&#34;797&#34;
+	height=&#34;741&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image04_hu_1d4d0d34e79779af.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image04_hu_37cf7085e2597149.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;107&#34;
+		data-flex-basis=&#34;258px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;after-setting-the-username-and-password-enter-the-ubuntu-system&#34;&gt;After setting the username and password, enter the Ubuntu system&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-5.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image05.png&#34;
+	width=&#34;990&#34;
+	height=&#34;649&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image05_hu_bf7b900697685762.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image05_hu_283f1184a9c96b65.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;366px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;install-docker&#34;&gt;Install Docker&lt;/h3&gt;
@@ -652,21 +710,29 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo curl -sSL https://get.daocloud.io/docker &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-6.png&#34;
-	
-	
-	
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image06.png&#34;
+	width=&#34;989&#34;
+	height=&#34;647&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image06_hu_e001c806b62c40ff.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image06_hu_544bbd5216f621bd.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;366px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Wait for successful installation&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-7.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image07.png&#34;
+	width=&#34;994&#34;
+	height=&#34;650&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image07_hu_26f05c30c9184963.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image07_hu_f93982e5a80116c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;367px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Start the docker service command&lt;/p&gt;
@@ -688,12 +754,16 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;The installation of Ubuntu Docker is successful when the following is displayed&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-8.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image08.png&#34;
+	width=&#34;991&#34;
+	height=&#34;652&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image08_hu_7335ee6a8fe5b2c8.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image08_hu_299ae7e5077863d7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;151&#34;
+		data-flex-basis=&#34;364px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;install-docker-compose&#34;&gt;Install docker-compose&lt;/h3&gt;
@@ -706,12 +776,16 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update -y
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-9.png&#34;
-	
-	
-	
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image09.png&#34;
+	width=&#34;988&#34;
+	height=&#34;648&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image09_hu_5136b040901857c6.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image09_hu_90d410a62b56be85.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;365px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Install the docker-compose command:&lt;/p&gt;
@@ -723,21 +797,29 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install docker-compose
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-10.png&#34;
-	
-	
-	
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image10.png&#34;
+	width=&#34;988&#34;
+	height=&#34;650&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image10_hu_c0d1e33b2f2677ec.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image10_hu_50da08a6607dace.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;364px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Enter y in the middle to enter&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Installing%20Ubuntu%20on%20a%20Windows%20subsystem%20using%20WSL2%20technology/install-ubuntu-on-windows-subsystem-using-wsl2-technology-11.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image11.png&#34;
+	width=&#34;992&#34;
+	height=&#34;648&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image11_hu_71de1072da4f7692.png 480w, https://javenjin.github.io/blog/p/install-ubuntu-on-windows-subsystem-using-wsl2-technology/images/image11_hu_b0e4e5a62135ab4e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;153&#34;
+		data-flex-basis=&#34;367px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Installation complete!&lt;/p&gt;
@@ -747,7 +829,7 @@
         <title>REST API Design Rulebook</title>
         <link>https://javenjin.github.io/blog/p/rest-api-design-rulebook/</link>
         <pubDate>Tue, 21 Jun 2022 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/p/rest-api-design-rulebook/</guid>
         <description>&lt;h1 id=&#34;rest-api-design-rulebook&#34;&gt;REST API Design Rulebook&lt;/h1&gt;
 &lt;h2 id=&#34;uri-formatrfc-3986&#34;&gt;URI Format(RFC 3986)&lt;/h2&gt;
@@ -1116,34 +1198,34 @@
 &lt;/ol&gt;
 &lt;h2 id=&#34;response-status-codes&#34;&gt;Response Status Codes&lt;/h2&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Category&lt;/th&gt;
-          &lt;th&gt;Description&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;1xx: Informational&lt;/td&gt;
-          &lt;td&gt;Communicates transfer protocol-level information.&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;2xx: Success&lt;/td&gt;
-          &lt;td&gt;Indicates that the client&amp;rsquo;s request was accepted successfully.&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;3xx: Redirection&lt;/td&gt;
-          &lt;td&gt;Indicates that the client must take some additional action in order to complete their request.&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;4xx: Client Error&lt;/td&gt;
-          &lt;td&gt;This category of error status codes points the finger at clients.&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;5xx: Server Error&lt;/td&gt;
-          &lt;td&gt;The server takes responsibility for these error status codes&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Category&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;1xx: Informational&lt;/td&gt;
+					&lt;td&gt;Communicates transfer protocol-level information.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;2xx: Success&lt;/td&gt;
+					&lt;td&gt;Indicates that the client&amp;rsquo;s request was accepted successfully.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;3xx: Redirection&lt;/td&gt;
+					&lt;td&gt;Indicates that the client must take some additional action in order to complete their request.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;4xx: Client Error&lt;/td&gt;
+					&lt;td&gt;This category of error status codes points the finger at clients.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;5xx: Server Error&lt;/td&gt;
+					&lt;td&gt;The server takes responsibility for these error status codes&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;response-status--code-rules&#34;&gt;Response Status  Code Rules&lt;/h2&gt;
 &lt;ol&gt;
@@ -1194,42 +1276,42 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;registered-media-types&#34;&gt;Registered Media Types&lt;/h2&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Registered Media Types&lt;/th&gt;
-          &lt;th&gt;Description&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;text/plain&lt;/td&gt;
-          &lt;td&gt;A plain text format with no specific content structure or markup.&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;text/html&lt;/td&gt;
-          &lt;td&gt;Content that is formatted using the HyperText Markup Language (HTML).&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;image/jpeg&lt;/td&gt;
-          &lt;td&gt;An image compression method that was standardized by the Joint Photographic Experts Group (JEPG).&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;application/xml&lt;/td&gt;
-          &lt;td&gt;Content that is structured using the Extensible Markup Language (XML).&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;application/atom+xml&lt;/td&gt;
-          &lt;td&gt;Content that uses the Atom Syndication Format (Atom), which is an XML-based format that structures data into lists known as feeds.&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;application/javascript&lt;/td&gt;
-          &lt;td&gt;Source code written in the JavaScript programming language.&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;application/json&lt;/td&gt;
-          &lt;td&gt;The JavaScript Object Notation (JSON) text-based format that is often used by programs to exchange structured data.&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Registered Media Types&lt;/th&gt;
+					&lt;th&gt;Description&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;text/plain&lt;/td&gt;
+					&lt;td&gt;A plain text format with no specific content structure or markup.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;text/html&lt;/td&gt;
+					&lt;td&gt;Content that is formatted using the HyperText Markup Language (HTML).&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;image/jpeg&lt;/td&gt;
+					&lt;td&gt;An image compression method that was standardized by the Joint Photographic Experts Group (JEPG).&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;application/xml&lt;/td&gt;
+					&lt;td&gt;Content that is structured using the Extensible Markup Language (XML).&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;application/atom+xml&lt;/td&gt;
+					&lt;td&gt;Content that uses the Atom Syndication Format (Atom), which is an XML-based format that structures data into lists known as feeds.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;application/javascript&lt;/td&gt;
+					&lt;td&gt;Source code written in the JavaScript programming language.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;application/json&lt;/td&gt;
+					&lt;td&gt;The JavaScript Object Notation (JSON) text-based format that is often used by programs to exchange structured data.&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;media-types-rules&#34;&gt;Media Types Rules&lt;/h2&gt;
 &lt;ol&gt;
@@ -1288,7 +1370,7 @@
         <title>Windows batch scripts(.bat)</title>
         <link>https://javenjin.github.io/blog/p/windows-batch-scripts.bat/</link>
         <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/p/windows-batch-scripts.bat/</guid>
         <description>&lt;h1 id=&#34;windows-batch-scriptsbat&#34;&gt;Windows batch scripts(.bat)&lt;/h1&gt;
 &lt;h2 id=&#34;common-file-manipulation-dos-commands&#34;&gt;Common file manipulation DOS commands&lt;/h2&gt;
@@ -1331,82 +1413,82 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;variables&#34;&gt;Variables&lt;/h2&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Command&lt;/th&gt;
-          &lt;th&gt;Explanation&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set var=1&lt;/td&gt;
-          &lt;td&gt;Define the variable var and copy 1 to a&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set var&lt;/td&gt;
-          &lt;td&gt;View the value of the variable var&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set v&lt;/td&gt;
-          &lt;td&gt;View the values of all variables starting with v&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set&lt;/td&gt;
-          &lt;td&gt;View the values of all variables&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;%var%&lt;/td&gt;
-          &lt;td&gt;Value (content) of var variable&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set /a var=48&lt;/td&gt;
-          &lt;td&gt;Assign the number 48 to the variable var, a 32-bit integer value, occupying 4 bytes&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set /p var&lt;/td&gt;
-          &lt;td&gt;The user manually enters a value for var&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set /p var=Please enter some text&lt;/td&gt;
-          &lt;td&gt;The user manually enters the value for var and displays the prompt text: &amp;ldquo;Please enter some text&amp;rdquo;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set var=Hello world!&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;echo %var:o=z%&lt;/td&gt;
-          &lt;td&gt;Output Hello world! without changing the var value&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set var2=%var:ld=ms and bugs%&lt;/td&gt;
-          &lt;td&gt;Assign Hello worms and bugs! to var2 without changing the var value&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;%var:~m%&lt;/td&gt;
-          &lt;td&gt;A positive number m means that the variable var is taken from the left side after the mth character. A negative number m means that the variable var is taken from the right side after the -mth character and all characters to the right of it.&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;%var:~m,n%&lt;/td&gt;
-          &lt;td&gt;Starting from m, n characters are taken for positive numbers, and n characters are taken for negative numbers until -n characters are left&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set /a num=48&lt;/td&gt;
-          &lt;td&gt;Assign the value 48 to the variable num&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;set /a result=%num%+12&lt;/td&gt;
-          &lt;td&gt;The result of adding the variables num and 12 is assigned to the variable result&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;echo %result%&lt;/td&gt;
-          &lt;td&gt;Display the value of the variable result&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;setlocal EnableDelayedExpansion&lt;/td&gt;
-          &lt;td&gt;Delayed variable expansion makes sense of !var!&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Command&lt;/th&gt;
+					&lt;th&gt;Explanation&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set var=1&lt;/td&gt;
+					&lt;td&gt;Define the variable var and copy 1 to a&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set var&lt;/td&gt;
+					&lt;td&gt;View the value of the variable var&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set v&lt;/td&gt;
+					&lt;td&gt;View the values of all variables starting with v&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set&lt;/td&gt;
+					&lt;td&gt;View the values of all variables&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;%var%&lt;/td&gt;
+					&lt;td&gt;Value (content) of var variable&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set /a var=48&lt;/td&gt;
+					&lt;td&gt;Assign the number 48 to the variable var, a 32-bit integer value, occupying 4 bytes&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set /p var&lt;/td&gt;
+					&lt;td&gt;The user manually enters a value for var&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set /p var=Please enter some text&lt;/td&gt;
+					&lt;td&gt;The user manually enters the value for var and displays the prompt text: &amp;ldquo;Please enter some text&amp;rdquo;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set var=Hello world!&lt;/td&gt;
+					&lt;td&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;echo %var:o=z%&lt;/td&gt;
+					&lt;td&gt;Output Hello world! without changing the var value&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set var2=%var:ld=ms and bugs%&lt;/td&gt;
+					&lt;td&gt;Assign Hello worms and bugs! to var2 without changing the var value&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;%var:~m%&lt;/td&gt;
+					&lt;td&gt;A positive number m means that the variable var is taken from the left side after the mth character. A negative number m means that the variable var is taken from the right side after the -mth character and all characters to the right of it.&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;%var:~m,n%&lt;/td&gt;
+					&lt;td&gt;Starting from m, n characters are taken for positive numbers, and n characters are taken for negative numbers until -n characters are left&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set /a num=48&lt;/td&gt;
+					&lt;td&gt;Assign the value 48 to the variable num&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;set /a result=%num%+12&lt;/td&gt;
+					&lt;td&gt;The result of adding the variables num and 12 is assigned to the variable result&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;echo %result%&lt;/td&gt;
+					&lt;td&gt;Display the value of the variable result&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;setlocal EnableDelayedExpansion&lt;/td&gt;
+					&lt;td&gt;Delayed variable expansion makes sense of !var!&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;passing-parameters&#34;&gt;Passing parameters&lt;/h2&gt;
 &lt;p&gt;Use % to receive arguments Pass arguments directly after call or start or when running a batch file in cmd&lt;/p&gt;
@@ -1434,42 +1516,42 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h2 id=&#34;condition-if&#34;&gt;Condition IF&lt;/h2&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Symbols&lt;/th&gt;
-          &lt;th&gt;Meaning&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;EQU&lt;/td&gt;
-          &lt;td&gt;equal&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;NEQ&lt;/td&gt;
-          &lt;td&gt;unequal&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;LSS&lt;/td&gt;
-          &lt;td&gt;less than&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;LEQ&lt;/td&gt;
-          &lt;td&gt;less than or equal to&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;GTR&lt;/td&gt;
-          &lt;td&gt;Greater than&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;GEQ&lt;/td&gt;
-          &lt;td&gt;greater than or equal to&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;NOT&lt;/td&gt;
-          &lt;td&gt;NOT&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Symbols&lt;/th&gt;
+					&lt;th&gt;Meaning&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;EQU&lt;/td&gt;
+					&lt;td&gt;equal&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;NEQ&lt;/td&gt;
+					&lt;td&gt;unequal&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;LSS&lt;/td&gt;
+					&lt;td&gt;less than&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;LEQ&lt;/td&gt;
+					&lt;td&gt;less than or equal to&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GTR&lt;/td&gt;
+					&lt;td&gt;Greater than&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;GEQ&lt;/td&gt;
+					&lt;td&gt;greater than or equal to&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;NOT&lt;/td&gt;
+					&lt;td&gt;NOT&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;ul&gt;
 &lt;li&gt;if exist	(Determine if a file exists)&lt;/li&gt;
@@ -1592,81 +1674,113 @@
         <title>Windows 11 allows remote desktop/remote access</title>
         <link>https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/</link>
         <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/</guid>
         <description>&lt;h1 id=&#34;windows-11-allows-remote-desktopremote-access&#34;&gt;Windows 11 allows remote desktop/remote access&lt;/h1&gt;
 &lt;h2 id=&#34;windows-11-allows-remote-desktop&#34;&gt;Windows 11 allows remote desktop&lt;/h2&gt;
 &lt;h3 id=&#34;open-settings&#34;&gt;Open Settings&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image01.png&#34;
+	width=&#34;311&#34;
+	height=&#34;642&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image01_hu_69133c72dd11de5d.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image01_hu_a087a0d325931240.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;116px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;search-remote-desktop&#34;&gt;Search Remote Desktop&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image02.png&#34;
+	width=&#34;1338&#34;
+	height=&#34;690&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image02_hu_fee5a5570b71d4ba.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image02_hu_b32a1e3c4a4de621.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;465px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;open-remote-desktop&#34;&gt;Open Remote Desktop&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-3.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image03.png&#34;
+	width=&#34;1378&#34;
+	height=&#34;668&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image03_hu_c750ee4a2df80061.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image03_hu_751c1208e22e9d41.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;206&#34;
+		data-flex-basis=&#34;495px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;windows-11-allows-remote-access&#34;&gt;Windows 11 allows remote access&lt;/h2&gt;
 &lt;h3 id=&#34;search-windows-defender-firewall&#34;&gt;Search Windows Defender Firewall&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-4.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image04.png&#34;
+	width=&#34;806&#34;
+	height=&#34;801&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image04_hu_e99b925636e1b1f8.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image04_hu_d59ce239751c6010.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;100&#34;
+		data-flex-basis=&#34;241px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;click-turn-windows-defender-firewall-on-or-off&#34;&gt;Click Turn Windows Defender Firewall on or off&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-5.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image05.png&#34;
+	width=&#34;864&#34;
+	height=&#34;438&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image05_hu_c8ea7bc680c642f4.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image05_hu_5bf3ca5a1f92048a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;197&#34;
+		data-flex-basis=&#34;473px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;select-turn-off-windows-defender-firewall-from-public-network-settings-not-recommended&#34;&gt;Select Turn off Windows Defender Firewall from Public network settings (not recommended)&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-6.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image06.png&#34;
+	width=&#34;1142&#34;
+	height=&#34;494&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image06_hu_fc55af9361aab602.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image06_hu_6f7837533d37058a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;231&#34;
+		data-flex-basis=&#34;554px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;click-ok-below-to-save&#34;&gt;Click OK below to save&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-7.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image07.png&#34;
+	width=&#34;1138&#34;
+	height=&#34;650&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image07_hu_808eea7be21060ed.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image07_hu_923d01aa9c60d03c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;175&#34;
+		data-flex-basis=&#34;420px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;the-display-can-be-as-shown&#34;&gt;The display can be as shown&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Windows%2011%20allows%20remote%20desktop%20or%20remote%20access/windows-11-allows-remote-desktop-or-remote-access-8.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image08.png&#34;
+	width=&#34;1139&#34;
+	height=&#34;647&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image08_hu_a2cc48ce74d0194c.png 480w, https://javenjin.github.io/blog/p/windows-11-allows-remote-desktop/remote-access/images/image08_hu_1917f5f48ad7d106.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;176&#34;
+		data-flex-basis=&#34;422px&#34;
 	
 &gt;&lt;/p&gt;
 </description>
@@ -1675,158 +1789,222 @@
         <title>Install Tomcat8 on Windows</title>
         <link>https://javenjin.github.io/blog/p/install-tomcat8-on-windows/</link>
         <pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/p/install-tomcat8-on-windows/</guid>
         <description>&lt;h1 id=&#34;install-tomcat8-on-windows&#34;&gt;Install Tomcat8 on Windows&lt;/h1&gt;
 &lt;h2 id=&#34;download-the-installation-package&#34;&gt;Download the installation package&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Visit Tomcat official website &lt;a class=&#34;link&#34; href=&#34;https://tomcat.apache.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://tomcat.apache.org/&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image01.png&#34;
+	width=&#34;1295&#34;
+	height=&#34;806&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image01_hu_e5c26b329af1fc2f.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image01_hu_6f68bb4733ef4dd0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;385px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;**Select the download version in the Download column on the left, the version selected here is Tomcat8, click into **&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image02.png&#34;
+	width=&#34;1295&#34;
+	height=&#34;690&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image02_hu_ff967efa51e5b8a0.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image02_hu_92ad499fc1ba5c05.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;187&#34;
+		data-flex-basis=&#34;450px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Choose the corresponding version to download according to your system version, here choose the Windows 64-bit operating system version, as shown in the picture click download&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-3.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image03.png&#34;
+	width=&#34;1295&#34;
+	height=&#34;806&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image03_hu_2dadd999f6dbc8c7.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image03_hu_d81eca520e6a8147.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;385px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;install-tomcat8-the-downloaded-zip-package-is-the-installation-free-version-you-can-use-it-directly-after-decompression&#34;&gt;Install Tomcat8 (the downloaded zip package is the installation-free version, you can use it directly after decompression)&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Unzip the downloaded file&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-4.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image04.png&#34;
+	width=&#34;1123&#34;
+	height=&#34;616&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image04_hu_34f0c54c0d66d24a.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image04_hu_4b60504d2616c620.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;437px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Place the unpacked files on the D drive&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-5.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image05.png&#34;
+	width=&#34;1123&#34;
+	height=&#34;595&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image05_hu_f206bc4614c011f0.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image05_hu_46acb9e35dfc574c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;452px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;configure-environment-variables&#34;&gt;Configure environment variables&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Right-click on properties on this computer and open settings&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-6.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image06.png&#34;
+	width=&#34;426&#34;
+	height=&#34;400&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image06_hu_5184664ae3db592d.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image06_hu_9eb72ef2a77f47e0.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;106&#34;
+		data-flex-basis=&#34;255px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Click on Advanced System Settings to open System Properties&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-7.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image07.png&#34;
+	width=&#34;1317&#34;
+	height=&#34;819&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image07_hu_c07b506978e5b8f8.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image07_hu_c89346f796ad402f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;385px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Click on environment variables to open environment variables&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-8.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image08.png&#34;
+	width=&#34;478&#34;
+	height=&#34;598&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image08_hu_3849597f048c88e.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image08_hu_604bd7382ad7f54a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;79&#34;
+		data-flex-basis=&#34;191px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Select path and click edit to enter the edit path variable page&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-9.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image09.png&#34;
+	width=&#34;616&#34;
+	height=&#34;660&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image09_hu_7d350527ba4faf13.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image09_hu_26b19431be4e8e91.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;93&#34;
+		data-flex-basis=&#34;224px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Click New, enter the directory of the bin folder under the installation directory of Tomcat8, click OK, OK, OK&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-10.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image10.png&#34;
+	width=&#34;526&#34;
+	height=&#34;562&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image10_hu_de9c903430106290.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image10_hu_ce78e75ffe152e81.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;93&#34;
+		data-flex-basis=&#34;224px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;run-the-command&#34;&gt;Run the command&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Go to the bin folder in the Tomcat8 installation directory&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-11.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image11.png&#34;
+	width=&#34;1123&#34;
+	height=&#34;594&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image11_hu_c0b7a70afd2d42ea.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image11_hu_b6a7c79bad8fab18.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;189&#34;
+		data-flex-basis=&#34;453px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Click on the address bar, type cmd and enter to open a command line window&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-12.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image12.png&#34;
+	width=&#34;1123&#34;
+	height=&#34;594&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image12_hu_82d61661d3d33302.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image12_hu_9e46a91df8ecf82e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;189&#34;
+		data-flex-basis=&#34;453px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Type service.bat install in the command line window and enter&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-13.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image13.png&#34;
+	width=&#34;979&#34;
+	height=&#34;512&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image13_hu_9f7cd082d7f7087c.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image13_hu_6e6350bd5c7c5296.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;191&#34;
+		data-flex-basis=&#34;458px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;The installation is successful if the picture is displayed&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;test-whether-it-is-successful&#34;&gt;Test whether it is successful&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Double-click to run the Tomcat8w.exe file in the bin folder to open the startup window&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-14.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image14.png&#34;
+	width=&#34;1123&#34;
+	height=&#34;595&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image14_hu_6ede35d29d8508ca.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image14_hu_bd35dfd5c7cbbf3f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;452px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Click Start to start Tomcat8&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-15.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image15.png&#34;
+	width=&#34;411&#34;
+	height=&#34;509&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image15_hu_f44627757b97d174.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image15_hu_4e2b9ce2bd057e2a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;80&#34;
+		data-flex-basis=&#34;193px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Open the browser, enter 127.0.0.1:8080 to access the following screen is a successful installation&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Install%20Tomcat8%20on%20Windows/install-tomcat8-16.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image16.png&#34;
+	width=&#34;1295&#34;
+	height=&#34;806&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image16_hu_87c3070f18097b87.png 480w, https://javenjin.github.io/blog/p/install-tomcat8-on-windows/images/image16_hu_38ca3153fdfcd13b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;385px&#34;
 	
 &gt;&lt;/p&gt;
 </description>
@@ -1835,83 +2013,115 @@
         <title>Google Chrome Web Browser Export Password and Import Password</title>
         <link>https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/</link>
         <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/</guid>
         <description>&lt;h1 id=&#34;google-chrome-web-browser-export-password-and-import-password&#34;&gt;Google Chrome Web Browser Export Password and Import Password&lt;/h1&gt;
 &lt;p&gt;       Sometimes people encounter a new computer, or the company needs to adjust the computer, or that they need to import the account password stored in Google Chrome on other people&amp;rsquo;s computers, and find that you can export the password, but there is no option to import the password, it is very annoying, here to teach you how to export and import the account password of chrome Google Chrome.&lt;/p&gt;
 &lt;h2 id=&#34;export-account-password&#34;&gt;Export account password&lt;/h2&gt;
 &lt;h3 id=&#34;click-on-settings-in-the-upper-right-corner&#34;&gt;Click on Settings in the upper right corner&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image01.png&#34;
+	width=&#34;464&#34;
+	height=&#34;539&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image01_hu_e041c33092ff9903.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image01_hu_f161693a480a427c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;86&#34;
+		data-flex-basis=&#34;206px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;select-password&#34;&gt;Select password&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image02.png&#34;
+	width=&#34;908&#34;
+	height=&#34;727&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image02_hu_56bf14b7b824ccc1.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image02_hu_7caa0645c185c868.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;124&#34;
+		data-flex-basis=&#34;299px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;click-on-the-right-for-more-actions&#34;&gt;Click on the right for more actions&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password3.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image03.png&#34;
+	width=&#34;910&#34;
+	height=&#34;244&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image03_hu_6f26b9adb40a82bd.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image03_hu_8a6a7d88a3f1a075.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;372&#34;
+		data-flex-basis=&#34;895px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;just-click-on-export-password&#34;&gt;Just click on Export Password&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password4.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image04.png&#34;
+	width=&#34;817&#34;
+	height=&#34;213&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image04_hu_5afc1341c46c2e00.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image04_hu_a05c6944ba2663ef.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;383&#34;
+		data-flex-basis=&#34;920px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;the-exported-passwords-are-in-csv-format-which-can-be-viewed-in-excel-but-it-is-still-not-convenient-so-how-to-import-them&#34;&gt;The exported passwords are in csv format, which can be viewed in excel, but it is still not convenient, so how to import them?&lt;/h3&gt;
 &lt;h3 id=&#34;import-account-password&#34;&gt;Import account password&lt;/h3&gt;
 &lt;h3 id=&#34;open-google-chrome-and-type-chromeflagspassword-import-export-in-the-address-bar&#34;&gt;Open Google Chrome and type chrome://flags/#password-import-export in the address bar&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password5.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image05.png&#34;
+	width=&#34;1451&#34;
+	height=&#34;874&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image05_hu_5b667e2efa820ee5.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image05_hu_ea3ad9663c53510d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;166&#34;
+		data-flex-basis=&#34;398px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;then-search-in-the-search-field-above-password-import&#34;&gt;Then search in the search field above: password import&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password6.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image06.png&#34;
+	width=&#34;1430&#34;
+	height=&#34;575&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image06_hu_a96b367b882af6e6.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image06_hu_b29679b290074e06.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;248&#34;
+		data-flex-basis=&#34;596px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;then-select-default-as-enabled-on-the-right-and-click-relaunch-below-to-refresh-the-browser&#34;&gt;Then select Default as Enabled on the right, and click Relaunch below to refresh the browser&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password7.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image07.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1043&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image07_hu_fe706f55115941e9.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image07_hu_ed10c83a70975e8e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;184&#34;
+		data-flex-basis=&#34;441px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;finally-go-back-to-the-place-where-you-exported-your-password-and-you-will-see-the-option-to-import&#34;&gt;Finally, go back to the place where you exported your password and you will see the option to import&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Google%20Chrome%20Web%20Browser%20Import%20Password%20and%20Export%20Password/chrome-password8.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image08.png&#34;
+	width=&#34;871&#34;
+	height=&#34;241&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image08_hu_1d95a3a6eec10bf5.png 480w, https://javenjin.github.io/blog/p/google-chrome-web-browser-export-password-and-import-password/images/image08_hu_c82a4d0ea8e7603f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;361&#34;
+		data-flex-basis=&#34;867px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;if-you-import-the-password-you-exported-from-another-computer-youll-see-that-both-computers-have-the-same-password-for-google-chrome&#34;&gt;If you import the password you exported from another computer, you&amp;rsquo;ll see that both computers have the same password for Google Chrome&lt;/h3&gt;
@@ -1921,72 +2131,100 @@
         <title>Switching eclipse after the menu bar messy problem</title>
         <link>https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/</link>
         <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/</guid>
         <description>&lt;h1 id=&#34;switching-eclipse-after-the-menu-bar-messy-problem&#34;&gt;Switching eclipse after the menu bar messy problem&lt;/h1&gt;
 &lt;h2 id=&#34;question&#34;&gt;Question&lt;/h2&gt;
 &lt;p&gt;Today I switched the working directory of eclipse&lt;/p&gt;
 &lt;p&gt;After opening it, I found a messy menu bar problem&lt;/p&gt;
 &lt;p&gt;eclipse opens like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image01.png&#34;
+	width=&#34;1008&#34;
+	height=&#34;760&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image01_hu_e6fb5fe3b015666c.png 480w, https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image01_hu_b20b9012046e6a28.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;132&#34;
+		data-flex-basis=&#34;318px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image02.png&#34;
+	width=&#34;192&#34;
+	height=&#34;58&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image02_hu_f0423c722fa99b51.png 480w, https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image02_hu_e51a911e56d84264.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;331&#34;
+		data-flex-basis=&#34;794px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem3.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image03.png&#34;
+	width=&#34;919&#34;
+	height=&#34;173&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image03_hu_6823843348e1c815.png 480w, https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image03_hu_53815bc5d72100a6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;531&#34;
+		data-flex-basis=&#34;1274px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;I found that the menu bar is all messed up&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
 &lt;p&gt;Workaround: Open Window - Preferences - General - Appearance&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem4.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image04.png&#34;
+	width=&#34;839&#34;
+	height=&#34;670&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image04_hu_57e201b008056be.png 480w, https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image04_hu_aeb92c3b616cb252.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;125&#34;
+		data-flex-basis=&#34;300px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Modify the right Theme to Windows Classic&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem5.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image05.png&#34;
+	width=&#34;625&#34;
+	height=&#34;581&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image05_hu_51602e210fa1cb7d.png 480w, https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image05_hu_bade8b4e84687bc4.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;107&#34;
+		data-flex-basis=&#34;258px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Then tap Apply or Apply and Close and you&amp;rsquo;re done.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem6.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image06.png&#34;
+	width=&#34;674&#34;
+	height=&#34;81&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image06_hu_273a01a290ec791e.png 480w, https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image06_hu_876db43d8068208a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;832&#34;
+		data-flex-basis=&#34;1997px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Switching%20eclipse%20after%20the%20menu%20bar%20messy%20problem/menu-bar-messy-problem7.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image07.png&#34;
+	width=&#34;278&#34;
+	height=&#34;570&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image07_hu_89ff294384435686.png 480w, https://javenjin.github.io/blog/p/switching-eclipse-after-the-menu-bar-messy-problem/images/image07_hu_940ebcd181b798a1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;48&#34;
+		data-flex-basis=&#34;117px&#34;
 	
 &gt;&lt;/p&gt;
 </description>
@@ -1995,77 +2233,101 @@
         <title>Drawing class diagrams in Eclipse using AmaterasUML plugin</title>
         <link>https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/</link>
         <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/</guid>
         <description>&lt;h1 id=&#34;drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin&#34;&gt;Drawing class diagrams in Eclipse using AmaterasUML plugin&lt;/h1&gt;
 &lt;h2 id=&#34;install-the-gef-plugin&#34;&gt;Install the GEF plugin&lt;/h2&gt;
 &lt;h3 id=&#34;open-the-eclipse-website&#34;&gt;Open the eclipse website &lt;a class=&#34;link&#34; href=&#34;https://www.eclipse.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://www.eclipse.org/&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams1.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image01.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;643&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image01_hu_6d4ec4a282b40244.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image01_hu_6aed5ebf320874d7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Open the eclipse website&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;298&#34;
+		data-flex-basis=&#34;716px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;click-on-projects-and-search-for-gef&#34;&gt;Click on Projects and search for GEF&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams2.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image02.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;625&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image02_hu_db3368eb7665ffcd.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image02_hu_7a988cbf2c0f7baa.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Search GEF&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;307&#34;
+		data-flex-basis=&#34;737px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;click-download-on-the-right&#34;&gt;Click Download on the right&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams3.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image03.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;712&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image03_hu_8d51723cad462d05.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image03_hu_b7072cbbda2e7261.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Download&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;269&#34;
+		data-flex-basis=&#34;647px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;in-the-pop-up-window-copy-the-download-address&#34;&gt;In the pop-up window, copy the download address&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams4.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image04.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;873&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image04_hu_14b09a17c8a51ada.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image04_hu_c21b6945d787572b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Copy download address&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;219&#34;
+		data-flex-basis=&#34;527px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;p&gt;The current address is: &lt;a class=&#34;link&#34; href=&#34;http://download.eclipse.org/tools/gef/updates/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://download.eclipse.org/tools/gef/updates/releases&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;open-eclipse-click-help-above-select-install-new-software-paste-the-copied-address-click-add-the-plugin-name-can-be-empty&#34;&gt;Open eclipse, click Help above, select install new software, paste the copied address, click Add, the plugin name can be empty&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams5.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image05.png&#34;
+	width=&#34;1028&#34;
+	height=&#34;866&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image05_hu_b5024bcd43c87fc2.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image05_hu_afac2acdd9faabd6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Add new plugin&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;118&#34;
+		data-flex-basis=&#34;284px&#34;
+	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;select-select-all-i-dont-know-which-one-i-need-its-not-big-to-install-all-of-them-then-keep-next-and-accept-on-it&#34;&gt;Select Select All (I don&amp;rsquo;t know which one I need, it&amp;rsquo;s not big to install all of them), then keep Next and accept on it&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams6.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image06.png&#34;
+	width=&#34;1025&#34;
+	height=&#34;868&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image06_hu_7632d2e26b1d8842.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image06_hu_27cb44a301d17731.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Select Select All&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;118&#34;
+		data-flex-basis=&#34;283px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;install-the-amaterasuml-plugin&#34;&gt;Install the AmaterasUML plugin&lt;/h2&gt;
@@ -2074,49 +2336,69 @@
     &gt;AmaterasUML_1.3.4&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;You can also go to the official website to download the latest version of AmaterasUML&lt;/p&gt;
 &lt;h3 id=&#34;after-downloading-unzip-the-package-there-are-3-jar-packages-copy-them-to-the-plugins-directory-of-the-eclipse-installation-directory-restart-eclipse&#34;&gt;After downloading, unzip the package, there are 3 jar packages, copy them to the plugins directory of the eclipse installation directory, restart eclipse&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams7.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image07.png&#34;
+	width=&#34;1208&#34;
+	height=&#34;437&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image07_hu_d24296a3a5ee0daa.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image07_hu_d30fe2534da59a96.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;276&#34;
+		data-flex-basis=&#34;663px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;amaterasuml-can-be-seen-via-window-preference&#34;&gt;AmaterasUML can be seen via Window-Preference&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams8.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image08.png&#34;
+	width=&#34;921&#34;
+	height=&#34;738&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image08_hu_e4029d5727c7cc07.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image08_hu_1f202f0959c572b3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;124&#34;
+		data-flex-basis=&#34;299px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;simple-use-of-amaterasuml&#34;&gt;Simple use of AmaterasUML&lt;/h2&gt;
 &lt;h3 id=&#34;right-click-a-project-new-other-select-class-diagram-and-click-next&#34;&gt;Right-click a project, New-Other, select Class Diagram, and click Next&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams9.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image09.png&#34;
+	width=&#34;601&#34;
+	height=&#34;496&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image09_hu_35972d05e395befe.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image09_hu_2fd2b0916a0db58e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;121&#34;
+		data-flex-basis=&#34;290px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;give-the-class-diagram-a-name-and-click-finish&#34;&gt;Give the class diagram a name and click Finish&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams10.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image10.png&#34;
+	width=&#34;600&#34;
+	height=&#34;663&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image10_hu_f4231b5c12a2c19a.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image10_hu_e2590e658ee7c7d7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;90&#34;
+		data-flex-basis=&#34;217px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;then-drag-the-class-or-interface-into-the-interface-and-the-class-appears-magnificently&#34;&gt;Then drag the class or interface into the interface, and the class appears magnificently&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Tools/Drawing%20class%20diagrams%20in%20Eclipse%20using%20AmaterasUML%20plugin/using-amaterasuml-drawing-class-diagrams11.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image11.png&#34;
+	width=&#34;1916&#34;
+	height=&#34;830&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image11_hu_1485e7934ba4a198.png 480w, https://javenjin.github.io/blog/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/images/image11_hu_837a4a056d071d87.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;230&#34;
+		data-flex-basis=&#34;554px&#34;
 	
 &gt;&lt;/p&gt;
 </description>

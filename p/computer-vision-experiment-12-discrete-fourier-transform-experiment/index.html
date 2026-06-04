@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='计算机视觉 - 实验十二 离散傅里叶变换实验'>
 <title>Computer Vision - Experiment 12 - Discrete Fourier Transform Experiment</title>
@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Computer Vision' /><meta property='article:tag' content='OpenCV' /><meta property='article:published_time' content='2020-05-18T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-05-18T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Computer Vision - Experiment 12 - Discrete Fourier Transform Experiment">
 <meta name="twitter:description" content="计算机视觉 - 实验十二 离散傅里叶变换实验">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -548,20 +548,20 @@
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//-----------------------【头文件、命名空间包含部分】-----------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：包含程序所使用的头文件和命名空间
 </span></span></span><span class="line"><span class="cl"><span class="c1">//---------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#include</span> <span class="cpf">&#34;opencv2/core/core.hpp&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;opencv2/core/core.hpp&#34;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;opencv2/imgproc/imgproc.hpp&#34;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;opencv2/highgui/highgui.hpp&#34;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//-----------------------------------【ShowHelpText( )函数】------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		 描述：输出一些帮助信息
 </span></span></span><span class="line"><span class="cl"><span class="c1">//----------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">()</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//输出欢迎信息和OpenCV版本
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">非常感谢购买《OpenCV3编程入门》一书！</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">非常感谢购买《OpenCV3编程入门》一书！</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">此为本书OpenCV3版的第28个配套示例程序</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">   当前使用的OpenCV版本为：&#34;</span> <span class="n">CV_VERSION</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n</span><span class="s">  ----------------------------------------------------------------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
@@ -572,70 +572,70 @@
 </span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------【main( )函数】-----------------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//          描述：控制台应用程序的入口函数，我们的程序从这里开始执行
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//【1】以灰度模式读取原始图像并显示
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Mat</span> <span class="n">srcImage</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s">&#34;feng.png&#34;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">srcImage</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s">&#34;feng.png&#34;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">srcImage</span><span class="p">.</span><span class="n">data</span> <span class="p">)</span> <span class="p">{</span> <span class="n">printf</span><span class="p">(</span><span class="s">&#34;读取图片错误，请确定目录下是否有imread函数指定图片存在~！ </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span> <span class="p">}</span> 
 </span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;原始图像&#34;</span> <span class="p">,</span> <span class="n">srcImage</span><span class="p">);</span>   
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="n">ShowHelpText</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//【2】将输入图像延扩到最佳的尺寸，边界用0补充
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="n">getOptimalDFTSize</span><span class="p">(</span> <span class="n">srcImage</span><span class="p">.</span><span class="n">rows</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="n">getOptimalDFTSize</span><span class="p">(</span> <span class="n">srcImage</span><span class="p">.</span><span class="n">rows</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">getOptimalDFTSize</span><span class="p">(</span> <span class="n">srcImage</span><span class="p">.</span><span class="n">cols</span> <span class="p">);</span> 
 </span></span><span class="line"><span class="cl">	<span class="c1">//将添加的像素初始化为0.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Mat</span> <span class="n">padded</span><span class="p">;</span>  
+</span></span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">padded</span><span class="p">;</span>  
 </span></span><span class="line"><span class="cl">	<span class="n">copyMakeBorder</span><span class="p">(</span><span class="n">srcImage</span><span class="p">,</span> <span class="n">padded</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">m</span> <span class="o">-</span> <span class="n">srcImage</span><span class="p">.</span><span class="n">rows</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="n">srcImage</span><span class="p">.</span><span class="n">cols</span><span class="p">,</span> <span class="n">BORDER_CONSTANT</span><span class="p">,</span> <span class="n">Scalar</span><span class="o">::</span><span class="n">all</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//【3】为傅立叶变换的结果(实部和虚部)分配存储空间。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//将planes数组组合合并成一个多通道的数组complexI
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Mat</span> <span class="n">planes</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="n">Mat_</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">padded</span><span class="p">),</span> <span class="n">Mat</span><span class="o">::</span><span class="n">zeros</span><span class="p">(</span><span class="n">padded</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="n">CV_32F</span><span class="p">)};</span>
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//将planes数组组合合并成一个多通道的数组complexI
+</span></span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">planes</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="n">Mat_</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">padded</span><span class="p">),</span> <span class="n">Mat</span><span class="o">::</span><span class="n">zeros</span><span class="p">(</span><span class="n">padded</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="n">CV_32F</span><span class="p">)};</span>
 </span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">complexI</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="n">merge</span><span class="p">(</span><span class="n">planes</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">complexI</span><span class="p">);</span>         
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//【4】进行就地离散傅里叶变换
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">dft</span><span class="p">(</span><span class="n">complexI</span><span class="p">,</span> <span class="n">complexI</span><span class="p">);</span>           
+</span></span></span><span class="line"><span class="cl">	<span class="n">dft</span><span class="p">(</span><span class="n">complexI</span><span class="p">,</span> <span class="n">complexI</span><span class="p">);</span>           
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//【5】将复数转换为幅值，即=&gt; log(1 + sqrt(Re(DFT(I))^2 + Im(DFT(I))^2))
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">split</span><span class="p">(</span><span class="n">complexI</span><span class="p">,</span> <span class="n">planes</span><span class="p">);</span> <span class="c1">// 将多通道数组complexI分离成几个单通道数组，planes[0] = Re(DFT(I), planes[1] = Im(DFT(I))
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//void magnitude(InputArray x, InputArray y, OutputArray magnitude);
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">magnitude</span><span class="p">(</span><span class="n">planes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">planes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">planes</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="c1">// planes[0] = magnitude  
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Mat</span> <span class="n">magnitudeImage</span> <span class="o">=</span> <span class="n">planes</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">split</span><span class="p">(</span><span class="n">complexI</span><span class="p">,</span> <span class="n">planes</span><span class="p">);</span> <span class="c1">// 将多通道数组complexI分离成几个单通道数组，planes[0] = Re(DFT(I), planes[1] = Im(DFT(I))
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//void magnitude(InputArray x, InputArray y, OutputArray magnitude);
+</span></span></span><span class="line"><span class="cl">	<span class="n">magnitude</span><span class="p">(</span><span class="n">planes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">planes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">planes</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="c1">// planes[0] = magnitude  
+</span></span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">magnitudeImage</span> <span class="o">=</span> <span class="n">planes</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//【6】进行对数尺度(logarithmic scale)缩放
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">magnitudeImage</span> <span class="o">+=</span> <span class="n">Scalar</span><span class="o">::</span><span class="n">all</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">magnitudeImage</span> <span class="o">+=</span> <span class="n">Scalar</span><span class="o">::</span><span class="n">all</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">log</span><span class="p">(</span><span class="n">magnitudeImage</span><span class="p">,</span> <span class="n">magnitudeImage</span><span class="p">);</span><span class="c1">//求自然对数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//【7】剪切和重分布幅度图象限
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//若有奇数行或奇数列，进行频谱裁剪      
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">magnitudeImage</span> <span class="o">=</span> <span class="n">magnitudeImage</span><span class="p">(</span><span class="n">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">magnitudeImage</span><span class="p">.</span><span class="n">cols</span> <span class="o">&amp;</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">magnitudeImage</span><span class="p">.</span><span class="n">rows</span> <span class="o">&amp;</span> <span class="o">-</span><span class="mi">2</span><span class="p">));</span>
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//若有奇数行或奇数列，进行频谱裁剪      
+</span></span></span><span class="line"><span class="cl">	<span class="n">magnitudeImage</span> <span class="o">=</span> <span class="n">magnitudeImage</span><span class="p">(</span><span class="n">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">magnitudeImage</span><span class="p">.</span><span class="n">cols</span> <span class="o">&amp;</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">magnitudeImage</span><span class="p">.</span><span class="n">rows</span> <span class="o">&amp;</span> <span class="o">-</span><span class="mi">2</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//重新排列傅立叶图像中的象限，使得原点位于图像中心  
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kt">int</span> <span class="n">cx</span> <span class="o">=</span> <span class="n">magnitudeImage</span><span class="p">.</span><span class="n">cols</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">cx</span> <span class="o">=</span> <span class="n">magnitudeImage</span><span class="p">.</span><span class="n">cols</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">cy</span> <span class="o">=</span> <span class="n">magnitudeImage</span><span class="p">.</span><span class="n">rows</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">q0</span><span class="p">(</span><span class="n">magnitudeImage</span><span class="p">,</span> <span class="n">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">));</span>   <span class="c1">// ROI区域的左上
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Mat</span> <span class="n">q1</span><span class="p">(</span><span class="n">magnitudeImage</span><span class="p">,</span> <span class="n">Rect</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">));</span>  <span class="c1">// ROI区域的右上
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Mat</span> <span class="n">q2</span><span class="p">(</span><span class="n">magnitudeImage</span><span class="p">,</span> <span class="n">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">cy</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">));</span>  <span class="c1">// ROI区域的左下
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Mat</span> <span class="n">q3</span><span class="p">(</span><span class="n">magnitudeImage</span><span class="p">,</span> <span class="n">Rect</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">));</span> <span class="c1">// ROI区域的右下
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//交换象限（左上与右下进行交换）
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Mat</span> <span class="n">tmp</span><span class="p">;</span>                           
+</span></span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">q1</span><span class="p">(</span><span class="n">magnitudeImage</span><span class="p">,</span> <span class="n">Rect</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">));</span>  <span class="c1">// ROI区域的右上
+</span></span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">q2</span><span class="p">(</span><span class="n">magnitudeImage</span><span class="p">,</span> <span class="n">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">cy</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">));</span>  <span class="c1">// ROI区域的左下
+</span></span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">q3</span><span class="p">(</span><span class="n">magnitudeImage</span><span class="p">,</span> <span class="n">Rect</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">));</span> <span class="c1">// ROI区域的右下
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//交换象限（左上与右下进行交换）
+</span></span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">tmp</span><span class="p">;</span>                           
 </span></span><span class="line"><span class="cl">	<span class="n">q0</span><span class="p">.</span><span class="n">copyTo</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">q3</span><span class="p">.</span><span class="n">copyTo</span><span class="p">(</span><span class="n">q0</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">tmp</span><span class="p">.</span><span class="n">copyTo</span><span class="p">(</span><span class="n">q3</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//交换象限（右上与左下进行交换）
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">q1</span><span class="p">.</span><span class="n">copyTo</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span>                 
+</span></span></span><span class="line"><span class="cl">	<span class="n">q1</span><span class="p">.</span><span class="n">copyTo</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span>                 
 </span></span><span class="line"><span class="cl">	<span class="n">q2</span><span class="p">.</span><span class="n">copyTo</span><span class="p">(</span><span class="n">q1</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">tmp</span><span class="p">.</span><span class="n">copyTo</span><span class="p">(</span><span class="n">q2</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//【8】归一化，用0到1之间的浮点值将矩阵变换为可视的图像格式
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//此句代码的OpenCV2版为：
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//normalize(magnitudeImage, magnitudeImage, 0, 1, CV_MINMAX); 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//此句代码的OpenCV3版为:
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">normalize</span><span class="p">(</span><span class="n">magnitudeImage</span><span class="p">,</span> <span class="n">magnitudeImage</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">NORM_MINMAX</span><span class="p">);</span> 
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//此句代码的OpenCV2版为：
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//normalize(magnitudeImage, magnitudeImage, 0, 1, CV_MINMAX); 
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//此句代码的OpenCV3版为:
+</span></span></span><span class="line"><span class="cl">	<span class="n">normalize</span><span class="p">(</span><span class="n">magnitudeImage</span><span class="p">,</span> <span class="n">magnitudeImage</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">NORM_MINMAX</span><span class="p">);</span> 
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//【9】显示效果图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;频谱幅值&#34;</span><span class="p">,</span> <span class="n">magnitudeImage</span><span class="p">);</span>    
+</span></span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;频谱幅值&#34;</span><span class="p">,</span> <span class="n">magnitudeImage</span><span class="p">);</span>    
 </span></span><span class="line"><span class="cl">	<span class="n">waitKey</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
@@ -643,44 +643,60 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>   (ii) Show results</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2012%20Discrete%20Fourier%20Transform%20Experiment/discrete-fourier-transform-experiment1.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image01.png"
+	width="560"
+	height="303"
+	srcset="/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image01_hu_63bcae41b08da9c6.png 480w, /blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image01_hu_35afd8578649f30.png 1024w"
 	loading="lazy"
 	
 		alt="Discrete Fourier Transform Experiment 1"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="184"
+		data-flex-basis="443px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2012%20Discrete%20Fourier%20Transform%20Experiment/discrete-fourier-transform-experiment2.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image02.png"
+	width="492"
+	height="529"
+	srcset="/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image02_hu_bd2f2c67806be5b4.png 480w, /blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image02_hu_87bdbe1f95e6f428.png 1024w"
 	loading="lazy"
 	
 		alt="Discrete Fourier Transform Experiment 2"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="93"
+		data-flex-basis="223px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2012%20Discrete%20Fourier%20Transform%20Experiment/discrete-fourier-transform-experiment3.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image03.png"
+	width="492"
+	height="529"
+	srcset="/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image03_hu_a5b6bb75d50f8f4a.png 480w, /blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image03_hu_6ddac09274bc55b8.png 1024w"
 	loading="lazy"
 	
 		alt="Discrete Fourier Transform Experiment 3"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="93"
+		data-flex-basis="223px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2012%20Discrete%20Fourier%20Transform%20Experiment/discrete-fourier-transform-experiment4.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image04.png"
+	width="558"
+	height="302"
+	srcset="/blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image04_hu_505a136982602c48.png 480w, /blog/p/computer-vision-experiment-12-discrete-fourier-transform-experiment/images/image04_hu_c086736c0762c6f.png 1024w"
 	loading="lazy"
 	
 		alt="Discrete Fourier Transform Experiment 4"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="184"
+		data-flex-basis="443px"
 	
 ></p>
 <h3 id="experiment-summary">Experiment summary</h3>
@@ -807,7 +823,7 @@
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

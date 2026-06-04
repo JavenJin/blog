@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='计算机视觉 - 实验一 图像的载入、显示与输出'>
 <title>Computer Vision - Experiment 1 - Image loading, display and output</title>
@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Computer Vision' /><meta property='article:tag' content='OpenCV' /><meta property='article:published_time' content='2020-03-09T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-03-09T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Computer Vision - Experiment 1 - Image loading, display and output">
 <meta name="twitter:description" content="计算机视觉 - 实验一 图像的载入、显示与输出">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -497,54 +497,54 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;opencv2/core/core.hpp&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;opencv2/highgui/highgui.hpp&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//-------------------------------【一、图像的载入和显示】----------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	描述：以下三行代码用于完成图像的载入和显示
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//---------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	描述：以下三行代码用于完成图像的载入和显示
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//---------------------------------------------------------------------------------
+</span></span></span><span class="line"><span class="cl">	
 </span></span><span class="line"><span class="cl">	<span class="n">cv</span><span class="o">::</span><span class="n">Mat</span> <span class="n">girl</span> <span class="o">=</span> <span class="n">cv</span><span class="o">::</span><span class="n">imread</span><span class="p">(</span><span class="s">&#34;girl.jpg&#34;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">//载入图像到Mat
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【1】动漫图&#34;</span><span class="p">);</span> <span class="c1">//创建一个名为 &#34;【1】e动漫图&#34;的窗口  
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【1】动漫图&#34;</span><span class="p">,</span><span class="n">girl</span><span class="p">);</span><span class="c1">//显示名为 &#34;【1】动漫图&#34;的窗口  
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【1】动漫图&#34;</span><span class="p">);</span> <span class="c1">//创建一个名为 &#34;【1】e动漫图&#34;的窗口  
+</span></span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【1】动漫图&#34;</span><span class="p">,</span><span class="n">girl</span><span class="p">);</span><span class="c1">//显示名为 &#34;【1】动漫图&#34;的窗口  
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//-------------------------------【二、初级图像混合】---------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	描述：二、初级图像混合
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//---------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//载入图片
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Mat</span> <span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s">&#34;dota.jpg&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	描述：二、初级图像混合
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//---------------------------------------------------------------------------------
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//载入图片
+</span></span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s">&#34;dota.jpg&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">logo</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s">&#34;dota_logo.jpg&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//载入后先显示
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【2】原画图&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【2】原画图&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【2】原画图&#34;</span><span class="p">,</span><span class="n">image</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【3】logo图&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【3】logo图&#34;</span><span class="p">,</span><span class="n">logo</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 定义一个Mat类型，用于存放，图像的ROI
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Mat</span> <span class="n">imageROI</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">Mat</span> <span class="n">imageROI</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//方法一
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">imageROI</span><span class="o">=</span> <span class="n">image</span><span class="p">(</span><span class="n">Rect</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span><span class="mi">350</span><span class="p">,</span><span class="n">logo</span><span class="p">.</span><span class="n">cols</span><span class="p">,</span><span class="n">logo</span><span class="p">.</span><span class="n">rows</span><span class="p">));</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">imageROI</span><span class="o">=</span> <span class="n">image</span><span class="p">(</span><span class="n">Rect</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span><span class="mi">350</span><span class="p">,</span><span class="n">logo</span><span class="p">.</span><span class="n">cols</span><span class="p">,</span><span class="n">logo</span><span class="p">.</span><span class="n">rows</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//方法二
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//imageROI= image(Range(350,350+logo.rows),Range(800,800+logo.cols));
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//imageROI= image(Range(350,350+logo.rows),Range(800,800+logo.cols));
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 将logo加到原图上
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">addWeighted</span><span class="p">(</span><span class="n">imageROI</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="n">logo</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="n">imageROI</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">addWeighted</span><span class="p">(</span><span class="n">imageROI</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="n">logo</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="n">imageROI</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//显示结果
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【4】原画+logo图&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【4】原画+logo图&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【4】原画+logo图&#34;</span><span class="p">,</span><span class="n">image</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//--------------------------------【三、图像的输出】----------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	描述：将一个Mat图像输出到图像文件
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//---------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//输出一张jpg图片到工程目录下
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">imwrite</span><span class="p">(</span><span class="s">&#34;由imwrite生成的图片.jpg&#34;</span><span class="p">,</span> <span class="n">image</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	描述：将一个Mat图像输出到图像文件
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//---------------------------------------------------------------------------------
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//输出一张jpg图片到工程目录下
+</span></span></span><span class="line"><span class="cl">	<span class="n">imwrite</span><span class="p">(</span><span class="s">&#34;由imwrite生成的图片.jpg&#34;</span><span class="p">,</span> <span class="n">image</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//imwrite(&#34;由imwrite生成的图片.jpg&#34;, image);
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="n">waitKey</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
@@ -552,64 +552,88 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>   (ii) Show results</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2001%20Image%20loading%2C%20display%20and%20output/image-loading-display-and-output1.jpeg"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image01.jpeg"
+	width="1920"
+	height="1031"
+	srcset="/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image01_hu_ac457d2441a8fdb.jpeg 480w, /blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image01_hu_93caa2e29ab4b3eb.jpeg 1024w"
 	loading="lazy"
 	
 		alt="Image loading, display and output 1"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="446px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2001%20Image%20loading%2C%20display%20and%20output/image-loading-display-and-output2.jpeg"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image02.jpeg"
+	width="587"
+	height="916"
+	srcset="/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image02_hu_3f44b3395d48a8c4.jpeg 480w, /blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image02_hu_70385a31525732c0.jpeg 1024w"
 	loading="lazy"
 	
 		alt="Image loading, display and output 2"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="64"
+		data-flex-basis="153px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2001%20Image%20loading%2C%20display%20and%20output/image-loading-display-and-output3.jpeg"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image03.jpeg"
+	width="1283"
+	height="761"
+	srcset="/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image03_hu_c513f70fe1c4b99a.jpeg 480w, /blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image03_hu_fadb457316229707.jpeg 1024w"
 	loading="lazy"
 	
 		alt="Image loading, display and output 3"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="168"
+		data-flex-basis="404px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2001%20Image%20loading%2C%20display%20and%20output/image-loading-display-and-output4.jpeg"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image04.jpeg"
+	width="253"
+	height="291"
+	srcset="/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image04_hu_f59cff19c3abd2ad.jpeg 480w, /blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image04_hu_a3e7f1a8ce3297fd.jpeg 1024w"
 	loading="lazy"
 	
 		alt="Image loading, display and output 4"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="86"
+		data-flex-basis="208px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2001%20Image%20loading%2C%20display%20and%20output/image-loading-display-and-output5.jpeg"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image05.jpeg"
+	width="1283"
+	height="761"
+	srcset="/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image05_hu_fb199ad5cc635323.jpeg 480w, /blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image05_hu_826bfd93a9dc64c9.jpeg 1024w"
 	loading="lazy"
 	
 		alt="Image loading, display and output 5"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="168"
+		data-flex-basis="404px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2001%20Image%20loading%2C%20display%20and%20output/image-loading-display-and-output6.jpeg"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image06.jpeg"
+	width="1920"
+	height="1032"
+	srcset="/blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image06_hu_e7c7c309004ed16e.jpeg 480w, /blog/p/computer-vision-experiment-1-image-loading-display-and-output/images/image06_hu_33210d839145d6a9.jpeg 1024w"
 	loading="lazy"
 	
 		alt="Image loading, display and output 6"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="186"
+		data-flex-basis="446px"
 	
 ></p>
 <h3 id="experiment-summary">Experiment Summary</h3>
@@ -736,7 +760,7 @@
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">

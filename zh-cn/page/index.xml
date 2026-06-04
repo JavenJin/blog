@@ -6,11 +6,13 @@
         <description>Recent content in Pages on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
+        <managingEditor>wenjie.jin@hotmail.com (Javen)</managingEditor>
+        <webMaster>wenjie.jin@hotmail.com (Javen)</webMaster>
         <lastBuildDate>Fri, 31 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>关于</title>
         <link>https://javenjin.github.io/blog/zh-cn/%E5%85%B3%E4%BA%8E/</link>
         <pubDate>Fri, 31 Mar 2023 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/%E5%85%B3%E4%BA%8E/</guid>
         <description>&lt;h1 id=&#34;javen-jin&#34;&gt;Javen Jin&lt;/h1&gt;
 &lt;h2 id=&#34;联系方式&#34;&gt;联系方式&lt;/h2&gt;
@@ -76,7 +78,7 @@
         <title>归档</title>
         <link>https://javenjin.github.io/blog/zh-cn/archives/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/archives/</guid>
         <description></description>
         </item>
@@ -84,7 +86,7 @@
         <title>链接</title>
         <link>https://javenjin.github.io/blog/zh-cn/%E9%93%BE%E6%8E%A5/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/%E9%93%BE%E6%8E%A5/</guid>
         <description>&lt;p&gt;这里有一些方便的链接。&lt;/p&gt;
 </description>
@@ -93,7 +95,7 @@
         <title>搜索</title>
         <link>https://javenjin.github.io/blog/zh-cn/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/search/</guid>
         <description></description>
         </item>

@@ -5,12 +5,14 @@
         <link>https://javenjin.github.io/blog/categories/front-end/</link>
         <description>Recent content in Front End on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
+        <language>en-us</language>
+        <managingEditor>wenjie.jin@hotmail.com (Javen)</managingEditor>
+        <webMaster>wenjie.jin@hotmail.com (Javen)</webMaster>
         <lastBuildDate>Mon, 27 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/categories/front-end/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Web front-end development technology course big assignment</title>
         <link>https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/</link>
         <pubDate>Mon, 27 Jul 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/</guid>
         <description>&lt;h2 id=&#34;web-front-end-development-technology-course-big-assignment&#34;&gt;Web front-end development technology course big assignment&lt;/h2&gt;
 &lt;h3 id=&#34;assignment-requirements&#34;&gt;Assignment requirements&lt;/h3&gt;
@@ -22,64 +24,88 @@ For this reason, the main requirements of this assignment are:&lt;/p&gt;
 &lt;p&gt;(4) Advertisement rotation. The ad rotation realizes the function of displaying the core position of the main products of important customers.&lt;/p&gt;
 &lt;p&gt;(5) Search portal. The search function provides customers with a search and positioning function, which can help customers quickly find the products they need.&lt;/p&gt;
 &lt;h3 id=&#34;final-interface&#34;&gt;Final Interface&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework1.jpeg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image01.jpeg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1032&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image01_hu_b08ec9ef40afaae5.jpeg 480w, https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image01_hu_7be01d9ab9eca015.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;homework1&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;446px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework2.jpeg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image02.jpeg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1031&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image02_hu_e59a98725a24d392.jpeg 480w, https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image02_hu_f2cc7e5195335993.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;homework2&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;446px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework3.jpeg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image03.jpeg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1032&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image03_hu_e3fb6ba32d107815.jpeg 480w, https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image03_hu_fdc80aa6b1256367.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;homework3&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;446px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework4.jpeg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image04.jpeg&#34;
+	width=&#34;1920&#34;
+	height=&#34;875&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image04_hu_6b5b03c98116f3cf.jpeg 480w, https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image04_hu_dce5fa32515c2e88.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;homework4&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;219&#34;
+		data-flex-basis=&#34;526px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework5.jpeg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image05.jpeg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1030&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image05_hu_dfcbbfcc63eb463b.jpeg 480w, https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image05_hu_b84b51ddec384596.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;homework5&#34;
 	
 	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;447px&#34;
+	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Web%20front-end%20development%20technology%20course%20big%20assignment/homework6.jpeg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image06.jpeg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1031&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image06_hu_f44f2c5084765498.jpeg 480w, https://javenjin.github.io/blog/p/web-front-end-development-technology-course-big-assignment/images/image06_hu_a176e0585d94f7a4.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;homework6&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;446px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
@@ -1373,7 +1399,7 @@ For this reason, the main requirements of this assignment are:&lt;/p&gt;
         <title>Front End - Personal Resume Exercise</title>
         <link>https://javenjin.github.io/blog/p/front-end-personal-resume-exercise/</link>
         <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/p/front-end-personal-resume-exercise/</guid>
         <description>&lt;h3 id=&#34;personal-resume-exercise&#34;&gt;Personal Resume Exercise&lt;/h3&gt;
 &lt;h4 id=&#34;final-page-effect&#34;&gt;Final page effect&lt;/h4&gt;
@@ -1381,14 +1407,18 @@ For this reason, the main requirements of this assignment are:&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://rscard.px-lab.com/startuper/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://rscard.px-lab.com/startuper/&lt;/a&gt;&lt;/p&gt;
 &lt;h5 id=&#34;personal-works&#34;&gt;Personal Works&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Front%20End%20-%20Personal%20Resume%20Exercise/personal-works.jpeg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://javenjin.github.io/blog/p/front-end-personal-resume-exercise/images/image01.jpeg&#34;
+	width=&#34;1918&#34;
+	height=&#34;2680&#34;
+	srcset=&#34;https://javenjin.github.io/blog/p/front-end-personal-resume-exercise/images/image01_hu_393dcca5f1c478b3.jpeg 480w, https://javenjin.github.io/blog/p/front-end-personal-resume-exercise/images/image01_hu_47f42e886fd3014c.jpeg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Personal Works&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;71&#34;
+		data-flex-basis=&#34;171px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;

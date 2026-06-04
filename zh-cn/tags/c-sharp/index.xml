@@ -6,11 +6,13 @@
         <description>Recent content in C Sharp on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
+        <managingEditor>wenjie.jin@hotmail.com (Javen)</managingEditor>
+        <webMaster>wenjie.jin@hotmail.com (Javen)</webMaster>
         <lastBuildDate>Mon, 20 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/tags/c-sharp/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>获取当前操作系统信息（c#）</title>
         <link>https://javenjin.github.io/blog/zh-cn/p/%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AFc/</link>
         <pubDate>Mon, 20 Nov 2023 00:00:00 +0000</pubDate>
-        
+        <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/zh-cn/p/%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AFc/</guid>
         <description>&lt;h1 id=&#34;获取当前操作系统信息c&#34;&gt;获取当前操作系统信息（c#）&lt;/h1&gt;
 &lt;h2 id=&#34;systemruntimeinteropservicesosplatform&#34;&gt;System.Runtime.InteropServices.OSPlatform&lt;/h2&gt;

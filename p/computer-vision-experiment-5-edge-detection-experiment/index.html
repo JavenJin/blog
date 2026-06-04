@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='计算机视觉 - 实验五 边缘检测实验'>
 <title>Computer Vision - Experiment 5 - Edge detection experiment</title>
@@ -13,7 +13,7 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Computer Vision' /><meta property='article:tag' content='OpenCV' /><meta property='article:published_time' content='2020-03-30T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-03-30T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Computer Vision - Experiment 5 - Edge detection experiment">
 <meta name="twitter:description" content="计算机视觉 - 实验五 边缘检测实验">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/JavenJin/blog-image/b48e6cab82c8d082866b1e6733ab5ea9be33de2c/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
 
     </head>
     <body class="
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/blog/img/avatar_hu_c5e52b2c0ee11a6a.jpg" width="300"
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -638,82 +638,82 @@
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//--------------------------------【头文件、命名空间包含部分】----------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：包含程序所使用的头文件和命名空间
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#include</span> <span class="cpf">&lt;opencv2/highgui/highgui.hpp&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;opencv2/highgui/highgui.hpp&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;opencv2/imgproc/imgproc.hpp&gt;</span><span class="cp">
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//--------------------------------【全局变量声明部分】-----------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：全局变量声明
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//原图，原图的灰度版，目标图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Mat</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_srcGrayImage</span><span class="p">,</span><span class="n">g_dstImage</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="n">Mat</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_srcGrayImage</span><span class="p">,</span><span class="n">g_dstImage</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//Canny边缘检测相关变量
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Mat</span> <span class="n">g_cannyDetectedEdges</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="n">Mat</span> <span class="n">g_cannyDetectedEdges</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">g_cannyLowThreshold</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="c1">//TrackBar位置参数  
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//Sobel边缘检测相关变量
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Mat</span> <span class="n">g_sobelGradient_X</span><span class="p">,</span> <span class="n">g_sobelGradient_Y</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="n">Mat</span> <span class="n">g_sobelGradient_X</span><span class="p">,</span> <span class="n">g_sobelGradient_Y</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="n">Mat</span> <span class="n">g_sobelAbsGradient_X</span><span class="p">,</span> <span class="n">g_sobelAbsGradient_Y</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">g_sobelKernelSize</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="c1">//TrackBar位置参数  
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//Scharr滤波器相关变量
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Mat</span> <span class="n">g_scharrGradient_X</span><span class="p">,</span> <span class="n">g_scharrGradient_Y</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="n">Mat</span> <span class="n">g_scharrGradient_X</span><span class="p">,</span> <span class="n">g_scharrGradient_Y</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="n">Mat</span> <span class="n">g_scharrAbsGradient_X</span><span class="p">,</span> <span class="n">g_scharrAbsGradient_Y</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//--------------------------------【全局函数声明部分】-----------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：全局函数声明
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">(</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">(</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_Canny</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span><span class="p">);</span><span class="c1">//Canny边缘检测窗口滚动条的回调函数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_Sobel</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span><span class="p">);</span><span class="c1">//Sobel边缘检测窗口滚动条的回调函数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">Scharr</span><span class="p">(</span> <span class="p">);</span><span class="c1">//封装了Scharr边缘检测相关代码的函数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">on_Sobel</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span><span class="p">);</span><span class="c1">//Sobel边缘检测窗口滚动条的回调函数
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Scharr</span><span class="p">(</span> <span class="p">);</span><span class="c1">//封装了Scharr边缘检测相关代码的函数
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------【main( )函数】-----------------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：控制台应用程序的入口函数，我们的程序从这里开始
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span> <span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//改变console字体颜色
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">system</span><span class="p">(</span><span class="s">&#34;color 2F&#34;</span><span class="p">);</span>  
+</span></span></span><span class="line"><span class="cl">	<span class="n">system</span><span class="p">(</span><span class="s">&#34;color 2F&#34;</span><span class="p">);</span>  
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//显示欢迎语
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">ShowHelpText</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">ShowHelpText</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//载入原图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">g_srcImage</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s">&#34;1.jpg&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">g_srcImage</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s">&#34;1.jpg&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">g_srcImage</span><span class="p">.</span><span class="n">data</span> <span class="p">)</span> <span class="p">{</span> <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Oh，no，读取srcImage错误~！ </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//显示原始图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【原始图】&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">namedWindow</span><span class="p">(</span><span class="s">&#34;【原始图】&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【原始图】&#34;</span><span class="p">,</span> <span class="n">g_srcImage</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 创建与src同类型和大小的矩阵(dst)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">g_dstImage</span><span class="p">.</span><span class="n">create</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="n">g_srcImage</span><span class="p">.</span><span class="n">type</span><span class="p">()</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">g_dstImage</span><span class="p">.</span><span class="n">create</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="n">g_srcImage</span><span class="p">.</span><span class="n">type</span><span class="p">()</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 将原图像转换为灰度图像
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">cvtColor</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_srcGrayImage</span><span class="p">,</span> <span class="n">COLOR_BGR2GRAY</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">cvtColor</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_srcGrayImage</span><span class="p">,</span> <span class="n">COLOR_BGR2GRAY</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 创建显示窗口
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">namedWindow</span><span class="p">(</span> <span class="s">&#34;【效果图】Canny边缘检测&#34;</span><span class="p">,</span> <span class="n">WINDOW_AUTOSIZE</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">namedWindow</span><span class="p">(</span> <span class="s">&#34;【效果图】Canny边缘检测&#34;</span><span class="p">,</span> <span class="n">WINDOW_AUTOSIZE</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">namedWindow</span><span class="p">(</span> <span class="s">&#34;【效果图】Sobel边缘检测&#34;</span><span class="p">,</span> <span class="n">WINDOW_AUTOSIZE</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 创建trackbar
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">createTrackbar</span><span class="p">(</span> <span class="s">&#34;参数值：&#34;</span><span class="p">,</span> <span class="s">&#34;【效果图】Canny边缘检测&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">g_cannyLowThreshold</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="n">on_Canny</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">createTrackbar</span><span class="p">(</span> <span class="s">&#34;参数值：&#34;</span><span class="p">,</span> <span class="s">&#34;【效果图】Canny边缘检测&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">g_cannyLowThreshold</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="n">on_Canny</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">createTrackbar</span><span class="p">(</span> <span class="s">&#34;参数值：&#34;</span><span class="p">,</span> <span class="s">&#34;【效果图】Sobel边缘检测&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">g_sobelKernelSize</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">on_Sobel</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 调用回调函数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">on_Canny</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">on_Canny</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">on_Sobel</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//调用封装了Scharr边缘检测代码的函数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Scharr</span><span class="p">(</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">Scharr</span><span class="p">(</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//轮询获取按键信息，若按下Q，程序退出
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">while</span><span class="p">((</span><span class="kt">char</span><span class="p">(</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="o">!=</span> <span class="sc">&#39;q&#39;</span><span class="p">))</span> <span class="p">{}</span>
+</span></span></span><span class="line"><span class="cl">	<span class="k">while</span><span class="p">((</span><span class="kt">char</span><span class="p">(</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="o">!=</span> <span class="sc">&#39;q&#39;</span><span class="p">))</span> <span class="p">{}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -722,16 +722,16 @@
 </span></span><span class="line"><span class="cl"><span class="c1">//--------------------------------【ShowHelpText( )函数】--------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：输出一些帮助信息
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">()</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="nf">ShowHelpText</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//输出欢迎信息和OpenCV版本
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">非常感谢购买《OpenCV3编程入门》一书！</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">非常感谢购买《OpenCV3编程入门》一书！</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">此为本书OpenCV3版的第60个配套示例程序</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n\t\t\t</span><span class="s">   当前使用的OpenCV版本为：&#34;</span> <span class="n">CV_VERSION</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n</span><span class="s">  ----------------------------------------------------------------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//输出一些帮助信息
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">printf</span><span class="p">(</span> <span class="s">&#34;</span><span class="se">\n\n\t</span><span class="s">运行成功，请调整滚动条观察图像效果~</span><span class="se">\n\n</span><span class="s">&#34;</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">printf</span><span class="p">(</span> <span class="s">&#34;</span><span class="se">\n\n\t</span><span class="s">运行成功，请调整滚动条观察图像效果~</span><span class="se">\n\n</span><span class="s">&#34;</span>
 </span></span><span class="line"><span class="cl">		<span class="s">&#34;</span><span class="se">\t</span><span class="s">按下“q”键时，程序退出。</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
@@ -739,33 +739,33 @@
 </span></span><span class="line"><span class="cl"><span class="c1">//----------------------------------【on_Canny( )函数】----------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：Canny边缘检测窗口滚动条的回调函数
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">on_Canny</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">on_Canny</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">// 先使用 3x3内核来降噪
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">blur</span><span class="p">(</span> <span class="n">g_srcGrayImage</span><span class="p">,</span> <span class="n">g_cannyDetectedEdges</span><span class="p">,</span> <span class="n">Size</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">blur</span><span class="p">(</span> <span class="n">g_srcGrayImage</span><span class="p">,</span> <span class="n">g_cannyDetectedEdges</span><span class="p">,</span> <span class="n">Size</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 运行我们的Canny算子
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//void cvCanny(
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	const CvArr* image,              //第一个参数表示输入图像，必须为单通道灰度图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	CvArr* edges,                      //第二个参数表示输出的边缘图像，为单通道黑白图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	double threshold1,
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	double threshold2,               //第三个参数和第四个参数表示阈值，这二个阈值中当中的小阈值用来控制边缘连接，
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	大的阈值用来控制强边缘的初始分割即如果一个像素的梯度大与上限值，则被认为
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	是边缘像素，如果小于下限阈值，则被抛弃。如果该点的梯度在两者之间则当这个
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	点与高于上限值的像素点连接时我们才保留，否则删除。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	int aperture_size = 3              //第五个参数表示Sobel 算子大小，默认为3即表示一个3*3的矩阵。Sobel 算子与
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	高斯拉普拉斯算子都是常用的边缘算子
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	);
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Canny</span><span class="p">(</span> <span class="n">g_cannyDetectedEdges</span><span class="p">,</span> <span class="n">g_cannyDetectedEdges</span><span class="p">,</span> <span class="n">g_cannyLowThreshold</span><span class="p">,</span> <span class="n">g_cannyLowThreshold</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//void cvCanny(
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	const CvArr* image,              //第一个参数表示输入图像，必须为单通道灰度图
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	CvArr* edges,                      //第二个参数表示输出的边缘图像，为单通道黑白图
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	double threshold1,
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	double threshold2,               //第三个参数和第四个参数表示阈值，这二个阈值中当中的小阈值用来控制边缘连接，
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	大的阈值用来控制强边缘的初始分割即如果一个像素的梯度大与上限值，则被认为
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	是边缘像素，如果小于下限阈值，则被抛弃。如果该点的梯度在两者之间则当这个
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	点与高于上限值的像素点连接时我们才保留，否则删除。
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	int aperture_size = 3              //第五个参数表示Sobel 算子大小，默认为3即表示一个3*3的矩阵。Sobel 算子与
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	高斯拉普拉斯算子都是常用的边缘算子
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	);
+</span></span></span><span class="line"><span class="cl">	<span class="n">Canny</span><span class="p">(</span> <span class="n">g_cannyDetectedEdges</span><span class="p">,</span> <span class="n">g_cannyDetectedEdges</span><span class="p">,</span> <span class="n">g_cannyLowThreshold</span><span class="p">,</span> <span class="n">g_cannyLowThreshold</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//先将g_dstImage内的所有元素设置为0 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">g_dstImage</span> <span class="o">=</span> <span class="n">Scalar</span><span class="o">::</span><span class="n">all</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">g_dstImage</span> <span class="o">=</span> <span class="n">Scalar</span><span class="o">::</span><span class="n">all</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//使用Canny算子输出的边缘图g_cannyDetectedEdges作为掩码，来将原图g_srcImage拷到目标图g_dstImage中
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">g_srcImage</span><span class="p">.</span><span class="n">copyTo</span><span class="p">(</span> <span class="n">g_dstImage</span><span class="p">,</span> <span class="n">g_cannyDetectedEdges</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">g_srcImage</span><span class="p">.</span><span class="n">copyTo</span><span class="p">(</span> <span class="n">g_dstImage</span><span class="p">,</span> <span class="n">g_cannyDetectedEdges</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//显示效果图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">imshow</span><span class="p">(</span> <span class="s">&#34;【效果图】Canny边缘检测&#34;</span><span class="p">,</span> <span class="n">g_dstImage</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span> <span class="s">&#34;【效果图】Canny边缘检测&#34;</span><span class="p">,</span> <span class="n">g_dstImage</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span> <span class="s">&#34;g_cannyDetectedEdges&#34;</span><span class="p">,</span> <span class="n">g_cannyDetectedEdges</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
@@ -774,31 +774,31 @@
 </span></span><span class="line"><span class="cl"><span class="c1">//----------------------------------【on_Sobel( )函数】----------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：Sobel边缘检测窗口滚动条的回调函数
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">on_Sobel</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">on_Sobel</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">// 求 X方向梯度
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//void Sobel(InputArray src, OutputArray dst, int ddepth,
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	int dx, int dy, int ksize = 3,
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//第四个参数，int类型dx，x 方向上的差分阶数。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//第五个参数，int类型dy，y方向上的差分阶数。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Sobel</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_sobelGradient_X</span><span class="p">,</span> <span class="n">CV_16S</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">g_sobelKernelSize</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//void Sobel(InputArray src, OutputArray dst, int ddepth,
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	int dx, int dy, int ksize = 3,
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//第四个参数，int类型dx，x 方向上的差分阶数。
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//第五个参数，int类型dy，y方向上的差分阶数。
+</span></span></span><span class="line"><span class="cl">	<span class="n">Sobel</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_sobelGradient_X</span><span class="p">,</span> <span class="n">CV_16S</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">g_sobelKernelSize</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">	<span class="n">convertScaleAbs</span><span class="p">(</span> <span class="n">g_sobelGradient_X</span><span class="p">,</span> <span class="n">g_sobelAbsGradient_X</span> <span class="p">);</span><span class="c1">//计算绝对值，并将结果转换成8位
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>																   <span class="c1">//显示效果图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【效果图】Sobel边缘检测x&#34;</span><span class="p">,</span> <span class="n">g_sobelAbsGradient_X</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">																   <span class="c1">//显示效果图
+</span></span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【效果图】Sobel边缘检测x&#34;</span><span class="p">,</span> <span class="n">g_sobelAbsGradient_X</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 求Y方向梯度
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Sobel</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_sobelGradient_Y</span><span class="p">,</span> <span class="n">CV_16S</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">g_sobelKernelSize</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">Sobel</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_sobelGradient_Y</span><span class="p">,</span> <span class="n">CV_16S</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">g_sobelKernelSize</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">	<span class="n">convertScaleAbs</span><span class="p">(</span> <span class="n">g_sobelGradient_Y</span><span class="p">,</span> <span class="n">g_sobelAbsGradient_Y</span> <span class="p">);</span><span class="c1">//计算绝对值，并将结果转换成8位
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【效果图】Sobel边缘检测y&#34;</span><span class="p">,</span> <span class="n">g_sobelAbsGradient_Y</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【效果图】Sobel边缘检测y&#34;</span><span class="p">,</span> <span class="n">g_sobelAbsGradient_Y</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 合并梯度
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//void addWeighted(InputArray src1, double alpha, InputArray src2,
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	double beta, double gamma, OutputArray dst, int dtype = -1);
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//dst = src1*alpha + src2*beta + gamma;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">addWeighted</span><span class="p">(</span> <span class="n">g_sobelAbsGradient_X</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">g_sobelAbsGradient_Y</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">g_dstImage</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//void addWeighted(InputArray src1, double alpha, InputArray src2,
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	double beta, double gamma, OutputArray dst, int dtype = -1);
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//dst = src1*alpha + src2*beta + gamma;
+</span></span></span><span class="line"><span class="cl">	<span class="n">addWeighted</span><span class="p">(</span> <span class="n">g_sobelAbsGradient_X</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">g_sobelAbsGradient_Y</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">g_dstImage</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//显示效果图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【效果图】Sobel边缘检测&#34;</span><span class="p">,</span> <span class="n">g_dstImage</span><span class="p">);</span> 
+</span></span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【效果图】Sobel边缘检测&#34;</span><span class="p">,</span> <span class="n">g_dstImage</span><span class="p">);</span> 
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
@@ -806,138 +806,182 @@
 </span></span><span class="line"><span class="cl"><span class="c1">//-----------------------------------【Scharr( )函数】----------------------------------
 </span></span></span><span class="line"><span class="cl"><span class="c1">//		描述：封装了Scharr边缘检测相关代码的函数
 </span></span></span><span class="line"><span class="cl"><span class="c1">//-------------------------------------------------------------------------------------
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">Scharr</span><span class="p">(</span> <span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">Scharr</span><span class="p">(</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">// 求 X方向梯度
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Scharr</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_scharrGradient_X</span><span class="p">,</span> <span class="n">CV_16S</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">Scharr</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_scharrGradient_X</span><span class="p">,</span> <span class="n">CV_16S</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">//void convertScaleAbs(InputArray src, OutputArray dst,
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//	double alpha = 1, double beta = 0);
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//先缩放元素再取绝对值，最后转换格式为8bit型
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">convertScaleAbs</span><span class="p">(</span> <span class="n">g_scharrGradient_X</span><span class="p">,</span> <span class="n">g_scharrAbsGradient_X</span> <span class="p">);</span><span class="c1">//计算绝对值，并将结果转换成8位
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//显示效果图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【效果图】Scharr滤波器x&#34;</span><span class="p">,</span> <span class="n">g_scharrAbsGradient_X</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//	double alpha = 1, double beta = 0);
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//先缩放元素再取绝对值，最后转换格式为8bit型
+</span></span></span><span class="line"><span class="cl">	<span class="n">convertScaleAbs</span><span class="p">(</span> <span class="n">g_scharrGradient_X</span><span class="p">,</span> <span class="n">g_scharrAbsGradient_X</span> <span class="p">);</span><span class="c1">//计算绝对值，并将结果转换成8位
+</span></span></span><span class="line"><span class="cl">	<span class="c1">//显示效果图
+</span></span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【效果图】Scharr滤波器x&#34;</span><span class="p">,</span> <span class="n">g_scharrAbsGradient_X</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="c1">// 求Y方向梯度
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Scharr</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_scharrGradient_Y</span><span class="p">,</span> <span class="n">CV_16S</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">Scharr</span><span class="p">(</span> <span class="n">g_srcImage</span><span class="p">,</span> <span class="n">g_scharrGradient_Y</span><span class="p">,</span> <span class="n">CV_16S</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">convertScaleAbs</span><span class="p">(</span> <span class="n">g_scharrGradient_Y</span><span class="p">,</span> <span class="n">g_scharrAbsGradient_Y</span> <span class="p">);</span><span class="c1">//计算绝对值，并将结果转换成8位
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【效果图】Scharr滤波器y&#34;</span><span class="p">,</span> <span class="n">g_scharrAbsGradient_Y</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【效果图】Scharr滤波器y&#34;</span><span class="p">,</span> <span class="n">g_scharrAbsGradient_Y</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 合并梯度
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">addWeighted</span><span class="p">(</span> <span class="n">g_scharrAbsGradient_X</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">g_scharrAbsGradient_Y</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">g_dstImage</span> <span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">	<span class="n">addWeighted</span><span class="p">(</span> <span class="n">g_scharrAbsGradient_X</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">g_scharrAbsGradient_Y</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">g_dstImage</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">//显示效果图
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【效果图】Scharr滤波器&#34;</span><span class="p">,</span> <span class="n">g_dstImage</span><span class="p">);</span> 
+</span></span></span><span class="line"><span class="cl">	<span class="n">imshow</span><span class="p">(</span><span class="s">&#34;【效果图】Scharr滤波器&#34;</span><span class="p">,</span> <span class="n">g_dstImage</span><span class="p">);</span> 
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>   (ii) Show results</p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2005%20Edge%20detection%20experiment/edge-detection-experiment1.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image01.png"
+	width="567"
+	height="305"
+	srcset="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image01_hu_7059803e5a0fcfbc.png 480w, /blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image01_hu_167edfbf07bfeec7.png 1024w"
 	loading="lazy"
 	
 		alt="Edge detection experiment 1"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="446px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2005%20Edge%20detection%20experiment/edge-detection-experiment2.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image02.png"
+	width="238"
+	height="371"
+	srcset="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image02_hu_edb044d7d8a0de2.png 480w, /blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image02_hu_7a481dd3aa5f813c.png 1024w"
 	loading="lazy"
 	
 		alt="Edge detection experiment 2"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="64"
+		data-flex-basis="153px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2005%20Edge%20detection%20experiment/edge-detection-experiment3.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image03.png"
+	width="251"
+	height="414"
+	srcset="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image03_hu_87436e50a0c655e2.png 480w, /blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image03_hu_cc04f13abda74060.png 1024w"
 	loading="lazy"
 	
 		alt="Edge detection experiment 3"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="60"
+		data-flex-basis="145px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2005%20Edge%20detection%20experiment/edge-detection-experiment4.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image04.png"
+	width="229"
+	height="394"
+	srcset="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image04_hu_164b7ebc1a69f3b8.png 480w, /blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image04_hu_3a668c12166d1267.png 1024w"
 	loading="lazy"
 	
 		alt="Edge detection experiment 4"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="58"
+		data-flex-basis="139px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2005%20Edge%20detection%20experiment/edge-detection-experiment5.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image05.png"
+	width="253"
+	height="394"
+	srcset="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image05_hu_3eb777a46599d329.png 480w, /blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image05_hu_97d750f0d58ada14.png 1024w"
 	loading="lazy"
 	
 		alt="Edge detection experiment 5"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="64"
+		data-flex-basis="154px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2005%20Edge%20detection%20experiment/edge-detection-experiment6.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image06.png"
+	width="253"
+	height="394"
+	srcset="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image06_hu_b08c001fea1376e.png 480w, /blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image06_hu_8ff60ed2695e5b22.png 1024w"
 	loading="lazy"
 	
 		alt="Edge detection experiment 6"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="64"
+		data-flex-basis="154px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2005%20Edge%20detection%20experiment/edge-detection-experiment7.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image07.png"
+	width="252"
+	height="394"
+	srcset="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image07_hu_b68fd838cbbe54d4.png 480w, /blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image07_hu_7a81015550751b79.png 1024w"
 	loading="lazy"
 	
 		alt="Edge detection experiment 7"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="63"
+		data-flex-basis="153px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2005%20Edge%20detection%20experiment/edge-detection-experiment8.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image08.png"
+	width="253"
+	height="394"
+	srcset="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image08_hu_42cc69f41e1be1fc.png 480w, /blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image08_hu_57f52ec76a171909.png 1024w"
 	loading="lazy"
 	
 		alt="Edge detection experiment 8"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="64"
+		data-flex-basis="154px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2005%20Edge%20detection%20experiment/edge-detection-experiment9.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image09.png"
+	width="253"
+	height="394"
+	srcset="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image09_hu_42cc69f41e1be1fc.png 480w, /blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image09_hu_57f52ec76a171909.png 1024w"
 	loading="lazy"
 	
 		alt="Edge detection experiment 9"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="64"
+		data-flex-basis="154px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2005%20Edge%20detection%20experiment/edge-detection-experiment10.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image10.png"
+	width="252"
+	height="394"
+	srcset="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image10_hu_cba2163cdd5a007d.png 480w, /blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image10_hu_1b7a8716c8f5591f.png 1024w"
 	loading="lazy"
 	
 		alt="Edge detection experiment 10"
 	
 	
+		class="gallery-image" 
+		data-flex-grow="63"
+		data-flex-basis="153px"
+	
 ></p>
-<p><img src="https://raw.githubusercontent.com/JavenJin/blog-image/master/content/post/Campus%20Projects/Computer%20Vision/Experiment%2005%20Edge%20detection%20experiment/edge-detection-experiment11.png"
-	
-	
-	
+<p><img src="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image11.png"
+	width="567"
+	height="305"
+	srcset="/blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image11_hu_4771ea5a53830d6f.png 480w, /blog/p/computer-vision-experiment-5-edge-detection-experiment/images/image11_hu_83787da5a2aa5063.png 1024w"
 	loading="lazy"
 	
 		alt="Edge detection experiment 11"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="446px"
 	
 ></p>
 <h3 id="experiment-summary">Experiment summary</h3>
@@ -1064,7 +1108,7 @@
         
             2020 - 
         
-        2025 Javen Blog
+        2026 Javen Blog
     </section>
     
     <section class="powerby">
