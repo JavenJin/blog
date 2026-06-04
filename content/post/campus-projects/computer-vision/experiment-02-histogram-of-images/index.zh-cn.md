@@ -2,6 +2,7 @@
 title: 计算机视觉 - 实验二 图像的直方图
 description: Computer Vision - Experiment 2 - Histogram of images
 date: '2020-03-11'
+slug: experiment-02-histogram-of-images
 categories:
     - Computer Vision
 tags:

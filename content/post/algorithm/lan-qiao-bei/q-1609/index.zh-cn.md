@@ -2,6 +2,7 @@
 title: 题目 1609 [算法提高VIP]黑色星期五 (C语言)
 description: Q 1609 [Algorithm Improvement VIP]Black Friday (C Language)
 date: '2020-03-21'
+slug: q-1609
 categories:
     - C (Programming Language)
 tags:

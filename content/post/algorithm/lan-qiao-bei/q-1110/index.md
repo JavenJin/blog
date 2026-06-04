@@ -2,6 +2,7 @@
 title: Q 1110 2^k decimal numbers (C Language)
 description: 题目 1110 2^k进制数 (C语言)
 date: '2020-02-04'
+slug: q-1110
 categories:
     - C (Programming Language)
 tags:

@@ -2,6 +2,7 @@
 title: Install DM8 on Windows
 description: 在Windows上安装DM8
 date: '2023-12-13'
+slug: install-dm8-on-windows
 categories:
     - Database
 tags:

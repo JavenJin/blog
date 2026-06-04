@@ -2,6 +2,7 @@
 title: MySQL 5.7 远程访问
 description: MySQL 5.7 Remote Access
 date: '2022-05-11'
+slug: mysql-5-7-remote-access
 categories:
     - Database
 tags:

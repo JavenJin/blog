@@ -2,6 +2,7 @@
 title: Install MySQL-5.7 on CentOS7
 description: 在CentOS7上安装MySQL-5.7
 date: '2021-08-11'
+slug: install-mysql-5-7-on-centos7
 categories:
     - Database
 tags:

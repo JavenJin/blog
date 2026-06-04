@@ -2,6 +2,7 @@
 title: 题目 1429 [2014年第五届真题]兰顿蚂蚁 (C语言)
 description: Q 1429 [2014 5th exam questions] Landon Ants (C Language)
 date: '2020-02-10'
+slug: q-1429
 categories:
     - C (Programming Language)
 tags:

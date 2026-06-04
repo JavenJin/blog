@@ -2,6 +2,7 @@
 title: 题目 1115 DNA (C语言)
 description: Q 1115 DNA (C Language)
 date: '2020-02-04'
+slug: q-1115
 categories:
     - C (Programming Language)
 tags:

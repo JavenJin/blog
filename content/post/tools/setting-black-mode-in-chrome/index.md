@@ -2,6 +2,7 @@
 title: Setting Black Mode in Chrome
 description: 在 Chrome 浏览器中设置黑色模式
 date: '2024-01-24'
+slug: setting-black-mode-in-chrome
 categories:
     - Tools
 tags:

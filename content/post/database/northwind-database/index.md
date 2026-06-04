@@ -2,6 +2,7 @@
 title: Northwind Database
 description: Northwind Database
 date: '2023-07-06'
+slug: northwind-database
 categories:
     - Database
 tags:

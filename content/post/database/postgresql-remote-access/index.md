@@ -2,6 +2,7 @@
 title: PostgreSQL Remote Access
 description: PostgreSQL远程访问
 date: '2022-05-11'
+slug: postgresql-remote-access
 categories:
     - Database
 tags:

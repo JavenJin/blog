@@ -2,6 +2,7 @@
 title: Web front-end development technology course big assignment
 description: Web前端开发技术课程大作业
 date: '2020-07-27'
+slug: web-front-end-development-technology-course-big-assignment
 categories:
     - Front End
 tags:

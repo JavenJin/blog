@@ -2,6 +2,7 @@
 title: 在Windows上安装Oracle-12c-R2
 description: Install Oracle-12c-R2 on Windows
 date: '2023-12-12'
+slug: install-oracle-12c-r2-on-windows
 categories:
     - Database
 tags:

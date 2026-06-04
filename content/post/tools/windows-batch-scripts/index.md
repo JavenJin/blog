@@ -2,6 +2,7 @@
 title: Windows batch scripts(.bat)
 description: Windows批处理脚本（.bat）
 date: '2022-05-17'
+slug: windows-batch-scripts
 categories:
     - Tools
 tags:

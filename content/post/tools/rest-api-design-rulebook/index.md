@@ -2,6 +2,7 @@
 title: REST API Design Rulebook
 description: REST API Design Rulebook
 date: '2022-06-21'
+slug: rest-api-design-rulebook
 categories:
     - Tools
 tags:

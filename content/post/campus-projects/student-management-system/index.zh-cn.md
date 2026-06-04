@@ -2,11 +2,13 @@
 title: 学生管理系统（纯C语言实现）
 description: Student management system (pure C implementation)
 date: '2018-12-20'
+slug: student-management-system
 categories:
     - C (Programming Language)
 tags:
     - C (Programming Language)
 ---
+
 ### 学生管理系统（纯C语言实现）
 
 ```c

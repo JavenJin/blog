@@ -2,6 +2,7 @@
 title: 如何在 SQL Server 数据库中使用Stored Procedure进行分析
 description: How to use Stored Procedure for analytics on SQL Server databases
 date: '2023-11-23'
+slug: how-to-use-stored-procedure-for-analytics-on-sql-server-databases
 categories:
     - Database
 tags:

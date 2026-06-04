@@ -2,6 +2,7 @@
 title: Deploy a Personal Photo Album Accessible Anytime, Anywhere on Your Personal Computer
 description: 个人电脑上部署一台随时随地可访问的私人相册
 date: '2025-11-24'
+slug: deploy-personal-photo-album
 categories:
     - Tools
 tags:

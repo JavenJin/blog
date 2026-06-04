@@ -2,6 +2,7 @@
 title: MySQL 8 Remote Access
 description: MySQL 8 远程访问
 date: '2023-11-16'
+slug: mysql-8-remote-access
 categories:
     - Database
 tags:

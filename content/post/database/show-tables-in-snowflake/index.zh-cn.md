@@ -2,6 +2,7 @@
 title: Snowflake 中的 SHOW TABLES
 description: SHOW TABLES in Snowflake
 date: '2024-02-02'
+slug: show-tables-in-snowflake
 categories:
     - Database
 tags:

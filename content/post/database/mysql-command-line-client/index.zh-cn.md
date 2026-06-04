@@ -2,6 +2,7 @@
 title: MySQL 命令行客户端
 description: MySQL Command-Line Client
 date: '2023-11-22'
+slug: mysql-command-line-client
 categories:
     - Database
 tags:

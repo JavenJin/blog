@@ -2,6 +2,7 @@
 title: MonetDB Remote Access
 description: MonetDB远程访问
 date: '2022-05-11'
+slug: monetdb-remote-access
 categories:
     - Database
 tags:

@@ -2,6 +2,7 @@
 title: Q 1117 K-Decimal number (C Language)
 description: 题目 1117 K-进制数 (C语言)
 date: '2020-02-05'
+slug: q-1117
 categories:
     - C (Programming Language)
 tags:

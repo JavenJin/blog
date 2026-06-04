@@ -2,6 +2,7 @@
 title: Computer Vision - Experiment 4 - Image nonlinear filtering experiment
 description: 计算机视觉 - 实验四 图像非线性滤波实验
 date: '2020-03-18'
+slug: experiment-04-image-nonlinear-filtering-experiment
 categories:
     - Computer Vision
 tags:

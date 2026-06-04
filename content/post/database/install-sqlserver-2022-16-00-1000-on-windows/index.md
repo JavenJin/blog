@@ -2,6 +2,7 @@
 title: Install SQLServer 2022 (16.00.1000) on Windows
 description: 在 Windows 上安装 SQLServer 2022 (16.00.1000)
 date: '2024-01-22'
+slug: install-sqlserver-2022-16-00-1000-on-windows
 categories:
     - Database
 tags:

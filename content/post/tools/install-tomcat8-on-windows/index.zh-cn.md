@@ -2,6 +2,7 @@
 title: 在Windows上安装Tomcat8
 description: Install Tomcat8 on Windows
 date: '2021-07-26'
+slug: install-tomcat8-on-windows
 categories:
     - Tools
 tags:

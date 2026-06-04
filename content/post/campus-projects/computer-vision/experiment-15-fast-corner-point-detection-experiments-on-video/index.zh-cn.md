@@ -2,6 +2,7 @@
 title: 计算机视觉 - 实验十五 对视频的快速角点检测实验
 description: Computer Vision - Experiment 15 - Fast corner point detection experiments on video
 date: '2020-06-10'
+slug: experiment-15-fast-corner-point-detection-experiments-on-video
 categories:
     - Computer Vision
 tags:
