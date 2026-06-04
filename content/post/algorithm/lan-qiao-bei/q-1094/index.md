@@ -2,6 +2,7 @@
 title: Q 1094 Input and output processing of strings (C Language)
 description: 题目 1094 字符串的输入输出处理 (C语言)
 date: '2018-11-02'
+slug: q-1094
 categories:
     - C (Programming Language)
 tags:

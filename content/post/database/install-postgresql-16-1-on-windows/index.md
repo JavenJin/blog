@@ -2,6 +2,7 @@
 title: Install PostgreSQL 16.1 on Windows
 description: 在Windows上安装PostgreSQL 16.1
 date: '2023-11-15'
+slug: install-postgresql-16-1-on-windows
 categories:
     - Database
 tags:

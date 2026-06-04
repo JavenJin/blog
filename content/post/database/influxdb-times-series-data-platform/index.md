@@ -2,6 +2,7 @@
 title: InfluxDB Times Series Data Platform
 description: InfluxDB 时间序列数据平台
 date: '2023-11-24'
+slug: influxdb-times-series-data-platform
 categories:
     - Database
 tags:

@@ -2,6 +2,7 @@
 title: Simple Factory Pattern and Factory Method Pattern
 description: 简单工厂模式 和 工厂方法模式
 date: '2020-09-10'
+slug: simple-factory-pattern-and-factory-method-pattern
 categories:
     - Design Pattern
 tags:

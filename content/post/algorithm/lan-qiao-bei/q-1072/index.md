@@ -2,6 +2,7 @@
 title: Q 1072 Soda bottles (C Language)
 description: 题目 1072 汽水瓶 (C语言)
 date: '2020-07-28'
+slug: q-1072
 categories:
     - C (Programming Language)
 tags:

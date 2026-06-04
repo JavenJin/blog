@@ -2,6 +2,7 @@
 title: eclipse中安装和使用AmaterasUML插件绘制类图
 description: Drawing class diagrams in Eclipse using AmaterasUML plugin
 date: '2020-09-04'
+slug: drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin
 categories:
     - Tools
 tags:

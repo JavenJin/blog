@@ -2,6 +2,7 @@
 title: 机器学习 - 模型评估与选择 & K-means聚类算法实验
 description: Machine Learning - Model evaluation and selection & K-means clustering algorithm
 date: '2020-11-11'
+slug: model-evaluation-and-selection-and-k-means-clustering-algorithm
 aliases:
     - /zh-cn/p/model-evaluation-and-selection-k-means-clustering-algorithm/
 categories:

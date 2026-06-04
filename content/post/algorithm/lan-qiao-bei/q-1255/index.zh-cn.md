@@ -2,6 +2,7 @@
 title: 题目 1115 [算法提高]能量项链 (C语言)
 description: Q 1255 [Algorithm Improvement]Energy Necklace (C Language)
 date: '2020-02-06'
+slug: q-1255
 categories:
     - C (Programming Language)
 tags:

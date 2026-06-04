@@ -2,6 +2,7 @@
 title: 机器学习 - 线性回归实验
 description: Machine Learning - Linear regression experiments
 date: '2019-10-21'
+slug: linear-regression-experiments
 categories:
     - Machine Learning
 tags:

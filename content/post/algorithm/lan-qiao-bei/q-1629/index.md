@@ -2,6 +2,7 @@
 title: Q 1629 [Algorithm Training VIP]Water connection problems (C Language)
 description: 题目 1629 [算法训练VIP]接水问题 (C语言)
 date: '2020-03-21'
+slug: q-1629
 categories:
     - C (Programming Language)
 tags:

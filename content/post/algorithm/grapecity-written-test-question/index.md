@@ -2,6 +2,7 @@
 title: GrapeCity written test question
 description: 葡萄城（GrapeCity）笔试题
 date: '2021-09-04'
+slug: grapecity-written-test-question
 categories:
     - Algorithm
 tags:

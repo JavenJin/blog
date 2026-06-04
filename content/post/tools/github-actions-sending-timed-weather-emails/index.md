@@ -2,6 +2,7 @@
 title: GitHub Actions (Sending Timed Weather Emails)
 description: GitHub Actions：定时发送天气邮件
 date: '2023-11-28'
+slug: github-actions-sending-timed-weather-emails
 categories:
     - Tools
 tags:

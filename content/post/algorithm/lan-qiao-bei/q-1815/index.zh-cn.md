@@ -2,6 +2,7 @@
 title: 题目 1815 [2014年第五届真题]排列序数 (C语言)
 description: Q 1815 [2014 5th exam questions]Ranking order (C Language)
 date: '2020-04-11'
+slug: q-1815
 categories:
     - C (Programming Language)
 tags:

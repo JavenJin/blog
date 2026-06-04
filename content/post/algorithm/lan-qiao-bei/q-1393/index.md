@@ -2,6 +2,7 @@
 title: Q 1393 Bell God Racing (C Language)
 description: 题目 1393 钟神赛车 (C语言)
 date: '2020-07-28'
+slug: q-1393
 categories:
     - C (Programming Language)
 tags:

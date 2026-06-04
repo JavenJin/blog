@@ -2,6 +2,7 @@
 title: Q 1157 Affinity number (C Language)
 description: 题目 1157 亲和数 (C语言)
 date: '2020-07-28'
+slug: q-1157
 categories:
     - C (Programming Language)
 tags:

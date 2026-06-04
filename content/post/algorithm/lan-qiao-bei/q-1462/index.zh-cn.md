@@ -2,6 +2,7 @@
 title: 题目 1462 [基础练习VIP]Huffuman树 (C语言)
 description: Q 1462 [Basic Exercise VIP]Huffuman Tree (C Language)
 date: '2019-03-01'
+slug: q-1462
 categories:
     - C (Programming Language)
 tags:

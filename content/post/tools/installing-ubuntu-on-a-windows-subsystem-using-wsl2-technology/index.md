@@ -2,6 +2,7 @@
 title: Install Ubuntu on Windows subsystem using WSL2 technology
 description: 使用WSL2技术在Windows子系统上安装Ubuntu
 date: '2022-09-16'
+slug: installing-ubuntu-on-a-windows-subsystem-using-wsl2-technology
 categories:
     - Tools
 tags:

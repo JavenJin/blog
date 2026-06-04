@@ -2,6 +2,7 @@
 title: Get current operating system information (c#)
 description: 获取当前操作系统信息（c#）
 date: '2023-11-20'
+slug: get-current-operating-system-information-c-sharp
 aliases:
     - /p/get-current-operating-system-information-c/
 categories:

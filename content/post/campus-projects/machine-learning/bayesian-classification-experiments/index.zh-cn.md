@@ -2,6 +2,7 @@
 title: 机器学习 - 贝叶斯分类实验
 description: Machine Learning - Bayesian classification experiments
 date: '2019-11-04'
+slug: bayesian-classification-experiments
 categories:
     - Machine Learning
 tags:
