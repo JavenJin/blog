@@ -1549,18 +1549,6 @@
                 href="https://javenjin.github.io/blog/zh-cn/archives/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/links/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://javenjin.github.io/blog/links/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/%E9%93%BE%E6%8E%A5/"
-                />
-  </url><url>
     <loc>https://javenjin.github.io/blog/search/</loc>
     <xhtml:link
                 rel="alternate"
