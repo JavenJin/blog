@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Algorithm on Javen Blog</title>
+        <title>算法 on Javen Blog</title>
         <link>https://javenjin.github.io/blog/zh-cn/categories/algorithm/</link>
-        <description>Recent content in Algorithm on Javen Blog</description>
+        <description>Recent content in 算法 on Javen Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <managingEditor>wenjie.jin@hotmail.com (Javen)</managingEditor>

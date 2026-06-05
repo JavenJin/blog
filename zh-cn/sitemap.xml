@@ -107,19 +107,6 @@
                 href="https://javenjin.github.io/blog/zh-cn/categories/data-analysis/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/categories/tools/</loc>
-    <lastmod>2026-06-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://javenjin.github.io/blog/categories/tools/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/categories/tools/"
-                />
-  </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/tags/tools/</loc>
     <lastmod>2026-06-04T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -131,6 +118,19 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/tags/tools/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/categories/tools/</loc>
+    <lastmod>2026-06-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://javenjin.github.io/blog/categories/tools/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/categories/tools/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/deploy-edgetunnel-free-node-with-cloudflare/</loc>
@@ -159,19 +159,6 @@
                 href="https://javenjin.github.io/blog/zh-cn/p/deploy-personal-photo-album/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/categories/database/</loc>
-    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://javenjin.github.io/blog/categories/database/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/categories/database/"
-                />
-  </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/tags/database/</loc>
     <lastmod>2024-02-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -196,6 +183,19 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/p/show-tables-in-snowflake/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/categories/database/</loc>
+    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://javenjin.github.io/blog/categories/database/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/categories/database/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/setting-black-mode-in-chrome/</loc>
@@ -510,19 +510,6 @@
                 href="https://javenjin.github.io/blog/zh-cn/p/postgresql-remote-access/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/categories/algorithm/</loc>
-    <lastmod>2021-09-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://javenjin.github.io/blog/categories/algorithm/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/categories/algorithm/"
-                />
-  </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/tags/algorithm/</loc>
     <lastmod>2021-09-04T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -547,6 +534,19 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/p/grapecity-written-test-question/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/categories/algorithm/</loc>
+    <lastmod>2021-09-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://javenjin.github.io/blog/categories/algorithm/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/categories/algorithm/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/install-centos7-on-vmware/</loc>
@@ -643,19 +643,6 @@
                 href="https://javenjin.github.io/blog/zh-cn/p/gluttony-game-java-gui/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/categories/machine-learning/</loc>
-    <lastmod>2020-11-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://javenjin.github.io/blog/categories/machine-learning/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/categories/machine-learning/"
-                />
-  </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/tags/machine-learning/</loc>
     <lastmod>2020-11-11T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -682,6 +669,19 @@
                 href="https://javenjin.github.io/blog/zh-cn/tags/python/"
                 />
   </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/categories/machine-learning/</loc>
+    <lastmod>2020-11-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://javenjin.github.io/blog/categories/machine-learning/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/categories/machine-learning/"
+                />
+  </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/model-evaluation-and-selection-and-k-means-clustering-algorithm/</loc>
     <lastmod>2020-11-11T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -706,19 +706,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/p/logistic-regression-experiments/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/categories/design-pattern/</loc>
-    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://javenjin.github.io/blog/categories/design-pattern/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/categories/design-pattern/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/tags/design-pattern/</loc>
@@ -758,6 +745,19 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/p/simple-factory-pattern-and-factory-method-pattern/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/categories/design-pattern/</loc>
+    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://javenjin.github.io/blog/categories/design-pattern/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/categories/design-pattern/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/switching-eclipse-after-the-menu-bar-messy-problem/</loc>
@@ -877,19 +877,6 @@
                 href="https://javenjin.github.io/blog/zh-cn/tags/css/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/categories/front-end/</loc>
-    <lastmod>2020-07-27T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://javenjin.github.io/blog/categories/front-end/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/categories/front-end/"
-                />
-  </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/tags/front-end/</loc>
     <lastmod>2020-07-27T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -942,17 +929,17 @@
                 href="https://javenjin.github.io/blog/zh-cn/p/web-front-end-development-technology-course-big-assignment/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/categories/computer-vision/</loc>
-    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
+    <loc>https://javenjin.github.io/blog/zh-cn/categories/front-end/</loc>
+    <lastmod>2020-07-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://javenjin.github.io/blog/categories/computer-vision/"
+                href="https://javenjin.github.io/blog/categories/front-end/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/categories/computer-vision/"
+                href="https://javenjin.github.io/blog/zh-cn/categories/front-end/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/tags/computer-vision/</loc>
@@ -979,6 +966,19 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/tags/opencv/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/categories/computer-vision/</loc>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://javenjin.github.io/blog/categories/computer-vision/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/categories/computer-vision/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/experiment-16-separate-background-experiments-with-gaussian-background-modeling/</loc>
