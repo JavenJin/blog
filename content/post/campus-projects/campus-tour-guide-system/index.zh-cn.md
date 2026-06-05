@@ -4,7 +4,7 @@ description: Campus tour guide system (pure C implementation) Shortest path - Di
 date: '2019-11-27'
 slug: campus-tour-guide-system
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Dijkstra

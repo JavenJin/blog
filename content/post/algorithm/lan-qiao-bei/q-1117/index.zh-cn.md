@@ -4,7 +4,7 @@ description: Q 1117 K-Decimal number (C Language)
 date: '2020-02-05'
 slug: q-1117
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

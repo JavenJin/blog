@@ -4,7 +4,7 @@ description: 题目 1084 用筛法求之N内的素数 (C语言)
 date: '2020-02-14'
 slug: q-1084
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

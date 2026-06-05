@@ -4,7 +4,7 @@ description: Q 1157 Affinity number (C Language)
 date: '2020-07-28'
 slug: q-1157
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

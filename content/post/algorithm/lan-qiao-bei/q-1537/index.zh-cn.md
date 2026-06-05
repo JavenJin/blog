@@ -4,7 +4,7 @@ description: Q 1537 [Algorithm Improvement VIP]Raster printing problems (C Langu
 date: '2020-07-28'
 slug: q-1537
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

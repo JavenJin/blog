@@ -4,7 +4,7 @@ description: Q 1648 [Algorithm Training VIP]Order of precedence (C Language)
 date: '2020-03-21'
 slug: q-1648
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

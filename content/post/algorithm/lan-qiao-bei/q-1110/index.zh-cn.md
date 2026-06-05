@@ -4,7 +4,7 @@ description: Q 1110 2^k decimal numbers (C Language)
 date: '2020-02-04'
 slug: q-1110
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

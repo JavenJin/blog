@@ -4,7 +4,7 @@ description: Q 1084 Use the sieve method to find the prime numbers in N (C Langu
 date: '2020-02-14'
 slug: q-1084
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

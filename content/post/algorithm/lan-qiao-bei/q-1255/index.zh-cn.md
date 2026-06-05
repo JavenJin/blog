@@ -4,7 +4,7 @@ description: Q 1255 [Algorithm Improvement]Energy Necklace (C Language)
 date: '2020-02-06'
 slug: q-1255
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

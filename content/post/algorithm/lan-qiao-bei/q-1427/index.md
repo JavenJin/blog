@@ -4,7 +4,7 @@ description: 题目 1427 [2013年第四届真题]买不到的数目 (C语言)
 date: '2020-02-09'
 slug: q-1427
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

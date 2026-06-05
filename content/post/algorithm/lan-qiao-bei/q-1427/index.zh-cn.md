@@ -4,7 +4,7 @@ description: Q 1427 [2013 4th exam questions] The number that cannot be bought (
 date: '2020-02-09'
 slug: q-1427
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

@@ -4,7 +4,7 @@ description: Q 1427 [2014 5th exam questions] Dividing candy (C Language)
 date: '2020-03-28'
 slug: q-1431
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

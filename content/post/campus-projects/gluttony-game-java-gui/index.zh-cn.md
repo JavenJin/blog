@@ -4,7 +4,7 @@ description: Gluttony Game (Java GUI)
 date: '2020-12-24'
 slug: gluttony-game-java-gui
 categories:
-    - Java (Programming Language)
+    - Java Programming Language
 tags:
     - Java (Programming Language)
 ---

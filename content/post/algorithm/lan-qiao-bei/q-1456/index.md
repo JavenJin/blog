@@ -4,7 +4,7 @@ description: 题目 1456 [历届试题]连号区间数 (C语言)
 date: '2019-04-01'
 slug: q-1456
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

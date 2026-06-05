@@ -4,7 +4,7 @@ description: Student management system (pure C implementation)
 date: '2018-12-20'
 slug: student-management-system
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
 ---

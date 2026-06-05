@@ -4,7 +4,7 @@ description: Q 1629 [Algorithm Training VIP]Water connection problems (C Languag
 date: '2020-03-21'
 slug: q-1629
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

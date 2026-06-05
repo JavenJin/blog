@@ -4,7 +4,7 @@ description: Q 1632 [Algorithm Improvement VIP]Number of pairs (C Language)
 date: '2020-03-21'
 slug: q-1632
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

@@ -4,7 +4,7 @@ description: Q 1456 [Past Test Questions]Number of consecutive number intervals 
 date: '2019-04-01'
 slug: q-1456
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

@@ -4,7 +4,7 @@ description: Q 1115 DNA (C Language)
 date: '2020-02-04'
 slug: q-1115
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

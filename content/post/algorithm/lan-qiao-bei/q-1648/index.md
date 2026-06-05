@@ -4,7 +4,7 @@ description: 题目 1648 [算法训练VIP]求先序排列 (C语言)
 date: '2020-03-21'
 slug: q-1648
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

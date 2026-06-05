@@ -4,7 +4,7 @@ description: Q 1616 [Algorithm Improvement VIP]Inverted number (C Language)
 date: '2020-04-11'
 slug: q-1616
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

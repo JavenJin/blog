@@ -4,7 +4,7 @@ description: 题目 1427 [2014年第五届真题]分糖果 (C语言)
 date: '2020-03-28'
 slug: q-1431
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

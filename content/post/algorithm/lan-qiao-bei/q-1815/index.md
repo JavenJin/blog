@@ -4,7 +4,7 @@ description: 题目 1815 [2014年第五届真题]排列序数 (C语言)
 date: '2020-04-11'
 slug: q-1815
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

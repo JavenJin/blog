@@ -4,7 +4,7 @@ description: 题目 1094 IP判断 (C语言)
 date: '2018-12-01'
 slug: q-1116
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

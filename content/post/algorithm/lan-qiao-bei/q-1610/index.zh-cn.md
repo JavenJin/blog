@@ -4,7 +4,7 @@ description: Q 1616 [Algorithm Improvement VIP]Passing Game (C Language)
 date: '2020-03-21'
 slug: q-1610
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm

@@ -4,7 +4,7 @@ description: Q 1094 Input and output processing of strings (C Language)
 date: '2018-11-02'
 slug: q-1094
 categories:
-    - C (Programming Language)
+    - C Programming Language
 tags:
     - C (Programming Language)
     - Algorithm
