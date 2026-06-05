@@ -1,6 +1,6 @@
 ---
 title: BI Product Modeling Best Practices
-description: BI 产品建模最佳实践
+description: BI product modeling best practices
 date: '2026-06-05'
 slug: bi-modeling-best-practices
 categories:
