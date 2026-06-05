@@ -8,7 +8,560 @@
         <language>en-us</language>
         <managingEditor>wenjie.jin@hotmail.com (Javen)</managingEditor>
         <webMaster>wenjie.jin@hotmail.com (Javen)</webMaster>
-        <lastBuildDate>Thu, 04 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 05 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>BI Product Modeling Best Practices</title>
+        <link>https://javenjin.github.io/blog/p/bi-modeling-best-practices/</link>
+        <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
+        <author>wenjie.jin@hotmail.com (Javen)</author>
+        <guid>https://javenjin.github.io/blog/p/bi-modeling-best-practices/</guid>
+        <description>&lt;h1 id=&#34;bi-product-modeling-best-practices&#34;&gt;BI Product Modeling Best Practices&lt;/h1&gt;
+&lt;h2 id=&#34;1-purpose&#34;&gt;1. Purpose&lt;/h2&gt;
+&lt;p&gt;This article provides guidance for designing data models in BI product direct-query scenarios. The goal is to turn general BI modeling experience into practical rules that help model designers create stable, clear, reusable, and performance-aware semantic models.&lt;/p&gt;
+&lt;p&gt;A good direct-query model in a BI product should meet the following requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dashboard authors can directly understand the tables, fields, relationships, and metrics in the model.&lt;/li&gt;
+&lt;li&gt;Measures aggregate correctly under different dimensions and do not produce duplicated results because of relationship configuration.&lt;/li&gt;
+&lt;li&gt;Relationship direction is clear, filter propagation paths are explainable, and there are no cycles or ambiguous paths.&lt;/li&gt;
+&lt;li&gt;The model remains reasonably sized so direct queries do not push excessive computation to runtime.&lt;/li&gt;
+&lt;li&gt;Permissions, security filters, and “show all dimension members” behavior align with the business semantics.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-define-the-model-boundary-first&#34;&gt;2. Define the Model Boundary First&lt;/h2&gt;
+&lt;p&gt;Before modeling, clarify the business scope served by the model. Do not start by placing every database table into a single model.&lt;/p&gt;
+&lt;p&gt;It is helpful to answer these questions first:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Which business subject does the model serve, such as sales, inventory, finance, production, customers, or device monitoring?&lt;/li&gt;
+&lt;li&gt;Which metrics will the dashboards mainly show?&lt;/li&gt;
+&lt;li&gt;Do the metrics come from business events, transaction records, summaries, or state snapshots?&lt;/li&gt;
+&lt;li&gt;Which dimensions will users use to filter, group, drill, and compare?&lt;/li&gt;
+&lt;li&gt;Is analysis across multiple fact subjects required?&lt;/li&gt;
+&lt;li&gt;Are department, region, customer, tenant, or other permission filters required?&lt;/li&gt;
+&lt;li&gt;Does the data need to be real-time or near real-time?&lt;/li&gt;
+&lt;li&gt;Are the query volume, data volume, and interaction frequency suitable for direct query?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The clearer the model boundary is, the more stable the fact tables, dimension tables, relationships, and metric definitions will be. If a single model covers too many business subjects, relationships quickly become complex and dashboard authors are more likely to misuse fields.&lt;/p&gt;
+&lt;h2 id=&#34;3-core-modeling-principles&#34;&gt;3. Core Modeling Principles&lt;/h2&gt;
+&lt;p&gt;Direct-query models in BI products should follow these principles first:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Define the business grain before configuring relationships.&lt;/li&gt;
+&lt;li&gt;Fact tables store business events and measures; dimension tables store filters, grouping attributes, display attributes, and hierarchies.&lt;/li&gt;
+&lt;li&gt;Prefer star schemas. Snowflake schemas, fact constellations, and wide tables should be used only when they fit the scenario.&lt;/li&gt;
+&lt;li&gt;Let filters flow from dimensions to facts by default, and use bidirectional filtering cautiously.&lt;/li&gt;
+&lt;li&gt;Analyze multiple facts through shared dimensions or summary tables instead of directly joining fact tables to each other.&lt;/li&gt;
+&lt;li&gt;Maintain metric definitions centrally so the same metric name does not use different formulas across dashboards.&lt;/li&gt;
+&lt;li&gt;Push complex cleaning, heavy calculations, and frequent aggregations into database views, staging tables, summary tables, or materialized views when possible.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-table-role-design&#34;&gt;4. Table Role Design&lt;/h2&gt;
+&lt;p&gt;Tables in a BI model should not be understood only as database tables. They should also be treated as business semantic objects. Every table should have a clear role.&lt;/p&gt;
+&lt;h3 id=&#34;41-fact-tables&#34;&gt;4.1 Fact Tables&lt;/h3&gt;
+&lt;p&gt;Fact tables store business events, transactions, state records, snapshots, or aggregatable measure data. Common examples include sales order lines, payment transactions, inventory snapshots, production records, device telemetry, exchange-rate records, and temperature records.&lt;/p&gt;
+&lt;p&gt;Fact tables usually have these characteristics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;They contain many rows and continue growing over time.&lt;/li&gt;
+&lt;li&gt;They include one or more foreign keys used to join dimension tables.&lt;/li&gt;
+&lt;li&gt;They include aggregatable numeric fields, such as amount, quantity, duration, cost, and count.&lt;/li&gt;
+&lt;li&gt;Each row represents a clear business grain.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The first task in fact table design is defining the grain. Grain means what one row in the fact table represents. For example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;One row represents one sales order line.&lt;/li&gt;
+&lt;li&gt;One row represents one device collection result within one minute.&lt;/li&gt;
+&lt;li&gt;One row represents the inventory snapshot of one product in one warehouse on one day.&lt;/li&gt;
+&lt;li&gt;One row represents one monthly bill for one customer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If the fact table grain is unclear, aggregation, relationships, filtering, and metric calculations are all likely to become incorrect.&lt;/p&gt;
+&lt;p&gt;Common fact table types include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Transaction facts: detailed business events, such as order lines, payment transactions, and outbound shipment lines.&lt;/li&gt;
+&lt;li&gt;Periodic snapshot facts: states recorded at fixed intervals, such as daily inventory or monthly balances.&lt;/li&gt;
+&lt;li&gt;Accumulating snapshot facts: multiple stages of a process from start to finish, such as an order moving from creation to shipping to completion.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Different fact types aggregate differently. Transaction facts usually work well with sum and count. Periodic snapshot facts require extra care because they should not be summed blindly across time.&lt;/p&gt;
+&lt;h3 id=&#34;42-dimension-tables&#34;&gt;4.2 Dimension Tables&lt;/h3&gt;
+&lt;p&gt;Dimension tables describe the analytical context of fact data. Common examples include product, customer, region, department, employee, date, category, supplier, device, and project.&lt;/p&gt;
+&lt;p&gt;Dimension tables usually have these characteristics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;They have a unique key referenced by fact table foreign keys.&lt;/li&gt;
+&lt;li&gt;They contain descriptive fields used for filtering, grouping, display, and hierarchy analysis.&lt;/li&gt;
+&lt;li&gt;Their fields are more often names, categories, statuses, regions, hierarchy levels, and attributes, rather than business transactions.&lt;/li&gt;
+&lt;li&gt;They usually have fewer rows than fact tables, though large dimensions such as customers, products, and devices may still be large.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Dimension fields are suitable for dashboard dimensions, categories, filters, groups, legends, row headers, and column headers. Fact table fields are more suitable as measure sources.&lt;/p&gt;
+&lt;p&gt;If dimension attributes change over time, decide whether history must be preserved:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If only the current attribute matters, update the dimension attribute directly.&lt;/li&gt;
+&lt;li&gt;If historical attributes are needed to reproduce the business state at the time, design version, effective-period, or historical snapshot fields and ensure facts join to the correct version.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;43-date-dimensions&#34;&gt;4.3 Date Dimensions&lt;/h3&gt;
+&lt;p&gt;The date dimension is one of the most common shared dimensions. It is recommended to build standard date dimensions for important business dates such as order date, shipment date, payment date, and collection date.&lt;/p&gt;
+&lt;p&gt;A date dimension may include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Date, year, quarter, month, week, and day.&lt;/li&gt;
+&lt;li&gt;Fiscal year, fiscal quarter, and fiscal month.&lt;/li&gt;
+&lt;li&gt;Workday, holiday, and weekend flags.&lt;/li&gt;
+&lt;li&gt;Start of month, end of month, start of quarter, and end of quarter.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If a fact table has multiple date fields, design roles according to the business meaning, such as order date, shipment date, and completion date. Do not let multiple date relationships create confusing filter paths.&lt;/p&gt;
+&lt;h3 id=&#34;44-bridge-tables&#34;&gt;4.4 Bridge Tables&lt;/h3&gt;
+&lt;p&gt;Bridge tables handle many-to-many relationships. For example, one customer may belong to multiple customer groups, one user may belong to multiple departments, and one product may have multiple tags.&lt;/p&gt;
+&lt;p&gt;A bridge table usually stores the keys from both entities, plus optional weights, effective periods, or relationship attributes. It should not be treated as an ordinary fact table for arbitrary measures, and it should not be hidden inside complex bidirectional filters.&lt;/p&gt;
+&lt;p&gt;When using a bridge table, clarify:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What one bridge-table row represents.&lt;/li&gt;
+&lt;li&gt;Whether the bridge table has a weight field.&lt;/li&gt;
+&lt;li&gt;Whether the bridge table has an effective period.&lt;/li&gt;
+&lt;li&gt;Whether the two sides may cause double counting.&lt;/li&gt;
+&lt;li&gt;Whether dashboard authors need to display bridge-table fields directly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;45-permission-tables&#34;&gt;4.5 Permission Tables&lt;/h3&gt;
+&lt;p&gt;Permission tables support security filtering, such as relationships between users and departments, users and customers, users and regions, or roles and data scopes.&lt;/p&gt;
+&lt;p&gt;Permission tables should stay simple, stable, and index-friendly. Do not mix permission tables with business facts, or the permission logic will become hard to maintain.&lt;/p&gt;
+&lt;h2 id=&#34;5-architecture-choices&#34;&gt;5. Architecture Choices&lt;/h2&gt;
+&lt;p&gt;BI models are not limited to star and snowflake schemas. In real projects, you may also use fact constellations, wide tables, summary models, or upstream normalized models. The key question is not the architecture name, but whether the structure keeps aggregation correct, paths clear, and performance controllable.&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Architecture&lt;/th&gt;
+					&lt;th&gt;Suitable Scenario&lt;/th&gt;
+					&lt;th&gt;Recommended as a BI Consumption Model&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Star schema&lt;/td&gt;
+					&lt;td&gt;One or more fact tables analyzed through clear dimensions, directly consumed by dashboard authors&lt;/td&gt;
+					&lt;td&gt;Recommended by default&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Snowflake schema&lt;/td&gt;
+					&lt;td&gt;Source data is highly normalized, and dimension hierarchies need reuse or independent maintenance&lt;/td&gt;
+					&lt;td&gt;Usable, but control path complexity&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Fact constellation / multi-star schema&lt;/td&gt;
+					&lt;td&gt;Multiple fact tables share common dimensions such as date, product, customer, and organization&lt;/td&gt;
+					&lt;td&gt;Recommended for multi-fact analysis&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Wide / flat model&lt;/td&gt;
+					&lt;td&gt;Single subject, single grain, fixed field combinations, performance priority&lt;/td&gt;
+					&lt;td&gt;Usable for simple scenarios, not ideal for complex reusable models&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Summary / pre-aggregated model&lt;/td&gt;
+					&lt;td&gt;Large data volume, high-frequency dashboards, fixed analytical grain&lt;/td&gt;
+					&lt;td&gt;Recommended as a performance supplement&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Highly normalized source model&lt;/td&gt;
+					&lt;td&gt;Third normal form, historical modeling, upstream preparation layer&lt;/td&gt;
+					&lt;td&gt;Not recommended for direct dashboard consumption&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;51-star-schema&#34;&gt;5.1 Star Schema&lt;/h3&gt;
+&lt;p&gt;The star schema is the default recommended BI modeling structure. The fact table is in the center, and dimension tables connect directly to it.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;flowchart LR
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    DimDate[&amp;#34;Date Dimension&amp;#34;] --&amp;gt; FactSales[&amp;#34;Sales Fact&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    DimProduct[&amp;#34;Product Dimension&amp;#34;] --&amp;gt; FactSales
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    DimCustomer[&amp;#34;Customer Dimension&amp;#34;] --&amp;gt; FactSales
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    DimOrg[&amp;#34;Organization Dimension&amp;#34;] --&amp;gt; FactSales
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    FactSales --&amp;gt; Measure[&amp;#34;Sales Amount / Quantity / Order Count&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;A star schema fits these scenarios:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dashboards mainly analyze fact metrics across dimensions.&lt;/li&gt;
+&lt;li&gt;Dimension hierarchies are shallow or can be flattened into dimension tables.&lt;/li&gt;
+&lt;li&gt;Query performance and model understandability are priorities.&lt;/li&gt;
+&lt;li&gt;Business users need to select fields directly to create charts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The advantages of a star schema are simple relationships, short query paths, clear filter propagation, and lower risk of incorrect aggregation. It may introduce some dimension redundancy, but that is usually acceptable in analytical scenarios.&lt;/p&gt;
+&lt;h3 id=&#34;52-snowflake-schema&#34;&gt;5.2 Snowflake Schema&lt;/h3&gt;
+&lt;p&gt;A snowflake schema further splits hierarchy tables from dimension tables. For example, a sales fact joins to a product table, the product table joins to a subcategory table, and the subcategory table joins to a category table.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;flowchart LR
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    DimCategory[&amp;#34;Category Dimension&amp;#34;] --&amp;gt; DimSubCategory[&amp;#34;Subcategory Dimension&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    DimSubCategory --&amp;gt; DimProduct[&amp;#34;Product Dimension&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    DimProduct --&amp;gt; FactSales[&amp;#34;Sales Fact&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    DimDate[&amp;#34;Date Dimension&amp;#34;] --&amp;gt; FactSales
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    DimCustomer[&amp;#34;Customer Dimension&amp;#34;] --&amp;gt; FactSales
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;A snowflake schema fits these scenarios:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The source database is highly normalized.&lt;/li&gt;
+&lt;li&gt;Dimension hierarchies need to be reused by multiple models or dimensions.&lt;/li&gt;
+&lt;li&gt;Large dimension tables are easier to maintain after splitting.&lt;/li&gt;
+&lt;li&gt;The original hierarchy structure is genuinely required by the business.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Control complexity when using snowflake schemas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each hierarchy path should be unique. Do not let one fact table reach the same dimension through multiple paths.&lt;/li&gt;
+&lt;li&gt;Avoid cycles.&lt;/li&gt;
+&lt;li&gt;Do not force dashboard authors to guess which field to use across multiple hierarchy tables.&lt;/li&gt;
+&lt;li&gt;Frequently used multi-level dimensions can be reshaped into a more consumable dimension table or database view.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;53-fact-constellation--multi-star-schema&#34;&gt;5.3 Fact Constellation / Multi-Star Schema&lt;/h3&gt;
+&lt;p&gt;A fact constellation is useful when multiple fact tables share common dimensions. For example, sales facts, inventory facts, and collection facts may share date, product, and organization dimensions.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;flowchart LR
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    DimDate[&amp;#34;Date Dimension&amp;#34;] --&amp;gt; FactSales[&amp;#34;Sales Fact&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    DimDate --&amp;gt; FactInventory[&amp;#34;Inventory Snapshot Fact&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    DimProduct[&amp;#34;Product Dimension&amp;#34;] --&amp;gt; FactSales
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    DimProduct --&amp;gt; FactInventory
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    DimCustomer[&amp;#34;Customer Dimension&amp;#34;] --&amp;gt; FactSales
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    DimWarehouse[&amp;#34;Warehouse Dimension&amp;#34;] --&amp;gt; FactInventory
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    FactSales --&amp;gt; SalesMeasures[&amp;#34;Sales Amount / Sales Quantity&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    FactInventory --&amp;gt; InventoryMeasures[&amp;#34;Inventory Quantity / Inventory Amount&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Fact constellations are recommended for multi-fact analysis, but be careful:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Do not directly join fact tables to each other.&lt;/li&gt;
+&lt;li&gt;Use shared dimensions to connect multiple facts.&lt;/li&gt;
+&lt;li&gt;The shared dimension must have the same business meaning across fact tables.&lt;/li&gt;
+&lt;li&gt;Facts at different grains can only be compared at a shared grain.&lt;/li&gt;
+&lt;li&gt;Cross-fact metrics need clear calculation rules, and sometimes a unified summary table should be prepared in advance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;54-wide--flat-models&#34;&gt;5.4 Wide / Flat Models&lt;/h3&gt;
+&lt;p&gt;Wide tables reduce joins, but if facts at different grains or unrelated dimensions are forced together, they easily cause data duplication and incorrect aggregation.&lt;/p&gt;
+&lt;p&gt;Wide tables fit these scenarios:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A single business subject.&lt;/li&gt;
+&lt;li&gt;A single fact grain.&lt;/li&gt;
+&lt;li&gt;Fixed dashboard field combinations.&lt;/li&gt;
+&lt;li&gt;Data volume or performance requirements make runtime joins too expensive.&lt;/li&gt;
+&lt;li&gt;The upstream layer already guarantees correct metric definitions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Do not build one giant wide table just to make field dragging convenient. If there are multiple fact grains, unrelated dimensions, or many-to-many relationships, prefer a star, snowflake, or fact constellation structure.&lt;/p&gt;
+&lt;h3 id=&#34;55-summary--pre-aggregated-models&#34;&gt;5.5 Summary / Pre-Aggregated Models&lt;/h3&gt;
+&lt;p&gt;Summary or pre-aggregated models are useful for high-frequency dashboards, large datasets, and fixed analytical grains. Examples include daily sales summaries, monthly inventory summaries, and regional customer-count summaries.&lt;/p&gt;
+&lt;p&gt;When using summary models:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The summary grain must be clear.&lt;/li&gt;
+&lt;li&gt;Summary metrics must match detailed metric definitions.&lt;/li&gt;
+&lt;li&gt;Dashboard authors should not treat summary tables as detailed fact tables.&lt;/li&gt;
+&lt;li&gt;If detail tables and summary tables coexist, avoid mixing incompatible grains in the same visual.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;56-highly-normalized-source-models&#34;&gt;5.6 Highly Normalized Source Models&lt;/h3&gt;
+&lt;p&gt;Third-normal-form databases, historical models, or more complex upstream structures are suitable as data preparation layers, but usually not as BI models consumed directly by business users.&lt;/p&gt;
+&lt;p&gt;If a highly normalized source structure is exposed directly to dashboard authors, common problems include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Too many tables and unclear field meanings.&lt;/li&gt;
+&lt;li&gt;Long relationship paths and slower queries.&lt;/li&gt;
+&lt;li&gt;Multiple paths with unclear filtering semantics.&lt;/li&gt;
+&lt;li&gt;Metric definitions scattered across many tables and calculations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A better approach is to first use views, staging tables, summary tables, or semantic reshaping to convert the source structure into a consumption model closer to a star schema, snowflake schema, or fact constellation.&lt;/p&gt;
+&lt;h2 id=&#34;6-relationship-design&#34;&gt;6. Relationship Design&lt;/h2&gt;
+&lt;h3 id=&#34;61-configure-cardinality-correctly&#34;&gt;6.1 Configure Cardinality Correctly&lt;/h3&gt;
+&lt;p&gt;Relationship cardinality defines filtering and aggregation semantics. The most common and stable relationship is one-to-many or many-to-one.&lt;/p&gt;
+&lt;p&gt;Usually:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The “one” side is the dimension table, and its primary key or unique key must be unique.&lt;/li&gt;
+&lt;li&gt;The “many” side is the fact table, and its foreign key can repeat.&lt;/li&gt;
+&lt;li&gt;Dimension tables filter fact tables.&lt;/li&gt;
+&lt;li&gt;Fact tables provide measures.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Before configuring a relationship, validate:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Whether the “one” side field is truly unique.&lt;/li&gt;
+&lt;li&gt;Whether the “many” side field has many unmatched values.&lt;/li&gt;
+&lt;li&gt;Whether nulls, empty strings, or abnormal foreign keys exist.&lt;/li&gt;
+&lt;li&gt;Whether relationship fields use consistent data types.&lt;/li&gt;
+&lt;li&gt;Whether relationship fields are suitable for indexes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;One-to-one relationships are uncommon. If a model contains many one-to-one relationships, check whether there is unnecessary table splitting or whether those tables can be merged into a single dimension.&lt;/p&gt;
+&lt;h3 id=&#34;62-handle-many-to-many-relationships-carefully&#34;&gt;6.2 Handle Many-to-Many Relationships Carefully&lt;/h3&gt;
+&lt;p&gt;Many-to-many relationships are one of the most common sources of duplicated calculations. Do not rely only on bidirectional filters to solve many-to-many problems.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;flowchart LR
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    DimGroup[&amp;#34;Customer Group Dimension&amp;#34;] --&amp;gt; Bridge[&amp;#34;Customer-Customer Group Bridge&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Bridge --&amp;gt; DimCustomer[&amp;#34;Customer Dimension&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    DimCustomer --&amp;gt; FactSales[&amp;#34;Sales Fact&amp;#34;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Recommended practices:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use a bridge table to explicitly represent many-to-many relationships.&lt;/li&gt;
+&lt;li&gt;Define the bridge table grain clearly.&lt;/li&gt;
+&lt;li&gt;Add weights when needed to avoid duplicating amounts or quantities.&lt;/li&gt;
+&lt;li&gt;Define separate calculation logic for many-to-many metrics.&lt;/li&gt;
+&lt;li&gt;Avoid letting dashboard authors freely combine fields that are likely to double count.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you cannot clearly explain the filtering path and aggregation result of a many-to-many relationship, do not expose it as an ordinary relationship to business users.&lt;/p&gt;
+&lt;h3 id=&#34;63-avoid-direct-fact-to-fact-relationships&#34;&gt;6.3 Avoid Direct Fact-to-Fact Relationships&lt;/h3&gt;
+&lt;p&gt;Multiple fact tables usually have different grains. Sales details, inventory snapshots, customer visit records, and payment transactions should not be directly joined to each other.&lt;/p&gt;
+&lt;p&gt;Safer options include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Analyze through shared dimensions such as date, customer, product, and region.&lt;/li&gt;
+&lt;li&gt;Prepare summary tables at a shared grain.&lt;/li&gt;
+&lt;li&gt;Use bridge or intermediate tables to express explicit business relationships.&lt;/li&gt;
+&lt;li&gt;Build dedicated data-preparation logic for cross-fact metrics.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Directly joining two fact tables often expands row counts and causes amounts, quantities, and counts to be duplicated.&lt;/p&gt;
+&lt;h3 id=&#34;64-control-relationship-paths&#34;&gt;6.4 Control Relationship Paths&lt;/h3&gt;
+&lt;p&gt;In a model, there should preferably be one clear path from a dimension to a fact table. If multiple paths exist, both the system and users may struggle to determine how filters should propagate.&lt;/p&gt;
+&lt;p&gt;Avoid:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cyclic relationships.&lt;/li&gt;
+&lt;li&gt;Multiple equivalent filter paths.&lt;/li&gt;
+&lt;li&gt;Fact tables connected to each other and then connected to shared dimensions.&lt;/li&gt;
+&lt;li&gt;Many bidirectional relationships intertwined together.&lt;/li&gt;
+&lt;li&gt;Fields with the same business meaning scattered across multiple tables.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If the relationship diagram looks like a complex network rather than a clear star, snowflake, or fact constellation, the model should be split or the upstream data should be reshaped.&lt;/p&gt;
+&lt;h2 id=&#34;7-filter-direction&#34;&gt;7. Filter Direction&lt;/h2&gt;
+&lt;h3 id=&#34;71-filter-facts-from-dimensions-by-default&#34;&gt;7.1 Filter Facts from Dimensions by Default&lt;/h3&gt;
+&lt;p&gt;In BI modeling, filter direction should usually propagate one way from dimension tables to fact tables. When users select products, customers, dates, regions, or other dimensions, those selections filter measures such as sales amount, quantity, and cost in the corresponding fact table.&lt;/p&gt;
+&lt;p&gt;This direction best matches business analysis habits and is easiest to explain.&lt;/p&gt;
+&lt;h3 id=&#34;72-use-bidirectional-filtering-carefully&#34;&gt;7.2 Use Bidirectional Filtering Carefully&lt;/h3&gt;
+&lt;p&gt;Bidirectional filtering allows both sides of a relationship to filter each other. It may solve short-term interaction issues, but it can also introduce path ambiguity, performance problems, and hard-to-explain results.&lt;/p&gt;
+&lt;p&gt;Use bidirectional filtering only when all of the following are true:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The business genuinely needs both sides to filter each other.&lt;/li&gt;
+&lt;li&gt;The model has no cyclic paths.&lt;/li&gt;
+&lt;li&gt;No multiple propagation paths are created.&lt;/li&gt;
+&lt;li&gt;Aggregation results have been verified to avoid duplication.&lt;/li&gt;
+&lt;li&gt;Dashboard authors can understand the meaning of the relationship.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If bidirectional filtering is enabled only to make a filter “appear to interact,” consider adjusting the model structure first.&lt;/p&gt;
+&lt;h3 id=&#34;73-show-all-dimension-members&#34;&gt;7.3 Show All Dimension Members&lt;/h3&gt;
+&lt;p&gt;“Show all dimension members” is used to display dimension members that do not have matching fact records. For example, show all products even when some products have no sales amount.&lt;/p&gt;
+&lt;p&gt;When using this capability, confirm:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The display baseline is the dimension table, not the fact table.&lt;/li&gt;
+&lt;li&gt;Members without fact data should show blank, zero, or another default value.&lt;/li&gt;
+&lt;li&gt;Permission filtering does not expose dimension members that the user should not see.&lt;/li&gt;
+&lt;li&gt;The dimension table does not contain invalid, duplicate, or expired members.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;8-metric-design&#34;&gt;8. Metric Design&lt;/h2&gt;
+&lt;h3 id=&#34;81-measures-should-come-from-fact-tables&#34;&gt;8.1 Measures Should Come from Fact Tables&lt;/h3&gt;
+&lt;p&gt;Amounts, quantities, counts, durations, costs, inventory, temperature, exchange rates, and similar measures usually come from fact tables. If numeric fields on dimension tables are used for aggregation, first confirm that they truly have measure semantics.&lt;/p&gt;
+&lt;p&gt;Define common metrics at the model layer to reduce repeated dashboard-level configuration.&lt;/p&gt;
+&lt;p&gt;Common metrics include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sales amount: Sum(Amount)&lt;/li&gt;
+&lt;li&gt;Sales quantity: Sum(Quantity)&lt;/li&gt;
+&lt;li&gt;Order count: Count(OrderID)&lt;/li&gt;
+&lt;li&gt;Customer count: CountDistinct(CustomerID)&lt;/li&gt;
+&lt;li&gt;Average order value: Sales amount / Order count&lt;/li&gt;
+&lt;li&gt;Gross margin rate: Gross margin / Sales amount&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;82-clarify-additivity&#34;&gt;8.2 Clarify Additivity&lt;/h3&gt;
+&lt;p&gt;Not every metric can be summed freely.&lt;/p&gt;
+&lt;p&gt;Metrics can be classified as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Additive metrics: sales amount, quantity, cost, and count, which can usually be summed across multiple dimensions.&lt;/li&gt;
+&lt;li&gt;Semi-additive metrics: inventory balance, account balance, and device state, which usually cannot be summed directly across time.&lt;/li&gt;
+&lt;li&gt;Non-additive metrics: ratios, percentages, averages, temperatures, and unit prices, which usually require dedicated formulas.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For semi-additive and non-additive metrics, document usage limits in the model or descriptions to avoid incorrect dashboard aggregation. Ratio metrics should be recalculated from numerator and denominator rather than averaged across group-level ratios.&lt;/p&gt;
+&lt;h3 id=&#34;83-maintain-metric-definitions-centrally&#34;&gt;8.3 Maintain Metric Definitions Centrally&lt;/h3&gt;
+&lt;p&gt;The same business metric should not use different calculations in different dashboards.&lt;/p&gt;
+&lt;p&gt;Recommended practices:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Define frequently used metrics at the model layer.&lt;/li&gt;
+&lt;li&gt;Name metrics according to business meaning and aggregation behavior.&lt;/li&gt;
+&lt;li&gt;For ratio metrics, define numerator, denominator, and filter conditions.&lt;/li&gt;
+&lt;li&gt;For time-related metrics, define the statistical period.&lt;/li&gt;
+&lt;li&gt;For permission-related metrics, verify results after security filtering.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;9-field-governance&#34;&gt;9. Field Governance&lt;/h2&gt;
+&lt;h3 id=&#34;91-hide-technical-fields&#34;&gt;9.1 Hide Technical Fields&lt;/h3&gt;
+&lt;p&gt;Business users usually do not need to see surrogate keys, foreign keys, system IDs, audit fields, synchronization fields, deletion flags, and other technical fields.&lt;/p&gt;
+&lt;p&gt;Recommended fields to hide:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Internal primary keys and foreign keys.&lt;/li&gt;
+&lt;li&gt;Created time, updated time, synchronization batch, and similar technical fields unless required for analysis.&lt;/li&gt;
+&lt;li&gt;Database maintenance fields.&lt;/li&gt;
+&lt;li&gt;Bridge-table fields that should not be dragged directly.&lt;/li&gt;
+&lt;li&gt;Permission helper fields.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;92-use-clear-names&#34;&gt;9.2 Use Clear Names&lt;/h3&gt;
+&lt;p&gt;Field names should be understandable to dashboard authors and business users, not only to database developers.&lt;/p&gt;
+&lt;p&gt;Recommended practices:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use business-friendly display names.&lt;/li&gt;
+&lt;li&gt;Avoid excessive abbreviations.&lt;/li&gt;
+&lt;li&gt;Use consistent naming for amount, quantity, percentage, date, and status fields.&lt;/li&gt;
+&lt;li&gt;Keep names consistent across tables for fields with the same meaning.&lt;/li&gt;
+&lt;li&gt;Add descriptions for fields that are easy to confuse.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;93-build-hierarchies&#34;&gt;9.3 Build Hierarchies&lt;/h3&gt;
+&lt;p&gt;Common dimension hierarchies should be clearly represented in the model, such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Category &amp;gt; Subcategory &amp;gt; Product&lt;/li&gt;
+&lt;li&gt;Country &amp;gt; Province &amp;gt; City&lt;/li&gt;
+&lt;li&gt;Company &amp;gt; Department &amp;gt; Employee&lt;/li&gt;
+&lt;li&gt;Year &amp;gt; Quarter &amp;gt; Month &amp;gt; Day&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hierarchies help dashboard authors drill correctly and reduce field-selection mistakes.&lt;/p&gt;
+&lt;h2 id=&#34;10-permissions-and-security-filters&#34;&gt;10. Permissions and Security Filters&lt;/h2&gt;
+&lt;p&gt;Security filters control which data different users can see. They should be part of model design rather than a last-minute patch.&lt;/p&gt;
+&lt;p&gt;When designing security filters, consider:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Permission logic should be based on stable dimensions such as department, region, customer, tenant, or organization.&lt;/li&gt;
+&lt;li&gt;Permission fields should be indexed when possible.&lt;/li&gt;
+&lt;li&gt;User attribute variables should have clear default behavior.&lt;/li&gt;
+&lt;li&gt;Permission tables and business fact tables should have clear relationships.&lt;/li&gt;
+&lt;li&gt;Aggregation results should still be tested after permission filtering.&lt;/li&gt;
+&lt;li&gt;When used with “show all dimension members,” verify that unauthorized dimension members are not exposed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If permission rules are complex, organize them first in database views, permission tables, or upstream data preparation before exposing them in the BI model.&lt;/p&gt;
+&lt;h2 id=&#34;11-direct-query-performance-practices&#34;&gt;11. Direct-Query Performance Practices&lt;/h2&gt;
+&lt;p&gt;The advantage of direct query is that it can show the latest data and reduce caching and data duplication. However, direct query also depends more heavily on database query performance.&lt;/p&gt;
+&lt;h3 id=&#34;111-suitable-direct-query-scenarios&#34;&gt;11.1 Suitable Direct-Query Scenarios&lt;/h3&gt;
+&lt;p&gt;Direct query is more suitable when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data needs to be real-time or near real-time.&lt;/li&gt;
+&lt;li&gt;The database has good query capability.&lt;/li&gt;
+&lt;li&gt;Dashboard interaction paths are relatively clear.&lt;/li&gt;
+&lt;li&gt;The data does not require complex cleaning or transformation.&lt;/li&gt;
+&lt;li&gt;Query result sizes are controllable.&lt;/li&gt;
+&lt;li&gt;Users care more about the latest result than complex offline analysis.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;112-scenarios-that-should-not-rely-only-on-direct-query&#34;&gt;11.2 Scenarios That Should Not Rely Only on Direct Query&lt;/h3&gt;
+&lt;p&gt;Consider caches, aggregate tables, database views, materialized views, or upstream data preparation for these scenarios:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Many complex joins.&lt;/li&gt;
+&lt;li&gt;Many runtime calculated fields.&lt;/li&gt;
+&lt;li&gt;Complex combinations across multiple fact tables.&lt;/li&gt;
+&lt;li&gt;High-frequency access to very large fact tables.&lt;/li&gt;
+&lt;li&gt;Complex permission derivation.&lt;/li&gt;
+&lt;li&gt;Queries that scan large volumes of historical data every time.&lt;/li&gt;
+&lt;li&gt;Dashboards that load many visuals at once.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;113-database-side-optimization&#34;&gt;11.3 Database-Side Optimization&lt;/h3&gt;
+&lt;p&gt;Direct-query model performance depends heavily on database-side preparation.&lt;/p&gt;
+&lt;p&gt;Recommended practices:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create indexes for fact table foreign keys.&lt;/li&gt;
+&lt;li&gt;Create indexes for dimension table primary keys or unique keys.&lt;/li&gt;
+&lt;li&gt;Create indexes for common filters such as date, organization, region, and customer.&lt;/li&gt;
+&lt;li&gt;Avoid unnecessary type conversions on join fields.&lt;/li&gt;
+&lt;li&gt;Prefer integer keys or stable business keys for relationships.&lt;/li&gt;
+&lt;li&gt;Move complex cleaning and transformation into database views or staging tables.&lt;/li&gt;
+&lt;li&gt;Build summary tables or materialized views for frequent aggregations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;114-model-side-optimization&#34;&gt;11.4 Model-Side Optimization&lt;/h3&gt;
+&lt;p&gt;The BI model should also control complexity:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Do not expose irrelevant fields.&lt;/li&gt;
+&lt;li&gt;Do not introduce irrelevant tables.&lt;/li&gt;
+&lt;li&gt;Do not create too many nested Custom SQL definitions.&lt;/li&gt;
+&lt;li&gt;Avoid making one dashboard trigger a large number of repeated queries.&lt;/li&gt;
+&lt;li&gt;Keep high-frequency query paths short.&lt;/li&gt;
+&lt;li&gt;Split complex models by business subject.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;12-common-anti-patterns&#34;&gt;12. Common Anti-Patterns&lt;/h2&gt;
+&lt;p&gt;Avoid these practices whenever possible:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Treating all tables as ordinary tables without distinguishing facts from dimensions.&lt;/li&gt;
+&lt;li&gt;Forcing facts at different grains into a wide table.&lt;/li&gt;
+&lt;li&gt;Creating direct relationships between fact tables.&lt;/li&gt;
+&lt;li&gt;Handling many-to-many relationships without bridge tables or calculation rules.&lt;/li&gt;
+&lt;li&gt;Enabling many bidirectional filters.&lt;/li&gt;
+&lt;li&gt;Allowing cyclic paths in the model.&lt;/li&gt;
+&lt;li&gt;Using a non-unique field on the “one” side of a relationship.&lt;/li&gt;
+&lt;li&gt;Defining metrics repeatedly across different dashboards.&lt;/li&gt;
+&lt;li&gt;Using the same metric name with different definitions in different visuals.&lt;/li&gt;
+&lt;li&gt;Putting all complex cleaning, transformation, and permission derivation into direct-query runtime.&lt;/li&gt;
+&lt;li&gt;Exposing many technical fields to dashboard authors.&lt;/li&gt;
+&lt;li&gt;Pursuing field completeness without considering whether users can understand and use the model correctly.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;13-modeling-checklist&#34;&gt;13. Modeling Checklist&lt;/h2&gt;
+&lt;p&gt;Before publishing a model, check the following items:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Is the business subject clear?&lt;/li&gt;
+&lt;li&gt;Does every table have a clear role?&lt;/li&gt;
+&lt;li&gt;Is the grain defined for every fact table?&lt;/li&gt;
+&lt;li&gt;Does every dimension table have a unique key?&lt;/li&gt;
+&lt;li&gt;Do measures mainly come from fact tables?&lt;/li&gt;
+&lt;li&gt;Do dimension fields mainly come from dimension tables?&lt;/li&gt;
+&lt;li&gt;Is the “one” side of every relationship truly unique?&lt;/li&gt;
+&lt;li&gt;Are any fact tables directly connected to other fact tables?&lt;/li&gt;
+&lt;li&gt;Are any many-to-many relationships untreated?&lt;/li&gt;
+&lt;li&gt;Are there cycles or multiple filter paths?&lt;/li&gt;
+&lt;li&gt;Does filter direction default from dimensions to facts?&lt;/li&gt;
+&lt;li&gt;Is there a clear business reason for every bidirectional filter?&lt;/li&gt;
+&lt;li&gt;Is it necessary to show dimension members without fact data?&lt;/li&gt;
+&lt;li&gt;Are metric definitions maintained centrally?&lt;/li&gt;
+&lt;li&gt;Are semi-additive and non-additive metrics documented?&lt;/li&gt;
+&lt;li&gt;Is permission filtering based on stable fields?&lt;/li&gt;
+&lt;li&gt;Has permission filtering been tested together with showing all dimension members?&lt;/li&gt;
+&lt;li&gt;Are technical fields hidden?&lt;/li&gt;
+&lt;li&gt;Are field names and descriptions business-friendly?&lt;/li&gt;
+&lt;li&gt;Are high-frequency query paths as short as possible?&lt;/li&gt;
+&lt;li&gt;Are relationship keys, filter fields, and permission fields indexed?&lt;/li&gt;
+&lt;li&gt;Do large-data or complex-query scenarios have caches, views, summary tables, or materialized plans?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;14-recommended-implementation-flow&#34;&gt;14. Recommended Implementation Flow&lt;/h2&gt;
+&lt;p&gt;Use the following flow to design a direct-query model in a BI product:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Clarify the business subject and dashboard usage scenarios.&lt;/li&gt;
+&lt;li&gt;List core metrics and identify their source fact tables.&lt;/li&gt;
+&lt;li&gt;Define the grain for each fact table.&lt;/li&gt;
+&lt;li&gt;List analytical dimensions and permission dimensions.&lt;/li&gt;
+&lt;li&gt;Choose a star, snowflake, fact constellation, wide, or summary model.&lt;/li&gt;
+&lt;li&gt;Configure relationships, cardinality, and filter direction.&lt;/li&gt;
+&lt;li&gt;Validate uniqueness on the “one” side and foreign-key matching.&lt;/li&gt;
+&lt;li&gt;Define common metrics and field display names.&lt;/li&gt;
+&lt;li&gt;Hide technical fields and fields that should not be used directly.&lt;/li&gt;
+&lt;li&gt;Configure security filters.&lt;/li&gt;
+&lt;li&gt;Validate aggregation results with typical dashboard scenarios.&lt;/li&gt;
+&lt;li&gt;Validate direct-query performance with large-data scenarios.&lt;/li&gt;
+&lt;li&gt;Adjust the model or upstream data preparation based on validation results.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;15-summary&#34;&gt;15. Summary&lt;/h2&gt;
+&lt;p&gt;The core of direct-query modeling in a BI product is not connecting all database tables together. It is organizing business facts, analytical dimensions, metric definitions, permission rules, and query paths into a stable semantic model.&lt;/p&gt;
+&lt;p&gt;The safest default strategy is to store measures in fact tables, store filters and grouping attributes in dimension tables, connect them through clear one-to-many relationships, keep filter paths explainable with one-way filtering, maintain consistent metric definitions, and rely on database-side preparation and indexes for direct-query performance.&lt;/p&gt;
+&lt;p&gt;When the model is clear enough, dashboard authors do not need to understand the complex database structure. They can still create correct, stable, and reusable analytical content from the model.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Deploy an edgetunnel Free Node with Cloudflare (Permanent Availability &#43; Free Domain)</title>
         <link>https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/</link>
         <pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate>

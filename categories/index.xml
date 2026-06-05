@@ -8,7 +8,15 @@
         <language>en-us</language>
         <managingEditor>wenjie.jin@hotmail.com (Javen)</managingEditor>
         <webMaster>wenjie.jin@hotmail.com (Javen)</webMaster>
-        <lastBuildDate>Thu, 04 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 05 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>数据分析</title>
+        <link>https://javenjin.github.io/blog/categories/data-analysis/</link>
+        <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
+        <author>wenjie.jin@hotmail.com (Javen)</author>
+        <guid>https://javenjin.github.io/blog/categories/data-analysis/</guid>
+        <description>&lt;img src="https://javenjin.github.io/blog/content/categories/data-analysis/data-analysis.svg" alt="Featured image of post 数据分析" /&gt;</description>
+        </item>
+        <item>
         <title>Tools</title>
         <link>https://javenjin.github.io/blog/categories/tools/</link>
         <pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate>
@@ -46,7 +54,7 @@
         <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/categories/java-programming-language/</guid>
-        <description></description>
+        <description>&lt;img src="https://javenjin.github.io/blog/content/categories/java-programming-language/java.png" alt="Featured image of post Java (Programming Language)" /&gt;</description>
         </item>
         <item>
         <title>Machine Learning</title>
@@ -70,7 +78,7 @@
         <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/categories/c-programming-language/</guid>
-        <description></description>
+        <description>&lt;img src="https://javenjin.github.io/blog/content/categories/c-programming-language/c.jpg" alt="Featured image of post C (Programming Language)" /&gt;</description>
         </item>
         <item>
         <title>Front End</title>
@@ -87,22 +95,6 @@
         <author>wenjie.jin@hotmail.com (Javen)</author>
         <guid>https://javenjin.github.io/blog/categories/computer-vision/</guid>
         <description>&lt;img src="https://javenjin.github.io/blog/content/categories/computer-vision/computer-vision.png" alt="Featured image of post Computer Vision" /&gt;</description>
-        </item>
-        <item>
-        <title>C (Programming Language)</title>
-        <link>https://javenjin.github.io/blog/categories/c-programming-language/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/categories/c-programming-language/</guid>
-        <description>&lt;img src="https://javenjin.github.io/blog/content/categories/c-programming-language/c.jpg" alt="Featured image of post C (Programming Language)" /&gt;</description>
-        </item>
-        <item>
-        <title>Java (Programming Language)</title>
-        <link>https://javenjin.github.io/blog/categories/java-programming-language/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        <author>wenjie.jin@hotmail.com (Javen)</author>
-        <guid>https://javenjin.github.io/blog/categories/java-programming-language/</guid>
-        <description>&lt;img src="https://javenjin.github.io/blog/content/categories/java-programming-language/java.png" alt="Featured image of post Java (Programming Language)" /&gt;</description>
         </item>
         
     </channel>

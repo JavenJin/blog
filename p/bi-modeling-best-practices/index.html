@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='BI 产品建模最佳实践'>
+<title>BI Product Modeling Best Practices</title>
+
+<link rel='canonical' href='https://javenjin.github.io/blog/p/bi-modeling-best-practices/'>
+
+<link rel="stylesheet" href="/blog/scss/style.min.c23ac85127f8ff583870a396f5a1d8e3919d4dda7d292cb9b68b5e272d69739d.css"><meta property='og:title' content='BI Product Modeling Best Practices'>
+<meta property='og:description' content='BI 产品建模最佳实践'>
+<meta property='og:url' content='https://javenjin.github.io/blog/p/bi-modeling-best-practices/'>
+<meta property='og:site_name' content='Javen Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='BI' /><meta property='article:tag' content='Data Modeling' /><meta property='article:published_time' content='2026-06-05T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-06-05T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="BI Product Modeling Best Practices">
+<meta name="twitter:description" content="BI 产品建模最佳实践">
+    <link rel="shortcut icon" href="https://javenjin.github.io/blog/favicon/favicon.svg" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/blog/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/blog/img/avatar_hu_a9ef58ca27be7b60.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🤩</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/blog">Javen Blog</a></h1>
+            <h2 class="site-description">Javen.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/javenjin'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://instagram.com/javenjin98'
+                        target="_blank"
+                        title="Ins"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16.65 7.2H16.66M8 20H16C18.2091 20 20 18.2091 20 16V8C20 5.79086 18.2091 4 16 4H8C5.79086 4 4 5.79086 4 8V16C4 18.2091 5.79086 20 8 20ZM15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12Z"/>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:wenjie.jin@hotmail.com'
+                        target="_blank"
+                        title="Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/blog/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://javenjin.github.io/blog/" selected>English</option>
+                        
+                            <option value="https://javenjin.github.io/blog/zh-cn/" >中文</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#1-purpose">1. Purpose</a></li>
+    <li><a href="#2-define-the-model-boundary-first">2. Define the Model Boundary First</a></li>
+    <li><a href="#3-core-modeling-principles">3. Core Modeling Principles</a></li>
+    <li><a href="#4-table-role-design">4. Table Role Design</a>
+      <ol>
+        <li><a href="#41-fact-tables">4.1 Fact Tables</a></li>
+        <li><a href="#42-dimension-tables">4.2 Dimension Tables</a></li>
+        <li><a href="#43-date-dimensions">4.3 Date Dimensions</a></li>
+        <li><a href="#44-bridge-tables">4.4 Bridge Tables</a></li>
+        <li><a href="#45-permission-tables">4.5 Permission Tables</a></li>
+      </ol>
+    </li>
+    <li><a href="#5-architecture-choices">5. Architecture Choices</a>
+      <ol>
+        <li><a href="#51-star-schema">5.1 Star Schema</a></li>
+        <li><a href="#52-snowflake-schema">5.2 Snowflake Schema</a></li>
+        <li><a href="#53-fact-constellation--multi-star-schema">5.3 Fact Constellation / Multi-Star Schema</a></li>
+        <li><a href="#54-wide--flat-models">5.4 Wide / Flat Models</a></li>
+        <li><a href="#55-summary--pre-aggregated-models">5.5 Summary / Pre-Aggregated Models</a></li>
+        <li><a href="#56-highly-normalized-source-models">5.6 Highly Normalized Source Models</a></li>
+      </ol>
+    </li>
+    <li><a href="#6-relationship-design">6. Relationship Design</a>
+      <ol>
+        <li><a href="#61-configure-cardinality-correctly">6.1 Configure Cardinality Correctly</a></li>
+        <li><a href="#62-handle-many-to-many-relationships-carefully">6.2 Handle Many-to-Many Relationships Carefully</a></li>
+        <li><a href="#63-avoid-direct-fact-to-fact-relationships">6.3 Avoid Direct Fact-to-Fact Relationships</a></li>
+        <li><a href="#64-control-relationship-paths">6.4 Control Relationship Paths</a></li>
+      </ol>
+    </li>
+    <li><a href="#7-filter-direction">7. Filter Direction</a>
+      <ol>
+        <li><a href="#71-filter-facts-from-dimensions-by-default">7.1 Filter Facts from Dimensions by Default</a></li>
+        <li><a href="#72-use-bidirectional-filtering-carefully">7.2 Use Bidirectional Filtering Carefully</a></li>
+        <li><a href="#73-show-all-dimension-members">7.3 Show All Dimension Members</a></li>
+      </ol>
+    </li>
+    <li><a href="#8-metric-design">8. Metric Design</a>
+      <ol>
+        <li><a href="#81-measures-should-come-from-fact-tables">8.1 Measures Should Come from Fact Tables</a></li>
+        <li><a href="#82-clarify-additivity">8.2 Clarify Additivity</a></li>
+        <li><a href="#83-maintain-metric-definitions-centrally">8.3 Maintain Metric Definitions Centrally</a></li>
+      </ol>
+    </li>
+    <li><a href="#9-field-governance">9. Field Governance</a>
+      <ol>
+        <li><a href="#91-hide-technical-fields">9.1 Hide Technical Fields</a></li>
+        <li><a href="#92-use-clear-names">9.2 Use Clear Names</a></li>
+        <li><a href="#93-build-hierarchies">9.3 Build Hierarchies</a></li>
+      </ol>
+    </li>
+    <li><a href="#10-permissions-and-security-filters">10. Permissions and Security Filters</a></li>
+    <li><a href="#11-direct-query-performance-practices">11. Direct-Query Performance Practices</a>
+      <ol>
+        <li><a href="#111-suitable-direct-query-scenarios">11.1 Suitable Direct-Query Scenarios</a></li>
+        <li><a href="#112-scenarios-that-should-not-rely-only-on-direct-query">11.2 Scenarios That Should Not Rely Only on Direct Query</a></li>
+        <li><a href="#113-database-side-optimization">11.3 Database-Side Optimization</a></li>
+        <li><a href="#114-model-side-optimization">11.4 Model-Side Optimization</a></li>
+      </ol>
+    </li>
+    <li><a href="#12-common-anti-patterns">12. Common Anti-Patterns</a></li>
+    <li><a href="#13-modeling-checklist">13. Modeling Checklist</a></li>
+    <li><a href="#14-recommended-implementation-flow">14. Recommended Implementation Flow</a></li>
+    <li><a href="#15-summary">15. Summary</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/blog/categories/data-analysis/" style="background-color: #2f6f73; color: #fff;">
+                数据分析
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/blog/p/bi-modeling-best-practices/">BI Product Modeling Best Practices</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            BI 产品建模最佳实践
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jun 05, 2026</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    20 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+        <footer class="article-translations">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+            <div>
+                
+                    <a href="https://javenjin.github.io/blog/zh-cn/p/bi-modeling-best-practices/" class="link">中文</a>
+                
+            </div>
+        </footer>
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="bi-product-modeling-best-practices">BI Product Modeling Best Practices</h1>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This article provides guidance for designing data models in BI product direct-query scenarios. The goal is to turn general BI modeling experience into practical rules that help model designers create stable, clear, reusable, and performance-aware semantic models.</p>
+<p>A good direct-query model in a BI product should meet the following requirements:</p>
+<ul>
+<li>Dashboard authors can directly understand the tables, fields, relationships, and metrics in the model.</li>
+<li>Measures aggregate correctly under different dimensions and do not produce duplicated results because of relationship configuration.</li>
+<li>Relationship direction is clear, filter propagation paths are explainable, and there are no cycles or ambiguous paths.</li>
+<li>The model remains reasonably sized so direct queries do not push excessive computation to runtime.</li>
+<li>Permissions, security filters, and “show all dimension members” behavior align with the business semantics.</li>
+</ul>
+<h2 id="2-define-the-model-boundary-first">2. Define the Model Boundary First</h2>
+<p>Before modeling, clarify the business scope served by the model. Do not start by placing every database table into a single model.</p>
+<p>It is helpful to answer these questions first:</p>
+<ul>
+<li>Which business subject does the model serve, such as sales, inventory, finance, production, customers, or device monitoring?</li>
+<li>Which metrics will the dashboards mainly show?</li>
+<li>Do the metrics come from business events, transaction records, summaries, or state snapshots?</li>
+<li>Which dimensions will users use to filter, group, drill, and compare?</li>
+<li>Is analysis across multiple fact subjects required?</li>
+<li>Are department, region, customer, tenant, or other permission filters required?</li>
+<li>Does the data need to be real-time or near real-time?</li>
+<li>Are the query volume, data volume, and interaction frequency suitable for direct query?</li>
+</ul>
+<p>The clearer the model boundary is, the more stable the fact tables, dimension tables, relationships, and metric definitions will be. If a single model covers too many business subjects, relationships quickly become complex and dashboard authors are more likely to misuse fields.</p>
+<h2 id="3-core-modeling-principles">3. Core Modeling Principles</h2>
+<p>Direct-query models in BI products should follow these principles first:</p>
+<ul>
+<li>Define the business grain before configuring relationships.</li>
+<li>Fact tables store business events and measures; dimension tables store filters, grouping attributes, display attributes, and hierarchies.</li>
+<li>Prefer star schemas. Snowflake schemas, fact constellations, and wide tables should be used only when they fit the scenario.</li>
+<li>Let filters flow from dimensions to facts by default, and use bidirectional filtering cautiously.</li>
+<li>Analyze multiple facts through shared dimensions or summary tables instead of directly joining fact tables to each other.</li>
+<li>Maintain metric definitions centrally so the same metric name does not use different formulas across dashboards.</li>
+<li>Push complex cleaning, heavy calculations, and frequent aggregations into database views, staging tables, summary tables, or materialized views when possible.</li>
+</ul>
+<h2 id="4-table-role-design">4. Table Role Design</h2>
+<p>Tables in a BI model should not be understood only as database tables. They should also be treated as business semantic objects. Every table should have a clear role.</p>
+<h3 id="41-fact-tables">4.1 Fact Tables</h3>
+<p>Fact tables store business events, transactions, state records, snapshots, or aggregatable measure data. Common examples include sales order lines, payment transactions, inventory snapshots, production records, device telemetry, exchange-rate records, and temperature records.</p>
+<p>Fact tables usually have these characteristics:</p>
+<ul>
+<li>They contain many rows and continue growing over time.</li>
+<li>They include one or more foreign keys used to join dimension tables.</li>
+<li>They include aggregatable numeric fields, such as amount, quantity, duration, cost, and count.</li>
+<li>Each row represents a clear business grain.</li>
+</ul>
+<p>The first task in fact table design is defining the grain. Grain means what one row in the fact table represents. For example:</p>
+<ul>
+<li>One row represents one sales order line.</li>
+<li>One row represents one device collection result within one minute.</li>
+<li>One row represents the inventory snapshot of one product in one warehouse on one day.</li>
+<li>One row represents one monthly bill for one customer.</li>
+</ul>
+<p>If the fact table grain is unclear, aggregation, relationships, filtering, and metric calculations are all likely to become incorrect.</p>
+<p>Common fact table types include:</p>
+<ul>
+<li>Transaction facts: detailed business events, such as order lines, payment transactions, and outbound shipment lines.</li>
+<li>Periodic snapshot facts: states recorded at fixed intervals, such as daily inventory or monthly balances.</li>
+<li>Accumulating snapshot facts: multiple stages of a process from start to finish, such as an order moving from creation to shipping to completion.</li>
+</ul>
+<p>Different fact types aggregate differently. Transaction facts usually work well with sum and count. Periodic snapshot facts require extra care because they should not be summed blindly across time.</p>
+<h3 id="42-dimension-tables">4.2 Dimension Tables</h3>
+<p>Dimension tables describe the analytical context of fact data. Common examples include product, customer, region, department, employee, date, category, supplier, device, and project.</p>
+<p>Dimension tables usually have these characteristics:</p>
+<ul>
+<li>They have a unique key referenced by fact table foreign keys.</li>
+<li>They contain descriptive fields used for filtering, grouping, display, and hierarchy analysis.</li>
+<li>Their fields are more often names, categories, statuses, regions, hierarchy levels, and attributes, rather than business transactions.</li>
+<li>They usually have fewer rows than fact tables, though large dimensions such as customers, products, and devices may still be large.</li>
+</ul>
+<p>Dimension fields are suitable for dashboard dimensions, categories, filters, groups, legends, row headers, and column headers. Fact table fields are more suitable as measure sources.</p>
+<p>If dimension attributes change over time, decide whether history must be preserved:</p>
+<ul>
+<li>If only the current attribute matters, update the dimension attribute directly.</li>
+<li>If historical attributes are needed to reproduce the business state at the time, design version, effective-period, or historical snapshot fields and ensure facts join to the correct version.</li>
+</ul>
+<h3 id="43-date-dimensions">4.3 Date Dimensions</h3>
+<p>The date dimension is one of the most common shared dimensions. It is recommended to build standard date dimensions for important business dates such as order date, shipment date, payment date, and collection date.</p>
+<p>A date dimension may include:</p>
+<ul>
+<li>Date, year, quarter, month, week, and day.</li>
+<li>Fiscal year, fiscal quarter, and fiscal month.</li>
+<li>Workday, holiday, and weekend flags.</li>
+<li>Start of month, end of month, start of quarter, and end of quarter.</li>
+</ul>
+<p>If a fact table has multiple date fields, design roles according to the business meaning, such as order date, shipment date, and completion date. Do not let multiple date relationships create confusing filter paths.</p>
+<h3 id="44-bridge-tables">4.4 Bridge Tables</h3>
+<p>Bridge tables handle many-to-many relationships. For example, one customer may belong to multiple customer groups, one user may belong to multiple departments, and one product may have multiple tags.</p>
+<p>A bridge table usually stores the keys from both entities, plus optional weights, effective periods, or relationship attributes. It should not be treated as an ordinary fact table for arbitrary measures, and it should not be hidden inside complex bidirectional filters.</p>
+<p>When using a bridge table, clarify:</p>
+<ul>
+<li>What one bridge-table row represents.</li>
+<li>Whether the bridge table has a weight field.</li>
+<li>Whether the bridge table has an effective period.</li>
+<li>Whether the two sides may cause double counting.</li>
+<li>Whether dashboard authors need to display bridge-table fields directly.</li>
+</ul>
+<h3 id="45-permission-tables">4.5 Permission Tables</h3>
+<p>Permission tables support security filtering, such as relationships between users and departments, users and customers, users and regions, or roles and data scopes.</p>
+<p>Permission tables should stay simple, stable, and index-friendly. Do not mix permission tables with business facts, or the permission logic will become hard to maintain.</p>
+<h2 id="5-architecture-choices">5. Architecture Choices</h2>
+<p>BI models are not limited to star and snowflake schemas. In real projects, you may also use fact constellations, wide tables, summary models, or upstream normalized models. The key question is not the architecture name, but whether the structure keeps aggregation correct, paths clear, and performance controllable.</p>
+<div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>Architecture</th>
+					<th>Suitable Scenario</th>
+					<th>Recommended as a BI Consumption Model</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Star schema</td>
+					<td>One or more fact tables analyzed through clear dimensions, directly consumed by dashboard authors</td>
+					<td>Recommended by default</td>
+			</tr>
+			<tr>
+					<td>Snowflake schema</td>
+					<td>Source data is highly normalized, and dimension hierarchies need reuse or independent maintenance</td>
+					<td>Usable, but control path complexity</td>
+			</tr>
+			<tr>
+					<td>Fact constellation / multi-star schema</td>
+					<td>Multiple fact tables share common dimensions such as date, product, customer, and organization</td>
+					<td>Recommended for multi-fact analysis</td>
+			</tr>
+			<tr>
+					<td>Wide / flat model</td>
+					<td>Single subject, single grain, fixed field combinations, performance priority</td>
+					<td>Usable for simple scenarios, not ideal for complex reusable models</td>
+			</tr>
+			<tr>
+					<td>Summary / pre-aggregated model</td>
+					<td>Large data volume, high-frequency dashboards, fixed analytical grain</td>
+					<td>Recommended as a performance supplement</td>
+			</tr>
+			<tr>
+					<td>Highly normalized source model</td>
+					<td>Third normal form, historical modeling, upstream preparation layer</td>
+					<td>Not recommended for direct dashboard consumption</td>
+			</tr>
+	</tbody>
+</table></div>
+<h3 id="51-star-schema">5.1 Star Schema</h3>
+<p>The star schema is the default recommended BI modeling structure. The fact table is in the center, and dimension tables connect directly to it.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">flowchart LR
+</span></span><span class="line"><span class="cl">    DimDate[&#34;Date Dimension&#34;] --&gt; FactSales[&#34;Sales Fact&#34;]
+</span></span><span class="line"><span class="cl">    DimProduct[&#34;Product Dimension&#34;] --&gt; FactSales
+</span></span><span class="line"><span class="cl">    DimCustomer[&#34;Customer Dimension&#34;] --&gt; FactSales
+</span></span><span class="line"><span class="cl">    DimOrg[&#34;Organization Dimension&#34;] --&gt; FactSales
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    FactSales --&gt; Measure[&#34;Sales Amount / Quantity / Order Count&#34;]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>A star schema fits these scenarios:</p>
+<ul>
+<li>Dashboards mainly analyze fact metrics across dimensions.</li>
+<li>Dimension hierarchies are shallow or can be flattened into dimension tables.</li>
+<li>Query performance and model understandability are priorities.</li>
+<li>Business users need to select fields directly to create charts.</li>
+</ul>
+<p>The advantages of a star schema are simple relationships, short query paths, clear filter propagation, and lower risk of incorrect aggregation. It may introduce some dimension redundancy, but that is usually acceptable in analytical scenarios.</p>
+<h3 id="52-snowflake-schema">5.2 Snowflake Schema</h3>
+<p>A snowflake schema further splits hierarchy tables from dimension tables. For example, a sales fact joins to a product table, the product table joins to a subcategory table, and the subcategory table joins to a category table.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">flowchart LR
+</span></span><span class="line"><span class="cl">    DimCategory[&#34;Category Dimension&#34;] --&gt; DimSubCategory[&#34;Subcategory Dimension&#34;]
+</span></span><span class="line"><span class="cl">    DimSubCategory --&gt; DimProduct[&#34;Product Dimension&#34;]
+</span></span><span class="line"><span class="cl">    DimProduct --&gt; FactSales[&#34;Sales Fact&#34;]
+</span></span><span class="line"><span class="cl">    DimDate[&#34;Date Dimension&#34;] --&gt; FactSales
+</span></span><span class="line"><span class="cl">    DimCustomer[&#34;Customer Dimension&#34;] --&gt; FactSales
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>A snowflake schema fits these scenarios:</p>
+<ul>
+<li>The source database is highly normalized.</li>
+<li>Dimension hierarchies need to be reused by multiple models or dimensions.</li>
+<li>Large dimension tables are easier to maintain after splitting.</li>
+<li>The original hierarchy structure is genuinely required by the business.</li>
+</ul>
+<p>Control complexity when using snowflake schemas:</p>
+<ul>
+<li>Each hierarchy path should be unique. Do not let one fact table reach the same dimension through multiple paths.</li>
+<li>Avoid cycles.</li>
+<li>Do not force dashboard authors to guess which field to use across multiple hierarchy tables.</li>
+<li>Frequently used multi-level dimensions can be reshaped into a more consumable dimension table or database view.</li>
+</ul>
+<h3 id="53-fact-constellation--multi-star-schema">5.3 Fact Constellation / Multi-Star Schema</h3>
+<p>A fact constellation is useful when multiple fact tables share common dimensions. For example, sales facts, inventory facts, and collection facts may share date, product, and organization dimensions.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">flowchart LR
+</span></span><span class="line"><span class="cl">    DimDate[&#34;Date Dimension&#34;] --&gt; FactSales[&#34;Sales Fact&#34;]
+</span></span><span class="line"><span class="cl">    DimDate --&gt; FactInventory[&#34;Inventory Snapshot Fact&#34;]
+</span></span><span class="line"><span class="cl">    DimProduct[&#34;Product Dimension&#34;] --&gt; FactSales
+</span></span><span class="line"><span class="cl">    DimProduct --&gt; FactInventory
+</span></span><span class="line"><span class="cl">    DimCustomer[&#34;Customer Dimension&#34;] --&gt; FactSales
+</span></span><span class="line"><span class="cl">    DimWarehouse[&#34;Warehouse Dimension&#34;] --&gt; FactInventory
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    FactSales --&gt; SalesMeasures[&#34;Sales Amount / Sales Quantity&#34;]
+</span></span><span class="line"><span class="cl">    FactInventory --&gt; InventoryMeasures[&#34;Inventory Quantity / Inventory Amount&#34;]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Fact constellations are recommended for multi-fact analysis, but be careful:</p>
+<ul>
+<li>Do not directly join fact tables to each other.</li>
+<li>Use shared dimensions to connect multiple facts.</li>
+<li>The shared dimension must have the same business meaning across fact tables.</li>
+<li>Facts at different grains can only be compared at a shared grain.</li>
+<li>Cross-fact metrics need clear calculation rules, and sometimes a unified summary table should be prepared in advance.</li>
+</ul>
+<h3 id="54-wide--flat-models">5.4 Wide / Flat Models</h3>
+<p>Wide tables reduce joins, but if facts at different grains or unrelated dimensions are forced together, they easily cause data duplication and incorrect aggregation.</p>
+<p>Wide tables fit these scenarios:</p>
+<ul>
+<li>A single business subject.</li>
+<li>A single fact grain.</li>
+<li>Fixed dashboard field combinations.</li>
+<li>Data volume or performance requirements make runtime joins too expensive.</li>
+<li>The upstream layer already guarantees correct metric definitions.</li>
+</ul>
+<p>Do not build one giant wide table just to make field dragging convenient. If there are multiple fact grains, unrelated dimensions, or many-to-many relationships, prefer a star, snowflake, or fact constellation structure.</p>
+<h3 id="55-summary--pre-aggregated-models">5.5 Summary / Pre-Aggregated Models</h3>
+<p>Summary or pre-aggregated models are useful for high-frequency dashboards, large datasets, and fixed analytical grains. Examples include daily sales summaries, monthly inventory summaries, and regional customer-count summaries.</p>
+<p>When using summary models:</p>
+<ul>
+<li>The summary grain must be clear.</li>
+<li>Summary metrics must match detailed metric definitions.</li>
+<li>Dashboard authors should not treat summary tables as detailed fact tables.</li>
+<li>If detail tables and summary tables coexist, avoid mixing incompatible grains in the same visual.</li>
+</ul>
+<h3 id="56-highly-normalized-source-models">5.6 Highly Normalized Source Models</h3>
+<p>Third-normal-form databases, historical models, or more complex upstream structures are suitable as data preparation layers, but usually not as BI models consumed directly by business users.</p>
+<p>If a highly normalized source structure is exposed directly to dashboard authors, common problems include:</p>
+<ul>
+<li>Too many tables and unclear field meanings.</li>
+<li>Long relationship paths and slower queries.</li>
+<li>Multiple paths with unclear filtering semantics.</li>
+<li>Metric definitions scattered across many tables and calculations.</li>
+</ul>
+<p>A better approach is to first use views, staging tables, summary tables, or semantic reshaping to convert the source structure into a consumption model closer to a star schema, snowflake schema, or fact constellation.</p>
+<h2 id="6-relationship-design">6. Relationship Design</h2>
+<h3 id="61-configure-cardinality-correctly">6.1 Configure Cardinality Correctly</h3>
+<p>Relationship cardinality defines filtering and aggregation semantics. The most common and stable relationship is one-to-many or many-to-one.</p>
+<p>Usually:</p>
+<ul>
+<li>The “one” side is the dimension table, and its primary key or unique key must be unique.</li>
+<li>The “many” side is the fact table, and its foreign key can repeat.</li>
+<li>Dimension tables filter fact tables.</li>
+<li>Fact tables provide measures.</li>
+</ul>
+<p>Before configuring a relationship, validate:</p>
+<ul>
+<li>Whether the “one” side field is truly unique.</li>
+<li>Whether the “many” side field has many unmatched values.</li>
+<li>Whether nulls, empty strings, or abnormal foreign keys exist.</li>
+<li>Whether relationship fields use consistent data types.</li>
+<li>Whether relationship fields are suitable for indexes.</li>
+</ul>
+<p>One-to-one relationships are uncommon. If a model contains many one-to-one relationships, check whether there is unnecessary table splitting or whether those tables can be merged into a single dimension.</p>
+<h3 id="62-handle-many-to-many-relationships-carefully">6.2 Handle Many-to-Many Relationships Carefully</h3>
+<p>Many-to-many relationships are one of the most common sources of duplicated calculations. Do not rely only on bidirectional filters to solve many-to-many problems.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">flowchart LR
+</span></span><span class="line"><span class="cl">    DimGroup[&#34;Customer Group Dimension&#34;] --&gt; Bridge[&#34;Customer-Customer Group Bridge&#34;]
+</span></span><span class="line"><span class="cl">    Bridge --&gt; DimCustomer[&#34;Customer Dimension&#34;]
+</span></span><span class="line"><span class="cl">    DimCustomer --&gt; FactSales[&#34;Sales Fact&#34;]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Recommended practices:</p>
+<ul>
+<li>Use a bridge table to explicitly represent many-to-many relationships.</li>
+<li>Define the bridge table grain clearly.</li>
+<li>Add weights when needed to avoid duplicating amounts or quantities.</li>
+<li>Define separate calculation logic for many-to-many metrics.</li>
+<li>Avoid letting dashboard authors freely combine fields that are likely to double count.</li>
+</ul>
+<p>If you cannot clearly explain the filtering path and aggregation result of a many-to-many relationship, do not expose it as an ordinary relationship to business users.</p>
+<h3 id="63-avoid-direct-fact-to-fact-relationships">6.3 Avoid Direct Fact-to-Fact Relationships</h3>
+<p>Multiple fact tables usually have different grains. Sales details, inventory snapshots, customer visit records, and payment transactions should not be directly joined to each other.</p>
+<p>Safer options include:</p>
+<ul>
+<li>Analyze through shared dimensions such as date, customer, product, and region.</li>
+<li>Prepare summary tables at a shared grain.</li>
+<li>Use bridge or intermediate tables to express explicit business relationships.</li>
+<li>Build dedicated data-preparation logic for cross-fact metrics.</li>
+</ul>
+<p>Directly joining two fact tables often expands row counts and causes amounts, quantities, and counts to be duplicated.</p>
+<h3 id="64-control-relationship-paths">6.4 Control Relationship Paths</h3>
+<p>In a model, there should preferably be one clear path from a dimension to a fact table. If multiple paths exist, both the system and users may struggle to determine how filters should propagate.</p>
+<p>Avoid:</p>
+<ul>
+<li>Cyclic relationships.</li>
+<li>Multiple equivalent filter paths.</li>
+<li>Fact tables connected to each other and then connected to shared dimensions.</li>
+<li>Many bidirectional relationships intertwined together.</li>
+<li>Fields with the same business meaning scattered across multiple tables.</li>
+</ul>
+<p>If the relationship diagram looks like a complex network rather than a clear star, snowflake, or fact constellation, the model should be split or the upstream data should be reshaped.</p>
+<h2 id="7-filter-direction">7. Filter Direction</h2>
+<h3 id="71-filter-facts-from-dimensions-by-default">7.1 Filter Facts from Dimensions by Default</h3>
+<p>In BI modeling, filter direction should usually propagate one way from dimension tables to fact tables. When users select products, customers, dates, regions, or other dimensions, those selections filter measures such as sales amount, quantity, and cost in the corresponding fact table.</p>
+<p>This direction best matches business analysis habits and is easiest to explain.</p>
+<h3 id="72-use-bidirectional-filtering-carefully">7.2 Use Bidirectional Filtering Carefully</h3>
+<p>Bidirectional filtering allows both sides of a relationship to filter each other. It may solve short-term interaction issues, but it can also introduce path ambiguity, performance problems, and hard-to-explain results.</p>
+<p>Use bidirectional filtering only when all of the following are true:</p>
+<ul>
+<li>The business genuinely needs both sides to filter each other.</li>
+<li>The model has no cyclic paths.</li>
+<li>No multiple propagation paths are created.</li>
+<li>Aggregation results have been verified to avoid duplication.</li>
+<li>Dashboard authors can understand the meaning of the relationship.</li>
+</ul>
+<p>If bidirectional filtering is enabled only to make a filter “appear to interact,” consider adjusting the model structure first.</p>
+<h3 id="73-show-all-dimension-members">7.3 Show All Dimension Members</h3>
+<p>“Show all dimension members” is used to display dimension members that do not have matching fact records. For example, show all products even when some products have no sales amount.</p>
+<p>When using this capability, confirm:</p>
+<ul>
+<li>The display baseline is the dimension table, not the fact table.</li>
+<li>Members without fact data should show blank, zero, or another default value.</li>
+<li>Permission filtering does not expose dimension members that the user should not see.</li>
+<li>The dimension table does not contain invalid, duplicate, or expired members.</li>
+</ul>
+<h2 id="8-metric-design">8. Metric Design</h2>
+<h3 id="81-measures-should-come-from-fact-tables">8.1 Measures Should Come from Fact Tables</h3>
+<p>Amounts, quantities, counts, durations, costs, inventory, temperature, exchange rates, and similar measures usually come from fact tables. If numeric fields on dimension tables are used for aggregation, first confirm that they truly have measure semantics.</p>
+<p>Define common metrics at the model layer to reduce repeated dashboard-level configuration.</p>
+<p>Common metrics include:</p>
+<ul>
+<li>Sales amount: Sum(Amount)</li>
+<li>Sales quantity: Sum(Quantity)</li>
+<li>Order count: Count(OrderID)</li>
+<li>Customer count: CountDistinct(CustomerID)</li>
+<li>Average order value: Sales amount / Order count</li>
+<li>Gross margin rate: Gross margin / Sales amount</li>
+</ul>
+<h3 id="82-clarify-additivity">8.2 Clarify Additivity</h3>
+<p>Not every metric can be summed freely.</p>
+<p>Metrics can be classified as:</p>
+<ul>
+<li>Additive metrics: sales amount, quantity, cost, and count, which can usually be summed across multiple dimensions.</li>
+<li>Semi-additive metrics: inventory balance, account balance, and device state, which usually cannot be summed directly across time.</li>
+<li>Non-additive metrics: ratios, percentages, averages, temperatures, and unit prices, which usually require dedicated formulas.</li>
+</ul>
+<p>For semi-additive and non-additive metrics, document usage limits in the model or descriptions to avoid incorrect dashboard aggregation. Ratio metrics should be recalculated from numerator and denominator rather than averaged across group-level ratios.</p>
+<h3 id="83-maintain-metric-definitions-centrally">8.3 Maintain Metric Definitions Centrally</h3>
+<p>The same business metric should not use different calculations in different dashboards.</p>
+<p>Recommended practices:</p>
+<ul>
+<li>Define frequently used metrics at the model layer.</li>
+<li>Name metrics according to business meaning and aggregation behavior.</li>
+<li>For ratio metrics, define numerator, denominator, and filter conditions.</li>
+<li>For time-related metrics, define the statistical period.</li>
+<li>For permission-related metrics, verify results after security filtering.</li>
+</ul>
+<h2 id="9-field-governance">9. Field Governance</h2>
+<h3 id="91-hide-technical-fields">9.1 Hide Technical Fields</h3>
+<p>Business users usually do not need to see surrogate keys, foreign keys, system IDs, audit fields, synchronization fields, deletion flags, and other technical fields.</p>
+<p>Recommended fields to hide:</p>
+<ul>
+<li>Internal primary keys and foreign keys.</li>
+<li>Created time, updated time, synchronization batch, and similar technical fields unless required for analysis.</li>
+<li>Database maintenance fields.</li>
+<li>Bridge-table fields that should not be dragged directly.</li>
+<li>Permission helper fields.</li>
+</ul>
+<h3 id="92-use-clear-names">9.2 Use Clear Names</h3>
+<p>Field names should be understandable to dashboard authors and business users, not only to database developers.</p>
+<p>Recommended practices:</p>
+<ul>
+<li>Use business-friendly display names.</li>
+<li>Avoid excessive abbreviations.</li>
+<li>Use consistent naming for amount, quantity, percentage, date, and status fields.</li>
+<li>Keep names consistent across tables for fields with the same meaning.</li>
+<li>Add descriptions for fields that are easy to confuse.</li>
+</ul>
+<h3 id="93-build-hierarchies">9.3 Build Hierarchies</h3>
+<p>Common dimension hierarchies should be clearly represented in the model, such as:</p>
+<ul>
+<li>Category &gt; Subcategory &gt; Product</li>
+<li>Country &gt; Province &gt; City</li>
+<li>Company &gt; Department &gt; Employee</li>
+<li>Year &gt; Quarter &gt; Month &gt; Day</li>
+</ul>
+<p>Hierarchies help dashboard authors drill correctly and reduce field-selection mistakes.</p>
+<h2 id="10-permissions-and-security-filters">10. Permissions and Security Filters</h2>
+<p>Security filters control which data different users can see. They should be part of model design rather than a last-minute patch.</p>
+<p>When designing security filters, consider:</p>
+<ul>
+<li>Permission logic should be based on stable dimensions such as department, region, customer, tenant, or organization.</li>
+<li>Permission fields should be indexed when possible.</li>
+<li>User attribute variables should have clear default behavior.</li>
+<li>Permission tables and business fact tables should have clear relationships.</li>
+<li>Aggregation results should still be tested after permission filtering.</li>
+<li>When used with “show all dimension members,” verify that unauthorized dimension members are not exposed.</li>
+</ul>
+<p>If permission rules are complex, organize them first in database views, permission tables, or upstream data preparation before exposing them in the BI model.</p>
+<h2 id="11-direct-query-performance-practices">11. Direct-Query Performance Practices</h2>
+<p>The advantage of direct query is that it can show the latest data and reduce caching and data duplication. However, direct query also depends more heavily on database query performance.</p>
+<h3 id="111-suitable-direct-query-scenarios">11.1 Suitable Direct-Query Scenarios</h3>
+<p>Direct query is more suitable when:</p>
+<ul>
+<li>Data needs to be real-time or near real-time.</li>
+<li>The database has good query capability.</li>
+<li>Dashboard interaction paths are relatively clear.</li>
+<li>The data does not require complex cleaning or transformation.</li>
+<li>Query result sizes are controllable.</li>
+<li>Users care more about the latest result than complex offline analysis.</li>
+</ul>
+<h3 id="112-scenarios-that-should-not-rely-only-on-direct-query">11.2 Scenarios That Should Not Rely Only on Direct Query</h3>
+<p>Consider caches, aggregate tables, database views, materialized views, or upstream data preparation for these scenarios:</p>
+<ul>
+<li>Many complex joins.</li>
+<li>Many runtime calculated fields.</li>
+<li>Complex combinations across multiple fact tables.</li>
+<li>High-frequency access to very large fact tables.</li>
+<li>Complex permission derivation.</li>
+<li>Queries that scan large volumes of historical data every time.</li>
+<li>Dashboards that load many visuals at once.</li>
+</ul>
+<h3 id="113-database-side-optimization">11.3 Database-Side Optimization</h3>
+<p>Direct-query model performance depends heavily on database-side preparation.</p>
+<p>Recommended practices:</p>
+<ul>
+<li>Create indexes for fact table foreign keys.</li>
+<li>Create indexes for dimension table primary keys or unique keys.</li>
+<li>Create indexes for common filters such as date, organization, region, and customer.</li>
+<li>Avoid unnecessary type conversions on join fields.</li>
+<li>Prefer integer keys or stable business keys for relationships.</li>
+<li>Move complex cleaning and transformation into database views or staging tables.</li>
+<li>Build summary tables or materialized views for frequent aggregations.</li>
+</ul>
+<h3 id="114-model-side-optimization">11.4 Model-Side Optimization</h3>
+<p>The BI model should also control complexity:</p>
+<ul>
+<li>Do not expose irrelevant fields.</li>
+<li>Do not introduce irrelevant tables.</li>
+<li>Do not create too many nested Custom SQL definitions.</li>
+<li>Avoid making one dashboard trigger a large number of repeated queries.</li>
+<li>Keep high-frequency query paths short.</li>
+<li>Split complex models by business subject.</li>
+</ul>
+<h2 id="12-common-anti-patterns">12. Common Anti-Patterns</h2>
+<p>Avoid these practices whenever possible:</p>
+<ul>
+<li>Treating all tables as ordinary tables without distinguishing facts from dimensions.</li>
+<li>Forcing facts at different grains into a wide table.</li>
+<li>Creating direct relationships between fact tables.</li>
+<li>Handling many-to-many relationships without bridge tables or calculation rules.</li>
+<li>Enabling many bidirectional filters.</li>
+<li>Allowing cyclic paths in the model.</li>
+<li>Using a non-unique field on the “one” side of a relationship.</li>
+<li>Defining metrics repeatedly across different dashboards.</li>
+<li>Using the same metric name with different definitions in different visuals.</li>
+<li>Putting all complex cleaning, transformation, and permission derivation into direct-query runtime.</li>
+<li>Exposing many technical fields to dashboard authors.</li>
+<li>Pursuing field completeness without considering whether users can understand and use the model correctly.</li>
+</ul>
+<h2 id="13-modeling-checklist">13. Modeling Checklist</h2>
+<p>Before publishing a model, check the following items:</p>
+<ul>
+<li>Is the business subject clear?</li>
+<li>Does every table have a clear role?</li>
+<li>Is the grain defined for every fact table?</li>
+<li>Does every dimension table have a unique key?</li>
+<li>Do measures mainly come from fact tables?</li>
+<li>Do dimension fields mainly come from dimension tables?</li>
+<li>Is the “one” side of every relationship truly unique?</li>
+<li>Are any fact tables directly connected to other fact tables?</li>
+<li>Are any many-to-many relationships untreated?</li>
+<li>Are there cycles or multiple filter paths?</li>
+<li>Does filter direction default from dimensions to facts?</li>
+<li>Is there a clear business reason for every bidirectional filter?</li>
+<li>Is it necessary to show dimension members without fact data?</li>
+<li>Are metric definitions maintained centrally?</li>
+<li>Are semi-additive and non-additive metrics documented?</li>
+<li>Is permission filtering based on stable fields?</li>
+<li>Has permission filtering been tested together with showing all dimension members?</li>
+<li>Are technical fields hidden?</li>
+<li>Are field names and descriptions business-friendly?</li>
+<li>Are high-frequency query paths as short as possible?</li>
+<li>Are relationship keys, filter fields, and permission fields indexed?</li>
+<li>Do large-data or complex-query scenarios have caches, views, summary tables, or materialized plans?</li>
+</ul>
+<h2 id="14-recommended-implementation-flow">14. Recommended Implementation Flow</h2>
+<p>Use the following flow to design a direct-query model in a BI product:</p>
+<ol>
+<li>Clarify the business subject and dashboard usage scenarios.</li>
+<li>List core metrics and identify their source fact tables.</li>
+<li>Define the grain for each fact table.</li>
+<li>List analytical dimensions and permission dimensions.</li>
+<li>Choose a star, snowflake, fact constellation, wide, or summary model.</li>
+<li>Configure relationships, cardinality, and filter direction.</li>
+<li>Validate uniqueness on the “one” side and foreign-key matching.</li>
+<li>Define common metrics and field display names.</li>
+<li>Hide technical fields and fields that should not be used directly.</li>
+<li>Configure security filters.</li>
+<li>Validate aggregation results with typical dashboard scenarios.</li>
+<li>Validate direct-query performance with large-data scenarios.</li>
+<li>Adjust the model or upstream data preparation based on validation results.</li>
+</ol>
+<h2 id="15-summary">15. Summary</h2>
+<p>The core of direct-query modeling in a BI product is not connecting all database tables together. It is organizing business facts, analytical dimensions, metric definitions, permission rules, and query paths into a stable semantic model.</p>
+<p>The safest default strategy is to store measures in fact tables, store filters and grouping attributes in dimension tables, connect them through clear one-to-many relationships, keep filter paths explainable with one-way filtering, maintain consistent metric definitions, and rely on database-side preparation and indexes for direct-query performance.</p>
+<p>When the model is clear enough, dashboard authors do not need to understand the complex database structure. They can still create correct, stable, and reusable analytical content from the model.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/blog/tags/bi/">BI</a>
+        
+            <a href="/blog/tags/data-modeling/">Data Modeling</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2026 Javen Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/blog/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

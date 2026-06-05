@@ -8,7 +8,15 @@
         <language>zh-cn</language>
         <managingEditor>wenjie.jin@hotmail.com (Javen)</managingEditor>
         <webMaster>wenjie.jin@hotmail.com (Javen)</webMaster>
-        <lastBuildDate>Thu, 04 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 05 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Data Analysis</title>
+        <link>https://javenjin.github.io/blog/zh-cn/categories/data-analysis/</link>
+        <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
+        <author>wenjie.jin@hotmail.com (Javen)</author>
+        <guid>https://javenjin.github.io/blog/zh-cn/categories/data-analysis/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Tools</title>
         <link>https://javenjin.github.io/blog/zh-cn/categories/tools/</link>
         <pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate>
@@ -41,7 +49,7 @@
         <description></description>
         </item>
         <item>
-        <title>Java (Programming Language)</title>
+        <title>Java Programming Language</title>
         <link>https://javenjin.github.io/blog/zh-cn/categories/java-programming-language/</link>
         <pubDate>Thu, 24 Dec 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>
@@ -65,7 +73,7 @@
         <description></description>
         </item>
         <item>
-        <title>C (Programming Language)</title>
+        <title>C Programming Language</title>
         <link>https://javenjin.github.io/blog/zh-cn/categories/c-programming-language/</link>
         <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
         <author>wenjie.jin@hotmail.com (Javen)</author>

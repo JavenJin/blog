@@ -8,7 +8,23 @@
         <language>zh-cn</language>
         <managingEditor>wenjie.jin@hotmail.com (Javen)</managingEditor>
         <webMaster>wenjie.jin@hotmail.com (Javen)</webMaster>
-        <lastBuildDate>Thu, 04 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 05 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://javenjin.github.io/blog/zh-cn/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>BI</title>
+        <link>https://javenjin.github.io/blog/zh-cn/tags/bi/</link>
+        <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
+        <author>wenjie.jin@hotmail.com (Javen)</author>
+        <guid>https://javenjin.github.io/blog/zh-cn/tags/bi/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Data Modeling</title>
+        <link>https://javenjin.github.io/blog/zh-cn/tags/data-modeling/</link>
+        <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
+        <author>wenjie.jin@hotmail.com (Javen)</author>
+        <guid>https://javenjin.github.io/blog/zh-cn/tags/data-modeling/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Tools</title>
         <link>https://javenjin.github.io/blog/zh-cn/tags/tools/</link>
         <pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate>

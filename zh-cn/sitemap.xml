@@ -4,7 +4,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://javenjin.github.io/blog/zh-cn/</loc>
-    <lastmod>2026-06-04T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -16,8 +16,34 @@
                 href="https://javenjin.github.io/blog/zh-cn/"
                 />
   </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/tags/bi/</loc>
+    <lastmod>2026-06-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://javenjin.github.io/blog/tags/bi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/tags/bi/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/p/bi-modeling-best-practices/</loc>
+    <lastmod>2026-06-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://javenjin.github.io/blog/p/bi-modeling-best-practices/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/p/bi-modeling-best-practices/"
+                />
+  </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/categories/</loc>
-    <lastmod>2026-06-04T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -29,8 +55,34 @@
                 href="https://javenjin.github.io/blog/zh-cn/categories/"
                 />
   </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/categories/data-analysis/</loc>
+    <lastmod>2026-06-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://javenjin.github.io/blog/categories/data-analysis/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/categories/data-analysis/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/tags/data-modeling/</loc>
+    <lastmod>2026-06-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://javenjin.github.io/blog/tags/data-modeling/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/tags/data-modeling/"
+                />
+  </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/post/</loc>
-    <lastmod>2026-06-04T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -43,7 +95,7 @@
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/tags/</loc>
-    <lastmod>2026-06-04T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -552,19 +604,6 @@
                 href="https://javenjin.github.io/blog/zh-cn/p/google-chrome-web-browser-import-password-and-export-password/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/categories/java-programming-language/</loc>
-    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://javenjin.github.io/blog/categories/java-programming-language/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/categories/java-programming-language/"
-                />
-  </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/tags/java-programming-language/</loc>
     <lastmod>2020-12-24T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -576,6 +615,19 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/tags/java-programming-language/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/categories/java-programming-language/</loc>
+    <lastmod>2020-12-24T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://javenjin.github.io/blog/categories/java-programming-language/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/categories/java-programming-language/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/gluttony-game-java-gui/</loc>
@@ -734,19 +786,6 @@
                 href="https://javenjin.github.io/blog/zh-cn/p/drawing-class-diagrams-in-eclipse-using-amaterasuml-plugin/"
                 />
   </url><url>
-    <loc>https://javenjin.github.io/blog/zh-cn/categories/c-programming-language/</loc>
-    <lastmod>2020-07-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://javenjin.github.io/blog/categories/c-programming-language/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/categories/c-programming-language/"
-                />
-  </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/tags/c-programming-language/</loc>
     <lastmod>2020-07-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -758,6 +797,19 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/tags/c-programming-language/"
+                />
+  </url><url>
+    <loc>https://javenjin.github.io/blog/zh-cn/categories/c-programming-language/</loc>
+    <lastmod>2020-07-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://javenjin.github.io/blog/categories/c-programming-language/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/categories/c-programming-language/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/zh-cn/p/q-1072/</loc>
