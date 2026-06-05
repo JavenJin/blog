@@ -55,6 +55,19 @@
                 href="https://javenjin.github.io/blog/zh-cn/categories/"
                 />
   </url><url>
+    <loc>https://javenjin.github.io/blog/categories/data-analysis/</loc>
+    <lastmod>2026-06-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://javenjin.github.io/blog/categories/data-analysis/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://javenjin.github.io/blog/zh-cn/categories/data-analysis/"
+                />
+  </url><url>
     <loc>https://javenjin.github.io/blog/tags/data-modeling/</loc>
     <lastmod>2026-06-05T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -92,19 +105,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://javenjin.github.io/blog/zh-cn/tags/"
-                />
-  </url><url>
-    <loc>https://javenjin.github.io/blog/categories/data-analysis/</loc>
-    <lastmod>2026-06-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://javenjin.github.io/blog/categories/data-analysis/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://javenjin.github.io/blog/zh-cn/categories/data-analysis/"
                 />
   </url><url>
     <loc>https://javenjin.github.io/blog/p/deploy-edgetunnel-free-node-with-cloudflare/</loc>
