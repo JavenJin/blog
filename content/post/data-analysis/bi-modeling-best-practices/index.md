@@ -1,6 +1,6 @@
 ---
 title: BI Product Modeling Best Practices
-description: BI product modeling best practices
+description: Data modeling best practices for BI products such as Power BI, Tableau, Looker, and Wyn
 date: '2026-06-05'
 slug: bi-modeling-best-practices
 categories:
@@ -13,6 +13,10 @@ tags:
 # BI Product Modeling Best Practices
 
 ## 1. Purpose
+
+In BI products such as Power BI, Tableau, Looker, and Wyn, modeling is not simply a matter of dragging database tables onto a canvas and defining a few relationships. What determines whether dashboards are trustworthy, usable, and maintainable is whether fact tables, dimensions, metric definitions, filter direction, and permission semantics are designed clearly.
+
+These BI tools provide model views, relationship editors, semantic layers, measures, direct-query capabilities, and security filters, but the tools do not automatically decide whether the business grain is correct, whether relationship paths are ambiguous, or whether metrics will be double-counted. A poorly configured relationship direction in Power BI, unclear data-source relationships in Tableau, or a messy semantic layer in Looker can all lead to the same outcome: dashboards open successfully, but the numbers are hard to explain, filters behave unpredictably, and performance becomes increasingly difficult to control.
 
 This article provides guidance for designing data models in BI product direct-query scenarios. The goal is to turn general BI modeling experience into practical rules that help model designers create stable, clear, reusable, and performance-aware semantic models.
 
