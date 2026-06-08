@@ -16,6 +16,8 @@
         <guid>https://javenjin.github.io/blog/p/bi-modeling-best-practices/</guid>
         <description>&lt;h1 id=&#34;bi-product-modeling-best-practices&#34;&gt;BI Product Modeling Best Practices&lt;/h1&gt;
 &lt;h2 id=&#34;1-purpose&#34;&gt;1. Purpose&lt;/h2&gt;
+&lt;p&gt;In BI products such as Power BI, Tableau, Looker, and Wyn, modeling is not simply a matter of dragging database tables onto a canvas and defining a few relationships. What determines whether dashboards are trustworthy, usable, and maintainable is whether fact tables, dimensions, metric definitions, filter direction, and permission semantics are designed clearly.&lt;/p&gt;
+&lt;p&gt;These BI tools provide model views, relationship editors, semantic layers, measures, direct-query capabilities, and security filters, but the tools do not automatically decide whether the business grain is correct, whether relationship paths are ambiguous, or whether metrics will be double-counted. A poorly configured relationship direction in Power BI, unclear data-source relationships in Tableau, or a messy semantic layer in Looker can all lead to the same outcome: dashboards open successfully, but the numbers are hard to explain, filters behave unpredictably, and performance becomes increasingly difficult to control.&lt;/p&gt;
 &lt;p&gt;This article provides guidance for designing data models in BI product direct-query scenarios. The goal is to turn general BI modeling experience into practical rules that help model designers create stable, clear, reusable, and performance-aware semantic models.&lt;/p&gt;
 &lt;p&gt;A good direct-query model in a BI product should meet the following requirements:&lt;/p&gt;
 &lt;ul&gt;
